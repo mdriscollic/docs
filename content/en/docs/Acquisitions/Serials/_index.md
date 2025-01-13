@@ -7,11 +7,12 @@ tags: ["parenttopic"]
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
-The Serials app allows to create serial records that store information about the status of the order, the title in the Receiving app, a description, a purchase order (PO) line and notes. The app also allows to create publication patterns and generate predicted piece sets. The recieving pieces you generate in the Serials app are shared with the Receiving app. 
+The Serials app allows to create serial records that store information about the status of the order, the title in the Receiving app, a description, a purchase order (PO) line and notes. The app also allows to create publication patterns and generate predicted piece sets. The receiving pieces you generate in the Serials app are shared with the Receiving app. 
 To create a serial it is necessary to create an order and PO line in the Orders app in advance. 
 
 Definition of terms related to the Serials app:
 
+*   **Combination rules.** Combination rules can be applied to combine issues in a publication cycle.
 *   **Cycle length.** The amount of time it takes for a single cycle of the publication pattern to complete.
 *   **Days of publication, per cycle.** The day(s) on which an issue is published, within one cycle of the publication pattern.
 *   **Label.** Labels define the enumeration and chronology for the issues of a serial. 
@@ -19,7 +20,7 @@ Definition of terms related to the Serials app:
 *   **Pattern ID.** Is a unique ID that refers to a created publication pattern.
 *   **Piece sets.** A predicted piece set shows information like date generated, pattern ID and a list of the next expected issues.
 *   **Publication cycle.** This records how often issues are published, how many are published in that time and on what days they are published. 
-*   **Publication pattern.** This sets up everything about the expected publications of a serial so that it can generate the appropriate issues and label them correctly.
+*   **Publication pattern.** This sets up everything about the expected publications of a serial so that it can generate the appropriate pieces and label them correctly.
 *   **Serial.** A serial record provides a way of linking together various pieces of information for a serial like order line, publication pattern and predicted piece sets.
 *   **Template.** A template defines how values from the enumeration and chronology labels are to be used in each predicted piece. 
 *   **Token.** In a template, tokens are used as a placeholder for different labels of the publication pattern.
@@ -35,7 +36,7 @@ Serials permissions:
 *    **Serials: Delete predicted pieces.** This permission allows the user to delete predicted pieces.
 *    **Serials: Edit publication patterns.** This permission allows the user to edit publication patterns.
 *    **Serials: Edit serials.** This permission allows the user to edit serial records.
-*    **Serials: Search & view predicted pieces.** This permission allows the user to search and view predited pieces. 
+*    **Serials: Search & view predicted pieces.** This permission allows the user to search and view predicted pieces. 
 *    **Serials: Search & view serials.** This permission allows the user to search and view predicted pieces.
 *    **Settings (Serials): Manage pick lists and values.** This permission allows the user to manage pick lists and values in the settings.
 *    **Settings (Serials): View pick lists and values.** This permission allows the user to view pick lists and values in the settings.
@@ -212,7 +213,7 @@ For example, a combinded July and August issue of a monthly published publicatio
 
 #### Using templates
 
-Writing a templates requires you to know to include the appropriate values from each chronology and enumeration label you have setup. To use a value from an enumeration or chronology in the template, you will need to put a token in double curly braces in the template. The token will identify which enumeration or chronology label is being used, and which part of the label is being used. All other text in the template (i.e. text not in double curly braces) will be treated as simple text that should be included. 
+Writing a template requires you to know to include the appropriate values from each chronology and enumeration label you have set up. To use a value from an enumeration or chronology in the template, you will need to put a token in double curly braces in the template. The token will identify which enumeration or chronology label is being used, and which part of the label is being used. All other text in the template (i.e. text not in double curly braces) will be treated as simple text that should be included. 
 
 By clicking **Preview** it is possible to preview the labels for the publication pattern to make sure the expected pieces will be labeled and generated correctly.
 
@@ -287,7 +288,7 @@ To generate receiving pieces, you first need to generate predicted pieces.
 
 2. If there are locations or holdings for the linked PO line you are able to select location or holding for the receiving pieces. 
 
-3. Fill in **Time between publication and receipt (days) (required)**. This describes the time interval between the date that the piece is published and when it is recieved at the location.
+3. Fill in **Time between publication and receipt (days) (required)**. This describes the time interval between the date that the piece is published and when it is received at the location.
 
 4. Select **Supplement** if the piece is a supplementary material such as a CD or a map.
 
