@@ -23,7 +23,7 @@ In order to interact with Serials settings, a user needs to be assigned the foll
 2. Under **Category** fill in the name of your new pick list.
 3. Click **Save**. The pick list appears alphabetically in the Pick list column.
 
-Please not that it is currently not possible to delete a pick list.
+Please note that it is currently not possible to delete a pick list.
 
 ## Settings > Serials > Pick lists values
 
