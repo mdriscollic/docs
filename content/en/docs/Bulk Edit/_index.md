@@ -1,7 +1,7 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2025-01-08
+date: 2025-01-22
 weight: 550
 ---
 
@@ -13,7 +13,7 @@ The Bulk Edit app allows a user to apply changes to multiple Inventory or User r
 
 ## Permissions
 
-The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. Depending on how your library runs bulk edit jobs, users may also need permissions in other modules, such as Export Manager, Inventory, Users, and Settings. 
+The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. 
 
 Permissions are assigned to users in the Users app. If none of the Bulk edit permissions are assigned to a user, they are unable to see the Bulk Edit app or any related information. 
 See [Users \> Assign or unassign permissions](../users/#assign-or-unassign-permissions) for more information. 
@@ -50,7 +50,7 @@ To set criteria for bulk edit using **Identifier**:
 
      
 4. Select the **Record identifier** from the **Select record identifier** drop-down menu. [Record identifiers available for selection](#record-identifiers-by-record-type) are based on the Record type.
-5. **Drag and drop** your .csv file into the **Select a file with record identifiers** box, or click **or choose file** to upload the .csv file from your computer. Only .csv files containing one column of record identifiers are accepted for upload in the Bulk edit app. If the .csv file contains more than one column, the upload will not be successful and a *Something went wrong* message displays. 
+5. **Drag and drop** your .csv file into the **Select a file with record identifiers** box, or click **or choose file** to upload the .csv file from your computer. Only .csv files containing one column of record identifiers are accepted for upload in the Bulk edit app. If the .csv file contains more than one column, the upload will not be successful and an error message, "_filename_ is formatted incorrectly. Please correct the formatting and upload the file again" displays. 
 
 #### Record identifiers by record type
 
@@ -65,11 +65,11 @@ In the **Identifier** method, the **Record identifiers** available for selection
 | *Inventory - instances* | Instance UUIDs |
 | *Inventory - instances* | Instance HRIDs |
 | *Inventory - items* | Item barcodes |
-| *Inventory - items* | Item barcodes |
 | *Inventory - items* | Item UUIDs |
 | *Inventory - items* | Item HRIDs |
 | *Inventory - items* | Item former identifiers |
 | *Inventory - items* | Item accession numbers |
+| *Inventory - items* | Holdings UUID |
 | *Users* | User UUIDs |
 | *Users* | User Barcodes |
 | *Users* | External IDs |
@@ -507,7 +507,7 @@ In the Bulk edit app, the **Fields** that can be changed in **Inventory-instance
    - **Instance note**
    - **Staff suppress**
    - **Suppress from discovery**
-- **Instances and with source MARC (POC)**
+- **Instances with source MARC (POC)**
    - **5xx fields**
    - **9xx fields**
 
