@@ -30,6 +30,8 @@ Disadvantages:
 ```
         # WARNING: location requires a trailing slash
         location /okapi/ {
+                # WARNING: proxy_cookie_path requires a trailing slash
+                proxy_cookie_path / /okapi/;
                 # WARNING: proxy_pass requires a trailing slash
                 proxy_pass http://127.0.0.1:9130/;
                 proxy_redirect default;
