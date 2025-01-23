@@ -121,7 +121,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 ### Instances
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
-| :----- | :-----:| :-----:| 
+| :----- | :-----: | :-----: |
 | *Instance - Administrative notes* | NO | YES |
 | *Instance - Alternative titles* | NO | YES |
 | *Instance - Cataloged date* | YES | YES |
