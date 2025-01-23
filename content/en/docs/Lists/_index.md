@@ -81,7 +81,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 ### Holdings
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? |
-| :----- | :-----:| :-----: | 
+| :----- | :-----: | :-----: | 
 | *Effective library - Code* | YES | YES |
 | *Effective library - Name* | YES | YES |
 | *Effective location - Code* | YES | YES |
