@@ -48,7 +48,6 @@ A library may need to edit fields on an order record with an 'Open' status. This
 | Payment status  | Payment status    |  Payment status   |
 | Claiming active  |  Claiming active   |  Claiming active   |
 | Claiming interval  |  Claiming interval   |  Claiming interval   |
-| Bindery active  |  Bindery active   |  Bindery active   |
 | Cancellation restriction  | Cancellation restriction   |  Cancellation restriction   |
 | Cancellation description  | Cancellation description   |  Cancellation description  |
 | Line description  |  Line description  |  Line description  |
