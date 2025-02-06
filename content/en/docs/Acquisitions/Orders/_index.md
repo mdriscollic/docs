@@ -1,7 +1,7 @@
 ---
 title: "Orders"
 linkTitle: "Orders"
-date: 2024-12-04
+date: 2025-02-06
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -159,7 +159,7 @@ You can search for orders in the **Search & filter** pane. Click **Orders** to s
 *   **PO number.** The purchase order number.
 
 
-You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information on the filters. Note: Users may see additional filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
+You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information on the filters. Note: Users may see additional search options and filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 
 ### Status
@@ -496,6 +496,8 @@ To export all fields from the purchase order line, leave the **POL fields to exp
 *   Created on (PO line)
 *   Updated by (PO line)
 *   Updated on (PO line)
+
+Note: Users may see additional fields for export if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 5.  Once the export fields have been chosen, click **Export** button at the bottom of the dialog.  A .csv file will be downloaded locally with the name “order-export-YYYY-MM-DD-HH_MM” containing one row for each purchase order filtered in the search pane selection list.  If the user has chosen to export POL fields and an order contains multiple purchase order lines then the file will contain a row for each purchase order line.
 
@@ -1154,7 +1156,7 @@ You can search for order lines in the **Search & filter** pane. Order lines is s
 *   **Product ID.** The Product ID of the item.
 *   **Product ID ISBN.** The ISBN of the item.
 
-You can also search for order lines by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information. Note: additional filter options may be visible to users if custom fileds have been configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
+You can also search for order lines by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information. Note: Users may see additional search options and filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 
 ### Receipt status
