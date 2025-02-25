@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 linkTitle: "Lists"
-date: 2025-01-22        
+date: 2025-02-17        
 weight: 525
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
@@ -45,6 +45,8 @@ Definition of terms related to the Lists app:
 
 **Lists app permissions** and **Content permissions** are applied together to determine a user’s access to the Lists app. See [Determining access in Lists app](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/572948576/Lists+App+permissions+-#Determining-access-in-Lists-app) for more information.
 
+
+### Lists app permissions
 
 The permissions listed below allow a user to interact with the Lists app and determine what the user can and cannot do within the app. If none of these permissions are assigned to a user, they are unable to see the Lists app or any related information. For more information on permissions, see [Platform Essentials \> Permissions](../platform-essentials/permissions/).
 
@@ -100,6 +102,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Holdings - Former IDs* | NO |YES |
 | *Holdings - HRID* | NO |YES |
 | *Holdings - Instance UUID* | YES | YES |
+| *Holdings - Notes* | NO | YES |
 | *Holdings - Number of items* | YES | YES |
 | *Holdings - Record version* | YES | YES |
 | *Holdings - Retention policy* | YES | YES |
@@ -109,6 +112,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Holdings - Statements for supplements* | NO |YES |
 | *Holdings - Statistical code names* | YES | YES |
 | *Holdings - Statistical code UUIDs* | NO |YES |
+| *Holdings - Suppress from discovery* | YES | YES |
 | *Holdings - Tags* | NO |YES |
 | *Holdings - Updated date* | YES | YES |
 | *Holdings - UUID* | YES | YES |
@@ -161,6 +165,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
 | :----- | :-----: | :-----: |
+| *Effective call number - Type* | YES | YES |
 | *Effective library - Code* | YES | YES |
 | *Effective library - Name* | YES | YES |
 | *Effective location - Code* | YES | YES |
@@ -179,6 +184,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Holdings - Former IDs* | NO |YES |
 | *Holdings - HRID* | NO |YES |
 | *Holdings - Instance UUID* | YES | YES |
+| *Holdings - Notes* | NO | YES |
 | *Holdings - Number of items* | YES | YES |
 | *Holdings - Record version* | YES | YES |
 | *Holdings - Retention policy* | YES | YES |
@@ -225,6 +231,9 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instances - Suppress from discovery* | YES | YES |
 | *Instances - Tags* | NO | YES |
 | *Instances - Updated date* | YES | YES |
+| *Instance date type - Name* | YES | YES |
+| *Instance status - Code* | YES | YES |
+| *Instance status - Term* | YES | YES |
 | *Item call number - Type* | YES | YES |
 | *Items - Accession number* | YES | YES |
 | *Items - Administrative notes* | NO | YES |
@@ -236,10 +245,12 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Items - Effective call number* | YES | YES |
 | *Items - Effective shelving order* | YES | YES |
 | *Items - Electronic access* | NO | YES |
+| *Items - Enumeration* | YES | YES |
 | *Items - Item call number* | YES | YES |
 | *Items - Item HRID* | YES | YES |
 | *Items - Item UUID* | YES | YES |
 | *Items - Last check in date time* | YES | YES |
+| *Items - Notes* | NO |YES |
 | *Items - Number of missing pieces* | YES | YES |
 | *Items - Number of pieces* | YES | YES |
 | *Items - Purchase order line identifier* | YES | YES |
@@ -288,6 +299,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Holdings - Statements for supplements* | NO |YES |
 | *Holdings - Statistical code names* | YES | YES |
 | *Holdings - Statistical code UUIDs* | NO |YES |
+| *Holdings - Suppress from discovery* | YES | YES |
 | *Holdings - Tags* | NO |YES |
 | *Holdings - Updated date* | YES | YES |
 | *Holdings - UUID* | YES | YES |
@@ -313,6 +325,10 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instances - Primary contributor* | NO | YES |
 | *Instances - Publication* | NO | YES |
 | *Instances - Publication range* | NO | YES |
+| *Instances - Record version* | YES | YES | 
+| *Instances - Resource title* | YES | YES |
+| *Instances - Resource type* | YES | YES |
+| *Instances - Resource type UUID* | YES | YES |
 | *Instances - Series* | NO | YES |
 | *Instances - Source* | YES | YES |
 | *Instances - Statistical code names* | YES | YES |
@@ -331,14 +347,17 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Item - Effective call number* | YES | YES |
 | *Item - Effective shelving order* | YES | YES |
 | *Item - Electronic access* | NO | YES |
+| *Item - Enumeration* | YES | YES |
 | *Item - Item call number* | YES | YES |
 | *Item - Item HRID* | YES | YES |
 | *Item - Item UUID* | YES | YES |
 | *Item - Last check in date time* | YES | YES |
+| *Item - Notes* | NO | YES |
 | *Item - Number of missing pieces* | YES | YES |
 | *Item - Number of pieces* | YES | YES |
 | *Item - Purchase order line identifier* | YES | YES |
 | *Item - Statistical code* | YES | YES |
+| *Item - Status* | YES | YES |
 | *Item - Suppress from discovery* | YES | YES |
 | *Item - Tag list* | NO | YES |
 | *Item - Updated date* | YES | YES |
@@ -388,7 +407,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *EDI organization type* | YES | YES |
 | *EDI vendor code* | YES | YES |
 | *EDI vendor type* | YES | YES |
-| *Email* | NO | YES |
+| *Emails* | NO | YES |
 | *Expected activation interval* | YES | YES |
 | *Expected invoice interval* | YES | YES |
 | *Expected receipt interval* | YES | YES |
