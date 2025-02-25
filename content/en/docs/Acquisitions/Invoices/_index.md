@@ -1,7 +1,7 @@
 ---
 title: "Invoices"
 linkTitle: "Invoices"
-date: 2024-11-19
+date: 2025-02-25
 weight: 20
 tags: ["parenttopic"]
 ---
@@ -729,7 +729,7 @@ Duplicating an invoice is possible from any invoice status. However, the resulti
 
 ## Deleting an invoice
 
-Deleting an invoice is possible while in an Open, Reviewed, or Cancelled status.  Once an invoice has transitioned to Approved or Paid, it cannot be deleted.
+Deleting an invoice is possible while in an Open or Reviewed status.  Once an invoice has transitioned to Approved, Paid, or Cancelled it cannot be deleted.
 
 1. Find the invoice you want to delete and select it.
 2. In the **Vendor invoice number** pane, click **Actions** > **Delete**.
