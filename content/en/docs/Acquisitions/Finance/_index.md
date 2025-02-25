@@ -1,7 +1,7 @@
 ---
 title: "Finance"
 linkTitle: "Finance"
-date: 2024-11-19
+date: 2025-02-06
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -854,7 +854,14 @@ To filter transactions by expense class, follow these steps:
 1. In the **Search & filter** pane, click **Expense class.**
 2. Select an expense class from the drop-down list. Your results appear in the Transactions pane.
 
+#### Encumbrance status
 
+To filter transactions by encumbrance status, follow these steps:
+
+
+1. In the **Search & filter** pane, click **Encumbrance status.**
+2. Select **Released** or **Unreleased**. Your results appear in the Transactions pane.
+   
 Once you view budget transactions, the following columns appear in the Transactions pane search results table. Click the column name to sort by that column.
 
 

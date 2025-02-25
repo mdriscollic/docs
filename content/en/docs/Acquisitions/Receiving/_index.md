@@ -1,7 +1,7 @@
 ---
 title: "Receiving"
 linkTitle: "Receiving"
-date: 2024-12-09
+date: 2025-02-06
 weight: 50
 tags: ["parenttopic"]
 ---
@@ -596,7 +596,8 @@ Expected pieces can be found  in the Expected section of a Receiving app record.
 *   **External note.** A note meant to relay information to a vendor related to a claim.
 *   **Create item.** Select the **Create item** checkbox to connect the new piece to an item in Inventory. This option is only available for pieces linked to an order with the purchase order line **Create inventory** value set to “Instance, holdings, item.” . Note: In order to create an item in Inventory, a default instance status, instance type, and loan type must already be set up in Settings.  See [Settings > Orders](../../settings/settings_orders/settings_orders/) for more information.
 *   **Supplement.** Select the **Supplement** checkbox to indicate that the piece is supplementary material such as a CD or a map. 
-*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
+*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record. This checkbox only appears if the corresponding purchase order line has the **Create inventory** field set to create a holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
+*   **Display to public.** Select the **Display to public** checkbox to indicate that the piece information should be available to RTAC. This checkbox only appears if the **Display on holdings** box is selected. 
 *   **Bound.** Indicates the piece has been bound with other pieces associated with the receiving title.
 *   **Order line locations.**  A list of locations that were selected on the purchase order line.
 *   **Select holdings.**  In the drop down list, select the location for this piece. You can change the location by clicking [Create new holdings for location](#create-new-holdings-for-location). 
@@ -722,7 +723,7 @@ The Receive function can be used to receive multiple pieces at once.
 *   **Item status.** The current status of the associated item record. Expected pieces typically have a status of 'On order', which updated to 'In process' once the piece is received.
 *   **Call number.** The item level call number. This will update the item record if filled in.
 *   **Create item.** This will show as 'Connected' and provide a clickable link to the item in Inventory, if applicable.
-*   **Display on holding.**  Select the **Display on holding** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
+*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record. This checkbox only appears if the corresponding purchase order line has the **Create inventory** field set to create a holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
 *   **Supplement.** Select the **Supplement** checkbox to indicate that the piece is supplementary material such as a CD or a map. 
 
 ## Routing pieces
