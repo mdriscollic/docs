@@ -331,7 +331,6 @@ To select the search result columns **# Copies** or **Printed** you need to choo
 
 **Printed** shows the username and date/time for the most recent printing.
 
-Note: **# Copies** and **Printed** are only being recorded when [Printing a single pick slip](#printing-a-single-pick-slip), not when printing selected or all pick slips. This is scheduled to be fixed in Sunflower.
    
 ## Printing Hold request search slips  
 Libraries can choose to use search slips if they have many copies of a title (instance), but not all copies have been cataloged. When a patron requests an item from that instance, a search slip can be printed so a staff member can look for the item. Libraries must enable **Allow print hold requests (Open - Not yet filled)** in [Settings > Circulation > Print hold requests](../../../settings/settings_circulation/settings_circulation/#settings--circulation--print-hold-requests) in order to use this feature.
