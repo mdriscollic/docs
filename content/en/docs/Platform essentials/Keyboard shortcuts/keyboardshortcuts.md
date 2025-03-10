@@ -30,13 +30,14 @@ The action associated with the shortcut may vary slightly for different apps -- 
  
 ### The following keyboard shortcuts are only available in one app:
 
-|      Action                         |      Shortcut keys     |      App used in     |
-|-------------------------------------|------------------------|----------------------|
-|     Add POL                         |     Alt+a              |     Orders           |
-|     Receive pieces/Quick receive    |     Ctrl+Alt+r         |     Receiving        |
-|     Save a piece and create another |     Alt+s              |     Receiving        |
-| Edit MARC record                    | Ctrl+Shift+e           | Inventory            |
-
+|      Action                                                      |      Shortcut keys     |      App used in     |
+|------------------------------------------------------------------|------------------------|----------------------|
+|     Add POL                                                      |     Alt+a              |     Orders           |
+|     Receive pieces/Quick receive                                 |     Ctrl+Alt+r         |     Receiving        |
+|     Save a piece and create another                              |     Alt+s              |     Receiving        |
+|     Edit MARC record                                             |     Ctrl+Shift+e       |     Inventory        |
+| quickMARC only: Move to the next subfield in a text box          |     Ctrl+]             |     Inventory        |
+|     quickMARC only: Move to the previous subfield in a text box  |     Ctrl+[             |     Inventory        |
 ## Viewing the keyboard shortcuts list 
 
 To view the list of available shortcut keys, follow these steps:
