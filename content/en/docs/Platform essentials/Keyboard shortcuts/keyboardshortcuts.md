@@ -36,8 +36,8 @@ The action associated with the shortcut may vary slightly for different apps -- 
 |     Receive pieces/Quick receive                                 |     Ctrl+Alt+r         |     Receiving        |
 |     Save a piece and create another                              |     Alt+s              |     Receiving        |
 |     Edit MARC record                                             |     Ctrl+Shift+e       |     Inventory        |
-| quickMARC only: Move to the next subfield in a text box          |     Ctrl+]             |     Inventory        |
-|     quickMARC only: Move to the previous subfield in a text box  |     Ctrl+[             |     Inventory        |
+|     quickMARC only: Move to the next subfield in a text box      |     Ctrl+\]            |     Inventory        |
+|     quickMARC only: Move to the previous subfield in a text box  |     Ctrl+\[            |     Inventory        |
 ## Viewing the keyboard shortcuts list 
 
 To view the list of available shortcut keys, follow these steps:
