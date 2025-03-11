@@ -1,14 +1,14 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2025-02-20
+date: 2025-03-11
 weight: 550
 ---
 
 **This section of the documentation contains links to external sites. Please be advised that these external sites are not maintained by the FOLIO Documentation Group and may not be aligned with a different FOLIO release.**
 
 
-The Bulk Edit app allows a user to apply changes to multiple Inventory or User records simultaneously. 
+The Bulk Edit app allows a user to apply changes to multiple Inventory or User records simultaneously. A maximum of 100,000 records is allowed for bulk edit.
 
 
 ## Permissions
@@ -32,6 +32,8 @@ The following are the permissions for the Bulk edit app:
 ## Identify records for bulk edit
 
 The Bulk edit app provides two methods for setting criteria and identifying records for bulk edit: **Identifier** and **Query**.  In either method, the **Record identifiers** or **Fields** available for selection are based on the **Record type**.
+
+**The maximum number of records allowed for bulk edit is 100,000.** If more than 100,000 records are identified, the query or list of record identifiers must be modified in order to perform the bulk edit.
 
 
 ### Identifier
@@ -257,14 +259,20 @@ To set criteria and identify records for bulk edit using the **Query** method:
 
 6. Select a **Value** from the *Select value* drop-down list or type the value in the text box.  The values available for selection are based on the **Field** and **Operator**.
 7. Click on the **+ icon** to add additional lines to the query or click on the **trash can icon** to delete a line from the query.
-8. Once a query is built, it must be tested before the query can be run and saved. Click the **Test query** button to run the query and display a preview of matched records. The query string can be edited in the **Query string** field. If edited, another Test query must be done.
-9. If the Test query is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
+8. Once a query is built, it must be tested before the query can be run and saved. Click the **Test query** button to run the query and display a preview of matched records. 
+
+   - If the query returns more than 100,000 records, this message appears: *Warning: this query returns more records than the maximum allowed. Modify the query to limit your results.*
+   - The query string can be edited in the **Query string** field. If edited, another Test query must be done.
+     
+10. If the Test query is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
 
 ### Preview matched records
 
 If the **Identifier** method is used to identify records for bulk edit, the number of records matched and the filename display at the top of the **Bulk edit** modal. 
 
 If the **Query** method is used to identify records for bulk edit, a **Test query** displays the query string and number of matched records at the top of the **Build query** modal. If the query is run, the **Query** and a preview of matched records display in the **Bulk edit query** modal. 
+
+**The maximum number of records allowed for bulk edit is 100,000.** If more than 100,000 records are identified, the query or list of record identifiers must be modified in order to perform the bulk edit.
 
 To add or remove **Field** columns in the preview pane:
 
