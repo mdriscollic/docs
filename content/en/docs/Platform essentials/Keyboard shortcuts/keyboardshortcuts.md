@@ -28,7 +28,7 @@ The action associated with the shortcut may vary slightly for different apps -- 
 | Paste                            | Ctrl+v        |
 | Find                             | Ctrl+f        |
  
-### The following keyboard shortcuts are only available in one app:
+### Keyboard shortcuts that are only available in one or two app:
 
 |      Action                                                      |      Shortcut keys     |      App used in     |
 |------------------------------------------------------------------|------------------------|----------------------|
@@ -36,8 +36,8 @@ The action associated with the shortcut may vary slightly for different apps -- 
 |     Receive pieces/Quick receive                                 |     Ctrl+Alt+r         |     Receiving        |
 |     Save a piece and create another                              |     Alt+s              |     Receiving        |
 |     Edit MARC record                                             |     Ctrl+Shift+e       |     Inventory        |
-|     quickMARC only: Move to the next subfield in a text box      |     Ctrl+\]            |     Inventory        |
-|     quickMARC only: Move to the previous subfield in a text box  |     Ctrl+\[            |     Inventory        |
+|     quickMARC only: Move to the next subfield in a text box      |     Ctrl+\]            |     Inventory, MARC authority        |
+|     quickMARC only: Move to the previous subfield in a text box  |     Ctrl+\[            |     Inventory, MARC authority        |
 ## Viewing the keyboard shortcuts list 
 
 To view the list of available shortcut keys, follow these steps:
@@ -64,6 +64,7 @@ The following apps display the list of keyboard shortcuts which can be viewed by
 *   Inventory
 *   Invoices
 *   Licenses
+*   Lists
 *   Local KB admin
 *   MARC Authority
 *   Orders
