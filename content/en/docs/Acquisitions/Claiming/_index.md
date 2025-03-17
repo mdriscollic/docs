@@ -1,5 +1,5 @@
 ﻿---
-title:  "Claiming"
+title: "Claiming"
 linkTitle: "Claiming"
 date: 2025-03-16
 weight: 05
