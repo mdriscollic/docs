@@ -43,7 +43,7 @@ Once you check in an item, the following columns appear in the Scanned Items tab
 * **Title.** The title of the item.
 * **Barcode.** The barcode of the item.
 * **Effective call number string.** The full call number of the item, which includes the call number prefix, suffix, and copy number, as configured in the Inventory app.
-* **Location.** The permanent location of the item.
+* **Location.** The [effective location](../../../platform-essentials/locations/locations/#item-effective-location) of the item.
 * **In-house use.** If you are recording in-house use of an item, a house icon appears here. Otherwise, it appears blank. See [Recording in-house use of an item](#recording-in-house-use-of-an-item) for more information.
 * **Status.** The item status once checked in.
 * **Actions.** Click **…** to view additional item information or see the actions you can take on the item. See [Getting additional item information](#getting-additional-item-information) for more information.
