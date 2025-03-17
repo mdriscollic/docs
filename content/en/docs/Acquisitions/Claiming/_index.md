@@ -1,10 +1,11 @@
 ﻿---
-title: "Claiming"
+title:  "Claiming"
 linkTitle: "Claiming"
 date: 2025-03-16
 weight: 05
 tags: ["parenttopic"]
 ---
+
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
 
@@ -68,6 +69,16 @@ To search for orders assigned with specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. The search results appear in the Claiming pane.
 
 ### Location
+
+To search for pieces assigned to a specific permanent location, follow these steps:
+
+1. In the Search & filter pane, click Location.
+
+2. Click Location look-up.
+
+3. In the Select permanent location dialog, select an Institution, Campus, Library, and Location using the drop-down lists.
+
+4. Click Save and close. The search results appear in the Claiming pane.
 
 ### POL claim active (default)
 
