@@ -1,10 +1,7 @@
-﻿---
-title:  "Claiming"
-linkTitle: "Claiming"
-date: 2025-03-16
-weight: 05
-tags: ["parenttopic"]
----
+﻿
+| title  | linkTitle | date | weight | tags |
+| ------------- | ------------- | ------------- | ------------- | ------------- | 
+| "Claiming"  | "Claiming"  | 2025-03-20 | 05 | ["parenttopic"]
 
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
