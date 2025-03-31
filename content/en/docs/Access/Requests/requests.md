@@ -32,7 +32,7 @@ The following are all the Requests permissions:
 
 * **Requests: All permissions.** This permission allows the user all request functions.
 * **Requests: Move to new item, reorder queue.** This permission allows the user to move requests from one item to another (subject to request policies).
-* **Requests, Reorder queue.** This permission allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue.
+* **Requests: Reorder queue.** This permission allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue.
 * **Requests: View.** This permission allows the user to search and view requests.
 * **Requests: View, create.** This permission allows the user to create new requests and view existing requests.
 * **Requests: View, edit, cancel.** This permission allows the user to view, edit and cancel requests.
