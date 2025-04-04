@@ -13,7 +13,7 @@ The Bulk Edit app allows a user to apply changes to multiple Inventory or User r
 
 ## Permissions
 
-The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. See [Bulk edit permissions](https://folio-org.atlassian.net/wiki/x/AlkV?atlOrigin=eyJpIjoiYjc1YjhiNTMyNjNlNDQ1OGI1NGI5YjcxODQwZTJjMDAiLCJwIjoiYyJ9) for more information.
+The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. See [Bulk edit permissions](https://folio-org.atlassian.net/wiki/spaces/FOLIJET/pages/1399042/Bulk+edit+permissions) for more information.
 
 Permissions are assigned to users in the Users app. If none of the Bulk edit permissions are assigned to a user, they are unable to see the Bulk Edit app or any related information. See [Users \> Assign or unassign permissions](../users/#assign-or-unassign-permissions) for more information about assigning permissions to a user. 
 
