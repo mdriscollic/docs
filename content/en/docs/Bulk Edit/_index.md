@@ -1,7 +1,7 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2025-03-11
+date: 2025-03-26
 weight: 550
 ---
 
@@ -13,10 +13,9 @@ The Bulk Edit app allows a user to apply changes to multiple Inventory or User r
 
 ## Permissions
 
-The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. 
+The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. See [Bulk edit permissions](https://folio-org.atlassian.net/wiki/x/AlkV?atlOrigin=eyJpIjoiYjc1YjhiNTMyNjNlNDQ1OGI1NGI5YjcxODQwZTJjMDAiLCJwIjoiYyJ9) for more information.
 
-Permissions are assigned to users in the Users app. If none of the Bulk edit permissions are assigned to a user, they are unable to see the Bulk Edit app or any related information. 
-See [Users \> Assign or unassign permissions](../users/#assign-or-unassign-permissions) for more information. 
+Permissions are assigned to users in the Users app. If none of the Bulk edit permissions are assigned to a user, they are unable to see the Bulk Edit app or any related information. See [Users \> Assign or unassign permissions](../users/#assign-or-unassign-permissions) for more information about assigning permissions to a user. 
 
 The following are the permissions for the Bulk edit app:
 
@@ -27,6 +26,238 @@ The following are the permissions for the Bulk edit app:
 - **Bulk edit: In app - View inventory records** This permission allows the user to view a list of identified inventory records in the Bulk Edit app. 
 - **Bulk edit: Local - Edit user records** This permission allows the user to edit a field in multiple identified user records in the Bulk Edit app by uploading a .csv file.
 - **Bulk edit: Local - View user records** This permission allows the user to view a list of identified user records in Bulk Edit by uploading a .csv file.
+
+
+## Supported fields by record type
+
+In the Bulk edit app, the **Fields** available for building a query and displaying as column headings in the preview of matched records depend on the **Record type** selected for the bulk edit. See the appropriate table for more information about supported fields by record type: 
+
+- [Inventory - holdings](#inventory---holdings)
+- [Inventory - instances](#inventory---instances)
+- [Inventory - items](#inventory---items)
+- [Users](#users)
+
+### Inventory - holdings
+
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: | 
+| *Effective library - Code* | YES | YES |
+| *Effective library - Name* | YES | YES |
+| *Effective location - Code* | YES | YES 
+| *Effective location - Name* | YES | YES |
+| *Holdings - Acquisition method* | YES | YES |
+| *Holdings - Acquisition order format* | YES | YES |
+| *Holdings - Acquisition receipt status* | YES | YES |
+| *Holdings - Administrative notes* | NO | YES |
+| *Holdings - Call number* | YES | YES |
+| *Holdings - Call number prefix* | YES | YES |
+| *Holdings - Call number suffix* | YES | YES |
+| *Holdings - Copy number* | YES | YES |
+| *Holdings - Created date* | YES | YES |
+| *Holdings - Digitization policy* | YES | YES |
+| *Holdings - Electronic access* | NO | YES |
+| *Holdings - Former IDs* | NO | YES |
+| *Holdings - HRID* | YES | YES |
+| *Holdings - Instance UUID* | YES | YES | 
+| *Holdings - Notes* | NO | YES |
+| *Holdings - Number of items* | YES | YES |
+| *Holdings - Record version* | YES | YES |
+| *Holdings - Retention policy* | YES | YES |
+| *Holdings - Shelving title* | YES | YES |
+| *Holdings - Statements* | NO | YES | 
+| *Holdings - Statements for indexes* | NO | YES |
+| *Holdings - Statements for supplements* | NO | YES |
+| *Holdings - Statistical code names* | YES | YES |
+| *Holdings - Statistical code UUIDs* | NO | YES |
+| *Holdings - Suppress from discovery* | YES | YES |
+| *Holdings - Tags* | NO | YES |
+| *Holdings - Updated date* | YES | YES |
+| *Holdings - UUID* | YES | YES |
+| *Permanent location - Code* | YES | YES |
+| *Permanent location - Name* | YES | YES | 
+| *Temporary location - Code* | YES | YES |
+| *Temporary location - Name* | YES | YES |
+
+### Inventory - instances
+
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: |
+| *Instance - Administrative notes* | NO | YES |
+| *Instance - Alternative titles* | NO | YES |
+| *Instance - Cataloged date* | YES | YES | 
+| *Instance - Classifications* | NO | YES | 
+| *Instance - Contributors* | NO | YES |
+| *Instance - Created date* | YES | YES | 
+| *Instance - Date 1* | YES | YES |
+| *Instance - Date 2* | YES | YES |
+| *Instance - Editions* | NO | YES |
+| *Instance - Electronic access* | NO | YES |
+| *Instance - Format names* | YES | YES |
+| *Instance - Identifiers* | NO | YES |
+| *Instance - Instance HRID* | YES | YES |
+| *Instance - Instance UUID* | YES | YES |
+| *Instance - Languages* | YES | YES | 
+| *Instance - Mode of issuance* | YES | YES | 
+| *Instance - Notes* | NO | YES |
+| *Instance - Physical descriptions* | NO | YES |
+| *Instance - Previously held* | YES | YES |
+| *Instance - Primary contributor* | NO | YES |
+| *Instance - Publication* | NO | YES |
+| *Instance - Publication range* | NO | YES |
+| *Instance - Record version* | YES | YES |
+| *Instance - Resource title* | YES | YES |
+| *Instance - Resource type* | YES | YES |
+| *Instance - Series* | NO | YES |
+| *Instance - Source* | YES | YES |
+| *Instance - Staff suppress* | YES | YES |
+| *Instance - Statistical code names* | YES | YES |
+| *Instance - Statistical code UUIDs* | NO | YES |
+| *Instance - Subject headings* | NO | YES |
+| *Instance - Suppress from discovery* | YES | YES |
+| *Instance - Tags* | NO | YES |
+| *Instance - Updated date* | YES | YES | 
+| *Instance date type - Name* | YES | YES |
+| *Instance status - Code* | YES | YES |
+| *Instance status - Term* | YES | YES |
+
+
+### Inventory - items
+
+| *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: |
+| *Effective call number - Type* | YES | YES |
+| *Effective library - Code* | YES | YES |
+| *Effective library - Name* | YES | YES |
+| *Effective location - Code* | YES | YES 
+| *Effective location - Name* | YES | YES |
+| *Holdings - Acquisition method* | YES | YES |
+| *Holdings - Acquisition order format* | YES | YES |
+| *Holdings - Acquisition receipt status* | YES | YES |
+| *Holdings - Call number* | YES | YES |
+| *Holdings - Call number prefix* | YES | YES |
+| *Holdings - Call number suffix* | YES | YES |
+| *Holdings - Copy number* | YES | YES |
+| *Holdings - Created date* | YES | YES |
+| *Holdings - Digitization policy* | YES | YES |
+| *Holdings - Electronic access* | NO | YES |
+| *Holdings - Former IDs* | NO | YES |
+| *Holdings - HRID* | YES | YES |
+| *Holdings - Instance UUID* | YES | YES | 
+| *Holdings - Notes* | NO | YES |
+| *Holdings - Number of items* | YES | YES |
+| *Holdings - Record version* | YES | YES |
+| *Holdings - Retention policy* | YES | YES |
+| *Holdings - Shelving title* | YES | YES |
+| *Holdings - Statements* | NO | YES |
+| *Holdings - Statements for indexes* | NO | YES |
+| *Holdings - Statements for supplements* | NO | YES |
+| *Holdings - Statistical code names* | YES | YES |
+| *Holdings - Statistical code UUIDs* | NO | YES |
+| *Holdings - Suppress from discovery* | YES | YES |
+| *Holdings - Tags* | NO | YES |
+| *Holdings - Updated date* | YES | YES |
+| *Holdings - UUID* | YES | YES |
+| *Instances - Administrative notes* | NO | YES |
+| *Instances - Alternative titles* | NO | YES |
+| *Instances - Cataloged date* | YES | YES | 
+| *Instances - Classifications* | NO | YES | 
+| *Instances - Contributors* | NO | YES |
+| *Instances - Created date* | YES | YES | 
+| *Instances - Date 1* | YES | YES |
+| *Instances - Date 2* | YES | YES |
+| *Instances - Editions* | NO | YES |
+| *Instances - Electronic access* | NO | YES |
+| *Instances - Format names* | YES | YES |
+| *Instances - Identifiers* | NO | YES |
+| *Instances - Instance HRID* | YES | YES |
+| *Instances - Instance UUID* | YES | YES |
+| *Instances - Languages* | YES | YES | 
+| *Instances - Mode of issuance* | YES | YES | 
+| *Instances - Notes* | NO | YES |
+| *Instances - Physical descriptions* | NO | YES |
+| *Instances - Previously held* | YES | YES |
+| *Instances - Primary contributor* | NO | YES |
+| *Instances - Publication* | NO | YES |
+| *Instances - Publication range* | NO | YES |
+| *Instances - Record version* | YES | YES |
+| *Instances - Resource title* | YES | YES |
+| *Instances - Resource type* | YES | YES |
+| *Instances - Series* | NO | YES |
+| *Instances - Source* | YES | YES |
+| *Instances - Staff suppress* | YES | YES |
+| *Instances - Statistical code names* | YES | YES |
+| *Instances - Statistical code UUIDs* | NO | YES |
+| *Instances - Subject headings* | NO | YES |
+| *Instances - Suppress from discovery* | YES | YES |
+| *Instances - Tags* | NO | YES |
+| *Instances - Updated date* | YES | YES | 
+| *Item call number - Type* | YES | YES |
+| *Items - Accession number* | YES | YES |
+| *Items - Administrative notes* | NO | YES |
+| *Items - Barcode* | YES | YES | 
+| *Items - Chronology* | YES | YES |
+| *Items - Copy number* |  YES | YES | 
+| *Items - Created date* | YES | YES | 
+| *Items - Description of pieces* | YES | YES |
+| *Items - Effective call number* | YES | YES |
+| *Items - Effective shelving order* | YES | YES |
+| *Items - Electronic access* | NO | YES |
+| *Items - Enumeration* | YES | YES |
+| *Items - Item call number* | YES | YES |
+| *Items - Item HRID* | YES | YES |
+| *Items - Item UUID* | YES | YES |
+| *Items - Last check in date time* | YES | YES |
+| *Items - Notes* | NO | YES |
+| *Items - Number of missing pieces* | YES | YES |
+| *Items - Number of pieces* | YES | YES |
+| *Items - Purchase order line identifier* | YES | YES |
+| *Items - Statistical code* | YES | YES |
+| *Items - Status* | YES | YES | 
+| *Items - Suppress from discovery* | YES | YES |
+| *Items - Updated date* | YES | YES |
+| *Items - Tag list* | NO | YES |
+| *Items - Version* | YES | YES |
+| *Material type - Name* | YES | YES |
+| *Permanent location - Code* | YES | YES |
+| *Permanent location - Name* | YES | YES | 
+| *Temporary location - Code* | YES | YES |
+| *Temporary location - Name* | YES | YES |
+
+### Users
+
+
+| *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matched records? |
+| :----- | :-----: | :-----: |
+| *Patron group - Name* | YES | YES |
+| *User - Active* | YES | YES |
+| *User - Address* | NO | YES |
+| *User - Barcode* | YES | YES |
+| *User - Created by user UUID* | YES | YES |
+| *User - Created date* | YES | YES |
+| *User - Date of birth* | YES | YES |
+| *User - Department names* | YES | YES |
+| *User - Department UUIDs* | NO | YES |
+| *User - Email* | YES | YES |
+| *User - Enrollment date* | YES | YES |
+| *User - Expiration date* | YES | YES |
+| *User - External system ID* | YES | YES |
+| *User - First name* | YES | YES |
+| *User - Last name* | NO | YES |
+| *User - Last name, first name* | YES | YES |
+| *User - Middle name* | YES | YES |
+| *User - Mobile phone* | YES | YES |
+| *User - Phone* | YES | YES |
+| *User - Preferred contact type* | YES | YES |
+| *User - Preferred first name* | YES | YES |
+| *User - Proxy for* | NO | YES | 
+| *User - Tags tag list* | NO | YES |
+| *User - Type* | YES | YES |
+| *User - Updated by User UUID* | YES | YES |
+| *User - Updated date* | YES | YES |
+| *User - User created date* | YES | YES |
+| *User - User updated date* | YES | YES |
+| *User - User UUID* | YES | YES |
+| *User - Username* | YES | YES |
 
 
 ## Identify records for bulk edit
@@ -51,12 +282,7 @@ To set criteria for bulk edit using **Identifier**:
    - Users
 
      
-4. Select the **Record identifier** from the **Select record identifier** drop-down menu. [Record identifiers available for selection](#record-identifiers-by-record-type) are based on the Record type.
-5. **Drag and drop** your .csv file into the **Select a file with record identifiers** box, or click **or choose file** to upload the .csv file from your computer. Only .csv files containing one column of record identifiers are accepted for upload in the Bulk edit app. If the .csv file contains more than one column, the upload will not be successful and an error message, "_filename_ is formatted incorrectly. Please correct the formatting and upload the file again" displays. 
-
-#### Record identifiers by record type
-
-In the **Identifier** method, the **Record identifiers** available for selection are based on the selected **Record type**. 
+4. Select the **Record identifier** from the **Select record identifier** drop-down menu. **Record identifiers** available for selection are based on the selected **Record type**:
 
 | Record Type | Record identifier | 
 | :----- | :----- |  
@@ -77,157 +303,11 @@ In the **Identifier** method, the **Record identifiers** available for selection
 | *Users* | External IDs |
 | *Users* | Usernames |
 
+6. **Drag and drop** your .csv file into the **Select a file with record identifiers** box, or click **or choose file** to upload the .csv file from your computer. Only .csv files containing one column of record identifiers are accepted for upload in the Bulk edit app. If the .csv file contains more than one column, the upload will not be successful and an error message, "_filename_ is formatted incorrectly. Please correct the formatting and upload the file again" displays. 
 
 ### Query
 
-The **Query** function in the Bulk Edit app allows the user to build a query to identify records for bulk edit. The **Fields** available for building a query are based on the selected **Record type**. 
-
-
-#### Fields by Record Type 
-
-| Record type | Field | 
-| :----- | :----- |
-| *Inventory - holdings* | Effective library - Code |
-| *Inventory - holdings* | Effective library - Name |
-| *Inventory - holdings* | Effective location - Code |
-| *Inventory - holdings* | Effective location - Name |
-| *Inventory - holdings* | Holdings - Acquisition method |
-| *Inventory - holdings* | Holdings - Acquisition order format |
-| *Inventory - holdings* | Holdings - Acquisition receipt status |
-| *Inventory - holdings* | Holdings - Call number |
-| *Inventory - holdings* | Holdings - Call number prefix |
-| *Inventory - holdings* | Holdings - Call number suffix |
-| *Inventory - holdings* | Holdings - Copy number |
-| *Inventory - holdings* | Holdings - Created date |
-| *Inventory - holdings* | Holdings - Digitization policy |
-| *Inventory - holdings* | Holdings - HRID |
-| *Inventory - holdings* | Holdings - Instance UUID |
-| *Inventory - holdings* | Holdings - Number of items |
-| *Inventory - holdings* | Holdings - Record version |
-| *Inventory - holdings* | Holdings - Retention policy |
-| *Inventory - holdings* | Holdings - Shelving title |
-| *Inventory - holdings* | Holdings - Statistical code names |
-| *Inventory - holdings* | Holdings - Suppress from discovery |
-| *Inventory - holdings* | Holdings - Updated date |
-| *Inventory - holdings* | Holdings - UUID |
-| *Inventory - holdings* | Permanent location - Code |
-| *Inventory - holdings* | Permanent location - Name |
-| *Inventory - holdings* | Temporary location - Code |
-| *Inventory - holdings* | Temporary location - Name |
-| *Inventory - instances* | Instance date type - Name |
-| *Inventory - instances* | Instance status - Code |
-| *Inventory - instances* | Instance status - Term |
-| *Inventory - instances* | Instances - Cataloged date |
-| *Inventory - instances* | Instances - Created date |
-| *Inventory - instances* | Instances - Date 1 |
-| *Inventory - instances* | Instances - Date 2 |
-| *Inventory - instances* | Instances - Format names |
-| *Inventory - instances* | Instances - Instance HRID |
-| *Inventory - instances* | Instances - Instance UUID |
-| *Inventory - instances* | Instances - Languages |
-| *Inventory - instances* | Instances - Mode of issuance |
-| *Inventory - instances* | Instances - Previously held |
-| *Inventory - instances* | Instances - Record version |
-| *Inventory - instances* | Instances - Resource title |
-| *Inventory - instances* | Instances - Resource type |
-| *Inventory - instances* | Instances - Source |
-| *Inventory - instances* | Instances - Staff suppress |
-| *Inventory - instances* | Instances - Statistical code names |
-| *Inventory - instances* | Instances - Suppress from discovery |
-| *Inventory - instances* | Instances - Updated date |
-| *Inventory - items* | Effective call number - Type |
-| *Inventory - items* | Effective location - Code |
-| *Inventory - items* | Effective location - Name |
-| *Inventory - items* | Holdings - Acquisition method |
-| *Inventory - items* | Holdings - Acquisition order format |
-| *Inventory - items* | Holdings - Acquisition receipt status |
-| *Inventory - items* | Holdings - Call number |
-| *Inventory - items* | Holdings - Call number prefix |
-| *Inventory - items* | Holdings - Call number suffix |
-| *Inventory - items* | Holdings - Copy number |
-| *Inventory - items* | Holdings - Created date |
-| *Inventory - items* | Holdings - Digitization policy |
-| *Inventory - items* | Holdings - HRID |
-| *Inventory - items* | Holdings - Instance UUID |
-| *Inventory - items* | Holdings - Number of items |
-| *Inventory - items* | Holdings - Record version |
-| *Inventory - items* | Holdings - Retention policy |
-| *Inventory - items* | Holdings - Shelving title |
-| *Inventory - items* | Holdings - Suppress from discovery |
-| *Inventory - items* | Holdings - Updated date |
-| *Inventory - items* | Holdings - UUID |
-| *Inventory - items* | Instances - Cataloged date |
-| *Inventory - items* | Instances - Created date |
-| *Inventory - items* | Instances - Date 1 |
-| *Inventory - items* | Instances - Date 2 |
-| *Inventory - items* | Instances - Format names |
-| *Inventory - items* | Instances - Instance HRID |
-| *Inventory - items* | Instances - Instance UUID|
-| *Inventory - items* | Instances - Mode of issuance |
-| *Inventory - items* | Instances - Previously held |
-| *Inventory - items* | Instances - Record version |
-| *Inventory - items* | Instances - Resource title |
-| *Inventory - items* | Instances - Resource type |
-| *Inventory - items* | Instances - Source |
-| *Inventory - items* | Instances - Staff suppress |
-| *Inventory - items* | Instances - Statistical code names |
-| *Inventory - items* | Instances - Suppress from discovery |
-| *Inventory - items* | Instances - Updated date |
-| *Inventory - items* | Item call number - Type |
-| *Inventory - items* | Items - Accession number |
-| *Inventory - items* | Items - Barcode |
-| *Inventory - items* | Items - Chronology |
-| *Inventory - items* | Items - Copy number |
-| *Inventory - items* | Items - Created date |
-| *Inventory - items* | Items - Description of pieces |
-| *Inventory - items* | Items - Effective call number |
-| *Inventory - items* | Items - Effective shelving order |
-| *Inventory - items* | Items - Enumeration |
-| *Inventory - items* | Items - Item call number |
-| *Inventory - items* | Items - Item HRID |
-| *Inventory - items* | Items - Item UUID |
-| *Inventory - items* | Items - Last check in date time |
-| *Inventory - items* | Items - Number of missing pieces |
-| *Inventory - items* | Items - Number of pieces |
-| *Inventory - items* | Items - Purchase order line identifier |
-| *Inventory - items* | Items - Statistical code |
-| *Inventory - items* | Items - Status |
-| *Inventory - items* | Items - Suppress from discovery |
-| *Inventory - items* | Items - Updated date |
-| *Inventory - items* | Items - Version |
-| *Inventory - items* | Material type name |
-| *Inventory - items* | Permanent location - Code |
-| *Inventory - items* | Permanent location - Name |
-| *Inventory - items* | Temporary location - Code |
-| *Inventory - items* | Temporary location - Name |
-| *Users* | Patron group - Name |
-| *Users* | User - Active |
-| *Users* | User - Barcode |
-| *Users* | User - Created by User UUID |
-| *Users* | User - Created date |
-| *Users* | User - Custom field(s) |
-| *Users* | User - Date of birth |
-| *Users* | User - Department names |
-| *Users* | User - Email |
-| *Users* | User - Enrollment date |
-| *Users* | User - Expiration date |
-| *Users* | User - External system ID |
-| *Users* | User - First name |
-| *Users* | User - Last name |
-| *Users* | User - Last name, first name |
-| *Users* | User - Middle name |
-| *Users* | User - Mobile phone |
-| *Users* | User - Phone |
-| *Users* | User - Preferred contact type |
-| *Users* | User - Preferred first name |
-| *Users* | User - Type |
-| *Users* | User - Updated by user UUID |
-| *Users* | User - Updated date |
-| *Users* | User - User UUID |
-| *Users* | User - Username|
-
-
-#### Build a query to identify records
+The **Query** function in the Bulk Edit app allows the user to build a query to identify records for bulk edit. The **Fields** available for building a query are based on the selected **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information.
 
 To set criteria and identify records for bulk edit using the **Query** method: 
 
@@ -241,8 +321,7 @@ To set criteria and identify records for bulk edit using the **Query** method:
 
 
 3. Click the **Build query** button to open the **Build query** modal.
-4. Select a **Field** from the *Select field* drop-down menu or filter the selection by typing the field in the *Filter options list* text box. The **Fields** available for selection are based on the **Record type**. See [Fields by Record Type](#fields-by-record-type) for more information.  
-
+4. Select a **Field** from the *Select field* drop-down menu or filter the selection by typing the field in the *Filter options list* text box. The **Fields** available for selection are based on the **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information.  
 5. Select an **Operator** from the *Select operator* drop-down list. The **Operators** available for selection are based on the **Field**. 
 
 | Operator | Meaning |
@@ -264,7 +343,7 @@ To set criteria and identify records for bulk edit using the **Query** method:
    - If the query returns more than 100,000 records, this message appears: *Warning: this query returns more records than the maximum allowed. Modify the query to limit your results.*
    - The query string can be edited in the **Query string** field. If edited, another Test query must be done.
      
-10. If the Test query is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
+9. If the Test query is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
 
 ### Preview matched records
 
@@ -277,7 +356,7 @@ If the **Query** method is used to identify records for bulk edit, a **Test quer
 To add or remove **Field** columns in the preview pane:
 
 1. Click the **Actions** button.
-2. In the **Show columns** section of the Actions menu, check the box next to the name of the **Field** to include as a column heading in the preview.
+2. In the **Show columns** section of the Actions menu, check the box next to the name of the **Field** to include as a column heading in the preview. The **Fields** available for display as column headings are based on the selected **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information about available column headings. 
 3. Uncheck the box next to the name of the **Field** to remove the column from the preview.
 
 ### Download matched records
@@ -305,11 +384,11 @@ To download the list of errors as a .csv file:
 
 In the Bulk edit app, the **Fields** that can be changed in Holdings records include:
 
-- **Administrative note**
-- **Electronic access**
-- **Holdings location**
-- **Holdings notes**
-- **Suppress from discovery**.
+- [Administrative note](#administrative-note)
+- [Electronic access](#electronic-access)
+- [Holdings location](#holdings-location)
+- [Holdings notes](#holdings-notes)
+- [Suppress from discovery](#suppress-from-discovery)
 
 To identify **Inventory-holdings** records for bulk edit:
 
@@ -511,13 +590,13 @@ To suppress the matched **Inventory-holdings** records from discovery in the Bul
 In the Bulk edit app, the **Fields** that can be changed in **Inventory-instance** records include:
 
 - **Instances and Administrative data**
-   - **Administrative note**
-   - **Instance note**
-   - **Staff suppress**
-   - **Suppress from discovery**
+   - [Administrative note](#administrative-note-1)
+   - [Instance note](#instance-note)
+   - [Staff suppress](#staff-suppress)
+   - [Suppress from discovery](#suppress-from-discovery-1)
 - **Instances with source MARC (POC)**
-   - **5xx fields**
-   - **9xx fields**
+   - [5xx fields and 9xx fields](#instances-with-source-marc-poc)
+   
 
 #### Instances and Administrative data
 
@@ -661,14 +740,14 @@ To perform a bulk edit on the **5xx** or **9xx** fields in the matched **Invento
 
 In the Bulk edit app, the **Fields** that can be changed in **Inventory-item** records include:
 
-- **Administrative note**
-- **Check in note**
-- **Check out note**
-- **Item notes**
-- **Item status**
-- **Loan type**
-- **Location**
-- **Suppress from discovery**
+- [Administrative note](#administrative-note-2)
+- [Check in note](#check-in-note)
+- [Check out note](#check-out-note)
+- [Item notes](#item-notes)
+- [Item status](#item-status)
+- [Loan type](#loan-type)
+- [Location](#location)
+- [Suppress from discovery](#suppress-from-discovery-2)
 
 To identify **Inventory-item** records for bulk edit:
 
