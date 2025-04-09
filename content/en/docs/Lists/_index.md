@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 linkTitle: "Lists"
-date: 2025-03-24        
+date: 2025-04-09       
 weight: 525
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
@@ -636,14 +636,22 @@ To set criteria and build a query for new list, follow these steps:
 | :----- | :----- |
 | *equals* | Field equals selected or input value. |
 | *not equal to* | Field does not equal selected or input value. |
-| *contains* | Field appears in selected or input value. |
+| *contains* | Field (with a single value) contains characters that match the selected or input value. |
+| *contains all* | Field (that can contain multiple values) matches all selected or input values. |
+| *contains any* | Field (that can contain multiple values) matches any selected or input values. |
+| *not contains all* | Field (that can contain multiple values) does not contain all selected or input values. |
+| *not contains any* | Field (that can contain multiple values) does not contain any selected or input values. |
+| *in* | Field (with a single value) matches any selected or input values. |
+| *not in* | Field (with a single value) matches none of selected or input values. |
 | *starts with* | Field starts with selected or input value. |
 | *is greater than* | Field is greater than the selected or input value. |
 | *is less than* | Field is less than the selected or input value. |
 | *is greater than or equal to* | Field is greater than or equal to the selected or input value. |
 | *is less than or equal to* | Field is less than or equal to the selected or input value. |
-| *is null/empty* | Field is blank; the field does not contain any data. |
+| *is null/empty* | Field is null or has an empty value; the field does not contain any data. |
     
+See [Querying Lists / FQM - operators, datatypes, examples](https://folio-org.atlassian.net/wiki/x/ToCZNw) for more information about **Operators**.
+
 
 5. Select a **Value** from the **Select value** drop-down list. The **Values** available for selection are based on the **Record Type** and **Field**.
 6. Click on the **+ icon** to add additional lines to the query; Click on the **trash can icon** to delete a line from the query. 
