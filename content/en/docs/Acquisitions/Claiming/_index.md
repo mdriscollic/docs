@@ -23,7 +23,7 @@ Definition of terms related to the Claiming app:
 
 ## Permissions
 | permissionDisplayName (OKAPI) | Capability/Capability Set (EUREKA) | Type | ApplicationID | Action | 
-| :—--: | :—--: | :-----: | :-----: | :-----: |
+| —-- | —-- | ----- | ----- | ----- |
 | *Claims: View claiming* | *Orders-Storage Claiming* (orders-storage.claiming.all) | Data | app-acquisitions-1.0.6 | All orders-storage claiming perms |c
 | *Receiving: View, edit* | *UI-Receiving* (ui-receiving.edit) | Data | app-acquisitions-1.0.6 | Edit |
 
