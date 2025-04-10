@@ -22,10 +22,10 @@ Definition of terms related to the Claiming app:
 - **Unreceivable**. An action that marks a piece unreceivable if it will never arrive at the library.
 
 ## Permissions
-| permissionDisplayName (OKAPI) | Capability/Capability Set (EUREKA) | Type | ApplicationID | Action | 
-| —-- | —-- | ----- | ----- | ----- |
-| *Claims: View claiming* | *Orders-Storage Claiming* (orders-storage.claiming.all) | Data | app-acquisitions-1.0.6 | All orders-storage claiming perms |c
-| *Receiving: View, edit* | *UI-Receiving* (ui-receiving.edit) | Data | app-acquisitions-1.0.6 | Edit |
+|permissionDisplayName (OKAPI)|Capability/Capability Set (EUREKA)|Type|ApplicationID|Action| 
+|---|---|---|---|---|
+|*Claims: View claiming*|*Orders-Storage Claiming* (orders-storage.claiming.all)|Data|app-acquisitions-1.0.6|All orders-storage claiming perms|
+|*Receiving: View, edit*|*UI-Receiving* (ui-receiving.edit)|Data|app-acquisitions-1.0.6|Edit|
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard. See [Platform essentials > Keyboards shortcuts](https://sunflower.docs.folio.org/docs/platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
