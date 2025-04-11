@@ -68,6 +68,7 @@ The following apps display the list of keyboard shortcuts which can be viewed by
 *   Lists
 *   Local KB admin
 *   MARC Authority
+*   Open access
 *   Orders
 *   Organizations
 *   Receiving
