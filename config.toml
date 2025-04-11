@@ -221,6 +221,6 @@ enable = false
 [[menu.main]]
     identifier = "wiki"
     name = "Project Wiki"
-    url = "https://wiki.folio.org"
+    url = "https://folio-org.atlassian.net/wiki"
     weight = 20
 
