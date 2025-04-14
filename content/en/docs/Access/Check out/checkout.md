@@ -63,6 +63,8 @@ Patron details include:
 * Open requests: The number of open requests the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
 * Patron blocks: If the patron has any blocks, they are shown here.
 
+Note: If the patron is acting as a proxy, then the sponsor's patron details are displayed first.
+
 
 ### Accessing the patron's data
 
