@@ -16,18 +16,30 @@ Definition of terms related to the ERM comparisons app:
 
 ## Permissions
 
-The permissions listed below allow you to interact with the ERM comparisons app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the ERM comparisons app or any related information.
+The Capability sets listed below allow you to interact with the ERM comparisons app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
-The following are all the ERM comparisons permissions:
+The following are all the ERM comparisons capability sets:
 
-* **ERM Comparisons: View jobs.** This permission allows the user to view existing comparisons. It also allows the user to see and access the ERM Comparisons App in the FOLIO interface.
-* **ERM Comparisons: Create jobs.** This permission allows the user to create a new comparison in the ERM Comparisons App. This does not include the permission to view existing packages in the internal KB or agreements in the agreements app.
-* **ERM Comparisons: Delete jobs.** This permission allows the user to delete an existing ERM comparison.
+* **UI-Erm-Comparisons Jobs.** Choose **View**, **Edit**, and **Delete**. The Capability set allows the user to view, create, edit and delete existing comparisons.
 
-The following permissions are also needed to create a comparison:
+The folling capability sets are also needed to create a comparison:
 
-* **Agreements: Search & view agreements.** This permission allows the user to search and view existing agreements. It also allows the user to see and access the Agreement app in the FOLIO interface.
-* **Agreements: Search & view e-resources.** This permission allows the user to search and view e-resources (packages and titles in those packages) in the internal KB. This includes the permission to see and access the Agreements app in the FOLIO interface.
+* **UI-Agreements Agreements.** Choose **View**. The Capability set allows the user to search and view existing agreements.
+* **UI-Agreements Resources.** Choose **View**. The Capability set allows the user to search and view e-resources (packages and titles in those packages) in the internal KB.
+* **Module Agreements Enabled.** Choose **View**. The Capability set allows the user to see and access the Agreements app in the FOLIO interface.
+
+~~The permissions listed below allow you to interact with the ERM comparisons app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the ERM comparisons app or any related information.~~
+
+~~The following are all the ERM comparisons permissions:~~
+
+~~* **ERM Comparisons: View jobs.** This permission allows the user to view existing comparisons. It also allows the user to see and access the ERM Comparisons App in the FOLIO interface.~~
+~~* **ERM Comparisons: Create jobs.** This permission allows the user to create a new comparison in the ERM Comparisons App. This does not include the permission to view existing packages in the internal KB or agreements in the agreements app.~~
+~~* **ERM Comparisons: Delete jobs.** This permission allows the user to delete an existing ERM comparison.~~
+
+~~The following permissions are also needed to create a comparison:~~
+
+~~* **Agreements: Search & view agreements.** This permission allows the user to search and view existing agreements. It also allows the user to see and access the Agreement app in the FOLIO interface.~~
+~~* **Agreements: Search & view e-resources.** This permission allows the user to search and view e-resources (packages and titles in those packages) in the internal KB. This includes the permission to see and access the Agreements app in the FOLIO interface.~~
 
 ## Creating a comparison
 
