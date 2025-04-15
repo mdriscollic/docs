@@ -17,27 +17,27 @@ Each setting within Circulation has its own permission associated with it. If a 
 
 The following are all the Circulation Settings permissions:
 
-* **Settings (Circ): Can create, edit and remove cancellation reasons:** Allows the user to create, read, update, and delete request cancellation reasons.
-* **Settings (Circ): Can create, edit and remove circulation rules:** Allows the user to create, read, update, and delete circulation rules.
-* **Settings (Circ): Can create, edit and remove fixed due date schedules:** Allows the user to create, read, update, and delete fixed due date schedules.
-* **Settings (Circ): Can create, edit and remove loan policies:** Allows the user to create, read, update, and delete loan policies.
-* **Settings (Circ): Can create, edit and remove lost item fee policies:** Allows the user to create, read, update, and delete lost item fee policies.
-* **Settings (Circ): Can create, edit and remove notice policies:** Allows the user to create, read, update, and delete patron notice policies.
-* **Settings (Circ): Can create, edit and remove other settings:** Allows the user to read and update Settings > Circulation > Other settings.
-* **Settings (Circ): Can create, edit and remove overdue fine policies:** Allows the user to create, read, update, and delete overdue fine policies.
-* **Settings (Circ): Can create, edit and remove patron notice templates:** Allows the user to create, read, update, and delete patron notice templates.
-* **Settings (Circ): Can create, edit and remove request policies:** Allows the user to create, read, update, and delete request policies.
-* **Settings (Circ): Can create, edit and remove staff slips:** Allows the user to create, read, and update staff slips. Note: Users can erase the content of staff slips in the editor, but cannot delete the staff slip itself.
-* **Settings (Circ): Can edit loan history:** Allows the user to edit settings in Settings > Circulation > Loan anonymization.
-* **Settings (Circ): Can enable request print details:** Allows the user to edit settings in [Settings > Circulation > Requests > View print details](#settings--circulation--view-print-details).
-* **Settings (Circ): Can view loan history:** Allows the user to view settings in Settings > Circulation > Loan anonymization but does not allow editing.
-* **Settings (Circ): Can view loan policies:** Allows the user to view loan policies but does not allow create, edit or delete.
-* **Settings (Circ): Can view lost item fee policies:** Allows the user to view lost item fee policies but does not allow create, edit or delete.
-* **Settings (Circ): Can view overdue fine policies:** Allows the user to view overdue fine policies but does not allow create, edit or delete.
-* **Settings (Circ): View circulation rules:** Allows a user to view circulation rules but does not allow them to create, edit or delete rules.
+* **Settings (Circulation): Can create, edit and remove cancellation reasons:** Allows the user to create, read, update, and delete request cancellation reasons.
+* **Settings (Circulation): Can create, edit and remove circulation rules:** Allows the user to create, read, update, and delete circulation rules.
+* **Settings (Circulation): Can create, edit and remove fixed due date schedules:** Allows the user to create, read, update, and delete fixed due date schedules.
+* **Settings (Circulation): Can create, edit and remove loan policies:** Allows the user to create, read, update, and delete loan policies.
+* **Settings (Circulation): Can create, edit and remove lost item fee policies:** Allows the user to create, read, update, and delete lost item fee policies.
+* **Settings (Circulation): Can create, edit and remove notice policies:** Allows the user to create, read, update, and delete patron notice policies.
+* **Settings (Circulation): Can create, edit and remove other settings:** Allows the user to read and update Settings > Circulation > Other settings.
+* **Settings (Circulation): Can create, edit and remove overdue fine policies:** Allows the user to create, read, update, and delete overdue fine policies.
+* **Settings (Circulation): Can create, edit and remove patron notice templates:** Allows the user to create, read, update, and delete patron notice templates.
+* **Settings (Circulation): Can create, edit and remove request policies:** Allows the user to create, read, update, and delete request policies.
+* **Settings (Circulation): Can create, edit and remove staff slips:** Allows the user to create, read, and update staff slips. Note: Users can erase the content of staff slips in the editor, but cannot delete the staff slip itself.
+* **Settings (Circulation): Can edit loan history:** Allows the user to edit settings in Settings > Circulation > Loan anonymization.
+* **Settings (Circulation): Can enable request print details:** Allows the user to edit settings in Settings > Circulation > Requests > View print details.
 * **Settings (Circulation): Can view all circulation settings:** Allows the user to view all the circulation settings but does not allow editing of circulation settings.
-* **Settings (Circulation): Can view staff slips:** Allows the user to view staff slips but does not  allow editing of staff slips.
+* **Settings (Circulation): Can view loan history:** Allows the user to view settings in Settings > Circulation > Loan anonymization but does not allow editing.
+* **Settings (Circulation): Can view loan policies:** Allows the user to view loan policies but does not allow create, edit or delete.
+* **Settings (Circulation): Can view lost item fee policies:** Allows the user to view lost item fee policies but does not allow create, edit or delete.
+* **Settings (Circulation): Can view overdue fine policies:** Allows the user to view overdue fine policies but does not allow create, edit or delete.
+* **Settings (Circulation): Can view staff slips:** Allows the user to view staff slips but does not allow editing of staff slips.
 * **Settings (Circulation): Title level request edit:** Allows the user to enable, disable and configure title-level requesting. Note that title level requesting cannot be disabled via settings if there are any open title level requests.
+* **Settings (Circulation): View circulation rules:** Allows a user to view circulation rules but does not allow them to create, edit or delete rules.
 
 
 ## Settings > Circulation > Circulation rules
