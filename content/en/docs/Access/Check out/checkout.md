@@ -51,7 +51,7 @@ If a patron's record has a note that is checked to display in the Check out app,
 After [Locating a patron](#locating-a-patron-in-the-system), patron details will display. 
 Patron details include:
 
-* Name: The patron’s name, displayed as [Last name], [Preferred first name]. If there is no [Preferred first name](../../../users/#user-information) in the patron’s user record, then [First name] is displayed.
+* Name: The patron’s name, displayed as \[Last name], \[Preferred first name]. If there is no [Preferred first name](../../../users/#user-information) in the patron’s user record, then \[First name] is displayed.
 * Pronouns: The patron’s pronouns will display in parentheses after their name, if the pronoun field contains data in the patron’s user record.
 * Barcode: The patron’s barcode.
 * Profile picture: If [Profile pictures](#displaying-profile-pictures-at-check-out) are enabled in the FOLIO tenant, they will display after the patron’s name and barcode.
