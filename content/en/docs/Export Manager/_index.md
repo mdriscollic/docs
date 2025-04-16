@@ -15,7 +15,8 @@ Note: For information on assigning permissions to users, see [Assigning permissi
 
 The following are all the Export manager app capabilities:
 
-|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
 |**Export manager: All.** | **UI-Export-Manager Export-Manager** | data | manage | This capability enables the Export manager app for the user and allows the user to view and access logs, download files from the Export manager app, and download and re-send EDIFACT export jobs.|
 |**Export manager: Download and re-send files.** | **UI-Export-Manager Jobs DownloadAndResend** | procedural | execute | This capability allows the user to download and re-send EDIFACT export jobs.|
 |**Export manager: View.** | **UI-Export-Manager Export-Manager** | data | view | This capability allows the user to view the Export manager, search and view logs, but not download generated files.|
