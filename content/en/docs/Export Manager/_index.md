@@ -7,13 +7,11 @@ weight: 625
 
 The Export manager app allows users to view manual or automated file exports for specific export operations. The Export manager app supports the following types of exports: Authority control, Bursar, Circulation log, eHoldings, Bulk edit, and EDIFACT orders. While these exports are initiated from other apps and areas of FOLIO, the Export manager app allows administrative staff to check on the status of scheduled exports, view error details, and download files for review.
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with the Export manager app and determine what you can and cannot do within the app. If none of these permissions are assigned to a user, they are unable to see the Export manager app or any related information.
+The capabilities listed below allow you to interact with the Export manager app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Export manager app or any related information.
 
-Note: For information on assigning permissions to users, see [Assigning permissions to a user record](../users/#assign-or-unassign-permissions).
-
-The following are all the Export manager app capabilities. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities:
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
