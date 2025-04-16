@@ -12,13 +12,13 @@ The Check out app allows you to check out items to patrons. To check out an item
 
 The permissions listed below allow you to interact with the Check out app and determine what you can and cannot do within the app. You can assign permissions to users in the Users app. You need to assign at least one of the following permissions to a user to enable the user to see the Check out app or any related information.
 
-* **Check out: All permissions.** This permission allows users to check out items to patrons (create new loans). However, this permission does not include seeing open loans or requests or seeing the entirety of the user record.
-* **Check out: Check out circulating items.** This permission allows users to check out items, but does not include seeing open loans or requests or seeing the entirety of the user record.
-* **Check out: View fees/fines.** This permission allows users to click the fee in the **Scan patron card** pane to view the patron’s fees/fines in the Users app. The user must have permission to view fees/fines in the Users app for the link to work. See, for example the permission **Users: Can view fees/fines and loans** ([Users \> Permissions](../../../users/#permissions)).
-A user who has **Check out: all permissions** but does not have **Check out: View fees/fines** will see a patron’s fee/fine amount in the **Scan patron card** pane as text (not a link).
-* **Check out: View loans.** This permission allows users to click the number of open loans in the **Scan patron card** pane to view the patron’s current loans in the Users app. The user must have permission to view loans in the Users app in order for the link to work. See, for example the permission **Users: User loans view** ([Users \> Permissions](../../../users/#permissions)).
-A user who has **Check out: all permissions** but does not have **Check out: View loans** will see how many loans a patron has in the **Scan patron card** pane as text (not a link).
-* **Check out: View requests.**  This permission allows users to be able to click the number of open requests in the **Scan patron card** pane to view the patron’s current requests in the Requests app. The user must have permission to view requests in the Requests app in order for the link to work. See, for example the permission **Requests: View** ([Requests \> Permissions](../../requests/requests/#permissions)). A user who has **Check out: all permissions** but does not have **Check out: View requests** will see how many requests a patron has in the **Scan patron card** pane as text (not a link).
+* **Check out: All permissions.** This permission allows users to check out items to patrons (create new loans). It does not allow users to view open loans or requests or the entire user record.
+* **Check out: Check out circulating items.** This permission allows users to check out items, but does not allow viewing open loans or requests or the entire user record.
+* **Check out: View fees/fines.** This permission allows users to click the fee in the **Scan patron card** pane to view the patron’s fees/fines in the Users app. For the link to work, the user must have permission to view fees/fines in the Users app. See, for example the permission **Users: Can view fees/fines and loans** ([Users \> Permissions](../../../users/#permissions)).
+A user who has **Check out: all permissions** but does not have **Check out: View fees/fines** will see a patron’s fee/fine amount in the **Scan patron card** pane as text (not as a link).
+* **Check out: View loans.** This permission allows users to click the number of open loans in the **Scan patron card** pane to view the patron’s current loans in the Users app. For the link to work, the user must have permission to view loans in the Users app. See, for example the permission **Users: User loans view** ([Users \> Permissions](../../../users/#permissions)).
+A user who has **Check out: all permissions** but does not have **Check out: View loans** will see how many loans a patron has in the **Scan patron card** pane as text (not as a link).
+* **Check out: View requests.**  This permission allows users to click the number of open requests in the **Scan patron card** pane to view the patron’s current requests in the Requests app. For the link to work, the user must have permission to view requests in the Requests app. See, for example the permission **Requests: View** ([Requests \> Permissions](../../requests/requests/#permissions)). A user who has **Check out: all permissions** but does not have **Check out: View requests** will see how many requests a patron has in the **Scan patron card** pane as text (not as a link).
 * **User: Can override item blocks.** This permission allows users to override non-circulating loan policies.
 * **Users: Can view profile pictures.** This permission allows users to view profile pictures at Check out.
 
@@ -45,6 +45,26 @@ Locate the patron using the Patron look-up function:
 5. Click the patron to use. The Select User dialog closes, the barcode appears in the Scan patron card pane, and the patron details are displayed.
 
 If a patron's record has a note that is checked to display in the Check out app, the note will appear as a pop-up window after the patron details are displayed.
+
+### Patron details displayed
+
+After [Locating a patron](#locating-a-patron-in-the-system), patron details will display. 
+Patron details include:
+
+* Name: The patron’s name, displayed as \[Last name], \[Preferred first name]. If there is no [Preferred first name](../../../users/#user-information) in the patron’s user record, then \[First name] is displayed.
+* Pronouns: The patron’s pronouns will display in parentheses after their name, if the pronoun field contains data in the patron’s user record.
+* Barcode: The patron’s barcode.
+* Profile picture: If [Profile pictures](#displaying-profile-pictures-at-check-out) are enabled in the FOLIO tenant, they will display after the patron’s name and barcode.
+* Patron group: The patron’s Patron group.
+* Status: either Active or Inactive.
+* User expiration: The date the patron’s borrowing privileges will expire / have expired.
+* Open loans: The number of open loans the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
+* Fees/fines owed: The total fees/fines owed. If the logged-in user has the appropriate permissions, this displays as a link.
+* Open requests: The number of open requests the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
+* Patron blocks: If the patron has any blocks, they are shown here.
+
+Note: If the patron is acting as a proxy, then the sponsor's patron details are displayed first.
+
 
 ### Accessing the patron's data
 
