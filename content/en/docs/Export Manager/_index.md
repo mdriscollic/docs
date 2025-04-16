@@ -13,7 +13,7 @@ The permissions listed below allow you to interact with the Export manager app a
 
 Note: For information on assigning permissions to users, see [Assigning permissions to a user record](../users/#assign-or-unassign-permissions).
 
-The following are all the Export manager app capabilities:
+The following are all the Export manager app capabilities. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities:
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
