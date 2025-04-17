@@ -1,7 +1,7 @@
 ---
 title: "Settings > Invoices"
 linkTitle: "Invoices"
-date: 2024-04-24
+date: 2025-04-16
 weight: 140
 tags: ["subtopic"]   
 ---
@@ -9,16 +9,18 @@ tags: ["subtopic"]
 The Invoices section of the Settings app is where you establish one click approvals, create preset adjustments, manage and configure batch groups, and control voucher settings. 
 
 
-## Permissions
+## Capabilities
 
-To interact with invoice settings, users need the following permission: 
+The capabilities listed below allow you to interact with the Invoices settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Invoices settings or any related information.
 
-*   **Settings (Invoices): Batch group usernames and passwords: view.** This permission allows the user to view FTP/SFTP authentication credntials entered in [Settings \> Invoices \> Batch group configuration](#settings--invoices--batch-group-configuration/).
-*   **Settings (Invoices): Batch group usernames and passwords: view and edit.** This permission allows the user to view and edit FTP/SFTP authentication credntials entered in [Settings \> Invoices \> Batch group configuration](#settings--invoices--batch-group-configuration/).
-*   **Settings (Invoices): View settings.** This permission allows the user to view the Invoice settings. 
-*   **Settings (Invoices): Can view and edit settings.** This permission allows the user to view and edit all of the Invoice settings. 
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-Note: This is the only permission for invoice settings. You can assign permissions to users in the Users app. 
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Invoices): Batch group usernames and passwords: view.**| **UI-Invoice BatchVoucher ExportConfigs Credentials** | data | view | This capability allows the user to view FTP/SFTP authentication credentials entered in [Settings \> Invoices \> Batch group configuration](#settings--invoices--batch-group-configuration/).|
+|**Settings (Invoices): Batch group usernames and passwords: view and edit.**| **UI-Invoice BatchVoucher ExportConfigs Credentials** | data | edit | This capability allows the user to view and edit FTP/SFTP authentication credentials entered in [Settings \> Invoices \> Batch group configuration](#settings--invoices--batch-group-configuration/).|
+|**Settings (Invoices): View settings.** | **UI-Invoice Settings** | settings | view | This capability allows the user to view the Invoice settings.| 
+|**Settings (Invoices): Can view and edit settings.** | **UI-Invoice Settings** | settings | manage | This capability allows the user to view and edit all of the Invoice settings.|
 
 
 ## Settings > Invoices > Approvals
