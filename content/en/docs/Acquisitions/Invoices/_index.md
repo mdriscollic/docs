@@ -32,7 +32,6 @@ It is recommended that you select all applications prior to assigning capabiliti
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
-
 |**Invoice: Approve invoices.** | **UI-Invoice Invoice Approve** | procedural | execute | This capability allows the user to approve invoices.|
 |**Invoice: Assign acquisition units to new record.** | **UI-Invoice Acq Unit Assignment** | procedural | execute | This capability allows the user to assign acquisition units to new invoices.|
 |**Invoice: Can view and edit invoices and invoice lines.** | **UI-Invoice Invoice** | data | edit | This capability allows the user to view and edit invoices and invoice lines.|
