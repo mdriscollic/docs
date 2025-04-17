@@ -1,7 +1,7 @@
 ---
 title: "Organizations"
 linkTitle: "Organizations"
-date: 2024-05-08
+date: 2025-04-16
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -17,30 +17,30 @@ Definition of terms related to the Organizations app:
 *   **Vendor.** Any institution from which your library purchases materials.
 
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with the Organizations app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Organizations app or any related information.
+The capabilities listed below allow you to interact with the Organizations app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Organizations app or any related information.
 
-Organizations permissions:
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-
-
-*   **Organizations: Assign acquisition units to new organization.** This permission allows the user to assign acquisition units to the organization when creating a new record.
-*   **Organizations: Can view privileged donor information.** This permission allows the user to view the information in the Privileged donor information accordion that appears on Organization records with the donor designation.
-*   **Organizations: Can view, create, edit, delete privileged donor information.** This permission allows the user to create, edit, and delete the information contained in the Privileged donor information accordion that appears on Organization records with the donor designation. Note: This permission must always be assigned in conjunction with either the Organizations: View, edit, create or Organizations: View, edit, delete permissions.
-*   **Organizations: Integration usernames and passwords: view.** This permission allows the user to view the usernames and passwords that appear in the Integration details accordion FTP section.
-*   **Organizations: Integration usernames and passwords: view, edit.** This permission allows the user to view and edit the usernames and passwords that appear in the Integration details accordion FTP details section.
-*   **Organizations: Interface usernames and passwords: view.** This permission allows the user to view the usernames and passwords that appear in the Interface section.
-*   **Organizations: Interface usernames and passwords: view, edit, create, delete.** This permission allows the user to create, edit, and delete the usernames and passwords that appear in the Interface section. Note: This permission must always be assigned in conjunction with either the Organizations: View, edit, create or Organizations: View, edit, delete permissions.
-*   **Organizations: Manage acquisition units.** This permission allows the user to change the assignment of acquisition units for the organization when editing a record.
-*   **Organizations: View.** This permission allows the user to search and view organization records and settings. The user can also access Contacts and Interfaces but cannot access Interface usernames and passwords.
-*   **Organizations: View and edit banking information.** This permission allows the user to view and edit the information contained in the Banking information accordion of an Organization record with a vendor designation. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).
-*   **Organizations: View banking information.** This permission allows the user to view the information contained in the Banking information accordion of an Organization record with a vendor designation. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).
-*   **Organizations: View, edit.** This permission allows the user to edit and view organizations. The user can also access Contacts, but they cannot access Interface usernames and passwords.
-*   **Organizations: View, edit and create banking information.** This permission allows the user to view and edit information contained in the Banking information accordion of an Organization record with a vendor designation, as well as create new entries. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).
-*   **Organizations: View, edit, create.** This permission allows the user to create, edit, and view organizations. The user can also access Contacts, but they cannot access Interface usernames and passwords.
-*   **Organizations: View, edit, create and delete banking information.** This permission allows the user to view, edit, and delete information contained in the Banking information accordion of an Organization record with a vendor designation, as well as create new entries. Note: Banking information must also be enabled in Settings > Organizations > Banking information.
-*   **Organizations: View, edit, delete.** This permission allows the user to view, edit, and delete organizations. The user can also access Contacts, but they cannot access Interface usernames and passwords.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Organizations: Assign acquisition units to new organization.** | **UI-Organizations AcqUnits** | procedural | execute | This capability allows the user to assign acquisition units to the organization when creating a new record.|
+|**Organizations: Can view privileged donor information.** | **UI-Organizations Privileged-Contacts** | data | view | This capability allows the user to view the information in the Privileged donor information accordion that appears on Organization records with the donor designation.|
+|**Organizations: Can view, create, edit, delete privileged donor information.** | **UI-Organizations Privileged-Contacts** | data | edit | This capability allows the user to create, edit, and delete the information contained in the Privileged donor information accordion that appears on Organization records with the donor designation. Note: This capability must always be assigned in conjunction with either the **UI-Organizations** capability (either **create** or **delete** action.|
+|**Organizations: Integration usernames and passwords: view.** | **UI-Organizations Integrations Creds** | data | view | This capability allows the user to view the usernames and passwords that appear in the Integration details accordion FTP section.|
+|**Organizations: Integration usernames and passwords: view, edit.**| **UI-Organizations Integrations Creds** | data | edit | This capability allows the user to view and edit the usernames and passwords that appear in the Integration details accordion FTP details section.|
+|**Organizations: Interface usernames and passwords: view.** | **UI-Organizations Creds** | data | view | This capability allows the user to view the usernames and passwords that appear in the Interface section.|
+|**Organizations: Interface usernames and passwords: view, edit, create, delete.** | **UI-Organizations Creds** | data | manage | This capability allows the user to create, edit, and delete the usernames and passwords that appear in the Interface section. Note: This capability must always be assigned in conjunction with either the **UI-Organizations** capability (either **create** or **delete** action.|
+|**Organizations: Manage acquisition units.** | **UI-Organizations AcqUnits** | data | manage | This capability allows the user to change the assignment of acquisition units for the organization when editing a record.|
+|**Organizations: View.** | **UI-Organizations** | data | view | This capability allows the user to search and view organization records and settings. The user can also access Contacts and Interfaces but cannot access Interface usernames and passwords.|
+|**Organizations: View and edit banking information.** | **UI-Organizations Banking-Information**| data | edit | This capability allows the user to view and edit the information contained in the Banking information accordion of an Organization record with a vendor designation. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).|
+|**Organizations: View banking information.** | **UI-Organizations Banking-Information** | data | view | This capability allows the user to view the information contained in the Banking information accordion of an Organization record with a vendor designation. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).|
+|**Organizations: View, edit.** | **UI-Organizations** | data | edit | This capability allows the user to edit and view organizations. The user can also access Contacts, but they cannot access Interface usernames and passwords.|
+|**Organizations: View, edit and create banking information.** | **UI-Organizations Banking-Information** | data | create | This capability allows the user to view and edit information contained in the Banking information accordion of an Organization record with a vendor designation, as well as create new entries. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).|
+|**Organizations: View, edit, create.** | **UI-Organizations** | data | create | This capability allows the user to create, edit, and view organizations. The user can also access Contacts, but they cannot access Interface usernames and passwords.|
+|**Organizations: View, edit, create and delete banking information.** | **UI-Organizations Banking-Information** | data | delete | This capability allows the user to view, edit, and delete information contained in the Banking information accordion of an Organization record with a vendor designation, as well as create new entries. Note: Banking information must also be enabled in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information).|
+|**Organizations: View, edit, delete.** | **UI-Organizations** | data | delete | This capability allows the user to view, edit, and delete organizations. The user can also access Contacts, but they cannot access Interface usernames and passwords.|
 
 
 
@@ -248,7 +248,7 @@ For more information, see [Creating an interface](#creating-an-interface).
 2. Click the **x**. The interface is deleted and is removed from the record once you save the organization.
 
 ### Privileged donor information
-This accordion appears on any Organization record with the **Donor** checkbox selected. Only staff members with permissions to view data in this accordion will be able to access this information. Donors can be associated with both fund records and purchase order lines.
+This accordion appears on any Organization record with the **Donor** checkbox selected. Only staff members with authorization to view data in this accordion will be able to access this information. Donors can be associated with both fund records and purchase order lines.
 
 #### Creating a new donor
 
@@ -409,7 +409,7 @@ Note: Adding an account is optional, but if you click **Add**, you must fill in 
 2. Click the **trash can icon**. The account is removed and is deleted once you save the vendor.
 
 ### Banking information
-This accordion will appear on Organization records where the **Vendor** checkbox is selected, only if activated in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information). This section allows storage of banking details to fulfil payments to the associated vendor. Staff users must have permissions to view and interact with the data in this accordion.
+This accordion will appear on Organization records where the **Vendor** checkbox is selected, only if activated in [Settings > Organizations > Banking information](../../settings/settings_organizations/settings_organizations/#settings--organizations--banking-information). This section allows storage of banking details to fulfil payments to the associated vendor. Staff users must have authorization to view and interact with the data in this accordion.
 
 #### Adding banking information
 1. Click **Add banking information.**
@@ -735,7 +735,7 @@ This section enables orders to be exported to vendors in EDIFACT format. To add 
 *   **FTP mode.** Select the transmission mode the library expects to use with the vendor: ASCII or Binary.
 *   **Server address.** The address for the vendor’s FTP server.
 *   **FTP connection mode.** Select the connection mode: Active or Passive.
-*   **Username.** The username for the FTP, if a login username is required for this vendor. See [Organizations permissions](#permissions) for more information about permissions related to viewing and editing integration credentials.
+*   **Username.** The username for the FTP, if a login username is required for this vendor. 
 *   **Password.** The password for the FTP, if a login password is required for this vendor. The password is automatically hidden. Click **Show** to display the password. Click **Hide** to stop displaying the password.
 *   **FTP port (required).** The FTP port number.
 *   **Order directory.** The subdirectory where orders should be placed, if different from the main FTP directory for this vendor. Ex: /directory.
@@ -949,7 +949,7 @@ Note: If you need to create a new interface, you should save your progress on th
 *   **Type.** The type of interface you are adding: Admin, End user, Reports, Orders, Invoices, or Other.
 *   **Name.** The name of the interface.
 *   **URI.** The URI of the interface.
-*   **Username.** The username needed to log into the interface. See [Organizations permissions](#permissions) for more information about permissions related to viewing and editing interface credentials.
+*   **Username.** The username needed to log into the interface. 
 *   **Password.** The password needed to log into the interface. Click **Show** to display the password. Click **Hide** to stop displaying the password.
 *   **Notes.** Any notes about the interface.
 *   **Available.** Select the **Available** checkbox to indicate whether statistics are available through this interface.
