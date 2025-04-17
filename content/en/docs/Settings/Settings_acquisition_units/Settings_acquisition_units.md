@@ -1,16 +1,16 @@
 ---
 title: "Settings > Acquisition units"
 linkTitle: "Acquisition units"
-date: 2024-04-22
+date: 2025-04-16
 weight: 10
 tags: ["subtopic"]   
 ---
 
 The Acquisition units section of the Settings app is where you can configure your acquisition units and assign users to the units you created.
 
-Acquisition units are an additional layer you can add to acquisitions records that restrict a user’s ability to interact with those records unless they have been assigned to that unit. While acquisition permissions may allow a user to perform certain actions within a particular app to any record within that app, acquisition units can further limit user access to only individual records.
+Acquisition units are an additional layer you can add to acquisitions records that restrict a user’s ability to interact with those records unless they have been assigned to that unit. While acquisition capabilities may allow a user to perform certain actions within a particular app to any record within that app, acquisition units can further limit user access to only individual records.
 
-For example, a university that shares FOLIO across multiple independent libraries, such as a Law Library, Medical Center Library, and Undergraduate Library could set up separate acquisition units for each library and assign staff from each library to the appropriate unit. Only staff within an assigned acquisition unit could take allowed actions on orders, organizations, invoices, or funds that share the same acquisition unit assignment. Even if a Law Library user has permissions to create and delete records within the Finance app, they would still be restricted from creating or deleting a Medical Center Library fund if they are not assigned to the Medical Center Library acquisition unit.
+For example, a university that shares FOLIO across multiple independent libraries, such as a Law Library, Medical Center Library, and Undergraduate Library could set up separate acquisition units for each library and assign staff from each library to the appropriate unit. Only staff within an assigned acquisition unit could take allowed actions on orders, organizations, invoices, or funds that share the same acquisition unit assignment. Even if a Law Library user has authorization to create and delete records within the Finance app, they would still be restricted from creating or deleting a Medical Center Library fund if they are not assigned to the Medical Center Library acquisition unit.
 
 Acquisitions units can be applied to the following types of records in FOLIO:
 
@@ -24,15 +24,18 @@ Acquisitions units can be applied to the following types of records in FOLIO:
 *   Receiving titles
 
 
-## Permissions
+## Capabilities
 
-In order to interact with acquisition units settings, a user needs to be assigned the following permission:
+The capabilities listed below allow you to interact with the Acquisition units settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Acquisition units settings or any related information.
 
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-
-*   **Settings (acquisition units): Can view, edit, create and delete acquisition units.** This permission allows you to view, edit, create, and delete acquisition units.
-*   **Settings (acquisition units): Manage acquisition unit user assignments.**  This permission allows you to assign users to acquisition units.
-*   **Settings (acquisition units): View.**  This permission provides view-only access to the acquisition units area of the Settings app. 
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (acquisition units): Can view, edit, create and delete acquisition units.** | **UI-Acquisition-Units Settings** | settings | manage | This capability allows you to view, edit, create, and delete acquisition units.|
+|**Settings (acquisition units): display list of settings pages** | **Settings Acquisition-Units Enabled** | settings | view | This capability displays the acquisition units area of the Settings app to the user.|
+|**Settings (acquisition units): Manage acquisition unit user assignments.** | **Acquisition Units Settings User Assignment** | settings | manage | This capability allows you to assign users to acquisition units.|
+|**Settings (acquisition units): View acquisition units.** | **UI-Acquisition-Units Settings** | settings | view | This capability provides view-only access to the acquisition units area of the Settings app.|
 
 
 
