@@ -1,7 +1,7 @@
 ---
 title: "Settings > Orders"
 linkTitle: "Orders"
-date: 2024-11-19
+date: 2025-04-16
 weight: 200
 tags: ["subtopic"]   
 ---
@@ -9,20 +9,24 @@ tags: ["subtopic"]
 The Orders section of the Settings app is where you establish behavior around approving and opening orders, your closing order reasons, how orders interact with the Inventory app, order templates, order lines limits, PO number settings, custom fields, and routing lists.
 
 
-## Permissions
+## Capabilities
 
-In order to interact with order settings, a user needs to be assigned the following permissions:
+The capabilities listed below allow you to interact with the Orders settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Orders settings or any related information.
 
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-*   **Settings (Orders): Can create, edit, view and delete custom fields.**  This permission allows the user to create, edit, view and delete custom fields in Settings > Orders.
-*   **Settings (Orders): Can create, edit, view custom fields.**  This permission allows the user to create, edit, and view custom fields in Settings > Orders.
-*   **Settings (Orders): Can view all settings.**  This permission allows the user to view all of the Orders settings.
-*   **Settings (Orders): Can view and edit all settings.** This permission allows the user to view and edit all of the Orders settings.
-*   **Settings (Orders): Can view custom fields.**  This permission allows the user to view custom fields in Settings > Orders.
-*   **Settings (Orders): Can view Order Templates.** This permission allows the user to view Order Templates in Settings > Orders.
-*   **Settings (Orders): Can view, edit Order Templates.** This permission allows the user to view and edit Order Templates in Settings > Orders.
-*   **Settings (Orders): Can view, edit, create Order Templates.** This permission allows the user to view, edit, and create Order Templates in Settings > Orders.
-*   **Settings (Orders): Can view, edit, delete Order Templates.** This permission allows the user to view, edit, and delete Order Templates in Settings > Orders.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Orders): Can create, edit, view and delete custom fields.** | **UI-Orders Settings Custom-Fields** | settings | delete | This capability allows the user to create, edit, view and delete custom fields in Settings > Orders.|
+|**Settings (Orders): Can create, edit, view custom fields.** | **UI-Orders Settings Custom-Fields** | settings | edit | This permission allows the user to create, edit, and view custom fields in Settings > Orders.|
+|**Settings (Orders): Can view all settings.** | **UI-Orders Settings** | settings | view | This capability allows the user to view all of the Orders settings.|
+|**Settings (Orders): Can view and edit all settings.** | **UI-Orders Settings** | settings | manage | This capability allows the user to view and edit all of the Orders settings.|
+|**Settings (Orders): Can view custom fields.** | **UI-Orders Settings Custom-Fields** | settings | view | This capability allows the user to view custom fields in Settings > Orders.|
+|**Settings (Orders): Can view Order Templates.** | **UI-Orders Settings Order-Templates** | settings | view | This capability allows the user to view Order Templates in Settings > Orders.|
+|**Settings (Orders): Can view, edit Order Templates.** | **UI-Orders Settings Order-Templates** | settings | edit | This capability allows the user to view and edit Order Templates in Settings > Orders.|
+|**Settings (Orders): Can view, edit, create Order Templates.** | **UI-Orders Settings Order-Templates** | settings | create | This capability allows the user to view, edit, and create Order Templates in Settings > Orders.|
+|**Settings (Orders): Can view, edit, delete Order Templates.**| **UI-Orders Settings Order-Templates** | settings | delete | This permission allows the user to view, edit, and delete Order Templates in Settings > Orders.|
+|**Settings (Orders): Manage number generator options** | **UI-Orders Settings Number-Generator** | settings | manage | TBD|
 
 
 ## Settings > Orders > General > Approvals
@@ -175,6 +179,9 @@ Custom fields can be deleted if they are in use, but any information tied to the
 2.  In the **Edit custom fields** pane, click the **trash can icon** next to the custom fields you want to delete. Clear out all of the fields to remove the accordion from appearing in PO/POL records.
 3.  Click **Save & close**.
 4.  In the **Delete field data** dialog, click **Save & lose data**.
+
+## Settings > Orders > Number generator options
+TBD
 
 ## Settings > Orders > PO number > Edit
 
