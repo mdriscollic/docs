@@ -20,13 +20,12 @@ The Capability sets listed below allow you to interact with the ERM comparisons 
 
 The following are the ERM comparisons Capability sets:
 
-* **UI-Erm-Comparisons Jobs.** Choose **View**, **Edit**, and **Delete**. The Capability set allows the user to view, create, edit and delete existing comparisons.
+* **UI-Erm-Comparisons Jobs.** Choose **View**, **Edit**, and **Delete**. The Capability set allows the user to view, create and delete existing comparisons.
 
 The following Capability sets are also needed to create a comparison:
 
-* **UI-Agreements Agreements.** Choose **View**. The Capability set allows the user to search and view existing agreements.
+* **UI-Agreements Agreements.** Choose **View**. The Capability set allows the user to search and view existing agreements. This also allows the user to see and access the Agreements app in the FOLIO interface.
 * **UI-Agreements Resources.** Choose **View**. The Capability set allows the user to search and view e-resources (packages and titles in those packages) in the internal KB.
-* **Module Agreements Enabled.** Choose **View**. The Capability set allows the user to see and access the Agreements app in the FOLIO interface.
 
 ## Creating a comparison
 
