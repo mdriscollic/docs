@@ -18,14 +18,13 @@ Definition of terms related to the ERM comparisons app:
 
 The Capability sets listed below allow you to interact with the ERM comparisons app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
-The following are the ERM comparisons Capability sets:
-
-* **UI-Erm-Comparisons Jobs.** Choose **View**, **Edit**, and **Delete**. The Capability set allows the user to view, create and delete existing comparisons.
-
-The following Capability sets are also needed to create a comparison:
-
-* **UI-Agreements Agreements.** Choose **View**. The Capability set allows the user to search and view existing agreements. This also allows the user to see and access the Agreements app in the FOLIO interface.
-* **UI-Agreements Resources.** Choose **View**. The Capability set allows the user to search and view e-resources (packages and titles in those packages) in the internal KB.
+|permissionDisplayName (OKAPI)        |Capability/Capability Set (EUREKA)                      |Type|ApplicationID              |Action| 
+|-------------------------------------|--------------------------------------------------------|----|---------------------------|------|
+|ERM comparisons: View jobs           |UI-Erm-Comparisons Jobs (ui-erm-comparisons_jobs.view)  |data|app-erm-usage-2.0.2        |view  |
+|ERM Comparisons: Create jobs         |UI-Erm-Comparisons Jobs (ui-erm-comparisons_jobs.edit)  |data|app-erm-usage-2.0.2        |edit  |
+|ERM Comparisons: Delete jobs         |UI-Erm-Comparisons Jobs (ui-erm-comparisons_jobs.delete)|data|app-erm-usage-2.0.2        |delete|
+|Agreements: Search & view agreements |UI-Agreements Agreements (ui-agreements_agreements.view)|data|app-platform-complete-2.1.9|view  |
+|Agreements: Search & view e-resources|UI-Agreements Resources (ui-agreements_resources.view)  |data|app-platform-complete-2.1.9|view  |
 
 ## Creating a comparison
 
