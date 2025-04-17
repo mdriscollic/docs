@@ -20,19 +20,21 @@ Definition of terms related to the Receiving app:
 *   **Unreceive.** To indicate that an order previously listed as “received” has not been delivered to the library.
 
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with the Receiving app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Receiving app or any related information.
+The capabilities listed below allow you to interact with the Receiving app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Receiving app or any related information.
 
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-
-*   **Receiving: Assign acquisition units to new receiving title.** This permission allows the user to apply an acquisition unit to a new title created in the Receiving app.
-*   **Receiving: Export search results.** This permission allows the user to export receiving search results in .csv format.
-*   **Receiving: Manage acquisition units.** This permission allows the user to add or update acquisition units on receiving records that may have been inherited from corresponding order records.
-*   **Receiving: View.** This permission allows the user to view receiving information for orders.
-*   **Receiving: View, edit.** This permission allows the user to receive and edit pieces that are associated with a purchase order line.
-*   **Receiving: View, edit, create.** This permission allows the user to view, edit, and create piece records.
-*   **Receiving: View, edit, delete.** This permission allows the user to view, edit and delete pieces in the Receiving app.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Receiving: Assign acquisition units to new receiving title.** | **UI-Receiving Acq-Units Assignment** | procedural | execute | This capability allows the user to apply an acquisition unit to a new title created in the Receiving app.|
+|**Receiving: Export search results.** | **UI-Receiving** | procedural | execute | This capability allows the user to export receiving search results in .csv format.|
+|**Receiving: Manage acquisition units.** | **UI-Receiving Acq-Units Assignment** | data | manage | This capability allows the user to add or update acquisition units on receiving records that may have been inherited from corresponding order records.|
+|**Receiving: View.** | **UI-Receiving** | data | view | This capability allows the user to view receiving information for orders.|
+|**Receiving: View, edit.** | **UI-Receiving** | data | edit | This capability allows the user to receive and edit pieces that are associated with a purchase order line.|
+|**Receiving: View, edit, create.** | **UI-Receiving** | data | create | This capability allows the user to view, edit, and create piece records.|
+|**Receiving: View, edit, delete.** | **UI-Receiving** | data | delete | This capability allows the user to view, edit and delete pieces in the Receiving app.|
 
 
 
@@ -456,7 +458,7 @@ Click **Export**. The file downloads to your local download location.
 
 ## Viewing receiving titles details
 
-Receiving title details can be viewed by any user with the permission [Receiving: View](#permissions).
+Receiving title details can be viewed by any user with the the assigned capabilities.
 
 
 ### Search results
