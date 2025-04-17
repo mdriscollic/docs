@@ -1,7 +1,7 @@
 ---
 title: "Settings > Organizations"
 linkTitle: "Organizations"
-date: 2024-04-22
+date: 2025-04-16
 weight: 210
 tags: ["subtopic"]   
 ---
@@ -9,16 +9,19 @@ tags: ["subtopic"]
 The Organizations section of the Settings app is where you establish the categories you want to use to classify the contact people and contact information you add to an organization, any types you may wish to use to classify the organization records for filtering purposes, and banking information related to vendors.
 
 
-## Permissions
+## Capabilities
 
-In order to interact with Organizations settings, a user needs to be assigned the following permissions:
+The capabilities listed below allow you to interact with the Organizations settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Organizations settings or any related information.
+
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Organizations): Can view and edit settings.** | **Organizations Settings** | data | manage | This capability allows the user to view, create, edit, and delete all organizations settings.|
+|**Settings (Organizations): Manage number generator options** | **UI-Organizations Settings NumberGenerator** | settings | manage | This capability allows the user to access and update the number generator options within Organizations settings.
+|**Settings (Organizations): View settings.** | **UI-Organizations Settings** | settings | view | This capability allows the user to view, but not interact with, organizations settings.|
 
 
-
-*   **Settings (Organizations): Can view and edit settings.** This permission allows the user to view, create, edit, and delete all organizations settings.
-*   **Settings (Organizations): View settings.** This permission allows the user to view, but not interact with, organizations settings.
-
-You can assign permissions to users in the Users app.
 
 
 ## Settings \> Organizations \> Categories
@@ -118,3 +121,6 @@ If **Banking information** is enabled, a library can configured account types to
 2. Click the **trash can icon**.
 
 3. In the **Delete account type** dialog, click **Delete**. The account type is deleted and a confirmation message appears. Note: Account types can be deleted while in use on an organization record. The field will appear empty within the Banking information.
+
+## Settings \> Organizations \> Number generator options
+TBD
