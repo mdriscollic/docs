@@ -19,7 +19,7 @@ Definition of terms related to Settings > Users:
 -  **Resource (EUREKA)**. An operation that can be performed in a FOLIO application.
 - **User role**. See **Authorization role** above.
 
-## Capabilties and Capability Sets
+## Capabilities and Capability Sets
 
 The Eureka platform, adopted in the Sunflower release, replaces permission sets with **Capabilities** and **Capability sets** for role-based management of user accounts. **Permission** names in the Okapi platform (pre-Sunflower release) differ from **Capabilities** in the Eureka platform.
 
