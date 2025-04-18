@@ -1,105 +1,79 @@
 ---
 title: "Settings > Users"
 linkTitle: "Users"
-date: 2025-03-13 
+date: 2025-04-18 
 weight: 250
 tags: ["subtopic"]
 ---
 
-The Users section in the Settings app provides configuration options for managing user records, including user information, patron blocks, fee/fine processing, permissions, and service points.
+The Users section in the Settings app provides configuration options for managing user records, including user information, custom fields, patron blocks, fee/fine processing, service points, and more.
 
-Definition of terms related to Settings \> Users:
+Definition of terms related to Settings > Users:
 
--  **Permission.** Value assigned to a user, which grants them access to FOLIO records or allows them to carry out specific tasks in FOLIO.
--  **Permission set.** A group of permissions that allows a user to perform a specific set of tasks. For example, you may want to group certain permissions together to create job-specific permissions sets. Permission sets are defined by your library in [Settings \> Users \> Permission sets](#settings--users--permission-sets).
+- **applicationId**. An attribute of a capability or capability set that identifies the platform for a FOLIO application. For Settings \> Users, this is *app-platform-complete*.
+- **Authorization role**. Also known as **User role**. Comprised of capabilities or capability sets, allows a user to perform role-based actions in a FOLIO application.
+- **Capabilities**. Component of an authorization role that when assigned, allows the user to perform an action in a FOLIO application.
+- **Capability Sets**. A set of individual capabilities.
+- **Settings (Type)**. Capabilities that allow the user to manage FOLIO configurations administratively.
+- **permissionDisplayName (OKAPI)**. The permission set name displayed in the UI of the Okapi platform (pre-Sunflower release).
+-  **Resource (EUREKA)**. An operation that can be performed in a FOLIO application.
+- **User role**. See **Authorization role** above.
 
+## Capabilties and Capability Sets
 
-## Permissions
+The Eureka platform, adopted in the Sunflower release, replaces permission sets with **Capabilities** and **Capability sets** for role-based management of user accounts. **Permission** names in the Okapi platform (pre-Sunflower release) differ from **Capabilities** in the Eureka platform.
 
-The following are all the permissions for Users in the Settings app:
+The Authorization Roles section of Settings allows configuration and management of **Authorization roles**, also known as user roles, through capabilities and capability sets. For more information about **Capabilities** and **Capability sets**, see [Roles Management in Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
--   **Settings (Users): Can create, edit and remove address types.** This permission allows the user to create, edit, or remove **Address Types** entries in the General section of Settings \> Users.
--   **Settings (Users): Can create, edit and remove all feefines-related entries.** This permission allows the user to create, edit, and remove **Owners**, **Manual charges**, **Waive reasons**, **Payment methods**, **Refund reasons**, **Comment required**, and **Transfer accounts** in the Fee/fine section in Settings \> Users. This permission does not apply to **Transfer criteria**.
--   **Settings (Users): Can create, edit and remove manual charges.** This permission allows the user to create, edit, or remove **Manual charges** entries in the Fee/fine section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove owners.** This permission allows the user to create, edit, or remove **Owners** entries from the Fee/fine section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove patron blocks limits.** This permission allows the user to create, edit, or remove **Limits** entries in the Patron blocks section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove patron blocks templates.** This permission allows the user to create, edit, or remove **Templates** in the Patron blocks section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove patron groups.** This permission allows the user to create, edit, or remove **Patron groups** in the General section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove payment methods.** This permission allows the user to create, edit, or remove **Payment methods** in the Fee/fine section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove permission sets.** This permission allows the user to create, edit, or remove **Permission sets** in the General section of Settings \> Users. 
--   **Settings (Users): Can create, edit and remove refund reasons.** This permission allows the user to create, edit, or remove **Refund reasons** in the Fee/fine section of Settings \> Users.
--   **Settings (Users): Can create, edit and remove transfer accounts.** This permission allows the user to create, edit, or remove **Transfer accounts** in the Fee/fine section of Settings > Users.
--   **Settings (Users): Can create, edit and remove waive reasons.** This permission allows the user to create, edit, or remove **Waive reasons**in the Fee/fine section of Settings \> Users.
--   **Settings (Users): Can create, edit, and view custom fields.** This permission allows the user to create, edit, and view **Custom fields** in the General section of Settings > Users.
--   **Settings (Users): Can create, edit, and view departments.**This permission allows the user to create, edit, view and delete **Custom fields** in the General section of Settings > Users.
--   **Settings (Users): Can create, edit, view and delete custom fields.** This permission allows the user to create, edit, view and delete **Custom fields** in the General section of Settings > Users.
--   **Settings (Users): Can create, edit, view, and delete departments.** This permission allows the user to create, edit, view, and delete **Departments** in the General section of Settings > Users.
--   **Settings (Users): Can edit if comment required.** This permission allows the user to edit Comment required entries in the Fee/fine section of Settings \> Users.
--   **Settings (Users): Can view address types**. This permission allows the user to view **Address types** in the General section of Settings \> Users. 
--   **Settings (Users): Can view all patron blocks entries**. This permission allows the user to view all entries in the Patron blocks section of Settings \> Users. 
--   **Settings (Users): Can view and edit patron blocks conditions.** This permission allows the user to view and edit entries in the **Conditions** in the Patron blocks section of Settings \> Users.
--   **Settings (Users): Can view custom fields**. This permission allows the user to view **Custom fields** in the General section of Settings \> Users. 
--   **Settings (Users): Can view all feefines-related entries.** This permission allows the user to view all entries, except **Transfer criteria**, in the Fee/fine section in Settings \> Users. 
--   **Settings (Users): Can view general entries**. This permission allows the user to view all entries in the General section of Settings \> Users. 
--   **Settings (Users): Can view patron groups**. This permission allows the user to view **Patron groups** in the General section of Settings \> Users.  
--   **Settings (Users): Can view permission sets**. This permission allows the user to view **Permission sets** in the General section of Settings \> Users. 
--   **Settings (Users): View all settings**. This permission allows the user to view all settings in Settings \> Users. 
+The following **Capabilities** allow for interaction in Settings > Users. 
 
+For all Settings > Users capabilities: 
 
-## Settings \> Users \> Permission sets
+- **Application** is *app-platform-complete*.
+- **Type** is *settings*.
 
-Use this setting to create permission sets for your library. Permission sets are customized collections of permissions that can be assigned to users. For example, you can create permission sets that correspond to specific job roles and assign the set, rather than each individual permission, to all library staff with that role. 
-
-Additionally, if permissions change because of a new release, a FOLIO administrator can edit the permission set for a particular role to update the assigned permissions. The change to the permission set then propagates out to the users who have that permission set assigned, and the administrator does not have to update permissions for each individual user.
-
-For more information about permissions, see [Platform Essentials > Permissions](../../platform-essentials/permissions/).
-
-
-### Create a permission set
-
-1.  In the **Permission sets** pane, click **New**.
-2.  To name the permissions set, enter a **Permission set name**. The system does not automatically enforce uniqueness in naming permission sets. To avoid creating permission sets with duplicate display names, make sure this new permission set has a unique name.
-3.  Optional: Enter a **Description** of the permission set.
-4.  Under **Assigned permissions**, click **Add permission**. You can assign individual permissions or existing permission sets to the new permission set.
-5.  In the **Select Permissions** modal, search and filter by **Permission type** and/or **Permission assignment status** or type in the name of the permission or permission set into the search box.
-6. Select the permission(s) or permission set(s) to assign to the new permission set.
-7.  Click **Save & close**. The permission(s) or permission set(s) are added to the new permission set.
-8.  Click **Save & close**. The new permission set is saved.
-
-### Edit a permission set
-
-1.  In the **Permission Sets** pane, find the permission set you want to edit and select it.
-2.  Click **Edit**.
-3.  Make your desired changes to the permission set.
-4.  Click **Save & Close**.
-
-### Delete a permission set
-
-Note: A permission set can be deleted even if it is currently assigned to a user. Deleting the permission set removes it from the users to whom it was assigned.
-
-1.  In the **Permission Set** pane, find the permission set you want to delete and select it.
-2.  Click **Edit**.
-3.  In the **Edit** window, click **Delete**.
-4.  In the **Delete permission set?** dialog, click **Delete**. A confirmation message appears and the permission set is deleted.
-
-### View assigned users
-
-To view a list of users assigned to a specific permission set: 
-
-1. In the **Permission sets** pane, click on a permission set. The details for that permission set will open in a new pane. 
-2. Open the **Assigned users** accordion, if necessary, to view a list of users assigned to that permission set. 
-
-### Assign or unassign permission sets
-
-To assign or unassign a permission set to a user:
-
-1. In the **Permission sets** pane, click on a permission set. The details for that permission set will open in a new pane. 
-2. Open the **Assigned users** accordion, if necessary, to view a list of users assigned to that permission set. 
-3. Click the **Assign/unassign** button. 
-4. In the **User record** modal, search for the user record or filter by **Status**, **Patron group**, or **User assignment status**. 
-5. In the **User search results** pane, check or uncheck the box(es) next to **Name** to select or deselect the appropriate user(s) to update their permission set assignment.
-6. Click the **Save** button. A confirmation message, *Permissions set user assignment updated successfully* appears.
-
+| permissionDisplayName (OKAPI) | Resource (EUREKA) | Action | 
+| :----- | :----- | :-----: | 
+| *Settings (Users): Can create, edit and remove address types* | *UI-Users Settings Addresstypes* | manage |
+| *Settings (Users): Can view address types* | *UI-Users Settings Addresstypes* | view |
+| *Settings (Users): Can view if comment required* | *UI-Users Settings Comments* | view |
+| *Settings (Users): Can view and edit patron blocks conditions* | *UI-Users Settings Conditions* | edit |
+| *Settings (Users): Can view patron blocks conditions* | *UI-Users Settings Conditions* | view |
+| *Settings (Users): Delete departments* | *UI-Users Settings Departments* | delete |
+| *Settings (Users): Can create, edit, view, and delete departments* | *UI-Users Settings Departments* | manage |
+| *Settings (Users): Can view departments* | *UI-Users Settings Departments* | view |
+| *Settings (Users): Can create, edit and remove all feefines-related entries* | *UI-Users Settings Feefines* | manage |
+| *Settings (Users): Can view feefines-related entries* | *UI-Users Settings Feefines* | view |
+| *Settings (Users): Can view patron blocks limits* | *UI-Users Settings Limits* | settings | view |
+| *Settings (Users): Can create, edit and remove manual charges* | *UI-Users Settings Manual-Charges* | manage |
+| *Settings (Users): Can view manual charges* | *UI-Users Settings Manual-Charges* | view |
+| *Settings (Users): Can create, edit and remove owners* | *UI-Users Settings Owners* | manage |
+| *Settings (Users): Can view owners* | *UI-Users Settings Owners* | view |
+| *Settings (Users): Can view all patron blocks entries* | *UI-Users Settings Patron-Blocks* | view |
+| *Settings (Users): Can create, edit and remove patron blocks templates* | *UI-Users Settings Patron-Block-Templates* | manage | 
+| *Settings (Users): Can view patron blocks templates* | *UI-Users Settings Patron-Block-Templates* |view |
+| *Settings (Users): Can create, edit and remove payment methods* | *UI-Users Settings Payments* | manage |
+| *Settings (Users): Can view payment methods* | *UI-Users Settings Payments* | view |
+| *Settings (Users): Can create, edit and remove permission sets* | *UI-Users Settings Permsets* | manage |
+| *Settings (Users): Can view transfer accounts* | * UI-Users Settings Transfers* | view |
+| *Settings (Users): Can create, edit and remove patron groups* | *UI-Users Settings Usergroups* | manage |
+| *Settings (Users): View all settings* | *UI-Users Settings* |view |
+| *Settings (Users): Can create, edit, and view custom fields* | *UI-Users Settings Customfields* | edit |
+| *Settings (Users): Can create, edit, view and delete custom fields* | *UI-Users Settings Customfields* | manage |
+| *Settings (Users): Can view custom fields* | *UI-Users Settings Customfields* | view |
+| *Settings (Users): Can create, edit, and view departments* | *UI-Users Settings Departments Create Edit* | view | 
+| *Settings (Users): Create departments* | *UI-Users Settings Departments* | create |
+| *Settings (Users): Edit departments* | *UI-Users Settings Departments* | edit |
+| *Settings (Users): Can view general entries* | *UI-Users Settings General* | view |
+| *Settings (Users): Can create, edit and remove patron blocks limits* | *UI-Users Settings Limits* | manage |
+| *Settings (Users): Can view permission sets* | *UI-Users Settings Permsets* | view |
+| *Settings (Users): Can view refund reasons* | *UI-Users Settings Refunds* | view |
+| *Settings (Users): Can create, edit and remove transfer accounts* | *UI-Users Settings Transfers* | manage |
+| *Settings (Users): Can view patron groups* | *UI-Users Settings Usergroups* | view |
+| *Settings (Users): Can create, edit and remove waive reasons* | *UI-Users Settings Waives* | manage |
+| *Settings (Users): Can view waive reasons* | *UI-Users Settings Waives* | view 
+| *Settings (Users): display list of settings pages* | *Settings Users Enabled* | view |
+| *Settings (Users): Can create, edit and remove refunds reasons* | *UI-Users Settings Refunds* | manage |
 
 ## Settings \> Users \> Patron Groups
 
