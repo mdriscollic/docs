@@ -26,7 +26,7 @@ Definitions of terms related to Settings \> Authorization roles:
 ## Capabilities
 The following are the **Capabilities** that when assigned, allow the user to interact with **Settings \> Authorization roles**. 
 
-For all Settings \> Authorization roles:
+For all Settings \> Authorization roles capabilities:
 
   - **Application** is *app-platform-minimal*.
   - **Type** is *Settings*.
