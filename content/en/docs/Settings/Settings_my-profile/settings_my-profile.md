@@ -1,7 +1,7 @@
 ---
 title: "Settings > My profile"
 linkTitle: "My profile"
-date: 2025-04-16
+date: 2025-04-18
 weight: 175
 tags: ["subtopic"]   
 ---
@@ -15,12 +15,17 @@ The Eureka platform, adopted in the Sunflower release, replaces permission sets 
 
 For more information about **Capabilities**, **Capability sets**, and their attributes, see [Roles Management in Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw). 
 
-The following **Capabilities** allow interaction with the My profile section of the Settings app: 
+The following **Capabilities** allow interaction with the My profile section of the Settings app. 
 
-| permissionDisplayName (OKAPI) | Resource (EUREKA) | Type | Application | Action | 
-| :----- | :----- | :-----: | :-----: | :-----: |
-| *Settings (My profile): Can change your local password* | *UI-Myprofile Settings Change-Password* | settings | app-platform-complete | view |
-| *Settings (My profile): Can change application order in main navigation* | *UI-Myprofile Settings Main-Nav-Order* | settings | app-platform-complete | manage |
+For all Settings \> My profile capabilities:
+
+ - **Application** is *app-platform-complete*.
+ - **Type** is *settings*. 
+
+| permissionDisplayName (OKAPI) | Resource (EUREKA) | Action | 
+| :----- | :----- | :-----: | 
+| *Settings (My profile): Can change your local password* | *UI-Myprofile Settings Change-Password* | view |
+| *Settings (My profile): Can change application order in main navigation* | *UI-Myprofile Settings Main-Nav-Order* | manage |
 
 
 ## Application display order
