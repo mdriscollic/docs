@@ -1,18 +1,19 @@
 ---
 title: "Users"
 linkTitle: "Users"
-date: 2025-04-18      
+date: 2025-04-21     
 weight: 250
 ---
 
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
 
-The Users app allows you to manage user information for patrons and library staff. Both patrons and library staff's user records are stored in the Users app. There is no separate directory or app for library staff users. The difference between a library staff user and a patron is that the library staff user record has FOLIO permission(s), username, and password assigned to it. 
+The Users app allows you to manage user information for patrons and library staff. Both patrons and library staff's user records are stored in the Users app. There is no separate directory or app for library staff users. The difference between a library staff user and a patron is that the library staff user record has FOLIO permission(s), username, and  assigned to it. 
 
 Definition of terms related to the Users app:
 
-- **applicationId**. An attribute of a capability or capability set that identifies the platform for a FOLIO application.
-- **Authorization role**. See **User roles** below.
+- **applicationId**. Also referred to as **Application**. An attribute of a capability or capability set that identifies the platform for a FOLIO application.
+- **Application**. See **applicationID**. For Users capabilities and capability sets, the Application is *app-platform-complete*.
+- **Authorization role**. See **User role**.
 - **Capabilities**. Ability assigned to a user to perform an action in a FOLIO application.  
 - **Capability Sets**. A set of individual capabilities.
 - **permissionDisplayName (OKAPI)**. The permission set name displayed in the Okapi platform (pre-Sunflower release). 
@@ -59,11 +60,11 @@ For all Users capabilities:
 | *Users: Can view and edit reading room access* | *UI-Users Reading-Room-Access* | Data | Edit |
 | *Users: Can view, edit, and delete profile pictures* | *UI-Users Profile-Pictures* | Data | Manage |
 | *Users: Create and download Cash drawer reconciliation report* | *UI-Users Cash-Drawer-Report* | Procedural | Execute |
-| *Users: Create and download Financial transaction detail report* | *UI-Users Financial-Transaction-Report | Procedural | Execute |
+| *Users: Create and download Financial transaction detail report* | *UI-Users Financial-Transaction-Report* | Procedural | Execute |
 | *Users: Create and download Refunds to process manually report* | *UI-Users Manual-Process-Refunds-Report* | Procedural | Execute |
 | *Users: Create/reset password* | *UI-Users Reset Password* | Procedural | Execute |
 | *Users: User loans anonymize* | *UI-Users Loans-Anonymize* | Procedural | Execute |
-| *Users: User loans change due date | UI-Users Loans-Due-Date | Data | Edit |
+| *Users: User loans change due date* | *UI-Users Loans-Due-Date* | Data | Edit |
 | *Users: User loans claim returned* | *UI-Users Loans-Claim-Item-Returned* | Procedural | Execute |
 | *Users: User loans declare lost* | *UI-Users Loans-Declare-Item-Lost* | Procedural | Execute |
 | *Users: User loans mark claimed returned missing* | *UI-Users Loans-Declare-Claimed-Returned-Item-As-Missing* | Procedural | Execute |
@@ -128,7 +129,7 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 -  **Department name.** Name of the user's department, if applicable. To associate the user with a department, click **Add Department** and select the department from the drop-down list. The **Add Department** button appears only if **Departments** are configured in [Settings \> Users \> Departments](../settings/settings_users/settings_users/#settings--users--departments).
 -  **Default pickup service point.** Select the default pickup service point for the user from the drop-down menu. Service points are configured in [Settings \> Tenant \> Service points](../settings/settings_tenant/settings_tenant/#settings--tenant--service-points).
 -  **Username.** If the **User Type** is set to Staff, **Username** is used by the user to log into FOLIO to perform library work. If the **User Type** is set to Patron, the **Username** is not required, but may be assigned for the purpose of connecting a user's library account in FOLIO with an external system, such as a discovery interface or a self-checkout system. However, patrons will not log into FOLIO to manage their library accounts.
--  **Password.** -  **Password.** Once the user record is created and saved, a reset password link can be sent via email. See [Send reset password email](#send-reset-password-email) for more information.
+-  **Password.** -  Once the user record is created and saved, a reset password link can be sent via email. See [Send reset password email](#send-reset-password-email) for more information.
 
 
 ### Contact information
@@ -264,7 +265,7 @@ To view additional details, expand the **Requests** accordion and click **open r
 
 The Eureka platform, adopted in the Sunflower release, replaces permission sets with **Capabilities** and **Capability sets** for role-based management of user accounts. See [Roles Management in Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-User roles can be added or unassigned to users in the Users app. See [Settings/Authorization roles: Users app](https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka#Users-App) for more information.
+User roles can be added or unassigned to users in the Users app. See [Add or unassign user roles](#add-or-unassign-user-roles).
 
 
 ### Service points
@@ -282,14 +283,10 @@ The Notes section displays any notes about the user. For more information, see [
 ## Edit a user record
 
 
-To edit a user record: 
-
-
 1. [Find the user record](#search-for-user-records) you want to edit and select it.
 2. In the **User details** pane, click **Actions \> Edit**.
-3. In the **Edit** window, open the appropriate section accordion, if necessary, to edit the appropriate fields.
-4. Click **Save & Close**. The user record is updated.
-
+3. In the **Edit** window, open the appropriate accordion, if necessary, and make the desired edits.
+5. Click **Save & Close**. 
 
 ### Change a user's status
 
@@ -355,7 +352,7 @@ To update or delete a **Profile picture** in a user record:
 ### Send reset password email
 
 
-Once a user record is created, a reset password link can be emailed to the user. However, this feature should be used only for staff users since patrons will not and should not log into FOLIO to manage their library accounts. 
+Once a user record is created, a reset password link can be emailed to the user. However, this feature should be used only for staff users since patrons will not and should not log into FOLIO to manage their library accounts. The default password reset expiration time is 24 hours.
 
 The password must meet the following default validation rules:
 
@@ -368,9 +365,7 @@ The password must meet the following default validation rules:
     	* Does not contain the same character.
     	* Does not contain whitespace(s).
 
-An institution may apply different password validation rules for their users. The password reset  link expires after 24 hours.
-
-
+An institution may apply different password validation rules or configure password reset times.  
 
 To send a password reset email:
 
@@ -430,7 +425,29 @@ A **Proxy** is a user who is authorized to borrow library materials on another u
 
 ### Add or unassign user roles
 
-See [Settings/Authorization roles: Users App](https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka#Users-App).
+To add one or more user roles to a user: 
+
+1. [Find the user record](#search-for-user-records) to which you want to add a user role and select it.
+2. In the **User details** pane, click **Actions \> Edit**.
+3. Expand the **User roles** accordion and click the **Add user roles** button.
+4. In the **Select User roles** modal, search for the user role and/or filter by **Role assignment status**.
+5. Check the box(es) next to the desired **User role(s)** to select them.  
+6. Click **Save & close** to assign the selected user role(s) to the user record.
+
+To unassign one, multiple, or all user roles: 
+
+1. [Find the user record](#search-for-user-records) to which you want to unassign a user role and select it.
+2. In the **User details** pane, click **Actions \> Edit**.
+3. Expand the **User roles** accordion.
+
+    - To unassign a user role, click the *x* icon next to the assigned user role. One or more user roles may be selected for unassignment.
+    - To unassign all user roles, click the **Unassign all user roles** button. A *You are unassigning all user roles _ username _. Are you sure?* message displays in the **Unassign user roles** modal. Click **Yes** to confirm and remove all user roles from the user record.
+    
+4. In the **Select User roles** modal, search for the user role and/or filter by **Role assignment status**.
+5. Check the box(es) next to the desired **User role(s)** to select them.
+6. Click **Save & close** to assign the selected user role(s) to the user record.
+
+See [Settings/Authorization roles: Users App](https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka#Users-App) for more information.
 
 
  ### Add or remove a service point 
