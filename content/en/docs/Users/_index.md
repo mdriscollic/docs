@@ -1,69 +1,83 @@
 ---
 title: "Users"
 linkTitle: "Users"
-date: 2024-12-11       
+date: 2025-04-21     
 weight: 250
 ---
 
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
 
-The Users app allows you to manage user information for patrons and library staff. Both patrons and library staff's user records are stored in the Users app. There is no separate directory or app for library staff users. The difference between a library staff user and a patron is that the library staff user record has FOLIO permission(s), username, and password assigned to it. 
+The Users app allows you to manage user information for patrons and library staff. Both patrons and library staff's user records are stored in the Users app. There is no separate directory or app for library staff users. The difference between a library staff user and a patron is that the library staff user record has FOLIO permission(s), username, and  assigned to it. 
 
 Definition of terms related to the Users app:
 
+- **applicationId**. Also referred to as **Application**. An attribute of a capability or capability set that identifies the platform for a FOLIO application.
+- **Application**. See **applicationID**. For Users capabilities and capability sets, the Application is *app-platform-complete*.
+- **Authorization role**. See **User role**.
+- **Capabilities**. Ability assigned to a user to perform an action in a FOLIO application.  
+- **Capability Sets**. A set of individual capabilities.
+- **permissionDisplayName (OKAPI)**. The permission set name displayed in the Okapi platform (pre-Sunflower release). 
+-  **Resource (EUREKA)**. An operation that can be performed in a FOLIO application.
+- **Type (Data)**. Capabilities that allow the user to directly manage resources in FOLIO.
+- **Type (Procedural)**. Capabilities that allow the user to initiate and control processes in FOLIO.
+- **Type (Settings)**. Capabilities that allow the user to manage FOLIO configurations administratively.
 -  **User.** Any person who interacts with or performs tasks in FOLIO.
 -  **User record.** Contains contact information and identifiers for an individual user. User records exist for both patrons and library staff. For a list of all information contained within a user record, see [View a user record](#view-a-user-record).
--  **Permission.** Value assigned to a user, which grants them access to FOLIO records and/or allows them to carry out job-related tasks in FOLIO.
--  **Permission set.** A group of permissions that allows a user to perform a specific set of job-related tasks. 
-
-## Permissions
+-  **User role.** Also known as **Authorization role**. Comprised of capabilities or capability sets, allows a user to perform role-based actions in a FOLIO application.
 
 
-The permissions listed below allow the user to interact with the Users app and determine what they can and cannot do within the app. If none of these permissions are assigned to a user, they are unable to see the User app or any related information. Permission sets are defined by your library in [Settings \> Users \> Permission sets](../settings/settings_users/settings_users/#settings--users--permission-sets). For more information on permissions, see [Platform Essentials \> Permissions](../platform-essentials/permissions/).
+## Capabilities and Capability Sets
 
+The Eureka platform, adopted in the Sunflower release, replaces permission sets with **Capabilities** and **Capability sets** for role-based management of user accounts. For more information about **Capabilities** and **Capability sets**, see [Roles Management with Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-The following are all of the User permissions:
+The following **Capabilities** allow interaction with the Users app. 
 
+For all Users capabilities:
 
--  **User import - All permissions.** This permission allows the user to import user records.  
--  **User: Can override item blocks.** This permission allows the user to override an item block in Check Out. 
--  **User: Can override patron blocks.** This permission allows the user to override a patron block for borrowing, requesting, or renewing an item in Check Out.
--  **Users: Can assign and unassign permissions to users.** This permission allows the user to assign or unassign permissions to another user. 
--  **Users: Can assign and unassign service points to users.** This permission allows the user to view and edit service points assigned to users. The user can also view and edit basic user data elements.
--  **Users: Can check open transactions.** This permission allows the user to check for open transactions on a user record. If there are no open transactions, the user record can be deleted.
--  **Users: Can create and edit users.** This permission allows the user to create a new user record and edit the User information, Extended information, Profile picture, and Contact information in the user record. 
--  **Users: Can create, edit and remove fees/fines.** This permission allows the user to create, edit, remove, and view user fees/fines.
--  **Users: Can create, edit and remove patron blocks.** This permission allows the user to see the patron blocks section on the user record, and view, edit, and create blocks.
--  **Users: Can create, edit and remove proxies.** This permission allows the user to view and edit proxies assigned to a user. The user can also view and edit basic user data elements.
--  **Users: Can delete user profile if user does not have any open transactions.** This permission allows a user profile to be deleted through the UI if the user has no open transactions. This permission must be used with **Users: Can check open transactions**.
--  **Users: Can edit user profile.** This permission allows the user to edit and view the following sections in a user record: User information, Extended information, and Contact information.
--  **Users: Can process lost items requiring actual cost.** This permission allows the user to use the *Lost items requiring actual cost processing* page to bill for lost items. 
--  **Users: Can view fees/fines and loans.** This permission allows users to view fees/fines and loans of a user. 
--  **Users: Can view permissions assigned to users.** This permission allows the user to view the permissions assigned to another user. 
--  **Users: Can view profile pictures.** This permission allows the user to view the profile picture on a user record.
--  **Users: Can view proxies assigned to users.** This permission allows the user to see the Proxies section but not edit proxies assigned to a user. This permission also includes the ability to search and view user records (basic user fields only).
--  **Users: Can view reading room access.** This permission allows the user to view the Reading room access accordion in the Users app. 
--  **Users: Can view service points assigned to users.** This permission allows the user to see the Service points section but not edit service points assigned to a user. This permission also includes the ability to search and view user records (basic user fields only).
--  **Users: Can view user profile.** This permission allows the user to search for user records and view the following sections in a user record: User information, Extended information, and Contact information.
-- **Users: Can view and edit reading room access.**   This permission allows the user to view the reading room according in the Users app. It also allows the user to edit a user’s access to reading room and add notes related to that access. 
--  **Users: Can view, edit, and delete profile pictures.** This permission allows the user to view, edit, or delete a profile picture in a user record.
--  **Users: Create and download Cash drawer reconciliation report.** This permission allows the user to create and download a Cash drawer reconciliation report.
--  **Users: Create and download Financial transaction detail report.** This permission allows the user to create and download a Financial transaction detail report. 
--  **Users: Create and download Refunds to process manually report.** This permission allows the user to create and download a report of refunds to process manually. 
--  **Users: Create/reset password.** This permission allows the user to send a password reset email to a user or copy the password reset link to share with a user to use the reset password functionality.
--  **Users: User loans anonymize.** This permission allows the user to remove all user details from a loan. 
--   **Users: User loans change due date.** This permission allows the user to change the due date of a loan on another user's record. 
--   **Users: User loans claim returned.** This permission allows the user to change the status of loaned items to claim returned.
--  **Users: User loans declare lost.** This permission allows the user to change the status of loaned items to Declared lost.
--  **Users: User loans mark claimed returned missing.** This permission allows the user to change the status of loaned, claim returned items to Missing.
--  **Users: User loans renew.** This permission allows the user to renew loans to the extent that is permitted by the loan policy.
--  **Users: User loans renew through override.** This permission allows the user to override failed renewals.
--  **Users: User loans view.** This permission allows the user to view the Loans section on a user record, view the loans page and loan details. 
--  **Users: User loans view, change due date, renew.** This permission allows the user to view the Loans section on a user record, to change a due date on a loan, and renew loans.
--  **Users: User loans: add staff or patron information.** This permission allows users to add information to a staff or patron’s loan record. 
--  **Users: View and remove patron notice print jobs.** This permission allows the user to view Patron notice print jobs (PDF files) and to delete print jobs in the UI. 
--  **Users: View patron notice print jobs.** This permission allows the user to view Patron notice print jobs PDF files.
--  **Users: View requests.** This permission allows the user to view the **Requests** section on a user record. This permission also includes the ability to search for and view the user information section in a user record.
+- **Application** is *app-platform-complete*. 
+
+| permissionDisplayName (OKAPI) | Resource (EUREKA) | Type | Action | 
+| :----- | :----- | :-----: | :-----: | 
+| *User import - all permissions* | *User-Import* | Data | Manage |
+| *User: Can override item blocks* | *UI-Users Override-Item-Block* | Procedural | Execute |
+| *User: Can override patron blocks* | *UI-Users Override-Patron-Block* | Procedural | Execute |
+| *Users: Can assign and unassign permissions to users* | *UI-Users Perms* | Data | Edit |
+| *Users: Can assign and unassign service points to users* | *UI-Users User-Service-Points* | Data | Edit |
+| *Users: Can check open transactions* | *UI-Users Open-Transactions* | Data | View |
+| *Users: Can create and edit users* | *UI-Users* | Data | Create |
+| *Users: Can create, edit and remove fees/fines* | *UI-Users Feesfines Actions* | Data | Manage |
+| *Users: Can create, edit and remove patron blocks* | *UI-Users Patron-Blocks* | Data | Manage |
+| *Users: Can create, edit and remove proxies* | *UI-Users Proxies* | Data | Manage |
+| *Users: Can delete user profile if user does not have any open transactions* | *UI-Users* | Data | Delete |
+| *Users: Can edit user profile* | *UI-Users* | Data | Edit | 
+| *Users: Can process lost items requiring actual cost* | *UI-Users Lost-Items-Requiring-Actual-Cost* | Procedural | Execute |
+| *Users: Can view fees/fines and loans* | *UI-Users Feesfines* | Data | View |
+| *Users: Can view permissions assigned to users* | *UI-Users Perms* | Data | View |
+| *Users: Can view profile pictures* | *UI-Users Profile-Pictures* | Data | View | 
+| *Users: Can view proxies assigned to users* | *UI-Users Proxies* | Data | View |
+| *Users: Can view reading room access* | *UI-Users Reading-Room-Access* | Data | View | 
+| *Users: Can view service points assigned to users* | *UI-Users User-Service-Points* | Data | View |
+| *Users: Can view and edit reading room access* | *UI-Users Reading-Room-Access* | Data | Edit |
+| *Users: Can view, edit, and delete profile pictures* | *UI-Users Profile-Pictures* | Data | Manage |
+| *Users: Create and download Cash drawer reconciliation report* | *UI-Users Cash-Drawer-Report* | Procedural | Execute |
+| *Users: Create and download Financial transaction detail report* | *UI-Users Financial-Transaction-Report* | Procedural | Execute |
+| *Users: Create and download Refunds to process manually report* | *UI-Users Manual-Process-Refunds-Report* | Procedural | Execute |
+| *Users: Create/reset password* | *UI-Users Reset Password* | Procedural | Execute |
+| *Users: User loans anonymize* | *UI-Users Loans-Anonymize* | Procedural | Execute |
+| *Users: User loans change due date* | *UI-Users Loans-Due-Date* | Data | Edit |
+| *Users: User loans claim returned* | *UI-Users Loans-Claim-Item-Returned* | Procedural | Execute |
+| *Users: User loans declare lost* | *UI-Users Loans-Declare-Item-Lost* | Procedural | Execute |
+| *Users: User loans mark claimed returned missing* | *UI-Users Loans-Declare-Claimed-Returned-Item-As-Missing* | Procedural | Execute |
+| *Users: User loans renew* | *UI-Users Loans-Renew* | Data | Create |
+| *Users: User loans renew through override* | *UI-Users Loans-Renew-Override* | Data | Create |
+| *Users: User loans view* | *UI-Users Loans* | Data | View |
+| *Users: User loans view, change due date, renew* | *UI-Users Loans* | Data | Manage |
+| *Users: User loans: add staff or patron information* | *UI-Users Loans-Add-Info* | Data | Create |
+| *Users: View and remove patron notice print jobs* | *UI-Users Patron-Notice-Print-Jobs* | Data | Delete |
+| *Users: View patron notice print jobs* | *UI-Users Patron-Notice-Print-Jobs* | Data | View |
+| *Users: Can view user profile* | *UI-Users* | Data | View |
+| *Users: Can view, edit, and delete profile pictures* | *UI-Users Profile-Pictures* | Data | Manage |
+| *Users: View requests* | *UI-Users Requests* | Data | Manage |
 
 
 ## Keyboard shortcuts
@@ -76,7 +90,7 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 
 
 1. In the **User Search Results** pane, click **Actions \> New**.
-2. In the **Create User** window, fill in the [**User information**](#user-information), [**Extended information**](#extended-information), and [**Contact information**](#contact-information) sections, if configured by your institution. For more information, see the section descriptions below.
+2. In the **Create User** window, fill in the [**User information**](#user-information), [**Extended information**](#extended-information), and [**Contact information**](#contact-information) sections. For more information, see the section descriptions below.
 3. Fill in the fields in the **Custom fields** sections, if configured by your institution.
 4. Click **Save & Close**. The user record is saved.
 
@@ -94,9 +108,10 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
     -  **Inactive** status indicates that the expiration date on the user's record has passed or the user is no longer affiliated, employed, or enrolled at the library's institution.
 -  **Expiration date.** The expiration date determines when a user's status is scheduled to change from **Active** to **Inactive**. Expiration date is optional and this field may be left blank. For information on editing an expiration date, see [Edit an expiration date](#edit-an-expiration-date).
 -  **Barcode.** The barcode number for the user's library card. Type the barcode number in the **Barcode** field. 
--  **User Type.** Select the user type: **Patron** or **Staff**. This field is optional for a non-ECS-enabled tenant but required in an ECS-enabled tenant. For more information, see  [Consortium manager \> Members](../consortia/#members).
+-  **User Type.** Select the user type: **Patron** or **Staff**. This field is required in [ECS-enabled tenants](../consortia/). This field is also required for non-ECS-enabled tenants using [Reading Room Access](../access/reading-room/reading_room/) or the Profile picture feature. Otherwise, use of the **User type** field is optional.
     -  **Patrons.** Users who may borrow library materials but have no FOLIO permissions assigned to their User record and do not log in to FOLIO to manage their library accounts.
     -  **Staff.** Users who are employed by the library, have FOLIO permissions assigned to their User record for the purpose of performing their library work, and may borrow library materials.
+-  **Pronouns.** Type the preferred pronouns for the user. 
 -  **Profile picture.** If profile pictures are enabled in the FOLIO tenant, the patron’s profile picture (100px x 100px) is displayed in the user record. For more information, see [Configuration setting for Profile-Picture Feature](https://github.com/folio-org/mod-users?tab=readme-ov-file#configuration-setting-for-profile-picture-feature).
 
 
@@ -109,24 +124,13 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 -  **Folio number.** A system-generated number for the user record.
 -  **Request preferences.** The user’s preference for picking up requested items.
     - **Hold Shelf** is selected by default for all user records. Select the **Default pickup service point.** All user records have at least one service point assigned to indicate the location for checking out or picking up requested items. Service points are configured in [Settings \> Tenant \> Service points](../settings/settings_tenant/settings_tenant/#settings--tenant--service-points).
-    - If **Delivery** is also selected as a **Request preference**, select the **Fulfillment preference**. If Delivery is selected as a **Fulfillment preference**, select the **Default delivery address**. This field appears and is required only if **Delivery** is selected as a fulfillment preference. Addresses are stored in the **Contact information** section of the User record. See [Users \> Contact information](#contact-information) for more information.
+    - If **Delivery** is also selected as a **Request preference**, select the **Fulfillment preference**.
+    - If Delivery is selected as a **Fulfillment preference**, select the **Default delivery address**. This field appears and is required only if **Delivery** is selected as a fulfillment preference. Addresses are stored in the **Contact information** section of the User record. See [Users \> Contact information](#contact-information) for more information.
 -  **Department name.** Name of the user's department, if applicable. To associate the user with a department, click **Add Department** and select the department from the drop-down list. The **Add Department** button appears only if **Departments** are configured in [Settings \> Users \> Departments](../settings/settings_users/settings_users/#settings--users--departments).
--  **Username.** If the **User Type** is set to Staff, **Username** is used by library staff to log into FOLIO to perform library work. If the **User Type** is set to Patron, the **Username** is not required, but may be assigned for the purpose of connecting a user's library account in FOLIO with an external system, such as a discovery interface or a self-checkout system. However, patrons will not log into FOLIO to manage their library accounts.
--  **Password.** Users can be sent a reset password link via email. This link expires after 24 hours. 
+-  **Default pickup service point.** Select the default pickup service point for the user from the drop-down menu. Service points are configured in [Settings \> Tenant \> Service points](../settings/settings_tenant/settings_tenant/#settings--tenant--service-points).
+-  **Username.** If the **User Type** is set to Staff, **Username** is used by the user to log into FOLIO to perform library work. If the **User Type** is set to Patron, the **Username** is not required, but may be assigned for the purpose of connecting a user's library account in FOLIO with an external system, such as a discovery interface or a self-checkout system. However, patrons will not log into FOLIO to manage their library accounts.
+-  **Password.** -  Once the user record is created and saved, a reset password link can be sent via email. See [Send reset password email](#send-reset-password-email) for more information.
 
-The password must meet the following default validation rules:
-
-
-        * Contain a minimum of 8 characters.
-        * Contain both uppercase and lowercase letters.
-        * Contain at least 1 numeric character.
-        * Contain at least 1 special character.
-        * Does not contain the username.
-        * Does not contain a keyboard sequence.
-        * Does not contain the same character.
-        * Does not contain whitespace(s).
-
-An institution may apply different password validation rules for their users. 
 
 ### Contact information
 
@@ -135,7 +139,7 @@ An institution may apply different password validation rules for their users.
 -   **Mobile phone.** The mobile phone number of the user.
 -   **Preferred contact (required).** Select the user's preferred method of contact: Email, Mail (Primary Address), or Text Message.
 -   **Preferred email communications**. Select the user’s preferred email communications: Programs, Services, or Support. More than one option may be selected.
--   **Address.** The address of the user. To add an address, click **Add Address**. If more than one address is entered, select **Use as primary address** for the user’s main address. Select the appropriate **Address type** and fill out the address information fields. Click **Add Address** to save the address to the user’s record. **Address Types** are configured by your library in [Settings \> Users \> Address Types](../settings/settings_users/settings_users/#settings--users--address-types).
+-   **Address.** The address of the user. To add an address, click **Add Address**. If more than one address is entered, select **Use as primary address** for the user’s main address. Select the appropriate **Address type** and fill out the address information fields. Click **Add Address** to save the address to the user’s record. **Address Types** are configured in [Settings \> Users \> Address Types](../settings/settings_users/settings_users/#settings--users--address-types).
 
 
 ### Custom fields
@@ -177,13 +181,13 @@ Once you search for a user record, the following information [User information](
 
 -   **Name.** Name of the user. *Last Name, First Name* or *Last Name, Preferred first name (First name)*
 -   **Active.** The status of the user.
--   **Barcode.** The barcode number of the user.
--   **Patron group.** The patron group to which the user belongs.
+-   **Barcode.** The barcode number assigned to the user.
+-   **Patron group.** The patron group assigned to user.
 -   **Username.** The username of the user.
 -   **Email.** The email address of the user.
 
 
-In the **User search results** pane, click on a user record to view it. The **User details** pane displays additional information in the user record. 
+In the **User search results** pane, click on a user record to view it. The **User details** pane displays details in the user record. 
 
 
 ### User information
@@ -218,7 +222,7 @@ See [Settings \> Users \> Custom fields](../settings/settings_users/settings_use
 
 ### Reading room access
 
-The **Reading room access** section displays which reading rooms a user is allowed to access within the library. For more information, see [Reading room access](../access/reading-room/reading_room/).
+If oconfigured, the **Reading room access** section displays which reading rooms a user is allowed to access within the library. For more information, see [Reading room access](../access/reading-room/reading_room/).
 
 
 ### Proxy/sponsor
@@ -257,10 +261,11 @@ The **Requests** section displays the number of **open requests** and **closed r
 To view additional details, expand the **Requests** accordion and click **open requests** or **closed requests**, accordingly. For more information, see [Requests](../access/requests/requests/).
 
 
-### User permissions
+### User roles
 
+The Eureka platform, adopted in the Sunflower release, replaces permission sets with **Capabilities** and **Capability sets** for role-based management of user accounts. See [Roles Management in Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-The **User permissions** section displays all permissions and permission sets assigned to the user record. For more information, see [Platform essentials \> Permissions](../platform-essentials/permissions/).
+User roles can be added or unassigned to users in the Users app. See [Add or unassign user roles](#add-or-unassign-user-roles).
 
 
 ### Service points
@@ -278,14 +283,10 @@ The Notes section displays any notes about the user. For more information, see [
 ## Edit a user record
 
 
-To edit the **User information**, **Extended information**, or **Contact information** sections in a user record: 
-
-
 1. [Find the user record](#search-for-user-records) you want to edit and select it.
 2. In the **User details** pane, click **Actions \> Edit**.
-3. In the **Edit** window, edit the appropriate information in the [User information](#user-information), [Extended information](#extended-information), or [Contact information](#contact-information) sections.
-4. Click **Save & Close**. The user record is updated.
-
+3. In the **Edit** window, open the appropriate accordion, if necessary, and make the desired edits.
+5. Click **Save & Close**. 
 
 ### Change a user's status
 
@@ -295,7 +296,7 @@ A user's status can be changed between **Active** or **Inactive** based on chang
 
 1. [Find the user record](#search-for-user-records) you want to edit and select it.
 2. In the **User details** pane, click **Actions \> Edit**.
-3. In the **Edit** window, in the **User Information** section, in the **Status** drop-down list, select **Active** or **Inactive**.
+3. In the **Edit** window, open the **User Information** accordion, if necessary. In the **Status** drop-down list, select **Active** or **Inactive**.
 4. Click **Save & Close**. 
 
 
@@ -307,19 +308,20 @@ To edit (or re-set) an **Expiration date** in an existing user record:
 
 1. [Find the user record](#search-for-user-records) you want to edit and select it.
 2. In the **User details** pane, click **Actions \> Edit**.
-3. Edit, reset, or remove the expiration date.
+3. Open the **User information** section accordion, if necessary. 
+4. Edit, reset, or remove the expiration date.
    
     - Type the new expiration date in the **Expiration date** field using the YYYY-MM-DD format. or click on the **Calendar** icon to select a new date. 
     - Reset the date to the default **Expiration date** for the user’s assigned patron group by clicking on the **Re-set** button. 
     - Remove the expiration date by clicking on the **x** in the **Expiration Date** field.
       
-4. Click **Save & Close**.
+5. Click **Save & Close**.
 
 
 ### Update a Profile picture
 
 
-If Profile pictures are enabled in the FOLIO tenant, then library staff with appropriate permissions can upload, update, or delete profile pictures in a user record. Supported file formats include .jpg, .jpeg, and .png. For more information about configuring Profile pictures, see [Configuration setting for Profile-Picture Feature](https://github.com/folio-org/mod-users?tab=readme-ov-file#configuration-setting-for-profile-picture-feature).
+If Profile pictures are enabled in the FOLIO tenant, then library staff with appropriate assigned capabilities can upload, update, or delete profile pictures in a user record. Supported file formats include .jpg, .jpeg, and .png. For more information about configuring Profile pictures, see [Configuration setting for Profile-Picture Feature](https://github.com/folio-org/mod-users?tab=readme-ov-file#configuration-setting-for-profile-picture-feature).
 
 
 To upload a **Profile picture** to a user record:
@@ -350,8 +352,20 @@ To update or delete a **Profile picture** in a user record:
 ### Send reset password email
 
 
-Once a user record is created, a reset password link can be emailed to the user. However, this feature should be used only with library staff accounts since patrons will not and should not log into FOLIO to manage their library accounts.
+Once a user record is created, a reset password link can be emailed to the user. However, this feature should be used only for staff users since patrons will not and should not log into FOLIO to manage their library accounts. The default password reset expiration time is 24 hours.
 
+The password must meet the following default validation rules:
+
+    	* Contain a minimum of 8 characters.
+    	* Contain both uppercase and lowercase letters.
+    	* Contain at least 1 numeric character.
+    	* Contain at least 1 special character.
+    	* Does not contain the username.
+    	* Does not contain a keyboard sequence.
+    	* Does not contain the same character.
+    	* Does not contain whitespace(s).
+
+An institution may apply different password validation rules or configure password reset times.  
 
 To send a password reset email:
 
@@ -409,63 +423,31 @@ A **Proxy** is a user who is authorized to borrow library materials on another u
 7. Click **Save & Close**. The **Proxy** is added to the user record.
 
 
-### Assign or unassign permissions
+### Add or unassign user roles
 
+To add one or more user roles to a user: 
 
-Library staff must have permissions assigned to their user record in order to interact with the FOLIO user interface. Permissions are not and should not be assigned to patrons for library services such as borrowing books, requesting items, etc. For a list of Users app permissions and their definitions, see [Users \> Permissions](#permissions). For information about viewing a list of all users who are assigned a specific permission set, see [Settings \> Users \> Permission sets](../settings/settings_users/settings_users/#settings--users--permission-sets).
-
-
-To assign or add permissions to a user’s record:
-
-
-1. [Find the user record](#search-for-user-records) to which you want to add permissions and select it.
+1. [Find the user record](#search-for-user-records) to which you want to add a user role and select it.
 2. In the **User details** pane, click **Actions \> Edit**.
-3. Expand the **User permissions** accordion if needed. 
-4. Click **Add permission**.
-5. In the **Select Permissions** modal, search for the permission(s) or permissions set(s) you want to assign to the user. You can also filter the search by **Permission type** or **Permission assignment status** in the **Search & Filter** pane.
-6. Select the checkbox(es) next to the permission(s) or permission set(s) you want to assign to the user.
-7. Click **Save & close**. The selected permission(s) and permission set(s) are assigned to the user record.
-8. Click **Save & close**. The user record is saved.
+3. Expand the **User roles** accordion and click the **Add user roles** button.
+4. In the **Select User roles** modal, search for the user role and/or filter by **Role assignment status**.
+5. Check the box(es) next to the desired **User role(s)** to select them.  
+6. Click **Save & close** to assign the selected user role(s) to the user record.
 
+To unassign one, multiple, or all user roles: 
 
-Permissions can be unassigned, or removed, from a user’s record either individually or all at once with one click.
-
-
-To unassign or remove permissions from a user’s record:
-
-
-1. [Find the user record](#search-for-user-records) for which you want to unassign, or remove permissions and select it.
+1. [Find the user record](#search-for-user-records) to which you want to unassign a user role and select it.
 2. In the **User details** pane, click **Actions \> Edit**.
-3. Expand the **User permissions** accordion if needed. 
-4. In the **Select Permissions** modal, search for the permission(s) or permissions set you want to unassign, or remove from the user’s record. Narrow your search by filtering by **Permission type** or **Permission assignment status** in the **Search & Filter** pane.
-5. Deselect the checkbox(es) next to the permission(s) you want to unassign, or remove, from the user’s record.
-6. Click **Save & close**. The permission(s) are removed from the user record.
-7. Click **Save & close**. The user record is saved. 
+3. Expand the **User roles** accordion.
 
+    - To unassign a user role, click the *x* icon next to the assigned user role. One or more user roles may be selected for unassignment.
+    - To unassign all user roles, click the **Unassign all user roles** button. A *You are unassigning all user roles _ username _. Are you sure?* message displays in the **Unassign user roles** modal. Click **Yes** to confirm and remove all user roles from the user record.
+    
+4. In the **Select User roles** modal, search for the user role and/or filter by **Role assignment status**.
+5. Check the box(es) next to the desired **User role(s)** to select them.
+6. Click **Save & close** to assign the selected user role(s) to the user record.
 
-To remove all assigned permissions or permission sets from the user’s record in one click: 
-
-
-1. [Find the user record](#search-for-user-records) to which you want to remove permissions and select it.
-2. In the **User details** pane, click **Actions \> Edit**.
-3. Expand the **User permissions** accordion if needed. 
-4. Click the **Unassign all permissions** button.
-5. In the **Unassign all permissions** modal, click **Yes** to confirm that you want to unassign all permissions. All assigned permissions and permission sets will be unassigned and removed from the user’s record.
-6. Click **Save & close.** All permissions are removed from the user record.
-7. Click **Save & close.** The user record is saved.
-
-   
-Permissions can also be unassigned by following a modified version of the process for assigning them:
-
-
-1. [Find the user record](#search-for-user-records) to which you want to unassign, or remove permissions and select it.
-2. In the **User details** pane, click **Actions \> Edit**.
-3. Expand the **User permissions** accordion if needed. 
-4. Click **Add permission**.
-5. In the **Select Permissions** modal, search for the permission(s) or permissions set you want to unassign, or remove from the user’s record. Narrow your search by filtering by **Permission type** or **Permission assignment status** in the **Search & Filter** pane.
-6. Deselect the checkbox(es) next to the permission(s) you want to unassign, or remove, from the user’s record.
-7. Click **Save & close**. The permission(s) are unassigned and removed from the user record.
-8. Click **Save & close**. The user record is saved.
+See [Settings/Authorization roles: Users App](https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka#Users-App) for more information.
 
 
  ### Add or remove a service point 
