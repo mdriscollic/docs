@@ -14,10 +14,24 @@ To configure any of the staff slips you encounter when checking in an item, like
 
 ## Permissions
 
-The permission listed below allows you to interact with the Check in app. You can assign permissions to users in the Users app. If this permission is not assigned to a user, then they will be unable to see the Check in app or any related information.
+The permission / capability listed below allows you to interact with the Check in app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. If this capability is not assigned to a user, then they will be unable to see the Check in app or any related information.
+
+### Adding a capability or capability set to an Authorization role
+
+Select all applications to ensure access to all capabilities.
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
 
 
-* **Check in: all permissions.** This permission allows the user to scan items in the Check in app and backdate Check in. However, this permission does not include being able to see details for items or patrons.
+|  Permission Display    Name (OKAPI) |  Resource (EUREKA) |  Type |  Action |  Description                                                                                                                                                                                   |
+|-------------------------------------|--------------------|-------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Check in: all permissions           | UI-Checkin         | Data  | Manage  | This **Capability set** allows the user to scan items in the Check in app and backdate Check in. However, this capability does not include being able to see details for items or patrons.     |
+
+
 
 
 ## Checking in an item
