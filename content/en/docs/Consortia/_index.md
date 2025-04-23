@@ -1,7 +1,7 @@
 ---
 title: "Consortium manager"
 linkTitle: "Consortium manager"
-date: 2024-06-25        
+date: 2024-12-06        
 weight: 675
 ---
 
@@ -60,9 +60,10 @@ To view membership in **Consortium manager**, the user must be affiliated with t
     - To switch the **active affiliation**, click on the service point menu in the top right corner of the screen.
     - Select **switch active affiliation** in the drop-down menu. 
     - Select the primary member from the **Consortium members** menu. 
-    - Click **Save & close**. 
-2. Click on the **Select members**. 
-3. In the **Select members** window, the list of members in the consortia is displayed. 
+    - Click **Save & close**.
+2. In the top navigation, click **Apps** and select **Consortium manager** from the drop down.
+3. Towards the top right within Consortium manager, click on the **Select members** button. 
+4. In the **Select members** window, the list of members in the consortia is displayed. 
 
 
 Members cannot currently be added or removed in Consortium manager, but membership details can be edited. For more information about editing membership, see [Edit member details](../settings/settings_consortium-manager/settings_consortium-manager/#edit-member-details). 
@@ -77,7 +78,7 @@ User records include the same fields in all FOLIO tenants. However, **user type*
 In Consortium manager, **user types** include: 
 
 
-* **Staff**: Users who are employed by a library and must log into FOLIO to conduct library work. Staff accounts are assigned a primary tenant and a unique username. If the staff account is affiliated with multiple tenants, the username is used to log in at a single service point.
+* **Staff**: Users who are employed by a library and must log into FOLIO to conduct library work. Staff accounts are assigned a primary tenant and a unique username. If the staff account is affiliated with multiple tenants, the username is used to log in at a single URL, and then use a drop down menu in the top right to change affiliation while logged in.
 * **Patron**: Users who borrow library items. Patrons have user records in the Users app but do not log into FOLIO to manage their library accounts. They are assigned a primary tenant only and do not have any assigned affiliations or user permissions for other tenants in the consortium.
 * **Shadow**: Shadow accounts serve as a representation of a user record and are automatically created by the FOLIO system in the central tenant whenever a staff user record is created. Shadow accounts display a user’s assigned permissions for a member tenant and allow management of permissions for the user record outside of the central tenant. If an affiliation is removed, the shadow account becomes inactive. If the staff user is deleted from their primary tenant, all of the user’s shadow accounts are also deleted from the member tenants.
 * **System**: At least one system-level account must be in place in order to assign other roles and permissions. 
@@ -107,12 +108,13 @@ When a user record is created in an ECS-enabled environment, the user is automat
 To assign an additional affiliation to a user record, follow these steps:
 
 
-1. Search for the user record. For more information, see [Users \> Search for user records](../users/#search-for-user-records). Select the user record. It will open in a new pane.
-2. Click **Actions \> Edit** to edit the user record.
-3. Open the **Affiliations** accordion. 
-4. Click the **Assign/unassign** button.
-5. Check the box next to the **Name** of the member to assign the affiliation. One or more affiliations can be assigned in this step. 
-6. Click **Save & close**.
+1. Login as an account which is already added to the affiliation you want to add to another user.  A user can assign or unassign other users to any affiliation that they themself are added to.  If a user is added to only one affiliation of a client library, then they will not see the **Affiliation** accordion while editing other users.
+2. Starting from any affiliation (does not have to be the central tenant), search for the user record that you want to add to an affiliation. For more information, see [Users \> Search for user records](../users/#search-for-user-records). Select the user record. It will open in a new pane.
+3. Click **Actions \> Edit** to edit the user record.
+4. Open the **Affiliations** accordion. 
+5. Click the **Assign/unassign** button.  
+6. Check the box next to the **Name** of the member to assign the affiliation. One or more affiliations can be assigned in this step. 
+7. Click **Save & close**.
 
 
 ### Unassign an affiliation
@@ -124,13 +126,14 @@ A user's **primary affiliation** and affiliation with the central tenant cannot 
 To unassign an affiliation with a member, follow these steps:
 
 
-1. Search for the user record. For more information, see [Users > Search for user records](../users/#search-for-user-records). Select the user record. It will open in a new pane.
-2. Click **Actions \> Edit** to edit the user record.
-3. Open the **Affiliations** accordion. The user’s primary affiliation appears in bold type.  
-4. Click the **Assign/unassign** button. 
-5. Find the member in the **Affiliations** window or use the **Search & filter** pane to search for a member or filter the list by **Affiliation assignment status**. 
-6. Uncheck the box next to the **Name** of the member to unassign, or remove, the affiliation. One or more affiliations to member libraries, excluding the primary affiliation and affiliation with central tenant, can be unassigned in this step. 
-7. Click **Save & close**.
+1. Login as an account which is already added to the affiliation you want to remove from another user.  A user can assign or unassign other users to any affiliation that they themself are added to.  If a user is added to only one affiliation of a client library, then they will not see the **Affiliation** accordion while editing other users.
+2. Search for the user record. For more information, see [Users > Search for user records](../users/#search-for-user-records). Select the user record. It will open in a new pane.
+3. Click **Actions \> Edit** to edit the user record.
+4. Open the **Affiliations** accordion. The user’s primary affiliation appears in bold type.  
+5. Click the **Assign/unassign** button. 
+6. Find the member in the **Affiliations** window or use the **Search & filter** pane to search for a member or filter the list by **Affiliation assignment status**. 
+7. Uncheck the box next to the **Name** of the member to unassign, or remove, the affiliation. One or more affiliations to member libraries, excluding the primary affiliation and affiliation with central tenant, can be unassigned in this step. 
+8. Click **Save & close**.
 
 
 ### Assign or unassign user permissions for an affiliation
@@ -142,24 +145,26 @@ Users may be assigned permissions for any assigned affiliations. To manage user 
 To assign affiliation permissions to a user record, go to the **Users** app and follow these steps:
 
 
-1. Search for the user record. For more information, see [Users \> Search for user records](../users/#search-for-user-records). Select the user record. It will open in a new pane.
-2. Click **Actions \> Edit** to edit the user record.
-3. Expand the **User permissions** accordion.
-4. Select the **Affiliation** from the drop-down menu. 
-5. Click on **Add permissions**. 
-6. Select the permission(s) to assign by checking the box next to the permission or permission set name. You can also search and filter for a permission or permission set in the **Search & filter** pane and check the box next to its name in the **Permissions** pane. 
-7. Click **Save & close** to save the permissions to the user record. 
+1. Login as an account which is already added to the affiliation on which you want to edit a user's permissions.  If a user is added to only one affiliation of a client library, then they will not see the **Affiliation** accordion while editing other users, nor will they see the **Affiliation** drop down menu options while editing permissions on another user.
+2. Search for the user record. For more information, see [Users \> Search for user records](../users/#search-for-user-records). Select the user record. It will open in a new pane.
+3. Click **Actions \> Edit** to edit the user record.
+4. Expand the **User permissions** accordion.
+5. Select the affiliation you want to edit permissions in from the **Affiliation** drop-down menu. 
+6. Click on **Add permissions**. 
+7. Select the permission(s) to assign by checking the box next to the permission or permission set name. You can also search and filter for a permission or permission set in the **Search & filter** pane and check the box next to its name in the **Permissions** pane. 
+8. Click **Save & close** to save the permissions to the user record. 
 
 
 To remove affiliation permissions from a user’s record, go to the **Users** app and follow these steps: 
 
 
-1. Search for the user record. For more information, see [Users \> Search for user records](../users/#search-for-user-records) for user records. 
-2. Select the user record. It will open in a new pane.
-3. Click **Actions \> Edit**.
-4. Expand the **User permissions** accordion.
-5. Select the **Affiliation** in the Affiliation drop-down menu. 
-6. Unassign permissions by any of these methods: 
+1. Login as an account which is already added to the affiliation on which you want to edit a user's permissions.  If a user is added to only one affiliation of a client library, then they will not see the **Affiliation** accordion while editing other users, nor will they see the **Affiliation** drop down menu options while editing permissions on another user.
+2. Search for the user record. For more information, see [Users \> Search for user records](../users/#search-for-user-records) for user records. 
+3. Select the user record. It will open in a new pane.
+4. Click **Actions \> Edit**.
+5. Expand the **User permissions** accordion.
+6. Select the **Affiliation** in the Affiliation drop-down menu. 
+7. Unassign permissions by any of these methods: 
 * Click on the **X icon** next to a permission to remove the permission for that affiliation.
 *  Or click on **Add permission** and uncheck the box next to **Name** in the **Permissions** window to unassign all of the permissions for that affiliation with one click.
 * To remove all permissions for an affiliation, click on the **Unassign all permissions** button or [unassign the affiliation](#unassign-an-affiliation). All permissions are removed for that user in that member’s tenant.
@@ -169,7 +174,7 @@ To remove affiliation permissions from a user’s record, go to the **Users** ap
 ## Shared Settings
 
 
-In **Consortium manager**, some settings can be modified and centrally managed for all member libraries through the **Share** option. By sharing settings, member libraries apply a controlled vocabulary to ensure consistency in library records and transactions across the consortium. 
+In **Consortium manager**, some settings can be modified and centrally managed for all member libraries through the **Share** option. By sharing settings, member libraries apply a controlled vocabulary to ensure consistency in library records and transactions across the consortium. Centralized controlled vocabularies can aid or enable search features in a federated search of all members, for example, by allowing a facet on search to work for all member records at the same time in a federated search environment.
 
 
 The sharing option cannot be edited once the setting is initially created and saved. To change the sharing option in a setting, each of the relevant settings must first be deleted and then a new setting created with the appropriate sharing option. The **Share** option must be set when the setting is created and saved, and cannot be edited after the setting is initially saved. If **Share** is selected, the data fields, **Source**,  **Member libraries**, and **Update** display as **consortium**,  **ALL**, and **System Consortia**, respectively, indicating the setting can be managed in Consortium manager. 
@@ -197,14 +202,17 @@ For resource sharing purposes, shared settings allow the same **Request cancella
 To create a shared setting for **Circulation**, follow these steps:
 
 
-1. In the **Settings** pane, select **Circulation**
-2. In the **Circulation** pane, select **Request cancellation reasons**. 
-3. Click the **New** button in the **Request cancellation reasons** pane. 
-4. Fill out the **Cancel reason**, **Description (internal)**, and **Description (public)** fields. 
-5. Check the box next to **Share**. 
-6. Click on **Save** in the **Actions** column. 
-7. A **Confirm share to all** window appears with the message, *Are you sure you want to share (Name of Note) with **ALL** members?*
-8. Click **Confirm** to save the shared Circulation note.
+1. Login as a user which is added to all tenants (central tenant and all clients).
+2. Change affiliation to the central tenant.
+3. Along the top of the page, click **Apps** and select **Consortium manager** from the drop down menu.
+4. In the **Settings** pane along the left hand side of the screen, select **Circulation**
+5. In the **Circulation** pane, select **Request cancellation reasons**. 
+6. Click the **New** button in the **Request cancellation reasons** pane. 
+7. Fill out the **Cancel reason**, **Description (internal)**, and **Description (public)** fields. 
+8. Check the box next to **Share**. 
+9. Click on **Save** in the **Actions** column. 
+10. A **Confirm share to all** window appears with the message, *Are you sure you want to share (Name of Note) with **ALL** members?*
+11. Click **Confirm** to save the shared Circulation note.
 
 
 To create a local (unshared) setting for **Circulation**, follow these steps: 
@@ -231,14 +239,15 @@ For troubleshooting purposes, the central tenant can view data export logs in an
 To view a data export log for a member library, follow these steps: 
 
 
-1. Select the central, or primary, tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected: 
+1. Login as a user which is added to the tenant whose data you want to look at.
+2. Select the central, or primary, tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected: 
     - Click on the user profile icon in the top right corner of the screen to switch the **active affiliation**. 
     - Select **switch active affiliation** in the drop-down menu. 
     - Select the primary member from the **Consortium members** menu. 
     - Click **Save & close**. 
-2. In **Consortium manager**, select **Data export** in the **Settings** pane. 
-3. In the **Data export** pane, select the **Member** for which you wish to view the logs. 
-4. The **Data export** logs are listed in the **Data export** pane with these identifiers:
+3. In **Apps** **Consortium manager**, select **Data export** in the **Settings** pane. 
+4. In the **Data export** pane, use the **Member** drop down to select the tenant for which you wish to view the logs. 
+5. The **Data export** logs are listed in the **Data export** pane with these identifiers:
     - **File name**: File name assigned by the FOLIO system. 
     - **Status**: Completed, Fail, or Completed with errors
     - **Total**: Number of records requested for export
@@ -259,14 +268,15 @@ For troubleshooting purposes, the central tenant can view imported records in an
 To view a data import log for a member library, follow these steps: 
 
 
-1. Select the central, or primary, tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected: 
+1. Login as a user which is added to the tenant whose data you want to look at.
+2. Select the central, or primary tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected: 
     - Click on the user profile icon in the top right corner of the screen to switch the **active affiliation**. 
     - Select **switch active affiliation** in the drop-down menu. 
     - Select the primary member from the **Consortium members** menu. 
     - Click **Save & close**. 
-2. In **Consortium manager**, select **Data import** in the **Settings** pane. 
-3. In the **Data import** pane, select the **Member** for which you wish to view the logs. 
-4. The **Data import** logs are listed in the **Data import** pane with these identifiers:
+3. In **Apps** **Consortium manager**, select **Data import** in the **Settings** pane. 
+4. In the **Data import** pane, select the **Member** for which you wish to view the logs. 
+5. The **Data import** logs are listed in the **Data import** pane with these identifiers:
     - **File name**: File name assigned by the FOLIO system. 
     - **Status**: Completed, Fail, or Completed with errors
     - **Records**: Number of records imported
@@ -315,16 +325,22 @@ For Inventory purposes, shared settings allow the following **Inventory** settin
 To create a shared setting for Inventory, follow these steps:
 
 
-1. In the **Settings** pane, select **Inventory**
-2. In the **Inventory** pane, select the appropriate setting in the **Instances**, **Holdings**, **Items**, **Instances, Holdings, Items** or **Holdings, Items** sections. 
-3. Click on the **Select members** button in the **Request cancellation reasons** pane. Check the box in the **Name** column next to the member’s name to select the member for whom the local (unshared) setting will be created.
-4. Confirm the number of selected members. In the **Settings for selected members can be modified at the same time** window, the number of members selected will display at the top of the window. 
-5. Click the **New** button. 
-6. Fill out the **Name** field for the new setting.
-7. Check the box next to **Share**. 
-8. Click on **Save** in the **Actions** column. 
-9. A **Confirm share to all** modal appears with the message, *Are you sure you want to share (Name of Inventory Setting) with **ALL** members?*.
-10. Click **Keep editing** to make additional changes or click **Confirm** to save the setting. A *(Name of Inventory Setting) successfully **created** for **ALL** libraries* appears in the bottom right corner. 
+1. Login as a user which is added to all tenants (central tenant and all clients).
+2. Select the central, or primary tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected: 
+    - Click on the user profile icon in the top right corner of the screen to switch the **active affiliation**. 
+    - Select **switch active affiliation** in the drop-down menu. 
+    - Select the primary member from the **Consortium members** menu. 
+    - Click **Save & close**.
+3. In **Apps** **Consortium manager**, select select **Inventory** in the **Settings** pane.
+4. In the **Inventory** pane, select the appropriate setting in the **Instances**, **Holdings**, **Items**, **Instances, Holdings, Items** or **Holdings, Items** sections. 
+5. Click on the **Select members** button in the **Request cancellation reasons** pane. Check the box in the **Name** column next to the member’s name to select the member for whom the local (unshared) setting will be created.
+6. Confirm the number of selected members. In the **Settings for selected members can be modified at the same time** window, the number of members selected will display at the top of the window. 
+7. Click the **New** button. 
+8. Fill out the **Name** field for the new setting.
+9. Check the box next to **Share**. 
+10. Click on **Save** in the **Actions** column. 
+11. A **Confirm share to all** modal appears with the message, *Are you sure you want to share (Name of Inventory Setting) with **ALL** members?*.
+12. Click **Keep editing** to make additional changes or click **Confirm** to save the setting. A *(Name of Inventory Setting) successfully **created** for **ALL** libraries* message appears in the bottom right corner. 
 
 
 To create a local (unshared) setting for Inventory, follow these steps: 
@@ -369,32 +385,35 @@ To view shared permissions, follow these steps:
 To create a shared permission, follow these steps: 
 
 
-1. Select the central tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected, switch the active affiliation. 
+1. Login as a user which is added to all tenants (central tenant and all clients).
+2. Select the central tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected, switch the active affiliation. 
     - Click on the user profile icon in the top right corner of the screen to switch the **active affiliation**. 
     - Select **switch active affiliation** in the drop-down menu. 
     - Select the primary member from the **Consortium members** menu. 
     - Click **Save & close**. 
-2. In **Consortium manager**, select **Users** in the **Settings** pane. 
-3. In the **Users** pane, select **Permission sets**. 
-4. In the **Permission sets** pane, click ** the **Select members** button and check the box next to the name of each member for which the new permission will be created. 
-5. Click **Actions \> New**.
-6. In the **New permission set** window, add the **Permission set name** and a **Description**. 
-7. Click the **Add permission** button. The new permission is added for each member in the consortium. 
+3. In **Consortium manager**, select **Users** in the **Settings** pane. 
+4. In the **Users** pane, select **Permission sets**. 
+5. In the **Permission sets** pane, click ** the **Select members** button and check the box next to the name of each member for which the new permission will be created. 
+6. Click **Actions \> New**.
+7. In the **New permission set** window, add the **Permission set name** and a **Description**. 
+8. Click the **Add permission** button. The new permission is added for each member in the consortium.
+9. Warning:  Individual clients can locally edit the permission sets, depending on permissions given to a client.  In a consortial environment where both the consortium and the members are anticipated to create and manage permission sets, it is recommended to create all permission sets with a naming scheme.  For example, the permission sets managed centrally might have names which all start with the consortium's initials, and the onboarding process to new systems and admin employees at member institutions might include instructions to never edit settings beginning with those initials.
 
 
 To compare shared user permission sets between two members, follow these steps: 
 
 
-1. Select the central, or primary, tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected, switch the active affiliation. 
+1. Login as a user which is added to the central tenant and to the two clients you want to compare.
+2. Select the central, or primary, tenant as the **active affiliation** in the top right corner if it is not already selected. If the central tenant is not selected, switch the active affiliation. 
     - Click on the user profile icon in the top right corner of the screen to switch the **active affiliation**. 
     - Select **switch active affiliation** in the drop-down menu. 
     - Select the primary member from the **Consortium members** menu. 
     - Click **Save & close**. 
-2. Select **Users** in the **Settings** pane. 
-3. In the **Users** pane, select **Permission sets**. 
-4. In the **Permission sets** pane, click the **Actions** button and select **Compare**.
-5. The **Compare** window is divided into 2 panes, one for each member. Select the **Member** and **Permission set** for each member as appropriate.
-6. The lists of assigned permissions are compared side-by-side in the **Assigned permissions** accordion. Any assigned permissions that are unique to a member tenant are highlighted in yellow. Any assigned permissions that are common between member tenants are not highlighted. 
+3. Select **Apps** along the top navigation, then **Settings** in the drop down menu, then **Users** along the left hand side. 
+4. In the **Users** pane, select **Permission sets**. 
+5. In the **Permission sets** pane, click the **Actions** button and select **Compare**.
+6. The **Compare** window is divided into 2 panes, one for each member. Select the **Member** and **Permission set** for each member as appropriate.
+7. The lists of assigned permissions are compared side-by-side in the **Assigned permissions** accordion. Any assigned permissions that are unique to a member tenant are highlighted in yellow. Any assigned permissions that are common between member tenants are not highlighted. 
 
 
 To edit permissions assigned to a shared user permission set, follow these steps:

@@ -1,7 +1,7 @@
 ---
 title: "Export manager"
 linkTitle: "Export manager"
-date: 2024-04-16	
+date: 2024-11-19
 weight: 625
 ---
 
@@ -48,7 +48,7 @@ The **All** tab results pane  displays the following columns:
 *   **Start time.** Date and time the export began.
 *   **End time.** Date and time the export finished.
 
-Click on any column name, except **Description** and **Source**, to sort by that column.
+Click on any column name to sort by that column.
 
 The **Organizations** tab results pane displays the following columns:
 
@@ -60,7 +60,7 @@ The **Organizations** tab results pane displays the following columns:
 *   **End time.** Date and time the export finished.
 *   **Export method.** This value corresponds to the **Integration name** on the associated Organization record’s [Integration details](../organizations/#adding-integration-details-to-a-vendor-organization).
 
-Click on any column name, except **Description** and **Source**, to sort by that column.
+Click on any column name to sort by that column.
 
 For jobs with a status of **Successful**, click on the hyperlinked job ID to download the file.
 

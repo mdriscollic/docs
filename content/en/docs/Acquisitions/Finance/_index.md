@@ -1,7 +1,7 @@
 ---
 title: "Finance"
 linkTitle: "Finance"
-date: 2023-06-24
+date: 2025-02-06
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -82,7 +82,6 @@ A fiscal year is the twelve-month period your library uses for accounting and bu
 *   **Period Begin Date (UTC) (required).** The date when the fiscal year begins.
 *   **Period End Date (UTC) (required).** The date when the fiscal year ends.
 *   **Description.** A description of the fiscal year.
-Note about Currency:  The currency value does not display on the Fiscal year detail pane after creation, but the system does associate a currency with the Fiscal year based on the currency value from [Settings > Tenant > Language and localization](../../settings/settings_tenant/settings_tenant/#settings--tenant--language-and-localization). See [Viewing fund details > Fund information](#viewing-fund-details) for a description of expected system behavior for budget transaction when the Tenant currency value is changed.
 
 
 
@@ -148,7 +147,7 @@ Funds show information regarding an ongoing ledger with a budget for the current
 *   **Code (required).** User-created, based on name. The code must be unique. It is recommended to use alphanumeric and intuitive codes.
 *   **Ledger (required).** Select the ledger associated with the fund. A fund may only be associated with a single ledger.
 *   **Status (required).** Select the status of the fund: Active, Frozen, or Inactive. Active means the fund is ongoing, Frozen means the fund has been put on pause, and Inactive means the fund is no longer in use. Note: The fund must be active to successfully open an order or for an invoice to be fully paid.
-*   **Currency.** This field is prefilled based on the currency associated with the fiscal year when the fiscal year was created. For more information, see [Creating a Fiscal Year](#creating-a-fiscal-year).
+*   **Currency.** This field is prefilled based on the currency associated with the fiscal year when the fiscal year was created. For more information, see [Creating a Fiscal Year](#creating-a-fiscal-year). Note that when an order is opened, the system creates an encumbrance transaction on the current budget for the fund selected in the fund distribution section of the order.  If the currency of the PO line is different than the budget currency, the encumbrance will display on the budget as a converted amount.  The budget currency is set to the Tenant currency value at the time the [Finance > Fiscal year](#fiscal-year-information) record is created; therefore, if the Tenant currency value is updated, any budgets created prior to the update will still operate based on the Tenant currency that existed when the Fiscal year associated with the budget was created.
 *   **Type.** A category to describe the fund. Fiscal year rollover of funds is often defined by fund type, so definition of the type values should consider fiscal year rollover requirements. For example, endowment or restricted. For more information about creating fund types, see [Settings > Finance > Fund types](../../settings/settings_finance/settings_finance/#settings--finance--fund-types). Funds that are not assigned a fund type will be grouped under **No fund type** at fiscal year rollover.
 *   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the fund, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate permissions are allowed to edit the fund's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/). Please note: if the assigned acquisition unit restricts view, the fund will be filtered out of the selection list that appears in **Fund distribution** accordions on purchase order lines and invoices. Users will only be able to apply funds that are "public" or with which they share an acquisition unit.
 *   **Group.** To associate this fund with a group, select the group from the drop-down list.  You can assign multiple groups. See [Creating a group](#creating-a-group) for more information. 
@@ -329,6 +328,7 @@ The Fiscal year information section contains the following fields:
 *   **Period end date.** Date when the fiscal year ends.
 *   **Acquisition units.** All acquisition units assigned to the fiscal year.
 *   **Description.** Description of the fiscal year.
+*   **Currency.** The tenant currency at the time the fiscal year was created. This will be the currency of all the budgets associated with the fiscal year.
 
 
 ##### Financial Summary
@@ -344,9 +344,10 @@ This section displays a table containing summary financial information for all f
 **Financial activity and overages**
 *   **Encumbered.** The sum of all encumbrance transaction amounts against all fund budgets for the fiscal year.
 *   **Awaiting Payment.** The sum of all pending payment transaction amounts against all fund budgets for the fiscal year.  
-*   **Expended.** The sum of all payment transaction amounts minus credit transaction amounts, against all fund budgets for the fiscal year.
+*   **Expended.** The sum of all payment transaction amounts against all fund budgets for the fiscal year.
+*   **Credited.** The sum of all credit transaction amounts against all fund budgets for the fiscal year.
 *   **Unavailable.** The total amount unavailable across all fund budgets for the fiscal year, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
-*   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the fiscal year (not taking allowable encumbrance into account). In Quesnelia the calculation is wrong in several cases (see [MODFISTO-484](https://folio-org.atlassian.net/browse/MODFISTO-484) for details). 
+*   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the fiscal year (not taking allowable encumbrance into account).
 *   **Over expended.** The total amount expended and awaiting payment minus the total funding amount for all fund budgets for the fiscal year (or zero if that value is negative).
 *   **Available balance.** Total amount available across all fund budgets for the fiscal year, calculated as **Total funding** amount minus the **Unavailable** amount.  
 
@@ -418,9 +419,10 @@ The Ledger information section contains the following fields:
 **Financial activity and overages**
 *   **Encumbered.** The sum of all encumbrance transaction amounts against all fund budgets for the ledger during the current fiscal year.
 *   **Awaiting Payment.** The sum of all pending payment transaction amounts against all fund budgets for the ledger during the current fiscal year.  
-*   **Expended.** The sum of all payment transaction amounts minus credit transaction amounts against all fund budgets for the ledger during the current fiscal year.
+*   **Expended.** The sum of all payment transaction amounts against all fund budgets for the ledger during the current fiscal year.
+*   **Credited.** The sum of all credit transaction amounts against all fund budgets for the ledger during the current fiscal year.
 *   **Unavailable.** The total amount unavailable across all fund budgets for the ledger during the current fiscal year, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
-*   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the ledger during the current fiscal year (not taking allowable encumbrance into account). In Quesnelia the calculation is wrong in several cases (see [MODFISTO-484](https://folio-org.atlassian.net/browse/MODFISTO-484) for details). 
+*   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the ledger during the current fiscal year (not taking allowable encumbrance into account). 
 *   **Over expended.**  The total amount expended and awaiting payment minus the total funding amount for all fund budgets for the ledger during the current fiscal year (or zero if that value is negative).
 *   **Available balance.** Total amount available across all fund budgets for the ledger during the current fiscal year, calculated as **Total funding** amount minus the **Unavailable** amount.  
 
@@ -488,6 +490,7 @@ Click **Export**.  The file downloads to your local download location and contai
 *   Encumbered (Budget)
 *   Awaiting payment (Budget)
 *   Expended (Budget)
+*   Credited (Budget)
 *   Unavailable
 *   Over encumbered
 *   Over expended
@@ -499,6 +502,7 @@ Click **Export**.  The file downloads to your local download location and contai
 *   Encumbered (Exp Class)
 *   Awaiting payment (Exp Class)
 *   Expended (Exp Class)
+*   Credited (Exp Class)
 *   Percentage of total expended   
 
 
@@ -539,9 +543,10 @@ The group details pane contains group financial summary information and lists al
 **Financial activity and overages**
 *   **Encumbered.** The sum of encumbrance transaction amounts against all fund budgets for the group during the fiscal year selected.
 *   **Awaiting Payment.** The sum of pending payment transaction amounts against all fund budgets for the group during the fiscal year selected.  
-*   **Expended.** The sum of payment transaction amounts minus credit transaction amounts against all fund budgets for the group during the fiscal year selected.
+*   **Expended.** The sum of payment transaction against all fund budgets for the group during the fiscal year selected.
+*   **Credited.** The sum of credit transaction against all fund budgets for the group during the fiscal year selected.
 *   **Unavailable** Total amount unavailable across all fund budgets for the group during the fiscal year selected, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
-*   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the group during the fiscal year (not taking allowable encumbrance into account). In Quesnelia the calculation is wrong in several cases (see [MODFISTO-484](https://folio-org.atlassian.net/browse/MODFISTO-484) for details). 
+*   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the group during the fiscal year (not taking allowable encumbrance into account). 
 *   **Over expended.**  The total amount expended and awaiting payment minus the total funding amount for all fund budgets for the group during the current fiscal year (or zero if that value is negative).
 *   **Available balance.** Total amount available across all fund budgets for the group during the fiscal year selected, calculated as **Total funding** amount minus the **Unavailable** amount.  
 
@@ -575,7 +580,7 @@ This section lists all expense classes associated with funds assigned to the gro
 *   **Encumbered.**  Total amount encumbered for the expense class.
 *   **Awaiting payment.**  Total amount awaiting payment for the expense class.
 *   **Expended.** Total amount expended for the expense class.
-*   **Percent of total expended.** Total amount expended for the expense class as a percentage of total expended from across all expense classes for funds in the group. In Quesnelia the calculation is wrong when the budget is over expended (see [MODFIN-372](https://folio-org.atlassian.net/browse/MODFIN-372) for details).
+*   **Percent of total expended.** Total amount expended for the expense class as a percentage of total expended from across all expense classes for funds in the group.
 
 ### Viewing fund details
 
@@ -588,16 +593,11 @@ The fund details pane contains fund information and all current, planned, and pr
 
 #### Fund information
 
-The Fund information section contains details about the fund.  For descriptions of each field in this section, see  [Fund information](#fund-information).  In addition to the fields that are available during fund creation, the fund detail pane displays the fund **Currency**. The fund currency value is set to the currency value from [Settings > Tenant > Language and localization](../../settings/settings_tenant/settings_tenant/#settings--tenant--language-and-localization). Note that when an order is opened, the system creates an encumbrance transaction on the current budget for the fund selected in the fund distribution section of the order.  If the currency of the PO line is different than the budget currency, the encumbrance will display on the budget as a converted amount.  The budget currency is set to the Tenant currency value at the time the [Finance > Fiscal year](#fiscal-year-information) record is created; therefore, if the Tenant currency value is updated, any budgets created prior to the update will still operate based on the Tenant currency that existed when the Fiscal year associated with the budget was created.
-
-
-
+The Fund information section contains details about the fund.  For descriptions of each field in this section, see  [Fund information](#fund-information).  
 
 #### Current budget
 
 This section contains a table of information about the current budget, if one exists.  The current year is based on the fiscal year period and the current date/time.
-
-
 
 #### Current expense classes
 
@@ -651,7 +651,8 @@ The Budget summary section contains the following fields:
 **Financial activity and overages**
 *   **Encumbered.** The sum of all encumbrance transaction amounts against the budget.
 *   **Awaiting Payment.** The sum of pending payment transaction amounts against the budget.
-*   **Expended.** The sum of payment transaction amounts minus credit transaction amounts against the budget.
+*   **Expended.** The sum of payment transaction amounts against the budget.
+*   **Credited.** The sum of credit transaction amounts against the budget.
 *   **Unavailable** The total amount unavailable for the budget, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
 *   **Available balance.** Total amount available for the budget, calculated as **Total funding** amount minus the **Unavailable** amount.  
 
@@ -853,7 +854,14 @@ To filter transactions by expense class, follow these steps:
 1. In the **Search & filter** pane, click **Expense class.**
 2. Select an expense class from the drop-down list. Your results appear in the Transactions pane.
 
+#### Encumbrance status
 
+To filter transactions by encumbrance status, follow these steps:
+
+
+1. In the **Search & filter** pane, click **Encumbrance status.**
+2. Select **Released** or **Unreleased**. Your results appear in the Transactions pane.
+   
 Once you view budget transactions, the following columns appear in the Transactions pane search results table. Click the column name to sort by that column.
 
 
@@ -1135,6 +1143,7 @@ The following fields are included in the downloadable rollover log results file:
 *   Encumbered (Budget)
 *   Awaiting payment (Budget)
 *   Expended (Budget)
+*   Credited (Budget)
 *   Unavailable
 *   Over encumbered
 *   Over expended
@@ -1146,6 +1155,7 @@ The following fields are included in the downloadable rollover log results file:
 *   Encumbered (Exp Class)
 *   Awaiting payment (Exp Class)
 *   Expended (Exp Class)
+*   Credited (Exp Class)
 *   Percentage of total expended
 
 

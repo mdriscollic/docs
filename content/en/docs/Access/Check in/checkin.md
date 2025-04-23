@@ -5,6 +5,8 @@ date: 2021-12-03
 weight: 10
 ---
 
+**This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
+
 The Check in app allows you to process items at a service point, including items a patron returns to the library, items requested by a patron, or in process items. You can also use the Check in app to record in-house usage.
 
 To configure any of the staff slips you encounter when checking in an item, like the Hold slip, see [Staff slips](../../../settings/settings_circulation/settings_circulation/#settings--circulation--staff-slips) for more information.
@@ -12,10 +14,24 @@ To configure any of the staff slips you encounter when checking in an item, like
 
 ## Permissions
 
-The permission listed below allows you to interact with the Check in app. You can assign permissions to users in the Users app. If this permission is not assigned to a user, then they will be unable to see the Check in app or any related information.
+The permission / capability listed below allows you to interact with the Check in app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. If this capability is not assigned to a user, then they will be unable to see the Check in app or any related information.
+
+### Adding a capability or capability set to an Authorization role
+
+Select all applications to ensure access to all capabilities.
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
 
 
-* **Check in: all permissions.** This permission allows the user to scan items in the Check in app and backdate Check in. However, this permission does not include being able to see details for items or patrons.
+|  Permission Display    Name (OKAPI) |  Resource (EUREKA) |  Type |  Action |  Description                                                                                                                                                                                   |
+|-------------------------------------|--------------------|-------|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Check in: all permissions           | UI-Checkin         | Data  | Manage  | This **Capability set** allows the user to scan items in the Check in app and backdate Check in. However, this capability does not include being able to see details for items or patrons.     |
+
+
 
 
 ## Checking in an item
@@ -43,7 +59,7 @@ Once you check in an item, the following columns appear in the Scanned Items tab
 * **Title.** The title of the item.
 * **Barcode.** The barcode of the item.
 * **Effective call number string.** The full call number of the item, which includes the call number prefix, suffix, and copy number, as configured in the Inventory app.
-* **Location.** The permanent location of the item.
+* **Location.** The [effective location](../../../platform-essentials/locations/locations/#item-effective-location) of the item. Note: see [Floating collections](#floating-collections) for how the effective location may change if the item is part of a floating collection.
 * **In-house use.** If you are recording in-house use of an item, a house icon appears here. Otherwise, it appears blank. See [Recording in-house use of an item](#recording-in-house-use-of-an-item) for more information.
 * **Status.** The item status once checked in.
 * **Actions.** Click **…** to view additional item information or see the actions you can take on the item. See [Getting additional item information](#getting-additional-item-information) for more information.
@@ -71,6 +87,13 @@ There are two scenarios in which an item may need to be routed to another servic
 1. Either scan the barcode of the item, or enter the barcode and click **Enter**. If the item needs to be sent to another location, an **In transit** dialog appears noting the item is in transit and needs to be routed to a different service point.
 2. If you do not want to print a routing slip, clear the **Print slip** checkbox if it is checked.
 3. Click **Close** to exit and print a routing slip, if selected. The item appears in the Scanned Items table and its status changes to In transit.
+
+## Floating collections
+A floating collection consists of items whose effective location can change depending on where they are checked in. If an item whose effective location is designated as floating in [Settings > Tenants](../../../settings/settings_tenant/settings_tenant/#editing-a-location) is checked in at a service point associated with a different location that is also designated as floating, then the item’s effective location will change to the effective location it is checked in at. Floating collections can be used to reduce transportation of items between libraries. 
+
+Example: Item1 has an effective location of Locus A, which is associated with service point Circ Desk A. Locus A is designated as a floating location. Locus B, associated with the service point Circ Desk B, is also designated as a floating location. Locus C, associated with service point Circ Desk C, is not designated as floating. If Item1 is checked in at Circ Desk B, Item1’s effective location will change to Locus B. Assuming there are no requests on Item1, no Transit slip will be generated and the item status will change to Available. If Item1 is then checked in at Circ Desk C, then Item1’s effective location will remain Locus B.
+
+You need to enable floating locations at installation for the feature to be available. It is recommended to have only one floating location per service point. See [Floating collection](https://folio-org.atlassian.net/wiki/spaces/FOLIJET/pages/536281165/Floating+collection+UXPROD-4969+UXPROD-816) for more information.
 
 
 ## Checking in an item with a request (hold shelf fulfillment)

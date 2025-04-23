@@ -1,5 +1,5 @@
 # baseURL = "/"
-baseURL = "https://quesnelia.docs.folio.org/"
+baseURL = "https://sunflower.docs.folio.org/"
 title = "FOLIO Documentation"
 
 enableRobotsTXT = true
@@ -121,6 +121,14 @@ algolia_docsearch = true
 offlineSearch = false
 
 [[params.versions]]
+  version = "Sunflower"
+  url = "https://sunflower.docs.folio.org/docs/"
+
+[[params.versions]]
+  version = "Ramsons"
+  url = "https://ramsons.docs.folio.org/docs/"
+
+[[params.versions]]
   version = "Quesnelia"
   url = "https://quesnelia.docs.folio.org/docs/"
 
@@ -217,6 +225,6 @@ enable = false
 [[menu.main]]
     identifier = "wiki"
     name = "Project Wiki"
-    url = "https://wiki.folio.org"
+    url = "https://folio-org.atlassian.net/wiki"
     weight = 20
 

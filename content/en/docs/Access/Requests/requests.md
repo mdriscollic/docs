@@ -5,7 +5,7 @@ date: 2022-11-10
 weight: 50
 ---
 
-The Requests app allows you to create and manage requests. 
+The Requests app allows you to create and manage requests.
 
 FOLIO supports two kinds of requests - item level, and title level. 
 
@@ -18,7 +18,7 @@ Libraries can turn on title-level requests in [Settings > Circulation > Title le
 Libraries that want to use title level requests should consider:
 
 * You will not be able to turn off title level requesting while there are any open title level requests.
-* To avoid issues with queue ordering, you should first close open item level requests before turning on title level requesting. 
+* If you are transitioning from having only item level requesting, you should close open requests before turning on title level requesting to avoid queue ordering problems. 
 * Check Settings > Circulation > Title level requests > **Fail to create title level hold when request is blocked by circulation rule** if you want title level hold requests to follow circulation rules. If you do not choose this option, then title level hold requests will go through even when hold requests are blocked by the circulation rule. The title level hold request will remain Open - not yet filled as the circulation rule will prevent the request from being associated with an item.
 * Title level requests are not yet supported for multi-volume sets - e.g., "any copy of volume D of the Longman Anthology of World Literature." Those requests must continue to be handled as item-level requests.
 * Items newly added to FOLIO via the Receiving app, Inventory, or Data Import must be checked in in order to be made available to fill open title level requests.
@@ -32,7 +32,7 @@ The following are all the Requests permissions:
 
 * **Requests: All permissions.** This permission allows the user all request functions.
 * **Requests: Move to new item, reorder queue.** This permission allows the user to move requests from one item to another (subject to request policies).
-* **Requests, Reorder queue.** This permission allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue.
+* **Requests: Reorder queue.** This permission allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue.
 * **Requests: View.** This permission allows the user to search and view requests.
 * **Requests: View, create.** This permission allows the user to create new requests and view existing requests.
 * **Requests: View, edit, cancel.** This permission allows the user to view, edit and cancel requests.
@@ -70,7 +70,7 @@ Closed requests have one of the following statuses:
 
 To search for requests, enter your search terms into the box on the **Search & filter** pane. You can keyword search by title, or "starts with" search by item barcode, requester barcode, or item call number.
 
-You can also use the Request type, Request status, Request level, Tags, and Pickup service point filters to find requests or further limit your search.
+You can also use the Request type, Request status, Request level, Tags, Pickup service point, Retrieval service point, and Print status filters to find requests or further limit your search. The [Settings > Circulation > View print details](../../../settings/settings_circulation/settings_circulation/#settings--circulation--view-print-details) option needs to be selected for the Print status filter to be visible.
 
 You can choose which columns appear in your search results by clicking on the Actions menu. Under Show columns, you can check or uncheck columns to change what you see in the results pane.
 
@@ -101,14 +101,14 @@ Requesting is controlled by circulation rules and item statuses. You cannot requ
 8. Optional: Enter any **Patron comments.** For example, if the patron needs the item immediately, you can note it here. Patron comments show up in the CSV report and can be included in pick slips.
 9. Select the **Fulfillment preference**.
 10. Select the **Pickup service point** or **Delivery address**, depending on your selection in the previous step.
-11. Click **Save & close**. The request is saved and the Request Detail pane appears. The patron receives an email notification saying their request was received by the library, [if you have this notification configured.](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies)
+11. Click **Save & close**. The request is saved and the Request details pane appears. The patron receives an email notification saying their request was received by the library, [if you have this notification configured.](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies)
 
 ### Editing an item level request
 
 You can only edit open requests. Once a request is closed, it cannot be edited.
 
 1. [Find the request you want to edit.](#searching-for-requests) 
-2. In the **Request Detail** pane, select **Actions > Edit.**
+2. In the **Request details** pane, select **Actions > Edit.**
 3. Edit the request.
 4. Click **Save & close**. The request is updated.
 
@@ -117,14 +117,10 @@ You can only edit open requests. Once a request is closed, it cannot be edited.
 You can duplicate open requests but you will need to change either the requester or the item in order to save the request, as there cannot be two requests on the same item by the same requester. Closed requests can be duplicated, but you will need to enter a requester barcode.
 
 1. [Find the request you want to duplicate.](#searching-for-requests) 
-
-2. In the **Request Detail** pane, select **Actions > Duplicate**. A New request window appears with the same Item information, Requester information, and Request information as the request you chose to duplicate.
-
-3. Edit any of the request information before submitting the request.
-
+2. In the **Request details** pane, select **Actions > Duplicate**. A New request window appears with the same Item information, Requester information, and Request information as the request you chose to duplicate.
+3. Edit the request.
 4. Select a **Pickup service point**.
-
-5. Click **Save & close**. The new request appears in the Request Detail pane.
+5. Click **Save & close**. The new request appears in the Request details pane.
 
 ### Moving an item-level request to another item on the same instance
 
@@ -133,7 +129,7 @@ You can move a request from one item to another on the same instance. You may wa
 Note: If a recall request is moved to a loan item that wasn’t previously recalled, the loan will be recalled--the patron gets a recall notice, [if configured,](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies) and the loan’s due date may be truncated or extended, depending on the associated loan policy.
 
 1. [Find the request you want to move.](#searching-for-requests)
-2. In the **Request Detail** pane, select **Actions > Move request**.
+2. In the **Request details** pane, select **Actions > Move request**.
 3. In the **Select item** window, select the item you want to move the request to.
 4. If the current request type is not allowed you will need to choose an allowed type in the **Select request type** dialog and click **Confirm** to allow the request to be converted.
 
@@ -142,7 +138,7 @@ Note: If a recall request is moved to a loan item that wasn’t previously recal
 You can change a patron’s location in the request queue for an item by reordering the queue.
 
 1. [Find the request with the queue you want to reorder.](#searching-for-requests)
-2. In the **Request Detail** pane, select **Actions > Reorder queue**.
+2. In the **Request details** pane, select **Actions > Reorder queue**.
 3. In the **Request queue** window, reorder the requests by dragging them into their new positions. Requests cannot be moved above Page requests, even if fulfillment has not begun.
 4. Once you are done moving the requests, click the **X** to exit the Request queue window. The revised queue order is saved.
 
@@ -157,7 +153,7 @@ Note: When cancelling a request, you should consider the following:
 * If you cancel a requested item that is awaiting pickup, it appears on the [Hold shelf clearance report](#exporting-a-hold-shelf-clearance-report).
 
 1. [Find the request you want to cancel.](#searching-for-requests)
-2. In the **Request Detail** pane, select **Actions > Cancel request**.
+2. In the **Request details** pane, select **Actions > Cancel request**.
 3. In the **Confirm request cancellation** dialog, select the **Reason for cancellation**.
 4. Optional: Enter any additional notes on the cancellation in the **Additional information for patron** box. If you selected **Other** as the reason, then you must supply additional information.
 5. Click **Confirm**. The dialog closes and the request is cancelled. The Request status is updated to Closed - Cancelled and the patron receives a cancellation notification email, [if you have this notification configured.](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies)
@@ -185,7 +181,7 @@ Note: You must have permission to create requests in the Requests app in order t
 8. Optional: Enter any **Patron comments**. For example, if the patron needs the item immediately, you can note it here. Patron comments show up in the CSV report and can be included in pick slips.
 9. Select the **Fulfillment preference**.
 10. Select the **Pickup service point** or **Delivery address**, depending on your selection in the previous step.
-11. Click **Save & close**. The request is saved and the Request Detail pane appears. The patron receives an email notification saying their request was received by the library, [if you have this notification configured](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies).
+11. Click **Save & close**. The request is saved and the Request details pane appears. The patron receives an email notification saying their request was received by the library, [if you have this notification configured](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies).
 
 ### How FOLIO decides which item will fill a title-level request
 
@@ -216,7 +212,7 @@ For recalls, the item information indicates the item that was recalled, but when
 You can only edit open requests. Once a request is closed, it cannot be edited.
 
 1. [Find the request you want to edit.](#searching-for-requests) 
-2. In the **Request Detail** pane, select **Actions > Edit.**
+2. In the **Request details** pane, select **Actions > Edit.**
 3. Edit the request.
 4. Click **Save & close**. The request is updated.
 
@@ -225,14 +221,10 @@ You can only edit open requests. Once a request is closed, it cannot be edited.
 You can duplicate any open title level request. When you duplicate the request, you will need to change the instance or the requester, because a patron cannot have more than one open title level request on the same instance. 
 
 1. [Find the request you wish to duplicate.](#searching-for-requests) 
-
-2. In the **Request Detail** pane, select **Actions > Duplicate**. A New request window appears with the same Item information, Requester information, and Request information as the request you chose to duplicate.
-
-3. Edit any of the request information before submitting the request.
-
+2. In the **Request details** pane, select **Actions > Duplicate**. A New request window appears with the same Item information, Requester information, and Request information as the request you chose to duplicate.
+3. Edit the request.
 4. Select a **Pickup service point**.
-
-5. Click **Save & close**. The new request appears in the Request Detail pane.
+5. Click **Save & close**. The new request appears in the Request details pane.
 
 ### Reordering Request Queues with Title Level Requests
 
@@ -267,7 +259,7 @@ Before you cancel a request, consider:
 * If there are other open title level requests on the instance that are not in progress, the item needs to be checked in to fulfill the next request in the queue.
 
 1. [Find the request you want to cancel.](#searching-for-requests) 
-2. In the **Request Detail** pane, select **Actions > Cancel request**.
+2. In the **Request details** pane, select **Actions > Cancel request**.
 3. In the **Confirm request cancellation** dialog, select the **Reason for cancellation**.
 4. Optional: Enter any additional notes on the cancellation in the **Additional information for patron** box. If you selected **Other** as the reason, then you must supply additional information.
 5. Click **Confirm**. The dialog closes and the request is canceled. The Request status is updated to Closed - Canceled and the patron receives a cancellation notification email, [if that option is configured](../../../settings/settings_circulation/settings_circulation/#patron-notice-policies).
@@ -306,34 +298,68 @@ The CSV export report can be used as a pick report. A pick report shows all page
 To create a pick report, follow these steps:
 
 1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
-2. In the **Requests** pane, select **Actions > Export search results to CSV**.
-3. Open the file in a spreadsheet application.
-4. Optional: Filter the report by **Effective location** to see available items within your area of responsibility.
+2. Optional: Filter by **Retrieval service point** to see only items whose effective locations are associated with the selected Retrieval service point.
+3. In the **Requests** pane, select **Actions > Export search results to CSV**.
+4. Open the file in a spreadsheet application.
 
 
 ### Printing pick slips
+
+#### Printing all pick slips for a service point
 
 The pick slips report generates a single slip for every paged item that needs to be pulled from the shelf. Because this report automatically prints only those items whose Effective location is associated with the currently selected service point, you must be signed in to the service point you want to generate the slips for. If no items match the report’s criteria, the option is grayed out.
 
 You can configure the information that appears on the pick slips in the [Settings app.](../../../settings/settings_circulation/settings_circulation/#settings--circulation--staff-slips)
 
-To print pick slips, in the Requests pane, select **Actions > Print pick slips for [your service point]**. A print dialog appears.
+To print pick slips, in the Requests pane, select **Actions > Print pick slips for \[your service point]**. A print dialog appears.
 
+#### Printing selected pick slips 
+1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
+2. Optional: Filter by **Retrieval service point.**
+3. Select the checkboxes in the first column of the requests you want to print. You can only print Page requests for items whose effective locations are associated with your selected service point.
+4. Select **Actions > Print selected pick slips for [your service point].** A print dialog appears.
+
+#### Printing a single pick slip
+1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
+2. Optional: Filter by **Retrieval service point.**
+3. Have the **Single print** column selected in the Actions menu.
+4. Click the **Print** button in the Single print column. A print dialog appears. Note: the print button will only be active for items whose effective locations are associated with your selected service point.
+
+#### Showing the pick slip print history
+
+To select the search result columns **# Copies** or **Printed** you need to choose the option Settings > Circulation > Requests > View print details > Enable view print details (Pick slips).
+
+**# Copies** shows the number of times the request pick slip has been printed.
+
+**Printed** shows the username and date/time for the most recent printing.
+
+   
 ## Printing Hold request search slips  
 Libraries can choose to use search slips if they have many copies of a title (instance), but not all copies have been cataloged. When a patron requests an item from that instance, a search slip can be printed so a staff member can look for the item. Libraries must enable **Allow print hold requests (Open - Not yet filled)** in [Settings > Circulation > Print hold requests](../../../settings/settings_circulation/settings_circulation/#settings--circulation--print-hold-requests) in order to use this feature.
 
-The search slips report generates a single slip for every item level hold request with request status **Open - Not yet filled**. The report only prints hold requests for items that are shelved nearest the currently selected service point (i.e., those items whose Effective location is associated with the currently selected service point). You must be signed in to the service point you want to generate the search slips for. If no items match the report’s criteria, the option is grayed out.
+The search slips report generates a single slip for every hold request with request status **Open - Not yet filled**. The report only prints hold requests for items that are shelved nearest the currently selected service point (i.e., those items whose Effective location is associated with the currently selected service point). You must be signed in to the service point you want to generate the search slips for. If no items match the report’s criteria, the option is grayed out.
 
 You can configure the information that appears on the pick slips in the [Settings app](../../../settings/settings_circulation/settings_circulation/#configuring-a-staff-slip).
 
-To print search slips, in the Requests pane, select Actions > Print search slips for [your service point]. A print dialog appears.
+To print the search slips report, in the Requests pane, select Actions > Print search slips for [your service point]. A print dialog appears.
+
+### Generating a hold requests CSV export 
+The CSV export report can be used as a hold requests report. The CSV export report includes, and can be sorted by, effective call number.
+
+To create a hold requests CSV report, follow these steps:
+
+1. In the Search & filter pane, select **Request type > Holds** and **Request status > Open - Not yet filled** to filter the items down to open hold requests.
+2. Optional: Filter by **Retrieval service point** to see only items whose effective locations are associated with the selected Retrieval service point.
+3. In the Requests pane, select **Actions > Export search results to CSV.**
+4. Open the file in a spreadsheet application.
+
 
 ## Adding a tag to a request
 
 You can add a tag to any open request. Tags are included in the [CSV export report](#exporting-your-search-results-to-csv), in case you want to use them for your workflow. For example, you can tag requests that were not found.
 
 1. [Find the request you want to tag.](#searching-for-requests)
-2. In the **Request Detail** pane, click the **tag icon**.
+2. In the **Request details** pane, click the **tag icon**.
 3. In the **Tag** pane, either select a tag from the box or enter a tag.
 4. Click the **X** on the Tag window to close the pane and save the tag. The tag number updates to the number of tags applied to the request.
 

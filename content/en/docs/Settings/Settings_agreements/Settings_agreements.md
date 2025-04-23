@@ -88,7 +88,7 @@ Selecting the checkbox causes the following to happen:
 
 Supplementary properties are an optional way to record additional information about the agreement not captured anywhere else in the record. For example, the authentication method used to access the material covered by the agreement.
 
-When you configure supplementary properties, the Supplementary properties section appears in your agreement records. Supplementary properties are similar to [license terms]({{< ref "/licenses.md#terms" >}}). There are two types of supplementary properties you can create in FOLIO: primary and optional. Primary properties appear on every agreement record by default. Optional properties can be added on an agreement-by-agreement basis.
+When you configure supplementary properties, the Supplementary properties section appears in your agreement records. Supplementary properties are similar to [license terms]({{< ref "licenses.md#terms" >}}). There are two types of supplementary properties you can create in FOLIO: primary and optional. Primary properties appear on every agreement record by default. Optional properties can be added on an agreement-by-agreement basis.
 
 
 ### Creating a supplementary property

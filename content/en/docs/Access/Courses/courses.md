@@ -120,9 +120,9 @@ To create a course, you must have the Courses window open. Then:
 To delete a course, you must first remove all items from the course.
 
 1. [Find the course](#searching-for-courses) you want to delete and click on it in the **Courses** list.
-2. In the **course details** window, click **Actions > Edit**.
-3. Click **Delete**.
-4. Click **Really delete** to delete the course. The course is deleted and removed from the Courses list.
+2. In the **course details** window, click **Actions > Delete**. If Delete is grayed out, then the course has associated items that need to be removed.
+3. In the confirmation modal, click **Delete**.
+4. A confirmation message appears, the course is deleted and removed from the Courses list.
 
 
 ## Adding a cross-listed course

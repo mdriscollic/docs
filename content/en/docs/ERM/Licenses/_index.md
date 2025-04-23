@@ -2,7 +2,7 @@
 title: "Licenses"
 linkTitle: "Licenses"
 date: 2024-06-05
-weight: 50
+weight: 40
 tags: ["parenttopic"]
 ---
 

@@ -27,6 +27,7 @@ The permissions listed below allow you to interact with the Inventory app and de
 The following are all the Inventory permissions:
 
 -   **Inventory: All permissions.** This permission allows the user to perform all actions in Inventory.
+-   **Inventory: Create and download In transit items report.** This permission allows the user to export a report of any items with the status "in transit."
 -   **Inventory: Create order from instance.** This permission allows the user to initiate the creation of a new purchase order or a new purchase order line (in the Orders app) from an Instance record in Inventory.
 -   **Inventory: Enable staff suppress facet.** This permission allows the user to search and view instance records that are suppressed for staff.
 -   **Inventory: Import single bibliographic records.** This permission allows the user to import and overlay Instance records from external sources. External sources must be configured in Settings.
@@ -695,6 +696,7 @@ The Item data section contains additional information on the item.
 
 The Enumeration data section contains enumeration information for any serials or multipart monographs.
 
+-   **Display summary.** A summary of the descriptive information for the numbering scheme of a serial. This field can be populated automatically using the Serials app for predictive patterns or manually using the Receiving app.
 -   **Enumeration.** The descriptive information for the numbering scheme of a serial, usually identified by level and a descriptive caption. For example, level 0 = v. and level 1 = no. This means that each issue of the serial has a volume and an issue number that would appear (v.71:no.2-4).
 -   **Chronology.** The descriptive information for the dating scheme of a serial, usually identified by level. For example, level 0 = year level 1 = month. This means that each issue of the serial has a month and a year on each issue (1985:July-Dec.)
 -   **Volume.** Volume is intended for multipart monographs. For example, a biography of George Bernard Shaw in three volumes.
@@ -851,6 +853,7 @@ To search, first select the record type (instance, holdings, or item) then enter
 -   **OCLC number, normalized.** Searches for the OCLC number with or without any prefixes.
 -   **Instance notes (all).** Keyword search across all Instance notes; includes administrative notes. 
 -   **Instance administrative notes.** Keyword search of instance record administrative notes.
+-   **Place of publication.** Keyword search of instance place of publication.
 -   **Subject.** Keyword search through all subject fields. This may include Library of Congress Subjects, FAST, and other subject vocabularies, including Genre/Form terms.
 -   **Effective call number (item), shelving order.** Retrieves Instance records based on the shelving order element in the item record.
 -   **Instance HRID.** Human readable identifier for the instance record.
@@ -878,9 +881,10 @@ To search, first select the record type (instance, holdings, or item) then enter
 
 When you browse records in the Inventory App, the **Browse** toggle is highlighted and then you can select a browse option:
 
--   **Call numbers.** The call number browse is based on the shelving order element in the item record; only instances with item records will be retrieved. You can choose to browse all call numbers, or to browse only those call numbers with a particular call number classification (e.g., Dewey Decimal, Library of Congress, Local, National Library of Medicine, SuDoc or Other Scheme). Note that call number types must first be configured in Settings for Inventory, then specified for an item call number when each item record is created, before it is possible to browse by call number classification.
+-   **Call numbers (item).** The call number browse is based on the shelving order element in the item record; only instances with item records will be retrieved. You can choose to browse all call numbers, or to browse only those call numbers with a particular call number classification (e.g., Dewey Decimal, Library of Congress, Local, National Library of Medicine, SuDoc or Other Scheme). Note that call number types must first be configured in Settings for Inventory, then specified for an item call number when each item record is created, before it is possible to browse by call number classification.
+-   **Classification (instance).** The classification browse is based on the classification element in the instance record. You can choose to browse all classifications, or to browse only a particular classification (e.g., Dewey Decminal, Library of Congress, etc.) Note that classification types must first be configured in Settings for Inventory, then specified within the classification element when each instance record is created, before it is possible to browse by instance classification.
 -   **Contributors.** The contributor browse is based on the contributor field in instance records. Names should be entered as they appear in the contributor field.
--   **Subjects.** The subject browse is based on the subject field in instance records. Subjects should be entered as they appear in the subject field.
+-   **Subjects.** The subject browse is based on the subject field in instance records. Subjects should be entered as they appear in the subject field. The subject browse can be limited by **Subject source** and/or **Subject type** using the drop down boxes below the search box.
 
 The result of a browse search is shown in the pane to the right of the Search & filter pane under the title **Browse inventory**. It will include a list of call numbers, contributors or subjects that come before and after the data you specified, along with a number that indicates how many inventory records have those call numbers, contributors or subjects. If there is a match to what you specified, that result will be highlighted, otherwise you'll see a highlighted message "[your specified data] would be here". If you click on one of the links in the browse results you'll get list of inventory records that contain the selected call number, contributor or subject.
 
@@ -968,6 +972,14 @@ To search for instances, holdings, or items based on their statistical code, fol
 2.  Click the drop-down list and either enter the code/code name or select it from the list.
 3.  Repeat step 2 to add more than one statistical code. Your search results appear in the Inventory pane.
 
+### Date range
+
+To search for instances based on publication year, follow these steps:
+
+1.  In the **Search & filter** pane, click **Date range**.
+2.  Enter a start date in the **From** box and an end date in the **To** box.
+3.  Click **Apply**. Your search results appear in the Inventory pane.
+
 ### Date created
 
 To search for instances based on the date they were created, follow these steps:
@@ -1052,6 +1064,7 @@ To sort results after conducting a search, click **Action** and use the dropdown
 
 - **Title.** This is the default sort option. Sorts the search results alphabetically (A to Z) by title.
 - **Contributors.** Sorts the search results alphabetically (A to Z) by contributor.
+- **Date.** Sorts the search results by date.
 - **Relevance.** Sorts the search results by relevancy (most to least relevant).
 
 ## Viewing an instance record
@@ -1083,6 +1096,8 @@ To view an item record, follow these steps:
 1.  [Find the instance](#searching-for-a-record) with the item record you want to view and select it.
 2.  In the **Instance record details** pane, expand  the **Holdings** accordion.
 3. Click the **Item barcode** of the item you want to view. The Item record details window appears.
+
+If you are using a barcode to view an item record, the item record details window will open immediately upon the barcode being scanned, copy/pasted, or typed into the Item Search & Filter pane.
 
 ## Editing an instance record
 

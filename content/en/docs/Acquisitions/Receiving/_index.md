@@ -1,7 +1,7 @@
 ---
 title: "Receiving"
 linkTitle: "Receiving"
-date: 2024-05-08
+date: 2025-02-06
 weight: 50
 tags: ["parenttopic"]
 ---
@@ -51,7 +51,7 @@ The **New** action allows you to create the receiving titles that come in a pack
 
 
 
-1. Click **New**.
+1. Click **Actions > New**.
 2. In the **New title** window, in the **PO line details** section, click **POL number look-up**. 
 3. In the **Select order lines** dialog, in the **Search & filter** box, enter the Package POL number.
 4. Optional: Filter results using the filters in the **Select order lines** dialog.
@@ -90,7 +90,7 @@ Note: Adding a contributor is optional, but if you click **Add contributor**, yo
 3. Select a **Contributor ID type** from the drop-down list. The Contributor is added once all changes are saved.
 
 
-##### Deleting a contributor
+#### Deleting a contributor
 
 
 
@@ -98,7 +98,7 @@ Note: Adding a contributor is optional, but if you click **Add contributor**, yo
 2. Click the **trash can icon**. The contributor is removed and is deleted once the changes are saved.
 
 
-##### Adding a product ID and type
+#### Adding a product ID and type
 
 Note: Adding a product ID and type is optional, but if you click **Add product ID and type**, you must enter a **Product ID** and **Product ID type** or delete the product ID and type in order to save the title.
 
@@ -110,7 +110,7 @@ Note: Adding a product ID and type is optional, but if you click **Add product I
 4. Select the **Product ID type** from the drop-down list. The product ID is added once all changes are saved.
 
 
-##### Deleting a product ID and type
+#### Deleting a product ID and type
 
 
 
@@ -118,7 +118,7 @@ Note: Adding a product ID and type is optional, but if you click **Add product I
 2. Click the **trash can icon**. The product ID is removed and is deleted once the changes are saved.
 
 
-#### PO line details
+### PO line details
 
 
 
@@ -128,11 +128,11 @@ Note: Adding a product ID and type is optional, but if you click **Add product I
 *   **Must acknowledge receiving note.** When this checkbox is selected, the **Receiving note** dialog appears when you attempt to receive the material. You must click **Continue** in order to receive the material.
 
 
-### Linking an existing receiving title
+## Linking an existing receiving title
 
 
 
-1. Click **New**. 
+1. Click **Actions > New**. 
 2. In the **New title** window, click **Title look-up**.
 3. In the **Select instance** dialog, in the **Search & filter** box, enter the title you want to link to the package.
 4. Optional: Filter the results using the filters in the **Select instance** dialog.
@@ -251,6 +251,12 @@ In the **Search & filter** pane, click **Receiving status** and select any appli
 *   **Received.** The order has arrived and been received. 
 
 
+### Bindery active
+In the **Search & filter** pane, click **Bindery active** and select any applicable filters:
+
+*   **Yes.** The bindery box is selected on the corresponding order line and the material is eligible for binding.
+*   **No.** The bindery box is not selected on the corresponding order line and the material is not eligible for binding.
+  
 ### Acquisition unit
 
 To search for titles assigned to a specific acquisition unit, follow these steps:
@@ -503,22 +509,30 @@ This section displays a table list of the pieces of the order that are still exp
 3. Deselect any columns that you want to remove from the Expected table list.
 4. Your selections persist until you logout of FOLIO.
 
-
-
 ### Received
 
-This section displays a table list of the pieces of the order that have been received. To customize the columns that appear in the table list, follow these steps:
+This section displays a table list of the pieces of the order that have been received. See [Receiving a piece](#receiving-a-piece) for more information. To customize the columns that appear in the table list, follow these steps:
 
 1. In the Received section of the receiving title, select the **Actions** button.  
 2. The listed columns are all selected by default under **Show columns** in the Actions list.  
 3. Deselect any columns that you want to remove from the Received table list.
 4. Your selections persist until you logout of FOLIO.
 
+### Routing lists
+This section contains information about and the ability to add to a receiving record. See [Routing pieces](#routing-pieces) for more information. This section will only appear on receiving records with an order format of 'Physical Resource' or 'P/E Mix'.
 
+### Unreceivable
+This section displays a table list of the pieces of the order that have been marked unreceivable. See [Marking a piece unreceivable](#marking-a-piece-unreceivable) for more information. To customize the columns that appear in the table list, follow these steps:
+
+1. In the Unreceivable section of the receiving title, select the **Actions** button.  
+2. The listed columns are all selected by default under **Show columns** in the Actions list.  
+3. Deselect any columns that you want to remove from the Unreceivable table list.
+4. Your selections persist until you logout of FOLIO.
+
+### Bound items
+This section displays a table list of the pieces of the order that have been bound. See [Binding and unbinding pieces](#binding-and-unbinding-pieces) for more information. 
 
 ## Editing receiving title information
-
-
 
 1. Find the receiving title you want to edit and select it.
 2. In the receiving title pane, click **Edit**.
@@ -529,7 +543,7 @@ This section displays a table list of the pieces of the order that have been rec
 
 ### Title look-up
 
-The **Title look-up** function replaces the current title with a title that already exists as an instance in Inventory. This doesn't replace existing publishing or subscription details, but it does add any contributors or product IDs associated with the new title. Once you make this change, the material is longer searchable by the original title.
+The **Title look-up** function replaces the current title with a title that already exists as an instance in Inventory. This doesn't replace existing publishing or subscription details, but it does add any contributors or product IDs associated with the new title. Once you make this change, the material is no longer searchable by the original title.
 
 
 
@@ -568,9 +582,7 @@ Expected pieces can be found  in the Expected section of a Receiving app record.
 5. To save and receive the piece simultaneously, click the dropdown next to **Save & close** and select **Quick receive**.  The new piece is saved and listed in the Received section.
 6. To save without adding another piece, Click **Save & close**. The new piece is saved and listed in the Expected section.
 
-
-### Add piece
-#### Piece details
+### Piece details
 
 
 *   **Display summary.** A description of a piece that can be used for public display. If this field is added/updated, the value displays on the corresponding field in the item record. Note: in previous releases, this field was labeled **Caption**.
@@ -584,7 +596,9 @@ Expected pieces can be found  in the Expected section of a Receiving app record.
 *   **External note.** A note meant to relay information to a vendor related to a claim.
 *   **Create item.** Select the **Create item** checkbox to connect the new piece to an item in Inventory. This option is only available for pieces linked to an order with the purchase order line **Create inventory** value set to “Instance, holdings, item.” . Note: In order to create an item in Inventory, a default instance status, instance type, and loan type must already be set up in Settings.  See [Settings > Orders](../../settings/settings_orders/settings_orders/) for more information.
 *   **Supplement.** Select the **Supplement** checkbox to indicate that the piece is supplementary material such as a CD or a map. 
-*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
+*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record. This checkbox only appears if the corresponding purchase order line has the **Create inventory** field set to create a holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
+*   **Display to public.** Select the **Display to public** checkbox to indicate that the piece information should be available to RTAC. This checkbox only appears if the **Display on holdings** box is selected. 
+*   **Bound.** Indicates the piece has been bound with other pieces associated with the receiving title.
 *   **Order line locations.**  A list of locations that were selected on the purchase order line.
 *   **Select holdings.**  In the drop down list, select the location for this piece. You can change the location by clicking [Create new holdings for location](#create-new-holdings-for-location). 
 
@@ -596,7 +610,7 @@ Note: If the location is changed for a specific piece and no holding exists for 
 2. In the **Select locations** dialog, select an **Institution**, **Campus**, **Library**, and **Location**.
 3. Click **Save and close**. The changes appear in the **Select holdings** field of the **Add piece** dialog. The location is confirmed once the piece is saved.
 
-#### Item details
+### Item details
 Note: This section of the **Add piece** modal becomes active as soon as the **Create item** checkbox is selected.
 
 *   **Barcode.** The item barcode. This value must be unique and will update the item record if filled in.
@@ -635,7 +649,7 @@ To edit an expected or received piece, make sure the correct receiving title is 
 
 ## Deleting an expected or received piece
 
-To delete an expected or received piece, make sure the correct receiving title is displayed by using the **Search & filter** pane and look under the Expected and Received sections of the title.
+**Please note:** Deleting a piece record when the **Receiving workflow** is set to 'Synchornized order and receipt quanity' will impact the quantity on the corresponding purchase order line. To delete an expected or received piece, make sure the correct receiving title is displayed by using the **Search & filter** pane and look under the Expected and Received sections of the title.
 
 
 ### Deleting an expected piece
@@ -644,7 +658,7 @@ To delete an expected or received piece, make sure the correct receiving title i
 
 1. Select the piece you want to delete.
 2. In the **Edit piece** dialog, the same fields as the [Add piece](#adding-an-expected-piece) dialog appear. See above for more information.
-3. Click the dropdown next to **Save & close** and select **Delete.** A confirmation message appears, click **Confirm** and the piece is deleted. Note: if connected to an item, the item record will also be deleted.
+3. Click the dropdown next to **Save & close** and select **Delete.** A confirmation message appears, click **Confirm** and the piece is deleted. **Note:** if connected to an item, the item record will also be deleted.
 
 
 ### Deleting a received piece
@@ -662,8 +676,6 @@ To delete an expected or received piece, make sure the correct receiving title i
 Receiving a piece confirms that the ordered material arrived at the library. If an item record was created as a result of the corresponding POL's **Create inventory** setting, the act of receiving the corresponding piece(s) will also update the item record(s). A major update is to the item's status, which will transition from 'On order' to 'In process'. Once the item processing has concluded, a staff member should check the item in using the **Check in** app to complete the technical services workflow. This will check for any open requests on the item or update the item status to 'Available' if the material is not needed to fill a request.
 
 There are two ways to receive a piece:
-
-
 
 *   Quick Receive
 *   Receive
@@ -711,14 +723,66 @@ The Receive function can be used to receive multiple pieces at once.
 *   **Item status.** The current status of the associated item record. Expected pieces typically have a status of 'On order', which updated to 'In process' once the piece is received.
 *   **Call number.** The item level call number. This will update the item record if filled in.
 *   **Create item.** This will show as 'Connected' and provide a clickable link to the item in Inventory, if applicable.
-*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
+*   **Display on holdings.**  Select the **Display on holdings** checkbox to indicate that information about this piece should be displayed in the Inventory app in the Acquisition section of the holdings record. This checkbox only appears if the corresponding purchase order line has the **Create inventory** field set to create a holdings record.  See [Inventory > Acquisition](../../inventory/#acquisition) for more information.
 *   **Supplement.** Select the **Supplement** checkbox to indicate that the piece is supplementary material such as a CD or a map. 
 
+## Routing pieces
+This applies only to receiving records where the corresponding purchase order line has an order format of 'Physical resource' or 'P/E mix'. Routing in FOLIO allows libraries to divert received materials away from the normal receiving process and workflow, to direct the materials to alternate locations for pre-circulation distribution or other special handling. Routing lists are configured in [Settings > Orders > Routing](../../settings/settings_orders/settings_orders/#settings--orders--routing--list-configuration). One routing lists may be configured per physical piece on a purchase order line. If a purchase order line has [routing lists configured](../orders/#routing-lists), the receiving title will show an indicator that the title has routing. The receiving title will contain a section labeled **Routing lists** that will be expanded by default.
 
+### Adding routing lists
+1. In the **Routing lists** section, click **Actions > Add routing list**.
+2. Enter a Name for the routing list.
+3. Optional: Add any Notes to the routing list.
+4. Click Add users to launch a search modal for the Users app.
+5. Select the user(s) to assign to the routing list and click Save.
+6. Use the six dots icon in the left column of the Users table to establish the order in which the material should be routed.
+7. Click Save & close.
+
+### Printing routing lists
+1. In the **Routing lists** section, click **Actions > Print all routing lists**.
+2. This will launch the browser's print preview containing the information templated when the routing list was configured.
+3. Print or save, as needed.
+
+## Binding and unbinding pieces
+Bindery fuctionality in FOLIO allows users to create an item record representing multiple received pieces, including pieces that may already have a connected item.
+
+A library will indicate that a receiving record is eligible for binding by selecting the **Bindery active** checkbox on the corresponding POL. These receiving records may be easily identified using the **Bindery active** filter in the Receiving app.
+
+**To bind pieces without corresponding item records, use the following steps:**
+1. Using the **Search & filter** pane, find the receiving title for which you want to bind pieces and select it.
+2. In the Received section of the receiving title, click on **Actions > Bind pieces**.
+3. On the screen that appears, use the checkboxes in the left-hand column to select pieces to bind.
+4. Optional: Assign a unique item **Barcode** for the bound piece.
+5. Optional: Assign an item **Call number** for the bound piece. If a call number is not assigned, the call number associated with the corresponding holdings record will be used as the effective call number for the item.
+6. Select a **Material type** to assign to the resulting item record.
+7. Select a **Permanent loan type** to assign to the resulting item record.
+8. Select a **Permanent location** for the item. Use the dropdown menu to select and existing holdings record or use the **Create new holdings for location** lookup option if a new holdings record is required for the item.
+9. Click **Bind**.
+
+**Bound items** will appear in a dedicated section at the bottom of the receiving record. Clicking on the hyperlinked **Barcode** will route to the item record in the Inventory app, which includes a section for **Bound pieces data**. **Please note:** The item record will have a status of 'In process'.
+
+**To bind pieces with corresponding item records, use the following steps:**
+1. Using the **Search & filter** pane, find the receiving title for which you want to bind pieces and select it.
+2. In the Received section of the receiving title, click on **Actions > Bind pieces**.
+3. On the screen that appears, use the checkboxes in the left-hand column to select pieces to bind.
+4. Optional: Assign a unique item **Barcode** for the bound piece.
+5. Optional: Assign an item **Call number** for the bound piece. If a call number is not assigned, the call number associated with the corresponding holdings record will be used as the effective call number for the item.
+6. Select a **Material type** to assign to the resulting item record.
+7. Select a **Permanent loan type** to assign to the resulting item record.
+8. Select a **Permanent location** for the item. Use the dropdown menu to select and existing holdings record or use the **Create new holdings for location** lookup option if a new holdings record is required for the item.
+9. Click **Bind**.
+10. If the pre-existing item records have corresponding requests, a modal will appear that says, 'There are requests on the following pieces: **Item barcode(s). Transfer requests** to the new record?' Click **Cancel** to return to the binding screen. Click **Transfer** to associate the requests with the item record for the newly bound item. Click **Do not transfer** to indicate that the request should remain associated with the original item. **Please note:** These requests will not be fulfilled since the associated item will no longer circulate independently. Library staff will need to manually resolve these requests.
+
+**Bound items** will appear in a dedicated section at the bottom of the receiving record. Clicking on the hyperlinked **Barcode** will route to the item record in the Inventory app, which includes a section for **Bound pieces data**. **Please note:** The item record will have a status of 'In process'.
+
+**To unbind pieces, use the following steps:**
+1. Using the **Search & filter** pane, find the receiving title for which you want to unbind pieces and select it.
+2. In the Bound items section of the receiving title, click on the barcode for the bound item. This will route you to the item record in Inventory.
+3. Scroll to the Bound pieces data section of the item record and click the **X** to the right of the piece you wish to unbind.
+4. In the confirmation modal, click **Remove**.
+5. If all bound pieces are removed and the item record has no requests, the [item record can be deleted](../../metadata/inventory/#deleting-an-item-record).
 
 ## Unreceiving an piece
-
-
 
 1. In the Received section of the receiving title, click **Actions**.  In the action menu, select **Unreceive.**
 2. In the receiving title window, all of the received pieces are displayed in a table list containing barcode, display summary, enumeration, piece format, request, comment, select location, and call number. 
@@ -741,7 +805,7 @@ If a piece has not arrived from the vendor by the expected receipt date or is da
 
 A library may configure a **Claiming interval** on the Organization record for the vendor. A **Claiming interval** represents the number of days after a piece's **Expected receipt date** when an unreceived piece will be marked **Late**. If a **Claiming interval** is entered on the Organization record, this will appear as the default claiming interval on purchase order lines associated with the vendor, but the default may be changed when the **Claiming active** box is checked on the purchase order line. The interval may also be changed on each receiving title; for example, if a package POL has mutliple titles that should each have different claiming intervals assigned.
 
-Once a piece is marked **Late**, a library may wish to send a claim to the vendor. In the Quesnelia release of FOLIO, pieces can be marked as **Claim sent**, but automatic transmission to the vendor is not yet implemented. A library may wish to filter by **Receiving status** and use the **Export results (CSV)** option to send information to their vendor to support the claim.
+Once a piece is marked **Late**, a library may wish to send a claim to the vendor. In the current release of FOLIO, pieces can be marked as **Claim sent**, but automatic transmission to the vendor is not yet implemented. A library may wish to filter by **Receiving status** and use the **Export results (CSV)** option to send information to their vendor to support the claim.
 
 To update a piece to 'Claim sent', use the following steps:
 1. Using the **Search & filter** pane, find the receiving title for which you want to send a claim and select it.
@@ -764,7 +828,6 @@ If a library knows they must wait for a longer period of time before submitting 
 7. The piece status will update to 'Claim delayed' and remain in the **Expected** accordion on the receiving record.
 Note: When the delay date has passed, the piece status reverts to 'Late' or 'Expected' depending on the expected receipt date and the claiming interval for the receiving title. If the status of the piece has already been changed to 'Received' or 'Unreceivable', the status will not update after the delad date has passed.
 
-
 ## Viewing a piece's status log
 The status of a piece can update when any of the following actions occur:
 *  The piece is created.
@@ -783,4 +846,5 @@ These status changes are tracked and can be reviewed in the piece record's statu
 *  **Date.** The date the status change occurred.
 *  **Interval.** This column only holds data for **Send claim** and **Delay claim** updates.
 *  **Updated by.** The name of the user who made the update.
+
 

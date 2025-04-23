@@ -6,14 +6,16 @@ weight: 125
 tags: ["subtopic"]   
 ---
 
-The GOBI integration section of the Settings app defines your configuration for an integration with the provider GOBI Library Solutions. This integration supports the creation of FOLIO orders initiated from the GOBI order form.
+The GOBI integration section of the Settings app defines your configuration for an integration with the provider GOBI Library Solutions. This integration supports the creation of FOLIO orders initiated from the GOBI order form. This integration applies only to firm orders for monographs.
 
 
 ## Permissions
 
 In order to interact with GOBI integration settings, a user needs to be assigned the following permission:
 
-*   **GOBI Integration: view and edit settings.**  This permission allows you to view and edit GOBI integration settings. 
+*   **Settings (GOBI integration): Can view and edit settings.**  This permission allows you to view and edit GOBI integration settings.
+*   **Settings (GOBI integration): Can view only.** This permission allows you to view GOBI integration settings.
+
 
 
 ## Implementation considerations
@@ -36,7 +38,9 @@ To view the mapping configuration files, open Settings > GOBI integration > Inte
 *   **Unlisted Print Monograph**
 *   **Unlisted Print Serial**
 
-Mappings for "Listed" formats indicate that a tile is available within the GOBI system for ordering. The mappings for "Unlisted" formats are invoked if a library submits an order for a title that does not appear in GOBI using the **Add Unlisted** option in the GOBI Order Cart.
+Mappings for "Listed" formats indicate that a title is available within the GOBI system for ordering. The mappings for "Unlisted" formats are invoked if a library submits an order for a title that does not appear in GOBI using the **Add Unlisted** option in the GOBI Order Cart.
+
+**Please note:** Configuration files for serials will be removed in a future release since the API integration does not support serials ordering.
 
 ## Viewing configuration files
 

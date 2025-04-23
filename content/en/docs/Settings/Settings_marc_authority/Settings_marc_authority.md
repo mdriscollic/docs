@@ -2,7 +2,7 @@
 title: "Settings > MARC authority"
 linkTitle: "MARC authority"
 date: 2024-04-22
-weight: 130
+weight: 170
 tags: ["subtopic"]   
 ---
 

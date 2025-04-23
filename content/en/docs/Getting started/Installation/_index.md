@@ -2,7 +2,7 @@
 ---
 title: "Install FOLIO"
 linkTitle: "Install FOLIO"
-date: 2022-05-10
+date: 2025-01-06
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -21,13 +21,11 @@ If you just want to try FOLIO without installing it, you can run one of the pre-
 
 See [Vagrant boxes]({{< ref "vagrantboxes.md" >}}) for more information.
 
-### Single-server
+### Single-server deployment
 
-You can choose to host and operate FOLIO locally. In this scenario, the installation of FOLIO is self-managed, and is performed on a single-server without the usage of software orchestration solutions such as Kubernetes. This configuration is recommended if you have a single tenant or you can estimate beforehand the number of tenants and resources that your FOLIO instance will handle; otherwise you should consider a Kubernetes deployment.
+Currently we don't have complete installation instructions for a single-server deployment in the Ramsons release.
 
-One of the goals of FOLIO is extensibility. Libraries and vendors can build on existing apps, or develop new apps that extend the library into areas such as campus ERP, research administration, and more. In addition to the coding and testing tools, a developer will probably want to explore the whole FOLIO system, and would need a local instance. Usually, this is a virtual machine with a single-server deployment of FOLIO.
-
-See [Single server with containers]({{< ref "singleserverwithcontainers.md" >}}) for more information.
+Work in progress is [Eureka Single Server Fresh Install](https://folio-org.atlassian.net/wiki/spaces/FOLIJET/pages/441843733/Single+Server+Fresh+Install) and [eureka-platform-bootstrap](https://github.com/folio-org/eureka-platform-bootstrap).
 
 ### Kubernetes
 
@@ -53,7 +51,7 @@ Optional is
 
 #### PostgreSQL
 
-FOLIO requires PostgreSQL 12 or any later version.
+FOLIO requires PostgreSQL 16 or any later version.
 
 `pg_hba.conf` must be configured for `md5` [password authentication](https://www.postgresql.org/docs/current/auth-password.html). Some PostgreSQL distributions default to `scram-sha-256` password authentication failing the FOLIO installation with this error message:
 

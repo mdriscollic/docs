@@ -416,7 +416,7 @@ This accordion will appear on Organization records where the **Vendor** checkbox
 2. Enter the **Bank name.**
 3. Enter the **Bank account number.**
 4. Enter the **Transit number.**
-5. Select an **Address category** from the dropdown menu. The address category is derived from the addresses added in the [Contact information](#contact-information) accordion. The category you select here will determine which address is associated with the bankin information.
+5. Select an **Address category** from the dropdown menu. The address category is derived from the addresses added in the [Contact information](#contact-information) accordion. The category you select here will determine which address is associated with the banking information.
 6. Select an **Account type** from the dropdown menu. Account types are configured in [Settings > Organizations > Account types](../../settings/settings_organizations/settings_organizations/#settings--organizations--account-types).
 7. Add notes, if desired.
 

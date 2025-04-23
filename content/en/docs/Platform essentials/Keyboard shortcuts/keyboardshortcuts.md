@@ -28,14 +28,16 @@ The action associated with the shortcut may vary slightly for different apps -- 
 | Paste                            | Ctrl+v        |
 | Find                             | Ctrl+f        |
  
-### The following keyboard shortcuts are only available in one app:
+### Keyboard shortcuts that are only available in one or two app:
 
-| Action                       | Shortcut keys | App used in |
-|:-----------------------------|:--------------|:------------|
-| Add POL                      | Alt+a         | Orders      |
-| Receive pieces/Quick receive | Ctrl+Alt+r    | Receiving   |
-
-
+|      Action                                                      |      Shortcut keys     |      App used in     |
+|------------------------------------------------------------------|------------------------|----------------------|
+|     Add POL                                                      |     Alt+a              |     Orders           |
+|     Receive pieces/Quick receive                                 |     Ctrl+Alt+r         |     Receiving        |
+|     Save a piece and create another                              |     Alt+s              |     Receiving        |
+|     Edit MARC record                                             |     Ctrl+Shift+e       |     Inventory        |
+|     quickMARC only: Move to the next subfield in a text box      |     Ctrl+\]            |     Inventory, MARC authority        |
+|     quickMARC only: Move to the previous subfield in a text box  |     Ctrl+\[            |     Inventory, MARC authority        |
 ## Viewing the keyboard shortcuts list 
 
 To view the list of available shortcut keys, follow these steps:
@@ -46,13 +48,14 @@ Click on the downward-facing caret, “v”, at the end of the app name.
  
 Click **Keyboard shortcuts** to view the list of shortcut actions.
 
-Alternatively, use the keyboard shortcut Ctrl+Alt+k after opening the app (this works in all [listed apps](#list-of-apps-displaying-the-shortcut-list) except for **eUsage**).
+Alternatively, use the keyboard shortcut Ctrl+Alt+k after opening the app.
 
 ## List of apps displaying the shortcut list
 
 The following apps display the list of keyboard shortcuts which can be viewed by following the steps described above.  
 
 *   Agreements
+*   Claiming
 *   Courses
 *   Dashboard
 *   eHoldings
@@ -62,8 +65,10 @@ The following apps display the list of keyboard shortcuts which can be viewed by
 *   Inventory
 *   Invoices
 *   Licenses
+*   Lists
 *   Local KB admin
 *   MARC Authority
+*   Open access
 *   Orders
 *   Organizations
 *   Receiving

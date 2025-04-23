@@ -15,13 +15,12 @@ Check out these videos to learn about FOLIO:
 
 ## Ready to experience FOLIO for yourself?
 
-Access one of our demo sites and explore FOLIO features and functionality.
+Access our demo site and explore FOLIO features and functionality.
 
 Login: diku\_admin / admin
 
-* Current release: https://folio-orchid.dev.folio.org
-* Previous release: https://folio-nolana.dev.folio.org
-
+* Current demo site: https://folio-orchid.dev.folio.org
+  
 ### Work with a demo site
 
 Once you've accessed a demo site, you can experiment with the platform to see how it works. Some examples of things you can try include:

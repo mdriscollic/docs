@@ -5,6 +5,7 @@ date: 2023-11-07
 weight: 70
 tags: ["subtopic"]   
 ---
+**This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
 The Data Import section of the Settings app is where you can configure the source and structure of the import files, map incoming records to existing records, configure the types of action to be taken on an import (e.g., creating new records, updating existing records, etc.), and define ways to transform the data and map data to particular fields (e.g., add a value such as a proxy to the information in the incoming record, or eliminate data such as selected MARC tags from the incoming data).
 
@@ -83,7 +84,11 @@ To view the details of a job profile, follow these steps:
 
 ### Exporting an import job profile
 
-Exporting an import job profile is not implemented at this time.
+Exporting an import job profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
+
+### Importing an import job profile
+
+Importing an import job profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
 
 ## Settings \> Data import \> Match profiles
 
@@ -142,7 +147,11 @@ To view the details of a match profile, follow these steps:
 
 ### Exporting an import match profile
 
-Exporting an import match profile is not implemented at this time.
+Exporting an import match profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
+
+### Importing an import match profile
+
+Importing an import match profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
 
 ## Settings \> Data import \> Actions profiles
 
@@ -211,7 +220,11 @@ To view the details of a match profile, follow these steps:
 
 ### Exporting an import action profile
 
-Exporting an import action profile is not implemented at this time.
+Exporting an import action profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
+
+### Importing an import action profile
+
+Importing an import action profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
 
 ### Adding a tag to an import action profile
 
@@ -319,7 +332,11 @@ To view the details of a field mapping profile, follow these steps:
 
 ### Exporting an import field mapping profile
 
-Exporting an import action profile is not implemented at this time.
+Exporting an import field mapping profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
+
+### Importing an import field mapping profile
+
+Importing an import field mapping profile is done via API [following these steps](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/564625461/Export+Import+Data+Import+Job+Profiles+via+API).
 
 ### Adding a tag to an import field mapping profile
 

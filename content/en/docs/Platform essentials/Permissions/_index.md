@@ -69,8 +69,8 @@ A list of permissions will be populated in the window pane on the right. Each pe
 
 Common permissions workflows include:
 
-* [Assigning Permissions and Permissions Sets to a User Record]({{< ref "/users.md#assigning-permissions-to-a-user-record" >}})
-* [Creating Your Own Permission Sets]({{< ref "/Settings_users.md#settings--users--permission-sets" >}})
+* [Assigning Permissions and Permissions Sets to a User Record]({{< ref "users.md#assigning-permissions-to-a-user-record" >}})
+* [Creating Your Own Permission Sets]({{< ref "Settings_users.md#settings--users--permission-sets" >}})
 
 ## Visible versus Invisible permissions
 

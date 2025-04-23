@@ -1,10 +1,12 @@
 ---
 title: "MARC authority"
 linkTitle: "MARCauthority"
-date: 2024-04-19
-weight: 30
+date: 2024-12-05
+weight: 40
 tags: ["parenttopic"]
 ---
+
+**This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
 The MARC authority app allows the management of MARC authority records within FOLIO.
 
@@ -18,13 +20,14 @@ Definition of terms related to the MARC authority app:
 
 ## Permissions
 
-The permissions listed below allow you to interact with the Inventory app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app.
+The permissions listed below allow you to interact with the MARC Authority app and authority-specific functions in quickMARC. You can assign permissions to users in the Users app.
 
 -   **MARC Authority: View MARC authority record.** This permission allows the user to view authority records.
 -   **MARC Authority: Edit MARC authority record.** This permission allows the user to edit authority records.
 -   **MARC Authority: Delete MARC authority record.** This permission allows the user to delete authority records.
 -   **MARC Authority: Create new MARC authority record.** This permission allows the user to create authority records.
 -   **quickMARC: View, edit MARC authority record.** This permission allows the user to view and edit MARC authority records.
+-   **quickMARC: Create a new MARC authority record** This permissions allows the user to create a new MARC authority record in quickMARC.
 
 ## Keyboard shortcuts
 
@@ -40,7 +43,7 @@ The full MARC record opens in the third pane once you search for and select an a
 
 MARC authority records can be created via [Data import](../../data-import/). To create one or more authority records via Data Import, see instructions on [starting a data import job](../../data-import/#starting-a-data-import-job).
 
-### Creating new MARC authority records in the MARC Authority app
+### Creating new MARC authority records in the MARC Authority app (via quickMARC)
 
 To create a new authority record in the MARC authority app, follow these steps:
 
@@ -64,8 +67,8 @@ In the Edit MARC authority record window, you can perform the following actions:
 -   **Delete a field.** To delete a field, click the **trash can icon**. The field is deleted.
 -   **Move a field up.** To move a field up, click the **up arrow** in the row of the field you want to move. The field is moved one row up.
 -   **Move a field down.** To move a field down, click the **down arrow** in the row of the field you want to move. The field is moved one row down.
--   **Edit text within a field.** Click into a field to make changes to the text. To add a literal dollar sign (\$) in a field, enter {dollar}.
--   Once you have made your desired changes, click **Save & close**. A confirmation record appears, and the record is updated.
+-   **Edit text within a field.** Click into a field to make changes to the text. To add a literal dollar sign (\$) (i.e., not a subfield delimiter) in a field, enter {dollar}.
+-   Once you have made your desired changes, click **Save & close**. A confirmation message appears, and the record is updated.
 
 ### Validations and restrictions
  
@@ -73,18 +76,22 @@ A subfield is defined by a \$ (dollar sign).
 Tags must consist of 3 numeric characters.  
 Indicators must consist of single characters.
 
-The following validation rules and restrictions apply:
+The following additional validation rules and restrictions apply:
 
+-   The leader (LDR) field can be edited via dropdown menus under each position. Only Record status (Status, corresponds with position 05), Type of record (Type, position 06), Encoding Level (Elvl, position 17), and Punctuation policy (Punct, position 18) can be edited. Type of record (position 06) must contain a value of "z".
 -   Fields 001 and 999ff are system supplied and cannot be edited or deleted.
+-   Field 001 is non-repeatable.
+-   Field 010 is non-repeatable and can only contain one \$a.
 -   1xx is required and non-repeatable.
--   The leader (LDR) field can be edited via dropdown menus under each position. Only Record status (Status, corresponds with position 05), Type of record (Type, position 06), Encoding Level (Elvl, position 17), and Punctuation policy (Punct, position 18) can be edited.
--   No other validation is performed.
+-   By default, no other validation is performed. Additional validation rules can be configured at the tenant level via the mod-record-specifications API (see the [developer documentation](https://dev.folio.org/source-code/map/#mod-record-specifications)).
+
+Note that validation rules are only applied when creating or editing an authority record in quickMARC, not when records are imported via the Data import app.
 
 ## Deleting MARC authority records
 
 To delete a MARC authority record, follow these steps:
 
-1. Click **Actions \> Delete**
+1. With the authority record open in the third pane of the MARC authority app, click **Actions \> Delete**
 2. In the **Confirm deletion of authority record** dialog, click **Delete**. The authority record is deleted.
 
 ## Searching for authority records
@@ -114,8 +121,8 @@ To use Advanced Search, follow these steps:
 3.  On the same row, click the **Contains all** drop-down list and select an option from the list below:
 - **Exact phrase.** Results include records that contain only an exact match to the search term.
 - **Contains all.** Results include records that contain the entire search term, but individual words can appear in any order.
-- **Starts with.** Results include records that include a field that starts with the search term.
-- **Contains any.** Results include records that include any of the words included in the search term.
+- **Starts with.** Results include records that contain a field that starts with the search term.
+- **Contains any.** Results include records that contain any of the words included in the search term.
 4.  On the same row, click the **Keyword** drop-down list and select a field. See [searching for authority records](#searching-for-authority-records) for a list of fields.
 5.  To enter search terms into additional rows, you must select an operator from the **AND** drop-down list.
 6.  Click the **AND** drop-down list and select an operator from the list below:
@@ -126,6 +133,15 @@ To use Advanced Search, follow these steps:
 8.  Click **Search**.
 
 After performing a search, you can limit results by selecting any of the filters in the **Search & filter** pane.
+
+The following filters can be applied to search results:
+
+-   **Authority source.** The authority source is the name of the authority file. Authority sources can be added, edited, or marked as inactive (See [Settings > MARC Authority](../../../settings/settings_marc_authority/settings_marc_authority/#settings--marc-authority--manage-authority-files)).
+-   **References.** "See from" and "See from also" references can be excluded from the search results.
+-   **Thesaurus.** The thesaurus for authority records is assigned according to the 008 field Subject heading system/thesaurus (position 11).
+-   **Type of heading.** The type of heading is assigned according to the 1XX field. Options are personal name, corporate name, conference name, topical, geographic name, genre, uniform title, and other.
+-   **Date created.** The date the record was created, entered as a range.
+-   **Date updated.** The date the record was most recently updated, entered as a range.
 
 When using filters, keep the following in mind:
 
@@ -144,11 +160,11 @@ You can browse for MARC authority records in the **Search & filter** pane. Enter
 -   **Subject.** 
 -   **Genre.** 
 
-Some filters can also be applied to Browse results:
+The following filters can be applied to browse results:
 
--   **Authority source.**
--   **References.**
--   **Type of heading.**
+-   **Authority source.** The authority source is the name of the authority file. Authority sources can be added, edited, or marked as inactive (see [Settings > MARC Authority](../../../settings/settings_marc_authority/settings_marc_authority/#settings--marc-authority--manage-authority-files)).
+-   **References.** "See from" references can be excluded from the browse results.
+-   **Type of heading.** The type of heading is assigned according to the authority record's 1XX field. Options are personal name, corporate name, conference name, topical, geographic name, genre, uniform title, and other.
 
 When using filters, keep the following in mind:
 
@@ -158,10 +174,8 @@ When using filters, keep the following in mind:
 
 ## Exporting MARC authority records
 
-MARC authority records can be exported in the same way that instance records are exported as MARC (See [Exporting instances (MARC)](../../data-export/#exporting-instances-marc).
-
 1.  Open the **MARC authority** app. 
-2.  In the **MARC authority** pane, find the records you want to export, and for each record, select the **checkbox** in the first column. Note that associated references in the results list will also be checked; the message at the top of the pane will display the accurate number of records selected.
+2.  In the **Search & filter** pane, search for the records you want to export. In the **MARC authority** pane, for each record you wish to export, select the **checkbox** in the first column. Note that associated references in the results list can also be checked; the message at the top of the pane will display the accurate number of records selected.
 3.  Click **Actions \> Export selected records (CSV/MARC)**. Depending on your browser and its configurations, the file automatically downloads or you are prompted to save it. The export is logged in the Data export app.
 
 To view the exported records, follow the instructions in [Retrieving data export results](../../data-export/#retrieving-data-export-results)

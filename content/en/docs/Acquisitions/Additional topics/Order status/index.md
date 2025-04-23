@@ -1,7 +1,8 @@
 ---
 title: "Order status"
 linkTitle: "Order status"
-weight: 15
+date: 2024-12-04
+weight: 20
 tags: ["subtopic"]
 ---
 
@@ -45,9 +46,9 @@ A library may need to edit fields on an order record with an 'Open' status. This
 | Receipt date  |  Receipt date  | Receipt date   |
 | Receipt status  | Receipt status    |   Receipt status  |
 | Payment status  | Payment status    |  Payment status   |
-| Claiming active  |  Payment status   |  Payment status   |
+| Claiming active  |  Claiming active   |  Claiming active   |
 | Claiming interval  |  Claiming interval   |  Claiming interval   |
-| Cancellation restriction  | Claiming interval    |  Claiming interval   |
+| Cancellation restriction  | Cancellation restriction   |  Cancellation restriction   |
 | Cancellation description  | Cancellation description   |  Cancellation description  |
 | Line description  |  Line description  |  Line description  |
 | Tags  |  Tags  |  Tags  |

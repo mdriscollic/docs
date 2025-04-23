@@ -422,7 +422,7 @@ Use the Agreements section to create agreements or link the package to agreement
 
 1. [Find the package](#searching-for-providers-packages-and-titles) from which you want to remove an agreement and select it.
 2. In the **Package record** window, in the **Agreements** section, click the **trash can icon** next to the agreement you want to remove.
-3. In the **Unassign an agreement from this record** dialog, click **Unassign**. A confirmation message appears and the agreement line is removed from the package record, but not deleted from the Agreements app.
+3. In the **Delete agreement line** dialog, click **Delete**. The agreement line is removed from the package record, but not deleted from the Agreements app.
 
 
 ##### Usage & analysis
@@ -807,7 +807,7 @@ Note: Agreements can only be added to title records when a package is selected a
 
 1. Repeat steps 1-2 from [Linking an existing agreement](#linking-an-existing-agreement-to-a-title-record).
 2. In the **Package title details** window, in the **Agreements** section, click the **trash can icon** next to the agreement you want to remove.
-3. In the **Unassign an agreement from this record** dialog, click **Unassign**. A confirmation message appears and the agreement is removed from the package record, but not deleted from the Agreements app.
+3. In the **Delete agreement line** dialog, click **Delete**. The agreement is removed from the package record, but not deleted from the Agreements app.
 
 
 ## Usage & analysis

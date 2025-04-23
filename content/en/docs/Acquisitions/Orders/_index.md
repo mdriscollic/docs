@@ -1,7 +1,7 @@
 ---
 title: "Orders"
 linkTitle: "Orders"
-date: 2024-04-21
+date: 2025-02-06
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -159,7 +159,7 @@ You can search for orders in the **Search & filter** pane. Click **Orders** to s
 *   **PO number.** The purchase order number.
 
 
-You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information on the filters. Note: Users may see additional filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
+You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information on the filters. Note: Users may see additional search options and filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 
 ### Status
@@ -496,6 +496,8 @@ To export all fields from the purchase order line, leave the **POL fields to exp
 *   Created on (PO line)
 *   Updated by (PO line)
 *   Updated on (PO line)
+
+Note: Users may see additional fields for export if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 5.  Once the export fields have been chosen, click **Export** button at the bottom of the dialog.  A .csv file will be downloaded locally with the name “order-export-YYYY-MM-DD-HH_MM” containing one row for each purchase order filtered in the search pane selection list.  If the user has chosen to export POL fields and an order contains multiple purchase order lines then the file will contain a row for each purchase order line.
 
@@ -904,7 +906,7 @@ Note: multiple product IDs may be added to a purchase order line.
 2. Click the **trash can icon**. The product ID is removed and is deleted once the order line is saved.
 
 
-### PO line details
+### Purchase order line details
 
 
 
@@ -912,14 +914,17 @@ Note: multiple product IDs may be added to a purchase order line.
 *   **Acquisition method.** Select the method you are using to purchase the item. Acquisition methods are configured in [Settings > Orders > Acquisition methods] (../settings/settings_orders/settings_orders/#settings--orders--general--acquisition-methods)
 *   **Automatic export.** Select this checkbox to include the order in automated EDI order export which is triggered when an order is opened if EDI is set up for the associated vendor. The account number selected in the [Vendor](#vendor) section of the order will determine which EDI configuration is applied for the export.  Leave the checkbox blank to prevent automatic export of the purchase order line when opened.  See [Organizations > Adding integration details to a vendor organization](../organizations/#adding-integration-details-to-a-vendor-organization) for more information about vendor organization integrations. Note: if the POL is associated with an account number and acquisition method that matches the integration details on the vendor record, this box may be checked by default.
 *   **Order format.** Select the format of the item you are ordering: Electronic resource, Physical resource, P/E mix, or Other. The Order format determines which fields are required in the [Cost details](#cost-details) section and whether the [Physical resource details](#physical-resource-details) or [E-resources details](#e-resources-details) sections are displayed.
+*   **Created on.** This value will be entered by the system upon saving the purchase order line and will include the date and time of creation.
 *   **Receipt date.** The receipt date of the item. This field will autofill with the date the purchase order line is fully received, but may also be updated manually.
 *   **Receipt status.** Select the receipt status of the item: Pending or Receipt not required.  For orders with type **Ongoing**, the receipt status is automatically set to **Ongoing** when the order is saved. If no selection is made, the order is created with a receipt status of **Pending**. Upon opening the order, the receipt status is automatically set to **Awaiting receipt**. Once an order is open, you can edit the Receipt status to **Cancelled**, **Fully received**, **Partially received**, or **Receipt not required**. The system will automatically close orders that have resolved both payment and receipt statuses either as “Payment not required” or “Receipt not required” or by reaching “Fully paid” and “Fully received” through actions taken in the Receiving app and the Invoices app.  It is advisable to consider your library’s needs when defining how to set this field.  For example, you may want to select “Receipt not required” for one-time e-resource orders so that the order will automatically close once invoice payment is complete. Otherwise, if your library doesn’t receive e-resources, a one-time e-resource order may be left open even after payment is complete which could impact your expected results during Fiscal Year rollover.
-*   **Payment status.** Select the payment status of the item: Payment not required or Pending. For orders with type **Ongoing**, the payment status is automatically set to **Ongoing** when the order is saved.  If no selection is made, the order is created with a payment status of **Pending**.  Upon opening the order, the payment status is automatically set to **Awaiting payment.**  Once an order is open, you can edit the **Payment status** to **Cancelled**, **Partially paid**, **Fully paid**, or **Payment not required**. The Payment status is automatically set to **Partially paid** when a connected invoice line with the **Release encumbrance** checkbox unchecked/blank is set to an **Approved** status. The system will automatically close orders that have resolved both payment and receipt statuses either as Payment not required” or “Receipt not required” or by reaching “Fully paid” and “Fully received” through actions taken in the Receiving app and the Invoices app.   
+*   **Payment status.** Select the payment status of the item: Payment not required or Pending. For orders with type **Ongoing**, the payment status is automatically set to **Ongoing** when the order is saved.  If no selection is made, the order is created with a payment status of **Pending**.  Upon opening the order, the payment status is automatically set to **Awaiting payment.**  Once an order is open, you can edit the **Payment status** to **Cancelled**, **Partially paid**, **Fully paid**, or **Payment not required**. The Payment status is automatically set to **Partially paid** when a connected invoice line with the **Release encumbrance** checkbox unchecked/blank is set to an **Approved** status. The system will automatically close orders that have resolved both payment and receipt statuses either as Payment not required” or “Receipt not required” or by reaching “Fully paid” and “Fully received” through actions taken in the Receiving app and the Invoices app.
+*   **Source.** The entity responsible for creating the purchase order line. For manually created purchase order lines, this value will be 'User'. Other sources include API, EDI, and MARC.
 *   **Donor.** The donor of the item. Note: As of the Quesnelia release, this field has been disabled and will be deprecated in 2025. Please create donor records from the Organizations app. Use the [Donor information](#donor-information) accordion below to add donors to the POL.
 *   **Selector.** The person who chose the item.
 *   **Requester.** The person who requested the item.
 *   **Claiming active.** If this item is eligible for claiming with the vendor, check this box. This will activate the **Claiming interval** field.
 *   **Claiming interval.** This field will be autofilled if the corresponding field is configured on the associated vendor record, but may be overridden on the individual purchase order line. Enter the desired interval in days.
+*   **Bindery active.** This box is only activated if the **Order format** is 'Physical resource' or 'P/E mix'. If this item will be subject to binding its pieces, check this box. Checking this box will force a **Receiving workflow** of 'Independent order and receipt quantity'. This allows bound items to be created without impacting cost and encumbrance values.
 *   **Cancellation restriction.** If there is a cancellation restriction on the item, select the **Cancellation restriction** checkbox.
 *   **Rush.** If the item needs rush processing, select the **Rush** checkbox. This indicator will appear in the Receiving app.
 *   **Collection.** If the item is part of a collection, select the **Collection** checkbox.
@@ -929,7 +934,7 @@ Note: multiple product IDs may be added to a purchase order line.
 *   **Tags.** Select or enter any tags you want to assign to the order line in the box.
 
 
-## Donor information
+### Donor information
 The Donor information accordion can be used to capture information about a donor related to the order line. The donor information will be autofilled on the oder if the fund selected in the [Fund distribution](#fund-distribution) accordion is associated with a donor. 
 
 To add a donor manually:
@@ -1090,7 +1095,17 @@ The package titles section of the purchase order line display appears only if th
 
 3. In the **Select instance** dialog, use the Search & Filter pane to find the package title.  Find the title using the search box and/or the filters.  Click the title to select it.  The title appears in the Package titles table list.
 
+## Routing lists
+This section appears only on purchase order lines with an order format of 'Physical resource' or 'P/E mix'. Routing in FOLIO allows libraries to divert received materials away from the normal receiving process and workflow, to direct the materials to alternate locations for pre-circulation distribution or other special handling. Routing lists are configured in [Settings > Orders > Routing](../../settings/settings_orders/settings_orders/#settings--orders--routing--list-configuration). One routing lists may be configured per physical piece on a purchase order line.
 
+1. [Find the order line to which you want to add package titles](#searching-for-order-lines) and select it.
+2. In the **Routing lists** section, click **Add routing list**.
+3. Enter a **Name** for the routing list.
+4. Optional: Add any **Notes** to the routing list.
+5. Click **Add users** to launch a search modal for the Users app.
+6. Select the user(s) to assign to the routing list and click **Save**.
+7. Use the six dots icon in the left column of the **Users** table to establish the order in which the material should be routed.
+8. Click **Save & close**.
 
 ## Adding a note to an order line
 
@@ -1141,7 +1156,7 @@ You can search for order lines in the **Search & filter** pane. Order lines is s
 *   **Product ID.** The Product ID of the item.
 *   **Product ID ISBN.** The ISBN of the item.
 
-You can also search for order lines by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information. Note: additional filter options may be visible to users if custom fileds have been configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
+You can also search for order lines by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information. Note: Users may see additional search options and filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 
 ### Receipt status
@@ -1576,6 +1591,12 @@ This section displays information if the order includes a POL with an order form
 This section displays information if the order includes a POL with an order format of **Physical**, **P/E mix,** or **Other.** See [Adding an order line to an order > Physical resource details](#physical-resource-details) for more information on the fields displayed in this section of the purchase order line.
 
 
+## Routing lists
+This section displays routing lists for the order.  See [Routing lists](#routing-lists) for more information about adding routing lists.
+
+*   **Name.**  The unique name of the routing list.
+*   **Notes.**  Optional notes added to the routing list.
+*   **Users.** A comma-delimited list of users to whom the material will be routed.
 
 ### Notes
 

@@ -1,16 +1,16 @@
 ---
 title: "quickMARC"
 linkTitle: "QuickMARC"
-date: 2024-04-19
-weight: 30
+date: 2024-12-05
+weight: 50
 tags: ["parenttopic"]   
 ---
 
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
-quickMARC is FOLIO's MARC editing tool, which allows you to make edits to instance and holdings records with underlying MARC records. For all instances or holdings whose source record is a MARC record you have the option to edit the MARC using quickMARC. quickMARC saves to Source Record Storage (SRS) and updates both the Source Record and the corresponding Inventory record. quickMARC has minimal validation and is best used in addition to other cataloging tools.
+quickMARC is FOLIO's MARC editing tool, which allows you to make edits to instance, holdings, and authority records with underlying MARC records. For all instances or holdings whose source record is a MARC record you have the option to edit the MARC using quickMARC. quickMARC saves to Source Record Storage (SRS) and updates both the Source Record and the corresponding Inventory record. quickMARC has minimal validation by default and is best used in addition to other cataloging tools.
 
-Note: quickMARC is a module that you can access through the Inventory app; it is not its own app. For more information, see Accessing quickMARC.
+Note: quickMARC is a module that you can access through the Inventory and MARC Authority apps; it is not its own app. For more information, see [Accessing quickMARC](#accessing-quickmarc).
 
 Definition of terms related to quickMARC:
 
@@ -32,10 +32,12 @@ The following are all the quickMARC permissions:
 -   **quickMARC: View MARC holdings  record.** This permission allows the user to view MARC holdings records in the Inventory app.
 -   **quickMARC: View, edit MARC bibliographic record.** This permission allows the user to view and edit MARC bibliographic records.
 -   **quickMARC: View, edit MARC holdings record.** This permission allows the user to view and edit MARC holdings records.
+-   **quickMARC: View, edit MARC authority record.** This permission allows the user to view and edit MARC authority records.
+-   **quickMARC: Create a new MARC authority record** This permissions allows the user to create a new MARC authority record in quickMARC.
 
 ## Accessing quickMARC
 
-quickMARC is a module that is contained within the Inventory app. In order for an instance or holdings record to be viewed and edited in quickMARC, its source must be MARC. 
+quickMARC is a module that is contained within the Inventory app. In order for an instance or holdings record to be viewed and edited in quickMARC, its source must be MARC. quickMARC can also be accessed via the MARC Authority app when creating or editing authority records. Instructions for creating or editing authority records are contained in the [MARC Authority documentation](../marcauthority).
 
 Note: If an instance record was created manually in the Inventory app, then it doesn't have an underlying MARC record and cannot be used with quickMARC.
 
@@ -53,7 +55,7 @@ To edit a MARC record, click on the appropriate Edit option, located in the Acti
 To edit a bibliographic record:
 1.  Open the **Inventory app**.
 2.  Find the record you want to view or edit, and select it.
-3.  In the **Instance record details** pane, click **Actions \> Edit MARC bibliographic record**.
+3.  In the **Instance record details** pane, click **Actions \> Edit MARC bibliographic record**. Alternatively, click **Actions \> View source** and then **Actions \> Edit MARC bibliographic record**.
 
 To edit a holdings record:
 1.  Open the **Inventory app**.
@@ -83,7 +85,7 @@ To link a field to an authority record:
 
 The access point in the bibliographic record will exactly match the authorized access point in the authority record and the $0 will be populated.
 The link icon to the right of the field is replaced with **Unlink from MARC Authority record** and **View MARC authority record** icons.
-When a field is linked, all subfields that are part of the access point, as well as the $0 (identifier) cannot be edited.
+When a field is linked, the $a and $0 cannot be edited.
 
 To unlink a field from an authority record:
 1.  Click on the **Unlink from MARC Authority record** icon to the right of the selected field.
@@ -100,7 +102,7 @@ To link all access points in a bibliographic record to authority records:
 
 The access points in the bibliographic record will exactly match the authorized access points in the authority record.
 The link icon to the right of the field is replaced with **Unlink from MARC Authority record** and **View MARC authority record** icons.
-When a field is linked, all subfields that are part of the access point, as well as the $0 (identifier) cannot be edited.
+When a field is linked, the $a and $0 cannot be edited.
 
 Fields must be unlinked individually from an authority record:
 1.  Click on the **Unlink from MARC Authority record** icon to the right of the selected field.
@@ -119,6 +121,8 @@ The following validation rules and restrictions apply when working with bibliogr
 -   Fields 005 and 999ff are system supplied and cannot be edited or deleted.
 -   The leader (LDR) can be edited using the dropdown menus under each position. Only Record status (Status, corresponds with position 05), Type of record (Type, position 06), Bibliographic level (BLvl, position 07), Type of control (Ctrl, position 08), Encoding level (ELvl, position 17), Descriptive cataloging form (Desc, position 18), and/or Multipart resource record level (MultlLvl, position 19) in the LDR can be edited. Invalid values in the LDR will result in an error message.
 -   008 may be required based on the values entered in LDR Type and BLvl. The 008 field appears after LDR Type and BLvl are entered, and required positions' dropdown menus are highlighted in red. 008 can be edited using the dropdown menus under each position.
+-   010 is non-repeatable.
+-   1XX is non-repeatable.
 -   245 is required and non-repeatable.
 
 The following validation rules and restrictions apply to working with MARC holdings records in quickMARC:
@@ -130,7 +134,11 @@ The following validation rules and restrictions apply to working with MARC holdi
 -   004 must be a valid HRID for an instance record with source = MARC.
 -   008 is required and can be edited using the dropdown menus under each position.
 -   010  subfields must contain more than 3 characters.
--   852 is required; value in /$b must match a valid location code.
+-   852 is required; value in /$b must match a valid location code and is non-repeatable.
+
+Additional validation rules can be configured at the tenant level via the mod-record-specifications API (see the [developer documentation](https://dev.folio.org/source-code/map/#mod-record-specifications)).
+
+Note that validation rules are only applied when creating or editing records in quickMARC, not when records are imported via the Data import app.
 
 ### Record status
 
@@ -142,9 +150,9 @@ There are three record statuses:
 -   **In progress.** A change has been made to the record that has not made it to the Inventory record and/or SRS yet.
 -   **Error.** Something is preventing an update from moving to the Inventory record or SRS.
 
-## Creating a new MARC record using quickMARC
+## Creating or deriving a new MARC record using quickMARC
 
-Information on how MARC bibliographic fields are mapped to inventory instances is available in the [FOLIO Wiki](https://wiki.folio.org/display/FOLIOtips/Default+MARC+Bibliographic-to-Inventory+Instance+Mappings). 
+Information on how MARC bibliographic fields are mapped to Inventory instances is available in the [FOLIO Wiki](https://wiki.folio.org/display/FOLIOtips/Default+MARC+Bibliographic-to-Inventory+Instance+Mappings). 
 
 To create a new **MARC bibliographic record** for an item without an instance or SRS record:
 1.  Click **Actions \> New MARC Bib Record.**
@@ -152,7 +160,7 @@ To create a new **MARC bibliographic record** for an item without an instance or
 3.  Edit the new record following the instructions in [Editing a MARC record using quickMARC](#editing-a-marc-record-using-quickmarc).
  
 To derive a new **MARC bibliographic record**:
-1.  Start with an instance record that has an underlying MARC source record and the same [Resource type](../inventory/#resource-type) and [Format](../#format) as the record you wish to create.
+1.  Start with an instance record that has an underlying MARC source record and the same [Resource type](../#resource-type) and [Format](../#format) as the record you wish to create.
 2.  Click **Actions \> Derive new MARC bibliographic record.**
 3.  Edit the new record following the instructions in [Editing a MARC record using quickMARC](#editing-a-marc-record-using-quickmarc).
 

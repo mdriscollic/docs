@@ -17,25 +17,27 @@ Each setting within Circulation has its own permission associated with it. If a 
 
 The following are all the Circulation Settings permissions:
 
-* **Settings (Circ): Can create, edit and remove cancellation reasons:** Allows the user to create, read, update, and delete request cancellation reasons.
-* **Settings (Circ): Can create, edit and remove circulation rules:** Allows the user to create, read, update, and delete circulation rules.
-* **Settings (Circ): Can create, edit and remove fixed due date schedules:** Allows the user to create, read, update, and delete fixed due date schedules.
-* **Settings (Circ): Can create, edit and remove loan policies:** Allows the user to create, read, update, and delete loan policies.
-* **Settings (Circ): Can create, edit and remove lost item fee policies:** Allows the user to create, read, update, and delete lost item fee policies.
-* **Settings (Circ): Can create, edit and remove notice policies:** Allows the user to create, read, update, and delete patron notice policies.
-* **Settings (Circ): Can create, edit and remove other settings:** Allows the user to read and update Settings > Circulation > Other settings.
-* **Settings (Circ): Can create, edit and remove overdue fine policies:** Allows the user to create, read, update, and delete overdue fine policies.
-* **Settings (Circ): Can create, edit and remove patron notice templates:** Allows the user to create, read, update, and delete patron notice templates.
-* **Settings (Circ): Can create, edit and remove request policies:** Allows the user to create, read, update, and delete request policies.
-* **Settings (Circ): Can create, edit and remove staff slips:** Allows the user to create, read, and update staff slips. Note: Users can erase the content of staff slips in the editor, but cannot delete the staff slip itself.
-* **Settings (Circ): Can edit loan history:** Allows the user to edit settings in Settings > Circulation > Loan anonymization.
-* **Settings (Circ): Can view loan history:** Allows the user to view settings in Settings > Circulation > Loan anonymization but does not allow editing.
-* **Settings (Circ): Can view loan policies:** Allows the user to view loan policies but does not allow create, edit or delete.
-* **Settings (Circ): Can view lost item fee policies:** Allows the user to view lost item fee policies but does not allow create, edit or delete.
-* **Settings (Circ): Can view overdue fine policies:** Allows the user to view overdue fine policies but does not allow create, edit or delete.
-* **Settings (Circ): View circulation rules:** Allows a user to view circulation rules but does not allow them to create, edit or delete rules.
-* **Settings (Circulation): Can view staff slips:** Allows the user to view staff slips but does not  allow editing of staff slips.
+* **Settings (Circulation): Can create, edit and remove cancellation reasons:** Allows the user to create, read, update, and delete request cancellation reasons.
+* **Settings (Circulation): Can create, edit and remove circulation rules:** Allows the user to create, read, update, and delete circulation rules.
+* **Settings (Circulation): Can create, edit and remove fixed due date schedules:** Allows the user to create, read, update, and delete fixed due date schedules.
+* **Settings (Circulation): Can create, edit and remove loan policies:** Allows the user to create, read, update, and delete loan policies.
+* **Settings (Circulation): Can create, edit and remove lost item fee policies:** Allows the user to create, read, update, and delete lost item fee policies.
+* **Settings (Circulation): Can create, edit and remove notice policies:** Allows the user to create, read, update, and delete patron notice policies.
+* **Settings (Circulation): Can create, edit and remove other settings:** Allows the user to read and update Settings > Circulation > Other settings.
+* **Settings (Circulation): Can create, edit and remove overdue fine policies:** Allows the user to create, read, update, and delete overdue fine policies.
+* **Settings (Circulation): Can create, edit and remove patron notice templates:** Allows the user to create, read, update, and delete patron notice templates.
+* **Settings (Circulation): Can create, edit and remove request policies:** Allows the user to create, read, update, and delete request policies.
+* **Settings (Circulation): Can create, edit and remove staff slips:** Allows the user to create, read, and update staff slips. Note: Users can erase the content of staff slips in the editor, but cannot delete the staff slip itself.
+* **Settings (Circulation): Can edit loan history:** Allows the user to edit settings in Settings > Circulation > Loan anonymization.
+* **Settings (Circulation): Can enable request print details:** Allows the user to edit settings in Settings > Circulation > Requests > View print details.
+* **Settings (Circulation): Can view all circulation settings:** Allows the user to view all the circulation settings but does not allow editing of circulation settings.
+* **Settings (Circulation): Can view loan history:** Allows the user to view settings in Settings > Circulation > Loan anonymization but does not allow editing.
+* **Settings (Circulation): Can view loan policies:** Allows the user to view loan policies but does not allow create, edit or delete.
+* **Settings (Circulation): Can view lost item fee policies:** Allows the user to view lost item fee policies but does not allow create, edit or delete.
+* **Settings (Circulation): Can view overdue fine policies:** Allows the user to view overdue fine policies but does not allow create, edit or delete.
+* **Settings (Circulation): Can view staff slips:** Allows the user to view staff slips but does not allow editing of staff slips.
 * **Settings (Circulation): Title level request edit:** Allows the user to enable, disable and configure title-level requesting. Note that title level requesting cannot be disabled via settings if there are any open title level requests.
+* **Settings (Circulation): View circulation rules:** Allows a user to view circulation rules but does not allow them to create, edit or delete rules.
 
 
 ## Settings > Circulation > Circulation rules
@@ -133,12 +135,29 @@ If your library could potentially encounter duplicate barcodes as described, you
 
 Staff slips allow you to configure the information that appears on your staff slips. You have the option of printing these slips when their associated action occurs:
 
-* **Hold.** This slip is available through the Check in app, when you check in an item with a request.
+* **Due date receipt.** This slip is available in the Check out app, when you go to Loan details, and in the Users app, when you go to Open loans or Loan details.
+* **Hold.** This slip is available in the Check in app, when you check in an item with a request.
 * **Pick slip.** This slip is available in the Requests app, when you generate the [pick slip report](../../../access/requests/requests/#printing-pick-slips).
 * **Request delivery.** This slip is available in the Check in app, when you check in an item with a delivery request.
 * **Search slip (Hold requests).** This slip is available in the Requests app, when you generate the [search slip report.](../../../access/requests/requests/#printing-hold-request-search-slips)
 * **Transit.** This slip is available in the Check in app, when you check in an item that is in transit to another location.
 
+### Using tokens with staff slips
+
+Staff slips have eight categories of tokens, listed in the table below. All of the categories appear as options in the staff slip editor, but some categories will only populate with information for some types of staff slips.
+
+| **Token Category**           | **Populates with these staff slips**                                                          | **Does not populate with these staff slips**                                 |
+|:------------------------------|:-----------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|
+|     Item                     |     Due date receipt, Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit |                                                                              |
+|     Effective location       |     Hold, Pick slip, Request delivery, Search slip (Hold requests),Transit                    |     Due date receipt                                                         |
+|     Staff slip               |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
+|     Borrower                 |     Due date receipt                                                                          |     Hold, Pick slip, Request delivery, Search slip (Hold requests),Transit   |
+|     Loan                     |     Due date receipt                                                                          |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit  |
+|     Request                  |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
+|     Request delivery address |     Request delivery, Pick slip, Search slip (Hold requests)                                                                          |     Due date receipt, Hold, Transit  |
+|     Requester                |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
+
+Note: *StaffSlip.staffUsername* only populates for Pick slip. *Request.barcodeImage* only populates for Pick slip and Search slip (Hold requests). The tokens *item.yearCaption* and *item.loanType* do not populate in Due date receipt.
 
 ### Configuring a staff slip
 
@@ -155,6 +174,8 @@ Staff slips allow you to configure the information that appears on your staff sl
 2. In the **staff slip details** pane, click **Preview**. A Preview of staff slip - [slip type] window appears and the preview is shown.
 3. Optional: To print the preview, click **Print**.
 4. To close the window, click **Close**.
+
+Note: The preview window ignores staff slip type. Non-populating tokens may show as populated. 
 
 
 ## Settings > Circulation > Fixed due date schedules
@@ -396,10 +417,10 @@ Overdue fine policies determine the fines that accrue when an item is checked ou
 #### Reminder fees
 
 1. **Create on closed days.** If you select **Yes**, Reminder fees will be created on days the library is closed. Select **No** to have Reminder fees created on the first open day after they would otherwise be created. See example in [Additional topics > Fees and fines](../../../access/additional-topics/feesfines/feesfines/#reminder-fee-examples-with-closed-days).
-2. **Ignore grace periods for recalls.** This setting can only be **No** for Quesnelia.
-3. **Ignore grace periods for holds.** This setting can only be **No** for Quesnelia.
+2. **Ignore grace periods for recalls.** This setting can only be **No** for Ramsons.
+3. **Ignore grace periods for holds.** This setting can only be **No** for Ramsons.
 4. **Allow renewal of items with reminder fee(s).** If you select Yes, items with reminder fees can be renewed. The reminder fee will not be removed when the item is renewed.
-5. **Clear patron block when paid.** This setting can only be **No** for Quesnelia.
+5. **Clear patron block when paid.** This setting can only be **No** for Ramsons.
 
 Click **Add reminder fee** to set up a reminder fee schedule:
 
@@ -452,7 +473,7 @@ Lost item fee policies determine when overdue items automatically age to lost (t
 9. Enter a **Lost item processing fee**. This is an additional charge that will be added to the charge amount for the item when billed to the patron.
 10. Select whether to **Charge lost item processing fee if item declared lost by patron**.
 11. Select whether to **Charge lost item processing fee if item aged to lost by system**.
-12. Enter an amount of time **For lost items not charged a fee/fine, close the loan after**. (This setting is required for Actual cost and does not apply to Set cost.)
+12. Enter an amount of time **For lost items not charged a fee/fine, close the loan after**. This setting is required for Actual cost; it does not apply to Set cost. During the specified time period after an open loan is updated to ‘Declared lost’ or ’Aged to lost,’ Library staff can bill for the item using the [Lost items requiring actual cost](../../../users/#lost-items-requiring-actual-cost) report in the Users app.  After the specified time period, the item can no longer be billed, the loan will close, and the item status will update to ‘Lost and paid.’
 13. Select whether **If lost item returned or renewed, remove lost item processing fee**.
 14. Select whether to charge overdue fines **If lost item returned or renewed**.
 15. Select whether **Replacement allowed**.
@@ -472,11 +493,16 @@ Lost item fee policies determine when overdue items automatically age to lost (t
 
 ### Editing a lost item fee policy
 
+ 
 1. In the **Lost item fee policies** pane, select the Lost item fee policy you want to edit.
 2. In the **lost item fee policy details** pane, click **Actions > Edit**.
 3. Edit the lost item fee policy.
 4. Click **Save & close**. The policy is updated.
 
+Edits made in the Lost item fee policies that change the policies from set cost to actual cost can create problems when items **are checked in under the edited policy but were checked out** under the old policy. The recommended solution is:
+1. rename the existing policies to, e.g., `old laptop lost item policy`
+2. write new policies named, e.g., `laptop lost item policy`
+3. delete the old policies after all loans that occurred under the old policy have been closed—items were checked in, became lost and paid, etc.
 
 ### Deleting a lost item fee policy
 
@@ -746,3 +772,6 @@ Click **Save** at the bottom of the screen to save any changes.
 
 Click **Save** at the bottom of the screen to save any changes.
 
+## Settings > Circulation > View Print details
+
+**Enable view print details (Pick slips)**. Check this box to enable [printing log functionality](../../../access/requests/requests/#showing-the-pick-slip-print-history).

@@ -46,6 +46,8 @@ module.exports = {
 }
 ```
 
+There are other [stripes.config.js properties](https://folio-org.atlassian.net/wiki/spaces/DEV/pages/46858271/stripes.config.js+properties).
+
 ## Okapi security
 
 Make sure that you have secured Okapi before publishing it to the Internet.  If you do not configure a super-tenant user and password for Okapi API, any user on the net could run privileged requests. The process of securing Okapi is performed with the **secure-supertenant** script and it is explained in the Single server deployment guides.

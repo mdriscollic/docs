@@ -1,12 +1,12 @@
 ---
 title: "Settings > Orders"
 linkTitle: "Orders"
-date: 2024-04-22
+date: 2024-11-19
 weight: 200
 tags: ["subtopic"]   
 ---
 
-The Orders section of the Settings app is where you establish behavior around approving and opening orders, your closing order reasons, how orders interact with the Inventory app, order templates, order lines limits, PO number settings, and custom fields.
+The Orders section of the Settings app is where you establish behavior around approving and opening orders, your closing order reasons, how orders interact with the Inventory app, order templates, order lines limits, PO number settings, custom fields, and routing lists.
 
 
 ## Permissions
@@ -16,9 +16,9 @@ In order to interact with order settings, a user needs to be assigned the follow
 
 *   **Settings (Orders): Can create, edit, view and delete custom fields.**  This permission allows the user to create, edit, view and delete custom fields in Settings > Orders.
 *   **Settings (Orders): Can create, edit, view custom fields.**  This permission allows the user to create, edit, and view custom fields in Settings > Orders.
-*   **Settings (Orders): Can view custom fields.**  This permission allows the user to view custom fields in Settings > Orders.
-*   **Settings (Orders): Can view all settings.**  This permission allows the user to view all of the Orders settings. 
+*   **Settings (Orders): Can view all settings.**  This permission allows the user to view all of the Orders settings.
 *   **Settings (Orders): Can view and edit all settings.** This permission allows the user to view and edit all of the Orders settings.
+*   **Settings (Orders): Can view custom fields.**  This permission allows the user to view custom fields in Settings > Orders.
 *   **Settings (Orders): Can view Order Templates.** This permission allows the user to view Order Templates in Settings > Orders.
 *   **Settings (Orders): Can view, edit Order Templates.** This permission allows the user to view and edit Order Templates in Settings > Orders.
 *   **Settings (Orders): Can view, edit, create Order Templates.** This permission allows the user to view, edit, and create Order Templates in Settings > Orders.
@@ -283,3 +283,20 @@ For information on managing instance type values, see [Settings > Inventory > In
 ## Settings > Orders > Inventory interaction > Loan type
 
 Use this setting to determine the loan type that is assigned to the items that are created through opening an order. Note: If you have not selected a default, then you will not be able to open orders where new items are being created. For information on managing loan type values, see [Settings > Inventory > Loan types](../settings/settings_inventory/settings_inventory/#settings--inventory--loan-types).
+
+## Settings > Orders > Routing > Routing address
+Routing in FOLIO allows libraries to divert received materials away from the normal receiving process and workflow, to direct the materials to alternate locations for pre-circulation distribution or other special handling. Routing allows for the selection of users from the Users app. Select the address type from the dropdown menu that should be used for routing to a specified user. For information on managing address type values, see [Settings > Users > Address Types](../settings/settings_users/settings_users/#settings--users--address-types).
+
+## Settings > Orders > Routing > List configuration
+Use this setting to define the formatting and contents of routing slips in FOLIO. 
+
+### Configuring a routing list
+1. Click **Edit**.
+2. Optional: Enter a **Description** in the box.
+3. In the **Body** box, enter the text for the list. Use the formatting options in the editor to adjust the appearance of the list. Click **{ }** to add tokens to the list.
+4. Required: Insert the token for **{{routingList.name}}**.
+5. Enclose any user tokens within the **{{#users}} {{/users}}** tokens to allow repetition of relevant data for each user.
+6. Optional: Click **Preview** to view a preview of the list with sample data.
+7. Click **Save & close**. The routing list is saved and updated.
+
+

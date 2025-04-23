@@ -85,15 +85,16 @@ The system comes with one or more default field mapping profiles that are associ
 1.  In the **Field mapping profiles** pane, click **New**.
 2.  In the **New field mapping profile** window, enter a **Name** for the field mapping profile.
 3.  Select an **Output format** from the drop-down list. MARC is the only option.
-4.  Select as many **FOLIO record types** that apply by selecting the checkbox next to the option: Source record storage (entire record), Authority, Inventory instance (selected fields), Holdings, and/or Item. You must select at least one option.
+4.  Select as many **FOLIO record types** that apply by selecting the checkbox next to the option: Source record storage (entire record), Inventory instance (selected fields), Holdings, and/or Item. You must select at least one option.
 5.  Optional: Enter a **Description** for the field mapping profile.
-6.  Optional: To add a transformation, click **Add transformations** and follow these steps:
+6.  Optional: Exclude MARC fields from export with **Fields suppression**.
+7.  Optional: To add a transformation, click **Add transformations** and follow these steps:
     <ol type="a">
       <li>In the <strong>Select transformations</strong> dialog, use the search box and filters to find the transformations you want to add to the field mapping profile.</li>
       <li>For every transformation you want to add, select the <strong>checkbox</strong> next to it and fill out the field number, indicators, and subfield boxes. Subfields must begin with a $.</li>
       <li>Once you have added all transformations, click <strong>Save & close</strong>. A confirmation message appears and the transformations are added to the field mapping profile.</li>
     </ol>
-7.  Click **Save & close**. A confirmation message appears and the field mapping profile is created.
+8.  Click **Save & close**. A confirmation message appears and the field mapping profile is created.
 
 ### Searching for an export field mapping profile
 
