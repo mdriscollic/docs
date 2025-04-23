@@ -14,19 +14,33 @@ Note: To enable library patrons to discover the courses you create in the Course
 
 ## Permissions
 
-You can assign permissions to users in the Users app. The permissions described below allow you to interact with the Courses app and determine what you can and cannot do within the app.  If you don’t assign any of these permissions to a user, the user will be unable to see the Courses app or any related information.
+The permissions / capabilities listed below allow you to interact with the Courses app and determine what you can and cannot do within the app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. You need to assign at least one of the following capabilities to a user to enable the user to see the Courses app or any related information.
+
+
+To add a capability or capability set to an Authorization role: 
+
+Select all applications to ensure access to all capabilities.
+
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
 
 The following are all the Courses permissions:
 
-* **Courses: Add and edit courses’ reserved items.** This permission allows users to add and edit items associated with a course. They cannot remove items from a course.
-* **Courses: Add, edit, and remove courses’ reserved items.** This permission allows users to view, add, edit, and remove items associated with a course.
-* **Courses: All permissions.** This permission allows users to maintain (view, add, edit, and delete) courses, items, instructors, cross-listed courses and all course settings.
-* **Courses: Read all.** This permission allows users to see all courses and item information.
-* **Courses: Read, add, and edit courses.** This permission allows users to view, add, and edit a course. They cannot delete a course.
-* **Courses: Read, add, edit, and delete courses.** This permission allows users to view, add, edit and delete a course.
-* **Fast add: Create.** This permission allows users to [Fast add](#adding-a-reserve-item-to-a-course-using-fast-add) a reserve item to a course.
-* **Settings (Courses): Can create, edit and delete course settings.** This permission allows users to maintain (view, add, edit, and delete) all course settings.
-* **Settings (Courses): Can view course settings.** This permission allows users to view course settings. They cannot add, edit or delete course settings
+| Permission Display    Name (OKAPI)                              | Resource (EUREKA)                  | Type     | Action | Description                                                                                                                                           |
+|-----------------------------------------------------------------|------------------------------------|----------|--------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Courses: Add and edit a courses’ reserved items                 | UI-Courses Add-Edit-Items          | Data     | Manage | This Capability set allows users to add and edit items associated with a course. They cannot remove items from a course.                              |
+| Courses: Add, edit, and remove a courses' reserved items        | UI-Courses Items                   | Data     | Manage | This Capability set allows users to view, add, edit, and remove items associated with a course.                                                       |
+| Courses: All permissions                                        | UI-Courses                         | Data     | Manage | This Capability set allows users to maintain (view, add, edit, and delete) courses, items, instructors, cross-listed courses and all course settings. |
+| Courses: Read all                                               | UI-Courses                         | Data     | View   | This Capability set allows users to see all courses and item information.                                                                             |
+| Courses: Read, add, and edit courses                            | UI-Courses Courses                 | Data     | Manage | This Capability set allows users to view, add, and edit a course. They cannot delete a course.                                                        |
+| Fast add: Create                                                | UI-Plugin-Create-Inventory-Records | Data     | Create | This Capability set allows users to [Fast add](#adding-a-reserve-item-to-a-course-using-fast-add) a reserve item to a course.                         |
+| Settings (Courses): Can create, edit and delete course settings | UI-Courses Settings                | Data     | Manage | This Capability set allows users to maintain (view, add, edit, and delete) all course settings.                                                       |
+| Settings (Courses): Can view course settings                    | UI-Courses Settings View           | Settings | View   | This Capability set allows users to view course settings. They cannot add, edit or delete course settings.                                            |
+
 
 
 ## Keyboard shortcuts
