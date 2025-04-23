@@ -7,11 +7,12 @@ tags: ["parenttopic"]
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
-The Serials app allows to create serial records that store information about the status of the order, the title in the Receiving app, a description, a purchase order (PO) line and notes. The app also allows to create publication patterns and generate predicted piece sets. The recieving pieces you generate in the Serials app are shared with the Receiving app. 
+The Serials app allows to create serial records that store information about the status of the order, the title in the Receiving app, a description, a purchase order (PO) line and notes. The app also allows to create publication patterns and generate predicted piece sets. The receiving pieces you generate in the Serials app are shared with the Receiving app. 
 To create a serial it is necessary to create an order and PO line in the Orders app in advance. 
 
 Definition of terms related to the Serials app:
 
+*   **Combination rules.** Combination rules can be applied to combine issues in a publication cycle.
 *   **Cycle length.** The amount of time it takes for a single cycle of the publication pattern to complete.
 *   **Days of publication, per cycle.** The day(s) on which an issue is published, within one cycle of the publication pattern.
 *   **Label.** Labels define the enumeration and chronology for the issues of a serial. 
@@ -19,7 +20,7 @@ Definition of terms related to the Serials app:
 *   **Pattern ID.** Is a unique ID that refers to a created publication pattern.
 *   **Piece sets.** A predicted piece set shows information like date generated, pattern ID and a list of the next expected issues.
 *   **Publication cycle.** This records how often issues are published, how many are published in that time and on what days they are published. 
-*   **Publication pattern.** This sets up everything about the expected publications of a serial so that it can generate the appropriate issues and label them correctly.
+*   **Publication pattern.** This sets up everything about the expected publications of a serial so that it can generate the appropriate pieces and label them correctly.
 *   **Serial.** A serial record provides a way of linking together various pieces of information for a serial like order line, publication pattern and predicted piece sets.
 *   **Template.** A template defines how values from the enumeration and chronology labels are to be used in each predicted piece. 
 *   **Token.** In a template, tokens are used as a placeholder for different labels of the publication pattern.
@@ -306,7 +307,7 @@ To generate receiving pieces, you first need to generate predicted pieces.
 
 2. If there are locations or holdings for the linked PO line you are able to select location or holding for the receiving pieces. 
 
-3. Fill in **Time between publication and receipt (days) (required)**. This describes the time interval between the date that the piece is published and when it is recieved at the location.
+3. Fill in **Time between publication and receipt (days) (required)**. This describes the time interval between the date that the piece is published and when it is received at the location.
 
 4. Select **Supplement** if the piece is a supplementary material such as a CD or a map.
 
