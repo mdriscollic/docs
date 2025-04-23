@@ -1,7 +1,7 @@
 ---
 title: "Serials Management"
 linkTitle: "Serials Management"
-date: 2024-11-14
+date: 2025-04-23
 weight: 55
 tags: ["parenttopic"]
 ---
@@ -36,6 +36,8 @@ Serials permissions:
 *    **Serials: Delete predicted pieces.** This permission allows the user to delete predicted pieces.
 *    **Serials: Edit publication patterns.** This permission allows the user to edit publication patterns.
 *    **Serials: Edit serials.** This permission allows the user to edit serial records.
+*    **Serials: Manage publication pattern templates.** This permission allows the user to manage publication pattern templates.
+*    **Serials: Manage serials.** This permisson allows the user to edit and delete serial records.
 *    **Serials: Search & view predicted pieces.** This permission allows the user to search and view predicted pieces. 
 *    **Serials: Search & view serials.** This permission allows the user to search and view predicted pieces.
 *    **Settings (Serials): Manage pick lists and values.** This permission allows the user to manage pick lists and values in the settings.
@@ -79,17 +81,21 @@ To add a publication pattern, you first need to create a serial. A serial record
 
 3. Select **Status (required)**, active or deprecated or draft, and add an optional description. 
 
-4. Fill in the **Publication cycle**.
+4. Fill in the **Puclication cycle** manually or search for a **pattern template** name or description. When using the pattern template search, select the pattern from the list to apply the template and have it fill out the form below with predefined values. Check that all required fields are filled in. Steps 7 to 9 are not usually necessary if you are using the pattern template search, unless you want to adjust the pattern.
 
 5. Optional: Add **Omission rules** when you would like to remove indivual issues in your publication cycle.
 
 6. Optional: Add **Combination rules**, which can be applied to combine sequences of issues into a single issue. 
 
-7. **Add label(s)**, which have two **label styles (required)**: chronology and enumeration. Use the **template (required)** to display the order of the specified labels correctly in the intended publication pattern.
-  
-8. Optional: **Preview** your publication pattern.
+7. **Add chronology labels**.
 
-9. **Save & Close** 
+8. **Add enumeration labels**.
+
+9. Fill in the **Template** to display the order of the specified labels correctly in the intended publication pattern.
+  
+10. Optional: **Preview** your publication pattern.
+
+11. **Save & Close** 
 
 ### Publication cycle
 
@@ -180,18 +186,28 @@ For example, a combinded July and August issue of a monthly published publicatio
 * Total number of issues to combine: 2
 
 ### Define labelling
-1. Click **Add label**.
+#### Chronology labels
 
-2. Choose the **label style** for your first label. Choose from **Chronology** or **Enumeration**:
-    * Chronology: Fill in Chronology format (Date, Month, Year) and Locale
-        * Weekday format: Monday, MONDAY, Mon, MON
-        * Month day format: 3, 3rd
-        * Month format: October, 10, Oct
-        * Year format: 2024, 24 
-        
-    * Enumeration: Fill in Enumeration format (Enumeration Numeric or Enumeration Textual)
-    
-        *Numeric:*
+1. Click **Chronology label** and **Add chronology label**. 
+
+2. Fill in Chronology format (Date, Month, Year) and Locale
+    * Weekday format: Monday, MONDAY, Mon, MON
+    * Month day format: 3, 3rd
+    * Month format: October, 10, Oct
+    * Year format: 2024, 24 
+
+3. If required, add another label with **Add chronology label**.
+
+4. After the label has been filled in, the required template tokens are automatically displayed below and can be copied by clicking on the clipboard icon. Use the **Template** field to specify how the values from the chronology labels are to be used in each predicted piece. 
+
+
+
+#### Enumeration labels
+1. Click **Enumeration label** and **Add enumeration label**.
+
+2. Fill in Enumeration format (Enumeration Numeric or Enumeration Textual)
+
+    * *Numeric:*
         * No. of units 
         * Format: Number (1, 2, 3), Ordinal (1st, 2nd 3rd), Roman numerals (I, II, III)
         * Sequence: Continuous, Reset
@@ -199,21 +215,24 @@ For example, a combinded July and August issue of a monthly published publicatio
         
         Click **Add level** if your label contains more than one enumeration, e.g. volume and issue.
         
-        *Textual:*
+    * *Textual:*
         * Pick list: e.g. Season 
         * No. of issues
         * Label text
         * Internal note
         
         Click **Add value** if your label contains more than one textual enumeration.
+        
+3. If required, add another label with **Add chronology label**.
 
-3. If required, add another label with **Add label**.
+4. After the label has been filled in, the required template tokens are automatically displayed below and can be copied by clicking on the clipboard icon. Use the **Template** field to specify how the values from the enumeration labels are to be used in each predicted piece. 
 
-4. Use the **Template** field to specify how values from the enumeration and chronology labels are to be used in each predicted piece. 
 
 #### Using templates
 
-Writing a template requires you to know to include the appropriate values from each chronology and enumeration label you have set up. To use a value from an enumeration or chronology in the template, you will need to put a token in double curly braces in the template. The token will identify which enumeration or chronology label is being used, and which part of the label is being used. All other text in the template (i.e. text not in double curly braces) will be treated as simple text that should be included. 
+When using a pre-defined template pattern by using the template pattern search, the template field is already filled in automatically. If you wish, you can still change the template.
+
+Writing a template manually requires you to know to include the appropriate values from each chronology and enumeration label you have set up. To use a value from an enumeration or chronology in the template, you will need to put a token in double curly braces in the template. The token will identify which enumeration or chronology label is being used, and which part of the label is being used. All other text in the template (i.e. text not in double curly braces) will be treated as simple text that should be included. 
 
 By clicking **Preview** it is possible to preview the labels for the publication pattern to make sure the expected pieces will be labeled and generated correctly.
 
