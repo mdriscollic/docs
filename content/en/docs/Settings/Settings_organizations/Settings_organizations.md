@@ -1,7 +1,7 @@
 ---
 title: "Settings > Organizations"
 linkTitle: "Organizations"
-date: 2025-04-16
+date: 2025-04-24
 weight: 210
 tags: ["subtopic"]   
 ---
@@ -18,7 +18,7 @@ It is recommended that you select all applications prior to assigning capabiliti
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
 |**Settings (Organizations): Can view and edit settings.** | **Organizations Settings** | data | manage | This capability allows the user to view, create, edit, and delete all organizations settings.|
-|**Settings (Organizations): Manage number generator options** | **UI-Organizations Settings NumberGenerator** | settings | manage | This capability allows the user to access and update the number generator options within Organizations settings.
+|**Settings (Organizations): Manage number generator options** | **UI-Organizations Settings NumberGenerator** | settings | manage | This capability allows the user to view and edit Number generator options within Organizations settings.
 |**Settings (Organizations): View settings.** | **UI-Organizations Settings** | settings | view | This capability allows the user to view, but not interact with, organizations settings.|
 
 
@@ -123,4 +123,11 @@ If **Banking information** is enabled, a library can configured account types to
 3. In the **Delete account type** dialog, click **Delete**. The account type is deleted and a confirmation message appears. Note: Account types can be deleted while in use on an organization record. The field will appear empty within the Banking information.
 
 ## Settings \> Organizations \> Number generator options
-TBD
+Use this setting to enable Number generators for Code in Organizations.
+
+Three options are available:
+* Number generator off: the vendor code can be filled manually only.
+* Number generator on, editable: the vendor code can be filled using the generator and be edited or filled manually.
+* Number generator on, fixed: the vendor code can be filled using the generator only.
+  
+For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../../settings_service_interaction/settings_service_interaction/).
