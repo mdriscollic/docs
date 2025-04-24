@@ -1,7 +1,7 @@
 ---
 title: "Finance"
 linkTitle: "Finance"
-date: 2025-04-16
+date: 2025-04-24
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -733,8 +733,32 @@ Use the **Move allocation** action to move money between current fiscal year bud
 4. Click **Confirm.** A confirmation message appears and the decrease allocation transaction is complete.
 
 
+## Batch allocation tools
 
+From a ledger record, you can use batch allocation tools to grant or adjust allocation totals to the funds associated with the ledger. These tools do not support transferring money between funds associated with the ledger. Funds must be setup before these tools can be used to allocate money to the fund's budgets, but the budgets do not need to be created prior to using the batch allocation tools.
 
+To access these tools, open the Finance app to the ledger pane and open the applicable ledger record so it is visible in the third pane for viewing.
+
+### Batch allocations via the user interface
+1. Click **Actions > Batch allocations**.
+2. In the **Select fiscal year** window, select the applicable fiscal year from the dropdown menu.
+3. Click **Save & close**.
+4. On the **Batch edit budgets** screen, each fund name associated with the ledger will be listed, along with the following fields for each:
+   * **Fund status**
+   * **Budget name**
+   * **Total allocated (before)**
+   * **Budget status**
+   * **Allocation increase/decrease**
+   * **Total allocated (after)**
+   * **Allowable encumbrance %**
+   * **Allowable expenditure %**
+   * **Transaction description**
+   * **Transaction tags**
+5. Fill in fields as desired.
+6. Click **Recalculate** to validate the allocation updates. Please note: if you make additional changes after clicking **Recalculate**, you will need to click **Recalculate** again prior to saving.
+7. Click **Save & close** to submit the updates.
+
+### Batch allocations via CSV upload
 
 ## Transferring money between funds
 
