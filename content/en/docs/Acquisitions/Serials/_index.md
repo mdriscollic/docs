@@ -26,26 +26,27 @@ Definition of terms related to the Serials app:
 *   **Token.** In a template, tokens are used as a placeholder for different labels of the publication pattern.
 
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with the Serials app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Serials app or any related information.
+The capabilities listed below allow you to interact with the Serials app and determine what you can or cannot do within the app. You can assign capabilities to users in the Settings in Authorization roles. If none of these capabilities are assigned to a user, they are unable to see the Serials app or any related information.
 
-Serials permissions:
+| permissionDisplayName (OKAPI)| Resource (EUREKA) | Type | Application | Action |
+| :-----: |:-----: |:-----: |:-----: |:-----: |
+| Serials: Create predicted pieces | UI-Serials-Management Predictedpieces | Data | app-platform-complete | Edit |
+| Serials: Delete predicted pieces | UI-Serials-Management Predictedpieces | Data | app-platform-complete | Delete |
+| Serials: Edit publication patterns | UI-Serials-Management Rulesets | Data | app-platform-complete | Edit |
+| Serials: Edit serials | UI-Serials-Management Serials | Data | app-platform-complete | Edit |
+| Serials: Manage publication pattern templates | UI-Serials-Management Modelrulesets | Data | app-platform-complete | Manage |
+| Serials: Manage serials | UI-Serials-Management Serials | Data | app-platform-complete | Manage |
+| Serials: Search & view predicted pieces |  UI-Serials-Management Predictedpieces | Data | app-platform-complete | View |
+| Serials: Search & view serials | UI-Serials-Management Serials | Data | app-platform-complete | View |
+| Settings (Serials): Manage pick lists and values | UI-Serials-Management Picklists | Data | app-platform-complete | Manage |
+| Settings (Serials): View pick lists and values | UI-Serials-Management Picklists | Data | app-platform-complete | View |
+| Settings (Service-interaction): View number generator settings and use number generators within apps | UI-Service-Interaction NumberGenerator | Data | UI-Service-Interaction NumberGenerator | View |
+| Settings (Service-interaction): Manage number generator settings and use number generators within apps | UI-Service-Interaction NumberGenerator | Data | app-platform-complete | Manage |
 
-*    **Serials: Create predicted pieces.** This permission allows the user to generate predicted pieces.
-*    **Serials: Delete predicted pieces.** This permission allows the user to delete predicted pieces.
-*    **Serials: Edit publication patterns.** This permission allows the user to edit publication patterns.
-*    **Serials: Edit serials.** This permission allows the user to edit serial records.
-*    **Serials: Manage publication pattern templates.** This permission allows the user to manage publication pattern templates.
-*    **Serials: Manage serials.** This permisson allows the user to edit and delete serial records.
-*    **Serials: Search & view predicted pieces.** This permission allows the user to search and view predicted pieces. 
-*    **Serials: Search & view serials.** This permission allows the user to search and view predicted pieces.
-*    **Settings (Serials): Manage pick lists and values.** This permission allows the user to manage pick lists and values in the settings.
-*    **Settings (Serials): View pick lists and values.** This permission allows the user to view pick lists and values in the settings.
-*    **Settings (Service-interaction). View number generator settings and use number generators within apps.** 
-*    **Settings (Service-interaction). Manage number generator settings and use number generators within apps.** View, create, edit, delete number generators and sequences.
+Note: Only one of the service-interaction capabilities is required for the user to be able to work with the Serials app. 
 
-Note: Only one of the service-interaction permissions is required for the user to be able to work with the Serials app. 
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](../../platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
