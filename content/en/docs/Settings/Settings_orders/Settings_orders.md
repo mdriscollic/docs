@@ -1,7 +1,7 @@
 ---
 title: "Settings > Orders"
 linkTitle: "Orders"
-date: 2025-04-16
+date: 2025-04-24
 weight: 200
 tags: ["subtopic"]   
 ---
@@ -26,7 +26,7 @@ It is recommended that you select all applications prior to assigning capabiliti
 |**Settings (Orders): Can view, edit Order Templates.** | **UI-Orders Settings Order-Templates** | settings | edit | This capability allows the user to view and edit Order Templates in Settings > Orders.|
 |**Settings (Orders): Can view, edit, create Order Templates.** | **UI-Orders Settings Order-Templates** | settings | create | This capability allows the user to view, edit, and create Order Templates in Settings > Orders.|
 |**Settings (Orders): Can view, edit, delete Order Templates.**| **UI-Orders Settings Order-Templates** | settings | delete | This permission allows the user to view, edit, and delete Order Templates in Settings > Orders.|
-|**Settings (Orders): Manage number generator options** | **UI-Orders Settings Number-Generator** | settings | manage | TBD|
+|**Settings (Orders): Manage number generator options** | **UI-Orders Settings Number-Generator** | settings | manage | This capability allows the user to view and edit Number generator options for Receiving in Orders settings.|
 
 
 ## Settings > Orders > General > Approvals
@@ -181,7 +181,16 @@ Custom fields can be deleted if they are in use, but any information tied to the
 4.  In the **Delete field data** dialog, click **Save & lose data**.
 
 ## Settings > Orders > Number generator options
-TBD
+Use this setting to enable Number generators for Barcode, Accession number, and Call number in the Receiving app.
+
+Three options are available:
+* Off (Number can be filled manually only)
+* On, field editable (Number can be filled using the generator and be edited or filled manually)
+* On, field not editable (Number can be filled using the generator only)
+  
+In addition, you can select the setting **Use the same generated number for accession number and call number** to insert the same generated number into both fields.
+
+For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../../settings_service_interaction/settings_service_interaction/).
 
 ## Settings > Orders > PO number > Edit
 
