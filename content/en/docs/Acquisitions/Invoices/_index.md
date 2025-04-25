@@ -1,7 +1,7 @@
 ---
 title: "Invoices"
 linkTitle: "Invoices"
-date: 2025-04-16
+date: 2025-04-25
 weight: 20
 tags: ["parenttopic"]
 ---
@@ -441,6 +441,13 @@ To search for invoices by lock total amount, follow these steps:
 1. Enter a numeric amount, with or without decimals, in the **From** box and a numeric amount in the **To** box. To find all invoices where the lock total amount falls within a range of values, enter the low and high ends of the range in the **From** and **To** boxes. To find invoices matching a specific amount value, enter the same amount value in the **From** and **To** boxes.
 2. Click **Apply**. The search results appear in the Invoices pane.  
 
+### Total amount
+
+To search for invoices by calculated total amount, follow these steps:
+
+1. Enter a numeric amount, with or without decimals, in the **From** box and a numeric amount in the **To** box. To find all invoices where the calculated total amount falls within a range of values, enter the low and high ends of the range in the **From** and **To** boxes. To find invoices matching a specific amount value, enter the same amount value in the **From** and **To** boxes.
+2. Click **Apply**. The search results appear in the Invoices pane.
+   
 ### Fiscal year
 
 To search for invoices by the fiscal year assigned to the record, follow these steps:
@@ -611,7 +618,6 @@ For information about most of the fields in the Invoice information section, see
 *   **Total units.** The total units for the invoice calculated as the sum of the quantity values on all invoice lines.
 *   **Payment date.**  The date on which the invoice status transitioned to **Paid.**
 *   **Calculated total amount (Exchanged).** This field appears if the invoice is paid in a currency other than the system default and shows the exchanged amnount in the system currency.
-
 
 ### Viewing invoice lines
 
