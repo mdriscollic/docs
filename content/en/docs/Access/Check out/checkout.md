@@ -145,7 +145,7 @@ To print due date receipts, follow these steps:
 
 ## Adding a loan comment
 
-You can use loan comments to store ILL transaction numbers, record a reason for a changed due date, or track how many times a claimed returned item was searched for. You can include patron info comments as a token in patron notices (only the most recent comment is included in the token). You need to have the appropriate permissions to be able to add patron or staff info loan comments -- see [Users \> Permissions](../../../users/#permissions).
+You can use loan comments to store ILL transaction numbers, record a reason for a changed due date, or track how many times a claimed returned item was searched for. You can include patron info comments as a token in patron notices (only the most recent comment is included in the token). You need to have the appropriate permissions to be able to add patron or staff info loan comments -- see [Users \> Capabilities and Capability Sets](../../../users/#capabilities-and-capability-sets).
 
 To add a patron info loan comment:
 
