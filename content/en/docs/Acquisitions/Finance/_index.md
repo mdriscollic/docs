@@ -737,28 +737,70 @@ Use the **Move allocation** action to move money between current fiscal year bud
 
 From a ledger record, you can use batch allocation tools to grant or adjust allocation totals to the funds associated with the ledger. These tools do not support transferring money between funds associated with the ledger. Funds must be setup before these tools can be used to allocate money to the fund's budgets, but the budgets do not need to be created prior to using the batch allocation tools.
 
-To access these tools, open the Finance app to the ledger pane and open the applicable ledger record so it is visible in the third pane for viewing.
+To access these tools, open the **Finance** app to the **Ledger** pane and open the applicable ledger record so it is visible in the third pane for viewing.
 
 ### Batch allocations via the user interface
 1. Click **Actions > Batch allocations**.
 2. In the **Select fiscal year** window, select the applicable fiscal year from the dropdown menu.
 3. Click **Save & close**.
 4. On the **Batch edit budgets** screen, each fund name associated with the ledger will be listed, along with the following fields for each:
-   * **Fund status**
-   * **Budget name**
-   * **Total allocated (before)**
-   * **Budget status**
-   * **Allocation increase/decrease**
-   * **Total allocated (after)**
-   * **Allowable encumbrance %**
-   * **Allowable expenditure %**
-   * **Transaction description**
-   * **Transaction tags**
+   * **Fund status**. Displays current fund status. Select from Active, Inactive, or Frozen.
+   * **Budget name**. Displays budget name (fund code - fiscal year code).
+   * **Total allocated (before)**. Displays current allocation total, before any updates are made with the batch allocation tool.
+   * **Budget status**. Displays current budget status. Select from Active, Closed, Frozen, Inactive, or Planned.
+   * **Allocation increase/decrease**. Enter a positive number to increase the budget allocation. Enter a negative number, using a hyphen, to decrease the budget allocation.
+   * **Total allocated (after)**. Will display the anticipated allocation total after clicking **Recalculate**.
+   * **Allowable encumbrance %**. Displays current allowable encumbrance percentage. Enter a new number or clear field, as needed.
+   * **Allowable expenditure %**. Displays current allowable expenditure percentage. Enter a new number or clear field, as needed.
+   * **Transaction description**. Enter a description to display on the allocation transaction, if desired.
+   * **Transaction tags**. Enter a tag to display on the allocation transaction, if desired.
 5. Fill in fields as desired.
-6. Click **Recalculate** to validate the allocation updates. Please note: if you make additional changes after clicking **Recalculate**, you will need to click **Recalculate** again prior to saving.
+6. Click **Recalculate** to validate the allocation updates. A red exclamation mark icon will display next to any fund name that will not be updated when saved. Please note: if you make additional changes after clicking **Recalculate**, you will need to click **Recalculate** again prior to saving.
 7. Click **Save & close** to submit the updates.
 
 ### Batch allocations via CSV upload
+1. Click **Actions > Download allocation worksheet (CSV)**.
+2. In the **Select fiscal year** window, select the applicable fiscal year from the dropdown menu.
+3. Click **Confirm**.
+4. Open the downloaded file in your preferred program. 
+5. Edit the worksheet, as needed. Please note: adding additional funds that are not included in the ledger being adjusted will result in those additional funds being ignored. Do not delete any names, codes, or UUIDs from the file.
+   * **Fiscal year**. Displays the fiscal year associated with the budgets being edited. Do not edit values in this column.
+   * **Fund name**. Displays the name of the fund. Do not edit values in this column.
+   * **Fund code**. Displays the fund code. Do not edit values in this column.
+   * **Fund UUID**. Displays the universally unique identifier for the fund. Do not edit values in this column.
+   * **Fund status**. Displays current fund status. Valid entries include Active, Inactive, or Frozen.
+   * **Budget name**. Displays budget name (fund code - fiscal year code). Do not edit values in this column.
+   * **Budget UUID**. Displays the universally unique identifier for the budget. Do not edit values in this column.
+   * **Budget status**. Displays current budget status. Valid entries include Active, Closed, Frozen, Inactive, or Planned.
+   * **Total allocated (before)**. Displays current allocation total, before any updates are made with the batch allocation tool.
+   * **Budget initial allocation**. Displays the original allocation amount for the budget. Do not edit values in this column.
+   * **Budget current allocation**. Displays the current allocation amount for the budget, accounting for the initial allocation and any pre-existing increases or decresaes to the allocation amount. Do not edit values in this column.
+   * **Budget allowable expenditure**. Displays current allowable expenditure percentage. Enter a new number or clear field, as needed.
+   * **Budget allowable encumbrance**. Displays current allowable encumbrance percentage. Enter a new number or clear field, as needed.
+   * **Allocation adjustment**. Enter a positive number to increase the budget allocation. Enter a negative number, using a hyphen, to decrease the budget allocation. Please note: if a budget had not yet been created, entering a positive value will result in the creation of a budget.
+   * **Transaction tag**. Enter a tag to display on the allocation transaction, if desired.
+   * **Transaction description**. Enter a description to display on the allocation transaction, if desired.
+7. Save the worksheet as a CSV file.
+8. On the appropriate ledger record, click **Actions > Upload allocation worksheet (CSV)**.
+9. Upload the edited and saved CSV file.
+10. Click **Confirm**.
+11. This will load the worksheet details to the batch allocation user interface. Please note: any errors or invalid actions will be highlighted for correction on this form.
+12. Click **Recalculate** to validate the allocation updates. A red exclamation mark icon will display next to any fund name that will not be updated when saved. Please note: if you make additional changes after clicking **Recalculate**, you will need to click **Recalculate** again prior to saving.
+7. Click **Save & close** to submit the updates.
+
+### Accessing batch allocation logs
+Logs associated with batch allocation transactions using either method may be accessed from the Finance app.
+
+1. Open the **Finance** app to the **Ledger** pane.
+2. Click **Actions > Batch allocation logs**.
+3. Use the **Search & filter** options to locate the desired log file.
+4. Click the **Job name** to view the log on screen.
+5. Click the **download** icon to the right of the **Job name** to download a CSV file containing a record of the batch allocation job.
+
+To delete a log file:
+1. Click the check box to the left of the log row.
+2. Click **Actions > Delete selected logs**.
+3. Click **Confirm**.
 
 ## Transferring money between funds
 
