@@ -934,5 +934,33 @@ To cancel an invoice, follow these steps:
 2. In the **Vendor invoice number** pane, click **Actions > Cancel**.
 3. In the **Cancel invoice** dialog, optionally enter a **Cancellation note**.  The Cancellation note displays in the **Invoice information** accordion.
  
+## Viewing invoice version history
 
+1. [Search for the invoice you want to view](#searching-for-an-invoice) and select it.
+
+2. In the **Vendor invoice number** pane, click the **clock icon** which is to the right of the tag icon.
+
+3. A fourth pane titled **Version history** opens.  Versions are displayed in a card list sorted by date.  The following information is displayed for each version:  
+*   **Source.**  The user who saved this version of the invoice.
+*   ***Current Version, Original Version,* or blank.**  This information displays only for the current and original versions of the invoice.
+*   **Changes.**  Displays the list of fields that were edited in this version.
+
+4. To view the invoice pane for a version, either click on the underlined version date mm/dd/yyyy, hh:mm or the clock icon for the version you want to open.
+
+5. The invoice pane displays the invoice data for that version.  Changes from the prior version are highlighted in yellow.
+
+6. To close the version history view, click on the X in the top left of the **Version history** pane.  The fourth pane closes and the invoice pane displays the current invoice version.
+
+## Viewing invoice line version history
+
+1. [Search for the invoice you want to view](#searching-for-an-invoice) and select it.
+2. Click on the invoice line you wish to view
+3. In the **View invoice line** pane, click the **clock icon** which is to the right of the tag icon.
+4. A fourth pane titled **Version history** opens.  Versions are displayed in a card list sorted by date.  The following information is displayed for each version:  
+*   **Source.**  The user who saved this version of the invoice line.
+*   ***Current Version, Original Version,* or blank.**  This information displays only for the current and original versions of the invoice line.
+*   **Changes.**  Displays the list of fields that were edited in this version.
+4. To view the invoice line pane for a version, either click on the underlined version date mm/dd/yyyy, hh:mm or the clock icon for the version you want to open.
+5. The invoice line pane displays the invoice line data for that version.  Changes from the prior version are highlighted in yellow.
+6. To close the version history view, click on the X in the top left of the **Version history** pane.  The fourth pane closes and the invoice line pane displays the current invoice line version.
 
