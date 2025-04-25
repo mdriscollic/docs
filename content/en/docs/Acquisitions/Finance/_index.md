@@ -735,7 +735,11 @@ Use the **Move allocation** action to move money between current fiscal year bud
 
 ## Batch allocation tools
 
-From a ledger record, you can use batch allocation tools to grant or adjust allocation totals to the funds associated with the ledger. These tools do not support transferring money between funds associated with the ledger. Funds must be setup before these tools can be used to allocate money to the fund's budgets, but the budgets do not need to be created prior to using the batch allocation tools.
+From a ledger record, you can use batch allocation tools to grant or adjust allocation totals to the funds associated with the ledger. Libraries using these tools should be aware of the following:
+* Batch allocations can be made for current or future fiscal years that have been configured in the **Finance** app. Past fiscal year budget allocations are not editable with these tools.
+* Allocation changes with these tools can never result in a negative allocation. FOLIO will reject changes that result in a negative allocation to a budget.
+* These tools do not support transferring money between funds associated with the ledger.
+* Funds must be setup before these tools can be used to allocate money to the fund's budgets, but the budgets do not need to be created prior to using the batch allocation tools.
 
 To access these tools, open the **Finance** app to the **Ledger** pane and open the applicable ledger record so it is visible in the third pane for viewing.
 
