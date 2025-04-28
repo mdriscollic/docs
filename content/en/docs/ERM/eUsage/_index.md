@@ -1,7 +1,7 @@
 ---
 title: "eUsage"
 linkTitle: "eUsage"
-date: 2025-02-21
+date: 2025-04-28
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -359,6 +359,201 @@ To search for usage data providers with reports that have failed with a specific
 2. Select the error code(s) from the drop-down list. Your results appear in the usage data provider pane. The list shows usage data providers that have reports failed with either of the selected error codes.
 
 
-## Plugin: eUsage reports
+## eUsage Reports (Plugin)
 
-* All features of the eUsage Reports software still need to be documented. It is a plugin for eUsage. At the moment there are only instructions in the FOLIO wiki.
+### Matching summary
+
+When a new COUNTER report is harvested into the eUsage app, the eUsage Reports module creates matches between the titles in the COUNTER report and the titles that already exist in the Agreements local KB. Matching is done via ISSN or ISBN. If no matching ISSN or ISBN is found in the KB, then the title remains unmatched and can be manually addressed by a user.
+
+**Note that matching is only supported for the COUNTER 5 (or newer) TR report.**
+
+The eUsage Reports matching summary can be found in the eUsage app. This accordion appears on each eUsage provider record and provides a summary of the results of the matching process. The matching summary contains the following data:
+* **Date of last harvest.** The date of the last COUNTER TR report harvest for that provider, whether manual or automated.
+* **Status**
+    * Reviewed: All titles have been reviewed and either matched or ignored.
+    * Pending review: Some titles have not yet been matched or ignored.
+    * No records: No counter data has yet been loaded.
+* **Records loaded.** The number of titles found in COUNTER TR reports for the current provider.
+* **Matched.** The number of COUNTER TR titles that have been matched to a KB title.
+* **Unmatched.** The number of COUNTER TR titles that were not matched.
+* **Ignored.** The number of titles have been manually flagged as ignored.
+
+
+#### Working with matches
+
+Clicking the hyperlinked numbers in the matching summary brings up the eUsage titles screen. This screen allows the user to review matched titles, create manual matches, and ignore titles that should not be matched. Each title in the list has an actions menu that provides the following options.
+
+**Editing titles**
+
+The edit option allows the user to manually choose a title from the local KB to match to a title found on a COUNTER TR report. Unmatched titles can be edited to select a match for the first time, and matched titles can be edited to change an existing match in case of error.
+
+To edit:
+
+1. Click the menu icon in the Actions column and select "edit."
+2. Use the modal to search for a title in the local KB.
+3. Click on the desired title to create the match.
+
+Once a match is chosen, it will be used for all future harvests and reports. You will not need to manually rematch an unmatched title every time you load new data. Matches cannot be removed at this time. You may correct an error by changing the match, but you cannot reset a title to "Unmatched."
+
+**Ignoring titles**
+
+There may be titles included on COUNTER TR reports that appear in error or are not of interest. If you don't want to include these titles in your reports or go through the trouble of matching them, you can ignore them. Ignored titles will not be shown in your matched or unmatched counts or cause a provider to be marked as "pending review."
+
+To ignore:
+
+1. Click the menu icon in the Actions column and select "ignore."
+2. Your title will be ignored.
+3. To remove a title from the Ignored list, select the Actions menu and choose "Stop ignoring."
+
+
+#### Updating matches
+
+The "Update matches" button triggers the eUsage Reports module to process any new COUNTER report data that has become available since the last harvest. If new titles have come in, they will either be matched automatically or added to the unmatched list. 
+
+Note that for new data to be included in the eUsage Reports visualizations, you must update matches before analyzing an agreement or viewing a report.
+
+
+### eUsage Reports (Agreements)
+
+eUsage Reports appear in an accordion on the Agreement record in the Agreements app. These reports include COUNTER and financial data about the titles that are part of a given agreement. The reports will include titles directly associated with an agreement line and titles associated with an agreement line via a package.
+
+For eUsage reports to function properly, you must meet the following requirements:
+
+1. Associate an eUsage provider record with your agreement in the Usage data section.
+2. Harvest at least one COUNTER 5 TR report for this provider using the eUsage app.
+3. Update matches for the provider in the eUsage app.
+4. Review matches and ensure all titles of importance are matched to a title in the KB.
+
+Each eUsage report includes a set of parameters for the user to define a visualization, and a downloadable CSV file containing the data used to generate the visualization.
+
+
+#### Use over time
+
+This report displays a count of all COUNTER uses for the titles on an agreement during a given time period. It displays both total item requests and unique item requests.
+
+
+**Parameters**
+
+* **Format:** Journals or books, identified by the "publication type" field in the KB.
+* **Start month:** The earliest month of data to be included in the report.
+* **End month:** The last month of data to be included in the report.
+* **Include Open Access use?**
+    * Yes - includes use identified as "Gold_OA" in the source COUNTER report.
+    * No - excludes use identified as "Gold_OA" in the source COUNTER report.
+* **Count type:** Not applicable for this report, because both total and unique usage are displayed at all times.
+* **Scale: Select interval for period of use:** Determines the scale of the x-axis by setting the grouping level for period of use.
+
+
+**Report data**
+
+* **Title:** The title of the resource as it appears in the local KB.
+* **Print ISSN:** The print ISSN of the resource as it appears in the local KB, if available.
+* **Online ISSN:** The online ISSN of the resource as it appears in the local KB, if available.
+* **ISBN:** The ISBN of the resource as it appears in the local KB, if available.
+* **Access type:** Access type value as it appears on the COUNTER reports. 
+    * Controlled: Content that is available to subscribers only (i.e., paid content)
+    * OA_Gold: Content that is freely available.
+* **Metric type:** The type of metric used to generate the usage count.
+    * Total_Item_Requests: Total number of times a content item was requested; includes duplicate requests for the same item during a single session.
+    * Unique_Item_Requests: Number of unique content items requested; excludes duplicate requests for the same item during a single session.
+* **Reporting period total:** The sum of all COUNTER uses that occurred on or between the start and end dates defined in the report parameters.
+* **Period of use totals:** The number of COUNTER uses broken down by the interval defined in the scale parameter. This may be presented as a year (e.g., 2019), a span (e.g., 2019-01-2019-12) or a month (2019-01).
+
+
+#### Use over publication year, grouped by time
+
+This report displays a count of COUNTER uses for a given year of publication, with the counts stratified by the date of access. This report can be thought of as a pivot of the "Use over time, grouped by publication year" report. It displays the same data, but the axes are flipped. On the downloadable version of the report, a separate report line is included for each unique combination of: Title + Period of use + Access type + Metric type.
+
+
+**Parameters**
+
+* **Format:** Not applicable; this report includes only Journals.
+* **Start month:** The earliest month of data to be included in the report.
+* **End month:** The last month of data to be included in the report.
+* **Include Open Access use?**
+    * Yes - includes use identified as "Gold_OA" in the source COUNTER report.
+    * No - excludes use identified as "Gold_OA" in the source COUNTER report.
+* **Count type:** The type of metric used to generate the usage count.
+    * Total_Item_Requests: Total number of times a content item was requested; includes duplicate requests for the same item during a single session.
+    * Unique_Item_Requests: Number of unique content items requested; excludes duplicate requests for the same item during a single session.
+* **Scale: Select interval for publication year:** Determines the scale of the x-axis by setting the grouping level for years of publication.
+* **Stacks:** Group period of use by: Determines the groups of usage periods used to create the stacks in the stacked bar chart.
+
+
+**Report data**
+
+* **Title:** The title of the resource as it appears in the local KB.
+* **Print ISSN:** The print ISSN of the resource as it appears in the local KB, if available.
+* **Online ISSN:** The online ISSN of the resource as it appears in the local KB, if available.
+* **ISBN:** The ISBN of the resource as it appears in the local KB, if available.
+* **Period of use:** The time period when the content was accessed.
+* **Access type:** Access type value as it appears on the COUNTER reports.
+    * Controlled: Content is available to subscribers only (i.e., paid content)
+    * OA_Gold: Content is freely available.
+* **Metric type:** The type of metric used to generate the usage count.
+    * Total_Item_Requests: Total number of times a content item was requested; includes duplicate requests for the same item during a single session.
+    * Unique_Item_Requests: Number of unique content items requested; excludes duplicate requests for the same item during a single session.
+* **Reporting period total:** The sum of all COUNTER uses that occurred on or between the start and end dates defined in the report parameters.
+* **Year of publication totals:** The number of COUNTER uses per year of publication as broken down by the interval defined in the scale parameter. This may be presented as a year (e.g., 2019), a span (e.g., 2015-2019).
+
+
+#### Cost per use
+
+This report displays an average cost per use for a given time period. The yellow line displays the number title with usage that were present in an agreement during each period. 
+
+
+**Calculation**
+
+The cost per use metric uses paid invoice totals from the Invoices module to determine the cost of an agreement. For the cost per use report to function, you must link your agreement lines to a purchase order with at least one paid invoice.
+
+Cost per use is calculated using the following methods:
+
+* **Cost:**
+    * Cost is sourced from any paid invoices associated with an agreement line via the linked purchase order line.
+    * Cost is reported by the subscription dates defined on the invoice record. If no subscription dates are present, then the fiscal year dates are used as a fallback.
+    * If a report is requested at a finer lever of granularity than the available subscription/fiscal year dates, the cost will be prorated by dividing it equally across the number of months in the period of use.
+    * The cost is also prorated by dividing the total across the number of years of publication for which use has occurred. An aggregate view can be created by summing the total for all years of publication.
+    * If the agreement line is for a single title, then there is a one-to-one relationship between the title and the payment.
+    * If the agreement is for a package, then the total cost is divided equally across all titles in the page.
+* **Use**
+    * Use is sourced from the counter reports associated with a title.
+    * Use is reported by the month, but can be aggregated into larger groups.
+* **Cost per use**
+    * Cost per use is calculated by dividing the cost for a given period of use and year of publication by the number of uses in that period.
+    * On the downloadable version of this report, a separate report line is included for each unique combination of Title + Year of publication + Subscription/Fiscal year period.
+
+
+**Parameters**
+
+* **Format:** Journals or books, identified by the "publication type" field in the KB.
+* **Start month:** The earliest month of data to be included in the report.
+* **End month:** The last month of data to be included in the report.
+* **Include Open Access use?**
+    * Yes - includes use identified as "Gold_OA" in the source COUNTER report.
+    * No - excludes use identified as "Gold_OA" in the source COUNTER report.
+* **Count type:** Not applicable for this report, because both total and unique usage are displayed at all times.
+* **Scale: Select interval for period of use:** Determines the scale of the x-axis by setting the grouping level for period of use.
+
+
+**Report data**
+
+* **Title:** The title of the resource as it appears in the local KB.
+* **Derived title:** A derived title is a title that is related to the Agreement and any related purchases by way of a package. The cost of these titles is derived from the total cost of the package by splitting the cost evenly.
+* **Print ISSN:** The print ISSN of the resource as it appears in the local KB, if available.
+* **Online ISSN:** The online ISSN of the resource as it appears in the local KB, if available.
+* **ISBN:** The ISBN of the resource as it appears in the local KB, if available.
+* **Year of publication:** The year of publication for the journal article that was accessed.
+* **Order type:** The order type as it appears on the linked purchase order. Possible values include "one-time" and "ongoing."
+* **Purchase order line:** The purchase order line number associated with the title. This is sourced from the agreement line-POL relationship defined on the Agreement record.
+* **Invoice number:** The invoice line number associated with the the purchase order line.
+* **Fiscal year start:** The first date of the fiscal year in which the invoice was paid. Fiscal year dates are derived from the Fiscal Year record in the Finance app that corresponds to the date the invoice was paid.
+* **Fiscal year end:** The last date of the fiscal year in which the invoice was paid. Fiscal year dates are derived from the Fiscal Year record in the Finance app that corresponds to the date the invoice was paid.
+* **Subscription start:** The subscription start date as it appears on the invoice line record.
+* **Subscription end:** The subscription start date as it appears on the invoice line record.
+* **Amount encumbered:** The total of any outstanding encumbrances on a related purchase order line. Encumbrances are displayed for informational purposes only and are not considered in the cost per use calculation.
+* **Amount paid:** The total amount paid on the invoice line that is linked to a related purchase order line.
+* **Metric type:** The type of metric used to generate the usage count.
+    * Total_Item_Requests: Total number of times a content item was requested; includes duplicate requests for the same item during a single session.
+    * Unique_Item_Requests: Number of unique content items requested; excludes duplicate requests for the same item during a single session.
+* **Reporting period total:** The sum of all COUNTER uses that occurred on or between the start and end dates defined in the report parameters.
+* **Period of use totals:** The number of COUNTER uses broken down by the interval defined in the scale parameter. This may be presented as a year (e.g., 2019), a span (e.g., 2019-01-2019-12) or a month (2019-01).
