@@ -1,7 +1,7 @@
 ---
 title: "Organizations"
 linkTitle: "Organizations"
-date: 2025-04-16
+date: 2025-05-05
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -64,7 +64,7 @@ When creating an organization, you either create it as a general organization or
 
 
 *   **Name (required).** The name of the organization.
-*   **Code (required).** A unique identifier for the organization. Note: You cannot have duplicate vendor codes. The codes for each organization must be different.
+*   **Code (required).** A unique identifier for the organization. Note: You cannot have duplicate vendor codes. The codes for each organization must be different. If your institution has [enabled the number generator for the Organizations app](../../settings/settings_organizations/settings_organizations/#settings--organizations--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the code. For more information, see [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction).
 *   **Accounting code.** The accounting code used by your library in your payment system in reference to the organization.
 *   **Organization status (required).** Select an organization status: Active, Inactive, or Pending. The status you select here is evaluated by the Orders and Invoices apps. Orders can only be opened and invoices can only be paid if the organization is a vendor with an Active status. You may want to use the Pending status to signify that the organization record is a draft.
 *  **Type.**  Select one or more organization types.  See [Settings > Organizations > Creating a new type](../../settings/settings_organizations/settings_organizations/#creating-a-new-type) for more information.
@@ -689,7 +689,9 @@ To view a log of orders exported to a vendor organization that is set up for EDI
 
 ## Adding integration details to a vendor organization
 
-This section enables orders to be exported to vendors in EDIFACT format. To add information about one or more integrations for a vendor organization, follow these steps:
+This section houses additional configuration to export orders or claims to a vendor. Orders may be transmitted via FTP in EDI fomrat. Claims may be transmitted via FTP or file download in either CSV or EDI format.
+
+To add information about one or more integrations for a vendor organization, follow these steps:
 
 1. [Find the organization to which you want to add an integration](#searching-for-an-organization) and select it.
 
@@ -707,22 +709,24 @@ This section enables orders to be exported to vendors in EDIFACT format. To add 
 ### Integration information
 
 *   **Integration name (required).** The name for this integration.
-*   **Description** A description of this integration.
+*   **Description.** A description of this integration.
 *   **Default integration.** Select this checkbox if your organization doesn’t have any account numbers. This indicates that any order tagged for export that is not related to a specific account for this organization should follow this default configuration.
-
+*   **Integration type (required).** Select Claiming or Ordering.
+*   **Transmission method (required).** Select File download or FTP. Please note: If the selected integration type is 'Ordering', FTP is the only supported transmission method.
+*   **File format (required).** Select CSV or EDI. Please note: If the selected integration type is 'Ordering', EDI is the only supported file format.
+*   **Account numbers (required).** All account numbers created in **Vendor account** section of the organization are listed.  Click on all vendor account numbers to be included in this configuration.  To select multiple account numbers for this configuration, use shift+click. When you move your cursor to another field you will see the highlight persist on the selected account number(s).
 
 ### EDI configuration
 
-*   **Account numbers (required).** All account numbers created in **Vendor account** section of the organization are listed.  Click on all vendor account numbers to be included in this EDI configuration.  To select multiple account numbers for this configuration, use shift+click. When you move your cursor to another field you will see the highlight persist on the selected account number(s).
+
 *   **Automate order export for acquisition methods.**   All order acquisition methods are listed. To automatically export orders for this vendor using specific order acquisitions methods, click on the acquisition method name.  When creating orders, you can override this default behavior by checking the [Manual](../orders/#purchase-order) checkbox on the purchase order.  To select multiple acquisition methods to export automatically, use shift+click. When you move your cursor to another field you will see the highlight persist on the selected acquisition methods.
 *   **Vendor EDI code (required).** The vendor identifier for EDI transactions
 *   **Vendor EDI type.** Select one of the Vendor EDI types, which designates the type of identifier used as the vendor identifier: 014/EAN, 31B/US-SAN, 091/Vendor-assigned, or 092/Customer-assigned.
 *   **Library EDI code (required).** The library identifier for EDI transactions
-
 *   **Library EDI type.** Select one of the Library EDI types, which designates the type of identifier used as the library identifier: 014/EAN, 31B/US-SAN, 091/Vendor-assigned, or 092/Customer-assigned.
 *   **EDI naming convention.** The naming convention that sets the expected structure to be used for outgoing FOLIO EDI files. This is currently a static value, using system-defined tokens. The naming convention will be configurable in a future release.
 *   **Send account number.** If you send your account number with orders or invoices, select this checkbox. If selected, the account number is required for the PO/POL and is included in the EDI order file.
-*   **What messages are expected for this vendor?** If your library expects to send EDI orders to the vendor, select the **Orders** checkbox. If your library expects to receive EDI invoices from the vendor, select the **Invoices** checkbox.
+*   **What messages are expected for this vendor?** If your library expects to send EDI orders to the vendor, select the **Orders** checkbox. If your library expects to receive EDI invoices from the vendor, select the **Invoices** checkbox. Please note: EDI invoices are imported using the Data import app and do not require this integration configuration.
 *   **Notes.** Notes about the integration details for this vendor.
 
 
@@ -733,11 +737,11 @@ This section enables orders to be exported to vendors in EDIFACT format. To add 
 
 *   **EDI FTP.** Select FTP format in which the library expects to transact with the vendor: SFTP or FTP.
 *   **FTP mode.** Select the transmission mode the library expects to use with the vendor: ASCII or Binary.
-*   **Server address.** The address for the vendor’s FTP server.
+*   **Server address.** The address for the vendor’s FTP server. Please note: this field is required if the selected transmission method is FTP.
 *   **FTP connection mode.** Select the connection mode: Active or Passive.
 *   **Username.** The username for the FTP, if a login username is required for this vendor. 
 *   **Password.** The password for the FTP, if a login password is required for this vendor. The password is automatically hidden. Click **Show** to display the password. Click **Hide** to stop displaying the password.
-*   **FTP port (required).** The FTP port number.
+*   **FTP port.** The FTP port number. Please note: this field is required if the selected transmission method is FTP.
 *   **Order directory.** The subdirectory where orders should be placed, if different from the main FTP directory for this vendor. Ex: /directory.
 *   **Invoice directory.** The subdirectory where invoices should be retrieved, if different from the main FTP directory for this vendor. Ex: /directory.
 *   **Notes.** Notes about the FTP details for this vendor integration.
@@ -745,15 +749,15 @@ This section enables orders to be exported to vendors in EDIFACT format. To add 
 
 
 ### Scheduling
+Please note: this accordion is only visible if the selected integration type is Ordering.
 
-
-*   **Schedule EDI.** If you want to schedule the EDI, select the **Schedule EDI** checkbox.
+*   **Schedule EDI.** If you want to schedule the EDI, select the **Schedule EDI** checkbox. This will make the following fields appear.
 *   **Schedule period.**  The period between automated exports to the vendor.  Choose from Hourly, Daily, Weekly, or Monthly.
+*   **Schedule frequency (required).**  If you choose a schedule period of Hourly, Daily, or Weekly, the schedule frequency field appears.  Enter the numeric value for the hourly, daily, or weekly frequency of this scheduled integration.
 *   **Date.** If you choose a schedule period of Daily, the date field appears.  Use the calendar function to select the start date for this schedule.
-*   **Schedule frequency.**  If you choose a schedule period of Hourly, Daily, or Weekly, the schedule frequency field appears.  Enter the numeric value for the hourly, daily, or weekly frequency of this scheduled integration.
-*   **Time.**  Click on this field to view an hour and time select list.  Choose the scheduled time for this automated export.
+*   **Time (required).**  Click on this field to view an hour and time select list.  Choose the scheduled time for this automated export.
 *   **S M T W Th F S.**  If you choose a schedule period of Weekly, the day of the week checkboxes appear. Choose the days for this weekly automated export.
-*   **Day.** If you choose a schedule period of monthly, enter the day of the month the automatic export should occur.
+*   **Day (required).** If you choose a schedule period of monthly, enter the day of the month the automatic export should occur.
 
 
 
@@ -1151,3 +1155,15 @@ Deleting a donor removes that person from your library’s list of donors.
 2. In the donor window, click **Actions > Delete**.
 
 3. In the **Delete contact** dialog, click **Confirm**. The donor is deleted and the organization window appears.
+
+## Viewing organization version history
+
+1. [Search for the organization you want to view](#searching-for-an-organization) and select it.
+2. In the organization's view pane, click the **clock icon** which is to the right of the tag icon.
+4. A fourth pane titled **Version history** opens.  Versions are displayed in a card list sorted by date.  The following information is displayed for each version:  
+*   **Source.**  The user who saved this version of the organization record.
+*   ***Current Version, Original Version,* or blank.**  This information displays only for the current and original versions of the organization record.
+*   **Changes.**  Displays the list of fields that were edited in this version.
+4. To view the organization pane for a version, either click on the underlined version date mm/dd/yyyy, hh:mm or the clock icon for the version you want to open.
+5. The organization pane displays the data for that version.  Changes from the prior version are highlighted in yellow.
+6. To close the version history view, click on the X in the top left of the **Version history** pane.  The fourth pane closes and the organization pane displays the current version.
