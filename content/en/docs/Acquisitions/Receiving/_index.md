@@ -1,7 +1,7 @@
 ---
 title: "Receiving"
 linkTitle: "Receiving"
-date: 2025-04-16
+date: 2025-05-05
 weight: 50
 tags: ["parenttopic"]
 ---
@@ -166,7 +166,7 @@ You can also search for orders by selecting any of the filters in the **Search &
 
 ### Order status
 
-In the **Search & filter** pane, click **Order status** and select any applicable filters:
+In the **Search & filter** pane, click **Order status** and select the applicable value from the dropdown:
 
 
 
@@ -191,7 +191,7 @@ To search for orders from a specific vendor, follow these steps:
 
 ### Order type
 
-In the **Search & filter** pane, click **Order type** and select any applicable filters:
+In the **Search & filter** pane, click **Order type** and select the applicable value from the dropdown:
  
 
 
@@ -621,6 +621,8 @@ Note: This section of the **Add piece** modal becomes active as soon as the **Cr
 *   **Item status.** The current status of the associated item record. Expected pieces typically have a status of 'On order', which updated to 'In process' once the piece is received.
 *   **Request.** Displays a count of requests for the item, if applicable.
 
+Please note: if your institution has [enabled the number generator for the Receiving app](../../settings/settings_orders/settings_orders/#settings--orders--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the values for **Barcode**, **Call number**, and/or **Accession number**. For more information, see [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction).
+
 
 ## Editing an expected or received piece
 
@@ -807,7 +809,14 @@ If a piece has not arrived from the vendor by the expected receipt date or is da
 
 A library may configure a **Claiming interval** on the Organization record for the vendor. A **Claiming interval** represents the number of days after a piece's **Expected receipt date** when an unreceived piece will be marked **Late**. If a **Claiming interval** is entered on the Organization record, this will appear as the default claiming interval on purchase order lines associated with the vendor, but the default may be changed when the **Claiming active** box is checked on the purchase order line. The interval may also be changed on each receiving title; for example, if a package POL has mutliple titles that should each have different claiming intervals assigned.
 
-Once a piece is marked **Late**, a library may wish to send a claim to the vendor. In the current release of FOLIO, pieces can be marked as **Claim sent**, but automatic transmission to the vendor is not yet implemented. A library may wish to filter by **Receiving status** and use the **Export results (CSV)** option to send information to their vendor to support the claim.
+A piece may be manually marked late using the following steps:
+1. Using the **Search & filter** pane, find the receiving title for which you want to mark a piece late and select it.
+2. In the Expected section of the receiving title, click on the piece.
+3. The **Edit piece** modal will appear.
+4. Click on the dropdown menu next to **Save & close** and select **Mark late**.
+5. A green toast message will appear and the piece status will update to 'Late'.
+
+Once a piece is marked **Late**, a library may wish to send a claim to the vendor. Claims may be initiated from the Receiving app or the [Claiming app](../../acquisitions/claiming/). 
 
 To update a piece to 'Claim sent', use the following steps:
 1. Using the **Search & filter** pane, find the receiving title for which you want to send a claim and select it.
