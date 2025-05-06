@@ -26,16 +26,32 @@ Libraries that want to use title level requests should consider:
 
 ## Permissions
 
-You can assign permissions to users in the Users app. The permissions described below allow you to interact with the Requests app and determine what you can and cannot do within the app. If you don’t assign any of these permissions to a user, the user will be unable to see the Requests app or any related information.
+The permissions / capabilities listed below allow you to interact with the Requests app and determine what you can and cannot do within the app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. You need to assign at least one of the following capabilities to a user to enable the user to see the Requests app or any related information.
+
+
+To add a capability or capability set to an Authorization role: 
+
+Select all applications to ensure access to all capabilities.
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
 
 The following are all the Requests permissions:
 
-* **Requests: All permissions.** This permission allows the user all request functions.
-* **Requests: Move to new item, reorder queue.** This permission allows the user to move requests from one item to another (subject to request policies).
-* **Requests: Reorder queue.** This permission allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue.
-* **Requests: View.** This permission allows the user to search and view requests.
-* **Requests: View, create.** This permission allows the user to create new requests and view existing requests.
-* **Requests: View, edit, cancel.** This permission allows the user to view, edit and cancel requests.
+| Permission Display    Name (OKAPI)             | Resource (EUREKA)        | Type       | Action  | Description                                                                                                                                                                                                             |
+|------------------------------------------------|--------------------------|------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Inventory: View instances, holdings, and items | UI-Inventory Instance    | Data       | View    |     You need to have this capability set to enable **Title look-up** when creating title level requests.                                                                                                                    |
+| Requests: All permissions                      | UI-Requests              | Data       | Manage  | This capability set allows the user all request functions.                                                                                                                                                              |
+| Requests: Move to new item, reorder queue      | UI-Requests MoveRequest  | Procedural | Execute | This capability set allows the user to move requests from one item to another (subject to request policies).                                                                                                            |
+| Requests: Reorder queue                        | UI-Requests ReorderQueue | Procedural | Execute | This capability set allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue. |
+| Requests: View                                 | UI-Requests              | Data       | View    |     This capability set allows the user to search and view requests.                                                                                                                                                    |
+| Requests: View, create                         | UI-Requests              | Data       | Create  | This capability set allows the user to create new requests and view existing requests.                                                                                                                                  |
+| Requests: View, edit, cancel                   | UI-Requests              | Data       | Edit    | This capability set allows the user to view, edit and cancel requests.                                                                                                                                                  |
+
+
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](../../../platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
