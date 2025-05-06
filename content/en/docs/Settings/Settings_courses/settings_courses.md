@@ -10,9 +10,25 @@ The Courses section of the Settings app is where you manage your terms, course t
 
 ## Permissions 
 
-The following are all the permissions for Courses in the Settings app:
-* **Settings (Courses): Can create, edit and delete course settings.** This permission allows users to maintain (view, add, edit, and delete) all course settings.
-* **Settings (Courses): Can view course settings.** This permission allows users to view course settings. They cannot add, edit or delete course settings.
+Each setting within Courses has its own permission / capability set associated with it. If a user has one of the below capability sets, they will be able to view and interact with that particular setting. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app.
+
+
+To add a capability or capability set to an Authorization role: 
+
+Select all applications to ensure access to all capabilities.
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
+
+The following are all the Settings > Courses capability sets:
+
+| Permission Display    Name (OKAPI)                              | Resource (EUREKA)        | Type     | Action | Description                                                                                                |
+|-----------------------------------------------------------------|--------------------------|----------|--------|------------------------------------------------------------------------------------------------------------|
+| Settings (Courses): Can create, edit and delete course settings | UI-Courses Settings      | Data     | Manage | This capability set allows users to maintain (view, add, edit, and delete) all course settings.            |
+| Settings (Courses): Can view course settings                    | UI-Courses Settings View | Settings | View   | This capability set allows users to view course settings. They cannot add, edit or delete course settings. |
 
 
 ## Settings > Courses > Display settings
