@@ -1,7 +1,7 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2025-03-26
+date: 2025-05-06
 weight: 550
 ---
 
@@ -11,21 +11,27 @@ weight: 550
 The Bulk Edit app allows a user to apply changes to multiple Inventory or User records simultaneously. A maximum of 100,000 records is allowed for bulk edit.
 
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with the Bulk Edit app and determine what you can or cannot do within the app. Bulk edit permissions, combined with other functional app permissions, allow a user to access specific areas of the Bulk Edit app. See [Bulk edit permissions](https://folio-org.atlassian.net/wiki/spaces/FOLIJET/pages/1399042/Bulk+edit+permissions) for more information.
+The Eureka platform, adopted in the Sunflower release, replaces permission sets with **Capabilities** and **Capability sets** for role-based management of user accounts. For more information about **Capabilities** and **Capability sets**, see [Roles Management with Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-Permissions are assigned to users in the Users app. If none of the Bulk edit permissions are assigned to a user, they are unable to see the Bulk Edit app or any related information. See [Users \> Assign or unassign permissions](../users/#assign-or-unassign-permissions) for more information about assigning permissions to a user. 
+The following **Capabilities** allow interaction with the Bulk edit app.
 
-The following are the permissions for the Bulk edit app:
+For all Bulk edit capabilities:
 
-- **Bulk edit: Can build query**: This permission allows the user to build and test a query, and preview matched records in the Bulk edit app. 
-- **Bulk edit: Can view logs** This permission allows the user to download and view logs in the Bulk Edit app.
-- **Bulk edit: In app - Edit inventory records** This permission allows the user to edit a field in multiple inventory records in the Bulk Edit app.
-- **Bulk edit: In app - Edit user records**. This permission allows the user to edit a field in multiple user records in the Bulk edit app. 
-- **Bulk edit: In app - View inventory records** This permission allows the user to view a list of identified inventory records in the Bulk Edit app. 
-- **Bulk edit: Local - Edit user records** This permission allows the user to edit a field in multiple identified user records in the Bulk Edit app by uploading a .csv file.
-- **Bulk edit: Local - View user records** This permission allows the user to view a list of identified user records in Bulk Edit by uploading a .csv file.
+- **Application** is *app-bulk-edit*.
+
+| permissionDisplayName (OKAPI) | Capability/Capability Set (EUREKA) | Type | ApplicationID | Action | 
+| :—--: | :—--: | :-----: | :-----: | :-----: |
+| *Bulk edit: In app - Edit inventory records* | *UI-Bulk-Edit Inventory* (ui-bulk-edit_inventory.edit) | Data | app-bulk-edit | Edit | 
+| *Bulk edit” In app - View inventory records* | *UI-Bulk-Edit Inventory* | Data | app-bulk-edit | View | 
+| *Bulk edit: Can view logs* (ui-bulk-edit.logs.view) | UI-Bulk-Edit Logs | Data | app-bulk-edit | View |
+| *Bulk edit: Can build query* (ui-bulk-edit.query.execute) | *UI-Bulk-Edit Query* | Procedural | app-bulk-edit | Execute |
+| *Bulk edit: Local - Edit user records* | *UI-Bulk-Edit Users Csv* | Data | app-bulk-edit | Edit | 
+| *Bulk Edit: Local - View user records* | *UI-Bulk-Edit Users Csv* | Data | app-bulk-edit | View |
+| *Bulk Edit: In app - Edit user records* | *UI-Bulk-Edit Users* (ui-bulk-edit_users.edit) | Data | app-bulk-edit | Edit | 
+| *Bulk Edit: View base permissions* | *UI-Bulk-Edit Base-View* (ui-bulk-edit_base-view.manage) | Data | app-bulk-edit | Manage |
+| *Bulk Edit: View edit permissions* | *UI-Bulk-Edit Base-Edit | Data | app-bulk-edit | Manage |
 
 
 ## Supported fields by record type
@@ -37,14 +43,13 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 - [Inventory - items](#inventory---items)
 - [Users](#users)
 
+See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJdW) for more information.
+
+
 ### Inventory - holdings
 
 | *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
 | :----- | :-----: | :-----: | 
-| *Effective library - Code* | YES | YES |
-| *Effective library - Name* | YES | YES |
-| *Effective location - Code* | YES | YES 
-| *Effective location - Name* | YES | YES |
 | *Holdings - Acquisition method* | YES | YES |
 | *Holdings - Acquisition order format* | YES | YES |
 | *Holdings - Acquisition receipt status* | YES | YES |
@@ -73,6 +78,10 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 | *Holdings - Tags* | NO | YES |
 | *Holdings - Updated date* | YES | YES |
 | *Holdings - UUID* | YES | YES |
+| *Effective library - Code* | YES | YES |
+| *Effective library - Name* | YES | YES |
+| *Effective location - Code* | YES | YES 
+| *Effective location - Name* | YES | YES |
 | *Permanent location - Code* | YES | YES |
 | *Permanent location - Name* | YES | YES | 
 | *Temporary location - Code* | YES | YES |
@@ -92,8 +101,11 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 | *Instance - Date 2* | YES | YES |
 | *Instance - Editions* | NO | YES |
 | *Instance - Electronic access* | NO | YES |
+| *Instance - Flag for deletion* | NO | YES | 
 | *Instance - Format names* | YES | YES |
 | *Instance - Identifiers* | NO | YES |
+| *Instance - Index title* | YES | YES |
+| *Instance - Instance format UUIDs* | NO | YES | 
 | *Instance - Instance HRID* | YES | YES |
 | *Instance - Instance UUID* | YES | YES |
 | *Instance - Languages* | YES | YES | 
@@ -125,38 +137,40 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 
 | *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matched records? |
 | :----- | :-----: | :-----: |
+| *Items - Accession number* | YES | YES |
+| *Items - Administrative notes* | NO | YES |
+| *Items - Barcode* | YES | YES | 
+| *Items - Chronology* | YES | YES |
+| *Items - Copy number* |  YES | YES | 
+| *Items - Created date* | YES | YES | 
+| *Items - Description of pieces* | YES | YES |
+| *Items - Effective call number* | YES | YES |
+| *Items - Effective shelving order* | YES | YES |
+| *Items - Electronic access* | NO | YES |
+| *Items - Enumeration* | YES | YES |
+| *Items - Former IDs* | NO | YES |
+| *Items - Item call number* | YES | YES |
+| *Items - Item call number prefix* | YES | YES | 
+| *Items - item call number suffix* | YES | YES |
+| *Items - Item HRID* | YES | YES |
+| *Items - Item UUID* | YES | YES |
+| *Items - Last check in date time* | YES | YES |
+| *Items - Notes* | NO | YES |
+| *Items - Number of missing pieces* | YES | YES |
+| *Items - Number of pieces* | YES | YES |
+| *Items - Purchase order line identifier* | YES | YES |
+| *Items - Statistical code* | YES | YES |
+| *Items - Status* | YES | YES | 
+| *Items - Status date* | YES | YES |
+| *Items - Suppress from discovery* | YES | YES |
+| *Items - Updated date* | YES | YES |
+| *Items - Tags* | NO | YES |
+| *Items - Version* | YES | YES |
+| *Items - Volume* | YES | YES |
+| *Items - Year caption* | NO | YES | 
+| *Item call number - Type* | YES | YES |
 | *Effective call number - Type* | YES | YES |
-| *Effective library - Code* | YES | YES |
-| *Effective library - Name* | YES | YES |
-| *Effective location - Code* | YES | YES 
-| *Effective location - Name* | YES | YES |
-| *Holdings - Acquisition method* | YES | YES |
-| *Holdings - Acquisition order format* | YES | YES |
-| *Holdings - Acquisition receipt status* | YES | YES |
-| *Holdings - Call number* | YES | YES |
-| *Holdings - Call number prefix* | YES | YES |
-| *Holdings - Call number suffix* | YES | YES |
-| *Holdings - Copy number* | YES | YES |
-| *Holdings - Created date* | YES | YES |
-| *Holdings - Digitization policy* | YES | YES |
-| *Holdings - Electronic access* | NO | YES |
-| *Holdings - Former IDs* | NO | YES |
-| *Holdings - HRID* | YES | YES |
-| *Holdings - Instance UUID* | YES | YES | 
-| *Holdings - Notes* | NO | YES |
-| *Holdings - Number of items* | YES | YES |
-| *Holdings - Record version* | YES | YES |
-| *Holdings - Retention policy* | YES | YES |
-| *Holdings - Shelving title* | YES | YES |
-| *Holdings - Statements* | NO | YES |
-| *Holdings - Statements for indexes* | NO | YES |
-| *Holdings - Statements for supplements* | NO | YES |
-| *Holdings - Statistical code names* | YES | YES |
-| *Holdings - Statistical code UUIDs* | NO | YES |
-| *Holdings - Suppress from discovery* | YES | YES |
-| *Holdings - Tags* | NO | YES |
-| *Holdings - Updated date* | YES | YES |
-| *Holdings - UUID* | YES | YES |
+| *Material type - Name* | YES | YES |
 | *Instances - Administrative notes* | NO | YES |
 | *Instances - Alternative titles* | NO | YES |
 | *Instances - Cataloged date* | YES | YES | 
@@ -190,38 +204,48 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 | *Instances - Subject headings* | NO | YES |
 | *Instances - Suppress from discovery* | YES | YES |
 | *Instances - Tags* | NO | YES |
-| *Instances - Updated date* | YES | YES | 
-| *Item call number - Type* | YES | YES |
-| *Items - Accession number* | YES | YES |
-| *Items - Administrative notes* | NO | YES |
-| *Items - Barcode* | YES | YES | 
-| *Items - Chronology* | YES | YES |
-| *Items - Copy number* |  YES | YES | 
-| *Items - Created date* | YES | YES | 
-| *Items - Description of pieces* | YES | YES |
-| *Items - Effective call number* | YES | YES |
-| *Items - Effective shelving order* | YES | YES |
-| *Items - Electronic access* | NO | YES |
-| *Items - Enumeration* | YES | YES |
-| *Items - Item call number* | YES | YES |
-| *Items - Item HRID* | YES | YES |
-| *Items - Item UUID* | YES | YES |
-| *Items - Last check in date time* | YES | YES |
-| *Items - Notes* | NO | YES |
-| *Items - Number of missing pieces* | YES | YES |
-| *Items - Number of pieces* | YES | YES |
-| *Items - Purchase order line identifier* | YES | YES |
-| *Items - Statistical code* | YES | YES |
-| *Items - Status* | YES | YES | 
-| *Items - Suppress from discovery* | YES | YES |
-| *Items - Updated date* | YES | YES |
-| *Items - Tag list* | NO | YES |
-| *Items - Version* | YES | YES |
-| *Material type - Name* | YES | YES |
+| *Instances - Updated date* | YES | YES |
+| *Holdings - Acquisition method* | YES | YES |
+| *Holdings - Acquisition order format* | YES | YES |
+| *Holdings - Acquisition receipt status* | YES | YES |
+| *Holdings - Administrative notes* | NO | YES | 
+| *Holdings - Call number* | YES | YES |
+| *Holdings - Call number prefix* | YES | YES |
+| *Holdings - Call number suffix* | YES | YES |
+| *Holdings - Copy number* | YES | YES |
+| *Holdings - Created date* | YES | YES |
+| *Holdings - Digitization policy* | YES | YES |
+| *Holdings - Electronic access* | NO | YES |
+| *Holdings - Former IDs* | NO | YES |
+| *Holdings - HRID* | YES | YES |
+| *Holdings - Instance UUID* | YES | YES | 
+| *Holdings - Notes* | NO | YES |
+| *Holdings - Number of items* | YES | YES |
+| *Holdings - Record version* | YES | YES |
+| *Holdings - Retention policy* | YES | YES |
+| *Holdings - Shelving title* | YES | YES |
+| *Holdings - Statements* | NO | YES |
+| *Holdings - Statements for indexes* | NO | YES |
+| *Holdings - Statements for supplements* | NO | YES |
+| *Holdings - Statistical code names* | YES | YES |
+| *Holdings - Statistical code UUIDs* | NO | YES |
+| *Holdings - Suppress from discovery* | YES | YES |
+| *Holdings - Tags* | NO | YES |
+| *Holdings - Updated date* | YES | YES |
+| *Holdings - UUID* | YES | YES |
+| *Effective library - Code* | YES | YES |
+| *Effective library - Name* | YES | YES |
+| *Effective location - Code* | YES | YES 
+| *Effective location - Name* | YES | YES | 
 | *Permanent location - Code* | YES | YES |
 | *Permanent location - Name* | YES | YES | 
 | *Temporary location - Code* | YES | YES |
 | *Temporary location - Name* | YES | YES |
+| *Permanent loan type - Name* | YES | YES |
+| *Permanent loan type - UUID* | YES | YES |
+| *Temporary loan type - Name* | YES | YES |
+| *Temporary loan type - UUID* | YES | YES |
+
 
 ### Users
 
@@ -242,13 +266,14 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 | *User - Expiration date* | YES | YES |
 | *User - External system ID* | YES | YES |
 | *User - First name* | YES | YES |
-| *User - Last name* | NO | YES |
+| *User - Last name* | YES | YES |
 | *User - Last name, first name* | YES | YES |
 | *User - Middle name* | YES | YES |
 | *User - Mobile phone* | YES | YES |
 | *User - Phone* | YES | YES |
 | *User - Preferred contact type* | YES | YES |
 | *User - Preferred first name* | YES | YES |
+| *User - Pronouns* | YES | YES |
 | *User - Proxy for* | NO | YES | 
 | *User - Tags tag list* | NO | YES |
 | *User - Type* | YES | YES |
@@ -258,6 +283,8 @@ In the Bulk edit app, the **Fields** available for building a query and displayi
 | *User - User updated date* | YES | YES |
 | *User - User UUID* | YES | YES |
 | *User - Username* | YES | YES |
+
+**Custom fields** for User records, if configured, are available for building a query and displaying as column headings in the Bulk edit app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
 
 
 ## Identify records for bulk edit
@@ -297,7 +324,7 @@ To set criteria for bulk edit using **Identifier**:
 | *Inventory - items* | Item HRIDs |
 | *Inventory - items* | Item former identifiers |
 | *Inventory - items* | Item accession numbers |
-| *Inventory - items* | Holdings UUID |
+| *Inventory - items* | Holdings UUIDs |
 | *Users* | User UUIDs |
 | *Users* | User Barcodes |
 | *Users* | External IDs |
@@ -324,26 +351,33 @@ To set criteria and identify records for bulk edit using the **Query** method:
 4. Select a **Field** from the *Select field* drop-down menu or filter the selection by typing the field in the *Filter options list* text box. The **Fields** available for selection are based on the **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information.  
 5. Select an **Operator** from the *Select operator* drop-down list. The **Operators** available for selection are based on the **Field**. 
 
+
 | Operator | Meaning |
 | :----- | :----- |
 | *equals* | Field equals selected or input value. |
 | *not equal to* | Field does not equal selected or input value. |
-| *contains* | Field appears in selected or input value. |
+| *contains* | Field (with a single value) contains characters that match the selected or input value. |
+| *contains all* | Field (that can contain multiple values) matches all selected or input values. |
+| *not contains all* | Field (that can contain multiple values) does not contain all selected or input values. |
+| *contains any* | Field (that can contain multiple values) matches any selected or input values. |
+| *not contains any* | Field (that can contain multiple values) does not contain any selected or input values. |
 | *starts with* | Field starts with selected or input value. |
-| *is greater than* | Field is greater than the selected or input value. |
-| *is less than* | Field is less than the selected or input value. |
-| *is greater than or equal to* | Field is greater than or equal to the selected or input value. |
-| *is less than or equal to* | Field is less than or equal to the selected or input value. |
+| *greater than* | Field is greater than the selected or input value. |
+| *less than* | Field is less than the selected or input value. |
+| *greater than or equal to* | Field is greater than or equal to the selected or input value. |
+| *less than or equal to* | Field is less than or equal to the selected or input value. |
 | *is null/empty* | Field is blank; the field does not contain any data. |
+
 
 6. Select a **Value** from the *Select value* drop-down list or type the value in the text box.  The values available for selection are based on the **Field** and **Operator**.
 7. Click on the **+ icon** to add additional lines to the query or click on the **trash can icon** to delete a line from the query.
 8. Once a query is built, it must be tested before the query can be run and saved. Click the **Test query** button to run the query and display a preview of matched records. 
 
-   - If the query returns more than 100,000 records, this message appears: *Warning: this query returns more records than the maximum allowed. Modify the query to limit your results.*
+   - If the query returns more than 100,000 records, this message appears: *Warning: this query returns more records than the maximum allowed. Modify the query to limit your results.* A **warning** message indicates a problem with the matched record data that should be addressed prior to completing the bulk edit. See [Bulk Edit Errors and Warnings](https://folio-org.atlassian.net/wiki/x/soep) for more information.
+
    - The query string can be edited in the **Query string** field. If edited, another Test query must be done.
      
-9. If the Test query is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
+9. If the **Test query** is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
 
 ### Preview matched records
 
@@ -368,7 +402,7 @@ If desired, download the matched records as a .csv file:
 
 ### Download errors
 
-If there are errors in the matched records, a message indicating the filename, number of entries, number of records matched, and number of errors displays in a two-column table in the **Errors** section. 
+If there are errors in the matched records, a message indicating the filename, number of entries, number of records matched, and number of errors displays in a two-column table in the **Errors** section. An **error** indicates that the bulk edit record update was prevented. See [Bulk Edit Errors and Warnings](https://folio-org.atlassian.net/wiki/x/soep) for more information.
 
 - **Record identifier.** The record identifier for the records that produced the error.
 - **Reason for error.** The reason why the error was produced.
@@ -384,11 +418,11 @@ To download the list of errors as a .csv file:
 
 In the Bulk edit app, the **Fields** that can be changed in Holdings records include:
 
-- [Administrative note](#administrative-note)
+- [Administrative note](#administrative-data)
+- [Suppress from discovery](#administrative-data)
 - [Electronic access](#electronic-access)
 - [Holdings location](#holdings-location)
 - [Holdings notes](#holdings-notes)
-- [Suppress from discovery](#suppress-from-discovery)
 
 To identify **Inventory-holdings** records for bulk edit:
 
@@ -401,21 +435,24 @@ To identify **Inventory-holdings** records for bulk edit:
 Once **Inventory-holdings** records are identified, you can start a bulk edit on the matching records. The **Options** and **Actions** available to perform the bulk edit vary for each **Field**. 
 
 
-#### Administrative note
+#### Administrative data
 
-To bulk edit the **Administrative note** in the matched **Inventory-holdings** records:
+To bulk edit the **Administrative data** in the matched **Inventory-holdings** records:
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select **Administrative note** from the drop-down list.
 3. Click **Actions** to select the action you want to apply from the drop-down list. The following **Actions** are available to bulk edit the **Administrative note** field:
 
-| Option | Actions | Data | Actions | Data |
+| Option | Actions | Data | Actions | Data | 
 | :----- | :----- | :----- | :----- | :----- |
-| *Administrative note* | Add note | Text field | - | - |
-| *Administrative note* | Change note type | Select note type | - | - |
-| *Administrative note* | Find (full field search) | Input text | Remove | - |
-| *Administrative note* | Find (full field search)  | Input text | Replace with | Input text |
-| *Administrative note* | Find (full field search)  | Remove all | - | - | 
+| *Administrative data - Administrative note* | Add note | Text field | - | - |
+| *Administrative data - Administrative note* | Change note type | Select note type | - | - |
+| *Administrative data - Administrative note* | Find | Input text | Remove | - |
+| *Administrative data - Administrative note* | Find | Input text | Replace with | Input text |
+| *Administrative data - Administrative note* | Remove all | - | - | - |
+| *Administrative data - Suppress from discovery* | Set false | - | - | - |
+| *Administrative data - Suppress from discovery* | Set true | - | - | - |
+
    
 4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
 5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
@@ -440,24 +477,24 @@ To bulk edit the **Electronic access** in the matched **Inventory-holdings** rec
 | Option | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
 | *Electronic access - Link text* | Clear field | - | - | - |
-| *Electronic access - Link text* | Find (full field search) | Input text | Remove | - |
-| *Electronic access - Link text* | Find (full field search) | Input text | Replace with | Input text | 
+| *Electronic access - Link text* | Find | Input text | Remove | - |
+| *Electronic access - Link text* | Find | Input text | Replace with | Input text | 
 | *Electronic access - Link text* | Replace with | Input text | - | - |
 | *Electronic access - Materials specified* | Clear field | - | - | - |
-| *Electronic access - Materials specified* | Find (full field search) | Input text | Remove | - | - |
-| *Electronic access - Materials specified* | Find (full field search) | Input text | Replace with | Input text | 
+| *Electronic access - Materials specified* | Find | Input text | Remove | - | - |
+| *Electronic access - Materials specified* | Find | Input text | Replace with | Input text | 
 | *Electronic access - Materials specified* | Replace with | Input text | - | - |
 | *Electronic access - URI* | Clear field | - | - | - |
-| *Electronic access - URI* | Find (full field search) | Input text | Remove | - | - |
-| *Electronic access - URI* | Find (full field search) | Input text | Replace with | Input text |
+| *Electronic access - URI* | Find | Input text | Remove | - | - |
+| *Electronic access - URI* | Find | Input text | Replace with | Input text |
 | *Electronic access - URI* | Replace with | Input text | - | - |
 | *Electronic access - URL public note* | Clear field | - | - | - |
-| *Electronic access - URL public note* | Find (full field search) | Input text | Remove | - | - |
-| *Electronic access - URL public note* | Find (full field search) | Input text | Replace with | Input text |
+| *Electronic access - URL public note* | Find | Input text | Remove | - | - |
+| *Electronic access - URL public note* | Find | Input text | Replace with | Input text |
 | *Electronic access - URL public note* | Replace with | Input text | - | - |
 | *Electronic access - URL relationship* | Clear field | - | - | - |
-| *Electronic access - URL relationship* | Find (full field search) | Input text | Remove | - | - |
-| *Electronic access - URL relationship* | Find (full field search) | Input text | Replace with | Input text |
+| *Electronic access - URL relationship* | Find | Input text | Remove | - | - |
+| *Electronic access - URL relationship* | Find | Input text | Replace with | Input text |
 | *Electronic access - URL relationship* | Replace with | Input text | - | - |
 
 4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
@@ -512,41 +549,13 @@ The following **Options** and **Actions** are available to bulk edit the **Holdi
 
 | Option | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
-| *Holdings notes - Access restrictions* | Add note | Input text, *Staff only* check box | - | - |
-| *Holdings notes - Access restrictions* | Change note type | Select note type | - | - |
-| *Holdings notes - Access restrictions* | Find (full field search) | Input text | Remove | - |
-| *Holdings notes - Access restrictions* | Find (full field search) | Input text | Replace with | Input text |
-| *Holdings notes - Access restrictions* | Mark as staff only | - | - | - |
-| *Holdings notes - Access restrictions* | Remove all | - | - | - |
-| *Holdings notes - Access restrictions* | Remove mark as staff only | - | - | - |
-| *Holdings notes - Binding* | Add note | Text field, *Staff only* check box | - | - |
-| *Holdings notes - Binding* | Change note type | Select note type | - | - |
-| *Holdings notes - Binding* | Find (full field search) | Input text | Remove | - |
-| *Holdings notes - Binding* | Find (full field search) | Input text | Replace with | Input text |
-| *Holdings notes - Binding* | Mark as staff only | - | - | - |
-| *Holdings notes - Binding* | Remove all | - | - | - |
-| *Holdings notes - Binding* | Remove mark as staff only | - | - | - |
-| *Holdings notes - Copy note* | Add note | Input text, Staff only check box | - | - |
-| *Holdings notes - Copy note* | Change note type | Select note type | - | - |
-| *Holdings notes - Copy note* | Find (full field search) | Input text | Remove | - |
-| *Holdings notes - Copy note* | Find (full field search) | Input text | Replace with | Input text |
-| *Holdings notes - Copy note* | Mark as staff only | - | - | - |
-| *Holdings notes - Copy note* | Remove all | - | - | - |
-| *Holdings notes - Copy note* | Remove mark as staff only | - | - | - |
-| *Holdings notes - Electronic bookplate* | Add note | Input text, *Staff only* check box | - | - |
-| *Holdings notes - Electronic bookplate* | Change note type | Select note type | - | - |
-| *Holdings notes - Electronic bookplate* | Find (full field search) | Input text | Remove | - |
-| *Holdings notes - Electronic bookplate* | Find (full field search) | Input text | Replace with | Input text |
-| *Holdings notes - Electronic bookplate* | Mark as staff only | - | - | - |
-| *Holdings notes - Electronic bookplate* | Remove all | - | - | - |
-| *Holdings notes - Electronic bookplate* | Remove mark as staff only | - | - | - |
-| *Holdings notes - Note* | Add note | Input text, *Staff only* check box | - | - |
-| *Holdings notes - Note* | Change note type | Select note type | - | - |
-| *Holdings notes - Note* | Find (full field search) | Input text | Remove | - |
-| *Holdings notes - Note* | Find (full field search) | Input text | Replace with | Input text |
-| *Holdings notes - Note* | Mark as staff only | - | - | - |
-| *Holdings notes - Note* | Remove all | - | - | - |
-| *Holdings notes - Note* | Remove mark as staff only | - | - | - |
+| *Holdings notes - Select option* | Add note | Input text, *Staff only* check box | - | - |
+| *Holdings notes - Select option* | Change note type | Select note type | - | - |
+| *Holdings notes - Select option* | Find | Input text | Remove | - |
+| *Holdings notes - Select option* | Find | Input text | Replace with | Input text |
+| *Holdings notes - Select option* | Mark as staff only | - | - | - |
+| *Holdings notes - Select option* | Remove all | - | - | - |
+| *Holdings notes - Select option* | Remove mark as staff only | - | - | - |
 
 4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
 5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
