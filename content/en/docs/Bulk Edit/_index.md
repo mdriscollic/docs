@@ -1,7 +1,7 @@
 ---
 title: "Bulk Edit"
 linkTitle: "Bulk Edit"
-date: 2025-05-06
+date: 2025-05-07
 weight: 550
 ---
 
@@ -21,22 +21,22 @@ For all Bulk edit capabilities:
 
 - **Application** is *app-bulk-edit*.
 
-| permissionDisplayName (OKAPI) | Capability/Capability Set (EUREKA) | Type | ApplicationID | Action | 
-| :—--: | :—--: | :-----: | :-----: | :-----: |
-| *Bulk edit: In app - Edit inventory records* | *UI-Bulk-Edit Inventory* (ui-bulk-edit_inventory.edit) | Data | app-bulk-edit | Edit | 
-| *Bulk edit” In app - View inventory records* | *UI-Bulk-Edit Inventory* | Data | app-bulk-edit | View | 
-| *Bulk edit: Can view logs* (ui-bulk-edit.logs.view) | UI-Bulk-Edit Logs | Data | app-bulk-edit | View |
-| *Bulk edit: Can build query* (ui-bulk-edit.query.execute) | *UI-Bulk-Edit Query* | Procedural | app-bulk-edit | Execute |
-| *Bulk edit: Local - Edit user records* | *UI-Bulk-Edit Users Csv* | Data | app-bulk-edit | Edit | 
-| *Bulk Edit: Local - View user records* | *UI-Bulk-Edit Users Csv* | Data | app-bulk-edit | View |
-| *Bulk Edit: In app - Edit user records* | *UI-Bulk-Edit Users* (ui-bulk-edit_users.edit) | Data | app-bulk-edit | Edit | 
-| *Bulk Edit: View base permissions* | *UI-Bulk-Edit Base-View* (ui-bulk-edit_base-view.manage) | Data | app-bulk-edit | Manage |
-| *Bulk Edit: View edit permissions* | *UI-Bulk-Edit Base-Edit | Data | app-bulk-edit | Manage |
+| permissionDisplayName (OKAPI) | Capability/Capability Set (EUREKA) | Type | Action | 
+| :-----: | :-----: | :-----: | :-----: | 
+| *Bulk edit: In app - Edit inventory records* | *UI-Bulk-Edit Inventory* | Data | Edit | 
+| *Bulk edit: In app - View inventory records* | *UI-Bulk-Edit Inventory* | Data | View | 
+| *Bulk edit: Can view logs* | *UI-Bulk-Edit Logs* | Data | View |
+| *Bulk edit: Can build query* | *UI-Bulk-Edit Query* | Procedural | Execute |
+| *Bulk edit: Local - Edit user records* | *UI-Bulk-Edit Users Csv* | Data | Edit | 
+| *Bulk Edit: Local - View user records* | *UI-Bulk-Edit Users Csv* | Data | View |
+| *Bulk Edit: In app - Edit user records* | *UI-Bulk-Edit Users* | Data | Edit | 
+| *Bulk Edit: View base permissions* | *UI-Bulk-Edit Base-View* | Data | Manage |
+| *Bulk Edit: View edit permissions* | *UI-Bulk-Edit Base-Edit* | Data | Manage |
 
 
 ## Supported fields by record type
 
-In the Bulk edit app, the **Fields** available for building a query and displaying as column headings in the preview of matched records depend on the **Record type** selected for the bulk edit. See the appropriate table for more information about supported fields by record type: 
+In the Bulk edit app, the **Fields** available for building a query and displaying as column headings in the preview of matching records depend on the **Record type** selected for the bulk edit. See the appropriate table for more information about supported fields by record type: 
 
 - [Inventory - holdings](#inventory---holdings)
 - [Inventory - instances](#inventory---instances)
@@ -48,7 +48,7 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 
 ### Inventory - holdings
 
-| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matching records? |
 | :----- | :-----: | :-----: | 
 | *Holdings - Acquisition method* | YES | YES |
 | *Holdings - Acquisition order format* | YES | YES |
@@ -89,7 +89,7 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 
 ### Inventory - instances
 
-| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matched records? |
+| *Field name* in Bulk edit app | Available for Build query? | Available as column heading in preview of matching records? |
 | :----- | :-----: | :-----: |
 | *Instance - Administrative notes* | NO | YES |
 | *Instance - Alternative titles* | NO | YES |
@@ -135,7 +135,7 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 
 ### Inventory - items
 
-| *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matched records? |
+| *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matching records? |
 | :----- | :-----: | :-----: |
 | *Items - Accession number* | YES | YES |
 | *Items - Administrative notes* | NO | YES |
@@ -181,8 +181,11 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 | *Instances - Date 2* | YES | YES |
 | *Instances - Editions* | NO | YES |
 | *Instances - Electronic access* | NO | YES |
+| *Instances - Flag for deletion* | NO | YES | 
 | *Instances - Format names* | YES | YES |
 | *Instances - Identifiers* | NO | YES |
+| *Instances - Index title* | YES | YES |
+| *Instances - Instance format UUIDs* | NO | YES | 
 | *Instances - Instance HRID* | YES | YES |
 | *Instances - Instance UUID* | YES | YES |
 | *Instances - Languages* | YES | YES | 
@@ -250,7 +253,7 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 ### Users
 
 
-| *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matched records? |
+| *Field name* in Bulk edit app | Available for **Build query**? | Available as column heading in preview of matching records? |
 | :----- | :-----: | :-----: |
 | *Patron group - Name* | YES | YES |
 | *User - Active* | YES | YES |
@@ -371,19 +374,19 @@ To set criteria and identify records for bulk edit using the **Query** method:
 
 6. Select a **Value** from the *Select value* drop-down list or type the value in the text box.  The values available for selection are based on the **Field** and **Operator**.
 7. Click on the **+ icon** to add additional lines to the query or click on the **trash can icon** to delete a line from the query.
-8. Once a query is built, it must be tested before the query can be run and saved. Click the **Test query** button to run the query and display a preview of matched records. 
+8. Once a query is built, it must be tested before the query can be run and saved. Click the **Test query** button to run the query and display a preview of matching records. 
 
-   - If the query returns more than 100,000 records, this message appears: *Warning: this query returns more records than the maximum allowed. Modify the query to limit your results.* A **warning** message indicates a problem with the matched record data that should be addressed prior to completing the bulk edit. See [Bulk Edit Errors and Warnings](https://folio-org.atlassian.net/wiki/x/soep) for more information.
+   - If the query returns more than 100,000 records, this message appears: *Warning: this query returns more records than the maximum allowed. Modify the query to limit your results.* A **warning** message indicates a problem with the matching record data that should be addressed prior to completing the bulk edit. See [Bulk Edit Errors and Warnings](https://folio-org.atlassian.net/wiki/x/soep) for more information.
 
    - The query string can be edited in the **Query string** field. If edited, another Test query must be done.
      
-9. If the **Test query** is successful, click the **Run query** button to run the query and preview the matched records in the **Bulk edit query** modal.
+9. If the **Test query** is successful, click the **Run query** button to run the query and preview the matching records in the **Bulk edit query** modal.
 
-### Preview matched records
+### Preview matching records
 
-If the **Identifier** method is used to identify records for bulk edit, the number of records matched and the filename display at the top of the **Bulk edit** modal. 
+If the **Identifier** method is used to identify records for bulk edit, the number of records matching and the filename display at the top of the **Bulk edit** modal. 
 
-If the **Query** method is used to identify records for bulk edit, a **Test query** displays the query string and number of matched records at the top of the **Build query** modal. If the query is run, the **Query** and a preview of matched records display in the **Bulk edit query** modal. 
+If the **Query** method is used to identify records for bulk edit, a **Test query** displays the query string and number of matching records at the top of the **Build query** modal. If the query is run, the **Query** and a preview of matching records display in the **Bulk edit query** modal. 
 
 **The maximum number of records allowed for bulk edit is 100,000.** If more than 100,000 records are identified, the query or list of record identifiers must be modified in order to perform the bulk edit.
 
@@ -393,16 +396,16 @@ To add or remove **Field** columns in the preview pane:
 2. In the **Show columns** section of the Actions menu, check the box next to the name of the **Field** to include as a column heading in the preview. The **Fields** available for display as column headings are based on the selected **Record type**. See [Supported fields by record type](#supported-fields-by-record-type) for more information about available column headings. 
 3. Uncheck the box next to the name of the **Field** to remove the column from the preview.
 
-### Download matched records
+### Download matching records
 
-If desired, download the matched records as a .csv file:
+If desired, download the matching records as a .csv file:
    
-1. In the **Preview** pane, click **Actions** and select **Download matched records (CSV)**.
+1. In the **Preview** pane, click **Actions** and select **Download matching records (CSV)**.
 2. Depending on the web browser settings, the .csv file may be opened and/or saved. 
 
 ### Download errors
 
-If there are errors in the matched records, a message indicating the filename, number of entries, number of records matched, and number of errors displays in a two-column table in the **Errors** section. An **error** indicates that the bulk edit record update was prevented. See [Bulk Edit Errors and Warnings](https://folio-org.atlassian.net/wiki/x/soep) for more information.
+If there are errors in the matching records, a message indicating the filename, number of entries, number of records matching, and number of errors displays in a two-column table in the **Errors** section. An **error** indicates that the bulk edit record update was prevented. See [Bulk Edit Errors and Warnings](https://folio-org.atlassian.net/wiki/x/soep) for more information.
 
 - **Record identifier.** The record identifier for the records that produced the error.
 - **Reason for error.** The reason why the error was produced.
@@ -416,34 +419,38 @@ To download the list of errors as a .csv file:
 
 ### Inventory - holdings
 
-In the Bulk edit app, the **Fields** that can be changed in Holdings records include:
+In the Bulk edit app, the **Fields** that can be changed simultaneously in multiple Inventory-holdings records include:
 
-- [Administrative note](#administrative-data)
-- [Suppress from discovery](#administrative-data)
+- [Administrative data](#administrative-data)
 - [Electronic access](#electronic-access)
-- [Location](#location)
 - [Holdings notes](#holdings-notes)
+- [Location](#location)
 
-To identify **Inventory-holdings** records for bulk edit:
+To identify Inventory-holdings records for bulk edit:
 
 1. In the **Set criteria** pane, ensure **Record types** is set to **Inventory - holdings**.
 2. [Identify holdings records for bulk edit](#identify-records-for-bulk-edit) by using the **Identifier** or **Query** method.
-3. [Preview the list of matched holdings records](#preview-matched-records) in the **Preview of record matched** pane.
-4. (Optional): [Download the matched holdings records](#download-matched-records) as a .csv file.
-5. (Optional): [Download errors in matched holdings records](#download-errors) as a .csv file.
+3. [Preview the list of matching holdings records](#preview-matching-records) in the **Preview of record matching** pane.
+4. (Optional): [Download the matching holdings records](#download-matching-records) as a .csv file.
+5. (Optional): [Download errors in matching holdings records](#download-errors) as a .csv file.
 
-Once **Inventory-holdings** records are identified, you can start a bulk edit on the matching records. The **Options** and **Actions** available to perform the bulk edit vary for each **Field**. 
+Once Inventory-holdings records are identified, you can start a bulk edit on the matching records. The **Options** and **Actions** available to perform the bulk edit vary for each **Field**. 
 
 
 #### Administrative data
 
-To bulk edit the **Administrative note** or the **Suppress from discovery** fields in the matched **Inventory-holdings** records:
+The **Administrative data** fields in Inventory-holdings records include: 
+
+- Administrative note
+- Suppress from discovery
+  
+To bulk edit an **Administrative data** field in the matching Inventory-holdings records:
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Click **Actions** to select the action you want to apply from the drop-down list. The following **Actions** are available to bulk edit the **Administrative data** fields:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Administrative data** fields:
 
-| Option | Actions | Data | Actions | Data | 
+| Options | Actions | Data | Actions | Data | 
 | :----- | :----- | :----- | :----- | :----- |
 | *Administrative data - Administrative note* | Add note | Text field | - | - |
 | *Administrative data - Administrative note* | Change note type | Select note type | - | - |
@@ -461,20 +468,19 @@ To bulk edit the **Administrative note** or the **Suppress from discovery** fiel
 
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
-
-8. Click **Commit changes** to save the changes to the matched **Inventory-holdings** records.
+8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 #### Electronic access
 
-To bulk edit the **Electronic access** in the matched **Inventory-holdings** records:
+To bulk edit the **Electronic access** field in the matching Inventory-holdings records:
 
-1. Click the **Actions \> Start bulk edit**.
+1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the holdings records. The following **Options** and **Actions** are available to bulk edit the **Electronic access** field in the matching **Inventory-holdings** records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Electronic access** field in the matching Inventory-holdings records:
 
-| Option | Actions | Data | Actions | Data |
+| Options | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
 | *Electronic access - Link text* | Clear field | - | - | - |
 | *Electronic access - Link text* | Find | Input text | Remove | - |
@@ -504,23 +510,33 @@ To bulk edit the **Electronic access** in the matched **Inventory-holdings** rec
    
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
-
-8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device. Click **Commit changes** to save the changes to the matched holdings records. 
+8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device. 
 
 
 #### Holdings notes
 
-To bulk edit a **Holdings note** in the matched **Inventory-holdings** records:
+The following types of **Holdings notes** can be edited in the matching Inventory-holdings records:
+
+- Action note
+- Binding
+- Copy note
+- Custom note (if configured in your tenant)
+- Electronic bookplate
+- New note type
+- Note
+- Provenance
+- Receiving note
+- Reproduction
+
+To bulk edit a **Holdings note** in the matching Inventory-holdings records:
 
 1. Click the **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the holdings records. 
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Holdings-notes** field in the matching Inventory-holdings records:
 
-The following **Options** and **Actions** are available to bulk edit the **Holdings-notes** field in the matching Holdings records:
-
-| Option | Actions | Data | Actions | Data |
+| Options | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
 | *Holdings notes - Select option* | Add note | Input text, *Staff only* check box | - | - |
 | *Holdings notes - Select option* | Change note type | Select note type | - | - |
@@ -537,20 +553,20 @@ The following **Options** and **Actions** are available to bulk edit the **Holdi
    
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to save the changes to the matched holdings records.
+   - Click **Commit changes** to save the changes to the matching holdings records.
      
 8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 
 #### Location
 
-To bulk edit the **Location** in the matched **Inventory-holdings** records:
+To bulk edit the **Location** in the matching Inventory-holdings records:
 
 1. Click the **Actions \> Start bulk edit**.
-2. Under **Options**, select the **Field** you want to edit from the drop-down menu.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the **Inventory-holdings** records. The following **Options** and **Actions** are available to bulk edit the **Location** field in the matching Holdings records:
+2. Under **Options**, select the **Field** you want to edit from the drop-down list.
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Location** field in the matching Inventory-holdings records:
 
-| Option | Actions | Data | 
+| Options | Actions | Data | 
 | :----- | :----- | :----- | 
 | *location - Permanent holdings location* | Replace with | Select location from drop-down or *Location lookup* | 
 | *location - Temporary holdings location* | Clear field | - |
@@ -563,9 +579,8 @@ To bulk edit the **Location** in the matched **Inventory-holdings** records:
    
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
-     
 8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device. 
 
 
@@ -575,7 +590,7 @@ The **Administrative data**, **Instance notes**, and **0xx-9xx** fields (with th
 
 #### FOLIO Instances
 
-**Administrative data** fields and **Instance notes** in **FOLIO Instance** records can be edited in the Bulk edit app. 
+**Administrative data** fields and **Instance notes** in FOLIO Instance records can be edited in the Bulk edit app. 
 
 ##### Administrative data
 
@@ -586,13 +601,13 @@ The **Administrative data** fields of FOLIO Instance records include:
 - Statistical code
 - Suppress from discovery
 
-To perform a bulk edit on an **Administrative data** field: 
+To bulk edit an **Administrative data** field in the matching FOLIO Instance records: 
 
 1. Click **Actions \> Start bulk edit \> FOLIO Instances**.
-2. Under **Options**, select the **Field** you want to edit from the drop-down menu.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the FOLIO Instance records. The following **Actions** are available to bulk edit the **Administrative data** fields in the matching FOLIO Instance records:
+2. Under **Options**, select the **Field** you want to edit from the drop-down list.
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Administrative data** fields in the matching FOLIO Instance records:
 
-| Option | Actions | Data | Actions | Data |
+| Options | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
 | *Administrative data - Administrative note* | Add note | Text field | - | - |
 | *Administrative data - Administrative note* | Change note type | Select note type | - | - |
@@ -615,17 +630,17 @@ To perform a bulk edit on an **Administrative data** field:
 
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching Instance records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
 8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 ##### Instance note
 
-To perform a bulk edit on the **Instance note** field in the matched FOLIO Instance records:
+To bulk edit the **Instance note** field in the matching FOLIO Instance records:
 
 1. Click **Actions \> Start bulk edit \> FOLIO Instances**.
 2. Under **Options**, select the **Instance note** from the drop-down list.
-3. Click **Actions** to select the action you want to apply from the drop-down list. The following **Actions** are available to bulk edit the **Instance note** field in the matching Instance records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Instance note** field in the matching FOLIO Instance records:
 
 | Option | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
@@ -644,7 +659,7 @@ To perform a bulk edit on the **Instance note** field in the matched FOLIO Insta
 
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching Instance records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
 8. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
@@ -662,7 +677,7 @@ In the Bulk edit app, the following **Administrative data** and **MARC** fields 
 
 ##### Administrative data
 
-To bulk edit the **Administrative data** fields in the matched Instance records:
+To bulk edit the **Administrative data** fields in the matching Instances with source MARC records:
 
 1. Click **Actions \> Start bulk edit \> Instances with source MARC**.
 2. In the **Bulk edits for administrative data** section, select an option from the **Options** list.
@@ -690,20 +705,20 @@ To bulk edit the **Administrative data** fields in the matched Instance records:
 
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching Instance records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
-8. Click **Commit changes** to save the changes to the matched Instance records.
+8. Click **Commit changes** to save the changes to the matching Instance records.
 
 
 ##### MARC
 
-To bulk edit MARC fields in **Instance with source MARC** records:
+To bulk edit MARC fields in the matching Instances with source MARC records:
 
 1. Click **Actions \> Start bulk edit \> Instances with source MARC**.
 2. In the **Bulk edits for instances with source MARC** section, input the **Field** tag. **0xx-9xx fields** are supported; 00x and the system protected 999 ff fields are not supported for bulk edit.
 3. Change **indicators 1 and 2** as required.
 4. Indicate **subfield**.
-5. Select the action you want to apply from the **Actions** list. The following **Actions** are available to bulk edit the **5xx** or **9xx** fields in the matching Instance records:
+5. Select the action you want to apply from the **Actions** list. The following **Actions** are available to bulk edit the **0xx-9xx**  fields in the matching Instances with source MARC records:
 
 | Field | ln. 1 | ln. 2| Subfield | Actions | Data | Actions | Data | 
 | :----- | :----- | :----- | :----- | :----- | :----- | :----- | :----- | 
@@ -717,32 +732,32 @@ To bulk edit MARC fields in **Instance with source MARC** records:
 
 6. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
 7. To remove a field, click the **trash can icon** at the end of the row you want to remove.
-8. Click **Confirm changes**. The selected action will be applied to the matched instance records. A new window will appear with a preview of the first 10 records to be changed.
+8. Click **Confirm changes**. The selected action will be applied to the matching instance records. A new window will appear with a preview of the first 10 records to be changed.
 9. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
 
    - To return to the bulk edit, click **Keep editing**. The modal will close and you can continue editing.
    - To preview the entire list of records, click **Download preview**. A .csv file is downloaded to your local device.
-   - Click **Commit changes** to apply the bulk edit changes to the matched holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
+   - Click **Commit changes** to apply the bulk edit changes to the matching holdings records. The modal closes and the message at the top of the **Bulk edit** pane displays the number of successfully changed records.
 
 10. To download the list of changed records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 
 ### Inventory - items
 
-In the Bulk edit app, the **Fields** that can be changed in **Inventory-item** records include:
+In the Bulk edit app, the **Fields** that can be changed simultaneously in multiple Inventory-item records include:
 
-- [Administrative data](#administrative-data)
+- [Administrative data](#administrative-data-3)
 - [Item notes](#item-notes)
 - [Loan and availability](#loan-and-availability)
-- [Location](#Location)
+- [Location](#location-1)
 
 To identify **Inventory-item** records for bulk edit:
 
 1. In the **Set criteria** pane, ensure **Record types** is set to **Inventory - items**.
 2. [Identify item records for bulk edit](#identify-records-for-bulk-edit) by using the **Identifier** or **Query** method.
-3. [Preview the list of matching item records](#preview-matched-records) in the **Preview of record matched** pane.
-4. (Optional): [Download the matched item records](#download-matched-records) as a .csv file.
-5. (Optional): [Download errors in the matched item records](#download-errors) as a .csv file.
+3. [Preview the list of matching item records](#preview-matching-records) in the **Preview of record matching** pane.
+4. (Optional): [Download the matching item records](#download-matching-records) as a .csv file.
+5. (Optional): [Download errors in the matching item records](#download-errors) as a .csv file.
 
 
 #### Administrative data
@@ -752,11 +767,11 @@ The **Administrative data** fields of Inventory-item records that can be edited 
 - Administrative note
 - Suppress from discovery
   
-To bulk edit an **Administrative data** field in the matched **Inventory-items** records:
+To bulk edit an **Administrative data** field in the matching **Inventory-items** records:
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down menu.
-3. Under **Actions**, **Select action** you want to apply to the Item records. The following **Actions** are available to bulk edit the **Administrative note** field in the matching Item records:
+3. Under **Actions**, Select the action you want to apply to the Item records. The following **Actions** are available to bulk edit the **Administrative note** field in the matching Item records:
 
 | Option | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- |
@@ -774,91 +789,41 @@ To bulk edit an **Administrative data** field in the matched **Inventory-items**
 7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
    
    - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
-
-8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
-
-#### Check in note
-
-To bulk edit the **Check in note** in the matched item records:
-
-1. Click **Actions \> Start bulk edit**.
-2. Under **Options**, click the drop-down list and select the field you want to edit.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the Item records. The following **Actions** are available to bulk edit the **Check in note** field in the matching Item records:
-
-| Option | Actions | Data | Actions | Data |
-| :----- | :----- | :----- | :----- | :----- | 
-| *Check in note* | Add note | Input text; *Staff only* checkbox | - | - |
-| *Check in note* | Change note type | Select value | - | - |
-| *Check in note* | Duplicate to | - | - | - |
-| *Check in note* | Find (full field search) | Input text | Remove | - |
-| *Check in note* | Find (full field search) | Input text | Replace with | Input text |
-| *Check in note* | Mark as staff only | - | - | - |
-| *Check in note* | Remove all | - | - | - |
-| *Check in note* | Remove mark as staff only | - | - | - |
-
-4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
-5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
-6. Click **Confirm changes**. A new window will appear with a preview of the first 10 item records to be changed.
-7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
-   
-   - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
-
-8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
-
-
-#### Check out note
-
-To bulk edit the **Check out note** in the matched Item records:
-
-1. Click **Actions \> Start bulk edit**.
-2. Under **Options**, click the drop-down list and select the field you want to edit.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Check out note** field in the matching Item records:
-
-| Option | Actions | Data | Actions | Data |
-| :----- | :----- | :----- | :----- | :----- |
-| *Check out note* | Add note | Input text; *Staff only* checkbox | - | - |
-| *Check out note* | Change note type | Select value | - | - |
-| *Check out note* | Duplicate to | - | - | - |
-| *Check out note* | Find (full field search) | Input text | Remove | - |
-| *Check out note* | Find (full field search) | Input text | Replace with | Input text |
-| *Check out note* | Mark as staff only | - | - | - |
-| *Check out note* | Remove all | - | - | - |
-| *Check out note* | Remove mark as staff only | - | - | - |
-
-4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
-5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
-6. Click **Confirm changes**. A new window will appear with a preview of the first 10 item records to be changed.
-7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
-   
-   - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
+   - To preview the entire list of matching item records, click **Download preview**. A .csv file is downloaded to your local device.
+   - To run the bulk edit and save changes to the matching item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
 
 8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 
 #### Item notes
 
-To bulk edit an **Item note** in the matched **Inventory-item** records:
+The following types of **Item notes** can be edited in the matching Inventory-item records:
+
+- Action note
+- Binding
+- Copy note
+- Custom note (if configured in your tenant)
+- Electronic bookplate
+- New note type
+- Note
+- Provenance
+- Reproduction
+  
+To bulk edit an **Item note** in the matching Inventory-item records:
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, click the drop-down list and select the field you want to edit.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Item note** field in the matching **Item** records:
+3. Under **Actions**, click **Select action** and select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Item note** field in the matching Inventory-item records:
 
-| Option | Actions | Data | Actions | Data |
+| Options | Actions | Data | Actions | Data |
 | :----- | :----- | :----- | :----- | :----- | 
-| *Item note* | Add note | Input text; *Staff only* checkbox | - | - |
-| *Item note* | Change note type | Select value | - | - |
-| *Item note* | Duplicate to | - | - | - |
-| *Item note* | Find (full field search) | Input text | Remove | - |
-| *Item note* | Find (full field search) | Input text | Replace with | Input text |
-| *Item note* | Mark as staff only | - | - | - |
-| *Item note* | Remove all | - | - | - |
-| *Item note* | Remove mark as staff only | - | - | - |
+| *Item notes - select option* | Add note | Input text; *Staff only* checkbox | - | - |
+| *Item notes - select option* | Change note type | Select value | - | - |
+| *Item notes - select option* | Find | Input text | Remove | - |
+| *Item notes - select option* | Find | Input text | Replace with | Input text |
+| *Item notes - select option* | Mark as staff only | - | - | - |
+| *Item notes - select option* | Remove all | - | - | - |
+| *Item notes - select option* | Remove mark as staff only | - | - | - |
 
 4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
 5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
@@ -866,58 +831,50 @@ To bulk edit an **Item note** in the matched **Inventory-item** records:
 7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
    
    - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
+   - To preview the entire list of matching item records, click **Download preview**. A .csv file is downloaded to your local device.
+   - To run the bulk edit and save changes to the matching item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
 
 8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 
-#### Item status
+#### Loan and availability
 
-To bulk edit the **item status** field in the matched **Inventory-item** records:
+The following **Loan and availability** fields can be edited in the Bulk edit app:
 
-1. Click **Actions \> Start bulk edit**.
-2. Under **Options**, select **Item status**.
-3. Under **Actions**, *Replace with* is pre-selected and is the only action available for changing **Item status**.
-4. Under **Data**, select a new **Item status** from the *Select item status* drop-down:
+- Check in note
+- Check out note
+- Item status
+- Permanent loan type
+- Temporary loan type
 
-   - *Available*
-   - *Missing*
-   - *Withdrawn*
-   - *In process*
-   - *In process (non-requestable)*
-   - *Intellectual item*
-   - *Long missing*
-   - *Restricted*
-   - *Unavailable*
-   - *Unknown*
-
-5. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
-6. To remove a field, click the **trash can icon** at the end of the row you want to remove.
-7. Click **Confirm changes**. A new window will appear with a preview of the first 10 item records to be changed.
-8. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
-   
-   - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
-
-9. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
-
-#### Loan type
-
-To bulk edit the **Loan type** in the matched **Inventory-item** records:
+To bulk edit the **Loan and availability** fields in the matching Inventory-item records:
 
 1. Click **Actions \> Start bulk edit**.
-2. Under **Options**, select **Loan type**.
-3. Under **Actions**, select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Loan type** field in the matching Item records. Note that *Replace with* is preselected and is the only Action available for changing **Permanent loan type**.
+2. Under **Options**, select the field you want to edit from the drop-down list.
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Loan and availability** fields in the matching Item records:
 
-| Option | Actions | Data |
-| :----- | :----- | :----- |
-| Permanent loan type | *Replace with* (pre-selected) | Select Loan type |
-| Temporary loan type | Clear field | - |
-| Temporary loan type | Replace with | Select Loan type |
-
-**Loan types** are configured in Settings \> Inventory. See [Settings \> Inventory \> Loan types](../settings/settings_inventory/settings_inventory/#settings--inventory--loan-types) for more information. 
+| Options | Actions | Data | Actions | Data |
+| :----- | :----- | :----- | :----- | :----- |
+| *Check in note* | Add note | Input text; *Staff only* checkbox | - | - |
+| *Check in note* | Change note type | Select option | - | - |
+| *Check in note* | Duplicate to | *Check out note* (pre-selected) | - | - |
+| *Check in note* | Find | Input text | Remove | - |
+| *Check in note* | Find | Input text | Replace with | Input text |
+| *Check in note* | Mark as staff only | - | - | - |
+| *Check in note* | Remove all | - | - | - |
+| *Check in note* | Remove mark as staff only | - | - | - |
+| *Check out note* | Add note | Input text; *Staff only* checkbox | - | - |
+| *Check out note* | Change note type | Select option | - | - |
+| *Check out note* | Duplicate to | *Check in note* (pre-selected)- | - | - |
+| *Check out note* | Find | Input text | Remove | - |
+| *Check out note* | Find | Input text | Replace with | Input text |
+| *Check out note* | Mark as staff only | - | - | - |
+| *Check out note* | Remove all | - | - | - |
+| *Check out note* | Remove mark as staff only | - | - | - |
+| *Item status* | *Replace with* (pre-selected) | Select item status |
+| *Permanent loan type* | *Replace with* (pre-selected) | Select loan type |
+| *Temporary loan type* | Clear field | - |
+| *Temporary loan type* | Replace with | Select loan type |
 
 4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
 5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
@@ -925,25 +882,31 @@ To bulk edit the **Loan type** in the matched **Inventory-item** records:
 7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
    
    - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
+   - To preview the entire list of matching item records, click **Download preview**. A .csv file is downloaded to your local device.
+   - To run the bulk edit and save changes to the matching item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
 
 8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
+
 
 #### Location
 
-To bulk edit the **Location** in the matched **Inventory-item** records:
+The following **Location** fields can be edited in the matching Inventory-item records:
+
+- Permanent loan type
+- Temporary loan type
+  
+To bulk edit a **Location** field in the matching Inventory-item records:
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the field you want to edit.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Location** field in the matching **Inventory-item** records:
+3. Under **Actions**, click select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Location** field in the matching **Inventory-item** records:
 
-| Option | Actions | Data |
+| Options | Actions | Data |
 | :----- | :----- | :----- |
-| Permanent location | Clear field | - |
-| Permanent location | Replace with | Select Location from drop-down or *Location lookup* |
-| Temporary location | Clear field | - |
-| Temporary location | Replace with | Select Location from drop-down or *Location lookup* |
+| *Permanent item location* | Clear field | - |
+| *Permanent item location* | Replace with | Select location from drop-down or *Location lookup* |
+| *Temporary item location* | Clear field | - |
+| *Temporary item location* | Replace with | Select Location from drop-down or *Location lookup* |
 
 **Locations** are configured in Settings \> Tenant. See [Settings \> Tenant \> Location setup](../settings/settings_tenant/settings_tenant/#settings--tenant--location-setup) for more information. 
 
@@ -953,59 +916,38 @@ To bulk edit the **Location** in the matched **Inventory-item** records:
 7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
    
    - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
+   - To preview the entire list of matching item records, click **Download preview**. A .csv file is downloaded to your local device.
+   - To run the bulk edit and save changes to the matching item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
 
 8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
-#### Suppress from discovery
-
-To suppress the matched **Inventory-item** records from discovery in the Bulk edit app:
-
-1. Click **Actions \> Start bulk edit**.
-2. Under **Options**, click the drop-down list and select the field you want to edit.
-3. Under **Actions**, select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Suppress from discovery** field in the matching Item records:
-
-   - Set false.
-   - Set true.
-
-4. To edit an additional field during the same bulk edit job, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
-5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
-6. Click **Confirm changes**. A new window will appear with a preview of the first 10 item records to be changed.
-7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
-   
-   - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
-
-8. To download the list of changed item records, click the **Actions** button at the top right of the pane. Select **Download changed records (CSV)**. The .csv file is downloaded to your local device.
 
 ### Users
 
-In the Bulk edit app, it is possible to change any and all fields in multiple user records simultaneously, depending on which method is used to identify matching records.
+In the Bulk edit app, it is possible to change any and all fields in multiple User records simultaneously, depending on which method is used to identify matching records.
 
 - **Start bulk edit**: Allows editing of the **Email**, **Expiration date**, and the **Patron group** fields within the Bulk edit app. This approach is available in the **Identifier** and the **Query** methods.
-- **Start bulk edit (Local)**: Allows editing of any and all fields of the matching user records by applying changes via an external .csv file uploaded to the Bulk edit app. This approach is available in the **Identifier** approach only. 
+- **Start bulk edit (Local)**: Allows editing of any and all fields of the matching User records by applying changes via an external .csv file uploaded to the Bulk edit app. This approach is available in the **Identifier** approach only. 
 
 To identify **User** records for bulk edit:
 
 1. In the **Set criteria** pane, ensure **Record types** is set to **Users**.
 2. [Identify user records for bulk edit](#identify-records-for-bulk-edit) by using the **Identifier** or **Query** method.
-3. [Preview the list of matching user records](#preview-matched-records) in the **Preview of record matched** pane. 
-4. (Optional): [Download the matched user records](#download-matched-records) as a .csv file.
-5. (Optional): [Download errors in matched user records](#download-errors) as a .csv file.
+3. [Preview the list of matching user records](#preview-matching-records) in the **Preview of record matching** pane. 
+4. (Optional): [Download the matching user records](#download-matching-records) as a .csv file.
+5. (Optional): [Download errors in matching user records](#download-errors) as a .csv file.
 
 #### Start bulk edit
 
 The **Start bulk edit** approach allows bulk edit to change the **Email**, **Expiration Date**, and **Patron Group** fields in matching user records. Bulk edit may be performed on each of these fields individually or simultaneously. The **Start bulk edit** approach is available in the **Identifier** and **Query** methods for identifying matching user records.
 
-The **Options** and **Actions** available to perform bulk edit on matched **User records** depend on the selected **Field**.
+The **Options** and **Actions** available to perform bulk edit on matching User records depend on the selected **Field**.
 
 1. Click **Actions > Start bulk edit**. 
-2. Under **Options**, click the drop-down list and select the field you want to edit.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the user records. The following **Actions** are available to bulk edit the matching **User** records:
+2. Under **Options**, select the **Field** you want to edit from the drop-down list.
+3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the matching **User** records:
 
-| Option | Action | Data | Action | Data |
+| Options | Action | Data | Action | Data |
 | :----- | :----- | :----- | :----- | :----- |
 | *Email* | *Find* (pre-selected) | Input text | *Replace with* (pre-selected) | Input text |
 | *Expiration date* | *Replace with* (pre-selected) | Input date | - | - |
@@ -1013,29 +955,29 @@ The **Options** and **Actions** available to perform bulk edit on matched **User
 
 4. To edit an additional field, click the **+ sign** near the end of the row. Another row will appear under the existing row(s).
 5. To remove a field, click the **trash can icon** at the end of the row you want to remove.
-6. Click **Confirm changes**. A new window will appear with a preview of the first 10 item records to be changed.
+6. Click **Confirm changes**. A new window will appear with a preview of the first 10 records to be changed.
 7. The **Preview of records to be changed** will appear in the *Are you sure?* modal with options of **Keep editing**, **Download preview**, or **Commit changes**.
    
    - To return to the bulk edit, click **Keep editing**. The window will close and you can continue editing.
-   - To preview the entire list of matched item records, click **Download preview**. A .csv file is downloaded to your local device.
-   - To run the bulk edit and save changes to the matched item records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
+   - To preview the entire list of matching User records, click **Download preview**. A .csv file is downloaded to your local device.
+   - To run the bulk edit and save changes to the matching User records, click **Commit changes**. The window closes and the banner at top of the **Bulk edit** pane displays the number of records successfully changed.
 
 8. To change the column headings in the **Preview of record changed** table, click **Actions** and select or deselect the fields in the **Show columns** list as appropriate.
-9. To download the list of changed user records, click **Actions > Download changed records (CSV)**. 
+9. To download the list of changed User records, click **Actions > Download changed records (CSV)**. 
 
 
 #### Start bulk edit (Local)
 
-The **Start bulk edit (Local)** function allows the user to perform a bulk edit on user records edited locally (external to FOLIO) by uploading a .csv file of the changed, or edited, user records. Any and all fields in user records can be changed using the **Bulk edit (Local)** approach.
+The **Start bulk edit (Local)** function allows the user to perform a bulk edit on User records edited locally (external to FOLIO) by uploading a .csv file of the changed, or edited, user records. Any and all fields in user records can be changed using the **Bulk edit (Local)** approach.
 
-To perform bulk edit on user records using the **Start bulk edit (Local)** approach: 
+To bulk edit User records using the **Start bulk edit (Local)** approach: 
 
-1. After identifying user records, click **Actions \> Download matched records (CSV)** to download a .csv file of the matched user records; or select **Actions \> Download errors (CSV)** to download a .csv file of records that did not match your selected record identifier.
+1. After identifying user records, click **Actions \> Download matching records (CSV)** to download a .csv file of the matching user records; or select **Actions \> Download errors (CSV)** to download a .csv file of records that did not match your selected record identifier.
 2. Edit the downloaded .csv file and make changes to the user records in the file itself. Save the edited .csv file to your computer.
 3. Click **Actions \> Start bulk edit (Local)**.
 4. In the **Bulk edit** window, **Drag and drop** the .csv file into the **Upload CSV file with edited records** box, or click **or choose file** to upload the .csv file from your computer. If the .csv file is uploaded successfully, the confirmation message, *(Name of File).csv successfully uploaded*, displays in a new window.
 5. Click **Next**. The warning message, *(Number of) records will be updated if the **Commit changes** button is clicked.* appears in a new window.
-6. Click **Commit changes**. Bulk edit will apply and save the local changes to the matched user records in FOLIO.
+6. Click **Commit changes**. Bulk edit will apply and save the local changes to the matching user records in FOLIO.
 
 ## Logs
 
@@ -1091,12 +1033,15 @@ To download a file associated with a bulk edit log:
 2. Select the appropriate action from the **Download** drop-down list. The types of files available for download depend on the method used to identify records for bulk edit, the type of records changed, and/or the presence of errors during the matching or bulk edit process. 
 
    - **File that was used to trigger the bulk edit**
-   - **File with identifiers of the records affected by bulk update**
-   - **File with the preview of proposed changes**
+   - **File with the matching records**
+   - **File with the preview of proposed changes (CSV)**
+   - **File with the preview of proposed changes (MARC)**
+   - **File with errors encountered when committing the changes**
+   - **File with the identifiers of the records affected by bulk update**
    - **File with errors encountered during the record matching**
-   - **File with updated records**
-   - **File with errors encountered when committing the changes**.
-   - **File with errors encountered during the record matching**
+   - **File with updated records (CSV)**
+   - **File with updated records (MARC)**
+
 
 3. Depending on the web browser settings, the file can be opened and/or saved to your computer. 
 
