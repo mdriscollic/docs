@@ -1,17 +1,18 @@
 ---
 title: "Serials Management"
 linkTitle: "Serials Management"
-date: 2024-11-14
+date: 2025-04-23
 weight: 55
 tags: ["parenttopic"]
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
 
-The Serials app allows to create serial records that store information about the status of the order, the title in the Receiving app, a description, a purchase order (PO) line and notes. The app also allows to create publication patterns and generate predicted piece sets. The recieving pieces you generate in the Serials app are shared with the Receiving app. 
+The Serials app allows to create serial records that store information about the status of the order, the title in the Receiving app, a description, a purchase order (PO) line and notes. The app also allows to create publication patterns and generate predicted piece sets. The receiving pieces you generate in the Serials app are shared with the Receiving app. 
 To create a serial it is necessary to create an order and PO line in the Orders app in advance. 
 
 Definition of terms related to the Serials app:
 
+*   **Combination rules.** Combination rules can be applied to combine issues in a publication cycle.
 *   **Cycle length.** The amount of time it takes for a single cycle of the publication pattern to complete.
 *   **Days of publication, per cycle.** The day(s) on which an issue is published, within one cycle of the publication pattern.
 *   **Label.** Labels define the enumeration and chronology for the issues of a serial. 
@@ -19,30 +20,33 @@ Definition of terms related to the Serials app:
 *   **Pattern ID.** Is a unique ID that refers to a created publication pattern.
 *   **Piece sets.** A predicted piece set shows information like date generated, pattern ID and a list of the next expected issues.
 *   **Publication cycle.** This records how often issues are published, how many are published in that time and on what days they are published. 
-*   **Publication pattern.** This sets up everything about the expected publications of a serial so that it can generate the appropriate issues and label them correctly.
+*   **Publication pattern.** This sets up everything about the expected publications of a serial so that it can generate the appropriate pieces and label them correctly.
 *   **Serial.** A serial record provides a way of linking together various pieces of information for a serial like order line, publication pattern and predicted piece sets.
 *   **Template.** A template defines how values from the enumeration and chronology labels are to be used in each predicted piece. 
 *   **Token.** In a template, tokens are used as a placeholder for different labels of the publication pattern.
 
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with the Serials app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Serials app or any related information.
+The capabilities listed below allow you to interact with the Serials app and determine what you can or cannot do within the app. You can assign capabilities to users in the Settings in Authorization roles. If none of these capabilities are assigned to a user, they are unable to see the Serials app or any related information.
 
-Serials permissions:
+| Permission Display Name (OKAPI) | Resource (EUREKA) | Type | Action | Description |
+| :-----: |:-----: |:-----: |:-----: |:-----: |
+| Serials: Create predicted pieces | UI-Serials-Management Predictedpieces | data | edit | Grants all capabilities included in Serials: Search & view predicted pieces plus the ability to creatre predicted pieces based on publication patterns. |
+| Serials: Delete predicted pieces | UI-Serials-Management Predictedpieces | data | delete | Grants all capabilities included in Serials: Search & view predicted pieces plus the ability to delete predicted pieces that are not linked to receiving pieces. |
+| Serials: Edit publication patterns | UI-Serials-Management Rulesets | data | edit | Grants all capabilities included in Serials: Edit serials plus the ability to create publication patterns. |
+| Serials: Edit serials | UI-Serials-Management Serials | data | edit | Grants all capabilities included in Serials: Search & view serials plus the ability to edit serials. It does not include the ability to create Publication patterns. |
+| Serials: Manage publication pattern templates | UI-Serials-Management Modelrulesets | data | manage | Grants capabilities to create and delete publication pattern templates. |
+| Serials: Manage serials | UI-Serials-Management Serials | data | manage | Grants all capabilities included in Serials: Edit serials plus the ability to delete serials. |
+| Serials: Search & view predicted pieces |  UI-Serials-Management Predictedpieces | data | view | Grants all capabilities included in Serials: Search & view serials plus the ability to search and view predicted pieces. |
+| Serials: Search & view serials | UI-Serials-Management Serials | data | view | A user with this capability set can search and view existing serials. This includes the capability to see and access the Serials app in the Folio interface and capability to view publication patterns. |
+| Settings (Serials): Manage pick lists and values | UI-Serials-Management Picklists | data | manage | Grants all capabilities included in 'Settings (Serials): View pick lists and values' plus the ability to manage pick lists and pick list values. |
+| Settings (Serials): View pick lists and values | UI-Serials-Management Picklists | data | view |  A user with this capability set can access the settings for the Serials app and view pick lists and pick list values. |
+| Settings (Service-interaction): View number generator settings and use number generators within apps | UI-Service-Interaction NumberGenerator | data | view | A user with this capability set can view number generator settings and use number generators within apps. |
+| Settings (Service-interaction): Manage number generator settings and use number generators within apps | UI-Service-Interaction NumberGenerator | data | manage | A user with this capability set can manage number generator settings and use number generators within apps. |
 
-*    **Serials: Create predicted pieces.** This permission allows the user to generate predicted pieces.
-*    **Serials: Delete predicted pieces.** This permission allows the user to delete predicted pieces.
-*    **Serials: Edit publication patterns.** This permission allows the user to edit publication patterns.
-*    **Serials: Edit serials.** This permission allows the user to edit serial records.
-*    **Serials: Search & view predicted pieces.** This permission allows the user to search and view predited pieces. 
-*    **Serials: Search & view serials.** This permission allows the user to search and view predicted pieces.
-*    **Settings (Serials): Manage pick lists and values.** This permission allows the user to manage pick lists and values in the settings.
-*    **Settings (Serials): View pick lists and values.** This permission allows the user to view pick lists and values in the settings.
-*    **Settings (Service-interaction). View number generator settings and use number generators within apps.** 
-*    **Settings (Service-interaction). Manage number generator settings and use number generators within apps.** View, create, edit, delete number generators and sequences.
+Note: Only one of the service-interaction capabilities is required for the user to be able to work with the Serials app. 
 
-Note: Only one of the service-interaction permissions is required for the user to be able to work with the Serials app. 
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](../../platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
@@ -78,17 +82,21 @@ To add a publication pattern, you first need to create a serial. A serial record
 
 3. Select **Status (required)**, active or deprecated or draft, and add an optional description. 
 
-4. Fill in the **Publication cycle**.
+4. Fill in the **Puclication cycle** manually or search for a **pattern template** name or description. When using the pattern template search, select the pattern from the list to apply the template and have it fill out the form below with predefined values. Check that all required fields are filled in. Steps 7 to 9 are not usually necessary if you are using the pattern template search, unless you want to adjust the pattern.
 
 5. Optional: Add **Omission rules** when you would like to remove indivual issues in your publication cycle.
 
 6. Optional: Add **Combination rules**, which can be applied to combine sequences of issues into a single issue. 
 
-7. **Add label(s)**, which have two **label styles (required)**: chronology and enumeration. Use the **template (required)** to display the order of the specified labels correctly in the intended publication pattern.
-  
-8. Optional: **Preview** your publication pattern.
+7. **Add chronology labels**.
 
-9. **Save & Close** 
+8. **Add enumeration labels**.
+
+9. Fill in the **Template** to display the order of the specified labels correctly in the intended publication pattern.
+  
+10. Optional: **Preview** your publication pattern.
+
+11. **Save & Close** 
 
 ### Publication cycle
 
@@ -179,18 +187,28 @@ For example, a combinded July and August issue of a monthly published publicatio
 * Total number of issues to combine: 2
 
 ### Define labelling
-1. Click **Add label**.
+#### Chronology labels
 
-2. Choose the **label style** for your first label. Choose from **Chronology** or **Enumeration**:
-    * Chronology: Fill in Chronology format (Date, Month, Year) and Locale
-        * Weekday format: Monday, MONDAY, Mon, MON
-        * Month day format: 3, 3rd
-        * Month format: October, 10, Oct
-        * Year format: 2024, 24 
-        
-    * Enumeration: Fill in Enumeration format (Enumeration Numeric or Enumeration Textual)
-    
-        *Numeric:*
+1. Click **Chronology label** and **Add chronology label**. 
+
+2. Fill in Chronology format (Date, Month, Year) and Locale
+    * Weekday format: Monday, MONDAY, Mon, MON
+    * Month day format: 3, 3rd
+    * Month format: October, 10, Oct
+    * Year format: 2024, 24 
+
+3. If required, add another label with **Add chronology label**.
+
+4. After the label has been filled in, the required template tokens are automatically displayed below and can be copied by clicking on the clipboard icon. Use the **Template** field to specify how the values from the chronology labels are to be used in each predicted piece. 
+
+
+
+#### Enumeration labels
+1. Click **Enumeration label** and **Add enumeration label**.
+
+2. Fill in Enumeration format (Enumeration Numeric or Enumeration Textual)
+
+    * *Numeric:*
         * No. of units 
         * Format: Number (1, 2, 3), Ordinal (1st, 2nd 3rd), Roman numerals (I, II, III)
         * Sequence: Continuous, Reset
@@ -198,21 +216,24 @@ For example, a combinded July and August issue of a monthly published publicatio
         
         Click **Add level** if your label contains more than one enumeration, e.g. volume and issue.
         
-        *Textual:*
+    * *Textual:*
         * Pick list: e.g. Season 
         * No. of issues
         * Label text
         * Internal note
         
         Click **Add value** if your label contains more than one textual enumeration.
+        
+3. If required, add another label with **Add chronology label**.
 
-3. If required, add another label with **Add label**.
+4. After the label has been filled in, the required template tokens are automatically displayed below and can be copied by clicking on the clipboard icon. Use the **Template** field to specify how the values from the enumeration labels are to be used in each predicted piece. 
 
-4. Use the **Template** field to specify how values from the enumeration and chronology labels are to be used in each predicted piece. 
 
 #### Using templates
 
-Writing a templates requires you to know to include the appropriate values from each chronology and enumeration label you have setup. To use a value from an enumeration or chronology in the template, you will need to put a token in double curly braces in the template. The token will identify which enumeration or chronology label is being used, and which part of the label is being used. All other text in the template (i.e. text not in double curly braces) will be treated as simple text that should be included. 
+When using a pre-defined template pattern by using the template pattern search, the template field is already filled in automatically. If you wish, you can still change the template.
+
+Writing a template manually requires you to know to include the appropriate values from each chronology and enumeration label you have set up. To use a value from an enumeration or chronology in the template, you will need to put a token in double curly braces in the template. The token will identify which enumeration or chronology label is being used, and which part of the label is being used. All other text in the template (i.e. text not in double curly braces) will be treated as simple text that should be included. 
 
 By clicking **Preview** it is possible to preview the labels for the publication pattern to make sure the expected pieces will be labeled and generated correctly.
 
@@ -287,7 +308,7 @@ To generate receiving pieces, you first need to generate predicted pieces.
 
 2. If there are locations or holdings for the linked PO line you are able to select location or holding for the receiving pieces. 
 
-3. Fill in **Time between publication and receipt (days) (required)**. This describes the time interval between the date that the piece is published and when it is recieved at the location.
+3. Fill in **Time between publication and receipt (days) (required)**. This describes the time interval between the date that the piece is published and when it is received at the location.
 
 4. Select **Supplement** if the piece is a supplementary material such as a CD or a map.
 

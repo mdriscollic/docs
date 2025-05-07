@@ -699,7 +699,7 @@ There are two ways to add an e-resource from the basket to agreement lines:
 
 1. Click the **View X item(s)** button to open the basket.
 2. Select or unselect the items in the basket you wish to add to agreement lines using the checkboxes to the left of the resources in the basket.
-3. Select **Create new agreement** to add the selected resource(s) to a completely new agreement (one agreement line per resource selected), or select the appropriate agreement from the drop-down list of existing agreements and click **Add to selected agreement** to add the selected resource(s) to an existing agreement (one agreement line per resource selected).
+3. Select **Create new agreement** to add the selected resource(s) to a completely new agreement (one agreement line per resource selected), or click **Select agreement** and use the Search & filter plugin to add the selected resource(s) to an existing agreement (one agreement line per resource selected).
 4. The agreement for which the agreement lines have been created (whether this is a new or existing agreement) is displayed in the agreement view screen.
 
 
@@ -1024,6 +1024,7 @@ You can view packages in e-resources by clicking on **Packages** in the **Search
 In the Packages pane, click an e-resource package to view it. The e-resource package details pane displays with additional information about the e-resource package, depending on the data that has been added to the internal KB. All packages will have a Provider, Source and Reference. They will also display when the record was created and when it was last updated. In addition packages may have:
 
 * A Status: For example, Current or Deleted.
+* Synchronisation status: Synchronising or Paused. 
 * Content type: A list of content types in the package, for example, Serial, Monograph, or Video.
 * Availability: The general availability of the package, for example, Global or Consortium, and any constraints on availability, such as the specific Consortia it is available to.
 * Source created: The date and time the package was created in the external source the package data came from.
@@ -1108,12 +1109,26 @@ Packages can be further filtered by:
 
 * External data source: Select an external data source from the drop-down list. 
 * Status
+* Synchronization status
 * Scope
 * Availability
 * Content type
 * Tags: Select a tag(s) from the drop-down list, or search for one by typing the tag’s name. 
 
 The values for Status, Scope, Availability, and Content type can be configured in [Settings \> Agreements \> Pick list values](../../settings/settings_agreements/settings_agreements/#settings--agreements--pick-list-values). 
+
+
+#### Synchronizing select package data to Agreements local KB from GOKb
+
+When GOKb is setup as an external data source is setup for the Agreements local KB, packages are only fully synchronized if they are needed locally in the FOLIO tenant. 
+
+* All package header information (i.e. the package name, ID, and other key information) is synchronized
+* Each package will be marked in Folio as to be synchronized or not
+* Package content (title lists → in GOKb terms these are TIPPs, in Folio called PCIs) will only be synchronized for those packages marked to synchronize
+
+After searching for and selecting packages covered by an agreement in the local KB, under the **Actions** drop-down menu, select **Start synchronisation of selected packages**. To pause synchronization of the packages, select **Pause synchronisation of selected packages**.
+
+Packages can also be synchronized individually by selecting the package record in the local KB search, and selecting **Start synchronisation** from the **Actions** drop-down menu. 
 
 
 ### Searching for titles

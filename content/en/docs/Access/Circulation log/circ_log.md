@@ -9,12 +9,24 @@ The Circulation log app allows you to view and search for some circulation actio
 
 ## Permissions
 
-You can assign permissions to users in the Users app. The permissions described below allow you to interact with the Circulation log app and determine what you can and cannot do within the app. If you don’t assign any of these permissions to a user, the user will be unable to see the Circulation log app or any related information.
-The following are all the Circulation log permissions:
+The permissions / capabilities listed below allow you to interact with the Circulation log app and determine what you can and cannot do within the app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. You need to assign at least one of the following capabilities to a user to enable the user to see the Circulation log app or any related information.
 
 
-* **Circulation log: All.** This permission allows the user all circulation log functions.
-* **Circulation log: View.** This permission allows the user to search and filter the circulation log, but does not allow exporting the circulation log or using the **...** menu items in the Action column.
+To add a capability or capability set to an Authorization role: 
+
+Select all applications to ensure access to all capabilities.
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
+
+| Permission Display    Name (OKAPI) | Resource (EUREKA)            | Type | Action | Description                                                                                                                                                                      |
+|------------------------------------|------------------------------|------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Circulation log: All               | UI-Circulation-Log Log-Event | Data | Manage | This Capability set allows the user all circulation log functions.                                                                                                               |
+| Circulation log: View              | UI-Circulation-Log Log-Event | Data | View   | This Capability set allows the user to search and filter the circulation log, but does not allow exporting the circulation log or using the **...** menu items in the Action column. |
+
 
 
 ## Generating a circulation log

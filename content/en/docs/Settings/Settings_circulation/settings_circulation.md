@@ -13,31 +13,46 @@ The Circulation section of the Settings app is where you establish your loan pol
 
 ## Permissions
 
-Each setting within Circulation has its own permission associated with it. If a user has one of the below permissions, they will be able to view and interact with that particular setting. You can assign permissions to users in the Users app.
+Each setting within Circulation has its own permission / capability set associated with it. If a user has one of the below capability sets, they will be able to view and interact with that particular setting. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. 
 
-The following are all the Circulation Settings permissions:
+To add a capability set to an Authorization role: 
 
-* **Settings (Circ): Can create, edit and remove cancellation reasons:** Allows the user to create, read, update, and delete request cancellation reasons.
-* **Settings (Circ): Can create, edit and remove circulation rules:** Allows the user to create, read, update, and delete circulation rules.
-* **Settings (Circ): Can create, edit and remove fixed due date schedules:** Allows the user to create, read, update, and delete fixed due date schedules.
-* **Settings (Circ): Can create, edit and remove loan policies:** Allows the user to create, read, update, and delete loan policies.
-* **Settings (Circ): Can create, edit and remove lost item fee policies:** Allows the user to create, read, update, and delete lost item fee policies.
-* **Settings (Circ): Can create, edit and remove notice policies:** Allows the user to create, read, update, and delete patron notice policies.
-* **Settings (Circ): Can create, edit and remove other settings:** Allows the user to read and update Settings > Circulation > Other settings.
-* **Settings (Circ): Can create, edit and remove overdue fine policies:** Allows the user to create, read, update, and delete overdue fine policies.
-* **Settings (Circ): Can create, edit and remove patron notice templates:** Allows the user to create, read, update, and delete patron notice templates.
-* **Settings (Circ): Can create, edit and remove request policies:** Allows the user to create, read, update, and delete request policies.
-* **Settings (Circ): Can create, edit and remove staff slips:** Allows the user to create, read, and update staff slips. Note: Users can erase the content of staff slips in the editor, but cannot delete the staff slip itself.
-* **Settings (Circ): Can edit loan history:** Allows the user to edit settings in Settings > Circulation > Loan anonymization.
-* **Settings (Circ): Can enable request print details:** Allows the user to edit settings in [Settings > Circulation > Requests > View print details](#settings--circulation--view-print-details).
-* **Settings (Circ): Can view loan history:** Allows the user to view settings in Settings > Circulation > Loan anonymization but does not allow editing.
-* **Settings (Circ): Can view loan policies:** Allows the user to view loan policies but does not allow create, edit or delete.
-* **Settings (Circ): Can view lost item fee policies:** Allows the user to view lost item fee policies but does not allow create, edit or delete.
-* **Settings (Circ): Can view overdue fine policies:** Allows the user to view overdue fine policies but does not allow create, edit or delete.
-* **Settings (Circ): View circulation rules:** Allows a user to view circulation rules but does not allow them to create, edit or delete rules.
-* **Settings (Circulation): Can view all circulation settings:** Allows the user to view all the circulation settings but does not allow editing of circulation settings.
-* **Settings (Circulation): Can view staff slips:** Allows the user to view staff slips but does not  allow editing of staff slips.
-* **Settings (Circulation): Title level request edit:** Allows the user to enable, disable and configure title-level requesting. Note that title level requesting cannot be disabled via settings if there are any open title level requests.
+Select all applications to ensure access to all capability sets.
+
+1. Open the Capability sets accordion.
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
+
+The following are all the Settings > Circulation capability sets.
+
+For all Settings > Circulation capability sets, **Type** is *Settings*.
+
+| Permission Display    Name (OKAPI)                                           | Resource (EUREKA)                                 | Action | Description                                                                                                                                                                           |
+|------------------------------------------------------------------------------|---------------------------------------------------|--------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Settings (Circulation): Can create, edit and remove cancellation reasons     | UI-Circulation Settings Cancellation-Reasons      | Manage | Allows the user to create, read, update, and delete request cancellation reasons.                                                                                                     |
+| Settings (Circulation): Can create, edit and remove circulation rules        | UI-Circulation Settings Circulation-Rules         | Edit   | Allows the user to create, read, update, and delete circulation rules.                                                                                                                |
+| Settings (Circulation): Can create, edit and remove fixed due date schedules | UI-Circulation Settings Fixed-Due-Date-Schedules  | Manage | Allows the user to create, read, update, and delete fixed due date schedules.                                                                                                         |
+| Settings (Circulation): Can create, edit and remove loan policies            | UI-Circulation Settings Loan-Policies             | Manage | Allows the user to create, read, update, and delete loan policies.                                                                                                                    |
+| Settings (Circulation): Can create, edit and remove lost item fee policies   | UI-Circulation Settings Lost-Item-Fees-Policies   | Manage | Allows the user to create, read, update, and delete lost item fee policies.                                                                                                           |
+| Settings (Circulation): Can create, edit and remove notice policies          | UI-Circulation Settings Notice-Policies           | Manage | Allows the user to create, read, update, and delete patron notice policies.                                                                                                           |
+| Settings (Circulation): Can create, edit and remove other settings           | UI-Circulation Settings Other-Settings            | Manage | Allows the user to read and update Settings > Circulation > Other settings.                                                                                                           |
+| Settings (Circulation): Can create, edit and remove overdue fine policies    | UI-Circulation Settings Overdue-Fines-Policies    | Manage | Allows the user to create, read, update, and delete overdue fine policies.                                                                                                            |
+| Settings (Circulation): Can create, edit and remove patron notice templates  | UI-Circulation Settings Notice-Templates          | Manage | Allows the user to create, read, update, and delete patron notice templates.                                                                                                          |
+| Settings (Circulation): Can create, edit and remove request policies         | UI-Circulation Settings Request-Policies          | Manage | Allows the user to create, read, update, and delete request policies.                                                                                                                 |
+| Settings (Circulation): Can create, edit and remove staff slips              | UI-Circulation Settings Staff-Slips               | Manage | Allows the user to create, read, and update staff slips. Note: Users can erase the content of staff slips in the editor, but cannot delete the staff slip itself.                     |
+| Settings (Circulation): Can edit loan history                                | UI-Circulation Settings Loan-History              | Edit   | Allows the user to edit settings in Settings > Circulation > Loan anonymization.                                                                                                      |
+| Settings (Circulation): Can enable request print details                     | UI-Circulation Settings Request-Print-Details     | View   | Allows the user to edit settings in Settings > Circulation > Requests > View print details.                                                                                           |
+| Settings (Circulation): Can view all circulation settings                    | UI-Circulation Settings View-Circulation-Settings | View   | Allows the user to view all the circulation settings but does not allow editing of circulation settings.                                                                              |
+| Settings (Circulation): Can view loan history                                | UI-Circulation Settings Loan-History              | View   | Allows the user to view settings in Settings > Circulation > Loan anonymization but does not allow editing.                                                                           |
+| Settings (Circulation): Can view loan policies                               | UI-Circulation Settings Loan-Policies             | View   | Allows the user to view loan policies but does not allow create, edit or delete.                                                                                                      |
+| Settings (Circulation): Can view lost item fee policies                      | UI-Circulation Settings Lost-Item-Fees-Policies   | View   | Allows the user to view lost item fee policies but does not allow create, edit or delete.                                                                                             |
+| Settings (Circulation): Can view overdue fine policies                       | UI-Circulation Settings Overdue-Fines-Policies    | View   | Allows the user to view overdue fine policies but does not allow create, edit or delete.                                                                                              |
+| Settings (Circulation): Can view staff slips                                 | UI-Circulation Settings Staff-Slips               | View   | Allows the user to view staff slips but does not allow editing of staff slips.                                                                                                        |
+| Settings (Circulation): Title level request edit                             | UI-Circulation Settings Title Level Requests      | Manage | Allows the user to enable, disable and configure title-level requesting. Note that title level requesting cannot be disabled via settings if there are any open title level requests. |
+| Settings (Circulation): View circulation rules                               | UI-Circulation Settings Circulation-Rules         | View   | Allows a user to view circulation rules but does not allow them to create, edit or delete rules.                                                                                      |
 
 
 ## Settings > Circulation > Circulation rules
@@ -154,10 +169,11 @@ Staff slips have eight categories of tokens, listed in the table below. All of t
 |     Borrower                 |     Due date receipt                                                                          |     Hold, Pick slip, Request delivery, Search slip (Hold requests),Transit   |
 |     Loan                     |     Due date receipt                                                                          |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit  |
 |     Request                  |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
-|     Request delivery address |     Request delivery, Pick slip, Search slip (Hold requests)                                                                         |     Due date receipt, Hold, Transit  |
+|     Request delivery address |     Request delivery, Pick slip, Search slip (Hold requests)                                  |     Due date receipt, Hold, Transit                                          |
 |     Requester                |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
 
-Note: *StaffSlip.staffUsername* only populates for Pick slip. *Request.barcodeImage* only populates for Pick slip and Search slip (Hold requests).
+Note: *StaffSlip.staffUsername* only populates for Pick slip. *Request.barcodeImage* only populates for Pick slip and Search slip (Hold requests). The tokens *item.yearCaption* and *item.loanType* do not populate in Due date receipt.  
+*Item.fromServicePoint* populates for Hold slips, Transit slips, and Request delivery slips. *Item.toServicePoint* only populates for Transit slips.
 
 ### Configuring a staff slip
 

@@ -55,6 +55,7 @@ Alternatively, use the keyboard shortcut Ctrl+Alt+k after opening the app.
 The following apps display the list of keyboard shortcuts which can be viewed by following the steps described above.  
 
 *   Agreements
+*   Claiming
 *   Courses
 *   Dashboard
 *   eHoldings
@@ -67,6 +68,7 @@ The following apps display the list of keyboard shortcuts which can be viewed by
 *   Lists
 *   Local KB admin
 *   MARC Authority
+*   Open access
 *   Orders
 *   Organizations
 *   Receiving

@@ -18,7 +18,7 @@ Libraries can turn on title-level requests in [Settings > Circulation > Title le
 Libraries that want to use title level requests should consider:
 
 * You will not be able to turn off title level requesting while there are any open title level requests.
-* To avoid issues with queue ordering, you should first close open item level requests before turning on title level requesting. 
+* If you are transitioning from having only item level requesting, you should close open requests before turning on title level requesting to avoid queue ordering problems. 
 * Check Settings > Circulation > Title level requests > **Fail to create title level hold when request is blocked by circulation rule** if you want title level hold requests to follow circulation rules. If you do not choose this option, then title level hold requests will go through even when hold requests are blocked by the circulation rule. The title level hold request will remain Open - not yet filled as the circulation rule will prevent the request from being associated with an item.
 * Title level requests are not yet supported for multi-volume sets - e.g., "any copy of volume D of the Longman Anthology of World Literature." Those requests must continue to be handled as item-level requests.
 * Items newly added to FOLIO via the Receiving app, Inventory, or Data Import must be checked in in order to be made available to fill open title level requests.
@@ -26,16 +26,32 @@ Libraries that want to use title level requests should consider:
 
 ## Permissions
 
-You can assign permissions to users in the Users app. The permissions described below allow you to interact with the Requests app and determine what you can and cannot do within the app. If you don’t assign any of these permissions to a user, the user will be unable to see the Requests app or any related information.
+The permissions / capabilities listed below allow you to interact with the Requests app and determine what you can and cannot do within the app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. You need to assign at least one of the following capabilities to a user to enable the user to see the Requests app or any related information.
+
+
+To add a capability or capability set to an Authorization role: 
+
+Select all applications to ensure access to all capabilities.
+1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
+2. Look under the matching Type.
+3. Find the Resource (you can search using Ctrl-f/Cmd-f).
+4. Select the Action.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles.
 
 The following are all the Requests permissions:
 
-* **Requests: All permissions.** This permission allows the user all request functions.
-* **Requests: Move to new item, reorder queue.** This permission allows the user to move requests from one item to another (subject to request policies).
-* **Requests: Reorder queue.** This permission allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue.
-* **Requests: View.** This permission allows the user to search and view requests.
-* **Requests: View, create.** This permission allows the user to create new requests and view existing requests.
-* **Requests: View, edit, cancel.** This permission allows the user to view, edit and cancel requests.
+| Permission Display    Name (OKAPI)             | Resource (EUREKA)        | Type       | Action  | Description                                                                                                                                                                                                             |
+|------------------------------------------------|--------------------------|------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Inventory: View instances, holdings, and items | UI-Inventory Instance    | Data       | View    |     You need to have this capability set to enable **Title look-up** when creating title level requests.                                                                                                                    |
+| Requests: All permissions                      | UI-Requests              | Data       | Manage  | This capability set allows the user all request functions.                                                                                                                                                              |
+| Requests: Move to new item, reorder queue      | UI-Requests MoveRequest  | Procedural | Execute | This capability set allows the user to move requests from one item to another (subject to request policies).                                                                                                            |
+| Requests: Reorder queue                        | UI-Requests ReorderQueue | Procedural | Execute | This capability set allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue. |
+| Requests: View                                 | UI-Requests              | Data       | View    |     This capability set allows the user to search and view requests.                                                                                                                                                    |
+| Requests: View, create                         | UI-Requests              | Data       | Create  | This capability set allows the user to create new requests and view existing requests.                                                                                                                                  |
+| Requests: View, edit, cancel                   | UI-Requests              | Data       | Edit    | This capability set allows the user to view, edit and cancel requests.                                                                                                                                                  |
+
+
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](../../../platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
@@ -70,7 +86,7 @@ Closed requests have one of the following statuses:
 
 To search for requests, enter your search terms into the box on the **Search & filter** pane. You can keyword search by title, or "starts with" search by item barcode, requester barcode, or item call number.
 
-You can also use the Request type, Request status, Request level, Tags, Pickup service point, and Print status filters to find requests or further limit your search. The [Settings > Circulation > View print details](../../../settings/settings_circulation/settings_circulation/#settings--circulation--view-print-details) option needs to be selected for the Print status filter to be visible.
+You can also use the Request type, Request status, Request level, Tags, Pickup service point, Retrieval service point, and Print status filters to find requests or further limit your search. The [Settings > Circulation > View print details](../../../settings/settings_circulation/settings_circulation/#settings--circulation--view-print-details) option needs to be selected for the Print status filter to be visible.
 
 You can choose which columns appear in your search results by clicking on the Actions menu. Under Show columns, you can check or uncheck columns to change what you see in the results pane.
 
@@ -298,9 +314,9 @@ The CSV export report can be used as a pick report. A pick report shows all page
 To create a pick report, follow these steps:
 
 1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
-2. In the **Requests** pane, select **Actions > Export search results to CSV**.
-3. Open the file in a spreadsheet application.
-4. Optional: Filter the report by **Effective location** to see available items within your area of responsibility.
+2. Optional: Filter by **Retrieval service point** to see only items whose effective locations are associated with the selected Retrieval service point.
+3. In the **Requests** pane, select **Actions > Export search results to CSV**.
+4. Open the file in a spreadsheet application.
 
 
 ### Printing pick slips
@@ -311,17 +327,19 @@ The pick slips report generates a single slip for every paged item that needs to
 
 You can configure the information that appears on the pick slips in the [Settings app.](../../../settings/settings_circulation/settings_circulation/#settings--circulation--staff-slips)
 
-To print pick slips, in the Requests pane, select **Actions > Print pick slips for [your service point]**. A print dialog appears.
+To print pick slips, in the Requests pane, select **Actions > Print pick slips for \[your service point]**. A print dialog appears.
 
 #### Printing selected pick slips 
 1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
-2. Select the checkboxes in the first column of the requests you want to print. You can only print Page requests for items whose effective locations are associated with your selected service point.
-3. Select **Actions > Print selected pick slips for [your service point].** A print dialog appears.
+2. Optional: Filter by **Retrieval service point.**
+3. Select the checkboxes in the first column of the requests you want to print. You can only print Page requests for items whose effective locations are associated with your selected service point.
+4. Select **Actions > Print selected pick slips for [your service point].** A print dialog appears.
 
 #### Printing a single pick slip
 1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
-2. Have the **Single print** column selected in the Actions menu.
-3. Click the **Print** button in the Single print column. A print dialog appears. Note: the print button will only be active for items whose effective locations are associated with your selected service point.
+2. Optional: Filter by **Retrieval service point.**
+3. Have the **Single print** column selected in the Actions menu.
+4. Click the **Print** button in the Single print column. A print dialog appears. Note: the print button will only be active for items whose effective locations are associated with your selected service point.
 
 #### Showing the pick slip print history
 
@@ -339,7 +357,18 @@ The search slips report generates a single slip for every hold request with requ
 
 You can configure the information that appears on the pick slips in the [Settings app](../../../settings/settings_circulation/settings_circulation/#configuring-a-staff-slip).
 
-To print search slips, in the Requests pane, select Actions > Print search slips for [your service point]. A print dialog appears.
+To print the search slips report, in the Requests pane, select Actions > Print search slips for [your service point]. A print dialog appears.
+
+### Generating a hold requests CSV export 
+The CSV export report can be used as a hold requests report. The CSV export report includes, and can be sorted by, effective call number.
+
+To create a hold requests CSV report, follow these steps:
+
+1. In the Search & filter pane, select **Request type > Holds** and **Request status > Open - Not yet filled** to filter the items down to open hold requests.
+2. Optional: Filter by **Retrieval service point** to see only items whose effective locations are associated with the selected Retrieval service point.
+3. In the Requests pane, select **Actions > Export search results to CSV.**
+4. Open the file in a spreadsheet application.
+
 
 ## Adding a tag to a request
 

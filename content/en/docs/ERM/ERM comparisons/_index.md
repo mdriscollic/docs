@@ -16,18 +16,15 @@ Definition of terms related to the ERM comparisons app:
 
 ## Permissions
 
-The permissions listed below allow you to interact with the ERM comparisons app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the ERM comparisons app or any related information.
+The Capability sets listed below allow you to interact with the ERM comparisons app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
-The following are all the ERM comparisons permissions:
-
-* **ERM Comparisons: View jobs.** This permission allows the user to view existing comparisons. It also allows the user to see and access the ERM Comparisons App in the FOLIO interface.
-* **ERM Comparisons: Create jobs.** This permission allows the user to create a new comparison in the ERM Comparisons App. This does not include the permission to view existing packages in the internal KB or agreements in the agreements app.
-* **ERM Comparisons: Delete jobs.** This permission allows the user to delete an existing ERM comparison.
-
-The following permissions are also needed to create a comparison:
-
-* **Agreements: Search & view agreements.** This permission allows the user to search and view existing agreements. It also allows the user to see and access the Agreement app in the FOLIO interface.
-* **Agreements: Search & view e-resources.** This permission allows the user to search and view e-resources (packages and titles in those packages) in the internal KB. This includes the permission to see and access the Agreements app in the FOLIO interface.
+|permissionDisplayName (OKAPI)        |Capability/Capability Set (EUREKA)                      |Type|ApplicationID              |Action| 
+|-------------------------------------|--------------------------------------------------------|----|---------------------------|------|
+|ERM comparisons: View jobs           |UI-Erm-Comparisons Jobs (ui-erm-comparisons_jobs.view)  |data|app-erm-usage-2.0.2        |view  |
+|ERM Comparisons: Create jobs         |UI-Erm-Comparisons Jobs (ui-erm-comparisons_jobs.edit)  |data|app-erm-usage-2.0.2        |edit  |
+|ERM Comparisons: Delete jobs         |UI-Erm-Comparisons Jobs (ui-erm-comparisons_jobs.delete)|data|app-erm-usage-2.0.2        |delete|
+|Agreements: Search & view agreements |UI-Agreements Agreements (ui-agreements_agreements.view)|data|app-platform-complete-2.1.9|view  |
+|Agreements: Search & view e-resources|UI-Agreements Resources (ui-agreements_resources.view)  |data|app-platform-complete-2.1.9|view  |
 
 ## Creating a comparison
 

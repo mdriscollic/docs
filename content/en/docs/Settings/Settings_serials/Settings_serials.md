@@ -8,12 +8,14 @@ tags: ["subtopic"]
 
 The Serials's section of the Settings app is where you view and manage pick lists and values.
 
-## Permissions
+## Capabilities and Capability Sets
 
-In order to interact with Serials settings, a user needs to be assigned the following permissions:
+In order to interact with Serials settings, a user needs to be assigned the following capabilities:
 
-*    **Settings (Serials): Manage pick lists and values.** This permission allows the user to manage pick lists and values in the settings.
-*    **Settings (Serials): View pick lists and values.** This permission allows the user to view pick lists and values in the settings.
+| permissionDisplayName (OKAPI)| Resource (EUREKA) | Type | Action | Description |
+| :-----: |:-----: |:-----: |:-----: |:-----: |
+| Settings (Serials): Manage pick lists and values | UI-Serials-Management Picklists | data | manage | Grants all capabilities included in 'Settings (Serials): View pick lists and values' plus the ability to manage pick lists and pick list values. |
+| Settings (Serials): View pick lists and values | UI-Serials-Management Picklists | data | view | A user with this capability set can access the settings for the Serials app and view pick lists and pick list values. |
 
 ## Settings > Serials > Pick lists
 
