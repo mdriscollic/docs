@@ -172,7 +172,7 @@ Staff slips have eight categories of tokens, listed in the table below. All of t
 |     Request delivery address |     Request delivery, Pick slip, Search slip (Hold requests)                                                                          |     Due date receipt, Hold, Transit  |
 |     Requester                |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
 
-Note: *StaffSlip.staffUsername* only populates for Pick slip. *Request.barcodeImage* only populates for Pick slip and Search slip (Hold requests). The tokens *item.yearCaption* and *item.loanType* do not populate in Due date receipt.  
+Note: *StaffSlip.staffUsername* only populates for Pick slip. The tokens *item.yearCaption* and *item.loanType* do not populate in Due date receipt.  
 *Item.fromServicePoint* populates for Hold slips, Transit slips, and Request delivery slips. *Item.toServicePoint* only populates for Transit slips.
 
 ### Configuring a staff slip
