@@ -1,7 +1,7 @@
 ---
 title: "Settings > GOBI integration"
 linkTitle: "GOBI integration"
-date: 2024-04-22
+date: 2025-04-16
 weight: 125
 tags: ["subtopic"]   
 ---
@@ -9,12 +9,16 @@ tags: ["subtopic"]
 The GOBI integration section of the Settings app defines your configuration for an integration with the provider GOBI Library Solutions. This integration supports the creation of FOLIO orders initiated from the GOBI order form. This integration applies only to firm orders for monographs.
 
 
-## Permissions
+## Capabilities
 
-In order to interact with GOBI integration settings, a user needs to be assigned the following permission:
+The capabilities listed below allow you to interact with the GOBI integration settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the GOBI integration settings or any related information.
 
-*   **Settings (GOBI integration): Can view and edit settings.**  This permission allows you to view and edit GOBI integration settings.
-*   **Settings (GOBI integration): Can view only.** This permission allows you to view GOBI integration settings.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (GOBI integration): Can view and edit settings.** | **UI-Gobi-Settings Permission Settings** | settings | edit | This capability allows you to view and edit GOBI integration settings.|
+|**Settings (GOBI integration): Can view only.**| **UI-Gobi-Settings Permission Settings** | settings | view | This capability allows you to view GOBI integration settings.|
 
 
 
@@ -32,15 +36,10 @@ Based on mapping decisions made with GOBI, a library will likely need to update 
 To view the mapping configuration files, open Settings > GOBI integration > Integration details > Mapping configuration. A list of existing mapping configuration files is listed on the **Configuration files** pane.
 
 *   **Listed Electronic Monograph**
-*   **Listed Electronic Serial**
 *   **Listed Print Monograph**
-*   **Listed Print Serial**
 *   **Unlisted Print Monograph**
-*   **Unlisted Print Serial**
 
 Mappings for "Listed" formats indicate that a title is available within the GOBI system for ordering. The mappings for "Unlisted" formats are invoked if a library submits an order for a title that does not appear in GOBI using the **Add Unlisted** option in the GOBI Order Cart.
-
-**Please note:** Configuration files for serials will be removed in a future release since the API integration does not support serials ordering.
 
 ## Viewing configuration files
 

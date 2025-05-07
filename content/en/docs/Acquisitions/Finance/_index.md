@@ -1,7 +1,7 @@
 ---
 title: "Finance"
 linkTitle: "Finance"
-date: 2025-02-06
+date: 2025-05-05
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -25,37 +25,41 @@ Definitions of terms used in the Finance app:
 *   **Transaction.** A record to keep track of a specific change to a budget. For instance, an allocation, a transfer, an encumbrance, a pending payment or a payment.
 
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with the Finance app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Finance app or any related information.
+The capabilities listed below allow you to interact with the Finance app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Finance app or any related information.
 
-Finance permissions:
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-*   **Finance: Assign acquisition units to new record.** This permission allows the user to assign acquisition units to the record when creating a new record.
-*   **Finance: Create allocations.** This permission allows users to create allocation transactions against budgets. Must include view and edit fund and budget permissions.
-*   **Finance: Create transfers.** This permission allows users to create transfer transactions against budgets. Must include view and edit fund and budget.
-*   **Finance: Execute fiscal year rollover.** This permission allows the user to execute fiscal year rollover.
-*   **Finance: Export finance records.** This permission allows the user to run an export of finance records for a ledger.
-*   **Finance: Manage acquisition units.** This permission allows users to change the assignment of acquisition units for the record when editing a record.
-*   **Finance: Manually release encumbrance.** This permission allows the user to release an encumbrance from a fund using the **Release encumbrance** action on the budget transaction log.
-*   **Finance: Recalculate budget totals.** This permission allows the user to recalculate budget totals after having deleted financial transactions by using the **Recalculate budget total** action on the budget record.
-*   **Finance: Unrelease encumbrance.** This permission allows the user to manually unrelease an encumbrance that may have been erroneously released either by an invoice approval or a manual action.
-*   **Finance: View fiscal year.** This permission allows searching and viewing of fiscal year records.
-*   **Finance: View fund and budget.** This permission allows the user to search and view funds and budgets.
-*   **Finance: View group.** This permission allows the user to search and view groups.
-*   **Finance: View ledger.** This permission allows the user to search and view ledgers.
-*   **Finance: View, edit fiscal year.** This permission allows the user to view and edit fiscal years.
-*   **Finance: View, edit fund and budget.** This permission allows the user to view and edit funds and budgets.
-*   **Finance: View, edit group.** This permission allows the user to view and edit groups.
-*   **Finance: View, edit ledger.** This permission allows the user to view and edit ledgers.
-*   **Finance: View, edit, create fiscal year.** This permission allows the user to view, edit, and create fiscal years.
-*   **Finance: View, edit, create fund and budget.** This permission allows the user to view, edit, and create funds and budgets.
-*   **Finance: View, edit, create group.** This permission allows the user to view, edit, and create groups.
-*   **Finance: View, edit, create ledger.** This permission allows the user to view, edit, and create ledgers.
-*   **Finance: View, edit, delete fiscal year.** This permission allows the user to view, edit, and delete fiscal year.
-*   **Finance: View, edit, delete fund and budget.** This permission allows the user to view, edit, and delete funds and budgets.
-*   **Finance: View, edit, delete group.** This permission allows the user to view, edit, and delete groups.
-*   **Finance: View, edit, delete ledger.** This permission allows the user to view, edit, and delete ledgers.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Finance: Assign acquisition units to new record.** | **UI-Finance Acq Unit Assignment** | procedural | execute | This capability allows the user to assign acquisition units to the record when creating a new record.|
+|**Finance: Create allocations.** | **UI-Finance Allocations** | data | create | This capability allows users to create allocation transactions against budgets. Must include view and edit fund and budget capabilities.|
+|**Finance: Create transfers.** | **UI-Finance Transfers** | data | create | This capability allows users to create transfer transactions against budgets. Must include view and edit fund and budget capabilities.|
+|**Finance: Delete batch allocation logs**| **UI-Finance Fund-Update-Logs** | data | delete | This capability allows users to delete the logs produced by a batch allocation job.| 
+|**Finance: Execute fiscal year rollover.** | **UI-Finance Ledger Rollover** | procedural | execute | This capability allows the user to perform fiscal year rollover.|
+|**Finance: Export finance records.** | **UI-Finance** | procedural | execute | This capability allows the user to run an export of finance records for a ledger.|
+|**Finance: Manage acquisition units.** | **UI-Finance Acq Unit Assignment** | data | manage | This capability allows users to change the assignment of acquisition units for the record when editing a record.|
+|**Finance: Manually release encumbrance.** | **UI-Finance Encumbrance Release-Manually** | procedural | execute | This capability allows the user to release an encumbrance from a fund using the **Release encumbrance** action on the budget transaction log.|
+|**Finance: Recalculate budget totals.** | **UI-Finance Fund-Budget Recalculate-Totals** | procedural | execute | This capability allows the user to recalculate budget totals after having deleted financial transactions by using the **Recalculate budget total** action on the budget record.|
+|**Finance: Unrelease encumbrance.**| **UI-Finance Encumbrance Unrelease** | procedural | execute | This capability allows the user to manually unrelease an encumbrance that may have been erroneously released either by an invoice approval or a manual action.|
+|**Finance: View batch allocation logs** | **UI-Finance Fund-Update-Logs** | data | view | This capability allows users to view the logs produced by a batch allocation job.| 
+|**Finance: View fiscal year.** | **UI-Finance Fiscal-Year** | data | view | This capability allows searching and viewing of fiscal year records.|
+|**Finance: View fund and budget.** | **UI-Finance Fund-Budget** | data | view | This capability allows the user to search and view funds and budgets.|
+|**Finance: View group.** | **UI-Finance Group** | data | view | This capability allows the user to search and view groups.|
+|**Finance: View ledger.** | **UI-Finance Ledger** | data | view | This capability allows the user to search and view ledgers.|
+|**Finance: View, edit fiscal year.** | **UI-Finance Fiscal-Year** | data | edit | This capability allows the user to view and edit fiscal years.|
+|**Finance: View, edit fund and budget.** | **UI-Finance Fund-Budget** | data | edit | This capability allows the user to view and edit funds and budgets.|
+|**Finance: View, edit group.** | **UI-Finance Group** | data | edit | This capability allows the user to view and edit groups.|
+|**Finance: View, edit ledger.** | **UI-Finance Ledger** | data | edit | This capability allows the user to view and edit ledgers.|
+|**Finance: View, edit, create fiscal year.** | **UI-Finance Fiscal-Year** | data | create | This capability allows the user to view, edit, and create fiscal years.|
+|**Finance: View, edit, create fund and budget.** | **UI-Finance Fund-Budget** | data | create | This capability allows the user to view, edit, and create funds and budgets.|
+|**Finance: View, edit, create group.** | **UI-Finance Group** | data | create | This capability allows the user to view, edit, and create groups.|
+|**Finance: View, edit, create ledger.** | **UI-Finance Ledger** | data | create | This capability allows the user to view, edit, and create ledgers.|
+|**Finance: View, edit, delete fiscal year.** | **UI-Finance Fiscal-Year** | data | delete | This capability allows the user to view, edit, and delete fiscal year.|
+|**Finance: View, edit, delete fund and budget.** | **UI-Finance Fund-Budget | data | delete | This capability allows the user to view, edit, and delete funds and budgets.|
+|**Finance: View, edit, delete group.** | **UI-Finance Group** | data | delete | This capability allows the user to view, edit, and delete groups.|
+|**Finance: View, edit, delete ledger.** | **UI-Finance Ledger** | data | delete | This capability allows the user to view, edit, and delete ledgers.|
 
 
 ## Keyboard shortcuts
@@ -78,7 +82,7 @@ A fiscal year is the twelve-month period your library uses for accounting and bu
 
 *   **Name (required).** The name of the fiscal year. A suggested naming convention is the term “Fiscal Year” followed by the numeric year. For example, Fiscal Year 2021.
 *   **Code (required).** The code must be an alpha followed by a four-digit number. It can be based on name and year; for example, FY2021. The code that you establish for your fiscal year one will determine the code structure moving forward. In this example, FY2021 would be followed in succession by FY2022, FY2023, etc. Adherence to this code structure is essential to the success of fiscal year rollover. A single FOLIO tenant may have multiple fiscal years running in parallel. For example, an academic library with a July 1 - June 30 fiscal year may share a tenant with a government library operating on an October 1 - September 30 fiscal year. The academic library may configure FYA2021 with the government library configuring FYG2021 to allow rollover at different points in the calendar year.
-*   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the fiscal year, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate permissions are allowed to edit the fiscal year information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
+*   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the fiscal year, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate capabilities are allowed to edit the fiscal year information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
 *   **Period Begin Date (UTC) (required).** The date when the fiscal year begins.
 *   **Period End Date (UTC) (required).** The date when the fiscal year ends.
 *   **Description.** A description of the fiscal year.
@@ -102,7 +106,7 @@ A ledger is a collection of funds that need to be kept fiscally separate from an
 *   **Code (required).** User-created, based on name.
 *   **Fiscal year one (required).** The first fiscal year for the ledger. Ledgers can continue to be used for multiple fiscal years. If the fiscal year does not appear in the list, you can click **New fiscal year** to create a new one.
 *   **Status (required).** Select the status of the ledger: Active, Frozen, or Inactive. Active means the ledger is ongoing, Frozen means the ledger has been put on pause, and Inactive means the ledger is no longer in use.
-*   **Acquisition Units.** If you only want particular users within certain acquisition units to be able to edit the ledger, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate permissions are allowed to edit the ledger's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
+*   **Acquisition Units.** If you only want particular users within certain acquisition units to be able to edit the ledger, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate capabilities are allowed to edit the ledger's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
 *   **Enforce all budget encumbrance limits.**  This box is checked by default.  Leave this box checked if you want the system to reject any encumbrances against funds related to this ledger that would exceed the available amount of the current budget.  Uncheck this box to allow encumbrance amounts on the current year budget without restrictions.
 *   **Enforce all budget expenditure limits.**  This box is checked by default.  Leave this box checked if you want the system to reject any expenditures against funds related to this ledger that would exceed the available amount of the current budget.  Uncheck this box to allow expenditure amounts on the current year budget without restrictions.
 *   **Description.** A description of the ledger.
@@ -125,7 +129,7 @@ Groups categorize funds and bring multiple funds together as a single group rega
 *   **Name (required).** Name of the group. For example, History.
 *   **Code (required).** User-created, based on name.
 *   **Status (required).** Select the status of the group: Active, Frozen, or Inactive. Active means the group is ongoing, Frozen means the group has been put on pause, and Inactive means the group is no longer in use.
-*   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the group, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate permissions are allowed to edit the group's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
+*   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the group, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate capabiltiies are allowed to edit the group's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
 *   **Description.** A description of the group. For example, you may want to include why the group was created and the relation between the different funds.
 
 
@@ -149,7 +153,7 @@ Funds show information regarding an ongoing ledger with a budget for the current
 *   **Status (required).** Select the status of the fund: Active, Frozen, or Inactive. Active means the fund is ongoing, Frozen means the fund has been put on pause, and Inactive means the fund is no longer in use. Note: The fund must be active to successfully open an order or for an invoice to be fully paid.
 *   **Currency.** This field is prefilled based on the currency associated with the fiscal year when the fiscal year was created. For more information, see [Creating a Fiscal Year](#creating-a-fiscal-year). Note that when an order is opened, the system creates an encumbrance transaction on the current budget for the fund selected in the fund distribution section of the order.  If the currency of the PO line is different than the budget currency, the encumbrance will display on the budget as a converted amount.  The budget currency is set to the Tenant currency value at the time the [Finance > Fiscal year](#fiscal-year-information) record is created; therefore, if the Tenant currency value is updated, any budgets created prior to the update will still operate based on the Tenant currency that existed when the Fiscal year associated with the budget was created.
 *   **Type.** A category to describe the fund. Fiscal year rollover of funds is often defined by fund type, so definition of the type values should consider fiscal year rollover requirements. For example, endowment or restricted. For more information about creating fund types, see [Settings > Finance > Fund types](../../settings/settings_finance/settings_finance/#settings--finance--fund-types). Funds that are not assigned a fund type will be grouped under **No fund type** at fiscal year rollover.
-*   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the fund, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate permissions are allowed to edit the fund's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/). Please note: if the assigned acquisition unit restricts view, the fund will be filtered out of the selection list that appears in **Fund distribution** accordions on purchase order lines and invoices. Users will only be able to apply funds that are "public" or with which they share an acquisition unit.
+*   **Acquisition units.** If you only want particular users within certain acquisition units to be able to edit the fund, enter or select the Acquisition units from the drop-down list. You can select multiple units. If blank, any users with the appropriate capabilities are allowed to edit the fund's information. For more information, see [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/). Please note: if the assigned acquisition unit restricts view, the fund will be filtered out of the selection list that appears in **Fund distribution** accordions on purchase order lines and invoices. Users will only be able to apply funds that are "public" or with which they share an acquisition unit.
 *   **Group.** To associate this fund with a group, select the group from the drop-down list.  You can assign multiple groups. See [Creating a group](#creating-a-group) for more information. 
 *   **Transfer from.** To allow transfers to this fund from any other fund, leave this field blank. To restrict transfers to this fund, enter or select the allowed funds from the drop-down list. You can select multiple funds.
 *   **Transfer to.** To allow transfers from this fund to any other fund, leave this field blank. To restrict transfers from this fund, enter or select the allowed funds from the drop-down list. You can select multiple funds.
@@ -729,8 +733,78 @@ Use the **Move allocation** action to move money between current fiscal year bud
 4. Click **Confirm.** A confirmation message appears and the decrease allocation transaction is complete.
 
 
+## Batch allocation tools
 
+From a ledger record, you can use batch allocation tools to grant or adjust allocation totals to the funds associated with the ledger. Libraries using these tools should be aware of the following:
+* Batch allocations can be made for current or future fiscal years that have been configured in the **Finance** app. Past fiscal year budget allocations are not editable with these tools.
+* Allocation changes with these tools can never result in a negative allocation. FOLIO will reject changes that result in a negative allocation to a budget.
+* These tools do not support transferring money between funds associated with the ledger.
+* Funds must be setup before these tools can be used to allocate money to the fund's budgets, but the budgets do not need to be created prior to using the batch allocation tools.
 
+To access these tools, open the **Finance** app to the **Ledger** pane and open the applicable ledger record so it is visible in the third pane for viewing.
+
+### Batch allocations via the user interface
+1. Click **Actions > Batch allocations**.
+2. In the **Select fiscal year** window, select the applicable fiscal year from the dropdown menu.
+3. Click **Save & close**.
+4. On the **Batch edit budgets** screen, each fund name associated with the ledger will be listed, along with the following fields for each:
+   * **Fund status**. Displays current fund status. Select from Active, Inactive, or Frozen.
+   * **Budget name**. Displays budget name (fund code - fiscal year code).
+   * **Total allocated (before)**. Displays current allocation total, before any updates are made with the batch allocation tool.
+   * **Budget status**. Displays current budget status. Select from Active, Closed, Frozen, Inactive, or Planned.
+   * **Allocation increase/decrease**. Enter a positive number to increase the budget allocation. Enter a negative number, using a hyphen, to decrease the budget allocation.
+   * **Total allocated (after)**. Will display the anticipated allocation total after clicking **Recalculate**.
+   * **Allowable encumbrance %**. Displays current allowable encumbrance percentage. Enter a new number or clear field, as needed.
+   * **Allowable expenditure %**. Displays current allowable expenditure percentage. Enter a new number or clear field, as needed.
+   * **Transaction description**. Enter a description to display on the allocation transaction, if desired.
+   * **Transaction tags**. Enter a tag to display on the allocation transaction, if desired.
+5. Fill in fields as desired.
+6. Click **Recalculate** to validate the allocation updates. A red exclamation mark icon will display next to any fund name that will not be updated when saved. Please note: if you make additional changes after clicking **Recalculate**, you will need to click **Recalculate** again prior to saving.
+7. Click **Save & close** to submit the updates.
+
+### Batch allocations via CSV upload
+1. Click **Actions > Download allocation worksheet (CSV)**.
+2. In the **Select fiscal year** window, select the applicable fiscal year from the dropdown menu.
+3. Click **Confirm**.
+4. Open the downloaded file in your preferred program. 
+5. Edit the worksheet, as needed. Please note: adding additional funds that are not included in the ledger being adjusted will result in those additional funds being ignored. Do not delete any names, codes, or UUIDs from the file.
+   * **Fiscal year**. Displays the fiscal year associated with the budgets being edited. Do not edit values in this column.
+   * **Fund name**. Displays the name of the fund. Do not edit values in this column.
+   * **Fund code**. Displays the fund code. Do not edit values in this column.
+   * **Fund UUID**. Displays the universally unique identifier for the fund. Do not edit values in this column.
+   * **Fund status**. Displays current fund status. Valid entries include Active, Inactive, or Frozen.
+   * **Budget name**. Displays budget name (fund code - fiscal year code). Do not edit values in this column.
+   * **Budget UUID**. Displays the universally unique identifier for the budget. Do not edit values in this column.
+   * **Budget status**. Displays current budget status. Valid entries include Active, Closed, Frozen, Inactive, or Planned.
+   * **Total allocated (before)**. Displays current allocation total, before any updates are made with the batch allocation tool.
+   * **Budget initial allocation**. Displays the original allocation amount for the budget. Do not edit values in this column.
+   * **Budget current allocation**. Displays the current allocation amount for the budget, accounting for the initial allocation and any pre-existing increases or decresaes to the allocation amount. Do not edit values in this column.
+   * **Budget allowable expenditure**. Displays current allowable expenditure percentage. Enter a new number or clear field, as needed.
+   * **Budget allowable encumbrance**. Displays current allowable encumbrance percentage. Enter a new number or clear field, as needed.
+   * **Allocation adjustment**. Enter a positive number to increase the budget allocation. Enter a negative number, using a hyphen, to decrease the budget allocation. Please note: if a budget had not yet been created, entering a positive value will result in the creation of a budget.
+   * **Transaction tag**. Enter a tag to display on the allocation transaction, if desired.
+   * **Transaction description**. Enter a description to display on the allocation transaction, if desired.
+7. Save the worksheet as a CSV file.
+8. On the appropriate ledger record, click **Actions > Upload allocation worksheet (CSV)**.
+9. Upload the edited and saved CSV file.
+10. Click **Confirm**.
+11. This will load the worksheet details to the batch allocation user interface. Please note: any errors or invalid actions will be highlighted for correction on this form.
+12. Click **Recalculate** to validate the allocation updates. A red exclamation mark icon will display next to any fund name that will not be updated when saved. Please note: if you make additional changes after clicking **Recalculate**, you will need to click **Recalculate** again prior to saving.
+7. Click **Save & close** to submit the updates.
+
+### Accessing batch allocation logs
+Logs associated with batch allocation transactions using either method may be accessed from the Finance app.
+
+1. Open the **Finance** app to the **Ledger** pane.
+2. Click **Actions > Batch allocation logs**.
+3. Use the **Search & filter** options to locate the desired log file.
+4. Click the **Job name** to view the log on screen.
+5. Click the **download** icon to the right of the **Job name** to download a CSV file containing a record of the batch allocation job.
+
+To delete a log file:
+1. Click the check box to the left of the log row.
+2. Click **Actions > Delete selected logs**.
+3. Click **Confirm**.
 
 ## Transferring money between funds
 
@@ -927,7 +1001,7 @@ When an order containing a PO Line with a fund distribution is opened, an **Encu
 
 #### Releasing encumbrances manually
 
-If you need to unencumber an order, this action is available from the transaction detail on the encumbered budget. This may be needed to manage charges related to ongoing orders. To release an encumbrance the user must have the **Finance: Manually release encumbrance** [permission](#permissions) assigned. 
+If you need to unencumber an order, this action is available from the transaction detail on the encumbered budget. This may be needed to manage charges related to ongoing orders. To release an encumbrance the user must have the corresponding capability assigned. 
 
 To release an encumbrance, follow these steps:
 
@@ -940,7 +1014,7 @@ To release an encumbrance, follow these steps:
 
 #### Unreleasing encumbrances manually
 
-There are situations where encumbrances may erroneously end up with a status of released. In these circumstances users should be able to unrelease encumbrances manually. To unrelease an encumbrance, the user must have the **Finance: Unrelease encumbrance** [permission](#permissions) assigned. 
+There are situations where encumbrances may erroneously end up with a status of released. In these circumstances users should be able to unrelease encumbrances manually. To unrelease an encumbrance, the user must have the corresponding capability assigned. 
 
 To unrelease an encumbrance, follow these steps:
 
@@ -1069,8 +1143,8 @@ If your institution runs rollover before or after the fiscal year end date, you�
 *   **Period begin date.**  The fiscal year begin date for the **Fiscal year** selected.   See [Creating a fiscal year](#creating-a-fiscal-year) for more information about period dates.
 *   **Period end date.** The Fiscal Year end date for the Fiscal year selected.  Note: The **Period end date** must be greater than the current date to initiate rollover from the current year to an upcoming year. 
 *   **Fiscal year.**  Select the next fiscal year.  If the next fiscal year has not yet been set up, click **New fiscal year** to create one.  See  [Creating a fiscal year](#creating-a-fiscal-year) for more information.
-*   **Enforce all budget encumbrance limits.** This box is checked by default. Leave this box checked if you want the system to reject any encumbrances that would exceed the available amount. For example, if your institution typically does not roll over allocations and adds initial allocation amounts manually after rollover, you might want to uncheck this box to allow current year encumbrances to be applied to the upcoming year budgets that are awaiting initial allocations.  
-*   **Enforce all budget expenditure limits.** This box is checked by default. Uncheck this box to allow expenditures to rollover even if the new budget has insufficient funds allocated.  
+*   **Enforce all budget encumbrance limits during rollover.** This box is checked by default. Leave this box checked if you want the system to reject any encumbrances that would exceed the available amount at rollover. For example, if your institution typically does not roll over allocations and adds initial allocation amounts manually after rollover, you might want to uncheck this box to allow current year encumbrances to be applied to the upcoming year budgets that are awaiting initial allocations.  
+*   **Enforce all budget expenditure limits during rollover.** This box is checked by default. Since the setting applies only during the fiscal year rollover process and rollover does not create any expenditures, it is recommended to leave this box checked. If your institution needs to begin paying invoices prior to allocating money to the new fiscal year budgets, you may uncheck the **Enforce all budget expenditure limits** box on the ledger after fiscal year rollover has concluded.
 *   **Close all current budgets.**  This checkbox is selected by default and indicates that you want to close all the current fiscal year budgets as part of this rollover. Uncheck this box if you wish to leave the budget active if you must pay future invoices against past fiscal years.
 
 

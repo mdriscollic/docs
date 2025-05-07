@@ -1,7 +1,7 @@
 ---
 title: "Receiving"
 linkTitle: "Receiving"
-date: 2025-02-06
+date: 2025-05-05
 weight: 50
 tags: ["parenttopic"]
 ---
@@ -20,19 +20,21 @@ Definition of terms related to the Receiving app:
 *   **Unreceive.** To indicate that an order previously listed as “received” has not been delivered to the library.
 
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with the Receiving app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Receiving app or any related information.
+The capabilities listed below allow you to interact with the Receiving app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Receiving app or any related information.
 
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-
-*   **Receiving: Assign acquisition units to new receiving title.** This permission allows the user to apply an acquisition unit to a new title created in the Receiving app.
-*   **Receiving: Export search results.** This permission allows the user to export receiving search results in .csv format.
-*   **Receiving: Manage acquisition units.** This permission allows the user to add or update acquisition units on receiving records that may have been inherited from corresponding order records.
-*   **Receiving: View.** This permission allows the user to view receiving information for orders.
-*   **Receiving: View, edit.** This permission allows the user to receive and edit pieces that are associated with a purchase order line.
-*   **Receiving: View, edit, create.** This permission allows the user to view, edit, and create piece records.
-*   **Receiving: View, edit, delete.** This permission allows the user to view, edit and delete pieces in the Receiving app.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Receiving: Assign acquisition units to new receiving title.** | **UI-Receiving Acq-Units Assignment** | procedural | execute | This capability allows the user to apply an acquisition unit to a new title created in the Receiving app.|
+|**Receiving: Export search results.** | **UI-Receiving** | procedural | execute | This capability allows the user to export receiving search results in .csv format.|
+|**Receiving: Manage acquisition units.** | **UI-Receiving Acq-Units Assignment** | data | manage | This capability allows the user to add or update acquisition units on receiving records that may have been inherited from corresponding order records.|
+|**Receiving: View.** | **UI-Receiving** | data | view | This capability allows the user to view receiving information for orders.|
+|**Receiving: View, edit.** | **UI-Receiving** | data | edit | This capability allows the user to receive and edit pieces that are associated with a purchase order line.|
+|**Receiving: View, edit, create.** | **UI-Receiving** | data | create | This capability allows the user to view, edit, and create piece records.|
+|**Receiving: View, edit, delete.** | **UI-Receiving** | data | delete | This capability allows the user to view, edit and delete pieces in the Receiving app.|
 
 
 
@@ -164,7 +166,7 @@ You can also search for orders by selecting any of the filters in the **Search &
 
 ### Order status
 
-In the **Search & filter** pane, click **Order status** and select any applicable filters:
+In the **Search & filter** pane, click **Order status** and select the applicable value from the dropdown:
 
 
 
@@ -189,7 +191,7 @@ To search for orders from a specific vendor, follow these steps:
 
 ### Order type
 
-In the **Search & filter** pane, click **Order type** and select any applicable filters:
+In the **Search & filter** pane, click **Order type** and select the applicable value from the dropdown:
  
 
 
@@ -456,7 +458,7 @@ Click **Export**. The file downloads to your local download location.
 
 ## Viewing receiving titles details
 
-Receiving title details can be viewed by any user with the permission [Receiving: View](#permissions).
+Receiving title details can be viewed by any user with the the assigned capabilities.
 
 
 ### Search results
@@ -618,6 +620,8 @@ Note: This section of the **Add piece** modal becomes active as soon as the **Cr
 *   **Accession number.** The item's accession number. This will update the item record if filled in.
 *   **Item status.** The current status of the associated item record. Expected pieces typically have a status of 'On order', which updated to 'In process' once the piece is received.
 *   **Request.** Displays a count of requests for the item, if applicable.
+
+Please note: if your institution has [enabled the number generator for the Receiving app](../../settings/settings_orders/settings_orders/#settings--orders--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the values for **Barcode**, **Call number**, and/or **Accession number**. For more information, see [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction).
 
 
 ## Editing an expected or received piece
@@ -805,7 +809,14 @@ If a piece has not arrived from the vendor by the expected receipt date or is da
 
 A library may configure a **Claiming interval** on the Organization record for the vendor. A **Claiming interval** represents the number of days after a piece's **Expected receipt date** when an unreceived piece will be marked **Late**. If a **Claiming interval** is entered on the Organization record, this will appear as the default claiming interval on purchase order lines associated with the vendor, but the default may be changed when the **Claiming active** box is checked on the purchase order line. The interval may also be changed on each receiving title; for example, if a package POL has mutliple titles that should each have different claiming intervals assigned.
 
-Once a piece is marked **Late**, a library may wish to send a claim to the vendor. In the current release of FOLIO, pieces can be marked as **Claim sent**, but automatic transmission to the vendor is not yet implemented. A library may wish to filter by **Receiving status** and use the **Export results (CSV)** option to send information to their vendor to support the claim.
+A piece may be manually marked late using the following steps:
+1. Using the **Search & filter** pane, find the receiving title for which you want to mark a piece late and select it.
+2. In the Expected section of the receiving title, click on the piece.
+3. The **Edit piece** modal will appear.
+4. Click on the dropdown menu next to **Save & close** and select **Mark late**.
+5. A green toast message will appear and the piece status will update to 'Late'.
+
+Once a piece is marked **Late**, a library may wish to send a claim to the vendor. Claims may be initiated from the Receiving app or the [Claiming app](../../acquisitions/claiming/). 
 
 To update a piece to 'Claim sent', use the following steps:
 1. Using the **Search & filter** pane, find the receiving title for which you want to send a claim and select it.

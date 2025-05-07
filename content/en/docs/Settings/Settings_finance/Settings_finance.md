@@ -1,7 +1,7 @@
 ---
 title: "Settings > Finance"
 linkTitle: "Finance"
-date: 2023-11-06
+date: 2025-04-16
 weight: 120
 tags: ["subtopic"]   
 ---
@@ -9,14 +9,18 @@ tags: ["subtopic"]
 The Finance section of the Settings app is where you establish and specify the categories you want to use to classify the different fund types that will be used during a fiscal year.
 
 
-## Permissions
+## Capabilities
 
-In order to interact with Finance settings, a user needs to be assigned the following permission:
+The capabilities listed below allow you to interact with the Finance settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Finance settings or any related information.
 
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-*   **Settings (Finance): Export fund and expense class codes.** This permission allows the user to export a CSV file containing fund codes and expense classes for a selected fiscal year.
-*   **Settings (Finance): View settings.** This permission allows the user view-only access to finance settings.
-*   **Settings (Finance): View, edit, create, delete.** This permission allows the user to view, create, edit, and delete all finance settings.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Finance): Can view and edit settings** | **Settings Finance Enabled** | settings | view | This capability allows the user to view and edit Finance settings.|
+|**Settings (Finance): Export fund and expense class codes.** | **UI-Finance Settings ExportFundAndExpenseClassCodes** | settings | view | This capability allows the user to export a CSV file containing fund codes and expense classes for a selected fiscal year.|
+|**Settings (Finance): View settings.**| **UI-Finance Settings** | settings | view | This capability allows the user view-only access to Finance settings.|
+|**Settings (Finance): View, edit, create, delete.** | **UI-Finance Settings** | settings | manage | This capability allows the user to view, create, edit, and delete all Finance settings.|
 
 
 ## Settings > Finance > Fund types

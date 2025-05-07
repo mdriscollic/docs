@@ -1,7 +1,7 @@
 ---
 title: "Orders"
 linkTitle: "Orders"
-date: 2025-02-06
+date: 2025-04-16
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -16,28 +16,31 @@ Definition of terms related to the Orders app:
 *   **Order line.** A purchase order line contains one of the titles or packages being ordered by the library. Order lines make up an order. Orders can contain multiple order lines.
 
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with the Orders app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Orders app or any related information.
+The capabilities listed below allow you to interact with the Orders app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Orders app or any related information.
 
-Note: The below permissions only pertain to the Orders app. Within the app, orders and order lines may link to records in other apps, like Inventory and Receiving, and the ability to interact with those records could require separate permissions.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-Orders permissions:
+Note: The below capabilities only pertain to the Orders app. Within the app, orders and order lines may link to records in other apps, like Inventory and Receiving, and the ability to interact with those records could require separate capabilities.
 
-*   **Orders: Approve purchase orders.** This permission allows the user to approve purchase orders.
-*   **Orders: Assign acquisition units to new order.** This permission allows the user to assign acquisition units to orders when creating a new order.
-*   **Orders: Can create new Orders and Order lines.** This permission allows the user to create new orders and order lines.
-*   **Orders: Can delete Orders and Order lines.** This permission allows the user to delete orders and order lines. 
-*   **Orders: Can edit Orders and Order lines.** This permission allows the user to view and edit orders and order lines. 
-*   **Orders: Can view Orders and Order lines.** This permission allows the user to view orders and order lines.
-*   **Orders: Cancel order lines.** This permission allows the user to cancel order lines.
-*   **Orders: Cancel purchase orders.** This permission allows the user to cancel order lines.
-*   **Orders: Export search results.** This permission allows the user to export search results in .csv format.
-*   **Orders: Manage acquisition units.** This permission allows the user to change the assignment of acquisition units for an order or order line.
-*   **Orders: Reopen purchase orders.** This permission allows the user to reopen an order.
-*   **Orders: Show all hidden fields.** This permission allows the user to view all fields on a purchase order that were hidden by creation from an order template.
-*   **Orders: Unopen purchase orders.** This permission allows the user to unopen an order.
-*   **Orders: Update encumbrances.** This permission allows the user to update encumbrances for an open order.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Orders: Approve purchase orders.** | **UI-Orders Order Approve** | procedural | execute | This capability allows the user to approve purchase orders.|
+|**Orders: Assign acquisition units to new order.** | **UI-Orders Acq Unit Assignment** | procedural | execute | This capability allows the user to assign acquisition units to orders when creating a new order.|
+|**Orders: Can create new Orders and Order lines.** | **UI-Orders Orders** | data | create | This capability allows the user to create new orders and order lines.|
+|**Orders: Can delete Orders and Order lines.** | **UI-Orders Orders** | data | delete | This capability allows the user to delete orders and order lines.| 
+|**Orders: Can edit Orders and Order lines.** | **UI-Orders Orders** | data | edit | This capability allows the user to edit orders and order lines.|
+|**Orders: Can view custom fields.** | **UI-Orders Custom-Fields** | data | view | This capability allows the user to view custom fields configured on an order.|
+|**Orders: Can view Orders and Order lines.** | **UI-Orders Orders** | data | view | This capability allows the user to view orders and order lines.|
+|**Orders: Cancel order lines.** | **UI-Orders Order-Lines** | procedural | execute | This capability allows the user to cancel order lines.|
+|**Orders: Cancel purchase orders.** | **UI-Orders Order Cancel** | procedural | execute | This capability allows the user to cancel order lines.|
+|**Orders: Export search results.** | **UI-Orders Order Export CSV** | procedural | execute | This capability allows the user to export search results in .csv format.|
+|**Orders: Manage acquisition units.** | **UI-Orders Acq Unit Assignment** | data | manage | This capability allows the user to change the assignment of acquisition units for an order or order line.|
+|**Orders: Reopen purchase orders.** | **UI-Orders Order Reopen** | procedural | execute | This capability allows the user to reopen a closed order.|
+|**Orders: Show all hidden fields.** | **UI-Orders Order Show Hidden** | procedural | execute | This capability allows the user to view all fields on a purchase order that were hidden by creation from an order template.|
+|**Orders: Unopen purchase orders.** | **UI-Orders Order Unopen** | procedural | execute | This capability allows the user to unopen an order.|
+|**Orders: Update encumbrances.** | **UI-Orders Order Update Encumbrances** | procedural | execute | This capability allows the user to update encumbrances for an open order.|
 
 
 
@@ -419,7 +422,8 @@ To export a file of order information in comma-separated values (.csv) format, f
 *   Re-encumber
 *   Note 
 *   Workflow status
-*   Approved 
+*   Approved
+*   Approved by
 *   Renewal interval
 *   Subscription
 *   Manual renewal
@@ -428,10 +432,12 @@ To export a file of order information in comma-separated values (.csv) format, f
 *   Renewal date
 *   Review date
 *   PO tags
+*   Date opened
 *   Created by
 *   Created on
 *   Updated by
 *   Updated on
+*   Order-level custom fields, if configured
 
 To export all fields from the purchase order line, leave the **POL fields to export** default value set to **All**.  To select specific fields to export, click on the radio button below “All” and use the drop down list to select the specific fields to export:
 
@@ -496,6 +502,7 @@ To export all fields from the purchase order line, leave the **POL fields to exp
 *   Created on (PO line)
 *   Updated by (PO line)
 *   Updated on (PO line)
+*   Order line-level custom fields, if configured
 
 Note: Users may see additional fields for export if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
@@ -639,7 +646,7 @@ See the [Export Manager](../../export-manager/#viewing-export-jobs) for more inf
 
 ## Approving an order
 
-You only need to approve an order if you have the Approvals required setting turned on. For more information, see [Settings > Orders > Approvals](../../settings/settings_orders/settings_orders/#settings--orders--general--approvals). If you have this setting turned on, you also need the applicable permission to be able to approve the order. You can open an order once it is approved.
+You only need to approve an order if you have the Approvals required setting turned on. For more information, see [Settings > Orders > Approvals](../../settings/settings_orders/settings_orders/#settings--orders--general--approvals). If you have this setting turned on, you also need the applicable capability to be able to approve the order. You can open an order once it is approved.
 
 There are two ways to approve an order. You can edit the order and select the **Approved** checkbox under PO summary, or you can follow these steps:
 
@@ -794,7 +801,7 @@ To print or save a PDF file containing a snapshot of key information about an or
 
 ## Showing hidden fields
 
-When a template is used to create an order, it may be configured to hide specific fields on the order and/or order line(s). To reveal fields that are hidden by the template, as defined in [Settings > Orders > Creating an order template](../../settings/settings_orders/settings_orders/#settings--orders--general--order-templates), follow these steps.  Note: The user permission **Orders: Show all hidden fields** must be assigned to the user.
+When a template is used to create an order, it may be configured to hide specific fields on the order and/or order line(s). To reveal fields that are hidden by the template, as defined in [Settings > Orders > Creating an order template](../../settings/settings_orders/settings_orders/#settings--orders--general--order-templates), follow these steps.  Note: The user capability **UI-Orders Order Show Hidden (execute)** must be assigned to the user.
 
 1. From the detail pane of the order, select **Actions > Show hidden fields.**  If any fields are hidden, they are added to the detail pane.
 
@@ -985,7 +992,7 @@ If you want to encumber money to certain funds, enter your fund distributions in
 
 1. Click **Add fund distribution**.
 
-2. Select the **Fund ID** from the drop-down list. Only **Active** funds appear in the list. Note: The use of acquisitions units may restrict which funds appear in this list. If an acquisition unit is set up to restrict view permissions, then only funds that are assigned to the same acquisition unit as the user will display in the drop-down list.  For more information, see See [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
+2. Select the **Fund ID** from the drop-down list. Only **Active** funds appear in the list. Note: The use of acquisitions units may restrict which funds appear in this list. If an acquisition unit is set up to restrict view authorization, then only funds that are assigned to the same acquisition unit as the user will display in the drop-down list.  For more information, see See [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/).
 
 3. Select the **Expense class** from the list. Note: the **Expense class** dropdown will only appear if the selected fund's current budget has expense classes assigned. Only active expense classes will be included in the dropdown.
 
