@@ -1,7 +1,7 @@
 ---
 title: "Users"
 linkTitle: "Users"
-date: 2024-12-11       
+date: 2025-05-08       
 weight: 250
 ---
 
@@ -94,7 +94,7 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
     -  **Inactive** status indicates that the expiration date on the user's record has passed or the user is no longer affiliated, employed, or enrolled at the library's institution.
 -  **Expiration date.** The expiration date determines when a user's status is scheduled to change from **Active** to **Inactive**. Expiration date is optional and this field may be left blank. For information on editing an expiration date, see [Edit an expiration date](#edit-an-expiration-date).
 -  **Barcode.** The barcode number for the user's library card. Type the barcode number in the **Barcode** field. 
--  **User Type.** Select the user type: **Patron** or **Staff**. This field is optional for a non-ECS-enabled tenant but required in an ECS-enabled tenant. For more information, see  [Consortium manager \> Members](../consortia/#members).
+-  **User Type.** Select the user type: **Patron** or **Staff**. This field is required in [ECS-enabled tenants](../consortia/). This field is also required for non-ECS-enabled tenants using [Reading Room Access](../access/reading-room/reading_room/). Otherwise, use of the **User type** field is optional.
     -  **Patrons.** Users who may borrow library materials but have no FOLIO permissions assigned to their User record and do not log in to FOLIO to manage their library accounts.
     -  **Staff.** Users who are employed by the library, have FOLIO permissions assigned to their User record for the purpose of performing their library work, and may borrow library materials.
 -  **Profile picture.** If profile pictures are enabled in the FOLIO tenant, the patron’s profile picture (100px x 100px) is displayed in the user record. For more information, see [Configuration setting for Profile-Picture Feature](https://github.com/folio-org/mod-users?tab=readme-ov-file#configuration-setting-for-profile-picture-feature).
@@ -361,6 +361,20 @@ To send a password reset email:
 3. In **Extended information** section, click the **Send reset password email** link under **Folio password**. The reset password email is sent to the email address listed in the user’s **Contact information**.
 4. Optional: Copy the link displayed in the **Reset password email sent** modal and manually send the link to the user using a different email application. 
 5. Click the **X** to close the pop-up window.
+
+
+### Edit Reading room access
+
+
+A user's **Reading room access** can be edited in the Users app. A **User type** must be assigned to the user in order to view or edit the **Reading room access** section of the User record.  
+
+
+1. [Find the user record](#search-for-user-records) you want to edit and select it.
+2. In the **User details** pane, click **Actions > Edit.**
+3. Expand the **Reading room access** accordion. A **User type** must be assigned in order to view and edit the **Reading room access** section of the User record. 
+4. In the **Access** column, select **Allowed** or **Not allowed.** This setting can be overridden in the Reading room app.
+5. Optionally, add a **note.**
+6. Click **Save & Close.**
 
 
 ### Add a sponsor 
