@@ -1,7 +1,7 @@
 ---
 title: "Settings > Authorization Roles"
 linkTitle: "Authorization Roles"
-date: 2025-04-18
+date: 2025-05-08
 weight: 25
 tags: ["subtopic"]   
 ---
@@ -52,8 +52,8 @@ To map **Permission** names to **Capabilities** and identify their attributes, u
 
 1. Log in as an admin user in the Sunflower Bugfest environment: https://bugfest-sunflower.int.aws.folio.org (folio folio) .
 2. Open **Settings \> Developer**.
-3. Select **I can haz capabilities?** in the **Developer* pane.
-4. Type the **Permission name** in the search box in the **Capabilities* pane. 
+3. Select **I can haz capabilities?** in the **Developer** pane.
+4. Type the **Permission name** in the search box in the **Capabilities** pane. 
 
     - Keyword or exact phrase (including punctuation) searches work best. For example, use *requests* or *Users: View requests* to search for the **Capability** that allows users to view requests.
     
