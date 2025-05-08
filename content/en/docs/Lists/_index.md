@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 linkTitle: "Lists"
-date: 2025-04-09       
+date: 2025-05-08      
 weight: 525
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
@@ -150,6 +150,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instance - Publication range* | NO | YES |
 | *Instance - Series* | NO | YES |
 | *Instance - Source* | YES | YES |
+| *Instance - Staff suppress* | YES | YES |
 | *Instance - Statistical code names* | YES | YES |
 | *Instance - Statistical code UUIDs* | NO | YES |
 | *Instance - Subject headings* | NO | YES |
