@@ -229,6 +229,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instances - Statistical code names* | YES | YES |
 | *Instances - Statistical code UUIDs* | NO | YES |
 | *Instances - Subject headings* | NO | YES |
+| *Instances - Staff suppress* | YES | YES |
 | *Instances - Suppress from discovery* | YES | YES |
 | *Instances - Tags* | NO | YES |
 | *Instances - Updated date* | YES | YES |
@@ -332,6 +333,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instances - Resource type UUID* | YES | YES |
 | *Instances - Series* | NO | YES |
 | *Instances - Source* | YES | YES |
+| *Instance - Staff suppress* | YES | YES |
 | *Instances - Statistical code names* | YES | YES |
 | *Instances - Statistical code UUIDs* | NO | YES |
 | *Instances - Subject headings* | NO | YES |
