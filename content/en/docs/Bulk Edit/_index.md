@@ -450,7 +450,10 @@ To bulk edit an **Administrative data** field in the matching Inventory-holdings
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Administrative data** fields:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The **Find** action supports a case sensitive, partial match in all **Administrative data** fields.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Administrative data** fields:
 
 
 | Options | Actions | Data | Actions | Data | 
@@ -483,7 +486,10 @@ To bulk edit the **Electronic access** field in the matching Inventory-holdings 
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Electronic access** field in the matching Inventory-holdings records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The **Find** action supports a case sensitive, partial match in all **Electronic access** fields except for **URL Relationship** which remains a full field search.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Electronic access** field in the matching Inventory-holdings records:
 
 
 | Options | Actions | Data | Actions | Data |
@@ -545,7 +551,10 @@ To bulk edit a **Holdings note** in the matching Inventory-holdings records:
 
 1. Click the **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Holdings-notes** field in the matching Inventory-holdings records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The **Find** action supports a case sensitive, partial match in all **Holdings-note** fields.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Holdings-notes** field in the matching Inventory-holdings records:
 
 
 | Options | Actions | Data | Actions | Data |
@@ -579,7 +588,10 @@ To bulk edit the **Location** in the matching Inventory-holdings records:
 
 1. Click the **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Location** field in the matching Inventory-holdings records:
+3. Under **Actions**, select the action you want to apply from the drop-down list.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Location** field in the matching Inventory-holdings records:
 
 
 | Options | Actions | Data | 
@@ -624,7 +636,10 @@ To bulk edit an **Administrative data** field in the matching FOLIO Instance rec
 
 1. Click **Actions \> Start bulk edit \> FOLIO Instances**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Administrative data** fields in the matching FOLIO Instance records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The **Find** action supports a case sensitive, partial match in all **Administrative data** fields.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Administrative data** fields in the matching FOLIO Instance records:
 
 
 | Options | Actions | Data | Actions | Data |
@@ -662,7 +677,10 @@ To bulk edit the **Instance note** field in the matching FOLIO Instance records:
 
 1. Click **Actions \> Start bulk edit \> FOLIO Instances**.
 2. Under **Options**, select the **Instance note** from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Instance note** field in the matching FOLIO Instance records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The **Find** action supports a case sensitive, partial match in all **Instance note** fields.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Instance note** field in the matching FOLIO Instance records:
 
 
 | Option | Actions | Data | Actions | Data |
@@ -709,7 +727,10 @@ To bulk edit the **Administrative data** fields in the matching Instances with s
 
 1. Click **Actions \> Start bulk edit \> Instances with source MARC**.
 2. In the **Bulk edits for administrative data** section, select an option from the **Options** list.
-3. Select the action you want to apply from the **Actions** list. The following **Options** and **Actions** are available to bulk edit the **Administrative data** field:
+3. Select the action you want to apply from the **Actions** list. The **Find** action supports a case sensitive, partial match in all **Administrative data** fields.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Administrative data** field:
 
 
 | Options | Actions | Data | Actions | Data |
@@ -750,7 +771,10 @@ To bulk edit MARC fields in the matching Instances with source MARC records:
 2. In the **Bulk edits for instances with source MARC** section, input the **Field** tag. **0xx-9xx fields** are supported; 00x and the system protected 999 ff fields are not supported for bulk edit.
 3. Change **indicators 1 and 2** as required.
 4. Indicate **subfield**.
-5. Select the action you want to apply from the **Actions** list. The following **Actions** are available to bulk edit the **0xx-9xx**  fields in the matching Instances with source MARC records:
+5. Select the action you want to apply from the **Actions** list. The **Find** action supports a case sensitive, partial match in **0xx-9xx MARC** fields.
+
+
+The following **Actions** are available to bulk edit the **0xx-9xx MARC**  fields in the matching Instances with source MARC records:
 
 
 | Field | ln. 1 | ln. 2| Subfield | Actions | Data | Actions | Data | 
@@ -806,7 +830,10 @@ To bulk edit an **Administrative data** field in the matching **Inventory-items*
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the **Field** you want to edit from the drop-down menu.
-3. Under **Actions**, Select the action you want to apply to the Item records. The following **Actions** are available to bulk edit the **Administrative note** field in the matching Item records:
+3. Under **Actions**, Select the action you want to apply to the Item records. The **Find** action supports a case sensitive, partial match in all **Administrative data** fields.
+
+
+The following **Actions** are available to bulk edit the **Administrative note** field in the matching Item records:
 
 
 | Options | Actions | Data | Actions | Data |
@@ -852,7 +879,10 @@ To bulk edit an **Item note** in the matching Inventory-item records:
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, click the drop-down list and select the field you want to edit.
-3. Under **Actions**, click **Select action** and select the action you want to apply to the item records. The following **Actions** are available to bulk edit the **Item note** field in the matching Inventory-item records:
+3. Under **Actions**, click **Select action** and select the action you want to apply to the item records. The **Find** action supports a case sensitive, partial match in all **Item note** fields.
+
+
+The following **Actions** are available to bulk edit the **Item note** field in the matching Inventory-item records:
 
 
 | Options | Actions | Data | Actions | Data |
@@ -894,7 +924,10 @@ To bulk edit the **Loan and availability** fields in the matching Inventory-item
 
 1. Click **Actions \> Start bulk edit**.
 2. Under **Options**, select the field you want to edit from the drop-down list.
-3. Under **Actions**, select the action you want to apply from the drop-down list. The following **Options** and **Actions** are available to bulk edit the **Loan and availability** fields in the matching Item records:
+3. Under **Actions**, select the action you want to apply from the drop-down list. The **Find** action supports a case sensitive, partial match in all **Loan and availability** fields.
+
+
+The following **Options** and **Actions** are available to bulk edit the **Loan and availability** fields in the matching Item records:
 
 
 | Options | Actions | Data | Actions | Data |
