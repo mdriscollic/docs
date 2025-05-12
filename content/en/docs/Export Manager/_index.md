@@ -1,7 +1,7 @@
 ---
 title: "Export manager"
 linkTitle: "Export manager"
-date: 2025-04-16
+date: 2025-05-12
 weight: 625
 ---
 
