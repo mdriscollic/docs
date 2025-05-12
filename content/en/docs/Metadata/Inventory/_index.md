@@ -20,40 +20,42 @@ Definition of terms related to the Inventory app:
 -   **SRS.** Source Record Storage. A storage layer in FOLIO. If an instance has an underlying MARC record, then this record is stored in SRS.
 -   **Intellectual item.** This status can be used for an item record that does not correspond to a single, distinct physical object. May also be referred to as a “dummy record.”
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with the Inventory app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app.
+Beginning with the Sunflower release, the Eureka platform replaces permission sets with **Capabilities** and **Capability sets**. For more information about **Capabilities** and **Capability sets**, see [Roles Management with Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-The following are all the Inventory permissions:
+The capabilities listed below allow you to interact with the Inventory app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles.
 
--   **Inventory: All permissions.** This permission allows the user to perform all actions in Inventory.
--   **Inventory: Create and download In transit items report.** This permission allows the user to export a report of any items with the status "in transit."
--   **Inventory: Create order from instance.** This permission allows the user to initiate the creation of a new purchase order or a new purchase order line (in the Orders app) from an Instance record in Inventory.
--   **Inventory: Enable staff suppress facet.** This permission allows the user to search and view instance records that are suppressed for staff.
--   **Inventory: Import single bibliographic records.** This permission allows the user to import and overlay Instance records from external sources. External sources must be configured in Settings.
--   **Inventory: Mark items in process.** This permission allows the user to update an item record's Item status to In process.
--   **Inventory: Mark items in process (non-requestable).** This permission allows the user to update an item record's Item status to In process (non-requestable).
--   **Inventory: Mark items intellectual item.** This permission allows the user to update an item record's Item status to Intellectual.
--   **Inventory: Mark items long missing.** This permission allows the user to update an item record's Item status to Long missing.
--   **Inventory: Mark items restricted.** This permission allows the user to update an item record's Item status to Restricted.
--   **Inventory: Mark items unavailable.** This permission allows the user to update an item record's Item status to Unavailable.
--   **Inventory: Mark items unknown.** This permission allows the user to update an item record's Item status to Unknown.
--   **Inventory: Mark items withdrawn.** This permission allows the user to update an item record's Item status to Withdrawn. The user can also view and edit items.
--   **Inventory: Move holdings.** This permission allows the user to move holdings records from one instance record to another. The user can also search and view instances, holdings, and items.
--   **Inventory: Move items.** This permission allows the user to move an item record from one holding record to another. The user can also search and view instances, holdings, and items.
--   **Inventory: Set record for deletion.** This permission allows the user to set instance records and associated MARC records for deletion.
--   **Inventory: View instances, holdings, and items.** This permission allows the user to view instances, holdings, and items. 
--   **Inventory: View, create holdings.** This permission allows the user to create new holdings records. The user can also view holdings.
--   **Inventory: View, create instances.** This permission allows the user to create new instance records. The user can also view instances.
--   **Inventory: View, create items.** This permission allows the user to create new item records. The user can also view items.
--   **Inventory: View, create, edit holdings.** This permission allows the user to edit existing holdings records. The user can also view and create holdings.
--   **Inventory: View, create, edit instances.** This permission allows the user to edit existing instance records. The user can also view and create instances.
--   **Inventory: View, create, edit items.** This permission allows the user to edit existing item records. The user can also view and create items.
--   **Inventory: View, create, edit, delete holdings.** This permission allows the user to delete holdings records. The user can also view and edit holdings.
--   **Inventory: View, create, edit, delete items.** This permission allows the user to delete item records. The user can also view and edit items.
--   **Inventory: View, create, edit, mark missing items.** This permission allows the user to update an item record's Item status to Missing. The user can also view and edit items.
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Inventory: All permissions.** | **UI-Inventory** | data | manage | This allows the user to perform all actions in Inventory.|
+|**Inventory: Create and download In transit items report.** | **UI-Inventory Items In-Transit-Report** | data | create | This allows the user to export a report of any items with the status "in transit."|
+|**Inventory: Create order from instance.** | **UI-Inventory Instance Order** | data | create | This allows the user to initiate the creation of a new purchase order or a new purchase order line (in the Orders app) from an Instance record in Inventory.|
+|**Inventory: Enable staff suppress facet.** | **UI-Inventory Instance Staff-Suppressed-Records** | data | view | This allows the user to search and view instance records that are suppressed for staff.|
+|**Inventory: Import single bibliographic records.** | **UI-Inventory Single-Record-Import** | procedural | execute | This allows the user to import and overlay Instance records from external sources. External sources must be configured in Settings.|
+|**Inventory: Mark items in process.** | **UI-Inventory Items Mark-In-Process** | procedural | execute | This allows the user to update an item record's Item status to In process.|
+|**Inventory: Mark items in process (non-requestable).** | **UI-Inventory Items Mark-In-Process-Non-Requestable** | procedural | execute | This allows the user to update an item record's Item status to In process (non-requestable).|
+|**Inventory: Mark items intellectual item.** | **UI-Inventory Items Mark-Intellectual-Item** | procedural | execute | This allows the user to update an item record's Item status to Intellectual.|
+|**Inventory: Mark items long missing.** | **UI-Inventory Items Mark-Long-Missing** | procedural | execute | This allows the user to update an item record's Item status to Long missing.|
+|**Inventory: Mark items restricted.** | **UI-Inventory Items Mark-Restricted** | procedural | execute | This allows the user to update an item record's Item status to Restricted.|
+|**Inventory: Mark items unavailable.** | **UI-Inventory Items Mark-Unavailable** | procedural | execute | This allows the user to update an item record's Item status to Unavailable.|
+|**Inventory: Mark items unknown.** | **UI-Inventory Items Mark-Unknow** | procedural | execute | This allows the user to update an item record's Item status to Unknown.|
+|**Inventory: Mark items withdrawn.** | **UI-Inventory Items Mark-Withdrawn** | procedural | execute | This allows the user to update an item record's Item status to Withdrawn. The user can also view and edit items.|
+|**Inventory: Move holdings.** | **UI-Inventory Holdings** | procedural | execute | This allows the user to move holdings records from one instance record to another. The user can also search and view instances, holdings, and items.|
+|**Inventory: Move items.** | **UI-Inventory Item** | procedural | execute | This allows the user to move an item record from one holding record to another. The user can also search and view instances, holdings, and items.|
+|**Inventory: Set records for deletion.** | **UI-Inventory Instance Set-Records-For-Deletion** | procedural | execute | This allows the user to set instance records and associated MARC records for deletion.|
+|**Inventory: View instances, holdings, and items.** | **UI-Inventory Instance** | data | view | This allows the user to view instances, holdings, and items.|
+|**Inventory: View, create holdings.** | **UI-Inventory Holdings** | data | create | This allows the user to create new holdings records. The user can also view holdings.|
+|**Inventory: View, create instances.** | **UI-Inventory Instance** | data | create | This allows the user to create new instance records. The user can also view instances.|
+|**Inventory: View, create items.** | **UI-Inventory Item** | data | create | This allows the user to create new item records. The user can also view items.|
+|**Inventory: View, create, edit holdings.** | **UI-Inventory Holdings** | data | edit | This allows the user to edit existing holdings records. The user can also view and create holdings.|
+|**Inventory: View, create, edit instances.** | **UI-Inventory Instance** | data | edit | This allows the user to edit existing instance records. The user can also view and create instances.|
+|**Inventory: View, create, edit items.** | **UI-Inventory Item** | data | edit | This allows the user to edit existing item records. The user can also view and create items.|
+|**Inventory: View, create, edit, delete holdings.** | **UI-Inventory Holdings** | data | delete | This allows the user to delete holdings records. The user can also view and edit holdings.|
+|**Inventory: View, create, edit, delete items.** | **UI-Inventory Item** | data | delete | This allows the user to delete item records. The user can also view and edit items.|
+|**Inventory: View, create, edit, mark missing items.** | **UI-Inventory Item Mark-As-Missing** | procedural | execute | This allows the user to update an item record's Item status to Missing. The user can also view and edit items.|
 
-Note: Some actions in Inventory require permissions in other apps. For example, **View source** requires permissions in quickMARC.
+Note: Some actions in Inventory require permissions/capabilities in other apps. For example, **View source** requires permissions in quickMARC.
 
 ## Keyboard shortcuts
 
@@ -72,6 +74,7 @@ The Administrative data section contains technical information about the instanc
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
 -   **Staff suppress.** If you want to suppress the record, and its associated holdings and item records, from staff who do not have the proper permissions to view the record, select the **Staff suppress** checkbox. If selected, staff need to have the permission Inventory: Enable staff suppress facet in order to view the record.
 -   **Previously held.** If the resource was previously held by your library, select the **Previously held** checkbox. A library may adopt a policy to select the Previously held checkbox in the case where the library no longer owns the bibliographic resource described in the instance record, but for administrative reasons wishes to retain the record in the inventory and indicate previous ownership. For example, permission for library users to view or use items in a consortial collection may require proof that the library at some time owned those items.
+-   **Set for deletion.** If you want to mark a record as set for deletion, select the **Set for deletion** checkbox. You may also use the **Set record for deletion** action in the Instance record. See [Deleting an instance record](#deleting-an-instance-record)
 -   **Instance HRID.** The human readable identifier, also called eye readable ID, a system-assigned sequential ID.
 -   **Source (required).** Format of the instance source record, if a source record exists. For example, FOLIO if it's a record created in Inventory, MARC if it's a MARC record created in MARCcat, or EPKB if it's a record coming from eHoldings. The system assigns the source automatically.
 -   **Cataloged date.** Date when an instance is considered "cataloged."
@@ -1099,6 +1102,33 @@ To view an item record, follow these steps:
 
 If you are using a barcode to view an item record, the item record details window will open immediately upon the barcode being scanned, copy/pasted, or typed into the Item Search & Filter pane.
 
+## Version History
+
+Version history allows you to track field-level changes (added, removed, edited) in a record.
+
+The ability to view version history is available for the following record types:
+
+-   **Instance.**
+-   **FOLIO holdings.**
+-   **Item.**
+-   **MARC bibliographic records.**
+
+To view the version history of a record, click on the clock icon in the upper right corner of the record. A separate pane will appear containing cards of all changes made in a single create/edit/delete action on the record.
+
+Each card will display:
+
+-   A hyperlink saying either "Current version" or "Changed" 
+-   Date/time of the changes made
+-   The user name that made the change (For ECS environments, users need to have permissions to view users in the central tenant in order to the names from other tenants on shared records.)
+-   The field that changed as well as the action taken (Added, Edited, Removed)
+
+For a detailed view of the changes, click on the hyperlink. A box will appear that includes the following details:
+
+-   Action: Whether the field was added, removed, or edited
+-   Field: The changed field name
+-   Changed from: The original value, or “-” if the field was added
+-   Changed to: The new value, or “-” if the field was deleted
+
 ## Editing an instance record
 
 1.  [Find the instance](#searching-for-a-record) you want to edit and select it.
@@ -1162,7 +1192,7 @@ To move items to a different holdings record within the same instance record, fo
 
 ## Deleting an instance record
 
-Note: This is only a soft delete. When a record is set for deletion, the instance will be Suppressed from discovery and Staff suppressed. If the instance source is MARC, then the MARC LDR 05 will be set to "d".
+Note: This is only a soft delete. When a record is set for deletion, the instance will be flagged Set for deletion, Suppressed from discovery and Staff suppressed. A warning message will also display at the top of the instance. If the instance source is MARC, then the MARC LDR 05 will be set to "d".
 
 1.  [Find the instance](#searching-for-a-record) you want to delete and select it.
 2.  In the **Instance record details** pane, click **Actions \> Set record for deletion**.
