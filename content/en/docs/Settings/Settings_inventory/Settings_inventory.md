@@ -8,36 +8,37 @@ tags: ["subtopic"]
 
 The Inventory section of Setting allows you to customize your Inventory app.
 
-## Permissions
+## Capabilities and Capability Sets
 
-Each setting within Inventory has its own permission associated with it. If a user has one of the below permissions assigned to their user record, they will be able to view and interact with that particular setting. You can assign permissions to users in the Users app.
+Each setting within Inventory has its own capability or capability set associated with it. If a user has one of the below assigned to their user record, they will be able to view and interact with that particular setting. You can assign capabilities via user roles.
 
-The following are all the Inventory Settings permissions presented in the order the configurations appear in the Settings app:
-
--   **Settings (Inventory): Create, edit, delete alternative title type.** This permission allows the user to create, read, update, and delete alternative title types.
--   **Settings (Inventory): Create, edit, delete classification identifier types.** This permission allows the user to create, read, update, and delete identifier types.
--   **Settings (Inventory): Create, edit, delete contributor types.** This permission allows the user to create, read, update, and delete contributor types.
--   **Settings (Inventory): Create, edit, delete formats.** This permission allows the user to create, read, update, and delete formats.
--   **Settings (Inventory): Create, edit, delete instance note types.** This permission allows the user to create, read, update, and delete instance note types.
--   **Settings (Inventory): Create, edit, delete instance status types.** This permission allows the user to create, read, update, and delete instance status types.
--   **Settings (Inventory): Create, edit, delete locally defined modes of issuance.** This permission allows the user to create, read, update, and delete modes of issuance.
--   **Settings (Inventory): Create, edit, delete nature of content.** This permission allows the user to create, read, update, and delete natures of content.
--   **Settings (Inventory): Create, edit, delete resource identifier types.** This permission allows the user to create, read, update, and delete resource identifier types.
--   **Settings (Inventory): Create, edit, delete locally defined resource types.** This permission allows the user to create, read, update, and delete locally defined resource types.
--   **Settings (Inventory): Create, edit, delete holdings note types.** This permission allows the user to create, read, update, and delete holdings note types.
--   **Settings (Inventory): Create, edit, delete holdings sources.** This permission allows the user to create, read, update, and delete holdings sources.
--   **Settings (Inventory): Create, edit, delete holdings types.** This permission allows the user to create, read, update, and delete holdings types.
--   **Settings (Inventory): Create, edit, delete ILL policies.** This permission allows the user to create, read, update, and delete ILL policies.
--   **Settings (Inventory): Create, edit, delete item note types.** This permission allows the user to create, read, update, and delete item note types.
--   **Settings (Inventory): Create, edit, delete loan types.** This permission allows the user to create, read, update, and delete loan types.
--   **Settings (Inventory): Create, edit, delete material types.** This permission allows the user to create, read, update, and delete material types.
--   **Settings (Inventory): Edit fast add settings.** This permission allows the user to edit fast add settings.
--   **Settings (Inventory): Create, edit and delete HRID handling.** This permission allows the user to create, read, update, and delete HRID handlings.
--   **Settings (Inventory): Create, edit, delete statistical code types.** This permission allows the user to create, read, update, and delete statistical code types.
--   **Settings (Inventory): Create, edit, delete statistical codes.** This permission allows the user to create, read, update, and delete statistical codes.
--   **Settings (Inventory): Create, edit, delete URL relationships.** This permission allows the user to create, read, update, and delete URL relationships.
--   **Settings (Inventory): Create, edit, delete call number types.** This permission allows the user to create, read, update, and delete call number types.
--   **Settings (Inventory): Display list of settings pages.** This permission allows the user to view the list of settings for the Inventory app.
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Inventory): Create, edit, delete alternative title type.** | **UI-Inventory Settings Alternative-Title-Types** | settings | view | This allows the user to create, read, update, and delete alternative title types.|
+|**Settings (Inventory): Create, edit, delete classification identifier types.** | **UI-Inventory Settings Classification-Types** | settings | view | This allows the user to create, read, update, and delete identifier types.|
+|**Settings (Inventory): Create, edit, delete contributor types.** | **UI-Inventory Settings Contributor-Types** | settings | view | This allows the user to create, read, update, and delete contributor types.|
+|**Settings (Inventory): Create, edit, delete formats.** | **UI-Inventory Settings Instance-Formats** | settings | view | This allows the user to create, read, update, and delete formats.|
+|**Settings (Inventory): Create, edit, delete instance note types.** | **UI-Inventory Settings Instance-Note-Types** | settings | view | This allows the user to create, read, update, and delete instance note types.|
+|**Settings (Inventory): Create, edit, delete instance status types.** | **UI-Inventory Settings Instance-Statuses** | settings | view | This allows the user to create, read, update, and delete instance status types.|
+|**Settings (Inventory): Create, edit, delete locally defined modes of issuance.** | **UI-Inventory Settings Modes-Of-Issuance** | settings | view | This allows the user to create, read, update, and delete modes of issuance.|
+|**Settings (Inventory): Create, edit, delete nature of content.** | **UI-Inventory Settings Nature-Of-Content-Terms** | settings | view | This allows the user to create, read, update, and delete natures of content.|
+|**Settings (Inventory): Create, edit, delete resource identifier types.** | **UI-Inventory Settings Identifier-Types** | settings | view | This allows the user to create, read, update, and delete resource identifier types.|
+|**Settings (Inventory): Create, edit, delete locally defined resource types.** | **UI-Inventory Settings Instance-Types** | settings | view | This allows the user to create, read, update, and delete locally defined resource types.|
+|**Settings (Inventory): Create, edit, delete holdings note types.** | **UI-Inventory Settings Holdings-Note-Types** | settings | view | This allows the user to create, read, update, and delete holdings note types.|
+|**Settings (Inventory): Create, edit, delete holdings sources.** | **UI-Inventory Settings Holdings-Sources** | settings | view | This allows the user to create, read, update, and delete holdings sources.|
+|**Settings (Inventory): Create, edit, delete holdings types.** | **UI-Inventory Settings Holdings-Types** | settings | view | This allows the user to create, read, update, and delete holdings types.|
+|**Settings (Inventory): Create, edit, delete ILL policies.** | **UI-Inventory Settings Ill-Policies** | settings | view | This allows the user to create, read, update, and delete ILL policies.|
+|**Settings (Inventory): Create, edit, delete item note types.** | **UI-Inventory Settings Item-Note-Types** | settings | view | This allows the user to create, read, update, and delete item note types.|
+|**Settings (Inventory): Create, edit, delete loan types.** | **UI-Inventory Settings Loan-Types** | settings | view | This allows the user to create, read, update, and delete loan types.|
+|**Settings (Inventory): Create, edit, delete material types.** | **UI-Inventory Settings Material-Types** | settings | view | This allows the user to create, read, update, and delete material types.|
+|**Settings (Inventory): Edit fast add settings.** | **UI-Inventory Settings Fast-Add** | settings | view | This allows the user to edit fast add settings.|
+|**Settings (Inventory): Create, edit and delete HRID handling.** | **UI-Inventory Settings Hrid-Handling** | settings | view | This allows the user to create, read, update, and delete HRID handlings.|
+|**Settings (Inventory): Create, edit, delete statistical code types.** | **UI-Inventory Settings Statistical-Code-Types** | settings | view | This allows the user to create, read, update, and delete statistical code types.|.
+|**Settings (Inventory): Create, edit, delete statistical codes.** | **UI-Inventory Settings Statistical-Codes** | settings | view | This allows the user to create, read, update, and delete statistical codes.|
+|**Settings (Inventory): Create, edit, delete URL relationships.** | **UI-Inventory Settings Electronic-Access-Relationships** | settings | view | This allows the user to create, read, update, and delete URL relationships.|
+|**Settings (Inventory): Create, edit, delete call number types.** | **UI-Inventory Settings Call-Number-Types** | settings | view | This allows the user to create, read, update, and delete call number types.|
+|**Settings (Inventory): View list of settings pages.** | **UI-Inventory Settings List** | settings | view | This allows the user to view the list of settings for the Inventory app.|
+|**Settings (Inventory): Manage number generator options.** | **UI-Inventory Settings Manage-Number-Generator-Options** | settings | view | This allows the user to view and edit number generator options.|
 
 ## Settings \> Inventory \> Alternative title types
 
@@ -560,6 +561,20 @@ Use this setting to create and manage call number types. Call number types appea
 2. In the **Delete Call number type** dialog, click **Delete**. A confirmation message appears and the Call number type is deleted.
 
 Note: Call number types that have at least one value assigned in Inventory cannot be deleted. The call numbers must first be assigned a different type or deleted.
+
+## Settings \> Inventory \> Number generator options
+
+Use this setting to enable Number generators for the barcode, accession number and/or call number in Inventory.
+
+Three options are available:
+
+-   **Off** (Number can only be filled manually.)
+-   **On, field editable** (Number can be filled using the generator and edited, or filled manually.)
+-   **On, field not editable** (Number can only be filled using the generator.)
+
+In addition, you can select the setting “Use the same generated number for accession number and call number” to insert the same number into both fields.
+
+See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
 
 ## Settings \> Inventory \> Integrations
 
