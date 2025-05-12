@@ -431,7 +431,7 @@ The Holdings section contains select holdings record fields. For all fields avai
 
 The Item section contains select item record fields. For all fields available in an item record, see [Adding an item to a record](#adding-an-item-to-a-record).
 
--   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value.
+-   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value. If enabled you can use the number generator to generate the barcode. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
 -   **Material type (required).** Describes the material nature of a specific item, with the intention to permit more specific information than resource type alone. Configured in [Settings \> Inventory \> Material types](../../settings/settings_inventory/settings_inventory/#settings--inventory--material-types).
 -   **Permanent loan type (required).** The default loan type for a given item. For example, Can circulate, Course reserves, Reading room, Selected, etc. Configured in [Settings \> Inventory \> Loan types](../../settings/settings_inventory/settings_inventory/#settings--inventory--loan-types).
 -   **Item notes (required).** Any notes about the item that you want to appear to staff during check in or check out.
@@ -535,7 +535,7 @@ The Location section contains information on the physical or electronic location
 -   **Copy number.** The copy number of the holdings.
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the holdings level. For example, FIC.
--   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44)
+-   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44) If enabled you can use the number generator to generate the call number. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
 -   **Call number suffix.** Suffix of the call number on the holdings level. For example, the year (2001).
 
 #### Holdings details
@@ -660,7 +660,7 @@ Receiving history is used for serials and continuing resources. Shows the materi
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
 -   **Item HRID.** The human readable ID, also called eye readable ID. A system-assigned sequential ID which maps to the Item ID
 -   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value.
--   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number.
+-   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number. If enabled you can use the number generator to generate the accession number. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
 -   **Item identifier.** Item identifier number. For example, imported from the union catalog (read only).
 -   **Former identifier.** Previous identifiers assigned to the item.
 -   **Statistical code.** Statistical codes (e.g. ASER; name: Active serial; type: SERM (Serial management) or books; name: Book, print (books); type ARL (Collection stats) etc.)
@@ -690,7 +690,7 @@ The Item data section contains additional information on the item.
 -   **Copy number.** Copy number is the piece identifier. The copy number reflects if the library has one (or more) copies of a single-volume monograph; one (or more) copies of a multi-volume, (e.g. Copy 1, or C.7.)
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the item level.
--   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44.
+-   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44. If enabled you can use the number generator to generate the accession number. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
 -   **Call number suffix.** Suffix of the call number on the item level.
 -   **Number of pieces.** Number of pieces. Used when an item is checked out or returned to verify that all parts are present (e.g. 7 CDs in a set).
 -   **Description of pieces.** Description of pieces. For example, 500 puzzle pieces.
