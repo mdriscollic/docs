@@ -431,7 +431,7 @@ The Holdings section contains select holdings record fields. For all fields avai
 
 The Item section contains select item record fields. For all fields available in an item record, see [Adding an item to a record](#adding-an-item-to-a-record).
 
--   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value. If enabled you can use the number generator to generate the barcode. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
+-   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value. If enabled you can use the number generator to generate the barcode.
 -   **Material type (required).** Describes the material nature of a specific item, with the intention to permit more specific information than resource type alone. Configured in [Settings \> Inventory \> Material types](../../settings/settings_inventory/settings_inventory/#settings--inventory--material-types).
 -   **Permanent loan type (required).** The default loan type for a given item. For example, Can circulate, Course reserves, Reading room, Selected, etc. Configured in [Settings \> Inventory \> Loan types](../../settings/settings_inventory/settings_inventory/#settings--inventory--loan-types).
 -   **Item notes (required).** Any notes about the item that you want to appear to staff during check in or check out.
@@ -535,7 +535,7 @@ The Location section contains information on the physical or electronic location
 -   **Copy number.** The copy number of the holdings.
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the holdings level. For example, FIC.
--   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44) If enabled you can use the number generator to generate the call number. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
+-   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44) If enabled you can use the number generator to generate the call number.
 -   **Call number suffix.** Suffix of the call number on the holdings level. For example, the year (2001).
 
 #### Holdings details
@@ -660,7 +660,7 @@ Receiving history is used for serials and continuing resources. Shows the materi
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
 -   **Item HRID.** The human readable ID, also called eye readable ID. A system-assigned sequential ID which maps to the Item ID
 -   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value.
--   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number. If enabled you can use the number generator to generate the accession number. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
+-   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number. If enabled you can use the number generator to generate the accession number.
 -   **Item identifier.** Item identifier number. For example, imported from the union catalog (read only).
 -   **Former identifier.** Previous identifiers assigned to the item.
 -   **Statistical code.** Statistical codes (e.g. ASER; name: Active serial; type: SERM (Serial management) or books; name: Book, print (books); type ARL (Collection stats) etc.)
@@ -690,7 +690,7 @@ The Item data section contains additional information on the item.
 -   **Copy number.** Copy number is the piece identifier. The copy number reflects if the library has one (or more) copies of a single-volume monograph; one (or more) copies of a multi-volume, (e.g. Copy 1, or C.7.)
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the item level.
--   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44. If enabled you can use the number generator to generate the accession number. See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
+-   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44. If enabled you can use the number generator to generate the accession number.
 -   **Call number suffix.** Suffix of the call number on the item level.
 -   **Number of pieces.** Number of pieces. Used when an item is checked out or returned to verify that all parts are present (e.g. 7 CDs in a set).
 -   **Description of pieces.** Description of pieces. For example, 500 puzzle pieces.
@@ -879,6 +879,159 @@ To search, first select the record type (instance, holdings, or item) then enter
 -   **Circulation notes.** Keyword search across check in and check out notes.
 -   **Item HRID.** Human readable identifier for the item record.
 -   **Item UUID.** Universally unique identifier for the item record.
+
+## Using the Query search
+
+For advanced users with knowledge of CQL, the Query search allows for a more powerful way of constructing searches.
+
+There are two types of searchable fields: full-text (e.g. title) and term (e.g. HRID). A query search is often composed of the field being queried, an operator to define how you want the query to work, and the search itself.
+
+Example: title all "semantic web" 
+
+| Field | Operator | Search | |
+| -------- | ------- | ------- | ------- |
+| title | all | "semantic web" | Finds any record that has both "semanitc" and "web" in the title field. |
+
+### Instance CQL Search Fields
+
+| **Field** | **Type** | **Example** | **Description** |
+| -------- | ------- | ------- | ------- |
+| keyword | full-text | keyword all "semantic web" | A keyword search in the title, alternative title, index title, series, identifier, and contributor fields. |
+| id | term | id=="1234567" | Searches the UUID. |
+| hrid | term | hrid=="hr1*0" | Searches the HRID.|
+| source | term | source=="MARC" | Searches the source field. |
+| title | full-text | title all "semantic web" | Searches the title, alternative title, index title, and series fields. |
+| alternativeTitles.alternativeTitle | full-text | alternativeTitles.alternativeTitle all "semantic web" | Searches the alternative title field. |
+| uniformTitle | full-text | uniformTitle all "semantic web" | Searches the uniform title field. |
+| indexTitle | full-text | indexTitle all "semantic web" | Searches the index title field. |
+| series | full-text | series all "series" | Searches the series field. |
+| identifiers.value | term | identifiers.value = "1023*" | Searches the resource identifier field. |
+| identifiers.identifierTypeId | term | identifiers.identifierTypeId=="123" | Searches the resource identifier type id. |
+| contributors | full-text | contributors all "John" | Searches the contributor field. |
+| contributors.name | term | contributors.name all "John" | Searches the primary contributor field. |
+| contributors.contributorTypeId | term | contributors.contributorTypeId all "1234567" | Searches the contributor type id. |
+| contributors.contributorNameTypeId | term | contributors.contributorNameTypeId all "1234567" | Searches the contributor name type id. |
+| contributors.primary | term | contributors.primary==true | Searches the primary contributor field. |
+| contributors.authorityId | term | contributors.authorityId == "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches the authority UUID within a linked contributor field. |
+| authorityId | term | authorityId == "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches the authority UUID within any linked field. |
+| subjects | full-text | subjects all "Chemistry" | Searches the subject field. |
+| instanceTypeId | term | instanceTypeId == "123" | Searches the instance type id. |
+| statusId | term | statusId == "123" | Searched the status id. |
+| instanceFormatIds | term | example | instanceFormatIds == "123" | Searched the instance format id. |
+| languages | term | languages == "eng" | Searched the language field. |
+| metadata.createdDate | term | metadata.createdDate > "2021-03-01" | Searches the record created field. |
+| metadata.updatedDate | term | metadata.updatedDate > "2020-12-12" | Searches the record last updated field. |
+| modeOfIssuanceId | term | modeOfIssuanceId=="123" | Searches the mode of issuance id. |
+| natureOfContentTermIds | term | natureOfContentTermIds=="123" | Searches the nature of content term id. |
+| publisher | full-text | publisher all "Publisher of Ukraine" | Searches the publisher field. |
+| publication.place | full-text | publication.place all "Ukraine" | Searches the place of publication field. |
+| instanceTags | term | instanceTags=="important" | Searches instance tags. |
+| classifications.classificationNumber | term | classifications.classificationNumber=="cl1" | Searches the call number. |
+| classifications.classificationTypeId | term | classifications.classificationTypeId=="123" | Searches the classification type id. |
+| electronicAccess | full-text | electronicAccess any "resource" | Searches the URI, link text, materials specified, and URL public note fields. |
+| electronicAccess.uri | term | electronicAccess.uri="http://folio.org*" | Searches the electronic access URI field. |
+| electronicAccess.linkText | full-text | electronicAccess.linkText="Folio website" | Searches the electronic access link text field. |
+| electronicAccess.publicNote | full-text | electronicAccess.publicNote="a rare book" | Searches the electronic access public note field. |
+| staffSuppress | term | staffSuppress==true | Matches whether or not instances are staff suppressed. (True for suppressed, false for unsuppressed.) |
+| discoverySuppress | term | discoverySuppress==true | Matches whether or not instances are suppressed from discovery. (True for suppressed, false for unsuppressed.) |
+| publicNotes | full-text | publicNotes all "public note" | Searches public note fields. |
+| administrativeNotes | full-text | administrativeNotes all "librarian note" | Searches administrative note fields. |
+| notes.note | full-text | notes.note all "librarian note" | Searches public and staff only note fields. |
+| isbn | term | isbn="1234*" | Searches the ISBN field. |
+| issn | term | issn="1234*" | Searches the ISSN field. |
+| oclc | term | oclc="1234*" | Searches the OCLC number field. |
+| lccn | term | lccn = "LCCN" | Searches the LCCN field. |
+| normalizedClassificationNumber | term | normalizedClassificationNumber == "LCCN" | Searches the call number and normalizes case, whitespaces, and special characters. Also supports leading and trailing wildcards. |
+| normalizedDate1 | term | normalizedDate1>=1990 | Searches the Date1 field and normalizes alpha 'u' characters. |
+
+### Holdings CQL Search Fields
+
+| **Field** | **Type** | **Example** | **Description** |
+| -------- | ------- | ------- | ------- |
+| holdings.id | term | holdings.id=="1234567" | Searches the holdings UUID. |
+| holdings.sourceId | term | holdings.sourceId=="FOLIO" | Searches the holdings source field. |
+| holdings.holdingsTypeId | term | holdings.holdingsTypeId=="1234567" | Searches the holdings type id. |
+| holdings.permanentLocationId | term | holdings.permanentLocationId=="123765" | Searches the holdings permanent location id field. |
+| holdings.statisticalCodeIds | term | holdings.statisticalCodeIds=="123765" | Searches the holdings statistical code field. |
+| holdings.discoverySuppress | term | holdings.discoverySuppress==true | Matches whether or not holdings are suppressed from discovery. (True for suppressed, false for unsuppressed.) |
+| holdings.hrid | term | holdings.hrid=="hr10*3" | Searches the holdings HRID. |
+| holdingsTags | term | holdingsTags=="important" | Searches holdings tags. |
+| holdingsFullCallNumbers | term | holdingsFullCallNumbers="cn*434" | Searches the full call number string (prefix + call number +suffix). |
+| holdingsNormalizedCallNumbers | term | holdingsNormalizedCallNumbers="cn434" | Searches for holdings call numbers that may not be formatted correctly. |
+| holdings.electronicAccess | full-text | holdings.electronicAccess any "resource" | Searches the holdings URI, link text, materials specified, and URL public note fields. |
+| holdings.electronicAccess.uri | term | holdings.electronicAccess.uri="http://folio.org*" | Searches the holdings electronic access URI. |
+| holdings.electronicAccess.linkText | full-text | holdings.electronicAccess.linkText="Folio website" | Searches the holdings electronic access link text field. |
+| holdings.electronicAccess.publicNote | full-text | holdings.electronicAccess.publicNote="a rare book" | Searches the holdings electronic access public note field. |
+| holdings.administrativeNotes | full-text | holdings.administrativeNotes all "librarian note" | Searches the holdings administrative note field. |
+| holdings.notes.note | full-text | holdings.notes.note all "librarian note" | Searches publc and staff only holdings notes. |
+| holdingsTypeId | term | holdingsTypeId=="123" | Searches the holdings type id. |
+| holdingsPublicNotes | full-text | holdingsPublicNotes all "public note" | Searches public holdings notes. |
+| holdingsIdentifiers | term | holdingsIdentifiers == "ho00000000006" | Searches holdings UUID, HRID, and former IDs fields. |
+| holdings.metadata.createdDate | term | metadata.createdDate > "2020-12-12" | Searches the holdings date created field. |
+| holdings.metadata.updatedDate | term | metadata.updatedDate > "2020-12-12" | Searches the holdings last updated field. |
+
+### Item CQL Search Fields
+
+| **Field** | **Type** | **Example** | **Description** |
+| -------- | ------- | ------- | ------- |
+| item.id | term | item.id=="1234567" | Searches the item UUID. |
+| item.hrid | term | item.hrid=="it001" | Searches the item HRID. |
+| item.barcode | term | item.barcode=="10011" | Searches the barcode field. |
+| item.effectiveLocationId | term | item.effectiveLocationId=="1212" | Searches the item effective location field. |
+| item.statisticalCodeIds | term | item.statisticalCodeIds=="1212" | Searches the item statistical code id. |
+| item.status.name | term | item.status.name=="Available" | Searches the item status field. |
+| item.materialTypeId | term | item.materialTypeId="23434" | Searches the item material type id. |
+| item.discoverySuppress | term | item.discoverySuppress=true | Matches whether or not items are suppressed from discovery. (True for suppressed, false for unsuppressed.) |
+| itemFullCallNumbers | term | itemFullCallNumbers="cn*434" | Searches the full item call number string (prefix + call number + suffix). |
+| itemNormalizedCallNumbers | term | itemNormalizedCallNumbers="cn434" | Searches for item call numbers that may not be formatted correctly. |
+| itemLevelCallNumberTypeId | term | itemLevelCallNumberTypeId="81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches the item call number type id. |
+| itemTags | term | itemTags="important" | Search item tags. |
+| item.electronicAccess | full-text | item.electronicAccess any "resource" | Searches the item URI, link text, materials specified, and URL public note fields. |
+| item.electronicAccess.uri | term | item.electronicAccess.uri="http://folio.org*" | Searches the item electronic access URI. |
+| item.electronicAccess.linkText | full-text | item.electronicAccess.linkText="Folio website" | Searches the item electronic access link text field. |
+| item.electronicAccess.publicNote | full-text | item.electronicAccess.publicNote="a rare book" | Searches the item electronic access public note field. |
+| item.administrativeNotes | full-text | item.administrativeNotes all "librarian note" | Searches the item administrative note field. |
+| item.notes.note | full-text | item.notes.note all "librarian note" | Searches item and circulation notes. |
+| item.circulationNotes.note | full-text | item.circulationNotes.note all "circulation note" | Searches circulation notes. |
+| itemPublicNotes | full-text | itemPublicNotes all "public note" | Searches public item and ciruclation notes. |
+| itemIdentifiers | term | itemIdentifiers all "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches item UUID, HRID, former IDs, accssion number, and item identifier. |
+| item.effectiveCallNumberComponents.typeId = {value} | term | item.effectiveCallNumberComponents.typeId == "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches item call number typeId. |
+| item.metadata.createdDate | term | item.metadata.createdDate > "2020-12-12 | Searches item created date field. |
+| item.metadata.updatedDate | term | item.metadata.updatedDate > "2020-12-12" | Searches item date last updated field. |
+
+
+### Supported CQL query operators
+
+| **Operator** | **Full-text query example** | **Term query example** | **Description** | **Result example**
+| -------- | ------- | ------- | ------- | ------- |
+| all | title all "semantic web" | N/A | Finds any record that has the entire search within "" in the field being queried, but not necessarily in the search order.| Returns any record with both "semanitc" and web" in the title field. |
+| any | title any "semantic web" | N/A | Finds any record that has some or all of the search within "" in the field being queried. | Returns any record with "semantic" and/or "web" in the title field. |
+| = | title = "semantic web" | hrid = "hr10" | For full-text searches, works the same as the "all" operator. For term searches, works the same as the "==" operator. | Returns any record with both "semantic" and "web" in the title field. Will return any record with an exact match "hr10" in the hrid field. |
+| == | title == "semantic web | hrid == "hr10" | For full-text searches, finds any record that has the exact search within "" in the field being queried. For term searches, finds any record with an exact match in the field being queried. | Returns any record with "semantic web" in the title field. Will return any record with an exact match to "hr10" in the hrid field. |
+| <> | title <> "semantic web" | hrid <> "hr10" | Finds any record that does not match the search within "" in the field being queried. | Returns any record that doesn't have "semantic web" in the title field. Returns any record that doesn't have "hr10" in the hrid field. |
+| <, > | N/A | createdDate > "2020-12-12" | Finds any record that is greater/less than the search within "".| Returns any record with date that is greater than "2020-12-12" in the created date field. |
+| <=, >= | N/A | createdDate <= "2020-12-12" | Finds any record that is greater or equal/less or equal than the search within "". | Returns any record with a date less than or equal to "2020-12-12" in the created date field. |
+| * | title="mode* europe*" | hrid = "hr10*" | A wildcard search. (Note: NOT recommended for full-text fields due to low performance.) | Returns any record with "modern"/"model"/etc. and "europe"/"european"/etc. in the title field. Returns any record with "hr10"/"hr101"/"hr1001"/etc.
+
+### Supported CQL query modifiers
+
+| **Operator** | **Modifier** | **Full text query example** | **Description** | **Result example**
+| -------- | ------- | ------- | ------- | ------- |
+| == | string | N/A | title ==/string "semantic web" | Finds any record with an exact match to the search within "" in the field being queried. | Returns any record with an exact match to "semantic web" in the title field.
+
+### Instance CQL sort options
+
+The default sorting is by relevancy, but can use "sortBy" to define the sorting of results.
+
+Example: title all "semantic web" sortBy title (Results will be sorted by title.)
+
+| **Option** | **Type** | **Secondary sort** | **Description** |
+| -------- | ------- | ------- | ------- |
+| title | full text | relevancy | Sorts instances by title. |
+| contributors | term | relevancy | Sorts instances by contributors. |
+| items.status.name | term | title | Sorts instances by status. |
+| item.status.name | term | title | Sorts instances by status. |
+| normalizedDate1 | term | relevancy | Sorts instances by normalized Date1. |
 
 ## Browsing for a record
 
