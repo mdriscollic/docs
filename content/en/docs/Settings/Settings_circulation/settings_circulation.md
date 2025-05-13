@@ -433,10 +433,10 @@ Overdue fine policies determine the fines that accrue when an item is checked ou
 #### Reminder fees
 
 1. **Create on closed days.** If you select **Yes**, Reminder fees will be created on days the library is closed. Select **No** to have Reminder fees created on the first open day after they would otherwise be created. See example in [Additional topics > Fees and fines](../../../access/additional-topics/feesfines/feesfines/#reminder-fee-examples-with-closed-days).
-2. **Ignore grace periods for recalls.** This setting can only be **No** for Ramsons.
-3. **Ignore grace periods for holds.** This setting can only be **No** for Ramsons.
+2. **Ignore grace periods for recalls.** This setting can only be **No**.
+3. **Ignore grace periods for holds.** This setting can only be **No**.
 4. **Allow renewal of items with reminder fee(s).** If you select Yes, items with reminder fees can be renewed. The reminder fee will not be removed when the item is renewed.
-5. **Clear patron block when paid.** This setting can only be **No** for Ramsons.
+5. **Clear patron block when paid.** This setting can only be **No**.
 
 Click **Add reminder fee** to set up a reminder fee schedule:
 
