@@ -535,7 +535,7 @@ The Location section contains information on the physical or electronic location
 -   **Copy number.** The copy number of the holdings.
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the holdings level. For example, FIC.
--   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44) If enabled you can use the number generator to generate the call number.
+-   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44). If enabled you can use the number generator to generate the call number.
 -   **Call number suffix.** Suffix of the call number on the holdings level. For example, the year (2001).
 
 #### Holdings details
