@@ -1,7 +1,7 @@
 ---
 title: "Export manager"
 linkTitle: "Export manager"
-date: 2025-04-16
+date: 2025-05-12
 weight: 625
 ---
 
@@ -32,6 +32,8 @@ The Export manager app allows users to view export logs and reports initiated fr
 *   EDIFACT orders
 *   eHoldings
 *   MARC authority 
+
+Note: Records produced by jobs are deleted based on a hardcoded value: 14 days for bulk edit and 7 days for any other record type. EDIFACT orders exports and claims are not subject to automatic deletion.
 
 Note: MARC authority exports are limited to the [reports related to MARC authorities](../inventory/marcauthority/#reporting). If exporting MARC authority records, the export can be accessed in the Data export logs. For more information, see [Exporting MARC authority records](../inventory/marcauthority/#exporting-marc-authority-records).
 

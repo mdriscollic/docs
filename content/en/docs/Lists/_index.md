@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 linkTitle: "Lists"
-date: 2025-05-07      
+date: 2025-05-08      
 weight: 525
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
@@ -1362,7 +1362,7 @@ A list can be exported from the Lists app and downloaded as a .csv file.
 To export a list with selected column headings as a .csv file:
 
 1. Select the list from the **Lists** pane. The selected list will open in a new window.  
-2. Click the **Actions** button. Select or deselect the column headings to display in your exported file. The column headings available depend on the record type of the list. See [Supported fields by List record type](#supported-fields-by-record-type) for more information on available column headings. 
+2. Click the **Actions** button. Select or deselect the column headings to display in your exported file. The column headings available depend on the record type of the list. See [Supported fields by record type](#supported-fields-by-record-type) for more information on available column headings. 
 3. Click **Actions \> Export selected columns (CSV)** to download the list as a .csv file. When successfully completed, an *Exported list …* confirmation message appears in the bottom right corner of the screen.
 4. Depending on your browser settings, the exported list may be automatically saved in your Downloads folder.
 
