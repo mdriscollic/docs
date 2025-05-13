@@ -20,40 +20,42 @@ Definition of terms related to the Inventory app:
 -   **SRS.** Source Record Storage. A storage layer in FOLIO. If an instance has an underlying MARC record, then this record is stored in SRS.
 -   **Intellectual item.** This status can be used for an item record that does not correspond to a single, distinct physical object. May also be referred to as a “dummy record.”
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with the Inventory app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app.
+Beginning with the Sunflower release, the Eureka platform replaces permission sets with **Capabilities** and **Capability sets**. For more information about **Capabilities** and **Capability sets**, see [Roles Management with Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-The following are all the Inventory permissions:
+The capabilities listed below allow you to interact with the Inventory app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles.
 
--   **Inventory: All permissions.** This permission allows the user to perform all actions in Inventory.
--   **Inventory: Create and download In transit items report.** This permission allows the user to export a report of any items with the status "in transit."
--   **Inventory: Create order from instance.** This permission allows the user to initiate the creation of a new purchase order or a new purchase order line (in the Orders app) from an Instance record in Inventory.
--   **Inventory: Enable staff suppress facet.** This permission allows the user to search and view instance records that are suppressed for staff.
--   **Inventory: Import single bibliographic records.** This permission allows the user to import and overlay Instance records from external sources. External sources must be configured in Settings.
--   **Inventory: Mark items in process.** This permission allows the user to update an item record's Item status to In process.
--   **Inventory: Mark items in process (non-requestable).** This permission allows the user to update an item record's Item status to In process (non-requestable).
--   **Inventory: Mark items intellectual item.** This permission allows the user to update an item record's Item status to Intellectual.
--   **Inventory: Mark items long missing.** This permission allows the user to update an item record's Item status to Long missing.
--   **Inventory: Mark items restricted.** This permission allows the user to update an item record's Item status to Restricted.
--   **Inventory: Mark items unavailable.** This permission allows the user to update an item record's Item status to Unavailable.
--   **Inventory: Mark items unknown.** This permission allows the user to update an item record's Item status to Unknown.
--   **Inventory: Mark items withdrawn.** This permission allows the user to update an item record's Item status to Withdrawn. The user can also view and edit items.
--   **Inventory: Move holdings.** This permission allows the user to move holdings records from one instance record to another. The user can also search and view instances, holdings, and items.
--   **Inventory: Move items.** This permission allows the user to move an item record from one holding record to another. The user can also search and view instances, holdings, and items.
--   **Inventory: Set record for deletion.** This permission allows the user to set instance records and associated MARC records for deletion.
--   **Inventory: View instances, holdings, and items.** This permission allows the user to view instances, holdings, and items. 
--   **Inventory: View, create holdings.** This permission allows the user to create new holdings records. The user can also view holdings.
--   **Inventory: View, create instances.** This permission allows the user to create new instance records. The user can also view instances.
--   **Inventory: View, create items.** This permission allows the user to create new item records. The user can also view items.
--   **Inventory: View, create, edit holdings.** This permission allows the user to edit existing holdings records. The user can also view and create holdings.
--   **Inventory: View, create, edit instances.** This permission allows the user to edit existing instance records. The user can also view and create instances.
--   **Inventory: View, create, edit items.** This permission allows the user to edit existing item records. The user can also view and create items.
--   **Inventory: View, create, edit, delete holdings.** This permission allows the user to delete holdings records. The user can also view and edit holdings.
--   **Inventory: View, create, edit, delete items.** This permission allows the user to delete item records. The user can also view and edit items.
--   **Inventory: View, create, edit, mark missing items.** This permission allows the user to update an item record's Item status to Missing. The user can also view and edit items.
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Inventory: All permissions.** | **UI-Inventory** | data | manage | This allows the user to perform all actions in Inventory.|
+|**Inventory: Create and download In transit items report.** | **UI-Inventory Items In-Transit-Report** | data | create | This allows the user to export a report of any items with the status "in transit."|
+|**Inventory: Create order from instance.** | **UI-Inventory Instance Order** | data | create | This allows the user to initiate the creation of a new purchase order or a new purchase order line (in the Orders app) from an Instance record in Inventory.|
+|**Inventory: Enable staff suppress facet.** | **UI-Inventory Instance Staff-Suppressed-Records** | data | view | This allows the user to search and view instance records that are suppressed for staff.|
+|**Inventory: Import single bibliographic records.** | **UI-Inventory Single-Record-Import** | procedural | execute | This allows the user to import and overlay Instance records from external sources. External sources must be configured in Settings.|
+|**Inventory: Mark items in process.** | **UI-Inventory Items Mark-In-Process** | procedural | execute | This allows the user to update an item record's Item status to In process.|
+|**Inventory: Mark items in process (non-requestable).** | **UI-Inventory Items Mark-In-Process-Non-Requestable** | procedural | execute | This allows the user to update an item record's Item status to In process (non-requestable).|
+|**Inventory: Mark items intellectual item.** | **UI-Inventory Items Mark-Intellectual-Item** | procedural | execute | This allows the user to update an item record's Item status to Intellectual.|
+|**Inventory: Mark items long missing.** | **UI-Inventory Items Mark-Long-Missing** | procedural | execute | This allows the user to update an item record's Item status to Long missing.|
+|**Inventory: Mark items restricted.** | **UI-Inventory Items Mark-Restricted** | procedural | execute | This allows the user to update an item record's Item status to Restricted.|
+|**Inventory: Mark items unavailable.** | **UI-Inventory Items Mark-Unavailable** | procedural | execute | This allows the user to update an item record's Item status to Unavailable.|
+|**Inventory: Mark items unknown.** | **UI-Inventory Items Mark-Unknow** | procedural | execute | This allows the user to update an item record's Item status to Unknown.|
+|**Inventory: Mark items withdrawn.** | **UI-Inventory Items Mark-Withdrawn** | procedural | execute | This allows the user to update an item record's Item status to Withdrawn. The user can also view and edit items.|
+|**Inventory: Move holdings.** | **UI-Inventory Holdings** | procedural | execute | This allows the user to move holdings records from one instance record to another. The user can also search and view instances, holdings, and items.|
+|**Inventory: Move items.** | **UI-Inventory Item** | procedural | execute | This allows the user to move an item record from one holding record to another. The user can also search and view instances, holdings, and items.|
+|**Inventory: Set records for deletion.** | **UI-Inventory Instance Set-Records-For-Deletion** | procedural | execute | This allows the user to set instance records and associated MARC records for deletion.|
+|**Inventory: View instances, holdings, and items.** | **UI-Inventory Instance** | data | view | This allows the user to view instances, holdings, and items.|
+|**Inventory: View, create holdings.** | **UI-Inventory Holdings** | data | create | This allows the user to create new holdings records. The user can also view holdings.|
+|**Inventory: View, create instances.** | **UI-Inventory Instance** | data | create | This allows the user to create new instance records. The user can also view instances.|
+|**Inventory: View, create items.** | **UI-Inventory Item** | data | create | This allows the user to create new item records. The user can also view items.|
+|**Inventory: View, create, edit holdings.** | **UI-Inventory Holdings** | data | edit | This allows the user to edit existing holdings records. The user can also view and create holdings.|
+|**Inventory: View, create, edit instances.** | **UI-Inventory Instance** | data | edit | This allows the user to edit existing instance records. The user can also view and create instances.|
+|**Inventory: View, create, edit items.** | **UI-Inventory Item** | data | edit | This allows the user to edit existing item records. The user can also view and create items.|
+|**Inventory: View, create, edit, delete holdings.** | **UI-Inventory Holdings** | data | delete | This allows the user to delete holdings records. The user can also view and edit holdings.|
+|**Inventory: View, create, edit, delete items.** | **UI-Inventory Item** | data | delete | This allows the user to delete item records. The user can also view and edit items.|
+|**Inventory: View, create, edit, mark missing items.** | **UI-Inventory Item Mark-As-Missing** | procedural | execute | This allows the user to update an item record's Item status to Missing. The user can also view and edit items.|
 
-Note: Some actions in Inventory require permissions in other apps. For example, **View source** requires permissions in quickMARC.
+Note: Some actions in Inventory require permissions/capabilities in other apps. For example, **View source** requires permissions in quickMARC.
 
 ## Keyboard shortcuts
 
@@ -72,6 +74,7 @@ The Administrative data section contains technical information about the instanc
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
 -   **Staff suppress.** If you want to suppress the record, and its associated holdings and item records, from staff who do not have the proper permissions to view the record, select the **Staff suppress** checkbox. If selected, staff need to have the permission Inventory: Enable staff suppress facet in order to view the record.
 -   **Previously held.** If the resource was previously held by your library, select the **Previously held** checkbox. A library may adopt a policy to select the Previously held checkbox in the case where the library no longer owns the bibliographic resource described in the instance record, but for administrative reasons wishes to retain the record in the inventory and indicate previous ownership. For example, permission for library users to view or use items in a consortial collection may require proof that the library at some time owned those items.
+-   **Set for deletion.** If you want to mark a record as set for deletion, select the **Set for deletion** checkbox. You may also use the **Set record for deletion** action in the Instance record. See [Deleting an instance record](#deleting-an-instance-record)
 -   **Instance HRID.** The human readable identifier, also called eye readable ID, a system-assigned sequential ID.
 -   **Source (required).** Format of the instance source record, if a source record exists. For example, FOLIO if it's a record created in Inventory, MARC if it's a MARC record created in MARCcat, or EPKB if it's a record coming from eHoldings. The system assigns the source automatically.
 -   **Cataloged date.** Date when an instance is considered "cataloged."
@@ -428,7 +431,7 @@ The Holdings section contains select holdings record fields. For all fields avai
 
 The Item section contains select item record fields. For all fields available in an item record, see [Adding an item to a record](#adding-an-item-to-a-record).
 
--   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value.
+-   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value. If enabled you can use the number generator to generate the barcode.
 -   **Material type (required).** Describes the material nature of a specific item, with the intention to permit more specific information than resource type alone. Configured in [Settings \> Inventory \> Material types](../../settings/settings_inventory/settings_inventory/#settings--inventory--material-types).
 -   **Permanent loan type (required).** The default loan type for a given item. For example, Can circulate, Course reserves, Reading room, Selected, etc. Configured in [Settings \> Inventory \> Loan types](../../settings/settings_inventory/settings_inventory/#settings--inventory--loan-types).
 -   **Item notes (required).** Any notes about the item that you want to appear to staff during check in or check out.
@@ -532,7 +535,7 @@ The Location section contains information on the physical or electronic location
 -   **Copy number.** The copy number of the holdings.
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the holdings level. For example, FIC.
--   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44)
+-   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44) If enabled you can use the number generator to generate the call number.
 -   **Call number suffix.** Suffix of the call number on the holdings level. For example, the year (2001).
 
 #### Holdings details
@@ -657,7 +660,7 @@ Receiving history is used for serials and continuing resources. Shows the materi
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
 -   **Item HRID.** The human readable ID, also called eye readable ID. A system-assigned sequential ID which maps to the Item ID
 -   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value.
--   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number.
+-   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number. If enabled you can use the number generator to generate the accession number.
 -   **Item identifier.** Item identifier number. For example, imported from the union catalog (read only).
 -   **Former identifier.** Previous identifiers assigned to the item.
 -   **Statistical code.** Statistical codes (e.g. ASER; name: Active serial; type: SERM (Serial management) or books; name: Book, print (books); type ARL (Collection stats) etc.)
@@ -687,7 +690,7 @@ The Item data section contains additional information on the item.
 -   **Copy number.** Copy number is the piece identifier. The copy number reflects if the library has one (or more) copies of a single-volume monograph; one (or more) copies of a multi-volume, (e.g. Copy 1, or C.7.)
 -   **Call number type.** The classification system used for the call number. Select the **Call number type** from the drop-down list. Configured in [Settings \> Inventory \> Call number types](../../settings/settings_inventory/settings_inventory/#settings--inventory--call-number-types).
 -   **Call number prefix.** Prefix of the call number on the item level.
--   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44.
+-   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44. If enabled you can use the number generator to generate the accession number.
 -   **Call number suffix.** Suffix of the call number on the item level.
 -   **Number of pieces.** Number of pieces. Used when an item is checked out or returned to verify that all parts are present (e.g. 7 CDs in a set).
 -   **Description of pieces.** Description of pieces. For example, 500 puzzle pieces.
@@ -876,6 +879,159 @@ To search, first select the record type (instance, holdings, or item) then enter
 -   **Circulation notes.** Keyword search across check in and check out notes.
 -   **Item HRID.** Human readable identifier for the item record.
 -   **Item UUID.** Universally unique identifier for the item record.
+
+## Using the Query search
+
+For advanced users with knowledge of CQL, the Query search allows for a more powerful way of constructing searches.
+
+There are two types of searchable fields: full-text (e.g. title) and term (e.g. HRID). A query search is often composed of the field being queried, an operator to define how you want the query to work, and the search itself.
+
+Example: title all "semantic web" 
+
+| Field | Operator | Search | |
+| -------- | ------- | ------- | ------- |
+| title | all | "semantic web" | Finds any record that has both "semanitc" and "web" in the title field. |
+
+### Instance CQL Search Fields
+
+| **Field** | **Type** | **Example** | **Description** |
+| -------- | ------- | ------- | ------- |
+| keyword | full-text | keyword all "semantic web" | A keyword search in the title, alternative title, index title, series, identifier, and contributor fields. |
+| id | term | id=="1234567" | Searches the UUID. |
+| hrid | term | hrid=="hr1*0" | Searches the HRID.|
+| source | term | source=="MARC" | Searches the source field. |
+| title | full-text | title all "semantic web" | Searches the title, alternative title, index title, and series fields. |
+| alternativeTitles.alternativeTitle | full-text | alternativeTitles.alternativeTitle all "semantic web" | Searches the alternative title field. |
+| uniformTitle | full-text | uniformTitle all "semantic web" | Searches the uniform title field. |
+| indexTitle | full-text | indexTitle all "semantic web" | Searches the index title field. |
+| series | full-text | series all "series" | Searches the series field. |
+| identifiers.value | term | identifiers.value = "1023*" | Searches the resource identifier field. |
+| identifiers.identifierTypeId | term | identifiers.identifierTypeId=="123" | Searches the resource identifier type id. |
+| contributors | full-text | contributors all "John" | Searches the contributor field. |
+| contributors.name | term | contributors.name all "John" | Searches the primary contributor field. |
+| contributors.contributorTypeId | term | contributors.contributorTypeId all "1234567" | Searches the contributor type id. |
+| contributors.contributorNameTypeId | term | contributors.contributorNameTypeId all "1234567" | Searches the contributor name type id. |
+| contributors.primary | term | contributors.primary==true | Searches the primary contributor field. |
+| contributors.authorityId | term | contributors.authorityId == "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches the authority UUID within a linked contributor field. |
+| authorityId | term | authorityId == "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches the authority UUID within any linked field. |
+| subjects | full-text | subjects all "Chemistry" | Searches the subject field. |
+| instanceTypeId | term | instanceTypeId == "123" | Searches the instance type id. |
+| statusId | term | statusId == "123" | Searched the status id. |
+| instanceFormatIds | term | example | instanceFormatIds == "123" | Searched the instance format id. |
+| languages | term | languages == "eng" | Searched the language field. |
+| metadata.createdDate | term | metadata.createdDate > "2021-03-01" | Searches the record created field. |
+| metadata.updatedDate | term | metadata.updatedDate > "2020-12-12" | Searches the record last updated field. |
+| modeOfIssuanceId | term | modeOfIssuanceId=="123" | Searches the mode of issuance id. |
+| natureOfContentTermIds | term | natureOfContentTermIds=="123" | Searches the nature of content term id. |
+| publisher | full-text | publisher all "Publisher of Ukraine" | Searches the publisher field. |
+| publication.place | full-text | publication.place all "Ukraine" | Searches the place of publication field. |
+| instanceTags | term | instanceTags=="important" | Searches instance tags. |
+| classifications.classificationNumber | term | classifications.classificationNumber=="cl1" | Searches the call number. |
+| classifications.classificationTypeId | term | classifications.classificationTypeId=="123" | Searches the classification type id. |
+| electronicAccess | full-text | electronicAccess any "resource" | Searches the URI, link text, materials specified, and URL public note fields. |
+| electronicAccess.uri | term | electronicAccess.uri="http://folio.org*" | Searches the electronic access URI field. |
+| electronicAccess.linkText | full-text | electronicAccess.linkText="Folio website" | Searches the electronic access link text field. |
+| electronicAccess.publicNote | full-text | electronicAccess.publicNote="a rare book" | Searches the electronic access public note field. |
+| staffSuppress | term | staffSuppress==true | Matches whether or not instances are staff suppressed. (True for suppressed, false for unsuppressed.) |
+| discoverySuppress | term | discoverySuppress==true | Matches whether or not instances are suppressed from discovery. (True for suppressed, false for unsuppressed.) |
+| publicNotes | full-text | publicNotes all "public note" | Searches public note fields. |
+| administrativeNotes | full-text | administrativeNotes all "librarian note" | Searches administrative note fields. |
+| notes.note | full-text | notes.note all "librarian note" | Searches public and staff only note fields. |
+| isbn | term | isbn="1234*" | Searches the ISBN field. |
+| issn | term | issn="1234*" | Searches the ISSN field. |
+| oclc | term | oclc="1234*" | Searches the OCLC number field. |
+| lccn | term | lccn = "LCCN" | Searches the LCCN field. |
+| normalizedClassificationNumber | term | normalizedClassificationNumber == "LCCN" | Searches the call number and normalizes case, whitespaces, and special characters. Also supports leading and trailing wildcards. |
+| normalizedDate1 | term | normalizedDate1>=1990 | Searches the Date1 field and normalizes alpha 'u' characters. |
+
+### Holdings CQL Search Fields
+
+| **Field** | **Type** | **Example** | **Description** |
+| -------- | ------- | ------- | ------- |
+| holdings.id | term | holdings.id=="1234567" | Searches the holdings UUID. |
+| holdings.sourceId | term | holdings.sourceId=="FOLIO" | Searches the holdings source field. |
+| holdings.holdingsTypeId | term | holdings.holdingsTypeId=="1234567" | Searches the holdings type id. |
+| holdings.permanentLocationId | term | holdings.permanentLocationId=="123765" | Searches the holdings permanent location id field. |
+| holdings.statisticalCodeIds | term | holdings.statisticalCodeIds=="123765" | Searches the holdings statistical code field. |
+| holdings.discoverySuppress | term | holdings.discoverySuppress==true | Matches whether or not holdings are suppressed from discovery. (True for suppressed, false for unsuppressed.) |
+| holdings.hrid | term | holdings.hrid=="hr10*3" | Searches the holdings HRID. |
+| holdingsTags | term | holdingsTags=="important" | Searches holdings tags. |
+| holdingsFullCallNumbers | term | holdingsFullCallNumbers="cn*434" | Searches the full call number string (prefix + call number +suffix). |
+| holdingsNormalizedCallNumbers | term | holdingsNormalizedCallNumbers="cn434" | Searches for holdings call numbers that may not be formatted correctly. |
+| holdings.electronicAccess | full-text | holdings.electronicAccess any "resource" | Searches the holdings URI, link text, materials specified, and URL public note fields. |
+| holdings.electronicAccess.uri | term | holdings.electronicAccess.uri="http://folio.org*" | Searches the holdings electronic access URI. |
+| holdings.electronicAccess.linkText | full-text | holdings.electronicAccess.linkText="Folio website" | Searches the holdings electronic access link text field. |
+| holdings.electronicAccess.publicNote | full-text | holdings.electronicAccess.publicNote="a rare book" | Searches the holdings electronic access public note field. |
+| holdings.administrativeNotes | full-text | holdings.administrativeNotes all "librarian note" | Searches the holdings administrative note field. |
+| holdings.notes.note | full-text | holdings.notes.note all "librarian note" | Searches publc and staff only holdings notes. |
+| holdingsTypeId | term | holdingsTypeId=="123" | Searches the holdings type id. |
+| holdingsPublicNotes | full-text | holdingsPublicNotes all "public note" | Searches public holdings notes. |
+| holdingsIdentifiers | term | holdingsIdentifiers == "ho00000000006" | Searches holdings UUID, HRID, and former IDs fields. |
+| holdings.metadata.createdDate | term | metadata.createdDate > "2020-12-12" | Searches the holdings date created field. |
+| holdings.metadata.updatedDate | term | metadata.updatedDate > "2020-12-12" | Searches the holdings last updated field. |
+
+### Item CQL Search Fields
+
+| **Field** | **Type** | **Example** | **Description** |
+| -------- | ------- | ------- | ------- |
+| item.id | term | item.id=="1234567" | Searches the item UUID. |
+| item.hrid | term | item.hrid=="it001" | Searches the item HRID. |
+| item.barcode | term | item.barcode=="10011" | Searches the barcode field. |
+| item.effectiveLocationId | term | item.effectiveLocationId=="1212" | Searches the item effective location field. |
+| item.statisticalCodeIds | term | item.statisticalCodeIds=="1212" | Searches the item statistical code id. |
+| item.status.name | term | item.status.name=="Available" | Searches the item status field. |
+| item.materialTypeId | term | item.materialTypeId="23434" | Searches the item material type id. |
+| item.discoverySuppress | term | item.discoverySuppress=true | Matches whether or not items are suppressed from discovery. (True for suppressed, false for unsuppressed.) |
+| itemFullCallNumbers | term | itemFullCallNumbers="cn*434" | Searches the full item call number string (prefix + call number + suffix). |
+| itemNormalizedCallNumbers | term | itemNormalizedCallNumbers="cn434" | Searches for item call numbers that may not be formatted correctly. |
+| itemLevelCallNumberTypeId | term | itemLevelCallNumberTypeId="81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches the item call number type id. |
+| itemTags | term | itemTags="important" | Search item tags. |
+| item.electronicAccess | full-text | item.electronicAccess any "resource" | Searches the item URI, link text, materials specified, and URL public note fields. |
+| item.electronicAccess.uri | term | item.electronicAccess.uri="http://folio.org*" | Searches the item electronic access URI. |
+| item.electronicAccess.linkText | full-text | item.electronicAccess.linkText="Folio website" | Searches the item electronic access link text field. |
+| item.electronicAccess.publicNote | full-text | item.electronicAccess.publicNote="a rare book" | Searches the item electronic access public note field. |
+| item.administrativeNotes | full-text | item.administrativeNotes all "librarian note" | Searches the item administrative note field. |
+| item.notes.note | full-text | item.notes.note all "librarian note" | Searches item and circulation notes. |
+| item.circulationNotes.note | full-text | item.circulationNotes.note all "circulation note" | Searches circulation notes. |
+| itemPublicNotes | full-text | itemPublicNotes all "public note" | Searches public item and ciruclation notes. |
+| itemIdentifiers | term | itemIdentifiers all "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches item UUID, HRID, former IDs, accssion number, and item identifier. |
+| item.effectiveCallNumberComponents.typeId = {value} | term | item.effectiveCallNumberComponents.typeId == "81ae0f60-f2bc-450c-84c8-5a21096daed9" | Searches item call number typeId. |
+| item.metadata.createdDate | term | item.metadata.createdDate > "2020-12-12 | Searches item created date field. |
+| item.metadata.updatedDate | term | item.metadata.updatedDate > "2020-12-12" | Searches item date last updated field. |
+
+
+### Supported CQL query operators
+
+| **Operator** | **Full-text query example** | **Term query example** | **Description** | **Result example**
+| -------- | ------- | ------- | ------- | ------- |
+| all | title all "semantic web" | N/A | Finds any record that has the entire search within "" in the field being queried, but not necessarily in the search order.| Returns any record with both "semanitc" and web" in the title field. |
+| any | title any "semantic web" | N/A | Finds any record that has some or all of the search within "" in the field being queried. | Returns any record with "semantic" and/or "web" in the title field. |
+| = | title = "semantic web" | hrid = "hr10" | For full-text searches, works the same as the "all" operator. For term searches, works the same as the "==" operator. | Returns any record with both "semantic" and "web" in the title field. Will return any record with an exact match "hr10" in the hrid field. |
+| == | title == "semantic web | hrid == "hr10" | For full-text searches, finds any record that has the exact search within "" in the field being queried. For term searches, finds any record with an exact match in the field being queried. | Returns any record with "semantic web" in the title field. Will return any record with an exact match to "hr10" in the hrid field. |
+| <> | title <> "semantic web" | hrid <> "hr10" | Finds any record that does not match the search within "" in the field being queried. | Returns any record that doesn't have "semantic web" in the title field. Returns any record that doesn't have "hr10" in the hrid field. |
+| <, > | N/A | createdDate > "2020-12-12" | Finds any record that is greater/less than the search within "".| Returns any record with date that is greater than "2020-12-12" in the created date field. |
+| <=, >= | N/A | createdDate <= "2020-12-12" | Finds any record that is greater or equal/less or equal than the search within "". | Returns any record with a date less than or equal to "2020-12-12" in the created date field. |
+| * | title="mode* europe*" | hrid = "hr10*" | A wildcard search. (Note: NOT recommended for full-text fields due to low performance.) | Returns any record with "modern"/"model"/etc. and "europe"/"european"/etc. in the title field. Returns any record with "hr10"/"hr101"/"hr1001"/etc.
+
+### Supported CQL query modifiers
+
+| **Operator** | **Modifier** | **Full text query example** | **Description** | **Result example**
+| -------- | ------- | ------- | ------- | ------- |
+| == | string | N/A | title ==/string "semantic web" | Finds any record with an exact match to the search within "" in the field being queried. | Returns any record with an exact match to "semantic web" in the title field.
+
+### Instance CQL sort options
+
+The default sorting is by relevancy, but can use "sortBy" to define the sorting of results.
+
+Example: title all "semantic web" sortBy title (Results will be sorted by title.)
+
+| **Option** | **Type** | **Secondary sort** | **Description** |
+| -------- | ------- | ------- | ------- |
+| title | full text | relevancy | Sorts instances by title. |
+| contributors | term | relevancy | Sorts instances by contributors. |
+| items.status.name | term | title | Sorts instances by status. |
+| item.status.name | term | title | Sorts instances by status. |
+| normalizedDate1 | term | relevancy | Sorts instances by normalized Date1. |
 
 ## Browsing for a record
 
@@ -1099,6 +1255,33 @@ To view an item record, follow these steps:
 
 If you are using a barcode to view an item record, the item record details window will open immediately upon the barcode being scanned, copy/pasted, or typed into the Item Search & Filter pane.
 
+## Version History
+
+Version history allows you to track field-level changes (added, removed, edited) in a record.
+
+The ability to view version history is available for the following record types:
+
+-   **Instance.**
+-   **FOLIO holdings.**
+-   **Item.**
+-   **MARC bibliographic records.**
+
+To view the version history of a record, click on the clock icon in the upper right corner of the record. A separate pane will appear containing cards of all changes made in a single create/edit/delete action on the record.
+
+Each card will display:
+
+-   A hyperlink saying either "Current version" or "Changed" 
+-   Date/time of the changes made
+-   The user name that made the change (For ECS environments, users need to have permissions to view users in the central tenant in order to the names from other tenants on shared records.)
+-   The field that changed as well as the action taken (Added, Edited, Removed)
+
+For a detailed view of the changes, click on the hyperlink. A box will appear that includes the following details:
+
+-   Action: Whether the field was added, removed, or edited
+-   Field: The changed field name
+-   Changed from: The original value, or “-” if the field was added
+-   Changed to: The new value, or “-” if the field was deleted
+
 ## Editing an instance record
 
 1.  [Find the instance](#searching-for-a-record) you want to edit and select it.
@@ -1162,7 +1345,7 @@ To move items to a different holdings record within the same instance record, fo
 
 ## Deleting an instance record
 
-Note: This is only a soft delete. When a record is set for deletion, the instance will be Suppressed from discovery and Staff suppressed. If the instance source is MARC, then the MARC LDR 05 will be set to "d".
+Note: This is only a soft delete. When a record is set for deletion, the instance will be flagged Set for deletion, Suppressed from discovery and Staff suppressed. A warning message will also display at the top of the instance. If the instance source is MARC, then the MARC LDR 05 will be set to "d".
 
 1.  [Find the instance](#searching-for-a-record) you want to delete and select it.
 2.  In the **Instance record details** pane, click **Actions \> Set record for deletion**.
