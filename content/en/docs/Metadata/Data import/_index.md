@@ -27,7 +27,7 @@ Definition of terms related to the Data Import app:
 
 ## Capabilities
 
-The capabilities listed below allow you view and interact with the Data import app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Data Import app or any related information.
+The capabilities listed below allow you view and interact with the Data Import app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Data Import app or any related information.
 
 See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
