@@ -1,141 +1,229 @@
 ---
 title: "Permissions"
 linkTitle: "Permissions"
-date: 2022-01-12
+date: 2025-05-05
 weight: 50
 tags: ["parenttopic"]
 ---
 
-FOLIO has a user permissions system that allows for granular control over what users can access in their FOLIO installation. 
+FOLIO has a user permissions system that allows for granular control over what users can access in their FOLIO installation.
 
-Each app defines its own permissions for the frontend and backend modules that it uses. 
+Each app defines its own permissions for the frontend and backend modules that it uses.
 
-By default, a FOLIO installation does not provide roles or permission profiles for library staff. Instead, FOLIO administrators can build their own groups of permissions called **permission sets** that correspond to their local needs. They can then assign those permissions to users through the Users app.
+By default, a FOLIO installation does not provide roles or permission profiles for library staff. Instead, FOLIO administrators can build their own groups of permissions called permission sets that correspond to their local needs. They can then assign those permissions to users through the Users app.
 
-## What is a permission?
-A permission is an object in FOLIO that can be used to control access to FOLIO apps, workflows, and data.
+## Managing Roles with Eureka
 
-A permission can have a number of different attributes, depending on whether you are viewing the permission in FOLIO’s code or whether you are looking at permissions for a user on a FOLIO tenant. Attributes can include:
+## Overview
+The new Eureka platform, which FOLIO is adopting with the Sunflower release, replaces the permission-based access control model with a roles-based permission model. This page
+explains how to manage roles and their assignments. Information on migrating permissions from the Okapi platform to Eureka can be found at the bottom of the page. 
 
-* **permissionName.** This represents the unique name of the permission. 
-* **displayName.** This is a human-readable name for the permission that usually corresponds to the name shown in the user interface.
-Note that what appears in the FOLIO user interface is a translated label for the permissionName; translations are stored for supported languages with each FOLIO module. The displayName was used in earlier versions of FOLIO but no longer serves a purpose in the FOLIO user interface.
-* **id**. The **id** is a tenant-level unique identifier for the permission, created when the relevant FOLIO module is installed.
-* **Description.** A description of the permission as provided by the developer. This field is optional.
-* **subPermissions.** Many permissions are actually a grouping of more specific permissions - if this is the case, **subPermissions** is where those more specific permissions are listed.
-* **childOf.** If a permission is a subPermission for another permission, that “parent” permission is listed.
-* **grantedTo.** If the permission has been granted to any FOLIO users, their permissions user ID is listed.
-* **mutable.** A permission can be either **mutable** or **immutable**; permissions are immutable by default. 
-If a permission is defined as **“mutable” : false**, then it cannot be changed without modifying the associated module code and restarting the module. If a permission is defined as **“mutable” : true**, it can be changed in the UI without having to stop and restart the associated module. 
-* **visible.** A permission can be either visible or invisible. A permission is invisible by default.
-If a permission is defined as **”visible” : true**, then it is viewable in the FOLIO user interface. If a permission is defined as **”visible” : false**, then it is not viewable by default in the FOLIO user interface.
-deprecated
-* **moduleName** and **moduleVersion.** These fields will only appear when looking at a FOLIO installation directly, they are not in the code. These fields tell you what module provided the permission definition, and what version of that module is running.
+## Terminology 
 
-## Naming Convention
-Permissions are named to indicate what a FOLIO user with the permission can do within the app. 
+- Permission 
+	- A permission is an object in FOLIO that can be used to control access to FOLIO apps, workflows, and data
+	- A permission can have a number of different attributes, depending on whether you are viewing the permission in FOLIO's code or whether you are looking at permissions for a user on a FOLIO tenant
+	 
+- Permission set
+	- A permission with one or more subpermissions 
+	- Can be nested infinitely 
 
-Permission names generally follow one of two formats:
+- Resource
+	- Something in FOLIO on which users can perform operations, e.g. orders, instances, etc.
 
-\[Appname\]: \[What the user can do\]
-Settings \(\[Area of Settings or Appname\]\): \[What the user can do\]
+- Action
+	- An operation that manipulates a resource, e.g. create, edit, view, delete, execute, etc.
 
-### Examples:
+- Capabilities 
+	- Capabilities define the ability to perform an **action** on a FOLIO **resource**, e.g. Edit (action) on Instances (resource)
+	- Derived from information in permissions module descriptors 
+	- Capabilities are managed by the system. Users and admins cannot create or remove capabilities. Instead, they're created in applications that are enabled for tenants 
+	- They maintain a reference to the *permission* from which they were created
+	- They maintain a reference to the *application* which provides them 
 
-* Agreements: Edit agreements
-  * This permission allows FOLIO users to edit agreement records in the agreement app.
-* Settings (Inventory): Create, edit, delete material types
-  * This permission allows FOLIO users to access Inventory settings and add, change, or delete material types.
+- Capability sets
+	- Capability sets are comprised of **capabilities**
+	- Derived from information in module descriptors (Permission sets) 
+	- Are managed by the system. Users and admins cannot create or remove capability sets. Instead, they're created in applications that are enabled for tenants
+	- Maintain a reference to the *permission* from which they were created
+	- Maintain a reference to the *application* which provides them
 
+- Roles
+	- Comprised of capabilities and/or capability sets
+	- Created/managed by administrators, not the system
+	- Cannot be nested. Roles are flat
+	- Are reusable 
 
+- Default roles
+	- Roles provided by the system, optionally loaded during tenant entitlement 
 
-## Key Terminology
+- Policies 
+	- Provides greater control over who can do what, when, and from where. For example, policies could be created to only allow users to perform check-in/check-out operations during normal business hours from certain locations
+	- Policies are associated with capabilities 
+	- Time-based policies are managed by administrators, not by the system 
 
-* **Permission set.** A permission set in FOLIO is one permission that consists of one or more subpermissions. 
-  * Permission sets can be created in the FOLIO system by a developer. 
-  * Permission sets can also be created by individual libraries in Settings → Users
-* **CRUD.** CRUD stands for "Create, Read, Update and Delete." You may see it used as a shortcut terminology in permissions discussions. Most FOLIO permissions allow “CRUD” functionality - they give you the ability to create, read, update and/or delete FOLIO records.
-  * Note that a permission that allows for access to create, or update or delete a record will generally include the ability to view the record. For example, the permission “Users: Can edit user profile” includes a subpermission to allow viewing of user profiles. You do not need to grant a FOLIO user both permissions to allow them to view and edit user records.
-* **Visible permission.** A visible permission is one that you can see in the list of permissions in the UI. They can be assigned to patrons directly, and/or you can add them to a permission set through Settings → Users → General →  Permission Sets.
-* **Invisible Permission:** An invisible permission is hidden from the FOLIO user interface, and is not usually assigned directly to a FOLIO user. Invisible permissions are commonly part of a backend module. They provide very specific, limited access to functionality in FOLIO.
+- AuthUser
+	- Refers to a user record in [Keycloak](https://github.com/folio-org/folio-keycloak)
+	- AuthUsers are managed by FOLIO. No direct interaction with Keycloak is required
+	- AuthUsers are a subset of Users, which include staff, patrons, administrators, etc. 
+	- A user becomes an AuthUser if they are assigned credentials, roles, or capabilities. The Keycloak user record is only needed for those who log in and use FOLIO. There is no need for Keycloak to know about patrons and others who are just data in the system 
 
-## Viewing Permissions 
+**How do these relate to one another?** 
+This diagram may help you visualize the relationships between some of these terms: 
 
-Permissions can be viewed by navigating to Settings > Developer > Permissions inspector. 
+![image](/relation-diagram.png)
 
-A list of permissions will be populated in the window pane on the right. Each permission includes a dropdown with its subpermissions. To see invisible permissions in the Permissions inspector, check the "Show invisible permissions" box at the top of the pane. 
+## Role Creation
+Role creation happens in the "**Authorization Roles**" section of **Settings**. Use the "**+New**" button to open the form for creating a role. 
 
-## Common Workflows
+![image](role-creation-1.png)
 
-Common permissions workflows include:
+Provide a name and description, then use the "**Select application**" button to open the selection modal. The purpose of selecting applications is to specify the functional areas which provide capabilities and capability sets you want to add to the role. Only Capabilities and Capability Sets provided by the selected application(s) will be shown. 
 
-* [Assigning Permissions and Permissions Sets to a User Record]({{< ref "users.md#assigning-permissions-to-a-user-record" >}})
-* [Creating Your Own Permission Sets]({{< ref "Settings_users.md#settings--users--permission-sets" >}})
+![image](role-creation-2.png)
 
-## Visible versus Invisible permissions
+![image](role-creation-3.png)
 
-FOLIO permissions can be either "visible" or "invisible."
+After selecting one or more applications and clicking "**Save and close**," the Capability and Capability Set portions of the role creation form will be populated, and you can select those which you want to include in your role by checking individual boxes or the boxes in the column headers. 
 
-Permissions that you see in the Users app or in Settings > Users > Permission sets are **visible** permissions. Developers create visible permissions by defining a group of very granular, specific permissions that when put together provide a specific function. They have a friendly display name that helps explain what the permission allows a FOLIO user to do. 
+![image](role-creation-4.png)
 
-**Invisible** permissions do not appear in the Users app by default. They are created by developers in a backend module and are not intended to be assigned directly to users. Usually, they are very granular, and control one particular action - such as the ability to view one specific type of record in an app. They have less friendly display names such as “addresstypes collection get.”
+#### Notes on selecting Capabilities and Capability Sets: 
+* Capabilities and Capability Sets are divided into 3 groups: **Data**, **Settings**, and **Procedural**. These are intended to make it easier to sort through the options. Here are brief descriptions of each set: 
+	*<u>Data</u>: Capablities for directly managing resources as they exist in FOLIO (i.e. RESTful APIs)
+		*E.g. "Instance," "purchase order lines," etc. 
+	*<u>Procedural</u>: Capabilities for initiating and controlling processes in FOLIO (i.e. execution of tasks)
+		*E.g. "Check-out-by-barcode" 
+	*<u>Settings</u>: Administrative Capabilities for managing FOLIO configurations 
+		*E.g. "Notes settings" 
+* Selecting a Capability Set will result in the automatic selection of its constituent capabilities. You cannot unselect individual capabilities which were automatically checked
+* ***Tip:*** Using "find on page" (e.g. `Ctrl+F` / `Cmnd+F`) can be helpful when searching for capabilities
+* Don't forget to click "**Save & close**" when you've made your selections
 
-### Why would I want to know about invisible permissions?
+![image](role-creation-5.png)
 
-Ideally, when you're working in FOLIO, you never have to consider invisible permissions, because the development process led to the creation of visible permissions that offer all the functionality you need. 
+## Role Modification
+Making adjustments to roles is very similar to creating new roles. Start by selecting the name of the desired role. This will result in a detail pane to be displayed. 
 
-However, occasionally bugs with permissions appear, or a feature may only be partially developed. When that happens, FOLIO administrators may need to assign an invisible permission directly to a user in order to enable a needed workflow.
+***Tip***: the search bar can help you find what you're looking for. 
 
-### How can I see invisible permissions in the FOLIO user interface?
+![image](role-modification-1.png)
 
-The ability to see invisible permissions is determined user-by-user. The logged-in user must have access to Settings → Developer. 
+Use the "**Actions**" menu in the role details pane to edit the role. 
 
-1. Go to Settings > Developer > Configuration.
-2. Check the box for **List ‘invisible’ permissions in add-perm menus?**
-3. Save your changes.
+![image](role-modification-2.png)
 
-It is not recommended to leave this setting on permanently; there are thousands of permissions in FOLIO when including visible and invisible permissions together, and displaying invisible permissions will significantly slow down permissions management workflows. To see invisible permissions without changing the system configuration, use the Permissions inspector in Settings > Developer > Permissions inspector and check the "Show invisible permissions" box at the top of the pane.
+The role edit form looks and behaves the same as the role creation form. Refer to the Role Creation section for details.  
 
-### How should I configure FOLIO to use invisible permissions with user accounts, if I need to be able to assign them to staff?
+## Role Deletion 
+Deletion of a role is similar to role modification. Refer to the Role Modification section for details. When delting a role, instead of selecting "**Edit**" from the "**Actions**" menu, select "**Delete**." Exercise caution when deleting roles: **deleting a role cannot be undone.** When deleting a role which is assigned to users, the role assignments will automatically be removed from those users. If you are sure you wish to delete the role, you will be asked to confirm. 
 
-You should use permission sets.
+![image](role-deletion-1.png)
 
-The general approach is:
-1. Log in as a user with appropriate permissions and turn on listing invisible permissions in FOLIO.
-2. Go to Settings\>Users\> Permission sets and create a new permission set with only the invisible permissions that you need to be able to assign.
-3. Turn off the ability to see invisible permissions.
-4. Assign that permission set that you created to the users who need the invisible permission.
+## Role Duplication 
+Duplication of a role can be accomplished by following similar steps as role modification. Refer to the Role Modification section for details. However, instead of selecting "**Edit**" from the "**Actions**" menu, select "**Duplicate**." You will be asked to confirm. A system generated name will be given to the duplicate role. Role assignments will not be copied to the new role. 
 
-The reason to use this process rather than simply logging in as an appropriate administrator and assigning the invisible permission to staff is that other users could come in after you assign the invisible permission, edit the staff member’s account, and overwrite that administrator’s changes.
+![image](role-duplication-1.png)
 
-For example:
+After confirming you will automatically be taken to the new/duplicate role. 
 
-Suppose Jameca Jones, a FOLIO administrator, decides that Jeanne Dupont, a FOLIO user, needs the invisible permission "circulation-rules.storage.get" to help with troubleshooting delivery issues in FOLIO.
+![image](role-duplication-2.png)
 
-1. Jameca logs into FOLIO  and enables the invisible permission option in Setting > Developer.
-2. Jameca goes to the Users App and finds Jeanne's record.
-3. Jameca assigns the invisible permission to Jeanne and saves her changes.
-4. Jameca disables the invisible permission option.
+## Shared Roles
+Shared roles are centrally managed in that they can only be edited in the consortia manager. A shared role will appear as a Role in all tenants with the same capabilities. User from the given tenant can be assigned to that role. Editing that role in the central tenant will change it for all tenants. 
 
-A few days later, Max Mustermann realizes that Jeanne needs the visible permission named "Courses: Read All". Max is a manager, but not a FOLIO administrator.
+To share a role users must have permissions to access the consortia manager app and share data. With your active affiliation set to the systems central tenant. Navigate to Consortia manager -> Authorization Roles. 
 
-1. Max goes into Users and looks up Jeanne's record.
-2. When Max views Jeanne’s account, he doesn’t see the permission "circulation-rules.storage.get" on Jeanne’s account because he doesn’t have that option turned on for his account in Settings.
-3. Max adds the permission "Courses: Read All" and saves his changes. 
+![image](shared-roles-1.png)
 
-When Max saves Jeanne’s record, FOLIO saves a complete new copy of Jeanne's permissions that contains **only the permissions that Max could view**,  which overwrites the changes that Jameca made.
+* Select the central tenant from the Member dropdown at the top of the second pane 
+* Choose a Role that you have created in the central tenant 
+* Click the actions menu
+* Click "Share to all" 
 
-In contrast, suppose Jameca uses permission sets to give Jeanne access.
+![image](shared-roles-2.png)
 
-1. Jameca goes to Settings > Developer and enables invisible permissions.
-2. She goes to Settings > Users > Permission Sets and creates a permission set named “Troubleshooting - Circulation Rules Permissions.” 
-3. Jameca adds the invisible permission "circulation-rules.storage.get" to the permission set she has made, and saves her changes. 
-4. Jameca goes into the Users app, looks up Jeanne’s record, and assigns the permission set "Troubleshooting - Circulation Rules Permissions" to Jeanne’s account. 
+* When the confirmation modal appears click "Submit" to confirm and share the role with all tenants in the system 
+* You will see a success toast message 
+* In the view pane for the role you will now see "Centrally managed" = Yes 
 
-A few days later, Max realizes that Jeanne also needs the permission "Courses: Read All."
+## Managing Role Assignments
+Role assignments can be maanged from a few different places. Which place is most appropriate depends on what you're trying to accomplish. 
 
-1. Max goes to the Users app and looks up Jeanne’s record.
-2. Max doesn’t know what “Troubleshooting - Circulation Rules Permissions” is for, but knows that administrators have been using permission sets to debug issues, so he leaves it assigned to Jeanne.
-3. Max adds the permission "Courses: Read All" to Jeanne’s account and saves his changes.
+* From Settings -> Authorization Roles
+	* This is a good choice when assigning or unassigning multiple users to/from a given role 
+* From the Users app
+	* This is a good choice when managing role assignments for a given user
+* From Consortia manager -> Authorization Roles (only applicable to consortia with ECS enabled) 
+	* From here you can manage role assignments across all related tenants 
+	* From here you can also create "Shared" roles that can be used by all tenants in the system  
 
-When Max saves his changes, FOLIO saves a completely new copy of Jeanne’s permissions that **still includes** only the permissions Max could view. But because Max **could see the permission set** that Jameca created, it gets re-saved to Jeanne’s account, and she doesn’t lose the access that she needs.
+### Settings / Authorization Roles 
+To manage role assignments in the context of a particular role, navigate to the "**Authorization Roles**" section of **Settings**. Start by selecting the name of the desired role. This will result in a detail pane to be displayed. 
+
+***Tip:*** the search bar can help you find what you're looking for.
+
+![image](auth-1.png)
+
+Once you have selected a role, an additional pane will open showing the details of that role. This role detail pane will include on "**Assigned users**" accordion (which should be expanded by default). 
+
+![image](auth-2.png)
+
+Clicking on the "**Assign/Unassign**" button will open the "**Select User**" modal. Use the facets and search functions to help find the user(s) you want to assign or unassign. 
+
+![image](auth-3.png)
+
+To assign a user to the role, check the box in the first column. To unassign a user from the role, uncheck that box. When finished, click "**Save.**"
+
+![image](auth-4.png)
+
+In some cases you may see a dialogue asking you to confirm the creation of user records in Keycloak. The creation of these records is necessary for the role assignment to succeed. Click "**Confirm**" to proceed, or "**Cancel**" if you're unsure. 
+
+![image](auth-5.png)
+
+Upon completion, you will land back at the role detail view. If the assignment (for unassignment) was successful, you should see a green message indicating the success at the bottom of your screen. The "**Assigned users**" accordion should be updated to reflect the changes you've just made. 
+
+### Users App
+To manage role assignments in the context of a particular user, navigate to the "**Users**" app. Use the facets and search functions to help find the user you want to assign to roles. 
+
+![image](users-1.png)
+
+Select a user to display that user's details in a separate pane. Here yo uwill see a "User roles" accordion (collapsed by default). When collapsed, a bubble in the accordion header indicates how many roles the user is presently assigned to. While this accordion is helpful for viewing a user's role assignments, you cannot edit a user's role assignments here. Instead, you must select the "**Edit**" option from the "**Action**" menu. 
+
+![image](users-2.png)
+
+On the Edit form, scroll down to and click on the "User roles" accordion to expand it. Here you will see the list of roles this user is assigned to. You can click the "X" icon for a given role to unassign that role. You also have the option to unassign all user roles and add user roles via the buttons below the list or roles. 
+
+![image](users-3.png)
+
+When using "Unassign all users roles," you will be prompted to confirm. The roles being removed will be listed in the dialogue box. 
+
+![image](users-4.png)
+
+When using "Add user roles," the "Select user roles" modal will be displayed. Use the facets and search functions to help find the role(s) you want to assign to the user. Check the boxes next to the roles you want to assign (or uncheck the roles you want to unassign). When finished, click "**Save & close**" to submit your changes. 
+
+![image](users-5.png)
+
+Finally, in order for any of the changes you've made to be saved, you must click the "**Save & close**" button in the user edit form. 
+
+![image](users-6.png)
+
+***N.B.*** Don't forget to click "Save & close" on the user edit form to save your changes. If you cancel now, your changes will not take effect. 
+
+In some cases you may see a dialgoue asking you to confirm the creation of a user record in Keycloak. The creation of this record is necessary for the role assignment to succeed. Click "**Confirm**" to proceed, or "**Cancel**" if you're unsure. 
+
+![image](users-7.png)
+
+Upon completion, you will land back at the user detail view. The "**User roles**" accordion shouild be updated to reflect the changes you've just made. 
+
+## Migration
+When migrating from the Okapi platform to Eureka adjustments must be made. Some of this will be handled by migration APIs. Other parts will need to be performed by a human.  
+
+### Migration APIs
+There are two APIs which do most of the heavy lifting. The goal of these is to ensure users who could perform certain actions on Okapi, can still perform those same actions on Eureka.
+* <u>Users migration</u> - provided by mod-users-keycloak. This API will create AuthUser for any User in the system which has at least one permission assigned to them
+* <u>Roles migration</u> - provided by mod-roles-keycloak. This API looks at the permissions assigned to users, and creates a Role for each unique set. These system-generated roles are then assigned to the appropriate users
+	* ***N.B.*** Given the high level of nesting in permission sets on the Okapi platform, and the flat roles on Eureka, the migration APIs do not attempt to perform a one-to-one mapping of permission Sets to roles
+
+### Post-migration Cleanup 
+After the migration APIs have been run, human intervention is likely required to clean up system-generated roles. This includes renaming, providing descriptions, splitting, and possibly combining roles. Alternatively, administrators could create roles from scratch, transition to them, and eventually remove the system generated roles.
