@@ -1,7 +1,7 @@
 ---
 title: "Settings > My profile"
 linkTitle: "My profile"
-date: 2025-04-18
+date: 2025-05-08
 weight: 175
 tags: ["subtopic"]   
 ---
@@ -57,9 +57,11 @@ To change your FOLIO password:
 2. In the **Change password** pane, type in your current FOLIO password. Toggle the **Show password** and **Hide password** to display your typing accordingly. 
 3. Type the new password in the **New FOLIO password** and **Confirm FOLIO password** fields. Passwords must contain:
 
+
     - at least one numeric character;
     - at least one special character;   
     - no keyboard sequence of characters;
     - both lowercase and uppercase letters.
+
 
 4. Click **Save** to save the new FOLIO password. The green toast message, *The FOLIO password for [FOLIO username] was saved successfully*, appears at the bottom of the screen. 

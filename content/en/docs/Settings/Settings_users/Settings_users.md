@@ -1,7 +1,7 @@
 ---
 title: "Settings > Users"
 linkTitle: "Users"
-date: 2025-04-18 
+date: 2025-05-08 
 weight: 250
 tags: ["subtopic"]
 ---
@@ -55,7 +55,7 @@ For all Settings > Users capabilities:
 | *Settings (Users): Can create, edit and remove payment methods* | *UI-Users Settings Payments* | manage |
 | *Settings (Users): Can view payment methods* | *UI-Users Settings Payments* | view |
 | *Settings (Users): Can create, edit and remove permission sets* | *UI-Users Settings Permsets* | manage |
-| *Settings (Users): Can view transfer accounts* | * UI-Users Settings Transfers* | view |
+| *Settings (Users): Can view transfer accounts* | *UI-Users Settings Transfers* | view |
 | *Settings (Users): Can create, edit and remove patron groups* | *UI-Users Settings Usergroups* | manage |
 | *Settings (Users): View all settings* | *UI-Users Settings* |view |
 | *Settings (Users): Can create, edit, and view custom fields* | *UI-Users Settings Customfields* | edit |
@@ -246,7 +246,7 @@ When manually creating a fee/fine, **Fee/fine Type** is a required field.
 7.  Optional: Select an **Action Notice**.
 8.  Click **Save**. The Fee/fine type is saved.
 
-See [Settings \> Circulation \> Patron notice templates](../../settings_circulation/settings_circulation/#patron-notice-templates) for more information about **Patron notice templates**.
+See [Settings \> Circulation \> Patron notice templates](../settings_circulation/settings_circulation/#patron-notice-templates) for more information about **Patron notice templates**.
 
 
 ### Edit a fee/fine type
