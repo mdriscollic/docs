@@ -574,8 +574,6 @@ Three options are available:
 
 In addition, you can select the setting “Use the same generated number for accession number and call number” to insert the same number into both fields.
 
-See [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction) for more information.
-
 ## Settings \> Inventory \> Integrations
 
 ### Z39.50 target profiles
