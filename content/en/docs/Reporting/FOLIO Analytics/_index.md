@@ -1,19 +1,19 @@
 ---
 title: "FOLIO Analytics"
 linkTitle: "FOLIO Analytics"
-date: 2024-12-04
+date: 2025-04-22
 weight: 50
 tags: ["parenttopic"]
 ---
 
 ## What is the FOLIO Analytics repository
-The FOLIO Analytics repository contains reports and other analytics developed for FOLIO and designed to run on the Library Data Platform. Reports developed for FOLIO are stored as code written in Structured Query Language (SQL). The SQL queries can be opened inside of database querying software to pull data out of the LDP.
+The FOLIO Analytics repository contains reports and other analytics developed for FOLIO and designed to run on a reporting database running the Metadb software. Reports developed for FOLIO are stored as code written in Structured Query Language (SQL). The SQL queries can be opened inside of database querying software to pull data out of the reporting database.
 
 You can read an introduction to the repository at its [overarching README file](https://github.com/folio-org/folio-analytics/blob/main/README.md) on GitHub.  The file describes the following:
 
 * The two types of SQL queries to be found in the repository:
-   * **Report queries**, which you can copy and paste to run on your LDP.
-   * **Derived table queries**, which simplify and speed up report queries. A *derived table* is simply a table created using data from one or more other tables. These queries are managed behind the scenes through LDP administration so that they run automatically and generate the derived tables in the database.
+   * **Report queries**, which you can copy and paste to run on your Metadb reporting database.
+   * **Derived table queries**, which simplify and speed up report queries. A *derived table* is simply a table created using data from one or more other tables. These queries are managed behind the scenes through reporting database administration so that they run automatically and generate the derived tables in the database.
 * Documentation for the queries.
 * Examples of reporting applications that can be used to run the queries.
 * How the queries are organized in the repository.
@@ -22,8 +22,7 @@ The first section below outlines how to make use of the report queries in the FO
 
 ## Using queries from the FOLIO Analytics repository
 
-<b>
-FOLIO Analytics has releases aligned with FOLIO flower releases as well as monthly rolling releases. This allows institutions to match the FOLIO Analytics version to the FOLIO flower release that they’re running. </b>
+> FOLIO Analytics has releases aligned with FOLIO flower releases as well as monthly rolling releases. This allows institutions to match the FOLIO Analytics version to the FOLIO flower release that they’re running.
 
 Report queries in the FOLIO Analytics repository are laid out in a particular structure that will make it easy for you to find the various areas you need as you build your knowledge of SQL.
 
@@ -42,7 +41,7 @@ Once you have located a desired report query, you can perform the following step
 
 1. Copy the query code from GitHub.
 1. Open a database query tool.
-1. Connect to the LDP.
+1. Connect to the reporting database.
 1. Paste the SQL query code into a local file.
 1. Run the SQL query.
 1. Export the query results in the desired format.
@@ -62,21 +61,21 @@ The following section demonstrates this workflow using [DBeaver](https://dbeaver
 1. Install the [DBeaver community edition](https://dbeaver.io/download/) corresponding to your operating system.
 1. Open DBeaver.
 
-#### Connect to an LDP or Metadb database
+#### Connect to Metadb database
 1. To add your database connection, click on the **New Database Connection** button toward the top of the Database Navigator tab. It should look like an electrical plug with a plus sign.
 1. In the **Select your database** window that pops up, click on the **PostgreSQL** symbol and then click **Next**.
 1. Fill out the **connection dialog**:
    * You will need to get the following information from your local Metadb administrator:
-  	* Host (typically looks like a URL, like ldp.institution.edu)
+  	* Host (typically looks like a URL, like metadb.institution.edu)
   	* Port (typically 5432)
   	* Database name
   	* User name and password
   	* SSL mode (will likely be “require”)
-
-<b> Note </b>that a hosted Metadb reporting database is currently available for the FOLIO community.  It provides access to data from the FOLIO reference environment folio-snapshot and is updated hourly. For login info, please review the [Library Data Platform testbed documentation](https://librarydataplatform.org/testbed/).
 1. In addition to the first page of connection details, you must click on the SSL tab to select “require” under **SSL mode**.
 1. Finally, expand **Connection Settings** in the sidebar on the left and select the **Initialization** subheading. In the settings on the right, make sure the **Auto-commit** check box is selected.
 1. When you are done setting up the connection, you can double click on the connection name in the **Database Navigator** tab to connect to the database.
+
+> **Note** that a hosted Metadb reporting database is currently available for the FOLIO community.  It provides access to data from the FOLIO reference environment folio-snapshot and is updated hourly. For login info, please review the [Library Data Platform testbed documentation](https://librarydataplatform.org/testbed/).
 
 #### Paste the SQL query code into a local file
 
@@ -90,7 +89,7 @@ The following section demonstrates this workflow using [DBeaver](https://dbeaver
 1. To run the query, either click on the **Execute SQL Script** button on the left side of the script editor (it should be the third button from the top and look like a document with a “play” symbol inside of it) or select **Execute SQL Script** from the **SQL Editor** menu.
 1. The results will hopefully then appear in the **results panel** below the script. 
 
-<b> Note: When querying parts of the database with a lot of data, like the inventory tables, there may be a long delay before results are returned. </b>
+> **Note:** When querying parts of the database with a lot of data, like the inventory tables, there may be a long delay before results are returned.
 
 
 
@@ -151,7 +150,7 @@ After learning how to use SQL, there are a few resources that outline specifics 
 
 * **[FOLIO Analytics Wiki](https://github.com/folio-org/folio-analytics/wiki).** This wiki is a work in progress created by the FOLIO Reporting SIG to provide samples of queries for different functional areas of FOLIO. Each functional area has its own “Cookbook” filled with “recipes” or starter queries for common use cases. The wiki is also a helpful resource for information on the FOLIO data model, an understanding of which is useful for knowing how to join tables in your SQL. 
 * **[The Metadb User Guide](https://metadb.dev/doc/)** This guide acts as a user and administrator’s guide to Metadb. It includes information about configuring Metadb as well as creating SQL queries using Metadb tables. 
-* **[SchemaSpy (Metadb)](https://metadb.dev/schema/folio/)** This SchemaSpy installation is attached to the LDP reference environment, which pulls data from the FOLIO snapshot reference environment. SchemaSpy gives a concise list of Metadb tables and fields and can be helpful when developing queries, if your local Metadb uses the same software version as the LDP reference environment.
+* **[SchemaSpy (Metadb)](https://metadb.dev/schema/folio/)** This SchemaSpy installation is attached to a Metadb reference environment, which pulls data from the FOLIO snapshot reference environment. SchemaSpy gives a concise list of Metadb tables and fields and can be helpful when developing queries, if your local Metadb uses the same software version as the Metadb reference environment.
 * **[Shared Metadb derived tables](https://github.com/folio-org/folio-analytics/tree/main/sql_metadb/derived_tables)** The derived tables (found in the **folio_derived** schema for Metadb) often serve as the best starting point for ad hoc queries. The derived tables combine and simplify the original FOLIO tables in ways that make query development much easier. You should work with your local Metadb administrator to determine how your local Metadb is using derived tables (e.g., what FOLIO Analytics release you are using, how frequently the derived tables are updated).
 
 ### Sharing ad hoc queries
@@ -177,4 +176,4 @@ GROUP BY
 
 This code specifies that the report should contain two columns: `group_name` and a column that stores a calculation of the count of values in the `user_id` column, which should appear in the query with the label “num_users.” The code then specifies that these columns are coming from the `folio_derived.users_groups` derived table. Finally, it specifies that the data from the original table should be separated into separate groups using values from the `group_name` column, so that the `num_users` calculation is done separately for each group. The result is a table where each value of `group_name` is matched with a count of the number of users in that group.
 
-As you are writing your query file in DBeaver, you may find it helpful to browse the LDP using the [Database Navigator](https://dbeaver.com/docs/wiki/Database-Navigator/) tab. For example, you can expand the connection, then expand the **Schemas**, then expand the **folio_derived** (Metadb) schema, then expand **Tables** to see the available derived tables. Each table can be expanded to see its available columns. To browse the data in a table, right-click on a table and select **View Data**. Use the same procedure to browse the tables and columns available in the various schemas.
+As you are writing your query file in DBeaver, you may find it helpful to browse the Metadb reporting database using the [Database Navigator](https://dbeaver.com/docs/wiki/Database-Navigator/) tab. For example, you can expand the connection, then expand the **Schemas**, then expand the **folio_derived** (Metadb) schema, then expand **Tables** to see the available derived tables. Each table can be expanded to see its available columns. To browse the data in a table, right-click on a table and select **View Data**. Use the same procedure to browse the tables and columns available in the various schemas.
