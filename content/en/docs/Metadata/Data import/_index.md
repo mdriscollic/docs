@@ -25,17 +25,20 @@ Definition of terms related to the Data Import app:
 -   **SRS.** Source Record Storage. A storage layer in FOLIO. If an instance has an underlying MARC record, then the MARC record is stored in SRS.
 -   **SRS Holdings.** Holdings data specified in MARC record information.
 
-## Permissions
+## Capabilities
 
-In order to view and interact with the Data import app, a user needs to be assigned one or more of the following permissions:
+The capabilities listed below allow you view and interact with the Data import app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Data Import app or any related information.
 
--   **Data import: Can upload files, import, and view logs.** This permission allows the user to see and use the Data import app. The user can perform all functions other than deleting logs.
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
--   **Data import: Can delete import logs.** This permission allows the user to delete logs in the Data import app.
-  
--   **Data import: Can view only.** Assign this permission if a user only needs to view logs and details of import jobs (e.g. check to see if an import has completed) but is NOT permitted to import files using the Data Import app.
+Note: The below capabilities only pertain to the Data Import app. Data Import processes involve other apps and the ability to interact with those could require separate capabilities.
 
-Note: These are the only permissions available for the Data import app. You are unable to view and access Data import if you do not have one or more of these permissions assigned to you. You can assign permissions to users in the Users app.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Data import: Can upload files, import, and view logs** | **UI-Data-Import** | data | manage | This capability allows the user to see and use the Data import app. The user can perform all functions other than deleting logs.|
+|**Data import: Can delete import logs** | **UI-Data-Import Logs** | data | delete | This capability allows the user to delete logs in the Data import app.|
+|**Data import: Can view only** | **UI-Data-Import** | data | view | Assign this capability if a user only needs to view logs and details of import jobs (e.g. check to see if an import has completed) but is NOT permitted to import files using the Data Import app.|
+
 
 ## Starting a data import job
 
