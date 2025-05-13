@@ -21,13 +21,16 @@ Definition of terms related to the Data Export app:
 -   **SRS.** Source Record Storage. A storage layer in FOLIO. If an instance has an underlying MARC record, then this record is stored in SRS.
 -   **UUID.** Universally unique identifier. Each record in FOLIO has a UUID.
 
-## Permissions
+## Capabilities
 
-In order to view and interact with the Data Export app, a user needs to be assigned the following permission:
+The capabilities listed below allow you view and interact with the Data Export app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Data Emport app or any related information.
 
--   **UI: Data export module is enabled**. This permission allows the user to see and use the Data Export app.
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
-Note: This is the only permission available for the Data Export app. You are unable to view and access Data Export if you do not have this permission assigned to you. You can assign permissions to users in the Users app.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Data export: Can view only** | **UI-Data-Export** | data | view | Assign this capability if a user only needs to view logs and details of export jobs (e.g. check to see if an export has completed).|
+|**Data export: Can upload files, export, download files and view logs** | **UI-Data-Export** | data | edit | This capability allows a user to see and use the Data Export app.|
 
 ## Quick exports from the Inventory App
 
