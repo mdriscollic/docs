@@ -16,13 +16,16 @@ It is recommended that you configure the Data Import settings in the following o
 3.  Match profile
 4.  Job profile
 
-## Permissions
+## Capabilities
 
-The permissions listed below allow you to interact with Data Import settings. You can assign permissions to users in the Users app.
+The capabilities listed below allow you view and interact with Data Import settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see Data Import settings or any related information.
 
--   **Settings (Data import): Can view, create, edit, and remove.** This permission allows the user to see and and change the Data Import settings.
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
--   **Settings (Data import): Can view only.** This permission allows the user to see the Data Import settings but not make any changes to them.
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Data import): Can view, create, edit, and remove** | **UI-Data-Import Settings** | settings | manage | This capability allows the user to see and and change the Data Import settings.|
+|**Settings (Data import): Can view only** | **UI-Data-Import Settings ReadOnly** | settings | view | This permission allows the user to see the Data Import settings but not make any changes to them.|
 
 ## Settings \> Data import \> Job profiles
 
