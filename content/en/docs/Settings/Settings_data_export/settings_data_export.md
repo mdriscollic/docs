@@ -18,6 +18,18 @@ In order to interact with Data export settings, a user needs to be assigned the 
 
 -   **Settings (data-export): display list of settings pages.** This permission allows the user to set up data export profiles.
 
+## Capabilities
+
+The capabilities listed below allow you view and interact with Data Export settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see Data Export settings or any related information.
+
+See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+
+|**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+|**Settings (Data export): Can view only** | **UI-Data-Export Settings** | settings | view | This permission allows the user to see the Data Export settings but not make any changes to them.|
+|**Settings (Data export): Can view, add, update profiles** | **UI-Data-Export Settings** | settings | edit | This capability allows the user to see and and change the Data Export settings.|
+
+
 ## Settings \> Data export \> Job profiles
 
 When exporting data, each export is associated with a job profile. The job profile provides a way of connecting a specific list of record identifiers with a field mapping profile. The field mapping profile determines how the data from FOLIO records appears in the generated MARC file.
