@@ -22,7 +22,7 @@ In order to interact with Data export settings, a user needs to be assigned the 
 
 The capabilities listed below allow you view and interact with Data Export settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see Data Export settings or any related information.
 
-See [Settings > Authorization roles](../../../settings/settings_authorization-roles/settings_authorization-roles) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+See [Settings > Authorization roles](../../settings_authorization-roles/settings_authorization-roles/) for instructions on how to create and assign Authorization roles. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
