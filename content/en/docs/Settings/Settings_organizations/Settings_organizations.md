@@ -91,7 +91,7 @@ Libraries may create controlled lists of organization types to facilitate filter
 3. In the **Delete Type** dialog, click **Delete**. The type is deleted and a confirmation message appears. Note: Types cannot be deleted when in use on an Organization record. You will see an error: "This type cannot be deleted, as it is in use by one or more records."
 
 ## Settings \> Organizations \> Banking information
-Libraries may wish to record banking information to use for payments to vendors. To activate the **Banking information** accordion on Organization records, select the **Enable banking information** checkbox and click **Save**. This accordion will only be accessible to staff users with corresponding permissions to view/interact with Banking information.
+Libraries may wish to record banking information to use for payments to vendors. To activate the **Banking information** accordion on Organization records, select the **Enable banking information** checkbox and click **Save**. This accordion will only be accessible to staff users with corresponding capabilities to view/interact with Banking information.
 
 ## Settings \> Organizations \> Account types
 If **Banking information** is enabled, a library can configured account types to include alongside banking information. Examples may include 'Corporate checking' or 'Corporate savings'.
