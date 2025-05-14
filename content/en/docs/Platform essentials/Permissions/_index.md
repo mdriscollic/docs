@@ -71,7 +71,7 @@ explains how to manage roles and their assignments. Information on migrating per
 **How do these relate to one another?** 
 This diagram may help you visualize the relationships between some of these terms: 
 
-![image](/relation-diagram.png)
+![image](relation-diagram.png)
 
 ## Role Creation
 Role creation happens in the "**Authorization Roles**" section of **Settings**. Use the "**+New**" button to open the form for creating a role. 
