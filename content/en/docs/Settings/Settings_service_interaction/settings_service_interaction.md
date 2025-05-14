@@ -1,9 +1,10 @@
+---
 title: "Settings > Service interaction"
 linkTitle: "Service interaction"
 date: 2025-05-14
 weight: 228
 tags: ["subtopic"]
-
+---
 
 The Service Interaction section of the Settings App is where you can configure central settings like the number generators and number generator sequences.
 
