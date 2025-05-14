@@ -18,20 +18,20 @@ It is recommended that you select all applications prior to assigning capabiliti
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
 |**Settings (Orders): Can create, edit, view and delete custom fields.** | **UI-Orders Settings Custom-Fields** | settings | delete | This capability allows the user to create, edit, view and delete custom fields in Settings > Orders.|
-|**Settings (Orders): Can create, edit, view custom fields.** | **UI-Orders Settings Custom-Fields** | settings | edit | This permission allows the user to create, edit, and view custom fields in Settings > Orders.|
+|**Settings (Orders): Can create, edit, view custom fields.** | **UI-Orders Settings Custom-Fields** | settings | edit | This capability allows the user to create, edit, and view custom fields in Settings > Orders.|
 |**Settings (Orders): Can view all settings.** | **UI-Orders Settings** | settings | view | This capability allows the user to view all of the Orders settings.|
 |**Settings (Orders): Can view and edit all settings.** | **UI-Orders Settings** | settings | manage | This capability allows the user to view and edit all of the Orders settings.|
 |**Settings (Orders): Can view custom fields.** | **UI-Orders Settings Custom-Fields** | settings | view | This capability allows the user to view custom fields in Settings > Orders.|
 |**Settings (Orders): Can view Order Templates.** | **UI-Orders Settings Order-Templates** | settings | view | This capability allows the user to view Order Templates in Settings > Orders.|
 |**Settings (Orders): Can view, edit Order Templates.** | **UI-Orders Settings Order-Templates** | settings | edit | This capability allows the user to view and edit Order Templates in Settings > Orders.|
 |**Settings (Orders): Can view, edit, create Order Templates.** | **UI-Orders Settings Order-Templates** | settings | create | This capability allows the user to view, edit, and create Order Templates in Settings > Orders.|
-|**Settings (Orders): Can view, edit, delete Order Templates.**| **UI-Orders Settings Order-Templates** | settings | delete | This permission allows the user to view, edit, and delete Order Templates in Settings > Orders.|
+|**Settings (Orders): Can view, edit, delete Order Templates.**| **UI-Orders Settings Order-Templates** | settings | delete | This capability allows the user to view, edit, and delete Order Templates in Settings > Orders.|
 |**Settings (Orders): Manage number generator options** | **UI-Orders Settings Number-Generator** | settings | manage | This capability allows the user to view and edit Number generator options for Receiving in Orders settings.|
 
 
 ## Settings > Orders > General > Approvals
 
-If you want to require approval to open orders, select **“Approval required” to open orders**. When selected, an additional step between Pending and Open is added. A user with the appropriate permission has to approve the order via a separate action or by checking an approval box on the order record. Once the order is approved, the date and time of the approval is captured, along with the username of the person who made the approval. If this setting is not activated, the approval date and time will match the date and time that the order was opened. For more information, see [Approving an order](../../orders/#approving-an-order).
+If you want to require approval to open orders, select **“Approval required” to open orders**. When selected, an additional step between Pending and Open is added. A user with the appropriate authorization has to approve the order via a separate action or by checking an approval box on the order record. Once the order is approved, the date and time of the approval is captured, along with the username of the person who made the approval. If this setting is not activated, the approval date and time will match the date and time that the order was opened. For more information, see [Approving an order](../../orders/#approving-an-order).
 
 
 ## Settings > Orders >  General > Closing purchase order reasons
@@ -66,14 +66,14 @@ Use this setting to configure the reasons for an order closure. FOLIO provides d
 
 ## Settings > Orders > General > Order templates
 
-Use this setting to configure your order templates. Order templates can be used to populate consistent information that you may always fill out when ordering from a specific vendor, for example. Note: Any order templates you create are shared among all users who have permission to create orders.
+Use this setting to configure your order templates. Order templates can be used to populate consistent information that you may always fill out when ordering from a specific vendor, for example. Note: Any order templates you create are shared among all users who have authorization to create orders.
 
 Order templates contain the same fields found in order records but also include order line information, which is automatically applied to any order lines added to the order record that uses the order template.
 
 
 ### Creating an order template
 
-To create a new order template, follow the steps below.  To hide a field from view during order creation, click on the eye icon beside the field name.  The eye icon will display an angled slash mark to indicate that the field will be hidden.  When the user creates a new order and selects the template, only the fields with the eye turned on will display. Hidden fields can be restored to view by users with permission to view hidden fields. Note: Template name is the only required field for a new order template.
+To create a new order template, follow the steps below.  To hide a field from view during order creation, click on the eye icon beside the field name.  The eye icon will display an angled slash mark to indicate that the field will be hidden.  When the user creates a new order and selects the template, only the fields with the eye turned on will display. Hidden fields can be restored to view by users with authorization to view hidden fields. Note: Template name is the only required field for a new order template.
 
 1. Click **New**.
 
