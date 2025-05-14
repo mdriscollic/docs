@@ -22,8 +22,7 @@ The first section below outlines how to make use of the report queries in the FO
 
 ## Using queries from the FOLIO Analytics repository
 
-<b>
-FOLIO Analytics has releases aligned with FOLIO flower releases as well as monthly rolling releases. This allows institutions to match the FOLIO Analytics version to the FOLIO flower release that they’re running. </b>
+**FOLIO Analytics has releases aligned with FOLIO flower releases as well as monthly rolling releases. This allows institutions to match the FOLIO Analytics version to the FOLIO flower release that they’re running.**
 
 Report queries in the FOLIO Analytics repository are laid out in a particular structure that will make it easy for you to find the various areas you need as you build your knowledge of SQL.
 
@@ -72,11 +71,11 @@ The following section demonstrates this workflow using [DBeaver](https://dbeaver
   	* Database name
   	* User name and password
   	* SSL mode (will likely be “require”)
-
-<b> Note </b>that a hosted Metadb reporting database is currently available for the FOLIO community.  It provides access to data from the FOLIO reference environment folio-snapshot and is updated hourly. For login info, please review the [Library Data Platform testbed documentation](https://librarydataplatform.org/testbed/).
 1. In addition to the first page of connection details, you must click on the SSL tab to select “require” under **SSL mode**.
 1. Finally, expand **Connection Settings** in the sidebar on the left and select the **Initialization** subheading. In the settings on the right, make sure the **Auto-commit** check box is selected.
 1. When you are done setting up the connection, you can double click on the connection name in the **Database Navigator** tab to connect to the database.
+
+**Note** that a hosted Metadb reporting database is currently available for the FOLIO community.  It provides access to data from the FOLIO reference environment folio-snapshot and is updated hourly. For login info, please review the [Library Data Platform testbed documentation](https://librarydataplatform.org/testbed/).
 
 #### Paste the SQL query code into a local file
 
@@ -90,9 +89,7 @@ The following section demonstrates this workflow using [DBeaver](https://dbeaver
 1. To run the query, either click on the **Execute SQL Script** button on the left side of the script editor (it should be the third button from the top and look like a document with a “play” symbol inside of it) or select **Execute SQL Script** from the **SQL Editor** menu.
 1. The results will hopefully then appear in the **results panel** below the script. 
 
-<b> Note: When querying parts of the database with a lot of data, like the inventory tables, there may be a long delay before results are returned. </b>
-
-
+**Note: When querying parts of the database with a lot of data, like the inventory tables, there may be a long delay before results are returned.**
 
 #### Export the query results as a CSV
 
