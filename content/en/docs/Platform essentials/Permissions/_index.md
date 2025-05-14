@@ -90,11 +90,11 @@ After selecting one or more applications and clicking "**Save and close**," the 
 
 #### Notes on selecting Capabilities and Capability Sets: 
 * Capabilities and Capability Sets are divided into 3 groups: **Data**, **Settings**, and **Procedural**. These are intended to make it easier to sort through the options. Here are brief descriptions of each set: 
-	*<u>Data</u>: Capablities for directly managing resources as they exist in FOLIO (i.e. RESTful APIs)
+	* **Data**: Capablities for directly managing resources as they exist in FOLIO (i.e. RESTful APIs)
 		*E.g. "Instance," "purchase order lines," etc. 
-	*<u>Procedural</u>: Capabilities for initiating and controlling processes in FOLIO (i.e. execution of tasks)
+	* **Procedural**: Capabilities for initiating and controlling processes in FOLIO (i.e. execution of tasks)
 		*E.g. "Check-out-by-barcode" 
-	*<u>Settings</u>: Administrative Capabilities for managing FOLIO configurations 
+	* **Settings**: Administrative Capabilities for managing FOLIO configurations 
 		*E.g. "Notes settings" 
 * Selecting a Capability Set will result in the automatic selection of its constituent capabilities. You cannot unselect individual capabilities which were automatically checked
 * ***Tip:*** Using "find on page" (e.g. `Ctrl+F` / `Cmnd+F`) can be helpful when searching for capabilities
