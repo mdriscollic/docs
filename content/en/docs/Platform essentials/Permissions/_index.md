@@ -221,8 +221,8 @@ When migrating from the Okapi platform to Eureka adjustments must be made. Some 
 
 ### Migration APIs
 There are two APIs which do most of the heavy lifting. The goal of these is to ensure users who could perform certain actions on Okapi, can still perform those same actions on Eureka.
-* <u>Users migration</u> - provided by mod-users-keycloak. This API will create AuthUser for any User in the system which has at least one permission assigned to them
-* <u>Roles migration</u> - provided by mod-roles-keycloak. This API looks at the permissions assigned to users, and creates a Role for each unique set. These system-generated roles are then assigned to the appropriate users
+* **Users migration** - provided by mod-users-keycloak. This API will create AuthUser for any User in the system which has at least one permission assigned to them
+* **Roles migration** - provided by mod-roles-keycloak. This API looks at the permissions assigned to users, and creates a Role for each unique set. These system-generated roles are then assigned to the appropriate users
 	* ***N.B.*** Given the high level of nesting in permission sets on the Okapi platform, and the flat roles on Eureka, the migration APIs do not attempt to perform a one-to-one mapping of permission Sets to roles
 
 ### Post-migration Cleanup 
