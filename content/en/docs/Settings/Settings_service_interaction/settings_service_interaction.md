@@ -16,7 +16,6 @@ In order to interact with Service interaction settings, a user needs to be assig
 
 | Capability Set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ----- | ---------- | ----- | ---------- |
-
 | Settings Service-Interaction Enabled | Settings | app-platform-complete | view | This permission/capability set allows the user to view Settings > Service Interaction |
 | UI-Service-Interaction NumberGenerator | Data | app-platform-complete | view | This permission/capability set allows the user to view the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
 | UI-Service-Interaction NumberGenerator | Data | app-platform-complete | manage | This permission/capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
@@ -36,7 +35,6 @@ The following number generators are available. In case the reference data is not
 
 | Name | Code | Descriptions | Type |
 | ----- | ----- | ---------- | ---- |
-
 | Inventory: Accession number | inventory\_accessionNumber | Used for Accession number in Inventory as well as in Receiving (Item level) | A |
 | Inventory: Call number | inventory\_callNumber | Used for Call number on Item level in Inventory as well as in Receiving and in addition in Inventory on Holdings level | A |
 | Inventory: Item barcode | inventory\_itemBarcode | Used for Item Barcode on Item level in Inventory as well as in Receiving | A |
@@ -84,26 +82,26 @@ In case the reference data is included in your FOLIO environment example sequenc
 1. Select the **Generator** in the drop-down menu for which sequences should be created
 2. In the **Number generator sequences** pane, click **New**.
 3. In the **New sequence** window enter
-       * **Name**. Name of the number generator sequence. In cases where a selection from number sequences is required, this name will be displayed in the window for generating a new number. This field is editable.
-       * **Code**. Unique code of the number generator sequence. This must be unique within the number generator and contain no whitespaces. Once set, this field can no longer be changed.
-       * **Enabled**. An enabled number generator sequence will be displayed when selecting the sequence in the App UI. A sequence with the status false will not be displayed in the App UI until it is enabled again.
-       * **Note**. Description or information about this sequence can be entered here e.g. disabled sequence because of this reason
-       * Sequence settings
-            * **Maximum value**. This is the maximum possible value for the sequence. When the maximum is reached, the sequence will no longer be usable.
-            * **Warning threshold value**. When set, a warning will be displayed to users of the sequence when its value is reached. Must be lower than the maximum value.
-            * **Next value**. This field shows the next value in the sequence based on the current value in the database. It can be set manually as the starting value for a new sequence.
-            * **Format**. The Format field defines the length of the generated number (excluding the check digit, prefix, and suffix) and supports optional padding. Use # for digits without padding (e.g., #### for four digits). To add padding, specify the character. E.g., 0000 for leading zeros, resulting in outputs like 0045. If a Maximum value is set, the Format length must match it.
-       * Checksum settings
-            * **Method**. The checksum method for the check digit. Use the checksum input template to define what needs to be included in the calculation e.g. prefix or suffix.
-            * **Input template**. Create rules to define the number to be inputted when calculating the check digit. Both the prefix and suffix can be templated, using Groovy markup. Use ${generated\_number} as placeholder for the generated number. E.g. 05${generated\_number}01
-       * Output settings
-            * **Output template**. The output template defines the rules applied to create the sequence. Templates are formed using Groovy. See below for more information.
+   * **Name**. Name of the number generator sequence. In cases where a selection from number sequences is required, this name will be displayed in the window for generating a new number. This field is editable.
+   * **Code**. Unique code of the number generator sequence. This must be unique within the number generator and contain no whitespaces. Once set, this field can no longer be changed.
+   * **Enabled**. An enabled number generator sequence will be displayed when selecting the sequence in the App UI. A sequence with the status false will not be displayed in the App UI until it is enabled again.
+   * **Note**. Description or information about this sequence can be entered here e.g. disabled sequence because of this reason
+   * Sequence settings
+      * **Maximum value**. This is the maximum possible value for the sequence. When the maximum is reached, the sequence will no longer be usable.
+      * **Warning threshold value**. When set, a warning will be displayed to users of the sequence when its value is reached. Must be lower than the maximum value.
+      * **Next value**. This field shows the next value in the sequence based on the current value in the database. It can be set manually as the starting value for a new sequence.
+      * **Format**. The Format field defines the length of the generated number (excluding the check digit, prefix, and suffix) and supports optional padding. Use # for digits without padding (e.g., #### for four digits). To add padding, specify the character. E.g., 0000 for leading zeros, resulting in outputs like 0045. If a Maximum value is set, the Format length must match it.
+   * Checksum settings
+      * **Method**. The checksum method for the check digit. Use the checksum input template to define what needs to be included in the calculation e.g. prefix or suffix.
+      * **Input template**. Create rules to define the number to be inputted when calculating the check digit. Both the prefix and suffix can be templated, using Groovy markup. Use ${generated\_number} as placeholder for the generated number. E.g. 05${generated\_number}01
+   * Output settings
+      * **Output template**. The output template defines the rules applied to create the sequence. Templates are formed using Groovy. See below for more information.
 4. Once you have included all of the information you want about the sequence, click Save & close. A confirmation message appears, and the sequence is saved and appears in the Number generator sequences table.
 
 
 #### Checksum settings
 
-**Method**
+##### Method #####
 
 Select “None” for no checksum calculation.
 Methods for calculating check digits differ in weighting, direction, calculation like mod10 or mod11, calculation of remainder and other factors.
@@ -119,7 +117,7 @@ Additionally some methods are named after its creator e.g. Luhn, others may be n
 | 2345678910-RTL-mod11-I-X (ISBN10) | 2345678910 | right to left | mod11 | (I) 11-remainder = check digit <br>result = 10 → check digit = X | Method is used for ISBN10 <br>pattern for calculation: ...-14-13-12-11-10-9-8-7-6-5-4-3-2 |9 + check digit <br>scalable |
 
 
-**Input template**
+##### Input template #####
 
 In those cases where the prefix and/or suffix needs to be included in addition to the sequential number generated into the calculation it can be defined via the field input template. Use ${generated_number} as placeholder for the generated number.
 
@@ -133,16 +131,16 @@ Examples
 | prefix and suffix | 05${generated\_number}01 <br>358${generated\_number}2 |
 
 
-**Output settings**
+##### Output settings #####
 
 **Output template** defines the rules applied to create the sequence.
 
 Please use Maximum value for the length and Format for padding.
 
-        * Prefix and/or suffix can be included in the output template. (space characters are allowed)
-        * In case the prefix or suffix includes $ please use \$ for displaying $
-        * Use ${generated_number} for the sequential generated number
-        * To include the check digit (calculation defined by method and input template) use ${checksum}
+   * Prefix and/or suffix can be included in the output template. (space characters are allowed)
+   * In case the prefix or suffix includes $ please use \$ for displaying $
+   * Use ${generated_number} for the sequential generated number
+   * To include the check digit (calculation defined by method and input template) use ${checksum}
 
 **Examples**
 
@@ -169,23 +167,23 @@ Depending on the method selected check digits are calculated differently. In tho
 
 3. You can also filter on Enabled and Usage status. For more information on the filters, see the filter descriptions below.
 
-**Enabled**
+### Enabled ###
 
 To filter sequences by enabled, select one of the following:
 
-        * **All**. All enabled and disabled sequences.
-        * **True**. Enabled sequences, which are displayed for selection in the window of the App UI
-        * **False**. Disabled sequences, which are not displayed for selection in the window of the App UI.
+   * **All**. All enabled and disabled sequences.
+   * **True**. Enabled sequences, which are displayed for selection in the window of the App UI
+   * **False**. Disabled sequences, which are not displayed for selection in the window of the App UI.
 
-**Usage status**
+### Usage status ###
 
 To filter sequences by Usage status, select one of the following:
 
-        * **All**. All values are displayed
-        * **At maximum**. Maximum number is reached. Sequence is no longer available for generating numbers.
-        * **Below threshold**. Below warning threshold number, defined in sequence configuration for displaying warnings if desired.
-        * **Over threshold**. Between warning threshold number and maximum number, defined in sequence configuration if desired.
-        * **No maximum set**. No maximum number was set.
+   * **All**. All values are displayed
+   * **At maximum**. Maximum number is reached. Sequence is no longer available for generating numbers.
+   * **Below threshold**. Below warning threshold number, defined in sequence configuration for displaying warnings if desired.
+   * **Over threshold**. Between warning threshold number and maximum number, defined in sequence configuration if desired.
+   * **No maximum set**. No maximum number was set.
 
 
    * Results are listed in a table with pagination of 25. Use the buttons previous or next to display other pages. Number of results can be found at the right top corner of the result table.
@@ -194,21 +192,21 @@ To filter sequences by Usage status, select one of the following:
 
 ### Editing number generator sequences
 
-    1. Select number generator in drop-down menu **Generator**.
-    2. Search for the sequence and click on name of sequence in the left column of the table to open the detail view in the 4th pane.
-    3. To edit the sequence click **Edit** in **Actions** menu in the 4th pane
-    4. Window **Edit sequence** will be displayed
-    5. Edit sequence and **Save & close** or Cancel
+   1. Select number generator in drop-down menu **Generator**.
+   2. Search for the sequence and click on name of sequence in the left column of the table to open the detail view in the 4th pane.
+   3. To edit the sequence click **Edit** in **Actions** menu in the 4th pane
+   4. Window **Edit sequence** will be displayed
+   5. Edit sequence and **Save & close** or Cancel
 
 Apart from the code of the sequences you can edit all other content in the edit sequence window - please be aware that changing content in edit sequences has impact on numbers being generated from this sequence in the future (e.g. it could cause duplicates or different length)
 
 ### Disable number generator sequences
 
-    1. Select number generator in drop-down menu **Generator**.
-    2. Search for the sequence and click on name of sequence in the left column of the table to open the detail view in the 4th pane.
-    3. To edit this sequence click **Edit** in **Actions** menu in the 4th pane
-    4. To deactivate this sequence disable the checkbox **Enabled**
-    5. **Save & close** or Cancel
+   1. Select number generator in drop-down menu **Generator**.
+   2. Search for the sequence and click on name of sequence in the left column of the table to open the detail view in the 4th pane.
+   3. To edit this sequence click **Edit** in **Actions** menu in the 4th pane
+   4. To deactivate this sequence disable the checkbox **Enabled**
+   5. **Save & close** or Cancel
 
 Deactivated sequences are no longer selectable and usable for generating numbers in the App UI.
 
@@ -216,19 +214,19 @@ For enabling the sequence again select the checkbox Enabled. The sequence will b
 
 ### Deleting number generator sequences
 
-    1. Select number generator in drop-down menu **Generator**.
-    2. Search for the sequence and click on name of sequence in the left column of the table to open the detail view in the 4th pane.
-    3. To delete the sequence click **Delete** in **Actions** menu in the 4th pane
-    4. Click **Delete** in the window Delete sequence to delete the sequence permanently or Cancel
+   1. Select number generator in drop-down menu **Generator**.
+   2. Search for the sequence and click on name of sequence in the left column of the table to open the detail view in the 4th pane.
+   3. To delete the sequence click **Delete** in **Actions** menu in the 4th pane
+   4. Click **Delete** in the window Delete sequence to delete the sequence permanently or Cancel
 
 The sequence may be in use in one or more apps. If in doubt, consider disabling the sequence instead.
 
 
 
 ## Using Number generator
-## Settings > App > Number generator options
+### Settings > App > Number generator options
 
-**Permissions**
+#### Permissions ####
 
 In order to interact with Number generator options settings for Apps, a user needs to be assigned the following permissions:
 
@@ -242,9 +240,9 @@ In order to interact with Number generator options settings for Apps, a user nee
 
 In Settings > App > Number generator options three options are available via drop-down (existing radio buttons will be changed to drop-down)
 
-    * Off = Number generator off: number can be filled manually only.
-    * On, field editable = Number generator on, editable: number can be filled using the generator and be edited, or filled manually.
-    * On, field not editable = Number generator on, fixed: number can be filled using the generator only.
+   * Off = Number generator off: number can be filled manually only.
+   * On, field editable = Number generator on, editable: number can be filled using the generator and be edited, or filled manually.
+   * On, field not editable = Number generator on, fixed: number can be filled using the generator only.
 
 Default setting is Off
 
@@ -266,12 +264,12 @@ Number generator for Accession number and Call number must be enabled via "On, f
 
 ## Using Number generators within Apps
 
-**Preconditions for using the Number generators within Apps**
+### Preconditions for using the Number generators within Apps ###
 
-    * Number generator is enabled in Settings > "App" > Number generator options
-         * On, field editable = Number generator on, editable: number can be filled using the generator and be edited, or filled manually.
-         * On, field not editable = Number generator on, fixed: number can be filled using the generator only.
-    * User has permissions either
+   * Number generator is enabled in Settings > "App" > Number generator options
+      * On, field editable = Number generator on, editable: number can be filled using the generator and be edited, or filled manually.
+      * On, field not editable = Number generator on, fixed: number can be filled using the generator only.
+   * User has permissions either
 
 | Capability Set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ----- | -------- | ------ | ---------- |
@@ -280,56 +278,56 @@ Number generator for Accession number and Call number must be enabled via "On, f
 | UI-Service-Interaction NumberGenerator | Data | app-platform-complete | manage | This permission/capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
 
 
-    * User has permissions to create and/or edit records (e.g. Inventory, Receiving, Organizations, Users, Serials Management, Open Access) in FOLIO depending on tasks
-    * In Settings > Service interaction > Number generator sequences > Generator
-        * at least one sequence is predefined for every number generator which is enabled
+   * User has permissions to create and/or edit records (e.g. Inventory, Receiving, Organizations, Users, Serials Management, Open Access) in FOLIO depending on tasks
+   * In Settings > Service interaction > Number generator sequences > Generator
+      * at least one sequence is predefined for every number generator which is enabled
 
 
 
 #### Using Number generators
 
-**Inventory / Organizations**
+##### Inventory / Organizations #####
 
 If the number generator is enabled and user has the applicable permissions then a button is displayed next to the field (e.g. user barcode, vendor code, item barcode, accession number, call number).
 
-    1. Click **Generate "field name"**
-    2. Window "field name" generator is displayed
-    3. Search by Name or Code of the sequences in the window "field name" generator
-    4. Optional: Use check box "Include sequences which have reached their maximum value" for displaying those sequences for information. Sequences which have reached their maximum value cannot be generated from.
-    5. Optional: Use check box "Exact code match" for searching the exact code
-    6. Select sequence
-    7. Click **Generate "field name"** to close window and generate number (or Cancel)
-    8. Generated number of the selected sequence is displayed in the field
-    9. After filling in all data save the entire record by clicking "Save & close" otherwise the generated number is not saved and a gap has been created.
+   1. Click **Generate "field name"**
+   2. Window "field name" generator is displayed
+   3. Search by Name or Code of the sequences in the window "field name" generator
+   4. Optional: Use check box "Include sequences which have reached their maximum value" for displaying those sequences for information. Sequences which have reached their maximum value cannot be generated from.
+   5. Optional: Use check box "Exact code match" for searching the exact code
+   6. Select sequence
+   7. Click **Generate "field name"** to close window and generate number (or Cancel)
+   8. Generated number of the selected sequence is displayed in the field
+   9. After filling in all data save the entire record by clicking "Save & close" otherwise the generated number is not saved and a gap has been created.
 
-**Receiving**
+##### Receiving #####
 
 If the number generator is enabled, user has the applicable permissions and an item record is available then the number generator icon is displayed
 
-    * Next at the right side of the item details in the Add/Edit piece window
-    * In the Action column at the right side of the receive all table
+   * Next at the right side of the item details in the Add/Edit piece window
+   * In the Action column at the right side of the receive all table
 
-    1. Click icon **Generate numbers**
-    2. Window "Generate numbers" is displayed
-    3. Depending on settings in Settings > Orders > Number generator options up to three sequence search fields for Barcode, Accession number and/or Call number are displayed
-    4. Search by Name or Code of the sequences for each field you would like to generate a number
-    5. Optional: Use check box "Include sequences which have reached their maximum value" for displaying those sequences for information. Sequences which have reached their maximum value cannot be generated from.
-    6. Optional: Use check box "Exact code match" for searching the code with exact match
-    7. Select at least on sequence
-    8. Use x at the right side of the search fields if you would like to delete your selection
-    9. Click Generate numbers to close window and generate number (or Cancel)
-    10. Next value of the sequence is displayed in the field
-    11. After filling in all data save the entire record by clicking "Save & close" or Receive otherwise the generated numbers are not saved and gaps have been created.
+   1. Click icon **Generate numbers**
+   2. Window "Generate numbers" is displayed
+   3. Depending on settings in Settings > Orders > Number generator options up to three sequence search fields for Barcode, Accession number and/or Call number are displayed
+   4. Search by Name or Code of the sequences for each field you would like to generate a number
+   5. Optional: Use check box "Include sequences which have reached their maximum value" for displaying those sequences for information. Sequences which have reached their maximum value cannot be generated from.
+   6. Optional: Use check box "Exact code match" for searching the code with exact match
+   7. Select at least on sequence
+   8. Use x at the right side of the search fields if you would like to delete your selection
+   9. Click Generate numbers to close window and generate number (or Cancel)
+   10. Next value of the sequence is displayed in the field
+   11. After filling in all data save the entire record by clicking "Save & close" or Receive otherwise the generated numbers are not saved and gaps have been created.
 
 In case that **Use the same generated number for Accession number and call number** is activated in Settings (Inventory and/or Receiving)
 
-    * In Inventory the button "Generate accession and call numbers" is displayed
-    * In Receiving the selection for "Accession and call number sequence" is displayed in the window Generate numbers
+   * In Inventory the button "Generate accession and call numbers" is displayed
+   * In Receiving the selection for "Accession and call number sequence" is displayed in the window Generate numbers
 
 Accession number sequences apply and the same generated number is inserted into the accession number and the main call number field on item level.
 
 
-**Open Access and Serial management**
+##### Open Access and Serial management #####
 
 For the Request number in Open Access App and for the Publication pattern ID in Serials Management App numbers will be automatically assigned defined by one sequence.
 
