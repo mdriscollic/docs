@@ -55,7 +55,7 @@ The capabilities listed below allow you to interact with the Inventory app and d
 |**Inventory: View, create, edit, delete items.** | **UI-Inventory Item** | data | delete | This allows the user to delete item records. The user can also view and edit items.|
 |**Inventory: View, create, edit, mark missing items.** | **UI-Inventory Item Mark-As-Missing** | procedural | execute | This allows the user to update an item record's Item status to Missing. The user can also view and edit items.|
 
-Note: Some actions in Inventory require permissions/capabilities in other apps. For example, **View source** requires permissions in quickMARC.
+Note: Some actions in Inventory require capabilities in other apps.
 
 ## Keyboard shortcuts
 
@@ -72,8 +72,8 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 The Administrative data section contains technical information about the instance record.
 
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
--   **Staff suppress.** If you want to suppress the record, and its associated holdings and item records, from staff who do not have the proper permissions to view the record, select the **Staff suppress** checkbox. If selected, staff need to have the permission Inventory: Enable staff suppress facet in order to view the record.
--   **Previously held.** If the resource was previously held by your library, select the **Previously held** checkbox. A library may adopt a policy to select the Previously held checkbox in the case where the library no longer owns the bibliographic resource described in the instance record, but for administrative reasons wishes to retain the record in the inventory and indicate previous ownership. For example, permission for library users to view or use items in a consortial collection may require proof that the library at some time owned those items.
+-   **Staff suppress.** If you want to suppress the record, and its associated holdings and item records, from staff who do not have the proper capabilities to view the record, select the **Staff suppress** checkbox. If selected, staff need to have the capability UI-Inventory Instance Staff-Suppressed-Records in order to view the record.
+-   **Previously held.** If the resource was previously held by your library, select the **Previously held** checkbox. A library may adopt a policy to select the Previously held checkbox in the case where the library no longer owns the bibliographic resource described in the instance record, but for administrative reasons wishes to retain the record in the inventory and indicate previous ownership. For example, the capability for library users to view or use items in a consortial collection may require proof that the library at some time owned those items.
 -   **Set for deletion.** If you want to mark a record as set for deletion, select the **Set for deletion** checkbox. You may also use the **Set record for deletion** action in the Instance record. See [Deleting an instance record](#deleting-an-instance-record)
 -   **Instance HRID.** The human readable identifier, also called eye readable ID, a system-assigned sequential ID.
 -   **Source (required).** Format of the instance source record, if a source record exists. For example, FOLIO if it's a record created in Inventory, MARC if it's a MARC record created in MARCcat, or EPKB if it's a record coming from eHoldings. The system assigns the source automatically.
@@ -284,7 +284,7 @@ Note: Adding a note is optional, but if you click **Add note**, you must enter a
 1.  Click **Add note**.
 2.  Select the **Note type** from the drop-down list. You can configure the values that appear in the drop-down list in [Settings \> Inventory \> Instance note types](../../settings/settings_inventory/settings_inventory/#settings--inventory--instance-note-types).
 3.  Enter a **Note** in the box.
-4.  Optional: If you only want the note to be visible to staff with the permission Inventory: View instance records being suppressed for staff, select the **Staff only** checkbox.
+4.  Optional: If you only want the note to be visible to staff with the capability UI-Inventory Instance Staff-Suppressed-Records, select the **Staff only** checkbox.
 5.  Repeat steps 1-4 as needed. The note is saved once you save the instance.
 
 #### Deleting a note
@@ -443,7 +443,7 @@ A check in or check out note is required by default.
 
 1.  Select the **Note type** from the drop-down list. Configured in [Settings \> Inventory \> Item note types](../../settings/settings_inventory/settings_inventory/#settings--inventory--item-note-types).
 2.  Enter a **Note** in the box.
-3.  Optional: If you want the note to be visible to only staff with the proper permissions to view the note, select the **Staff only** checkbox.
+3.  Optional: If you want the note to be visible to only staff with the proper capabilities to view the note, select the **Staff only** checkbox.
 4.  To add another note, click **Add check in / check out note** and repeat steps 1-3. The note is saved once you save the fast add record.
 
 #### Removing check in / check out notes
@@ -590,7 +590,7 @@ The Holdings notes section contains any notes about the holdings.
 1.  Click **Add note**.
 2.  Select the **Note type** from the drop-down list. Configured in [Settings \> Inventory \> Holdings note types](../../settings/settings_inventory/settings_inventory/#settings--inventory--holdings-note-types).
 3.  Enter a **Note** in the box.
-4.  Optional: If you want the note to be visible to only staff with the proper permissions to view the note, select the **Staff only** checkbox.
+4.  Optional: If you want the note to be visible to only staff with the proper capabilities to view the note, select the **Staff only** checkbox.
 5.  Repeat steps 1-4 as needed. The note is saved once you save the instance.
 
 ##### Removing a note
@@ -735,7 +735,7 @@ The Item notes section contains any notes about the item.
 1.  Click **Add note**.
 2.  Select the **Note type** from the drop-down list. Configured in [Settings \> Inventory \> Item note types](../../settings/settings_inventory/settings_inventory/#settings--inventory--item-note-types).
 3.  Enter a **Note** in the box.
-4.  Optional: If you want the note to be visible to only staff with the proper permissions to view the note, select the **Staff only** checkbox.
+4.  Optional: If you want the note to be visible to only staff with the proper capabilities to view the note, select the **Staff only** checkbox.
 5.  Repeat steps 1-4 as needed. The note is saved once you save the item.
 
 #### Deleting a note
@@ -758,7 +758,7 @@ A check in or check out note is required by default.
 
 1.  Select the **Note type** from the drop-down list. Configured in [Settings \> Inventory \> Item note types](../../settings/settings_inventory/settings_inventory/#settings--inventory--item-note-types).
 2.  Enter a **Note** in the box.
-3.  Optional: If you want the note to be visible to only staff with the proper permissions to view the note, select the **Staff only** checkbox.
+3.  Optional: If you want the note to be visible to only staff with the proper capabilities to view the note, select the **Staff only** checkbox.
 4.  To add another note, click **Add check in / check out note** and repeat steps 1-3. The note is saved once you save the fast add record.
 
 #### Removing check in / check out notes
@@ -1111,7 +1111,7 @@ To search for instances by whether or not they are suppressed to staff, in the *
 -   **Yes.** The instance is suppressed to staff.
 -   **No.** The instance is not suppressed to staff.
 
-Note: To view this facet, staff need to have the permission Inventory: Enable staff suppress facet. Inventory search defaults **Staff suppress** to **No**. 
+Note: To view this facet, staff need to have the capability UI-Inventory Instance Staff-Suppressed-Records. Inventory search defaults **Staff suppress** to **No**. 
 
 ### Suppress from discovery
 
@@ -1272,7 +1272,7 @@ Each card will display:
 
 -   A hyperlink saying either "Current version" or "Changed" 
 -   Date/time of the changes made
--   The user name that made the change (For ECS environments, users need to have permissions to view users in the central tenant in order to the names from other tenants on shared records.)
+-   The user name that made the change (For ECS environments, users need to have the capability to view users in the central tenant in order to the names from other tenants on shared records.)
 -   The field that changed as well as the action taken (Added, Edited, Removed)
 
 For a detailed view of the changes, click on the hyperlink. A box will appear that includes the following details:
