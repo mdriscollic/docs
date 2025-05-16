@@ -75,6 +75,18 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
+   <td>Capabilities
+   </td>
+   <td>Define the ability to perform an action on a Folio resource. See also <a href="https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka">Roles Management with Eureka</a>
+   </td>
+  </tr>
+  <tr>
+   <td>Capability Sets
+   </td>
+   <td>Comprised of capabilities. <a href="https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka">Roles Management with Eureka</a>
+   </td>
+  </tr>
+  <tr>
     <td>Central tenant    
     </td>
     <td>The administrative tenant when Enhanced Consortial Support (ECS) is enabled. Also referred to as a <em>primary tenant</em>.</td>
@@ -119,6 +131,12 @@ tags: ["parenttopic"]
    </td>
    <td>A standardized way of presenting the call number that may be harder for a human being to read, but easier for a machine to process.
    </td>
+  </tr>
+  <tr>
+	<td>Eureka
+	<td>Platform centralizes management of application and cloud security tools. 
+	</td>
+	</td>
   </tr>
   <tr>
    <td>Expense class
@@ -495,6 +513,12 @@ tags: ["parenttopic"]
   <tr>
     <td>RTAC</td>
     <td>RTAC stands for <b>Real Time Availability Checker</b>. It is a FOLIO module that libraries can use to provide holdings and item availability in a discovery layer. RTAC is configured by your FOLIO systems administrator and does not appear in the FOLIO user interface.</td>
+  </tr>
+  <tr>
+	<td>Roles
+	<td>Comprised of capabilities and/or capabilitySets.
+	</td>
+	</td>
   </tr>
   <tr>
    <td>Service point
