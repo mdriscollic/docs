@@ -134,7 +134,7 @@ tags: ["parenttopic"]
   </tr>
   <tr>
 	<td>Eureka
-	<td>Platform centralizes management of application and cloud security tools. 
+	<td>The platform centralizes management of application and cloud security tools. 
 	</td>
 	</td>
   </tr>
