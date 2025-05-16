@@ -1,7 +1,7 @@
 ---
 title: "eUsage"
 linkTitle: "eUsage"
-date: 2025-05-07
+date: 2025-05-09
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -19,12 +19,16 @@ The app provides automatic harvesting of COUNTER standard usage reports via SUSH
 * **Usage data provider.** The agent that provides usage statistics for a set of electronic resources. Most likely, this is a vendor or a platform provider. The usage data provider record is the basic entity in eUsage used to manage all associated reports and harvesting processes.
 
 
-## **Permissions**
+## Permissions
 
-The permissions listed below allow you to interact with the eUsage app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the eUsage app or any related information.
+The permissions allow you to control what you can do within the app. 
 
-The following are all the eUsage permissions:
 
+### OKAPI
+
+You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the eUsage app or any related information.
+
+Permissions:
 
 * **eUsage: All permissions.** Ths permission includes all other eUsage permissions.
 * **eUsage: Can view usage data providers and view/download usage reports.** This is the eUsage read permission which allows the user to view usage data provider records and view and download the associated usage reports.
@@ -34,6 +38,168 @@ The following are all the eUsage permissions:
 * **eUsage: Can start harvesting for a single provider.** This permission allows the user to start the harvester service for one UDP.
 * **eUsage: Can delete usage reports.** This permission allows the user to delete COUNTER and non-COUNTER usage reports.
 * **Settings (eUsage): Can view and edit settings.** This permission allows the user to view and edit the eUsage settings. It also includes starting the harvester for all usage data providers in the tenant.
+
+
+### EUREKA
+
+You can assign permissions to users in the Users app via an user role. If none user role is assigned to a user, they are unable to see the eUsage app or any related information.
+
+
+#### Define user roles for eUsage
+
+User roles can be defined under [Settings \> Authorization roles](../../settings/settings_authorization-roles/settings_authorization-roles). You can define different roles for your environment based on your specific requirements.
+
+The following tables gives you an overview of the setting options for eUsage within the user role.
+
+
+#### Capability sets
+
+
+##### Capability sets for eUsage
+
+|Type      |Resource                           |Action   |Description                                                        |
+|:---------|:----------------------------------|:--------|:------------------------------------------------------------------|
+|Data      |Ermusageharvester                  | Manage  | All permissions for the mod-erm-harvester module                  |
+|Data      |Eusage                             | Manage  | All permissions for the mod-erm-usage module                      |
+|Data      |UI-Erm-Usage                       | View    | UI: Can view usage data providers and view/download usage reports |
+|Data      |UI-Erm-Usage                       | Manage  | UI: All permissions of eUsage module                              |
+|Data      |UI-Erm-Usage GeneralSettings       | Manage  | UI: Can view and edit all settings                                |
+|Data      |UI-Erm-Usage Harvester Jobs        | View    | UI: Can view harvesting jobs                                      |
+|Data      |UI-Erm-Usage Reports               | Create  | UI: Can upload usage reports                                      |
+|Data      |UI-Erm-Usage Reports               | Delete  | UI: Can delete usage reports                                      |
+|Data      |UI-Erm-Usage Udp                   | Edit    | UI: Can edit usage data providers                                 |
+|Data      |UI-Erm-Usage Udp                   | Create  | UI: Can create usage data providers                               |
+|Data      |UI-Erm-Usage Udp                   | Delete  | UI: Can delete usage data providers                               |
+|Data      |UI-Erm-Usage Udp Create-Edit       | Manage  | UI: Can create and edit usage data providers                      |
+|Settings  |Module Erm-Usage Enabled           | View    | UI: eUsage module is enabled                                      |
+|Settings  |Settings Erm-Usage Enabled         | View    | UI: Settings (eUsage): Display list of settings pages             |
+|Procedural|UI-Erm-Usage Harvester Start Single| Execute | UI: Can start harvesting for a single provider                    |
+
+
+##### Capability sets for eUsage Reports (Plugin)
+
+|Type      |Resource                           |Action   |Description                                                                                     |
+|:---------|:----------------------------------|:--------|:-----------------------------------------------------------------------------------------------|
+|Data      |Eusage-Reports                     | View    | All read only permissions                                                                      |
+|Data      |Eusage-Reports                     | Manage  | All permissions                                                                                |
+|Data      |Plugin-Eusage-Reports Charts       | View    | eUsage reports: charts may be viewed                                                           |
+|Data      |Plugin-Eusage-Reports Matches      | Edit    | eUsage reports: title matches may be viewed and edited                                         |
+|Data      |UI-Erm-Comparisons Jobs            | View    | A user with this permission can search and view  </br>ERM Comparison "jobs" which are used to compare </br>lists of resources in the Agreements local knowledgebase. </br> This includes the permission to see and access the </br>ERM Comparisons app in the Folio interface.|
+|Data      |UI-Erm-Comparisons Jobs            | Edit    | Grants all permissions in "ERM comparisons: View jobs" </br>plus the ability to create new jobs (i.e. compare </br>two lists of resources in the Agreements local </br>knowledgebase)                                                                                            |
+|Data      |UI-Erm-Comparisons Jobs            | Delete  | Grants all permissions in "ERM comparisons: View jobs" </br>plus the ability to delete jobs that have already run|
+|Settings  |Settings Erm-Comparisons Enabled   | View    | Settings (ERM comparisons): display list of settings pages                                     |
+
+Please note: 
+* To activate the plugin in Agreements in the UI, you must set the **Plugin-Eusage-Reports Charts** capability set.
+* To activate the comparison module in eUsage in the UI, you must set the **UI-Erm-Comparisons Jobs** capability set.
+
+
+##### Mapping permission sets (OKAPI) to capability sets (EUREKA)
+
+|Permission                                                            | Capability set type | Capability set                      | Action  |
+|:---------------------------------------------------------------------|:--------------------|:------------------------------------|:--------|
+|eUsage: All permissions                                               | Data                | UI-Erm-Usage                        | Manage  |
+|eUsage: Can view usage data providers and view/download usage reports | Data                | UI-Erm-Usage                        | View    | 
+|eUsage: Can create and edit usage data providers                      | Data                | UI-Erm-Usage Udp Create-Edit        | Manage  |
+|eUsage: Can delete usage data providers                               | Data                | UI-Erm-Usage Udp                    | Delete  |
+|eUsage: Can upload usage reports                                      | Data                | UI-Erm-Usage Reports                | Create  |
+|eUsage: Can delete usage reports                                      | Data                | UI-Erm-Usage Reports                | Delete  |
+|eUsage: Can start harvesting for a single provider                    | Procedural          | UI-Erm-Usage Harvester Start Single | Execute |
+|Settings (eUsage): Can view and edit settings                         | Settings            | UI-Erm-Usage GeneralSettings        | Manage  |
+
+
+#### Capabilities
+
+
+##### Capabilities for eUsage
+
+|Type      |Resource                                  |Action   |Description                                                            |
+|:---------|:-----------------------------------------|:--------|:----------------------------------------------------------------------|
+|Data      |Aggregatorsettings Collection             | View    | Get a collection of aggregator setting                                |
+|Data      |Aggregatorsettings Exportcredentials Item | View    | Export credentials for an aggregator setting                          |
+|Data      |Aggregatorsettings Item                   | View    | Get a single aggregator setting                                       |
+|Data      |Aggregatorsettings Item                   | Edit    | Edit an aggregator setting                                            |
+|Data      |Aggregatorsettings Item                   | Create  | Create a new aggregator setting                                       |
+|Data      |Aggregatorsettings Item                   | Delete  | Delete an aggregator setting                                          |
+|Data      |Counterreports Collection                 | View    | Get a collection of counter reports                                   |
+|Data      |Counterreports Collection                 | Delete  | Delete a collection of counter reports                                |
+|Data      |Counterreports Errorcodes Collection      | View    | Get a collection of counter report error codes                        |
+|Data      |Counterreports Item                       | View    | Get a single counter report                                           |
+|Data      |Counterreports Item                       | Edit    | Edit a counter report                                                 |
+|Data      |Counterreports Item                       | Create  | Create a new counter report                                           |
+|Data      |Counterreports Item                       | Delete  | Delete a counter report                                               |
+|Data      |Counterreports Reportreleases Collection  | View    | Get a counter report report releases collection                       |
+|Data      |Counterreports Reporttypes Collection     | View    | Get a counter report report types collection                          |
+|Data      |Counterreports Sorted Collection          | View    | Get a sorted counter report collection for a provider                 |
+|Data      |Counterreports Upload Item                | Create  | Upload a counter report                                               |
+|Data      |Customreports Collection                  | View    | Get a collection of custom reports                                    |
+|Data      |Customreports Item                        | View    | Get a single custom report                                            |
+|Data      |Customreports Item                        | Edit    | Edit a custom report                                                  |
+|Data      |Customreports Item                        | Create  | Create a new custom report                                            |
+|Data      |Customreports Item                        | Delete  | Delete a custom report                                                |
+|Data      |Erm-Usage Files Item                      | View    | Get a single file                                                     |
+|Data      |Erm-Usage Files Item                      | Create  | Create a single file                                                  |
+|Data      |Erm-Usage Files Item                      | Delete  | Delete a single file                                                  |
+|Data      |Ermusageharvester                         | Manage  | All permissions for the mod-erm-harvester module                      |
+|Data      |Ermusageharvester Impl                    | View    | Read available harvester implementations                              |
+|Data      |Ermusageharvester Jobs                    | View    | Get harvester jobs                                                    |
+|Data      |Ermusageharvester Periodic                | View    | Read harvester periodic setting                                       |
+|Data      |Ermusageharvester Periodic                | Delete  | Delete harvester periodic setting                                     |
+|Data      |Ermusageharvester Start-All               | View    | Start harvesting for all providers                                    |
+|Data      |Ermusageharvester Start-Single            | View    | Start harvesting for a single provider                                |
+|Data      |Eusage                                    | Manage  | All permissions for the mod-erm-usage module                          |
+|Data      |UI-Erm-Usage                              | View    | eUsage: Can view usage data providers and view/download usage reports |
+|Data      |UI-Erm-Usage                              | Manage  | eUsage: All permissions                                               |
+|Data      |UI-Erm-Usage GeneralSettings              | Manage  | Settings (eUsage): Can view and edit all settings                     |
+|Data      |UI-Erm-Usage Harvester Jobs               | View    | eUsage: Can view harvesting jobs                                      |
+|Data      |UI-Erm-Usage Reports                      | Create  | eUsage: Can upload usage reports                                      |
+|Data      |UI-Erm-Usage Reports                      | Delete  | eUsage: Can delete usage reports                                      |
+|Data      |UI-Erm-Usage Udp                          | Edit    | eUsage: Can edit usage data providers                                 |
+|Data      |UI-Erm-Usage Udp                          | Create  | eUsage: Can create usage data providers                               |
+|Data      |UI-Erm-Usage Udp                          | Delete  | eUsage: Can delete usage data providers                               |
+|Data      |UI-Erm-Usage Udp Create-Edit              | Manage  | eUsage: Can create and edit usage data providers                      |
+|Data      |Usagedataproviders Collection             | View    | Get a collection of usage data providers                              |
+|Data      |Usagedataproviders Item                   | View    | Get a single usage data provider                                      |
+|Data      |Usagedataproviders Item                   | Edit    | Edit an usage data provider                                           |
+|Data      |Usagedataproviders Item                   | Create  | Create a new usage data provider                                      |
+|Data      |Usagedataproviders Item                   | Delete  | Delete an usage data provider                                         |
+|Settings  |Module Erm-Usage Enabled                  | View    | UI: eUsage module is enabled                                          |
+|Settings  |Settings Erm-Usage Enabled                | View    | Settings (eUsage): Display list of settings pages                     |
+|Procedural|Counterreports Download Item Get          | Execute | Download a counter report                                             |
+|Procedural|Counterreports Export Collection Get      | Execute | Export a collection of counter reports                                |
+|Procedural|Counterreports Export Item Get            | Execute | Export a counter report                                               |
+|Procedural|Ermusageharvester Jobs Purge-Finished     | Execute | Purge finished harvester jobs                                         |
+|Procedural|Ermusageharvester Jobs Purge-Stale        | Execute | Purge stale harvester jobs                                            |
+|Procedural|Ermusageharvester Periodic                | Execute | Save harvester periodic setting                                       |
+|Procedural|UI-Erm-Usage Harvester Start Single       | Execute | eUsage: Can start harvesting for a single provider                    |
+
+
+##### Capabilities for eUsage Reports (Plugin)
+
+|Type      |Resource                                  |Action   |Description                                             |
+|:---------|:-----------------------------------------|:--------|:-------------------------------------------------------|
+|Data      |Eusage-Reports                            | View    | All read only permissions                              |
+|Data      |Eusage-Reports                            | Manage  | All permissions                                        |
+|Data      |Eusage-Reports-Report-Cost-Per-Use        | View    | Get eUsage report for cost per use                     |
+|Data      |Eusage-Reports-Report-Data Collection     | View    | Get report data                                        |
+|Data      |Eusage-Reports-Report-Packages Collection | View    | Get report packages                                    |
+|Data      |Eusage-Reports-Report-Reqs-By-Date-Of-Use | View    | Get eUsage report for requests by date of use          |
+|Data      |Eusage-Reports-Report-Reqs-By-Pub-Year    | View    | Get eUsage report for requests by publication year     |
+|Data      |Eusage-Reports-Report-Status              | View    | Get eUsage report metadata (like lastUpdated)          |
+|Data      |Eusage-Reports-Report-Titles Collection   | View    | Get Counter report titles                              |
+|Data      |Eusage-Reports-Report-Use-Over-Time       | View    | Get eUsage report for use over time                    |
+|Data      |Eusage-Reports-Title-Data Collection      | View    | Get title data                                         |
+|Data      |Plugin-Eusage-Reports Charts              | View    | eUsage reports: charts may be viewed                   |
+|Data      |Plugin-Eusage-Reports Matches             | Edit    | eUsage reports: title matches may be viewed and edited |
+|Data      |UI-Erm-Comparisons Jobs                   | View    | A user with this permission can search and view  </br>ERM Comparison "jobs" which are used to compare </br>lists of resources in the Agreements local knowledgebase. </br> This includes the permission to see and access the </br>ERM Comparisons app in the Folio interface.|
+|Data      |UI-Erm-Comparisons Jobs                   | Edit    | Grants all permissions in "ERM comparisons: View jobs" </br>plus the ability to create new jobs (i.e. compare </br>two lists of resources in the Agreements local </br>knowledgebase)|
+|Data      |UI-Erm-Comparisons Jobs                   | Delete  | Grants all permissions in "ERM comparisons: View jobs" </br>plus the ability to delete jobs that have already run|
+|Settings  |Module Erm-Comparisons Enabled            | View    | UI: ui-erm-comparisons module is enabled               |
+|Settings  |Module Ui-Plugin-Eusage-Reports Enabled   | View    | UI: eusage-reports plugin is enabled                   |
+|Settings  |Settings Erm-Comparisons Enabled          | View    | Settings (ERM comparisons): display list of settings pages|
+|Procedural|Eusage-Reports-Report-Data-From-Agreement | Execute | Parse agreement lines and populate report data         |
+|Procedural|Eusage-Reports-Report-Titles Collection   | Execute | Post Counter report titles                             |
+|Procedural|Eusage-Reports-Report-Titles-From-Counter | Execute | Parse counter reports and return them                  |
 
 
 ## Creating a usage data provider
