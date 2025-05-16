@@ -32,7 +32,7 @@ Central orders must originate in the Central tenant affiliation. Creating a cent
 1. Open the Orders app.
 2. Create a new order record. See [Creating an order](../../orders/#creating-an-order) for instructions.
 3. Add a POL. See [Adding an order line to an order](../../orders/#adding-an-order-line-to-an-order) for instructions. **Please note:** Central orders associated with an instance record may only be associated with a shared instance record.
-4. In the **Location** accordion, select an **Affiliation**. A user will only see the affiliations for which they have associated permissions.
+4. In the **Location** accordion, select an **Affiliation**. A user will only see the affiliations for which they have associated capabilities.
 5. In the **Select holdings** dropdown, select a pre-existing holdings record to associate the quantity with, or use the **Create new holdings for location** link to lookup a location to which this quantity will be associated. **Please note:** The **Select locations** modal will be pre-limited to the locations within the selected affiliation.
 6. Enter the appropriate quantity information.
 7. Once all required and desired information is entered, **Save & close**.

@@ -621,7 +621,7 @@ Note: This section of the **Add piece** modal becomes active as soon as the **Cr
 *   **Item status.** The current status of the associated item record. Expected pieces typically have a status of 'On order', which updated to 'In process' once the piece is received.
 *   **Request.** Displays a count of requests for the item, if applicable.
 
-Please note: if your institution has [enabled the number generator for the Receiving app](../../settings/settings_orders/settings_orders/#settings--orders--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the values for **Barcode**, **Call number**, and/or **Accession number**. For more information, see [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction).
+Please note: if your institution has [enabled the number generator for the Receiving app](../../settings/settings_orders/settings_orders/#settings--orders--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the values for **Barcode**, **Call number**, and/or **Accession number**. For more information, see [Using Number Generators Within Apps](../../settings/settings_service_interaction/settings_service_interaction/#receiving).
 
 
 ## Editing an expected or received piece

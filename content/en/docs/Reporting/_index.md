@@ -14,7 +14,7 @@ Some FOLIO apps include functionality that allows the user to download data as a
 
 The basic flow of data from FOLIO to Metadb is described in the figure below. Metadb extracts data from the database used by FOLIO apps. From Metadb, data flows into two types of queries: derived tables (which simplify the FOLIO data and save the results back into Metadb) and report queries (which meet specific needs of report users). These queries are shared via the [FOLIO Analytics query repository](folio-analytics) and also form the backbone of [ad hoc querying](folio-analytics/#ad-hoc-querying-using-metadb-tables).
 
-![The Metadb software extracts data from the FOLIO database and loads into its own Metadb database. The FOLIO Analytics repository stores derived table queries, which add derived tables to the Metadb database, and report queries, which build reports for reporting end users. The Metadb database can also be used to store non-FOLIO data in custom tables.](/img/dataflow.png)
+![The Metadb software extracts data from the FOLIO database and loads into its own Metadb database. The FOLIO Analytics repository stores derived table queries, which add derived tables to the Metadb database, and report queries, which build reports for reporting end users. The Metadb database can also be used to store non-FOLIO data in custom tables.](/img/FOLIOReportingDataflow.png)
 
 
 ## Features of Metadb

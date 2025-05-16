@@ -8,17 +8,20 @@ tags: ["parenttopic"]
 
 The Reporting app provides a FOLIO interface for interacting with a Metadb database. There are two section to the app, the **Query builder** and **Saved queries**. The **Query builder** allows you to build a query with the option to save it for later use. **Saved queries** allows you to load a previous query into the **Query builder** to start editing or run.
 
-### Permissions
-The permissions listed below allow you to set user permissions to interact with the Reporting app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Reporting app or any related information. The “Reporting: all permissions” settings for the Reporting App are either all enabled or all disabled when you are assigning them to a user. 
+## Permissions and Capabilities
 
-The following are all the Reporting app permissions:
-.
-* **Reporting: all permissions** –  This permission allows the user to see and use the Reporting app.
+The permissions/capabilities listed below allow you to set user permissions to interact with the Reporting app. You can assign permissions to users in the Users app. If none of these permissions/capabilities are assigned to a user, they are unable to see the Reporting app or any related information. The “Reporting: all permissions” or “UI-Ldp” permission/capability for the Reporting App are either all enabled or all disabled when you are assigning them to a user. 
 
-* **Settings (Reporting): Can modify templated-query repos configuration**
-* **Settings (Reporting): Can modify reporting database connection details**
-* **Settings (Reporting): Can modify default record limits**
-* **Settings (Reporting): Can select which tables are available to search**
+| Permission Display Name (OKAPI) | Resource (EUREKA) | Type | Action | Description |
+| :-----: | :-----: | :-----: | :-----: | :-----: |
+| *Reporting: all permissions* | *UI-Ldp* | Data | Manage | This permission allows the user to see and use the Reporting app. |
+| *Settings (Reporting): browse and load Reporting saved queries* | *Ui-Ldp Saved Queries* | Settings | View | This capability allows a user to browse and load queries that they or other users have saved using the Reporting app’s |
+| *Settings (Reporting): Can modify default record limits* | *UI-Ldp Settings Record-Limits* | Settings | View | This capability allows a user to set the amount of records/rows that can be returned and exported to a CSV (can be different values) when running a query in the Reporting app. |
+| *Settings (Reporting): Can modify reporting database connection details* | *UI-Ldp Settings Dbinfo* | Settings | View | This capability allows a user to configure the Reporting app’s connection to an LDP/Metadb instance including the username and password used to query the LDP/Metadb reporting database. |
+| *Settings (Reporting): Can modify templated-query repos configuration* | *UI-Ldp Settings Tqrepos* | Settings | View | This capability allows a user to create new or modify existing connections to GitHub repositories for the purpose of accessing parameterized SQL queries via the Reporting app. |
+| *Settings (Reporting): Can select which tables are available to search* | *UI-Ldp Settings Table-Availability* | Settings | View | This capability allows a user to select/remove which tables will appear in the “Table” dropdown while using the Reporting app’s “Build query” feature. |
+| *Settings (Reporting): create and update Reporting saved queries* | *Mod-Settings Global Write Ui-Ldp Queries* | Settings | Manage | This capability allows a user to save queries they’ve created using the Reporting app’s “Build query” feature as well as edit and overwrite existing queries (whether they are the report’s creator or not). |
+
 
 ### Schema
 Think of schema as the “buckets” in which data tables live. The schema drop-down menu allows you to select one schema at a time to use in your query. Three types of schemas are available: public, folio_reporting, and local. For a fuller explanation of schemas and examples of some defaults included see [Metadb - Using schemas](../metadb/#using-schemas).
