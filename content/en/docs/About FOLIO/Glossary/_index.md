@@ -39,6 +39,10 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
+    <td>AuthUser</td>
+    <td>Refers to a user record in Keycloak. AuthUsers are managed by FOLIO. No direct interaction with Keyucloak is required. AuthUsers are a subset of Users, which include staff, patrons, administrators, etc. A user becomes an AuthUser if they are assigned credentials, roles, or capabilities. The keycloak user record is only needed for those who log in and use FOLIO. There's no need for Keycloak to know about patrons and others who are just "data" in the system.</td>
+  </tr>
+  <tr>
    <td>Availability
    </td>
    <td>The status of an item in terms of circulation (for example, available; recently returned). In FOLIO, "Item Status" displays availability.
@@ -75,6 +79,14 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
+    <td>Capabilities</td>
+    <td>Defines the ability to perform an action on a FOLIO resource, e.g. Edit (action) on Instances (resource). Capabilities are managed by the system; users and admins cannot create/remove capabilities, but are created as applications enabled by tenants. Capabilities maintain a reference to the permissions from which they were created; they also maintain a reference to the application which provides them.</td>
+  </tr>
+  <tr>
+    <td>Capability sets</td>
+    <td>Comprised of capabilities. Managed by the system, not nested, and maintains a reference both to the permission from which they were created and to the application which provides them.</td>
+  </tr>
+  <tr>
     <td>Central tenant    
     </td>
     <td>The administrative tenant when Enhanced Consortial Support (ECS) is enabled. Also referred to as a <em>primary tenant</em>.</td>
@@ -95,6 +107,10 @@ tags: ["parenttopic"]
    </td>
    <td>Create, Read, Update, Delete. The basic actions that can be taken on a record in a software system.
    </td>
+  </tr>
+  <tr>
+    <td>Default roles</td>
+    <td>Roles provided by the system, effectively reference data optionally loaded during tenant entitlement.</td>
   </tr>
   <tr>
    <td>Department
@@ -429,7 +445,7 @@ tags: ["parenttopic"]
   <tr>
    <td>Permission set
    </td>
-   <td>A group of permissions that allows a user to perform a specific set of tasks.
+   <td>A permission with one or more subpermissions, can be nested indefinitely. 
    </td>
   </tr>
   <tr>
@@ -450,6 +466,9 @@ tags: ["parenttopic"]
    <td>Purchase Order Line. A purchase order line contains one of the titles or packages being ordered by the library. Orders can contain multiple order lines.
    </td>
   </tr>
+  <tr>
+    <td>Policies</td>
+    <td>Provide greater control over who can do what, when, from where, etc. E.g. Policies could be created to only allow a user to perform check-in/check-out operations during normal business hours, from certain locations. Policies are associated with capabilities, and time-based policies are managed by administrators, not the system.</td>
   <tr>
    <td>Proxy
    </td>
@@ -479,6 +498,10 @@ tags: ["parenttopic"]
    </td>
    <td>The management of information about ordered materials that have arrived at a library by delivery from a vendor.  Also known as serials check-in and arriving.
    </td>
+  </tr>
+  <tr>
+    <td>Resource</td>
+    <td>Something in Folio which users can perform operations on, e.g. Orders, instances, etc.</td>
   </tr>
   <tr>
    <td>Resource type
