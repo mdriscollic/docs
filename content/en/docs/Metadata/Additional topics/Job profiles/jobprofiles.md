@@ -10,6 +10,8 @@ tags: ["subtopic"]
 
 Job profiles are assembled from several different types of sub-profiles. These components define a logical sequence of actions on incoming records. Job profile data must be in **MARC** or **EDIFACT** format. A job profile processes a MARC or EDIFACT data file by applying match, action, and field mapping sub-profiles in order.
 
+![Diagram of Job profile that contains one match profile linked to two action profiles.](./job_profiles.jpg)
+
 ## Example Job Profile Structures
 
 ### Overlay on an Instance and Create Attached Holdings and Item Records (Incoming MARC Record)
