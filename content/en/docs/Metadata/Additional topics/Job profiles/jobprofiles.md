@@ -92,31 +92,22 @@ Job profiles are assembled from several different types of sub-profiles. These c
 
 ## Creating a Job Profile
 
-> All sub-profiles must be created **before** creating a job profile.
+All sub-profiles must be created before creating a job profile. 
+_Guides for creating sub-profiles are forthcoming_
 
-1. **Create sub-profiles first**:
+**Steps to Create a Job Profile**:
 
-   * [Creating Match Profiles](#)
-   * [Creating Action Profiles](#)
-   * [Creating Field Mapping Profiles](#)
-
-2. **Steps to Create a Job Profile**:
-
-   * Open **Settings**
-   * Choose **Data Import** from the left-hand menu
-   * Click **Job profiles** in the Profiles pane
-   * Click **Actions** (top-right) → **+New Job Profile**
-   * Enter a **name** and **description**
-
-     * **TIP**: Use a naming convention (e.g., `ERM1`, `CAT1`) to identify job type
-     * **TIP**: Make descriptions detailed (e.g., "Matches on holdings HRID in 960\$f; updates holdings electronic access from 960\$c")
-
-3. **Add Sub-Profiles**:
-
-   * Click the **plus (+)** button under *Overview*
-   * Add the necessary sub-profiles
-   * Click **Save and close**
-
-> **NOTE:** While you can edit existing job profiles, you **cannot reorder sub-profiles**. Sub-profiles can only be added or removed.
+ 1. Open **Settings**
+ 2. Choose **Data Import** from the left-hand menu
+ 3. Click **Job profiles** in the Profiles pane
+ 4. Click **Actions** (top-right) → **+New Job Profile**
+ 5. Enter a **name** and **description**
+    **TIP**: Use a naming convention (e.g., `ERM1`, `CAT1`) to identify job type
+    **TIP**: Make descriptions detailed (e.g., "Matches on holdings HRID in 960\$f; updates holdings electronic access from 960\$c")
+ 6. Click the **plus** button under **Overview**
+ 7. Add the necessary sub-profiles
+ 8. Click **Save and close**
+  
+**NOTE:** You can edit existing job profiles, but you **cannot reorder sub-profiles**. Sub-profiles can only be added or removed.
 
 ---
