@@ -10,8 +10,6 @@ tags: ["subtopic"]
 
 Job profiles are assembled from several different types of sub-profiles. These components define a logical sequence of actions on incoming records. Job profile data must be in **MARC** or **EDIFACT** format. A job profile processes a MARC or EDIFACT data file by applying match, action, and field mapping sub-profiles in order.
 
----
-
 ## Example Job Profile Structures
 
 ### Overlay on an Instance and Create Attached Holdings and Item Records (Incoming MARC Record)
@@ -26,29 +24,23 @@ Job profiles are assembled from several different types of sub-profiles. These c
 * **Action profile (item)** — Create item record attached to holdings
 * **Field mapping (item)** — Assign *Can Circulate* as permanent loan rule
 
----
-
 ### Remove Existing 856 Fields from a Batch of E-Resource Records (Incoming MARC Record)
-
-> Acquisitions creates a suppressed instance linked to an order. MARC field mapping removes existing 856s.
+Acquisitions creates a suppressed instance linked to an order. MARC field mapping removes existing 856s.
 
 * **Action profile (MARC SRS)** — Modify incoming MARC data
 * **Field mapping profile (MARC SRS)** — Delete all existing `856` fields
 * **Action profile (instance)** — Create instance (uses default MARC-Instance mapping)
 * **Field mapping (instance)** — Set Instance status to “Uncataloged” and mark *Suppress*
 
----
+
 
 ### Overlay Existing Instances to Transform Call Numbers in Holdings (Incoming MARC Record)
-
-> Titles need new call numbers. Records are exported (with holdings HRIDs in `960$f`), edited in MarcEdit, and re-imported.
+Titles need new call numbers. Records are exported (with holdings HRIDs in `960$f`), edited in MarcEdit, and re-imported.
 
 * **Match profile (MARC to Instance)** — Incoming `001` to instance HRID
 * **Match profile (MARC to holdings)** — Incoming `960$f` to holdings HRID
 * **Action profile (holdings)** – Update holdings
 * **Field mapping (holdings)** – Map `050_4` to Call number field
-
----
 
 ## Different Types of Profiles
 
@@ -61,8 +53,6 @@ Job profiles are assembled from several different types of sub-profiles. These c
 
   * Example: Match on instance HRID → Update instance → Match on holdings HRID → Update holdings
 
----
-
 ### Action Profiles
 
 * **Required**
@@ -72,8 +62,6 @@ Job profiles are assembled from several different types of sub-profiles. These c
 * Must be **paired** with a **field mapping profile**
 * One action profile can be linked to **only one** field mapping profile
 * Must be tailored for specific scenarios
-
----
 
 ### Field Mapping Profiles
 
@@ -87,8 +75,6 @@ Job profiles are assembled from several different types of sub-profiles. These c
 * Can coordinate with **Data Export** profiles
 
   * Example: Export maps holdings location to `960$a`, which is used in Data Import as a match point
-
----
 
 ## Creating a Job Profile
 
