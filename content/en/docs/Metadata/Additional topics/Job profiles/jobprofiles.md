@@ -16,7 +16,7 @@ Job profiles are assembled from several different types of sub-profiles. These c
 
 ### Overlay on an Instance and Create Attached Holdings and Item Records (Incoming MARC Record)
 
-> A suppressed instance already exists, created by Acquisitions and linked to a POL. The cataloger overlays it with the finalized catalog record and simultaneously creates holdings and item data.
+A suppressed instance already exists, created by Acquisitions and linked to a POL. The cataloger overlays it with the finalized catalog record and simultaneously creates holdings and item data.
 
 * **Match profile (instance)** — Incoming `949$a` to instance HRID
 * **Action profile (instance)** — Update instance (uses default MARC-Instance mapping)
@@ -34,8 +34,6 @@ Acquisitions creates a suppressed instance linked to an order. MARC field mappin
 * **Action profile (instance)** — Create instance (uses default MARC-Instance mapping)
 * **Field mapping (instance)** — Set Instance status to “Uncataloged” and mark *Suppress*
 
-
-
 ### Overlay Existing Instances to Transform Call Numbers in Holdings (Incoming MARC Record)
 Titles need new call numbers. Records are exported (with holdings HRIDs in `960$f`), edited in MarcEdit, and re-imported.
 
@@ -43,6 +41,7 @@ Titles need new call numbers. Records are exported (with holdings HRIDs in `960$
 * **Match profile (MARC to holdings)** — Incoming `960$f` to holdings HRID
 * **Action profile (holdings)** – Update holdings
 * **Field mapping (holdings)** – Map `050_4` to Call number field
+
 
 ## Different Types of Profiles
 
@@ -83,19 +82,11 @@ Titles need new call numbers. Records are exported (with holdings HRIDs in `960$
 All sub-profiles must be created before creating a job profile. 
 _Guides for creating sub-profiles are forthcoming_
 
-**Steps to Create a Job Profile**:
+**Steps to Create a Job Profile see ../settings_data_import/settings_data_import/#creating-an-import-job-profile**:
 
- 1. Open **Settings**
- 2. Choose **Data Import** from the left-hand menu
- 3. Click **Job profiles** in the Profiles pane
- 4. Click **Actions** (top-right) → **+New Job Profile**
- 5. Enter a **name** and **description**
-    **TIP**: Use a naming convention (e.g., `ERM1`, `CAT1`) to identify job type
-    **TIP**: Make descriptions detailed (e.g., "Matches on holdings HRID in 960\$f; updates holdings electronic access from 960\$c")
- 6. Click the **plus** button under **Overview**
- 7. Add the necessary sub-profiles
- 8. Click **Save and close**
-  
-**NOTE:** You can edit existing job profiles, but you **cannot reorder sub-profiles**. Sub-profiles can only be added or removed.
+**TIPS**
+- Use a naming convention (e.g., `ERM1`, `CAT1`) to identify job type
+- Make descriptions detailed (e.g., "Matches on holdings HRID in 960\$f; updates holdings electronic access from 960\$c")
+- You can edit existing job profiles, but you **cannot reorder sub-profiles**. Sub-profiles can only be added or removed.
 
 ---
