@@ -1,6 +1,6 @@
 ---
 title: "Additional topics (Data import)"
-linkTitle: "Additional topics"
+linkTitle: "Additional topics - Data import"
 weight: 60
 tags: ["subtopic", "parenttopic"]
 ---
