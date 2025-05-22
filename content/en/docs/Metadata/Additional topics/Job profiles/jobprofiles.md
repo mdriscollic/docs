@@ -22,7 +22,7 @@ In this scenario, a suppressed instance already exists for the title, created by
 * **Action profile (instance)** — Update instance (uses default MARC-Instance mapping)
     * **Field mapping (instance)** — Set Instance status to “Cataloged”; enter today’s date in *Cataloged date*
 * **Action profile (holdings)** — Create attached holdings record
-    * **Field mapping (holdings)** — Set Permanent location to “Main”; map `050_4` to Call number
+    * **Field mapping (holdings)** — Set permanent location to “Main”; map `050_4` to Call number
 * **Action profile (item)** — Create item record attached to holdings
     * **Field mapping (item)** — Assign *Can Circulate* as permanent loan rule
 
@@ -42,50 +42,44 @@ In this scenario, a group of titles needs new call numbers. The record subset is
         * **Action profile (holdings)** – Update holdings
             * **Field mapping (holdings)** – Map `050_4` to call number field
 
-## Different Types of Profiles
+## Types of sub-profiles
 
-### Match Profiles
+### Match profiles
 
-* **Optional** — Used when operating on existing records in Inventory
-* Designate a match point between incoming data and a FOLIO record or SRS field
-* Enable overlay/update logic
+* **Optional** — Only needed if job profile operates on existing records in Inventory
+* Designates a match point between incoming data and a FOLIO record or SRS field, which allows overlay on or updates to existing records
 * Can be **nested** for cascading logic
+   * Example: An initial match on an instance HRID can implement an action profile/field mapping pair to update an instance, then a secondary match profile can match on an attached holdings record and implement another action profile/field mapping to update the holdings
 
-  * Example: Match on instance HRID → Update instance → Match on holdings HRID → Update holdings
+### Action profiles
 
-### Action Profiles
+* **Required** — Defines **what** operation to perform and **on what** type of record
+   * Example: Create item record, Update instance
+* Must be **paired** with a **field mapping profile** that specifies how to handle the incoming data
+   * Example: a field mapping for a holdings record can be combined with an action profile that updates holdings records
+* Action profiles can only be associated with one field mapping profile so must be created for each specific scenario
 
-* **Required**
-* Define **what** operation to perform and **on what** type of record
+### Field mapping profiles
 
-  * Example: Create item record, Update instance
-* Must be **paired** with a **field mapping profile**
-* One action profile can be linked to **only one** field mapping profile
-* Must be tailored for specific scenarios
-
-### Field Mapping Profiles
-
-* **Required**
+* **Required** — Highly customizable mappings that can insert incoming data into Inventory record fields
 * Insert incoming data into Inventory record fields
-
-  * Example: Map `999` from MARC to holdings permanent location
+   * Example: a field mapping for a holdings record can take location information from a `999` in an incoming MARC record and use that to set the permanent location of a resource in a FOLIO holdings record
+Note: Data export profiles can be an important counterpart to field mappings. For instance, a Data export job profile could map the holdings permanent location code to a `960$a` and a related Data import job would then use that `960$a` as a match point for a match profile
 * Must be **paired with** an action profile
-* Can be reused with **multiple** action profiles
-* Consider creating consistent **naming conventions** for easier search and organization
-* Can coordinate with **Data Export** profiles
+* Can be associated with more than one action profile
+* Each of these must be created and saved separately, then they are combined into an overarching job profile
+Note: It can be a helpful practice to give each component part a shared name element so they are more easily searched on and identifiable
 
-  * Example: Export maps holdings location to `960$a`, which is used in Data Import as a match point
+## Creating a job profile
 
-## Creating a Job Profile
-
-All sub-profiles must be created before creating a job profile. 
-_Guides for creating sub-profiles are forthcoming_
-
-**Steps to Create a Job Profile see ../settings_data_import/settings_data_import/#creating-an-import-job-profile**:
+All sub-profiles must be created before creating a job profile 
+_Detailed guides for sub-profile creation are forthcoming_
 
 **TIPS**
-- Use a naming convention (e.g., `ERM1`, `CAT1`) to identify job type
-- Make descriptions detailed (e.g., "Matches on holdings HRID in 960\$f; updates holdings electronic access from 960\$c")
-- You can edit existing job profiles, but you **cannot reorder sub-profiles**. Sub-profiles can only be added or removed.
+- Establish a naming convention for job profiles (i.e. ERM1, ERM2, CAT1, CAT2) that indicate their purpose and make them easier to refer to
+- Make descriptions detailed (e.g., "Matches on holdings HRID in `960$f`; updates holdings electronic access from `960$c`; Used for transfer workflow")
+- You can edit existing job profiles, but you **cannot reorder sub-profiles** - sub-profiles can only be added or removed
+
+**For steps to create a job profile see [Settings documentation](content/en/docs/Settings/Settings_data_import/settings_data_import.md)**:
 
 ---
