@@ -4,19 +4,19 @@ linkTitle: "Job profiles"
 weight: 10
 tags: ["subtopic"]
 ---
-# How to Create Job Profiles
+# How to create job profiles
 
-## How Profiles Work Together
+## How profiles work together
 
-Job profiles are assembled from several different types of sub-profiles. These components define a logical sequence of actions on incoming records. Job profile data must be in **MARC** or **EDIFACT** format. A job profile processes a MARC or EDIFACT data file by applying match, action, and field mapping sub-profiles in order.
+Job profiles are assembled from several different types of sub-profiles. These components lay out a logical order of actions on incoming records. Incoming data for job profiles must be either in MARC or EDIFACT format. A job profile takes a file of MARC or EDIFACT data and processes it per each step specified by the match, action, and field mapping sub-profiles.
 
 ![Diagram of Job profile that contains one match profile linked to two action profiles.](./job_profiles.jpg)
 
-## Example Job Profile Structures
+## Example job profile structures
 
-### Overlay on an Instance and Create Attached Holdings and Item Records (Incoming MARC Record)
+### Overlay on an instance and create attached holdings and item records (incoming MARC record)
 
-A suppressed instance already exists, created by Acquisitions and linked to a POL. The cataloger overlays it with the finalized catalog record and simultaneously creates holdings and item data.
+In this scenario, a suppressed instance already exists for the title, created by the Acquisitions team and linked to a purchase order line (POL) in the Orders app. The cataloger is overlaying this instance with the finalized catalog record while simultaneously creating holdings and item data for it.
 
 * **Match profile (instance)** — Incoming `949$a` to instance HRID
 * **Action profile (instance)** — Update instance (uses default MARC-Instance mapping)
@@ -26,22 +26,21 @@ A suppressed instance already exists, created by Acquisitions and linked to a PO
 * **Action profile (item)** — Create item record attached to holdings
 * **Field mapping (item)** — Assign *Can Circulate* as permanent loan rule
 
-### Remove Existing 856 Fields from a Batch of E-Resource Records (Incoming MARC Record)
-Acquisitions creates a suppressed instance linked to an order. MARC field mapping removes existing 856s.
+### Remove existing 856 fields from a batch of e-resource records (incoming MARC record)
+In this scenario, Acquisitions is creating an order and then creating a suppressed instance to link to that order. See the Field mapping section for more details about the specific placement of field mapping profiles that modify incoming MARC.
 
 * **Action profile (MARC SRS)** — Modify incoming MARC data
 * **Field mapping profile (MARC SRS)** — Delete all existing `856` fields
 * **Action profile (instance)** — Create instance (uses default MARC-Instance mapping)
 * **Field mapping (instance)** — Set Instance status to “Uncataloged” and mark *Suppress*
 
-### Overlay Existing Instances to Transform Call Numbers in Holdings (Incoming MARC Record)
-Titles need new call numbers. Records are exported (with holdings HRIDs in `960$f`), edited in MarcEdit, and re-imported.
+### Overlay existing instances to transform call numbers in holdings (incoming MARC record)
+In this scenario, a group of titles needs new call numbers. The record subset is identified in Inventory or Lists, exported from Data Export (using a profile that puts holdings HRIDs in the `960$f`), modified in MarcEdit, and imported back into Data Import to effect the change.
 
-* **Match profile (MARC to Instance)** — Incoming `001` to instance HRID
+* **Match profile (MARC to instance)** — Incoming `001` to instance HRID
 * **Match profile (MARC to holdings)** — Incoming `960$f` to holdings HRID
 * **Action profile (holdings)** – Update holdings
 * **Field mapping (holdings)** – Map `050_4` to Call number field
-
 
 ## Different Types of Profiles
 
