@@ -80,6 +80,6 @@ _Detailed guides for sub-profile creation are forthcoming_
 - Make descriptions detailed (e.g., "Matches on holdings HRID in `960$f`; updates holdings electronic access from `960$c`; Used for transfer workflow")
 - You can edit existing job profiles, but you **cannot reorder sub-profiles** - sub-profiles can only be added or removed
 
-**For steps to create a job profile see [Settings documentation](content/en/docs/Settings/Settings_data_import/settings_data_import.md)**:
+**For steps to create a job profile see [Settings documentation](content/en/docs/Settings/Settings_data_import/settings_data_import.md)**
 
 ---
