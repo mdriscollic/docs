@@ -72,13 +72,13 @@ Note: It can be a helpful practice to give each component part a shared name ele
 
 ## Creating a job profile
 
-All sub-profiles must be created before creating a job profile 
-_Detailed guides for sub-profile creation are forthcoming_
+All sub-profiles must be created before creating a job profile. 
+**_Detailed guides for sub-profile creation are forthcoming._**
 
-**TIPS**
-- Establish a naming convention for job profiles (i.e. ERM1, ERM2, CAT1, CAT2) that indicate their purpose and make them easier to refer to
-- Make descriptions detailed (e.g., "Matches on holdings HRID in `960$f`; updates holdings electronic access from `960$c`; Used for transfer workflow")
-- You can edit existing job profiles, but you **cannot reorder sub-profiles** - sub-profiles can only be added or removed
+### TIPS
+* Establish a naming convention for job profiles (i.e. ERM1, ERM2, CAT1, CAT2) that indicate their purpose and make them easier to refer to
+* Make descriptions detailed (e.g., "Matches on holdings HRID in `960$f`; updates holdings electronic access from `960$c`; Used for transfer workflow")
+* You can edit existing job profiles, but you **cannot reorder sub-profiles** - sub-profiles can only be added or removed
 
 **For steps to create a job profile see [Settings documentation](content/en/docs/Settings/Settings_data_import/settings_data_import.md)**
 
