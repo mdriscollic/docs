@@ -6,7 +6,7 @@ date: 2024-11-18
 ---
 
 
-The Reading room access app allows you to approve or deny access to Reading rooms. Reading rooms are created in [Settings > Tenant > Reading room access](../../../settings/settings_tenant/settings_tenant/#settings--tenant--reading-room-access). You can edit a user’s [Reading room access](../../../users/#reading-room-access) and [Reading room notes](../../../users/#reading-room-access) in the Users app. 
+The Reading room access app allows you to approve or deny access to Reading rooms. Reading rooms are created in [Settings > Tenant > Reading room access](../../../settings/settings_tenant/settings_tenant/#settings--tenant--reading-room-access). You can edit a user’s [Reading room access](../../../users/#edit-reading-room-access) and [Reading room notes](../../../users/#edit-reading-room-access) in the Users app. 
 
 ## Permissions
 The permissions / capabilities listed below allow you to interact with the Reading room app and determine what you can and cannot do within the app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. If the first capability is not assigned to a user, then they will be unable to see the Reading room access app or any related information.
