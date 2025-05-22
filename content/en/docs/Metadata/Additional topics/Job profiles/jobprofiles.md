@@ -20,27 +20,27 @@ In this scenario, a suppressed instance already exists for the title, created by
 
 * **Match profile (instance)** — Incoming `949$a` to instance HRID
 * **Action profile (instance)** — Update instance (uses default MARC-Instance mapping)
-* **Field mapping (instance)** — Set Instance status to “Cataloged”; enter today’s date in *Cataloged date*
+    * **Field mapping (instance)** — Set Instance status to “Cataloged”; enter today’s date in *Cataloged date*
 * **Action profile (holdings)** — Create attached holdings record
-* **Field mapping (holdings)** — Set Permanent location to “Main”; map `050_4` to Call number
+    * **Field mapping (holdings)** — Set Permanent location to “Main”; map `050_4` to Call number
 * **Action profile (item)** — Create item record attached to holdings
-* **Field mapping (item)** — Assign *Can Circulate* as permanent loan rule
+    * **Field mapping (item)** — Assign *Can Circulate* as permanent loan rule
 
 ### Remove existing 856 fields from a batch of e-resource records (incoming MARC record)
 In this scenario, Acquisitions is creating an order and then creating a suppressed instance to link to that order. See the Field mapping section for more details about the specific placement of field mapping profiles that modify incoming MARC.
 
 * **Action profile (MARC SRS)** — Modify incoming MARC data
-* **Field mapping profile (MARC SRS)** — Delete all existing `856` fields
+    * **Field mapping profile (MARC SRS)** — Delete all existing `856` fields
 * **Action profile (instance)** — Create instance (uses default MARC-Instance mapping)
-* **Field mapping (instance)** — Set Instance status to “Uncataloged” and mark *Suppress*
+    * **Field mapping (instance)** — Set Instance status to “Uncataloged” and mark *Suppress*
 
 ### Overlay existing instances to transform call numbers in holdings (incoming MARC record)
 In this scenario, a group of titles needs new call numbers. The record subset is identified in Inventory or Lists, exported from Data Export (using a profile that puts holdings HRIDs in the `960$f`), modified in MarcEdit, and imported back into Data Import to effect the change.
 
 * **Match profile (MARC to instance)** — Incoming `001` to instance HRID
-* **Match profile (MARC to holdings)** — Incoming `960$f` to holdings HRID
-* **Action profile (holdings)** – Update holdings
-* **Field mapping (holdings)** – Map `050_4` to Call number field
+    * **Match profile (MARC to holdings)** — Incoming `960$f` to holdings HRID
+        * **Action profile (holdings)** – Update holdings
+            * **Field mapping (holdings)** – Map `050_4` to call number field
 
 ## Different Types of Profiles
 
