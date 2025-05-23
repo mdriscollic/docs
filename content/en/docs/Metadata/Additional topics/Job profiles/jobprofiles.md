@@ -64,10 +64,12 @@ In this scenario, a group of titles needs new call numbers. The record subset is
 * **Required** — Highly customizable mappings that can insert incoming data into Inventory record fields
 * Insert incoming data into Inventory record fields
    * Example: a field mapping for a holdings record can take location information from a `999` in an incoming MARC record and use that to set the permanent location of a resource in a FOLIO holdings record
+
 Note: Data export profiles can be an important counterpart to field mappings. For instance, a Data export job profile could map the holdings permanent location code to a `960$a` and a related Data import job would then use that `960$a` as a match point for a match profile
 * Must be **paired with** an action profile
 * Can be associated with more than one action profile
 * Each of these must be created and saved separately, then they are combined into an overarching job profile
+
 Note: It can be a helpful practice to give each component part a shared name element so they are more easily searched on and identifiable
 
 ## Creating a job profile
@@ -81,5 +83,3 @@ All sub-profiles must be created before creating a job profile.
 * You can edit existing job profiles, but you **cannot reorder sub-profiles** - sub-profiles can only be added or removed
 
 **For steps to create a job profile see [Settings documentation](content/en/docs/Settings/Settings_data_import/settings_data_import.md)**
-
----
