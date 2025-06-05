@@ -74,19 +74,7 @@ tags: ["parenttopic"]
    <td>The second level of the four level location structure (Institution -> Campus -> Library -> Location).  The structure is hierarchical - a campus must be linked to one  institution, and a library must be linked to one campus.
    </td>
   </tr>
-  <tr>
-   <td>Capabilities
-   </td>
-   <td>Define the ability to perform an action on a Folio resource. See also <a href="https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka">Roles Management with Eureka</a>
-   </td>
-  </tr>
-  <tr>
-   <td>Capability Sets
-   </td>
-   <td>Comprised of capabilities. <a href="https://folio-org.atlassian.net/wiki/spaces/UM/pages/789807108/Roles+Management+with+Eureka">Roles Management with Eureka</a>
-   </td>
-  </tr>
-  <tr>
+   <tr>
     <td>Central tenant    
     </td>
     <td>The administrative tenant when Enhanced Consortial Support (ECS) is enabled. Also referred to as a <em>primary tenant</em>.</td>
