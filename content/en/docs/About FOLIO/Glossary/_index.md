@@ -74,7 +74,7 @@ tags: ["parenttopic"]
    <td>The second level of the four level location structure (Institution -> Campus -> Library -> Location).  The structure is hierarchical - a campus must be linked to one  institution, and a library must be linked to one campus.
    </td>
   </tr>
-   <tr>
+  <tr>
     <td>Central tenant    
     </td>
     <td>The administrative tenant when Enhanced Consortial Support (ECS) is enabled. Also referred to as a <em>primary tenant</em>.</td>
@@ -123,7 +123,6 @@ tags: ["parenttopic"]
   <tr>
 	<td>Eureka
 	<td>The platform centralizes management of application and cloud security tools. 
-	</td>
 	</td>
   </tr>
   <tr>
@@ -505,7 +504,6 @@ tags: ["parenttopic"]
   <tr>
 	<td>Roles
 	<td>Comprised of capabilities and/or capabilitySets.
-	</td>
 	</td>
   </tr>
   <tr>
