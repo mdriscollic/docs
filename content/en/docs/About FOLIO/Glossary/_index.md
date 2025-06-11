@@ -137,6 +137,12 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
+	<td>Eureka
+	</td>
+	<td>The platform centralizes management of application and cloud security tools. 
+	</td>
+  </tr>
+  <tr>
    <td>Expense class
    </td>
    <td>A fiscal entity used to track transactions against a specific purpose or function within a Fund.
@@ -518,6 +524,12 @@ tags: ["parenttopic"]
   <tr>
     <td>RTAC</td>
     <td>RTAC stands for <b>Real Time Availability Checker</b>. It is a FOLIO module that libraries can use to provide holdings and item availability in a discovery layer. RTAC is configured by your FOLIO systems administrator and does not appear in the FOLIO user interface.</td>
+  </tr>
+  <tr>
+	<td>Roles
+	</td>
+	<td>Comprised of capabilities and/or capabilitySets.
+	</td>
   </tr>
   <tr>
    <td>Service point
