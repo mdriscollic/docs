@@ -26,7 +26,7 @@ The permissions listed below allow you to interact with the Inventory app and de
 
 The following are all the Inventory permissions:
 
--   **Inventory: All permissions.** This permission allows the user to perform all actions in Inventory.
+-   **Inventory: All permissions.** This permission allows the user to perform some actions in Inventory. It does not include permissions pertaining to items, orders, moving holdings or staff suppression.
 -   **Inventory: Create and download In transit items report.** This permission allows the user to export a report of any items with the status "in transit."
 -   **Inventory: Create order from instance.** This permission allows the user to initiate the creation of a new purchase order or a new purchase order line (in the Orders app) from an Instance record in Inventory.
 -   **Inventory: Enable staff suppress facet.** This permission allows the user to search and view instance records that are suppressed for staff.
