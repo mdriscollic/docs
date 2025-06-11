@@ -69,14 +69,6 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
-    <td>Capabilities</td>
-    <td>Defines the ability to perform an action on a FOLIO resource, e.g. Edit (action) on Instances (resource). Capabilities are managed by the system; users and admins cannot create/remove capabilities, but are created as applications enabled by tenants. Capabilities maintain a reference to the permissions from which they were created; they also maintain a reference to the application which provides them.</td>
-  </tr>
-  <tr>
-    <td>Capability sets</td>
-    <td>Comprised of capabilities. Managed by the system, not nested, and maintains a reference both to the permission from which they were created and to the application which provides them.</td>
-  </tr>
-  <tr>
    <td>Campus
    </td>
    <td>The second level of the four level location structure (Institution -> Campus -> Library -> Location).  The structure is hierarchical - a campus must be linked to one  institution, and a library must be linked to one campus.
@@ -509,12 +501,6 @@ tags: ["parenttopic"]
   <tr>
     <td>RTAC</td>
     <td>RTAC stands for <b>Real Time Availability Checker</b>. It is a FOLIO module that libraries can use to provide holdings and item availability in a discovery layer. RTAC is configured by your FOLIO systems administrator and does not appear in the FOLIO user interface.</td>
-  </tr>
-  <tr>
-	<td>Roles
-	<td>Comprised of capabilities and/or capabilitySets.
-	</td>
-	</td>
   </tr>
   <tr>
    <td>Service point
