@@ -122,6 +122,7 @@ tags: ["parenttopic"]
   </tr>
   <tr>
 	<td>Eureka
+	</td>
 	<td>The platform centralizes management of application and cloud security tools. 
 	</td>
   </tr>
@@ -503,6 +504,7 @@ tags: ["parenttopic"]
   </tr>
   <tr>
 	<td>Roles
+	</td>
 	<td>Comprised of capabilities and/or capabilitySets.
 	</td>
   </tr>
