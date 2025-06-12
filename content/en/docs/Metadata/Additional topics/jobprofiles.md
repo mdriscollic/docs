@@ -3,6 +3,7 @@ title: "Job profiles"
 linkTitle: "Job profiles"
 weight: 10
 tags: ["subtopic"]
+aliases: ['/docs/metadata/additional-topics/job-profiles/jobprofiles/']
 ---
 # How to create job profiles
 
@@ -10,7 +11,7 @@ tags: ["subtopic"]
 
 Job profiles are assembled from several different types of sub-profiles. These components lay out a logical order of actions on incoming records. Incoming data for job profiles must be either in MARC or EDIFACT format. A job profile takes a file of MARC or EDIFACT data and processes it per each step specified by the match, action, and field mapping sub-profiles.
 
-![Diagram of Job profile that contains one match profile linked to two action profiles.](./job_profiles.jpg)
+![Diagram of Job profile that contains one match profile linked to two action profiles.](../job_profiles.jpg)
 
 ## Example job profile structures
 
