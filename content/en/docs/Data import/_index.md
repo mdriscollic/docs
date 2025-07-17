@@ -2,8 +2,8 @@
 title: "Data import"
 linkTitle: "Data import"
 date: 2023-10-19
-weight: 20
-tags: ["parenttopic"]
+weight: 512
+aliases: ['/docs/metadata/data-import/']
 ---
 
 
