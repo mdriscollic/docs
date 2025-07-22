@@ -10,8 +10,8 @@ FOLIO is an open source Library Services Platform (LSP). The platform supports c
 
 FOLIO is 100% driven by and open to the community. As a true open source project, any library or library consortium can choose to host and operate FOLIO locally. The software is free to any library.
 
-If you do want to take advantage of commercial hosting or support services, there are many opportunities to engage with vendors in the FOLIO community. Services include: implementation, hosting, service, and support and training. See a list of vendors who currently offer implementation, hosting, and support services for FOLIO:
+If you do want to take advantage of commercial hosting or support services, there are many opportunities to engage with vendors in the FOLIO community. Services include: implementation, hosting, service, and support and training. See a list of members, some of whom may offer implementation, hosting, and support services for FOLIO:
 
-* [List of vendors](https://www.folio.org/community/members/)
+* [List of members](https://www.folio.org/community/members/)
 
-Note that some consortia also offer FOLIO support for member libraries.
+Note that some consortia also offer FOLIO support for member libraries. EBSCO, Index Data, Knowledge Interaction and MOL currently may offer FOLIO hosting and/or development or service help.
