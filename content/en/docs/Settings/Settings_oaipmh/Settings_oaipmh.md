@@ -1,7 +1,7 @@
 ---
 title: "Settings > OAI-PMH"
 linkTitle: "OAI-PMH"
-date: 2023-11-29
+date: 2025-07-24
 weight: 190
 tags: ["subtopic"]   
 ---
@@ -17,14 +17,16 @@ FOLIO currently supports three metadata formats:
 
 This list can be viewed by using the [**ListMetadataFormats** verb](http://www.openarchives.org/OAI/openarchivesprotocol.html#ListMetadataFormats).
 
-## Permissions
+## Capabilities and Capability Sets
 
-To interact with OAI-PMH settings, a user needs to be assigned the following permission:
+Each setting within OAI-PMH has its own capability or capability set associated with it. If a user has one of the below assigned to their user record, they will be able to view and interact with that particular setting. You can assign capabilities via user roles.
 
-* **Settings (OAI-PMH): Can view**  This permission allows the user to view all the OAI-PMH settings, but "Save" button is disabled. 
-* **Settings (OAI-PMH): Can view and edit settings** This permission allows the user to view and edit the OAI-PMH settings.
-* **Settings (OAI-PMH): Can view logs** This permission allows the user to view Settings > OAI-PMH > Logs.
-
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+| **Settings (oai-pmh): display list of settings pages** | **Settings Oai-Pmh Enabled** | settings | view | This allows the user to view the OAI-PMH settings pages. |
+| **Settings (OAI-PMH): Can view** | **UI-Oai-Pmh Settings** | settings | view | This allows the user to view all the OAI-PMH settings, but "Save" button is disabled. |
+| **Settings (OAI-PMH): Can view and edit settings** | **UI-Oai-Pmh Settings** | settings | edit |  This allows the user to view and edit the OAI-PMH settings. |
+| **Settings (OAI-PMH): Can view logs** | **UI-Oai-Pmh Settings Logs** | settings | view | This allows the user to view Settings > OAI-PMH > Logs. |
 
 ## Settings > OAI-PMH > General
 
@@ -99,31 +101,4 @@ The logs page displays a list of completed harvests and is kept for 30 days. If 
 
 In order for Discovery services and OPACs to allow for filtering, aggregating and searching based on location and call number information, the OAI-PMH server in FOLIO needs to be able to supply this information as part of the feed.
 
-Mapping from Inventory records to MARC fields as part of the feed is as follows:
-
-| Inventory field | MARC | Additional rules |
-| --- | ----------- | --- |
-| Effective location: Institution |	952$a	 ||
-| Effective location: Campus | 952$b	||
-| Effective location: Library	| 952$c	 ||
-| Effective location: Name|	952$d	||
-| Effective call number components: call number	| 952$e	||
-| Effective call number components: prefix |	952$f	 ||
-| Effective call number components: suffix| 952$g	||
-| Effective call number components: type | 952$h	||
-| Material type	| 952$i	 ||
-| Volume |	952$j	 ||
-| Enumeration |	952$k	 ||
-| Chronology |	952$l	 ||
-| Barcode	| 952$m	 ||
-| Copy number	| 952$n	 ||
-| Electronic access: URI | 856$u | Creates separate datafield for each URL. Uses URLs from each record level (holding and item) |
-| Electronic access: Link text | 856$y| Creates separate datafield for each URL. Uses URLs from each record level (holding and item) |
-| Electronic access: Materials specified |	856$3	| Creates separate datafield for each URL. Uses URLs from each record level (holding and item) |
-| Electronic access: Public note | 856$z | Creates separate datafield for each URL. Uses URLs from each record level (holding and item) |
-| Electronic access: Relationship: No display constant generated |	856 2nd indicator 8 1st indicator 4	 ||
-| Electronic access: Relationship: No information provided |	856 2nd indicator blank 1st indicator 4	| Such indicator filling in works also for empty "Relationship" value |
-| Electronic access: Relationship: Related resource |	856 2nd indicator 2 1st indicator 4 ||
-| Electronic access: Relationship: Resource	| 856 2nd indicator 0 1st indicator 4	 ||
-| Electronic access: Relationship: Version of resource |	856 2nd indicator 1 1st indicator 4	 ||
-| Electronic access: Relationship: empty value |	856 2nd indicator empty 1st indicator 4	||
+Mapping from Inventory records to MARC fields as part of the feed can be found on the [FOLIO wiki](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/5673827/Harvested+Inventory+Data)
