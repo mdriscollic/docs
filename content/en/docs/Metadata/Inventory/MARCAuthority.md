@@ -91,6 +91,10 @@ The following additional validation rules and restrictions apply:
 
 Note that validation rules are only applied when creating or editing an authority record in quickMARC, not when records are imported via the Data import app.
 
+### Viewing the version history of a MARC authority record
+
+When viewing a MARC authority record, click the **clock** symbol at the top right of the third pane. A new pane will open displaying the record's version history. Each version displays the source (i.e. user who created the version) and which fields were edited, added, or deleted. To view the changes in more detail, click the version name. A new window will pop up showing each action, field, and the change that was made.
+
 ## Deleting MARC authority records
 
 To delete a MARC authority record, follow these steps:
