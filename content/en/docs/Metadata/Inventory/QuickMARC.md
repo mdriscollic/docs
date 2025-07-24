@@ -1,7 +1,7 @@
 ---
 title: "quickMARC"
 linkTitle: "QuickMARC"
-date: 2024-12-05
+date: 2025-07-24
 weight: 50
 tags: ["parenttopic"]   
 ---
@@ -18,22 +18,26 @@ Definition of terms related to quickMARC:
 -  **Holdings record.** A record that contains information such as location, call number, and volumes owned, that enables staff to locate and manage library holdings for materials in all formats. A Holdings record must be associated with an Instance record.
 -   **SRS.** Source Record Storage. A storage layer in FOLIO. If an instance or holdings has an underlying MARC record, then this record is stored in SRS.
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with quickMARC and determine what you can and cannot do within the module. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the quickMARC module or any related information.
+Beginning with the Sunflower release, the Eureka platform replaces permission sets with **Capabilities** and **Capability sets**. For more information about **Capabilities** and **Capability sets**, see [Roles Management with Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
-The following are all the quickMARC permissions:
+The capabilities listed below allow you to interact with the quickMARC app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles.
 
--   **quickMARC: Can Link/unlink authority records to bib records.** This permission allows the user to link and unlink authority records to access points in bibliographic records.
--   **quickMARC: Create a new MARC holdings record.** This permission allows the user to create new MARC holdings records.
--   **quickMARC: Create new MARC bibliographic record.** This permission allows the user to create a new MARC bibliographic record.
--   **quickMARC: Derive new MARC bibliographic record.** This permission allows the user to duplicate and create new MARC bibliographic records.
--   **quickMARC: View MARC bibliographic record.** This permission allows the user to view MARC bibliographic records in the Inventory app.
--   **quickMARC: View MARC holdings  record.** This permission allows the user to view MARC holdings records in the Inventory app.
--   **quickMARC: View, edit MARC bibliographic record.** This permission allows the user to view and edit MARC bibliographic records.
--   **quickMARC: View, edit MARC holdings record.** This permission allows the user to view and edit MARC holdings records.
--   **quickMARC: View, edit MARC authority record.** This permission allows the user to view and edit MARC authority records.
--   **quickMARC: Create a new MARC authority record** This permissions allows the user to create a new MARC authority record in quickMARC.
+Note: Some actions in quickMARC require capabilities in other apps. Because quickMARC is accessed through the Inventory app, Inventory capabilities are also required in order to interact with quickMARC.
+
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+| **quickMARC: Can Link/unlink authority records to bib records.** | **UI-Quick-Marc Quick-Marc-Authority-Records Link-Unlink** | procedural | execute | This allows the user to link and unlink authority records to access points in bibliographic records. |
+| **quickMARC: Create a new MARC holdings record.** | **UI-Quick-Marc Quick-Marc-Holdings-Editor** | data | create | This allows the user to create new MARC holdings records. |
+| **quickMARC: Create new MARC bibliographic record.** | **UI-Quick-Marc Quick-Marc-Editor** | data | create | This allows the user to create a new MARC bibliographic record. |
+| **quickMARC: Derive new MARC bibliographic record.** | **UI-Quick-Marc Quick-Marc-Editor Derive** | procedural | execute | This allows the user to duplicate and create new MARC bibliographic records |
+| **quickMARC: View MARC bibliographic record.** | **UI-Quick-Marc Quick-Marc-Editor** | data | view | This allows the user to view MARC bibliographic records in the Inventory app. |
+| **quickMARC: View MARC holdings  record.** | **UI-Quick-Marc Quick-Marc-Holdings-Editor** | data | view | This allows the user to view MARC holdings records in the Inventory app. |
+| **quickMARC: View, edit MARC bibliographic record.** | **UI-Quick-Marc Quick-Marc-Editor** | data | manage | This allows the user to view and edit MARC bibliographic records. |
+| **quickMARC: View, edit MARC holdings record.** | **UI-Quick-Marc Quick-Marc-Holdings-Editor** | data | manage | This allows the user to view and edit MARC holdings records. |
+| **quickMARC: View, edit MARC authority record.** | **UI-Quick-Marc Quick-Marc-Authorities-Editor** | data | manage | This allows the user to view and edit MARC authority records. |
+| **quickMARC: Create a new MARC authority record** | **UI-Quick-Marc Quick-Marc-Authorities-Editor** | data | create | This allows the user to create a new MARC authority record in quickMARC. |
 
 ## Accessing quickMARC
 
@@ -112,9 +116,9 @@ The field is no longer linked and all subfields can be edited.
 
 ### Validations and restrictions
 
-A subfield is defined by a \$ (dollar sign).  
-Tags must consist of 3 numeric characters.  
-Indicators must consist of single characters.
+-   A subfield is defined by a \$ (dollar sign).  
+-   Tags must consist of 3 numeric characters.  
+-   Indicators must consist of single characters.
 
 The following validation rules and restrictions apply when working with bibliographic records using quickMARC: 
 
