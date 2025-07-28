@@ -1,7 +1,7 @@
 ---
 title: "MARC authority"
 linkTitle: "MARCauthority"
-date: 2024-12-05
+date: 2025-07-24
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -18,16 +18,20 @@ Definition of terms related to the MARC authority app:
 -   **Heading.** Same as: access point.
 -   **Reference.** An entry in an authority record that points the user to either the authorized access point or a related authorized access point.
 
-## Permissions
+## Capabilities and Capability Sets
 
-The permissions listed below allow you to interact with the MARC Authority app and authority-specific functions in quickMARC. You can assign permissions to users in the Users app.
+Beginning with the Sunflower release, the Eureka platform replaces permission sets with **Capabilities** and **Capability sets**. For more information about **Capabilities** and **Capability sets**, see [Roles Management with Eureka](https://folio-org.atlassian.net/wiki/x/BIATLw).
 
--   **MARC Authority: View MARC authority record.** This permission allows the user to view authority records.
--   **MARC Authority: Edit MARC authority record.** This permission allows the user to edit authority records.
--   **MARC Authority: Delete MARC authority record.** This permission allows the user to delete authority records.
--   **MARC Authority: Create new MARC authority record.** This permission allows the user to create authority records.
--   **quickMARC: View, edit MARC authority record.** This permission allows the user to view and edit MARC authority records.
--   **quickMARC: Create a new MARC authority record** This permissions allows the user to create a new MARC authority record in quickMARC.
+The capabilities listed below allow you to interact with the MARC Authority app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles.
+
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+| **MARC Authority: View MARC authority record.** | **UI-Marc-Authorities Authority-Record** | data | view | This allows the user to view authority records. |
+| **MARC Authority: Edit MARC authority record.** | **UI-Marc-Authorities Authority-Record** | data | edit | This allows the user to edit authority records. |
+| **MARC Authority: Delete MARC authority record.** | **UI-Marc-Authorities Authority-Record** | data | delete | This allows the user to delete authority records. |
+| **MARC Authority: Create new MARC authority record.** | **UI-Marc-Authorities Authority-Record** | data | create | This allows the user to create authority records. |
+| **quickMARC: View, edit MARC authorities record.** | **UI-Quick-Marc Quick-Marc-Authorities-Editor** | data | manage | This allows the user to view and edit MARC authority records. |
+| **quickMARC: Create a new MARC authority record** | **UI-Quick-Marc Quick-Marc-Authorities-Editor** | data | create | This allows the user to create a new MARC authority record in quickMARC. |
 
 ## Keyboard shortcuts
 
@@ -72,9 +76,9 @@ In the Edit MARC authority record window, you can perform the following actions:
 
 ### Validations and restrictions
  
-A subfield is defined by a \$ (dollar sign).  
-Tags must consist of 3 numeric characters.  
-Indicators must consist of single characters.
+-   A subfield is defined by a \$ (dollar sign).  
+-   Tags must consist of 3 numeric characters.  
+-   Indicators must consist of single characters.
 
 The following additional validation rules and restrictions apply:
 
@@ -86,6 +90,10 @@ The following additional validation rules and restrictions apply:
 -   By default, no other validation is performed. Additional validation rules can be configured at the tenant level via the mod-record-specifications API (see the [developer documentation](https://dev.folio.org/source-code/map/#mod-record-specifications)).
 
 Note that validation rules are only applied when creating or editing an authority record in quickMARC, not when records are imported via the Data import app.
+
+### Viewing the version history of a MARC authority record
+
+When viewing a MARC authority record, click the **clock** symbol at the top right of the third pane. A new pane will open displaying the record's version history. Each version displays the source (i.e. user who created the version) and which fields were edited, added, or deleted. To view the changes in more detail, click the version name. A new window will pop up showing each action, field, and the change that was made.
 
 ## Deleting MARC authority records
 
