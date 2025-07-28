@@ -1,19 +1,21 @@
 ---
 title: "Settings > MARC authority"
 linkTitle: "MARC authority"
-date: 2024-04-22
+date: 2025-07-24
 weight: 170
 tags: ["subtopic"]   
 ---
 
 The MARC authority section of Settings allows you to view, create, edit, and delete authority files.
 
-## Permissions
+Each setting within the MARC Authority app has its own capability or capability set associated with it. If a user has one of the below assigned to their user record, they will be able to view and interact with that particular setting. You can assign capabilities via user roles.
 
-To interact with MARC Authority app settings, a user may be assigned the following permissions:
-
-- **Settings (MARC authority): View authority files.** This permission allows the user to view authority files but not make changes to them.
-- **Settings (MARC authority): View, create, edit, delete authority files.** This permission allows the user to view, create, edit, and delete authority files.
+|**Permission (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
+| -------- | ------- | ------- | ------- | ------- |
+| **Settings (MARC authority): Module is enabled.** | **Settings Marc-Authorities Enabled** | settings | view | This allows the user to access the MARC Authority app. |
+| **Settings (MARC authority): View authority files.** | **UI-Marc-Authorities Settings Authority-Files** | settings | view | This allows the user to view authority files but not make changes to them. |
+| **Settings (MARC authority): View, create, edit, delete authority files.** | **UI-Marc-Authorities Settings Authority-Files** | settings | manage | This allows the user to view, create, edit, and delete authority files. |
+| **Settings (MARC authority): Configure version history** | **UI-Marc-Authorities Settings Version-History** | settings | view | This allows the user to configure the number of cards to display per page on the version history. |
 
 ## Settings > MARC authority > Manage authority files
 
