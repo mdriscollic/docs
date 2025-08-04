@@ -5,6 +5,8 @@ date: 2022-11-10
 weight: 50
 ---
 
+**This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
+
 The Requests app allows you to create and manage requests.
 
 FOLIO supports two kinds of requests - item level, and title level. 
@@ -208,6 +210,8 @@ If an item is available, and the FOLIO circulation rule allows paging, then the 
 If several items are available, FOLIO will first choose an item that has the effective location at the chosen pickup service point. If there is no available item at an effective location associated with the pickup service point, FOLIO will attempt to choose one from another location associated with that service point.
 
 If there is no matching item at an effective location with a primary service point that corresponds to the requester’s pick-up service point, then FOLIO looks for items in the next closest location.
+
+Next closest location is determined by the location hierarchy of Institution > Campus > Library > Location. Items at the same Library are closer than items at different Libraries, and items at the same Campus are closer than items at different Campuses. For more information, see [TLR - picking an item for Page request](https://folio-org.atlassian.net/wiki/x/Hy4b).
 
 If the instance has no available items when the request is created, the request will become either a **Hold** or a **Recall**, depending on the choice made in the requests app.
 
