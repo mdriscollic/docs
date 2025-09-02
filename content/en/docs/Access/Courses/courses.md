@@ -5,7 +5,7 @@ date: 2021-12-03
 weight: 40
 ---
 
-**This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may be aligned with a different FOLIO release.**
+
 
 The Courses app allows you to create and manage course reserves.
 
@@ -79,7 +79,6 @@ You can choose to integrate the Courses app with these applications:
 * EBSCO Discovery Service (EDS)
 * VuFind
 
-In addition, you can connect the Courses app to your learning management system using the Learning Tools Interoperability (LTI) protocol. There is a separate module to install for LTI support. For more information, see [Course Reserves - LTI connectivity](https://folio-org.atlassian.net/wiki/spaces/FOLIOtips/pages/5670903/Course+Reserves+-+LTI+connectivity).
 
 Each of these integrations has specific features to consider in regards to the migration of courses, sections, cross-listings, and separate courses and how they interact with FOLIO.
 
