@@ -25,6 +25,7 @@ The following are all the Reading room permissions:
 
 | Permission Display    Name (OKAPI)                                 | Resource (EUREKA)                               | Type     | Action | Description                                                                                                                                                                                                                                                                                                                |
 |--------------------------------------------------------------------|-------------------------------------------------|----------|--------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Reading room access: Can view patron blocks                         | UI-Reading-Room Patron-Blocks                   | Data     | View   | This Capability set allows users to view the Patron blocks accordion in the Reading room app.                                                                                                                                                                                                                                 |
 | Reading room access: In app - track access                         | UI-Reading-Room                                 | Data     | Manage | This Capability set allows users to open and use the Reading room access app.                                                                                                                                                                                                                                                  |
 | Settings (tenant): Can create, edit and remove reading room access | UI-Tenant-Settings Settings Reading-Room-Access | Settings | Manage | This Capability set allows users to view, create, edit, and delete reading rooms in [Settings > Tenant > Reading room access](../../../settings/settings_tenant/settings_tenant/#settings--tenant--reading-room-access).                                                                                                       |
 | Settings (tenant): Can view reading room access                    | UI-Tenant-Settings Settings Reading-Room-Access | Settings | View   | This Capability set allows users to view reading rooms in [Settings > Tenant > Reading room access](../../../settings/settings_tenant/settings_tenant/#settings--tenant--reading-room-access).                                                                                                                                 |
@@ -43,14 +44,14 @@ You can find the patron by either:
 Locate the patron using a barcode:
 
 1. Either scan the barcode on the patron’s library card, or enter the patron barcode number.
-2. Click **Enter**. Patron details are displayed. The access status to the Reading room associated with the logged in user’s service point is shown.
+2. Click **Enter**. Patron details are displayed. The access status to the Reading room associated with the logged in user’s service point is shown. Open the **Patron blocks** or **User notes** accordions to display any patron blocks or [user notes](../../../users/#add-a-note).
 
 Locate the patron using the Patron look-up function:
 1. In the Scan patron card pane, click **Patron look-up**.
 2. In the **Select User** dialog, in the **User search** box, enter part or all of the patron’s name, email, or username.
 3. Optional: Filter results by Status (active/inactive), or by Patron group.
 4. Click **Search**.
-5. Click the patron to use. The Select User dialog closes, the barcode appears in the Scan patron card pane, and the patron details are displayed. The access status to the Reading room associated with the logged in user’s service point is shown.
+5. Click the patron to use. The Select User dialog closes, the barcode appears in the Scan patron card pane, and the patron details are displayed. The access status to the Reading room associated with the logged in user’s service point is shown. Open the **Patron blocks** or **User notes** accordions to display any patron blocks or [user notes](../../../users/#add-a-note).
 
 Note: Unlike in the **Check out** app, Patron look-up will only return results if the patron has a barcode. 
 
