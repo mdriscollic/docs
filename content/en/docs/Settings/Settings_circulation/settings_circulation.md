@@ -701,6 +701,7 @@ Patron notice templates are the templates used in your [Patron notice policies](
 2. In the **Patron notice template details** pane, click **Actions > Delete**.
 3. In the **Delete Patron notice templates** dialog, click **Delete**. The template is deleted and a confirmation message appears. Note that you cannot delete a template that is being used in a Patron notice policy.
 
+See the wiki page [Patron notice templates](https://folio-org.atlassian.net/wiki/x/X45W) for tips and examples.
 
 ## Settings > Circulation > Request cancellation reasons
 
