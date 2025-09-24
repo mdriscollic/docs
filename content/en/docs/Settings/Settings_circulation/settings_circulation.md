@@ -316,6 +316,8 @@ If you select **Fixed**, you see the following fields:
 **Closed library due date management.** Select when the item is due if an item’s calculated due date lands in closed hours for the service point.
 * The due date will follow the choice given in the loan policy *only* in the case that the service point is completely closed on the day that the item would be due. When the loan is created, FOLIO will check the service point calendar; if the service point is open for any time on the day that the item is due, FOLIO will set the due time to 11:59 PM on that day.
 
+  Note: recalls inherit the Closed library due date management choice selected here. If, reasoning that the library will not be closed on a fixed due date, you select **Keep the current date**, then a recall which truncates the loan period may cause the item to be due on a date the library is closed.
+
 
 **Grace period.** Enter a grace period for overdue items. If you choose to have a grace period, items will not count against the [Maximum number of overdue items](../../settings_users/settings_users/#settings--users--conditions) patron block and there will be no overdue fine until after the loan due date/time plus the grace period interval. If the grace period expires and the item has not been returned, the grace period will count towards calculating an overdue or lost item fee/fine. Adding a grace period to a due date follows the same logic that you chose for closed library due date management, if the grace period lands in a closed time for the service point.
 
@@ -335,7 +337,7 @@ If you select **Rolling**, you see the following fields:
 **Closed library due date management.** Select when the item is due if an item’s calculated due date lands in closed hours for the service point.
 * If an item’s loaned interval is in **minutes** or **hours**, the due date will be determined by the loan policy.
   * **Opening time offset**. For short-term loans (time intervals of minutes or hours), if you choose **Move to the beginning of the next open service point hours** then you need to enter the Opening time offset. The item will be due [Opening time offset] [Interval] after the service point opens if the item’s calculated due date lands in closed hours for the service point.
-* If an item’s loaned interval is in **days**, **weeks**, or **months**, the due date will follow the choice given in the loan policy *only* in the case that the service point is completely closed on the day that the item would be due. When the loan is created, FOLIO will check the service point calendar; if the service point is open for any time on the day that the item is due, FOLIO will set the due time to 11:59 PM on that day.
+* If an item’s loaned interval is in **days**, **weeks**, or **months**, the due date will follow the choice given in the loan policy *only* in the case that the service point is completely closed on the day that the item would be due. When the loan is created, FOLIO will check the service point calendar; if the service point is open for any time on the day that the item is due, FOLIO will set the due time to 11:59 PM on that day. Note: recalls inherit the Closed library due date management choice selected here.
 
 
 **Grace period.** Enter a grace period for overdue items. If you choose to have a grace period, items will not count against the [Maximum number of overdue items](../../settings_users/settings_users/#settings--users--conditions) patron block and there will be no overdue fine until after the loan due date/time plus the grace period interval.  If the grace period expires and the item has not been returned, the grace period will count towards calculating an overdue or lost item fee/fine. Adding a grace period to a due date follows the same logic that you chose for closed library due date management if the grace period lands in a closed time for the service point.
@@ -660,7 +662,7 @@ Select whether multiple lost item fee notices are bundled together:
 
 ## Patron notice templates
 
-Patron notice templates are the templates used in your Patron notice policies. Except for Reminder fees, patron notices can only be sent via email.
+Patron notice templates are the templates used in your [Patron notice policies](#patron-notice-policies), [Title level requests](#notice-templates), [Manual fee/fine charges or actions](../../settings_users/settings_users/#settings--users--manual-charges) and [Reminder fees](#reminder-fees). Except for Reminder fees, patron notices can only be sent via email.
 
 
 ### Creating a new patron notice template
@@ -699,6 +701,7 @@ Patron notice templates are the templates used in your Patron notice policies. E
 2. In the **Patron notice template details** pane, click **Actions > Delete**.
 3. In the **Delete Patron notice templates** dialog, click **Delete**. The template is deleted and a confirmation message appears. Note that you cannot delete a template that is being used in a Patron notice policy.
 
+See the wiki page [Patron notice templates](https://folio-org.atlassian.net/wiki/x/X45W) for tips and examples.
 
 ## Settings > Circulation > Request cancellation reasons
 
