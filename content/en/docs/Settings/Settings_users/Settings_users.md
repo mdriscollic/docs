@@ -382,7 +382,8 @@ Select the transfer owner from the **Transfer owner** drop-down list.
 Select a transfer account from the **Transfer account** drop-down list.
 Select the **Fee/fine owner**.
 Add **Transfer type**, **Transfer description**, and **Transfer code** to each **Fee/fine type**.
-Click **Save** to save the transfer criteria or click **Run manually** to run a report.
+Click **Save** to save the transfer criteria, or click **Run manually** to run a report.
+Reports are available in a text file in the Export Manager app.
 
 ### Scheduling
 
@@ -585,7 +586,7 @@ Optionally, you can configure multiple conditional statements for the transfer a
 
 ### Running the transfer
 
-To run the transfer now without saving, click the "Run manually" button.
+To run the transfer now without saving, click the "Run manually" button. The reports is available in a text file in the Export Manager app.
 
 To save the criteria and run the transfer on the desired schedule, click the "Save" button.
 
