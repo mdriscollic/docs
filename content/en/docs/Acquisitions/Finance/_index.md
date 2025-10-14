@@ -1,7 +1,7 @@
 ---
 title: "Finance"
 linkTitle: "Finance"
-date: 2025-05-05
+date: 2025-10-10
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -350,7 +350,7 @@ This section displays a table containing summary financial information for all f
 *   **Awaiting Payment.** The sum of all pending payment transaction amounts against all fund budgets for the fiscal year.  
 *   **Expended.** The sum of all payment transaction amounts against all fund budgets for the fiscal year.
 *   **Credited.** The sum of all credit transaction amounts against all fund budgets for the fiscal year.
-*   **Unavailable.** The total amount unavailable across all fund budgets for the fiscal year, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
+*   **Unavailable.** The total amount unavailable across all fund budgets for the fiscal year, calculated as the sum of the encumbered, awaiting payment, credited, and expended amounts.
 *   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the fiscal year (not taking allowable encumbrance into account).
 *   **Over expended.** The total amount expended and awaiting payment minus the total funding amount for all fund budgets for the fiscal year (or zero if that value is negative).
 *   **Available balance.** Total amount available across all fund budgets for the fiscal year, calculated as **Total funding** amount minus the **Unavailable** amount.  
@@ -425,7 +425,7 @@ The Ledger information section contains the following fields:
 *   **Awaiting Payment.** The sum of all pending payment transaction amounts against all fund budgets for the ledger during the current fiscal year.  
 *   **Expended.** The sum of all payment transaction amounts against all fund budgets for the ledger during the current fiscal year.
 *   **Credited.** The sum of all credit transaction amounts against all fund budgets for the ledger during the current fiscal year.
-*   **Unavailable.** The total amount unavailable across all fund budgets for the ledger during the current fiscal year, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
+*   **Unavailable.** The total amount unavailable across all fund budgets for the ledger during the current fiscal year, calculated as the sum of the encumbered, awaiting payment, credited, and expended amounts.
 *   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the ledger during the current fiscal year (not taking allowable encumbrance into account). 
 *   **Over expended.**  The total amount expended and awaiting payment minus the total funding amount for all fund budgets for the ledger during the current fiscal year (or zero if that value is negative).
 *   **Available balance.** Total amount available across all fund budgets for the ledger during the current fiscal year, calculated as **Total funding** amount minus the **Unavailable** amount.  
@@ -549,7 +549,7 @@ The group details pane contains group financial summary information and lists al
 *   **Awaiting Payment.** The sum of pending payment transaction amounts against all fund budgets for the group during the fiscal year selected.  
 *   **Expended.** The sum of payment transaction against all fund budgets for the group during the fiscal year selected.
 *   **Credited.** The sum of credit transaction against all fund budgets for the group during the fiscal year selected.
-*   **Unavailable** Total amount unavailable across all fund budgets for the group during the fiscal year selected, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
+*   **Unavailable** Total amount unavailable across all fund budgets for the group during the fiscal year selected, calculated as the sum of the encumbered, awaiting payment, credited and expended amounts.
 *   **Over encumbrance.** The encumbrance going beyond what is available in the fund budgets for the group during the fiscal year (not taking allowable encumbrance into account). 
 *   **Over expended.**  The total amount expended and awaiting payment minus the total funding amount for all fund budgets for the group during the current fiscal year (or zero if that value is negative).
 *   **Available balance.** Total amount available across all fund budgets for the group during the fiscal year selected, calculated as **Total funding** amount minus the **Unavailable** amount.  
@@ -657,7 +657,7 @@ The Budget summary section contains the following fields:
 *   **Awaiting Payment.** The sum of pending payment transaction amounts against the budget.
 *   **Expended.** The sum of payment transaction amounts against the budget.
 *   **Credited.** The sum of credit transaction amounts against the budget.
-*   **Unavailable** The total amount unavailable for the budget, calculated as the sum of the encumbered, awaiting payment, and expended amounts.
+*   **Unavailable** The total amount unavailable for the budget, calculated as the sum of the encumbered, awaiting payment, credited, and expended amounts.
 *   **Available balance.** Total amount available for the budget, calculated as **Total funding** amount minus the **Unavailable** amount.  
 
 #### Budget information
