@@ -74,7 +74,7 @@ Once all required and desired information is entered into the **Create integrati
 In addition to the setup of the claiming integration on the vendor record, the following must be configured on the POL in the Orders app:
 * **Claiming active** must be selected.
 * The **Claiming interval** must be entered. This will be inherited from the vendor record, if entered in the **Vendor information** accordion.
-* An **Expected receipt date** must be entered. For one-time orders, this is often entered on the POL and inherited by the piece record in the Receiving app. For ongoing orders, this information is often configured solely on the piece record in the Receiving app.
+* An **Expected receipt date** must be entered on the piece record in the Receiving app.
 
 ### Initiating EDIFACT Claims
 Claims can be initiated from within the [Claiming app](../../claiming/) or the [Receiving app](../../receiving/#claiming-a-piece).
@@ -90,7 +90,7 @@ FOLIO allows a user to import an electronic invoice in EDIFACT format using the 
 Initial setup for EDIFACT invoicing occurs within the [Settings app, under Data import settings](../../../settings/settings_data_import/settings_data_import/). Each vendor requires a separate data import job profile, which will consist of both a field mapping and an action profile. The FOLIO community has worked with several common industry vendors to create default field mapping profiles that adhere to the mapping decisions used by each vendor. It is recommended that FOLIO libraries duplicate the default field mapping profiles to retain the originals in case mistakes are made with configuration or a vendor requires multiple job profiles.
 
 **Within Settings > Data import > Field mapping profiles:**
-1. Locate the default profile for the relevant vendor. If the vendor is not listed, iecommended to contact the FOLIO Community Data Import SIG for assistance.
+1. Locate the default profile for the relevant vendor. If the vendor is not listed, it is recommended to contact the FOLIO Community Data Import SIG for assistance.
 2. Duplicate the default profile.
 3. In the duplicated profile:
    * Update the profile name.
