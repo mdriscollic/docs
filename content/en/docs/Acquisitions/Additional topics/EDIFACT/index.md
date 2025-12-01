@@ -31,13 +31,26 @@ Ensure the integration type is set to **Ordering** and contact the vendor to req
 * **FTP port**
 * **Order directory**
 
+**Ensure that:**
+* the accounts you wish to apply automatic export to are selected or, in the absence of account numbers on organization records, that the default integration is selected.
+* the acquisition methods that are subject to EDIFACT export are selected.
+* the schedule is set to when the library wishes to have the EDIFACT orders file created and transmitted to the vendor.
+
 Once all required and desired information is entered into the **Create integration** page, save the integration.
 
 ### Initiating EDIFACT Orders
+Order records are created within the [Orders app](../../orders/). When creating a purchase order line (POL), the **Automatic export** checkbox will be selected if the POL is assigned to an acquisition method and account number that has designated for EDIFACT export within the organization record's integration details.
+
+After the [order is opened](../../orders/#opening-an-order), it will be eligible for export and the EDIFACT file will be generated according to the schedule set up within the organization record's integration details.
+
+**Please note:**
+* A vendor's EDIFACT exports may be viewed by navigating to the vendor record in the Organizations app and clicking **Actions > View export log**. This will route a user to the [Export manager app's](../../../export-manager/) Organizations tab, pre-filtered to the selected vendor. The results may be further filtered within the app.
+* POLs that have been exported in EDIFACT format may be filtered by **Export date** within the Orders app, on the Order lines segment. The export job may be accessed from the [**Export details**](../../orders/#export-details) accordion.
+* The EDIFACT file may be downloaded from the [Export manager app](../../../export-manager/).
 
 
 ## EDIFACT Claiming
-FOLIO allows a user to initiate an claim for unreceived materials within the Claiming or Receiving apps, then transmit that order to a vendor in EDIFACT format. 
+FOLIO allows a user to initiate an claim for unreceived materials within the Claiming or Receiving apps, then transmit that order to a vendor in EDIFACT format. FOLIO also supports producing a CSV file for claims if vendors do not support EDIFACT claiming.
 
 ### Setup
 Initial setup for EDIFACT claiming occurs within the [Organizations app](../../organizations/). An organization record must be created and configured with an **Active** status and a **Vendor** designation. Once created and saved, the record must have [integration details configured](../../organizations/#adding-integration-details-to-a-vendor-organization). 
@@ -58,7 +71,17 @@ Ensure the integration type is set to **Claiming** and contact the vendor to req
 
 Once all required and desired information is entered into the **Create integration** page, save the integration.
 
+In addition to the setup of the claiming integration on the vendor record, the following must be configured on the POL in the Orders app:
+* **Claiming active** must be selected.
+* The **Claiming interval** must be entered. This will be inherited from the vendor record, if entered in the **Vendor information** accordion.
+* An **Expected receipt date** must be entered. For one-time orders, this is often entered on the POL and inherited by the piece record in the Receiving app. For ongoing orders, this information is often configured solely on the piece record in the Receiving app.
+
 ### Initiating EDIFACT Claims
+Claims can be initiated from within the [Claiming app](../../claiming/) or the [Receiving app](../../receiving/#claiming-a-piece).
+
+**Please note:**
+* A vendor's EDIFACT exports may be viewed by navigating to the vendor record in the Organizations app and clicking **Actions > View export log**. This will route a user to the [Export manager app's](../../../export-manager/) Organizations tab, pre-filtered to the selected vendor. The results may be further filtered within the app.
+* The EDIFACT file may be downloaded from the [Export manager app](../../../export-manager/).
 
 ## EDIFACT Invoicing
 FOLIO allows a user to import an electronic invoice in EDIFACT format using the Data import app, resulting in a new invoice record within the Invoices app.
