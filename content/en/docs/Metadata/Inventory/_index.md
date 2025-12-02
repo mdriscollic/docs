@@ -926,7 +926,7 @@ Example: title all "semantic web"
 | publisher | full-text | publisher all "Publisher of Ukraine" | Searches the publisher field. |
 | publication.place | full-text | publication.place all "Ukraine" | Searches the place of publication field. |
 | instanceTags | term | instanceTags=="important" | Searches instance tags. |
-| classifications.classificationNumber | term | classifications.classificationNumber=="cl1" | Searches the call number. |
+| classifications.classificationNumber | term | classifications.classificationNumber=="cl1" | Searches the classification number. |
 | classifications.classificationTypeId | term | classifications.classificationTypeId=="123" | Searches the classification type id. |
 | electronicAccess | full-text | electronicAccess any "resource" | Searches the URI, link text, materials specified, and URL public note fields. |
 | electronicAccess.uri | term | electronicAccess.uri="http://folio.org*" | Searches the electronic access URI field. |
@@ -941,7 +941,7 @@ Example: title all "semantic web"
 | issn | term | issn="1234*" | Searches the ISSN field. |
 | oclc | term | oclc="1234*" | Searches the OCLC number field. |
 | lccn | term | lccn = "LCCN" | Searches the LCCN field. |
-| normalizedClassificationNumber | term | normalizedClassificationNumber == "LCCN" | Searches the call number and normalizes case, whitespaces, and special characters. Also supports leading and trailing wildcards. |
+| normalizedClassificationNumber | term | normalizedClassificationNumber == "LCCN" | Searches the classification number and normalizes case, whitespaces, and special characters. Also supports leading and trailing wildcards. |
 | normalizedDate1 | term | normalizedDate1>=1990 | Searches the Date1 field and normalizes alpha 'u' characters. |
 
 ### Holdings CQL Search Fields
