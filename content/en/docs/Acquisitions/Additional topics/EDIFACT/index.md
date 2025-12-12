@@ -1,7 +1,7 @@
 ---
 title: "EDIFACT"
 linkTitle: "EDIFACT"
-date: 2025-11-26
+date: 2025-12-12
 weight: 08
 tags: ["subtopic"]
 ---
@@ -13,7 +13,7 @@ FOLIO supports electronic ordering, claiming, and invoicing using the EDIFACT st
 Setup for EDIFACT ordering, claiming, and invoicing spans multiple FOLIO apps. A library may choose to configure only those areas that are relevent to local institutional procedures. The sections below cover relevant setup for each area and information related to corresponding workflows.
 
 ## EDIFACT Ordering
-FOLIO allows a user to initiate an order within the Orders app, then transmit that order to a vendor in EDIFACT format.
+FOLIO allows a user to initiate an order within the Orders app, then transmit that order to a vendor in EDIFACT format. **Please note:** FOLIO does not support importing orders in EDIFACT format.
 
 ### Setup
 Initial setup for EDIFACT ordering occurs within the [Organizations app](../../organizations/). An organization record must be created and configured with an **Active** status and a **Vendor** designation. Once created and saved, the record must have [integration details configured](../../organizations/#adding-integration-details-to-a-vendor-organization). 
