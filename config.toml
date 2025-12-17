@@ -220,7 +220,7 @@ enable = false
     identifier = "developers"
     name = "Developers"
     url = "https://dev.folio.org"
-    weight = 10
+    weight = 40
 
 [[menu.main]]
     identifier = "wiki"
@@ -228,3 +228,8 @@ enable = false
     url = "https://folio-org.atlassian.net/wiki"
     weight = 20
 
+[[menu.main]]
+    identifier = "releasenotes"
+    name = "Release Notes"
+    url = "https://folio-org.atlassian.net/wiki/spaces/REL/pages/399081642/Sunflower+R1+2025+Release+Notes"
+    weight = 30
