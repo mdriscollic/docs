@@ -1,7 +1,7 @@
 ---
 title: "Finance"
 linkTitle: "Finance"
-date: 2025-10-10
+date: 2026-02-22
 weight: 10
 tags: ["parenttopic"]
 ---
@@ -740,6 +740,7 @@ From a ledger record, you can use batch allocation tools to grant or adjust allo
 * Allocation changes with these tools can never result in a negative allocation. FOLIO will reject changes that result in a negative allocation to a budget.
 * These tools do not support transferring money between funds associated with the ledger.
 * Funds must be setup before these tools can be used to allocate money to the fund's budgets, but the budgets do not need to be created prior to using the batch allocation tools.
+* The batch allocation tool has a hard cap of 1000 funds and will not function with ledgers that exceed 1000 funds. For this reason, it is recommended that FOLIO adopters do not assign more than 1000 funds to a ledger.
 
 To access these tools, open the **Finance** app to the **Ledger** pane and open the applicable ledger record so it is visible in the third pane for viewing.
 
