@@ -1,7 +1,7 @@
 ---
 title: "MARC authority"
 linkTitle: "MARCauthority"
-date: 2025-07-24
+date: 2026-02-06
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -39,7 +39,15 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 
 ## Viewing a MARC authority record
 
-The full MARC record opens in the third pane once you search for and select an authority record. The heading or reference you selected will be highlighted in the record.
+Once you search for a heading or reference, the following information appears in the MARC authority pane:
+
+-   **Authorized/Reference.** Indicates whether the heading is an authorized heading or a reference.
+-   **Heading/Reference.** Heading or reference.
+-   **Type of heading.** Type of heading (personal name, corporate name, conference name, topical, geographic name, genre, uniform title, or other).
+-   **Authority source.** Source authority file of the heading or reference.
+-   **Number of titles.** Number of bibliographic records that are linked to the heading or reference.
+
+Clicking a heading in the Heading/Reference column opens the full MARC record in the third pane. The heading or reference you selected will be highlighted in the record.
 
 ## Creating MARC authority records 
 
