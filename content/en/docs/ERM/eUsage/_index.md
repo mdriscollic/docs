@@ -1,7 +1,7 @@
 ---
 title: "eUsage"
 linkTitle: "eUsage"
-date: 2025-05-09
+date: 2026-02-11
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -535,7 +535,7 @@ To search for usage data providers with reports that have failed with a specific
 
 When a new COUNTER report is harvested into the eUsage app, the eUsage Reports module creates matches between the titles in the COUNTER report and the titles that already exist in the Agreements local KB. Matching is done via ISSN or ISBN. If no matching ISSN or ISBN is found in the KB, then the title remains unmatched and can be manually addressed by a user.
 
-Note that matching is only supported for the COUNTER 5 (or newer) TR report.
+Note that matching is only supported for the COUNTER 5 TR report.
 
 The eUsage Reports matching summary can be found in the eUsage app. This accordion appears on each eUsage provider record and provides a summary of the results of the matching process. The matching summary contains the following data:
 * **Date of last harvest.** The date of the last COUNTER TR report harvest for that provider, whether manual or automated.
