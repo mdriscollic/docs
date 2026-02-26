@@ -40,6 +40,7 @@ The following are the Dashboard permissions:
 ** update the access level for a user in the user access list for a dashboard.
  *   **Dashboard: Dashboard Administrator.** This permission allows the user to access and make changes to all dashboards in the system as if they had been granted the 'manage' access level to the dashboard.
 
+The Capability sets listed below allow you to interact with the Dashboard app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
 |permissionDisplayName (OKAPI)     |Capability/Capability Set (EUREKA)                                  |Type      |ApplicationID              |Action | 
 |----------------------------------|--------------------------------------------------------------------|----------|---------------------------|-------|
