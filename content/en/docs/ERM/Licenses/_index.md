@@ -17,7 +17,7 @@ Definition of terms related to the Licenses app:
 *   **Organization.** Any institution with which your library interacts (this may or may not be an institution from which you purchase materials). The organizations associated with licenses are generally the licensors or a consortium.
 
 
-## Permissions
+## Permissions and Capabilities
 
 The permissions listed below allow you to interact with the Licenses app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Licenses app or any related information.
 
