@@ -43,8 +43,22 @@ The following are all the eHoldings permissions:
 Note: This permission should only be used by institutions that maintain multiple EBSCO KB configurations.
 
 
+The Capability sets listed below allow you to interact with the eHoldings app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
-## Keyboard shortcuts
+|permissionDisplayName (OKAPI)                                                   |Capability/Capability Set (EUREKA)                                                                           |Type      |ApplicationID              |Action | 
+|--------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|----------|---------------------------|-------|
+|eHoldings: Can create and delete custom packages and titles                     |UI-Eholdings Titles-Packages Create-Delete (ui-eholdings.titles-packages.create-delete.manage)               |data      |app-platform-complete-2.5.3|manage |
+|eHoldings: Can edit providers, packages, titles detail records                  |UI-Eholdings Records (ui-eholdings.records.edit)                                                             |data      |app-platform-complete-2.5.3|edit   |
+|eHoldings: Can select/unselect packages and titles to/from your holdings        |UI-Eholdings Package-Title Select-Unselect (ui-eholdings.package-title.select-unselect.execute)              |procedural|app-platform-complete-2.5.3|execute|
+|eHoldings: Can view Usage & analysis data for packages, titles and resources    |UI-Eholdings Costperuse (ui-eholdings.costperuse.view)                                                       |data      |app-platform-complete-2.5.3|view   |
+|Settings (eholdings): Create, edit, and view Usage Consolidation API credentials|UI-Eholdings Settings Usage-Consolidation Create-Edit (ui-eholdings.settings.usage-consolidation.create-edit)|settings  |app-platform-complete-2.5.3|view   |
+|Settings (eholdings): View Usage Consolidation API credentials                  |UI-Eholdings Settings Usage-Consolidation (ui-eholdings.settings.usage-consolidation.view)                   |settings  |app-platform-complete-2.5.3|view   |
+|Settings (eHoldings): Can assign/unassign a user from a KB                      |UI-Eholdings Settings AssignedUser (ui-eholdings.settings.assignedUser.edit)                                 |settings  |app-platform-complete-2.5.3|edit   |
+|Export manager: All                                                             |UI-Export-Manager Export-Manager (ui-export-manager.export-manager.all)                                      |data      |app-platform-complete-2.5.3|manage |
+|Export manager: Download and re-send files                                      |UI-Export-Manager Jobs DownloadAndResend (ui-export-manager.jobs.downloadAndResend.execute                   |procedural|app-platform-complete-2.5.3|execute|
+
+
+## Keyboard shortcuts             
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](../../platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
 
 
