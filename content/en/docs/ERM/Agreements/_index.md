@@ -51,6 +51,7 @@ If you want eUsage data in an agreement record, you also need to have the follow
 *   **eUsage reports: charts may be viewed.** This permission adds an accordion to the Agreement record in the Agreement app that displays charts and graphs of eUsage data for the titles related to an agreement.
 
 
+
 The Capability sets listed below allow you to interact with the Agreements app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
 |permissionDisplayName (OKAPI)        |Capability/Capability Set (EUREKA)                        |Type            |ApplicationID              |Action | 
