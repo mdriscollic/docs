@@ -54,12 +54,12 @@ If you want eUsage data in an agreement record, you also need to have the follow
 
 The Capability sets listed below allow you to interact with the Agreements app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
-|permissionDisplayName (OKAPI)        |Capability/Capability Set (EUREKA)                        |Type            |ApplicationID              |Action | 
-|-------------------------------------|----------------------------------------------------------|----------------|---------------------------|-------|
+|permissionDisplayName (OKAPI)        |Capability/Capability Set (EUREKA)                              |Type      |ApplicationID              |Action | 
+|-------------------------------------|----------------------------------------------------------------|----------|---------------------------|-------|
 |Agreements: Search & view agreements |UI-Agreements Agreements (ui-agreements_agreements.view)        |data      |app-platform-complete-2.5.3|view   |
 |Agreements: Edit agreements          |UI-Agreements Agreements (ui-agreements.agreements.edit)        |data      |app-platform-complete-2.5.3|edit   |
 |Agreements: Delete agreements        |UI-Agreements Agreements (ui-agreements.agreements.delete)      |data      |app-platform-complete-2.5.3|delete |
-|Agreements: File download            |UI-Agreements Agreements File (ui-agreements_agreements.view)      |procedural|app-platform-complete-2.5.3|execute|
+|Agreements: File download            |UI-Agreements Agreements File (ui-agreements_agreements.view)   |procedural|app-platform-complete-2.5.3|execute|
 |Agreements: Search & view e-resources|UI-Agreements Resources (ui-agreements_resources.view)          |data      |app-platform-complete-2.5.3|view   |
 |Agreements: Edit e-resources         |UI-Agreements Resources (ui-agreements.resources.edit)          |data      |app-platform-complete-2.5.3|edit   |
 |Agreements: Search & view platforms  |UI-Agreements Platforms (ui-agreements.platforms.view)          |data      |app-platform-complete-2.5.3|view   |
