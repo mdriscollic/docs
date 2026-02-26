@@ -22,7 +22,7 @@ Definition of terms related to the eHoldings app:
 * **Titles.** The individual e-resources, for example a journal or e-book, contained within a package.
 
 
-## Permissions
+## Permissions and Capabilities
 
 The permissions listed below allow you to interact with the eHoldings app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the eHoldings app or any related information.
 
