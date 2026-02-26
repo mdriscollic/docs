@@ -42,7 +42,7 @@ If you want to link or view organizations and/or internal contacts in a license 
 
 
 
-The Capability sets listed below allow you to interact with the Agreements app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
+The Capability sets listed below allow you to interact with the Licenses app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
 
 |permissionDisplayName (OKAPI)                         |Capability/Capability Set (EUREKA)                            |Type      |ApplicationID              |Action | 
 |------------------------------------------------------|--------------------------------------------------------------|----------|---------------------------|-------|
