@@ -20,7 +20,7 @@ Definition of terms related to the Agreements app:
 Library’s utilizing FOLIO can employ an external knowledge base, like EBSCO, or use FOLIO’s internal knowledge base. Note: Some instructions differ depending on your library’s use of an external or internal knowledge base.
 
 
-## Permissions
+## Permissions and Capabilities
 
 The permissions listed below allow you to interact with the Agreements app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Agreements app or any related information.
 
@@ -49,6 +49,21 @@ If you want eUsage data in an agreement record, you also need to have the follow
 
 
 *   **eUsage reports: charts may be viewed.** This permission adds an accordion to the Agreement record in the Agreement app that displays charts and graphs of eUsage data for the titles related to an agreement.
+
+
+The Capability sets listed below allow you to interact with the Agreements app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
+
+|permissionDisplayName (OKAPI)        |Capability/Capability Set (EUREKA)                        |Type            |ApplicationID              |Action | 
+|-------------------------------------|----------------------------------------------------------|----------------|---------------------------|-------|
+|Agreements: Search & view agreements |UI-Agreements Agreements (ui-agreements_agreements.view)        |data      |app-platform-complete-2.5.3|view   |
+|Agreements: Edit agreements          |UI-Agreements Agreements (ui-agreements.agreements.edit)        |data      |app-platform-complete-2.5.3|edit   |
+|Agreements: Delete agreements        |UI-Agreements Agreements (ui-agreements.agreements.delete)      |data      |app-platform-complete-2.5.3|delete |
+|Agreements: File download            |Agreements Agreements File (ui-agreements_agreements.view)      |procedural|app-platform-complete-2.5.3|execute|
+|Agreements: Search & view e-resources|UI-Agreements Resources (ui-agreements_resources.view)          |data      |app-platform-complete-2.5.3|view   |
+|Agreements: Edit e-resources         |UI-Agreements Resources (ui-agreements.resources.edit)          |data      |app-platform-complete-2.5.3|edit   |
+|Agreements: Search & view platforms  |UI-Agreements Platforms (ui-agreements.platforms.view)          |data      |app-platform-complete-2.5.3|view   |
+|Agreements: Edit platforms           |UI-Agreements Platforms (ui-agreements.platforms.edit)          |data      |app-platform-complete-2.5.3|edit   |
+|eUsage reports: charts may be viewed |Plugin-Eusage-Reports Charts (plugin-eusage-reports.view-charts)|data      |app-erm-usage-2.0.4        |view   |
 
 
 ## Keyboard shortcuts
