@@ -431,7 +431,7 @@ A **Proxy** is a user who is authorized to borrow library materials on another u
     -  **Proxy can request for sponsor**. 
         -  *Yes*: The **Proxy** can place requests for materials on behalf of the **Sponsor**.
         -  *No*: The **Proxy** cannot place requests for material on behalf of the **Sponsor**.
-    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library.
+    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library. (Functionality to send notifications to the proxy is pending UXPROD-3937.
 
 6. Click **Add.**
 7. Click **Save & Close**. The **Proxy** is added to the user record.
