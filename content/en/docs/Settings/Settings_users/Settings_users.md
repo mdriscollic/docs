@@ -401,15 +401,6 @@ The following options and suboptions are available:
      - Run at
      - Run on weekdays
 
-Example:
-
-To set the schedule to occur twice a week on Monday and Thursday at 12:00am CDT, you would configure the following options:
-
-1.   Set the "Frequency" option to "Weeks".
-2.   Set the "Weeks between runs" option to "0".
-3.   Set the "Run at" option to "12:00 AM".
-4.   Set the "Run on weekdays" to the options "Monday" and "Thursday".
-
 ### Criteria
 
 The **Criteria** section allows you to configure the criteria for the transfer process.
