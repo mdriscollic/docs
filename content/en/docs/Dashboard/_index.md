@@ -22,7 +22,7 @@ Widgets are often configurable by the user, so the same type of widget can be ad
 
 *  **User access list.** Dashboards can be accessed by one or more users. Which users can access a dashboard is controlled by the user access list for the dashboard. Only users on this list can access the dashboard. Users can be added or removed from the user access list. There are three levels of access that a user can be granted in the user access list: View, Edit, Manage.
 
-## Permissions
+## Permissions and Capabilities
 
 There are two levels of permission control for dashboards. Firstly the Dashboard app permissions which determine the functionality the user has access to within the dashboard app. Secondly the user access level to each dashboard granted by the dashboard's user access list determines what the user can do in relation to a particular dashboard.
 
@@ -38,7 +38,14 @@ The following are the Dashboard permissions:
 ** add, edit, remove, reorder and resize widgets on dashboards.
 ** add and remove users to/from the user access list for a dashboard.
 ** update the access level for a user in the user access list for a dashboard.
- *   **Dashboard: Dashboard Administrator.** This permission allows the user to access and make changes to all dashboards in the system as if they had been granted the 'manage' access level to the dashboard.  
+ *   **Dashboard: Dashboard Administrator.** This permission allows the user to access and make changes to all dashboards in the system as if they had been granted the 'manage' access level to the dashboard.
+
+The Capability sets listed below allow you to interact with the Dashboard app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
+
+|permissionDisplayName (OKAPI)     |Capability/Capability Set (EUREKA)                                  |Type      |ApplicationID              |Action | 
+|----------------------------------|--------------------------------------------------------------------|----------|---------------------------|-------|
+|Dashboard: Manage dashboard       |UI-Dashboard Dashboards (ui-dashboard.dashboards.manage)            |data      |app-platform-complete-2.5.3|manage |
+|Dashboard: Dashboard administrator|UI-Dashboard Dashboards Admin (ui-dashboard.dashboards.admin.manage)|data      |app-platform-complete-2.5.3|manage |
 
 ### Dashboard access levels
 
@@ -53,6 +60,7 @@ The following are the user access levels that can be granted for a dashboard:
 * **View.** This allows the user to view the dashboard, including the widgets on the dashboard and the user access list for the dashboard, but not make any changes to the dashboard name or description, the widgets on the dashboard or the user access list for the dashboard.
 * **Edit.** This allows the user the same dashboard viewing rights as the View access level and additionally allows the user to edit the dashboard name and description and add, remove or edit widgets on the dashboard. It does not allow the user to make any changes to the user access list for the dashboard.
 * **Manage.** This allows the user the same view and edit rights as the Edit access level and additionally allows the user to add, remove and edit user access levels to the dashboard and to delete the dashboard.
+
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](< ref "/platform_essentials_keyboard_shortcuts.md" >) for more information.

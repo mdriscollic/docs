@@ -17,7 +17,7 @@ Definition of terms related to the Licenses app:
 *   **Organization.** Any institution with which your library interacts (this may or may not be an institution from which you purchase materials). The organizations associated with licenses are generally the licensors or a consortium.
 
 
-## Permissions
+## Permissions and Capabilities
 
 The permissions listed below allow you to interact with the Licenses app and determine what you can or cannot do within the app. You can assign permissions to users in the Users app. If none of these permissions are assigned to a user, they are unable to see the Licenses app or any related information.
 
@@ -40,6 +40,22 @@ If you want to link or view organizations and/or internal contacts in a license 
 *   **Organizations: Interface usernames and passwords: view.** This permission allows the user to view the usernames and passwords that appear in the Interface section.
 *   **Users: Can view user profile.**
 
+
+
+The Capability sets listed below allow you to interact with the Licenses app and determine what you can or cannot do within the app. You can assign Capability sets to users in the section **Authorization roles** of the Settings app. 
+
+|permissionDisplayName (OKAPI)                         |Capability/Capability Set (EUREKA)                            |Type      |ApplicationID              |Action | 
+|------------------------------------------------------|--------------------------------------------------------------|----------|---------------------------|-------|
+|Licenes: Search & view licenses                       |UI-Licenses Licenses (ui-licenses.licenses.view)              |data      |app-platform-complete-2.5.3|view   |
+|Licenses: Edit licenses                               |UI-Licenses Licenses (ui-licenses.licenses.edit)              |data      |app-platform-complete-2.5.3|edit   |
+|Licenses: Delete licenses                             |UI-Licenses Licenses (ui-licenses.licenses.delete)            |data      |app-platform-complete-2.5.3|delete |
+|Licenses: File download                               |UI-Licenses Licenses File (ui-licenses.licenses.file.download)|procedural|app-platform-complete-2.5.3|execute|
+|Settings (Licenses): Manage pick lists and values     |UI-Licenses Picklists (ui-licenses.picklists.manage)          |data      |app-platform-complete-2.5.3|manage   |
+|Settings (Licenses): Manage license terms             |UI-Licenses Terms                                             |data      |app-platform-complete-2.5.3|manage   |
+|Organizations: View                                   |UI-Organizations (ui-organizations.view)                      |data      |app-acquisitions-1.0.28    |view   |
+|Organizations: Interface usernames and passwords: view|UI-Organizations Creds (ui-organizations.creds.view)          |data      |app-acquisitions-1.0.28    |view   |
+|Users: Can view user profile                          |UI-Users (ui-users.view)                                      |data      |app-platform-complete-2.5.3|view   |
+    
 
 ## Keyboard shortcuts
 Keyboard shortcuts allow you to perform actions in this app using the keyboard.  See [Platform essentials > Keyboard shortcuts](../../platform-essentials/keyboard-shortcuts/keyboardshortcuts/) for more information.
