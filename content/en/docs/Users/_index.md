@@ -408,7 +408,7 @@ A **sponsor** is a user who authorizes another user to borrow library materials 
     -  **Proxy can request for the sponsor**.
         - *Yes*: The **Proxy** can place requests for materials on behalf of the **Sponsor**.
         - *No*: The **Proxy** cannot place requests for material on behalf of the **Sponsor**.
-    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library. (Functionality to send notifications to the proxy is pending [UXPROD-3937](https://folio-org.atlassian.net/browse/UXPROD-3937)).
+    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library. (Functionality to send notifications to the proxy is pending [UXPROD-3937](https://folio-org.atlassian.net/browse/UXPROD-3937).)
  
 6. Click **Add**.
 7. Click **Save & Close**. The **Sponsor** is added to the user record.
