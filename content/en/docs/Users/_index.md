@@ -105,7 +105,7 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 -  **Patron group (required).** Select a patron group to assign to the user. Patron groups are classes of library users configured in [Settings \> Users \> Patron Groups](../settings/settings_users/settings_users/#settings--users--patron-groups).
 -  **Status (required).** Select a status for the user: **Active** or **Inactive.** A user's status is tied to the expiration date set on their user record. When a **Patron Group** is selected, the **Status** automatically defaults to **Active**.
     -  **Active** status indicates current affiliation, employment, or enrollment at the library's institution. 
-    -  **Inactive** status indicates that the expiration date on the user's record has passed or the user is no longer affiliated, employed, or enrolled at the library's institution.
+    -  **Inactive** status indicates that the expiration date on the user's record has passed or the user is no longer affiliated, employed, or enrolled at the library's institution. An inactive user cannot log in to FOLIO, checkout or renew an item, or place a request. Patron notices continue to be sent to inactive patrons, and open fines continue to be included in transfer reports.
 -  **Expiration date.** The expiration date determines when a user's status is scheduled to change from **Active** to **Inactive**. Expiration date is optional and this field may be left blank. For information on editing an expiration date, see [Edit an expiration date](#edit-an-expiration-date).
 -  **Barcode.** The barcode number for the user's library card. Type the barcode number in the **Barcode** field. 
 -  **User Type.** Select the user type: **Patron** or **Staff**. This field is required in [ECS-enabled tenants](../consortia/). This field is also required for non-ECS-enabled tenants using [Reading Room Access](../access/reading-room/reading_room/). Otherwise, use of the **User type** field is optional.
@@ -408,7 +408,7 @@ A **sponsor** is a user who authorizes another user to borrow library materials 
     -  **Proxy can request for the sponsor**.
         - *Yes*: The **Proxy** can place requests for materials on behalf of the **Sponsor**.
         - *No*: The **Proxy** cannot place requests for material on behalf of the **Sponsor**.
-    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library.
+    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library. (Functionality to send notifications to the proxy is pending [UXPROD-3937](https://folio-org.atlassian.net/browse/UXPROD-3937).)
  
 6. Click **Add**.
 7. Click **Save & Close**. The **Sponsor** is added to the user record.
@@ -431,7 +431,7 @@ A **Proxy** is a user who is authorized to borrow library materials on another u
     -  **Proxy can request for sponsor**. 
         -  *Yes*: The **Proxy** can place requests for materials on behalf of the **Sponsor**.
         -  *No*: The **Proxy** cannot place requests for material on behalf of the **Sponsor**.
-    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library.
+    -  **Notifications sent to**. Select whether **Proxy** or **Sponsor** should receive notifications from the library. (Functionality to send notifications to the proxy is pending UXPROD-3937.
 
 6. Click **Add.**
 7. Click **Save & Close**. The **Proxy** is added to the user record.
