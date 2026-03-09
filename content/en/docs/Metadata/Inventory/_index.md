@@ -844,6 +844,8 @@ When you search for a record in the Inventory App, the **Search** toggle is high
 
 You can search for instance, holdings, or items by clicking on either **Instance**, **Holdings**, or **Item** in the **Search & filter** pane. The elements available for searching and filtering are different based on your selection, but the **results always display instance records**.
 
+The results list contains instances that either match the instance search criteria or match instances containing holdings and/or items that match the search criteria.
+
 To search, first select the record type (instance, holdings, or item) then enter your search terms into the box and click **Search**. Use the drop-down list to select what you want to search:
 
 -   **Keyword (title, contributor, identifier, HRID, UUID)**. Keyword search through title, contributor, identifier, HRID, UUID fields.
