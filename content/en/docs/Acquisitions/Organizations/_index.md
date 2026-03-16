@@ -1,7 +1,7 @@
 ---
 title: "Organizations"
 linkTitle: "Organizations"
-date: 2024-05-08
+date: 2026-03-16
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -313,7 +313,7 @@ The information that you enter under Vendor information sets some of the default
 
 
 *   **Payment method.** The payment method that you want to appear as the default payment method for the vendor on an invoice. See [Invoices > Extended information](../invoices/#extended-information) for more information.
-*   **Vendor currencies.** The currencies accepted by the vendor.
+*   **Vendor currencies.** The currencies accepted by the vendor. This value will carry over to the purchase order lines (POL) and invoices associated with this vendor. Note: if multiple currencies are selected, the most recently selected currency will apply.
 *   **Expected activation interval.** The standard activation period for the vendor, in days. Note: The interval you enter here is used in the Activation due field in the E-resources details section of an order line associated with the vendor. For example, if you set the interval to 365, the Activation due field is populated with the date that falls one year from the date the order line is created.
 *   **Expected invoice interval.** The standard invoice interval for the vendor, in days. Currently, this information does not display on invoices.
 *   **Claiming interval.** The standard claim period for the vendor, in days. This value will carry over to the purchase order lines (POL) associated with this vendor. The default value may be overridden on an individual POL or receiving title. This interval represents how long after a piece's expected receipt date it should be marked 'Late' if the piece is not received.
