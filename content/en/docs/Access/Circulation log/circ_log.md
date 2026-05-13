@@ -68,8 +68,8 @@ In the **Search & filter** pane, click **Loan** and select any applicable filter
 * **Changed due date.** Include manual due date change actions.
 * **Patron info added.** Include patron info loan comment added actions.
 * **Staff info added.** Include staff info loan comment added actions.
-* **Checked out.** Include checked out actions.
-* **Checked out through override.** Include checked out using an override actions.
+* **Checked out.** Include checked out actions. Checked out through override actions are not included.
+* **Checked out through override.** Include checked out using an override actions. 
 * **Checked in.** Include checked in actions. The checked in items may or may not have been out on loan.
 * **Anonymized.** Include anonymized loan actions.
 * **Claimed returned.** Include claimed returned actions.
@@ -77,9 +77,11 @@ In the **Search & filter** pane, click **Loan** and select any applicable filter
 * **Declared lost.** Include declared lost actions.
 * **Marked as missing.** Include marked as missing actions.
 * **Recall requested.** Include requested as [recall](../../requests/requests/#request-types-and-statuses) actions.
-* **Renewed.** Include renewed actions.
+* **Renewed.** Include renewed actions. Renewed through override actions are not included.
 * **Renewed through override.** Include renewed using an override actions.
 * **Aged to lost.** Include aged to lost actions. The time in which an overdue item ages to lost is set up in the [Settings > Circulation > Lost item fee policies.](../../../settings/settings_circulation/settings_circulation/#creating-a-lost-item-fee-policy)
+* **In use.** Include [In use at location](../../checkin#For-use-at-location-check-in) actions.
+* **Held.** Include [Held at location](../../checkin#For-use-at-location-check-in) actions.
 
 The Circulation log app records some user block functionality, but it is not available through filters. To find when manual user blocks were created or deleted, search the description field for "Block" and apply other search/filter options as needed.
 
@@ -120,6 +122,7 @@ In the **Search & filter** pane, click **Request** and select any applicable fil
 * **Moved.** Include requests that were [moved from one item to another](../../requests/requests/#moving-an-item-level-request-to-another-item-on-the-same-instance).
 * **Queue position reordered.** Include [requests that were moved up or down in the request queue](../../requests/requests/#reordering-the-request-queue-for-an-item).
 
+There is no filter for requests created by overriding a patron block. To find these actions in the circulation log, export the circulation log and filter by Object = Request and Circ action = Created through override.
 
 ### Columns in the circulation log
 
