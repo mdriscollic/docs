@@ -179,7 +179,7 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
-   <td>ERM Comparisons
+   <td>ERM comparisons
    </td>
    <td>ERM comparisons is used to compare the contents of two different packages or agreements to check whether there are any overlaps in content.
    </td>
