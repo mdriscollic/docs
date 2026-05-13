@@ -179,6 +179,12 @@ tags: ["parenttopic"]
    </td>
   </tr>
   <tr>
+   <td>ERM Comparisons
+   </td>
+   <td>ERM comparisons is used to compare the contents of two different packages or agreements to check whether there are any overlaps in content.
+   </td>
+  </tr>
+  <tr>
    <td>Expiration date (patron blocks)
    </td>
    <td>The date at which the patron block is removed from the patron record, and the blocked privileges are restored to their user account.
