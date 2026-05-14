@@ -1,7 +1,7 @@
 ---
 title: "ERM comparisons"
 linkTitle: "ERM comparisons"
-date: 2024-12-06
+date: 2026-05-13
 weight: 15
 tags: ["parenttopic"]
 ---
@@ -96,7 +96,7 @@ To view a comparison report, click on the comparison whose report you would like
 * **Overlap.**
   * **None.** The e-resource does not overlap. The title is only found in one of the comparison points. No overlap will be displayed in a red color.
   * **Full.** The e-resource overlaps. The title including its metadata is found in both comparison points. Full overlap will be displayed in a green color.
-  * **Partly.** The e-resource is partly overlapping. The title is found in both comparison points but with differentiating metadata, e.g. the coverage or plattform-URL. Partly overlap will be displayed in an orange color.
+  * **Partial.** The e-resource is partly overlapping. The title is found in both comparison points but with differentiating metadata, e.g. the coverage or plattform-URL. Partial overlap will be displayed in an orange color.
 
 ## Deleting a comparison
 
