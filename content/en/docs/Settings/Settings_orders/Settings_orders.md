@@ -1,7 +1,7 @@
 ---
 title: "Settings > Orders"
 linkTitle: "Orders"
-date: 2025-04-24
+date: 2026-05-15
 weight: 200
 tags: ["subtopic"]   
 ---
@@ -9,11 +9,11 @@ tags: ["subtopic"]
 The Orders section of the Settings app is where you establish behavior around approving and opening orders, your closing order reasons, how orders interact with the Inventory app, order templates, order lines limits, PO number settings, custom fields, and routing lists.
 
 
-## Capabilities
+## Capabilities & capability sets
 
-The capabilities listed below allow you to interact with the Orders settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Orders settings or any related information.
+The capabilities and capability sets listed below allow you to interact with the Orders settings. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets are assigned to a user, they are unable to see the Orders settings or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
@@ -102,6 +102,26 @@ To create a new order template, follow the steps below.  To hide a field from vi
 2. In the order template window, select **Actions > Delete.**
 
 3. In the **Delete template** dialog, click **Delete**. A confirmation message appears and the template is deleted.
+
+## Settings > Orders > General > Order template categories
+FOLIO libraries may wish to expose specific order templates to third-party integrations. This can be achieved by the application of a category to an order template. 
+
+### Creating an order template category
+1.	Click **New**.
+2.	Enter a **Name** for the category.
+3.	Click **Save**.
+The new category will appear in the corresponding dropdown menu when creating or editing an order template.
+
+### Editing an order template category
+1.	Find the category you want to edit and click the **pencil icon**.
+2.	Edit the **Name**.
+3.	Click **Save**. The category is saved.
+
+### Deleting an order template category
+An order template category can be deleted only if it is no longer applied to any order templates. To delete an order template category, you must first check that no order templates are currently assigned that category.
+1.	Find the category you want to delete and click the **trash can icon**.
+2.	In the **Delete order template category** modal, click **Delete**. A confirmation message appears and the category is deleted.[
+
 
 
 ## Settings > Orders > General > Purchase order lines limit
