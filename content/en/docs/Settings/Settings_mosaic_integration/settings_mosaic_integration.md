@@ -1,7 +1,7 @@
 ---
 title: "Settings > Mosaic integration"
 linkTitle: "Mosaic integration"
-date: 2026-01-22
+date: 2026-05-15
 weight: 173
 tags: ["subtopic"]   
 ---
