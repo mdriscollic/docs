@@ -1,34 +1,36 @@
 ---
 title: "Settings > Acquisition units"
 linkTitle: "Acquisition units"
-date: 2025-04-16
+date: 2026-05-15
 weight: 10
 tags: ["subtopic"]   
 ---
 
 The Acquisition units section of the Settings app is where you can configure your acquisition units and assign users to the units you created.
 
-Acquisition units are an additional layer you can add to acquisitions records that restrict a user’s ability to interact with those records unless they have been assigned to that unit. While acquisition capabilities may allow a user to perform certain actions within a particular app to any record within that app, acquisition units can further limit user access to only individual records.
+Acquisition units are an additional layer you can add to acquisitions and ERM records that restrict a user’s ability to interact with those records unless they have been assigned to that unit. While acquisitions- and ERM-related capabilities may allow a user to perform certain actions within a particular app to any record within that app, acquisition units can further limit user access to only individual records.
 
-For example, a university that shares FOLIO across multiple independent libraries, such as a Law Library, Medical Center Library, and Undergraduate Library could set up separate acquisition units for each library and assign staff from each library to the appropriate unit. Only staff within an assigned acquisition unit could take allowed actions on orders, organizations, invoices, or funds that share the same acquisition unit assignment. Even if a Law Library user has authorization to create and delete records within the Finance app, they would still be restricted from creating or deleting a Medical Center Library fund if they are not assigned to the Medical Center Library acquisition unit.
+For example, a university that shares FOLIO across multiple independent libraries, such as a Law Library, Medical Center Library, and Undergraduate Library could set up separate acquisition units for each library and assign staff from each library to the appropriate unit. Only staff within an assigned acquisition unit could take allowed actions on agreements, licenses, orders, organizations, invoices, or funds that share the same acquisition unit assignment. Even if a Law Library user has authorization to create and delete records within the Finance app, they would still be restricted from creating or deleting a Medical Center Library fund if they are not assigned to the Medical Center Library acquisition unit.
 
 Acquisitions units can be applied to the following types of records in FOLIO:
 
+*   Agreements (inherited by associated agreement lines)
 *   Fiscal years
 *   Ledgers
 *   Groups
 *   Funds
-*   Invoices
-*   Orders
+*   Invoices (inherited by associated invoice lines)
+*   Licenses (inherited by associated amendments)
+*   Orders (inherited by associated order lines)
 *   Organizations
 *   Receiving titles
 
 
-## Capabilities
+## Capabilities & capability sets
 
-The capabilities listed below allow you to interact with the Acquisition units settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Acquisition units settings or any related information.
+The capabilities and capability sets listed below allow you to interact with the Acquisition units settings. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets are assigned to a user, they are unable to see the Acquisition units settings or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
@@ -96,7 +98,7 @@ Note: Users can be assigned to more than one acquisition unit.
 
 ## Deleting an acquisition unit
 
-Note: You cannot delete acquisition units that have users assigned to them. Acquisition units can be deleted if in use on records in acquisition apps. This may leave a broken reference on these records, so it is recommended to check for usage of the acquisition unit within these apps prior to deletion.
+Note: You cannot delete acquisition units that have users assigned to them. Acquisition units can be deleted if in use on records in acquisitions or ERM apps. This may leave a broken reference on these records, so it is recommended to check for usage of the acquisition unit within the supported apps prior to deletion.
 
 1. In the **Acquisition units** pane, find the acquisition unit you want to delete and select it.
 
