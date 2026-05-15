@@ -1,7 +1,7 @@
 ---
 title: "Settings > Invoices"
 linkTitle: "Invoices"
-date: 2025-04-16
+date: 2026-05-15
 weight: 140
 tags: ["subtopic"]   
 ---
