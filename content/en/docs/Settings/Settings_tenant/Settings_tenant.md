@@ -230,7 +230,7 @@ FOLIO libraries need at least one institution created to be able to populate ele
 
 
 1. In the Institutions pane, click **New**. 
-2. Enter a **Name** and **Code**. The name and code should be unique. FOLIO doesn’t stop you from making institutions with the same name and/or code, but it does cause problems for your staff in writing circulation rules.
+2. Enter a **Name** and **Code**. The name must be unique. FOLIO doesn’t stop you from making institutions with the same code, but it does cause problems for your staff in writing circulation rules.
 3. Click **Save**. The institution is created
 
 
@@ -268,7 +268,7 @@ FOLIO libraries need at least one institution and one campus to create elements 
 
 1. In the **Campuses** pane, select the **Institution** under which the campus should be created.
 2. Click **New**.
-3. Enter a **Name** and **Code**. The name and code should be unique. FOLIO doesn’t stop you from making campuses with the same name and/or code, but it does cause problems for your staff in writing circulation rules.
+3. Enter a **Name** and **Code**. The name must be unique. FOLIO doesn’t stop you from making campuses with the same code, but it does cause problems for your staff in writing circulation rules.
 4. Click **Save**. The campus is created.
 
 
@@ -309,7 +309,7 @@ FOLIO libraries need at least one institution, campus, and library to be able to
 1. In the **Libraries** pane, select the **Institution** under which the library should be created.
 2. Select the **Campus** under which the library should be created.
 3. Click **New**.
-4. Enter a **Name** and **Code**. The name and code should be unique. FOLIO doesn’t stop you from making libraries with the same name and/or code, but it does cause problems for your staff in writing circulation rules.
+4. Enter a **Name** and **Code**. The name must be unique. FOLIO doesn’t stop you from making libraries with the same code, but it does cause problems for your staff in writing circulation rules.
 5. Click **Save**. The library is created.
 
 
