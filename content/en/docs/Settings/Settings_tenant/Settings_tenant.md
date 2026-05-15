@@ -221,7 +221,7 @@ Holdings must have a permanent location value. A holding may also have a tempora
 ## Settings \> Tenant \> Institutions
 
 Use this setting to configure your institutions. An institution is the highest level of the FOLIO location hierarchy, and typically represents legal entities such as the college or university.
-
+The institutions table displays the name of the institution, code, last updated date/user and the number of campuses assigned to an institution.  
 FOLIO libraries need at least one institution created to be able to populate elements down the hierarchy.
 
 
@@ -258,6 +258,7 @@ Note: If the institution has an associated campus, you cannot delete it.
 ## Settings > Tenant > Campuses
 
 Use this setting to configure your campuses. A campus is the second highest level of the FOLIO location hierarchy, and typically represents distinct spaces or domains within an institution, like a downtown campus or online program.
+To view campuses, select an Institution from the dropdown menu. When you select an institution, you will see the campus name, code, last updated by date/user, and number of assigned libraries for each campus assigned to the selected institution.  
 
 FOLIO libraries need at least one institution and one campus to create elements further down the location hierarchy.
 
@@ -298,6 +299,7 @@ Note: If the campus has an associated library, you cannot delete it.
 ## Settings \> Tenant \> Libraries
 
 Use this setting to configure your libraries. A **library** is the third level of the FOLIO Location hierarchy, and typically represents physical buildings on a physical campus, or domains of service in a virtual campus, like a subject-specific library or an annex.
+To view libraries select an institution and a campus from the drop down menus.  When you select a campus, you will see the campus name, code, last updated by date/user, and number of assigned locations for each library assigned to the selected campus.  
 
 FOLIO libraries need at least one institution, campus, and library to be able to create the final element of the location tree.
 
