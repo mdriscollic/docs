@@ -1,7 +1,7 @@
 ---
 title: "Organizations"
 linkTitle: "Organizations"
-date: 2026-03-16
+date: 2026-05-15
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -17,11 +17,11 @@ Definition of terms related to the Organizations app:
 *   **Vendor.** Any institution from which your library purchases materials.
 
 
-## Capabilities
+## Capabilities & capability sets
 
-The capabilities listed below allow you to interact with the Organizations app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Organizations app or any related information.
+The capabilities and capability sets listed below allow you to interact with the Organizations app and determine what you can or cannot do within the app. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets  are assigned to a user, they are unable to see the Organizations app or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
@@ -443,7 +443,7 @@ You can search for organizations in the **Search & filter** pane. To search for 
 You can also search for organizations by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information.
 
 
-### Organization status
+**Organization status**
 
 To filter organizations by their status, select one of the following:
 
@@ -454,7 +454,7 @@ To filter organizations by their status, select one of the following:
 *   **Pending.** Organizations that are not yet available for use. Pending could indicate that the organization record is not yet complete.
 
 
-### Types
+**Types**
 
 To search for organizations assigned with specific types, follow these steps:
 
@@ -463,7 +463,7 @@ To search for organizations assigned with specific types, follow these steps:
 2. Select the type(s) from the drop-down list. Your results appear in the Organizations pane.
 
 
-### Tags
+**Tags**
 
 To search for organizations assigned with specific tags, follow these steps:
 
@@ -471,7 +471,7 @@ To search for organizations assigned with specific tags, follow these steps:
 
 2. Select the tag(s) from the drop-down list. Your results appear in the Organizations pane.
 
-### Is donor
+**Is donor**
 
 To filter organizations by whether or not they are a donor, select one of the following:
 
@@ -480,7 +480,7 @@ To filter organizations by whether or not they are a donor, select one of the fo
 *   **Yes.** Organizations that are donors (have the Donor checkbox selected).
 *   **No.** Organizations that are not donors.
 
-### Is vendor
+**Is vendor**
 
 To filter organizations by whether or not they are a vendor, select one of the following:
 
@@ -490,7 +490,7 @@ To filter organizations by whether or not they are a vendor, select one of the f
 *   **No.** Organizations that are not vendors.
 
 
-### Country
+**Country**
 
 To search for organizations with offices in a specific country, follow these steps:
 
@@ -498,8 +498,7 @@ To search for organizations with offices in a specific country, follow these ste
 
 2. Select the country from the drop-down list. Your search results appear in the Organizations pane.
 
-
-### Languages
+**Languages**
 
 To search for organizations that communicate in a specific language, follow these steps:
 
@@ -509,7 +508,7 @@ To search for organizations that communicate in a specific language, follow thes
 
 
 
-### Payment method
+**Payment method**
 
 To filter organizations by their default payment method, as indicated in the [Vendor information](#vendor-information) section of a vendor record, select one of the following options:
 
@@ -525,7 +524,7 @@ To filter organizations by their default payment method, as indicated in the [Ve
 *   **Other.** Default payment method of other.
 
 
-### Acquisitions unit
+**Acquisitions unit**
 
 To search for organizations to which one or more acquisitions units have been assigned, follow these steps:
 
@@ -533,7 +532,7 @@ To search for organizations to which one or more acquisitions units have been as
 
 2. Select the acquisitions unit from the drop-down list. The search results appear in the Organizations pane.
 
-### Created by
+**Created by**
 
 To search for organizations created by a specific user, follow these steps:
 
@@ -546,7 +545,7 @@ To search for organizations created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Organizations pane.
 
 
-### Date created
+**Date created**
 
 To search for organizations based on the date they were created, follow these steps:
 
@@ -556,7 +555,7 @@ To search for organizations based on the date they were created, follow these st
 
 3. Click **Apply**. The search results appear in the Organizations pane.
 
-### Updated by
+**Updated by**
 
 To search for organizations updated by a specific user, follow these steps:
 
@@ -569,7 +568,7 @@ To search for organizations updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Organizations pane.
 
 
-### Date updated
+**Date updated**
 
 To search for organizations based on the date they were created, follow these steps:
 
