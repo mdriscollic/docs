@@ -9,11 +9,11 @@ tags: ["subtopic"]
 The Invoices section of the Settings app is where you establish one click approvals, create preset adjustments, manage and configure batch groups, and control voucher settings. 
 
 
-## Capabilities
+## Capabilities& capability sets
 
-The capabilities listed below allow you to interact with the Invoices settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Invoices settings or any related information.
+The capabilities and capability sets listed below allow you to interact with the Invoices settings. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets are assigned to a user, they are unable to see the Invoices settings or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
