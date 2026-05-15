@@ -1050,7 +1050,7 @@ When a [transfer of money](#transferring-money-between-funds) is made between tw
 
 ## Deleting a fiscal year, ledger, group, or fund
 
-Note: Financial structure records cannot be deleted if they have other records assigned to them. 
+Note: Financial structure records cannot be deleted if they have other records assigned to them. Note: funds cannot be deleted if they were part of a fiscal year rollover, including test rollovers.
 
 
 1. In the **Search & filter** pane, click the appropriate option: **Fiscal year**, **Ledger**, **Group**, or **Fund**.
