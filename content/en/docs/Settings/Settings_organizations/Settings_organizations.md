@@ -1,7 +1,7 @@
 ---
 title: "Settings > Organizations"
 linkTitle: "Organizations"
-date: 2025-04-24
+date: 2026-05-15
 weight: 210
 tags: ["subtopic"]   
 ---
@@ -9,11 +9,11 @@ tags: ["subtopic"]
 The Organizations section of the Settings app is where you establish the categories you want to use to classify the contact people and contact information you add to an organization, any types you may wish to use to classify the organization records for filtering purposes, and banking information related to vendors.
 
 
-## Capabilities
+## Capabilities & capability sets
 
-The capabilities listed below allow you to interact with the Organizations settings. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Organizations settings or any related information.
+The capabilities and capability sets listed below allow you to interact with the Organizations settings. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets are assigned to a user, they are unable to see the Organizations settings or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
@@ -26,9 +26,12 @@ It is recommended that you select all applications prior to assigning capabiliti
 
 ## Settings \> Organizations \> Categories
 
-Categories are a way to classify the contact people and contact information you add to an organization. Categories are defined by your library and can be used to group contact information and contact people to make them easier to find and identify. You need to first add the categories in the Settings app in order to assign them to organization contacts.
+Categories are a way to classify the contact people and contact information you add to an organization. Categories are defined by your library and can be used to group contact information and contact people to make them easier to find and identify. Examples of categories are: Sales, Support, Accounts Payable.
 
-For more information on adding contact information and contact people to organizations, see [Contact information](../../organizations/#contact-information) and [Contact people](../../organizations/#contact-people).
+You need to first add the categories in the Settings app in order to assign them to organization contacts.
+
+For more information on adding contact information and contact people to organizations, see [Contact information](../../acquisitions/organizations/#contact-information) and [Contact people](../../acquisitions/organizations/#contact-people).
+
 
 
 ### Creating a new category
@@ -83,12 +86,13 @@ Libraries may create controlled lists of organization types to facilitate filter
 
 
 ### Deleting a type
+Note: Types cannot be deleted when in use on an Organization record. You will see an error: "This type cannot be deleted, as it is in use by one or more records."
 
 1. Find the type you want to delete.
 
 2. Click the **trash can icon**.
 
-3. In the **Delete Type** dialog, click **Delete**. The type is deleted and a confirmation message appears. Note: Types cannot be deleted when in use on an Organization record. You will see an error: "This type cannot be deleted, as it is in use by one or more records."
+3. In the **Delete Type** dialog, click **Delete**. The type is deleted and a confirmation message appears. 
 
 ## Settings \> Organizations \> Banking information
 Libraries may wish to record banking information to use for payments to vendors. To activate the **Banking information** accordion on Organization records, select the **Enable banking information** checkbox and click **Save**. This accordion will only be accessible to staff users with corresponding capabilities to view/interact with Banking information.
@@ -115,19 +119,21 @@ If **Banking information** is enabled, a library can configured account types to
 
 
 ### Deleting an account type
+Note: Account types can be deleted while in use on an organization record. The field will appear empty within the Banking information.
 
 1. Find the account type you want to delete.
 
 2. Click the **trash can icon**.
 
-3. In the **Delete account type** dialog, click **Delete**. The account type is deleted and a confirmation message appears. Note: Account types can be deleted while in use on an organization record. The field will appear empty within the Banking information.
+3. In the **Delete account type** dialog, click **Delete**. The account type is deleted and a confirmation message appears. 
 
 ## Settings \> Organizations \> Number generator options
 Use this setting to enable Number generators for Code in Organizations.
 
-Three options are available:
-* Number generator off: the vendor code can be filled manually only.
-* Number generator on, editable: the vendor code can be filled using the generator and be edited or filled manually.
-* Number generator on, fixed: the vendor code can be filled using the generator only.
-  
-For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../../settings_service_interaction/settings_service_interaction/).
+Choose the desired option from the dropdown menu:
+* **Off.** The vendor code can be manually entered only. No **Generate vendor code** button is available.
+* **On, field editable.** The **Generate vendor code** button is available for use, but the field remains editable for manual entry or update.
+* **On, field not editable.** The **Generate vendor code** button is available and must be used to fill in the code field.
+
+For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../../settings_service_interaction/settings_service_interaction/ #settings--service-interaction--number-generator-sequences)
+
