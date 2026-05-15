@@ -10,11 +10,11 @@ tags: ["subtopic"]
 
 The Mosaic integration section of the Settings app allows you to define your configuration for an integration with the provider Mosaic. This integration supports the creation of FOLIO orders initiated from the Mosaic platform. This integration applies only to firm orders for electronic monographs. For more information on the Mosaic integration with FOLIO, please review [this FAQ on EBSCO Connect](https://connect.ebsco.com/s/article/Mosaic-Integration-with-FOLIO-Frequently-Asked-Questions?language=en_US). Please note: the Mosaic integration was developed to be compatible with FOLIO’s Eureka platform.
 
-## Capability Sets
+## Capabilities & capability Sets
 
-The capability sets listed below allow you to interact with the Mosaic integration settings. You can assign capability sets to users via user roles. If none of these capability sets are assigned to a user, they are unable to see the Mosaic integration settings or any related information.
+The capabilities and capability sets listed below allow you to interact with the Mosaic integration settings. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets are assigned to a user, they are unable to see the Mosaic integration settings or any related information.
 
-All capability sets listed below are part of the app-mosaic application. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+All capabilities and capability sets listed below are part of the app-mosaic application. It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 
 |**Permission Display name** | **Resource** | Type | Action | Description |
@@ -34,11 +34,11 @@ Libraries planning to implement the Mosaic integration will be required to work 
 Once configuration is completed with the Mosaic team, a library may need to update the default order template referenced by the integration within FOLIO. 
 
 **Settings > Mosaic integration > Configuration options**
-The Mosaic integration uses a Default order template to populate fields in the order and purchase order line on the resulting record in FOLIO. 
+The Mosaic integration uses an order template to populate fields in the order and purchase order line on the resulting record in FOLIO. 
 
-The default template that is used is called **Mosaic eBooks Default**. The contents of this template may be viewed by accessing the template under [Settings > Orders > Order templates](../../settings_orders/settings_orders/#settings--orders--general--order-templates).
+Libraries may [create an order template] (../../settings_orders/settings_orders/#creating-an-order-template) for use with the integration or click the **Generate integration templates** button to have the system create the template and organization record for use with the integration. Note: system-generated templates and organization records may be edited and deleted by authorized users.
 
-To change the default template to be used by the Mosaic integration:
+To select or change the default template to be used by the Mosaic integration:
 1.	Ensure the template has been created under [Settings > Orders > Order templates](../../settings_orders/settings_orders/#settings--orders--general--order-templates). 
 2.	Open Settings > Mosaic integration > Configuration options.
 3.	Select the desired template from the dropdown menu.
