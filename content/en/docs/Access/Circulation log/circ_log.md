@@ -69,7 +69,7 @@ In the **Search & filter** pane, click **Loan** and select any applicable filter
 * **Patron info added.** Include patron info loan comment added actions.
 * **Staff info added.** Include staff info loan comment added actions.
 * **Checked out.** Include checked out actions. Checked out through override actions are not included.
-* **Checked out through override.** Include checked out using an override actions. 
+* **Checked out through override.** Include checked out using an override actions.
 * **Checked in.** Include checked in actions. The checked in items may or may not have been out on loan.
 * **Anonymized.** Include anonymized loan actions.
 * **Claimed returned.** Include claimed returned actions.
