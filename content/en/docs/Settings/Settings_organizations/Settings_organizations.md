@@ -1,7 +1,7 @@
 ---
 title: "Settings > Organizations"
 linkTitle: "Organizations"
-date: 2026-05-15
+date: 2026-05-18
 weight: 210
 tags: ["subtopic"]   
 ---
@@ -135,5 +135,5 @@ Choose the desired option from the dropdown menu:
 * **On, field editable.** The **Generate vendor code** button is available for use, but the field remains editable for manual entry or update.
 * **On, field not editable.** The **Generate vendor code** button is available and must be used to fill in the code field.
 
-For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../../settings_service_interaction/settings_service_interaction/ #settings--service-interaction--number-generator-sequences)
+For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../../settings_service_interaction/settings_service_interaction/#settings--service-interaction--number-generator-sequences)
 
