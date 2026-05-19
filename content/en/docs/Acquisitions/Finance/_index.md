@@ -234,16 +234,17 @@ You can search for fiscal years, ledgers, groups, or funds by clicking on either
 *   **Code.** A unique identifier for the fiscal year, ledger, group, or fund.
 *   **External account number.** The identifier for this account in an external financial system. Appears only on the fund pane. 
 
+### Filtering fiscal years, ledgers, groups or funds
 You can also search for fiscal year, ledger, group, or fund by selecting any of the filters in the **Search & filter** pane when in the appropriate Finance pane. The filters available vary depending on whether you are searching for a fiscal year, ledger, group, or fund.  
 
-**Acquisition unit**
+#### Acquisition unit
 
 To search for fiscal years, ledgers, groups, or funds assigned with a specific acquisition unit, follow these steps:
 
 1. In the **Search & filter** pane, click **Acquisition unit**.
 2. Select the acquisition unit from the drop-down list. The search results appear in the Fiscal year, Ledger, Group, or Fund pane.
 
-**Status**
+#### Status
 
 To filter ledgers, groups, or funds by their status, select one of the following:
 
@@ -252,14 +253,14 @@ To filter ledgers, groups, or funds by their status, select one of the following
 *   **Inactive.** Ledger, group, or fund previously used by your library.
 *   **Frozen.** Ledger, group, or fund that is paused.
 
-**Ledger**
+#### Ledger
 
 To search for funds belonging to a certain ledger, follow these steps:
 
 1. In the **Search & filter** pane, click **Ledger**.
 2. Select the ledger from the drop-down list. The funds are listed in the results pane.
 
-**Type**
+#### Type
 
 To search for funds by type, follow these steps:
 
@@ -268,7 +269,7 @@ To search for funds by type, follow these steps:
 2. Select the fund type from the drop-down list. The funds are listed in the result pane.
 
 
-**Group**
+#### Group
 
 To search for funds assigned to a group, follow these steps:
 
@@ -276,7 +277,7 @@ To search for funds assigned to a group, follow these steps:
 1. In the **Search & filter** pane, click **Group**.
 2. Select the group from the drop-down list. The funds are listed in the result pane.
 
-**Tags**
+#### Tags
 
 To search for funds assigned specific tags, follow these steps:
 
