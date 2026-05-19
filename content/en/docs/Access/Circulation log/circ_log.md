@@ -12,7 +12,7 @@ The Circulation log app allows you to view and search for some circulation actio
 The permissions / capabilities listed below allow you to interact with the Circulation log app and determine what you can and cannot do within the app. You can assign User roles to users in the Users app, or in the Settings > Authorization roles app. You need to assign at least one of the following capabilities to a user to enable the user to see the Circulation log app or any related information.
 
 
-To add a capability or capability set to an Authorization role: 
+To add a capability or capability set to an Authorization role:
 
 Select all applications to ensure access to all capabilities.
 1. Open the Capability sets or Capability accordion (see description in the table below for whether to look for a Capability set or a Capability).
