@@ -272,10 +272,11 @@ You can search for invoices in the **Search & filter** pane. To search for invoi
 *   **PO number.** The purchase order number associated with the invoice.
 *   **Accounting code.** The accounting code for the invoice.
 
+### Filtering invoices
 You can also search for invoices by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information on the filters.
 
 
-**Status**
+#### Status
 
 In the **Search & filter** pane, click **Status** and select any applicable filters:
 
@@ -287,7 +288,7 @@ In the **Search & filter** pane, click **Status** and select any applicable filt
 *   **Paid.** Invoices that have been paid for by your library.  Use the Action menu to Pay an invoice.
 *   **Cancelled.** Invoices that have been cancelled by your library.  
 
-**Vendor name**
+#### Vendor name
 
 To search for invoices created for a specific vendor, follow these steps:
 
@@ -301,7 +302,7 @@ To search for invoices created for a specific vendor, follow these steps:
 For information on searching for organizations, see [Organizations > Searching for an organization](../organizations/#searching-for-an-organization).
 
 
-**Invoice date**
+#### Invoice date
 
 To search for invoices based on their invoice date, follow these steps:
 
@@ -312,7 +313,7 @@ To search for invoices based on their invoice date, follow these steps:
 3. Click **Apply**. The search results appear in the Invoices pane.  
 
 
-**Acquisition unit**
+#### Acquisition unit
 
 To search for invoices assigned to a specific acquisition unit, follow these steps:
 
@@ -321,7 +322,7 @@ To search for invoices assigned to a specific acquisition unit, follow these ste
 1. In the **Search & filter** pane, click **Acquisition unit.**
 2. Select the acquisition unit you want from the drop-down list. The search results appear in the Invoices pane.  
 
-**Tags**
+#### Tags
 
 To search for invoices assigned with specific tags, follow these steps:
 
@@ -331,7 +332,7 @@ To search for invoices assigned with specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. The search results appear in the Invoices pane.  
 
 
-**Payment due**
+#### Payment due
 
 To search for invoices by payment due date, follow these steps:
 
@@ -342,7 +343,7 @@ To search for invoices by payment due date, follow these steps:
 3. Click **Apply**. The search results appear in the Invoices pane.  
 
 
-**Payment method**
+#### Payment method
 
 In the **Search & filter** pane, click **Payment method** and select any applicable filters:
 
@@ -358,7 +359,7 @@ In the **Search & filter** pane, click **Payment method** and select any applica
 *   **Other.** Invoices paid with a different method than those listed above.
 
 
-**Approval date**
+#### Approval date
 
 To search for invoices by approval date, follow these steps:
 
@@ -369,7 +370,7 @@ To search for invoices by approval date, follow these steps:
 3. Click **Apply**. The search results appear in the Invoices pane.  
 
 
-**Source**
+#### Source
 
 To filter for invoices by their source, select one or more of the following:
 
@@ -381,7 +382,7 @@ To filter for invoices by their source, select one or more of the following:
 *   **MARC.** Invoices imported through MAchine-Readable Cataloging format record import.
 
 
-**Export to accounting**
+#### Export to accounting
 
 To filter for invoices based on the **Export to accounting** checkbox, select:
 
@@ -391,7 +392,7 @@ To filter for invoices based on the **Export to accounting** checkbox, select:
 *   **No.** Invoices that do not have the **Export to accounting** checkbox selected.
 
 
-**Payment date** 
+#### Payment date
 
 To search for invoices by payment date, follow these steps:
 
@@ -401,7 +402,7 @@ To search for invoices by payment date, follow these steps:
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Invoices pane.  
 
-**Batch group**
+#### Batch group
 
 To search for invoices by batch group assignment, follow these steps:
 
@@ -411,7 +412,7 @@ To search for invoices by batch group assignment, follow these steps:
 2. Select the batch group name from the drop-down list. The search results appear in the Invoices pane.  
 
 
-**Fund code**
+#### Fund code
 
 To search for invoices by fund code, follow these steps:
 
@@ -421,7 +422,7 @@ To search for invoices by fund code, follow these steps:
 2. Select the fund code name from the drop-down list. The search results appear in the Invoices pane.  
 
 
-**Expense class**
+#### Expense class
 
 To search for invoices by expense class, follow these steps:
 
@@ -431,7 +432,7 @@ To search for invoices by expense class, follow these steps:
 2. Select the expense class name from the drop-down list. The search results appear in the Invoices pane.  
 
 
-**Lock total**
+#### Lock total
 
 To search for invoices by lock total amount, follow these steps:
 
@@ -440,28 +441,28 @@ To search for invoices by lock total amount, follow these steps:
 1. Enter a numeric amount, with or without decimals, in the **From** box and a numeric amount in the **To** box. To find all invoices where the lock total amount falls within a range of values, enter the low and high ends of the range in the **From** and **To** boxes. To find invoices matching a specific amount value, enter the same amount value in the **From** and **To** boxes.
 2. Click **Apply**. The search results appear in the Invoices pane.  
 
-**Total amount**
+#### Total amount
 
 To search for invoices by calculated total amount, follow these steps:
 
 1. Enter a numeric amount, with or without decimals, in the **From** box and a numeric amount in the **To** box. To find all invoices where the calculated total amount falls within a range of values, enter the low and high ends of the range in the **From** and **To** boxes. To find invoices matching a specific amount value, enter the same amount value in the **From** and **To** boxes.
 2. Click **Apply**. The search results appear in the Invoices pane.
    
-**Fiscal year**
+#### Fiscal year
 
 To search for invoices by the fiscal year assigned to the record, follow these steps:
 
 1. In the **Search & filter** pane, click **Fiscal year**.
 2. Select the fiscal year code from the drop-down list. The search results appear in the Invoices pane.
 
-**Created by**
+#### Created by
 To search for invoices based on the user who created it, follow these steps:
 1. In the **Search & filter** pane, click **Created by.**
 2. Click **Find User**.
 3. In the **Select User** modal, use the search and filter options to locate the user.
 4. Click on the user record. The search results appear in the Invoices pane.
 
-**Date created**
+#### Date created
 
 To search for invoices based on the date they were created, follow these steps:
 
@@ -469,28 +470,28 @@ To search for invoices based on the date they were created, follow these steps:
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Invoices pane.
 
-**Updated by**
+#### Updated by
 To search for invoices based on the user who last updated it, follow these steps:
 1. In the **Search & filter** pane, click **Updated by.**
 2. Click **Find User**.
 3. In the **Select User** modal, use the search and filter options to locate the user.
 4. Click on the user record. The search results appear in the Invoices pane.
 
-**Date updated**
+#### Date updated
 
 To search for invoices based on the date they were last updated, follow these steps:
 1. In the **Search & filter** pane, click **Date updated.**
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Invoices pane.  
 
-**Created by (Invoice Line)**
+#### Created by (Invoice Line)
 To search for invoices based on the user who created it, follow these steps:
 1. In the **Search & filter** pane, click **Created by (Invoice Line).**
 2. Click **Find User**.
 3. In the **Select User** modal, use the search and filter options to locate the user.
 4. Click on the user record. The search results appear in the Invoices pane.
 
-**Date created (Invoice Line)**
+#### Date created (Invoice Line)
 
 To search for invoices based on the date they were created, follow these steps:
 
@@ -498,14 +499,14 @@ To search for invoices based on the date they were created, follow these steps:
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Invoices pane.
 
-**Updated by (Invoice Line)**
+#### Updated by (Invoice Line)
 To search for invoices based on the user who last updated it, follow these steps:
 1. In the **Search & filter** pane, click **Updated by (Invoice Line).**
 2. Click **Find User**.
 3. In the **Select User** modal, use the search and filter options to locate the user.
 4. Click on the user record. The search results appear in the Invoices pane.
 
-**Date updated (Invoice Line)**
+#### Date updated (Invoice Line)
 
 To search for invoices based on the date they were last updated, follow these steps:
 1. In the **Search & filter** pane, click **Date updated (Invoice Line).**
