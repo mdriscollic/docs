@@ -171,8 +171,9 @@ You can search for orders to be received in the **Search & filter** pane. To sea
 
 You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information.
 
+### Filtering receiving titles
 
-**Order status**
+#### Order status
 
 In the **Search & filter** pane, click **Order status** and select the applicable value from the dropdown:
 
@@ -185,7 +186,7 @@ In the **Search & filter** pane, click **Order status** and select the applicabl
 Note: Receiving is only possible if an order is in "Open" or "Closed" status. If attempting to receive against a closed order, a pop-up window will appear that says "The order linked to this Title is closed. Are you sure you want to receive this piece(s)?"
 
 
-**Vendor**
+#### Vendor
 
 To search for orders from a specific vendor, follow these steps:
 
@@ -197,7 +198,7 @@ To search for orders from a specific vendor, follow these steps:
 4. Select the vendor you want to filter by. The search results appear in the Receiving pane.
 
 
-**Order type**
+#### Order type
 
 In the **Search & filter** pane, click **Order type** and select the applicable value from the dropdown:
  
@@ -207,7 +208,7 @@ In the **Search & filter** pane, click **Order type** and select the applicable 
 *   **Ongoing.** Ongoing orders that span multiple years.
 
 
-**Material type**
+#### Material type
 
 To search for orders of a specific material type, follow these steps:
 
@@ -217,7 +218,7 @@ To search for orders of a specific material type, follow these steps:
 2. Select the material type from the drop-down list. The search results appear in the Receiving pane. 
 
 
-**Order format**
+#### Order format
 
 In the **Search & filter** pane, click **Order format** and select any applicable filters:
 
@@ -229,7 +230,7 @@ In the **Search & filter** pane, click **Order format** and select any applicabl
 *   **Other.** Order lines containing a different type of resource.
 
 
-**Tags**
+#### Tags
 
 To search for orders assigned specific tags, follow these steps:
 
@@ -239,7 +240,7 @@ To search for orders assigned specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. The search results appear in the Receiving pane.
 
 
-**Location**
+#### Location
 
 To search for orders assigned to a specific permanent location, follow these steps:
 
@@ -251,7 +252,7 @@ To search for orders assigned to a specific permanent location, follow these ste
 4. Click **Save and close**. The search results appear in the Receiving pane.
 
 
-**Receiving status**
+#### Receiving status
 
 In the **Search & filter** pane, click **Receiving status** and select any applicable filters:
 
@@ -261,13 +262,13 @@ In the **Search & filter** pane, click **Receiving status** and select any appli
 *   **Received.** The order has arrived and been received. 
 
 
-**Bindery active**
+#### Bindery active
 In the **Search & filter** pane, click **Bindery active** and select any applicable filters:
 
 *   **Yes.** The bindery box is selected on the corresponding order line and the material is eligible for binding.
 *   **No.** The bindery box is not selected on the corresponding order line and the material is not eligible for binding.
   
-**Acquisition unit**
+#### Acquisition unit
 
 To search for titles assigned to a specific acquisition unit, follow these steps:
 
@@ -277,12 +278,12 @@ To search for titles assigned to a specific acquisition unit, follow these steps
 2. Select the acquisition unit(s) from the drop-down list. The search results appear in the Receiving pane. 
 
 
-**Rush**
+#### Rush
 
 In the **Search & filter** pane, click **Rush** and select **Yes** or **No.**
  
 
-**Received date**
+#### Received date
 
 To search by date received from received pieces, follow these steps:
 
@@ -291,7 +292,7 @@ To search by date received from received pieces, follow these steps:
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Receiving pane.  
 
-**Expected receipt date**
+#### Expected receipt date
 
 To search by the expected receipt date from expected pieces, follow these steps:
 
@@ -301,7 +302,7 @@ To search by the expected receipt date from expected pieces, follow these steps:
 3. Click **Apply**. The search results appear in the Receiving pane. 
 
 
-**Receipt due**
+#### Receipt due
 
 To search by the receipt due date from the order purchase order line, follow these steps:
 
@@ -310,7 +311,7 @@ To search by the receipt due date from the order purchase order line, follow the
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Receiving pane. 
 
-**Created by**
+#### Created by
 
 To search for receiving title created by a specific user, follow these steps:
 
@@ -323,7 +324,7 @@ To search for receiving title created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-**Date created**
+#### Date created
 
 To search for receiving titles based on the date they were created, follow these steps:
 
@@ -333,7 +334,7 @@ To search for receiving titles based on the date they were created, follow these
 
 3. Click **Apply**. The search results appear in the Receiving pane.
 
-**Updated by**
+#### Updated by
 
 To search for receiving titles updated by a specific user, follow these steps:
 
@@ -346,7 +347,7 @@ To search for receiving titles updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-**Date updated**
+#### Date updated
 
 To search for receiving titles based on the date they were updated, follow these steps:
 
@@ -356,7 +357,7 @@ To search for receiving titles based on the date they were updated, follow these
 
 3. Click **Apply**. The search results appear in the Receiving pane.
 
-**Created by (Piece)**
+#### Created by (Piece)
 
 To search for pieces created by a specific user, follow these steps:
 
@@ -369,7 +370,7 @@ To search for pieces created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-**Date created (Piece)**
+#### Date created (Piece)
 
 To search for pieces based on the date they were created, follow these steps:
 
@@ -379,7 +380,7 @@ To search for pieces based on the date they were created, follow these steps:
 
 3. Click **Apply**. The search results appear in the Receiving pane.
 
-**Updated by (Piece)**
+#### Updated by (Piece)
 
 To search for pieces updated by a specific user, follow these steps:
 
@@ -392,7 +393,7 @@ To search for pieces updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-**Date updated (Piece)**
+#### Date updated (Piece)
 
 To search for pieces based on the date they were updated, follow these steps:
 
