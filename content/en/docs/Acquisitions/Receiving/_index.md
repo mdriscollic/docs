@@ -410,19 +410,13 @@ To clear all filters, go to the **Search & filter** pane and click **Reset all**
 
 To export a file of title and/or piece information in comma-separated values (.csv) format, follow these steps:
 
-In the **Search & filter** pane, use the search and filter options to select a set of receiving records.
+1. In the **Search & filter** pane, use the search and filter options to select a set of receiving records.
 
-In the search results pane, click **Actions** and select,**Export results (CSV)**.
+2. In the search results pane, click **Actions** and select,**Export results (CSV)**.
 
-In the **Export settings** dialog, the following message will display: “This export could take a few minutes. If you reload or close the page the export will not be completed. Once the file is ready it could take another minute for your browser to finish downloading the file. You can continue to work with titles and pieces in a different browser tab if needed.”
+3. In the **Export settings** dialog, the following message will display: “This export could take a few minutes. If you reload or close the page the export will not be completed. Once the file is ready it could take another minute for your browser to finish downloading the file. You can continue to work with titles and pieces in a different browser tab if needed.”
 
-To export all fields from the title and piece leave the **Title fields** and **Piece fields** default values set to **All**.  To select specific fields to export, click on the radio button below “All” and use the drop-down list to select the specific fields to export.
-
-Click **Export**. The file downloads to your local download location.
-
-
-**Title fields**
-
+4. To export all fields from the title, leave the **Title fields** default value set to **All**.  To select specific fields to export, click on the radio button below “All” and use the drop-down list to select the specific fields to export:
 *   Title
 *   Publisher
 *   Published date
@@ -440,8 +434,7 @@ Click **Export**. The file downloads to your local download location.
 *   Updated by
 *   Updated on
 
-**Piece fields**
-
+To export all fields from the piece, leave the **Piece fields** to export default value set to All. To select specific fields to export, click on the radio button below “All” and use the drop down list to select the specific fields to export:
 *   Display summary
 *   Copy number
 *   Enumeration
@@ -463,6 +456,7 @@ Click **Export**. The file downloads to your local download location.
 *   Updated by (Piece)
 *   Updated on (Piece)
 
+5. Click **Export**. The file downloads to your local download location.
 
 
 ## Viewing receiving titles details
