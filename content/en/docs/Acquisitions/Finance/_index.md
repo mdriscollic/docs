@@ -834,7 +834,7 @@ There are two methods to view a list of all transactions for a budget:
 2. From a budget: [Find the budget](#viewing-budget-details)  for which you want to view transactions and select it.  In the **Budget details** window, under **Transactions**, click **View transactions**. The budget transactions window opens listing all transactions.
 
 
-### Searching for budget transactions
+### Searching and filtering for budget transactions
 
 To search budget transactions, follow these steps:
 
@@ -843,7 +843,7 @@ To search budget transactions, follow these steps:
 2. You may filter results by Type, Source, Source POL number, Source invoice number, Tags, or Expense class. See below for more information on the filters. Your results display in the Transactions pane.
 
 
-**Type**
+#### Type
 
 To filter transactions by Type, select one or more of the following:
 
@@ -857,7 +857,7 @@ To filter transactions by Type, select one or more of the following:
 *   **Transfer.** Filter transactions by type of Transfer. Transfer transactions result from the transfer of funds between budgets in a given fiscal year.
 
 
-**Source**
+#### Source
 
 To filter transactions by Source, select one of the following:
 
@@ -869,7 +869,7 @@ To filter transactions by Source, select one of the following:
 
 
 
-**Source POL number**
+#### Source POL number
 
 To filter transactions by the Source POL number, follow these steps:
 
@@ -879,7 +879,7 @@ To filter transactions by the Source POL number, follow these steps:
 
 
 
-**Source invoice number**
+#### Source invoice number
 
 To filter transactions by the Source invoice number, follow these steps:
 
@@ -890,7 +890,7 @@ To filter transactions by the Source invoice number, follow these steps:
 
 
 
-**Tags**
+#### Tags
 
 To filter for transactions assigned with specific tags, follow these steps:
 
@@ -899,7 +899,7 @@ To filter for transactions assigned with specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. Your results appear in the Transactions pane.
 
 
-**Expense class**
+#### Expense class
 
 To filter transactions by expense class, follow these steps:
 
@@ -907,7 +907,7 @@ To filter transactions by expense class, follow these steps:
 1. In the **Search & filter** pane, click **Expense class.**
 2. Select an expense class from the drop-down list. Your results appear in the Transactions pane.
 
-**Encumbrance status**
+#### Encumbrance status
 
 To filter transactions by encumbrance status, follow these steps:
 
