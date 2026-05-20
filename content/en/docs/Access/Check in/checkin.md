@@ -40,6 +40,31 @@ Once a patron returns an item, check it in to remove it from the patron’s acco
 
 To check in an item, either scan the barcode of the item, or enter the barcode and click **Enter**. The item appears in the Scanned Items table and its status changes. Fees/fines owed are noted in the Time returned column, if applicable.
 
+### For use at location
+
+Libraries can use the For-use-at-location functionality for special collection items that can only be used in the special collections room, or for in-library-use-only items, such as laptops. The environment variable ENABLE_FOR_USE_AT_LOCATION needs to be set to True for the feature to be available. If the environment variable is set to False, then check out works as described in [Checking in an item](#checking-in-an-item).
+
+The For-use-at-location functionality allows a patron to return an item to a service point with the option of keeping the item on the hold shelf, so they can come back later and check the item out again. The loan will stay open on the patron’s account. The item can be checked out and returned repeatedly, as long as the item is within the loan period, and the patron returns to check out the item within the For-use-at-location hold shelf expiration interval set in the associated [Loan policy](../../../settings/settings_circulation/settings_circulation/#settings--circulation--loan-policies). The hold shelf expiration countdown starts when the item is checked in. If the patron does not check out the item before the For-use-at-location hold shelf expiration interval set in the loan policy expires, then the item will be included in the [hold shelf clearance report](../../requests/requests/#exporting-a-hold-shelf-clearance-report), and the loan will be closed.
+A loan will be For-use-at-location when the associated [Loan policy](../../../settings/settings_circulation/settings_circulation/#creating-a-new-loan-policy) has the **For use at location** option selected. Since Loan type displays in [New requests](../../requests/requests/#creating-a-request) and in [Check out](../../check-out/checkout/#scanning-the-item-to-check-out), it can be helpful to use an appropriately named Loan type as the Circulation rule criteria in For-use-at-location loans. For example, loans with circulation rule
+
+`t for-use-at-location-loan-type : l for-use-at-location-loan-policy r allow-all n send-no-notices o overdue-fine-policy i lost-item-fee-policy`
+
+will display the Loan type for-use-at-location-loan-type in New requests and at check out, which can be helpful for library staff.
+
+Note: The For-use-at-location feature is intended to be used for long-term loans, not for loan intervals of minutes or hours. The hold shelf expiration will default to 11:59 PM, even if, e.g., the item is returned at 11:00 AM and the hold shelf expiration interval set in the associated loan policy is two hours.
+
+See [Users > Loans](../../../users/#loans) for how to see what items a user has on hold for-use-at-location.
+
+#### For use at location check in
+
+You have three options for Check in action for-use-at-location. You choose the default action for the service point in [Settings > Tenants > Service Points > Edit](../../../settings/settings_tenant/settings_tenant/#editing-a-service-point). The option will remain in effect until the session is closed, or you choose a different action. The action chosen will only affect For-use-at-location loans.
+
+The three options are:
+
+* **Keep on hold shelf.** The loan will remain open, and the item status will remain Checked out. The For-use-at-location hold shelf expiration period set in the associated [loan policy](../../../settings/settings_circulation/settings_circulation/#settings--circulation--loan-policies) will reset. If the patron does not check the item out again within this period, then the item will be included in the [hold shelf clearance report](../../requests/requests/#exporting-a-hold-shelf-clearance-report), and the loan will be closed. This action is recorded in the Circulation log with Object = Loan and Circ action = Held.
+* **Close loan and return item.** The loan is closed. The item status will change to Available or In transit. This action is recorded in the Circulation log with Object = Loan and Circ action = Check in.
+* **Ask for action.** On scanning in the item barcode, you will see a popup asking you to select Cancel, Close loan and return item, or Keep on hold shelf.
+
 
 ### Pop-ups that can occur when checking in an item
 
