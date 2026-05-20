@@ -1,7 +1,7 @@
 ---
 title: "Settings > eUsage"
 linkTitle: "eUsage"
-date: 2024-11-15
+date: 2026-05-20
 weight: 100
 tags: ["subtopic"]   
 ---
@@ -12,7 +12,7 @@ The eUsage application offers additional settings options. You can manage these 
 
 ### Settings > General > Aggregators
 
-An aggregator is a service that aggregates pre-processing statistics for multiple statistics providers and offers an endpoint to download the reports. eUsage allows you to harvest statistics for a usage data provider either directly from the provider via SUSHI or from an aggregator. Please note: The only aggregator service currently supported in FOLIO is the German National Statistics Server.
+An aggregator is a service that aggregates pre-processing statistics for multiple statistics providers and offers an endpoint to download the reports. eUsage allows you to harvest statistics for a usage data provider either directly from the provider via Counter / Sushi or from an aggregator. Please note: The only aggregator service currently supported in FOLIO is the German National Statistics Server.
 
 #### Add an aggregator
 
@@ -67,12 +67,12 @@ An aggregator is a service that aggregates pre-processing statistics for multipl
 
 ### Settings > General > Display settings
 
-If you want, you can hide the display of SUSHI credentials in the detailed view for a usage data provider in the UI.
+If you want, you can hide the display of credentials in the detailed view for a usage data provider in the UI.
 
 1. Open FOLIO's **Settings** app.
 2. Choose the application **eUsage**.
 3. In the **General** section click on **Display settings**.
-4. In the detailed view of this setting you will find a checkbox **Hide sushi credentials in detail views**. If the checkbox is selected, the SUSHI credentials will be hidden in the UI.
+4. In the detailed view of this setting you will find a checkbox **Hide credentials in detail views**. If the checkbox is selected, the credentials will be hidden in the UI.
 5. Then click **Save**.
 
 
