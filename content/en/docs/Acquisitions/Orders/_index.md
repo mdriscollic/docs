@@ -1,7 +1,7 @@
 ---
 title: "Orders"
 linkTitle: "Orders"
-date: 2025-04-16
+date: 2026-05-20
 weight: 30
 tags: ["parenttopic"]
 ---
@@ -16,11 +16,11 @@ Definition of terms related to the Orders app:
 *   **Order line.** A purchase order line contains one of the titles or packages being ordered by the library. Order lines make up an order. Orders can contain multiple order lines.
 
 
-## Capabilities
+## Capabilities & capability sets
 
-The capabilities listed below allow you to interact with the Orders app and determine what you can or cannot do within the app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Orders app or any related information.
+The capabilities and capability sets listed below allow you to interact with the Orders app and determine what you can or cannot do within the app. You can assign capabilities and capability sets to users via user roles. If none of these capabilities or capability sets  are assigned to a user, they are unable to see the Orders app or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets .
 
 Note: The below capabilities only pertain to the Orders app. Within the app, orders and order lines may link to records in other apps, like Inventory and Receiving, and the ability to interact with those records could require separate capabilities.
 
@@ -161,11 +161,11 @@ You can search for orders in the **Search & filter** pane. Click **Orders** to s
 *   **Date opened.** Date the order was opened, which is when funds are encumbered and interactions with the Inventory app occur.
 *   **PO number.** The purchase order number.
 
-
+### Filtering orders
 You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information on the filters. Note: Users may see additional search options and filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
 
-### Status
+#### Status
 
 In the **Search & filter** pane, click **Status** and select any applicable filters:
 
@@ -176,7 +176,7 @@ In the **Search & filter** pane, click **Status** and select any applicable filt
 *   **Pending.** Orders that are pending.
 
 
-### Prefix
+#### Prefix
 
 To search for orders by purchase order number prefix, follow these steps.  For more information about creating **Prefix** values, see [Settings > Orders > Prefixes](../../settings/settings_orders/settings_orders/#settings--orders--po-number--prefixes).
 
@@ -186,7 +186,7 @@ To search for orders by purchase order number prefix, follow these steps.  For m
 2. Select the prefix from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Suffix
+#### Suffix
 
 To search for orders purchase order number suffix, follow these steps.  For more information about creating **Suffix** values, see [Settings > Orders > Suffixes](../../settings/settings_orders/settings_orders/#settings--orders--po-number--suffixes)
 
@@ -196,7 +196,7 @@ To search for orders purchase order number suffix, follow these steps.  For more
 2. Select the suffix from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Approved
+#### Approved
 
 In the **Search & filter** pane, click **Approved** and select any applicable filters:
 
@@ -206,7 +206,7 @@ In the **Search & filter** pane, click **Approved** and select any applicable fi
 *   **No.** Orders not yet approved.
 
 
-### Acquisitions unit
+#### Acquisitions unit
 
 To search for orders assigned to a specific acquisitions unit, follow these steps:
 
@@ -215,7 +215,7 @@ To search for orders assigned to a specific acquisitions unit, follow these step
 2. Select the acquisitions unit from the drop-down list. The search results appear in the Orders pane.
 
 
-### Assigned to
+#### Assigned to
 
 To search for orders assigned to a specific user, follow these steps:
 
@@ -228,7 +228,7 @@ To search for orders assigned to a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Orders pane.
 
 
-### Date opened
+#### Date opened
 
 To search for orders based on the date the order was opened, follow these steps:
 
@@ -239,7 +239,7 @@ To search for orders based on the date the order was opened, follow these steps:
 3. Click **Apply**. The search results appear in the Orders pane.
 
 
-### Order type
+#### Order type
 
 In the **Search & filter** pane, click **Order type** and select any applicable filters:
 
@@ -249,7 +249,7 @@ In the **Search & filter** pane, click **Order type** and select any applicable 
 *   **Ongoing.** Ongoing orders.
 
 
-### Vendor
+#### Vendor
 
 To search for orders placed with a specific vendor, follow these steps:
 
@@ -261,8 +261,7 @@ To search for orders placed with a specific vendor, follow these steps:
 
 4. Select the vendor you want to filter by. The search results appear in the Orders pane.
 
-
-### Tags
+#### Tags
 
 To search for orders assigned with specific tags, follow these steps:
 
@@ -271,7 +270,7 @@ To search for orders assigned with specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. The search results appear in the Orders pane.
 
 
-### Reason for closure
+#### Reason for closure
 
 To search for orders based on their reason for closure, follow these steps:
 
@@ -280,7 +279,7 @@ To search for orders based on their reason for closure, follow these steps:
 2. Select the reason for closure from the drop-down list. The search results appear in the Orders pane.
 
 
-### Re-encumber
+#### Re-encumber
 
 In the **Search & filter** pane, click **Re-encumber** and select any applicable filters:
 
@@ -290,7 +289,7 @@ In the **Search & filter** pane, click **Re-encumber** and select any applicable
 *   **No.** Orders with the Re-encumber checkbox cleared.
 
 
-### Subscription
+#### Subscription
 
 To search for subscription orders follow these steps:
 
@@ -302,7 +301,7 @@ To search for subscription orders follow these steps:
 *   **No.** Non-subscription orders.
 
 
-### Renewal date
+#### Renewal date
 
 To search for orders based on their renewal date, follow these steps:
 
@@ -313,7 +312,7 @@ To search for orders based on their renewal date, follow these steps:
 3. Click **Apply**. The search results appear in the Orders pane.
 
 
-### Manual renewal
+#### Manual renewal
 
 In the **Search & filter** pane, click **Manual renewal** and select any applicable filters:
 
@@ -323,7 +322,7 @@ In the **Search & filter** pane, click **Manual renewal** and select any applica
 *   **No.** Orders with the Manual renewal checkbox cleared.
 
 
-### Review period
+#### Review period
 
 To search for orders within a review period, in days, follow these steps:
 
@@ -332,7 +331,7 @@ To search for orders within a review period, in days, follow these steps:
 2. Enter or select the review period, in days. The search results appear in the Orders pane.
 
 
-### Bill to
+#### Bill to
 
 To search for orders based on their bill to address, follow these steps. Addresses are created in [Settings > Tenant > Addresses](../../settings/settings_tenant/settings_tenant/#settings--tenant--addresses). 
 
@@ -341,7 +340,7 @@ To search for orders based on their bill to address, follow these steps. Address
 2. Select the address name from the drop-down list. The search results appear in the Orders pane.
 
 
-### Ship to
+#### Ship to
 
 To search for orders based on their ship to address, follow these steps. Addresses are created in [Settings > Tenant > Addresses](../../settings/settings_tenant/settings_tenant/#settings--tenant--addresses).  
 
@@ -349,7 +348,7 @@ To search for orders based on their ship to address, follow these steps. Address
 
 2. Select the address name from the drop-down list. The search results appear in the Orders pane.
 
-### Created by
+#### Created by
 
 To search for orders created by a specific user, follow these steps:
 
@@ -362,7 +361,7 @@ To search for orders created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Orders pane.
 
 
-### Date created
+#### Date created
 
 To search for orders based on the date they were created, follow these steps:
 
@@ -372,7 +371,7 @@ To search for orders based on the date they were created, follow these steps:
 
 3. Click **Apply**. The search results appear in the Orders pane.
 
-### Updated by
+#### Updated by
 
 To search for orders updated by a specific user, follow these steps:
 
@@ -385,7 +384,7 @@ To search for orders updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Orders pane.
 
 
-### Date updated
+#### Date updated
 
 To search for orders based on the date they were updated, follow these steps:
 
@@ -433,6 +432,7 @@ To export a file of order information in comma-separated values (.csv) format, f
 *   Review date
 *   PO tags
 *   Date opened
+*   Year opened
 *   Created by
 *   Created on
 *   Updated by
@@ -542,7 +542,8 @@ See [Creating an order > Purchase order](#purchase-order) for more information o
 *   **Vendor.** The vendor organization associated with this purchase order.
 *   **Order type.**  The type of order: One-time or Ongoing.
 *   **Acquisition units.**  The acquisitions units assigned to the order.
-*   **Approval date.**  Date on which the order status changed from Open to Approved.  
+*   **Approval date.**  Date on which the order status changed from Open to Approved.
+*   **Approved by.**  The name of the user account that approved the order.  
 *   **Assigned to.**  The user assigned to this order, if applicable.
 *   **Bill to.** The billing address selected for the order. 
 *   **Ship to.** The ship to address selected for the order.
@@ -551,6 +552,8 @@ See [Creating an order > Purchase order](#purchase-order) for more information o
 *   **Created by.**  Name of the user that created the purchase order.
 *   **Created on.**  The date and time at which the purchase order was created.
 *   **Date opened.**  The date and time at which the purchase order was opened.
+*   **Year opened.**  The fiscal year name and code assigned to the fiscal year during which the order was opened. 
+*   **Opened by.**  Name of the user that opened the purchase order.
 
 
 
@@ -578,6 +581,7 @@ If the subscription checkbox is unchecked, the following information displays:
 This section displays pricing and status information for the purchase order.
 
 
+*   **Fiscal year.**  Displays on orders that have associated encumbrances. Select a fiscal year to update the PO summary information to the selected year’s figures.
 *   **Total units.**  
 *   **Approved.**  
 *   **Workflow status.**  The order status: Pending, Open, Closed.
@@ -870,6 +874,7 @@ Follow these steps to add an order line to an order.  You can also add an order 
 *   **Publisher.** The publisher of the item.
 *   **Edition.** The edition of the item.
 *   **Linked package.** To link a package to the order line, click **Lookup package POL**. In the **Select order lines** dialog, find the package using the search box and/or the filters. Click the package to select it. The package appears in the Linked package field.
+*   **Suppress instance from discovery when generated by order.** Check this box to suppress any instance record that is created when this order is opened. If the order line is linked to an existing instance using the Title Lookup or it is matched to an existing instance by product identifier, this flag will not suppress the existing instance.
 *   **Contributor.** The item contributor.
 *   **Product identifiers.** The identifier of the item, like an ISBN.
 *   **Internal note.** Enter any internal notes about the item.
@@ -923,7 +928,7 @@ Note: multiple product IDs may be added to a purchase order line.
 *   **Order format.** Select the format of the item you are ordering: Electronic resource, Physical resource, P/E mix, or Other. The Order format determines which fields are required in the [Cost details](#cost-details) section and whether the [Physical resource details](#physical-resource-details) or [E-resources details](#e-resources-details) sections are displayed.
 *   **Created on.** This value will be entered by the system upon saving the purchase order line and will include the date and time of creation.
 *   **Receipt date.** The receipt date of the item. This field will autofill with the date the purchase order line is fully received, but may also be updated manually.
-*   **Receipt status.** Select the receipt status of the item: Pending or Receipt not required.  For orders with type **Ongoing**, the receipt status is automatically set to **Ongoing** when the order is saved. If no selection is made, the order is created with a receipt status of **Pending**. Upon opening the order, the receipt status is automatically set to **Awaiting receipt**. Once an order is open, you can edit the Receipt status to **Cancelled**, **Fully received**, **Partially received**, or **Receipt not required**. The system will automatically close orders that have resolved both payment and receipt statuses either as “Payment not required” or “Receipt not required” or by reaching “Fully paid” and “Fully received” through actions taken in the Receiving app and the Invoices app.  It is advisable to consider your library’s needs when defining how to set this field.  For example, you may want to select “Receipt not required” for one-time e-resource orders so that the order will automatically close once invoice payment is complete. Otherwise, if your library doesn’t receive e-resources, a one-time e-resource order may be left open even after payment is complete which could impact your expected results during Fiscal Year rollover.
+*   **Receipt status.** Select the receipt status of the item: Pending or Receipt not required.  If Receipt not required is selected, this will set the **Receiving workflow** to Independent order an receipt quantity and lock that field for editing. This will prevent piece creation for the order line. For orders with type **Ongoing**, the receipt status is automatically set to **Ongoing** when the order is saved. If no selection is made, the order is created with a receipt status of **Pending**. Upon opening the order, the receipt status is automatically set to **Awaiting receipt**. Once an order is open, you can edit the Receipt status to **Cancelled**, **Fully received**, **Partially received**, or **Receipt not required**. The system will automatically close orders that have resolved both payment and receipt statuses either as “Payment not required” or “Receipt not required” or by reaching “Fully paid” and “Fully received” through actions taken in the Receiving app and the Invoices app.  It is advisable to consider your library’s needs when defining how to set this field.  For example, you may want to select “Receipt not required” for one-time e-resource orders so that the order will automatically close once invoice payment is complete. Otherwise, if your library doesn’t receive e-resources, a one-time e-resource order may be left open even after payment is complete which could impact your expected results during Fiscal Year rollover.
 *   **Payment status.** Select the payment status of the item: Payment not required or Pending. For orders with type **Ongoing**, the payment status is automatically set to **Ongoing** when the order is saved.  If no selection is made, the order is created with a payment status of **Pending**.  Upon opening the order, the payment status is automatically set to **Awaiting payment.**  Once an order is open, you can edit the **Payment status** to **Cancelled**, **Partially paid**, **Fully paid**, or **Payment not required**. The Payment status is automatically set to **Partially paid** when a connected invoice line with the **Release encumbrance** checkbox unchecked/blank is set to an **Approved** status. The system will automatically close orders that have resolved both payment and receipt statuses either as Payment not required” or “Receipt not required” or by reaching “Fully paid” and “Fully received” through actions taken in the Receiving app and the Invoices app.
 *   **Source.** The entity responsible for creating the purchase order line. For manually created purchase order lines, this value will be 'User'. Other sources include API, EDI, and MARC.
 *   **Donor.** The donor of the item. Note: As of the Quesnelia release, this field has been disabled and will be deprecated in 2025. Please create donor records from the Organizations app. Use the [Donor information](#donor-information) accordion below to add donors to the POL.
@@ -1102,6 +1107,16 @@ The package titles section of the purchase order line display appears only if th
 
 3. In the **Select instance** dialog, use the Search & Filter pane to find the package title.  Find the title using the search box and/or the filters.  Click the title to select it.  The title appears in the Package titles table list.
 
+## Unlinking package titles from an order line
+Unlinking a receiving title from a package POL will delete all related pieces and delete any related inventory Holdings and Items. Holdings that contain items that are not related to this order and receiving title will not be deleted.
+1.	[Locate](#searching-for-order-lines) and open the purchase order line.
+2.	Expand the **Package titles** accordion.
+3.	Click on the title you wish to unlink from the package.
+4.	In the receiving title dialog, click **Remove from package**.
+5.	In the **Remove from package** dialog, click **Confirm**.
+6.	If other empty holdings records are detected on the associated instance record, a **Delete holdings** dialog will appear that says, “One or more related Holdings do not reference any other pieces or items. Do you want to delete them?” Click **Keep holdings** to retain the holdings record or **Delete holdings** to remove the holdings record.
+7.	A green toast message will appear, confirming that related pieces and any related inventory Holdings and Items have been deleted.
+
 ## Routing lists
 This section appears only on purchase order lines with an order format of 'Physical resource' or 'P/E mix'. Routing in FOLIO allows libraries to divert received materials away from the normal receiving process and workflow, to direct the materials to alternate locations for pre-circulation distribution or other special handling. Routing lists are configured in [Settings > Orders > Routing](../../settings/settings_orders/settings_orders/#settings--orders--routing--list-configuration). One routing lists may be configured per physical piece on a purchase order line.
 
@@ -1165,8 +1180,8 @@ You can search for order lines in the **Search & filter** pane. Order lines is s
 
 You can also search for order lines by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information. Note: Users may see additional search options and filters appear in the **Search & filter** pane if custom fields are configured in [Setting > Orders > Custom fields](../../settings/settings_orders/settings_orders/#settings--orders--general--customfields).
 
-
-### Receipt status
+### Filtering order lines
+#### Receipt status
 
 In the **Search & filter** pane, click **Receipt status** and select any applicable filters:
 
@@ -1181,7 +1196,7 @@ In the **Search & filter** pane, click **Receipt status** and select any applica
 *   **Receipt not required.** Order lines that do not require a receiving record.
 
 
-### Payment status
+#### Payment status
 
 In the **Search & filter** pane, click **Payment status** and select any applicable filters:
 
@@ -1196,7 +1211,7 @@ In the **Search & filter** pane, click **Payment status** and select any applica
 *   **Pending.** Order lines with pending payment.
 
 
-### Prefix
+#### Prefix
 
 To search for order lines by purchase order number prefix, follow these steps.  For more information about creating **Prefix** values, see [Settings > Orders > Prefixes](../../settings/settings_orders/settings_orders/#settings--orders--po-number--prefixes)
 
@@ -1205,7 +1220,7 @@ To search for order lines by purchase order number prefix, follow these steps.  
 2. Select the prefix from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Suffix
+#### Suffix
 
 To search for order lines by purchase order number suffix, follow these steps.  For more information about creating **Suffix** values, see [Settings > Orders > Suffixes](../../settings/settings_orders/settings_orders/#settings--orders--po-number--suffixes).
 
@@ -1215,7 +1230,7 @@ To search for order lines by purchase order number suffix, follow these steps.  
 2. Select the suffix from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Acquisition unit
+#### Acquisition unit
 
 To search for order lines assigned to a specific acquisitions unit, follow these steps:
 
@@ -1226,12 +1241,12 @@ To search for order lines assigned to a specific acquisitions unit, follow these
 
 
 
-### Acquisition method
+#### Acquisition method
 
 In the **Search & filter** pane, click **Acquisition method** and select any applicable filters. Values are configured in [Settings > Orders > Acquisition methods](../../settings/settings_orders/settings_orders/#settings--orders--general--acquisition-methods).
 
 
-### Location
+#### Location
 
 To search for order lines in a specific permanent location, follow these steps:
 
@@ -1244,7 +1259,7 @@ To search for order lines in a specific permanent location, follow these steps:
 4. Click **Save and close**. The search results appear in the Order lines pane.
 
 
-### Fund code
+#### Fund code
 
 To search for order lines using a specific fund code, follow these steps:
 
@@ -1253,14 +1268,14 @@ To search for order lines using a specific fund code, follow these steps:
 2. Select the fund code from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Expense class
+#### Expense class
 To search for order lines that have a fund distribution expense class assignment, follow these steps:
 
 1. In the **Search & filter** pane, click **Expense class**.
 
 2. Select the expense class from the drop-down list. The search results appear in the Order lines pane.
 
-### Linked package POL
+#### Linked package POL
 To search for order lines that have been linked to a package POL:
 
 1. In the **Search & filter** pane, click **Linked package POL**.
@@ -1273,7 +1288,7 @@ To search for order lines that have been linked to a package POL:
    
 5. The search results will display all purchase order lines linked to the selected package POL. 
 
-### Order format
+#### Order format
 
 In the **Search & filter** pane, click **Order format** and select any applicable filters:
 
@@ -1285,7 +1300,7 @@ In the **Search & filter** pane, click **Order format** and select any applicabl
 *   **Other.** Order lines containing a different type of resource.
 
 
-### Material type, electronic
+#### Material type, electronic
 
 To search for order lines that have an Order format of Electronic resource or P/E mix based on their electronic material type in the e-resources details section, follow these steps:
 
@@ -1294,7 +1309,7 @@ To search for order lines that have an Order format of Electronic resource or P/
 2. Select the material type from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Material type, physical
+#### Material type, physical
 
 To search for order lines that have an Order format of Physical resource or P/E mix based on their physical material type in the physical details section, follow these steps:
 
@@ -1302,7 +1317,7 @@ To search for order lines that have an Order format of Physical resource or P/E 
 
 2. Select the material type from the drop-down list. The search results appear in the Order lines pane.
 
-### Donor
+#### Donor
 
 To search for order lines associated with a donor organization, follow these steps:
 
@@ -1311,7 +1326,7 @@ To search for order lines associated with a donor organization, follow these ste
 3. In the **Add donors** modal, locate the donor(s) you wish to select and check the boxes to the left of their entry.
 4. Click **Save**. The search results appear in the Order lines pane.
    
-### Vendor
+#### Vendor
 
 To search for order lines from a specific vendor, follow these steps:
 
@@ -1324,7 +1339,7 @@ To search for order lines from a specific vendor, follow these steps:
 4. Select the vendor you want to filter by. The vendor filter is applied.
 
 
-### Tags
+#### Tags
 
 To search for order lines assigned specific tags, follow these steps:
 
@@ -1333,7 +1348,7 @@ To search for order lines assigned specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. The search results appear in the Order lines pane.
 
 
-### Source
+#### Source
 
 In the **Search & filter** pane, click **Source** and select any applicable filters:
 
@@ -1345,7 +1360,7 @@ In the **Search & filter** pane, click **Source** and select any applicable filt
 *   **MARC.** Order lines imported through MAchine-Readable Cataloging format record import.
 
 
-### Collection
+#### Collection
 
 In the **Search & filter** pane, click **Collection** and select any applicable filters:
 
@@ -1355,7 +1370,7 @@ In the **Search & filter** pane, click **Collection** and select any applicable 
 *   **No.** Order lines that are not part of a collection.
 
 
-### Rush
+#### Rush
 
 In the **Search & filter** pane, click **Order format** and select any applicable filters:
 
@@ -1365,7 +1380,7 @@ In the **Search & filter** pane, click **Order format** and select any applicabl
 *   **No.** Order lines that do not require rush processing.
 
 
-### Access provider
+#### Access provider
 
 To search for order lines from a specific access provider, follow these steps:
 
@@ -1378,7 +1393,7 @@ To search for order lines from a specific access provider, follow these steps:
 4. Select the vendor you want to filter by. The search results appear in the Order lines pane.
 
 
-### Activated
+#### Activated
 
 In the **Search & filter** pane, click **Activated** and select any applicable filters:
 
@@ -1388,7 +1403,7 @@ In the **Search & filter** pane, click **Activated** and select any applicable f
 *   **No.** Order lines that are not activated.
 
 
-### Expected activation
+#### Expected activation
 
 To search for order lines based on their expected activation date, follow these steps:
 
@@ -1399,7 +1414,7 @@ To search for order lines based on their expected activation date, follow these 
 3. Click **Apply**. The search results appear in the Order lines pane.
 
 
-### Trial
+#### Trial
 
 To search for order lines that have an Order format of Electronic resource or P/E mix and are flagged as a trial resource in the Electronic resource details section.
 
@@ -1411,7 +1426,7 @@ In the **Search & filter** pane, click **Trial** and select any applicable filte
 *   **No.** Order lines for resources that are not trials.
 
 
-### Subscription from
+#### Subscription from
 
 To search for order lines based on their subscription from date, follow these steps:
 
@@ -1422,7 +1437,7 @@ To search for order lines based on their subscription from date, follow these st
 3. Click **Apply**. The search results appear in the Order lines pane.
 
 
-### Subscription to
+#### Subscription to
 
 To search for order lines based on their subscription to date, follow these steps:
 
@@ -1433,7 +1448,7 @@ To search for order lines based on their subscription to date, follow these step
 3. Click **Apply**. The search results appear in the Order lines pane.
 
 
-### Actual receipt date
+#### Actual receipt date
 
 To search for order lines based on their actual receipt date (when the order line was fully received), follow these steps:
 
@@ -1444,7 +1459,7 @@ To search for order lines based on their actual receipt date (when the order lin
 3. Click **Apply**. The search results appear in the Order lines pane.
 
 
-### Expected receipt date
+#### Expected receipt date
 
 To search for order lines based on their expected receipt date, follow these steps:
 
@@ -1455,7 +1470,7 @@ To search for order lines based on their expected receipt date, follow these ste
 3. Click **Apply**. The search results appear in the Order lines pane.
 
 
-### Receipt due
+#### Receipt due
 
 To search for order lines based on their receipt due date, follow these steps:
 
@@ -1466,7 +1481,7 @@ To search for order lines based on their receipt due date, follow these steps:
 3. Click **Apply**. The search results appear in the Order lines pane.
 
 
-### Export date
+#### Export date
 
 To search for order lines based on their export date, follow these steps:
 
@@ -1476,7 +1491,7 @@ To search for order lines based on their export date, follow these steps:
 
 3. Click **Apply**. The search results appear in the Order lines pane.
 
-### Created by
+#### Created by
 
 To search for order lines created by a specific user, follow these steps:
 
@@ -1489,7 +1504,7 @@ To search for order lines created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Order lines pane.
 
 
-### Date created
+#### Date created
 
 To search for order lines based on the date they were created, follow these steps:
 
@@ -1499,7 +1514,7 @@ To search for order lines based on the date they were created, follow these step
 
 3. Click **Apply**. The search results appear in the Order lines pane.
 
-### Updated by
+#### Updated by
 
 To search for order lines updated by a specific user, follow these steps:
 
@@ -1512,7 +1527,7 @@ To search for order lines updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Order lines pane.
 
 
-### Date updated
+#### Date updated
 
 To search for order lines based on the date they were updated, follow these steps:
 

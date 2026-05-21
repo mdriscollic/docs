@@ -1,7 +1,7 @@
 ---
 title: "Order status"
 linkTitle: "Order status"
-date: 2024-12-04
+date: 2026-05-20
 weight: 20
 tags: ["subtopic"]
 ---
@@ -16,7 +16,13 @@ When an order is opened, several different events occur. See [Opening an Order](
 An order can be closed automatically by the system (see below) or can be manually closed by a staff user in FOLIO. See [Closing an Order](../../orders/#closing-an-order) for more information.
 
 ## Which fields are editable when an order is open?
-A library may need to edit fields on an order record with an 'Open' status. This is especially common on Ongoing and Ongoing subscription orders. Use the table below to determine if a field is editable. If the field is not listed in the table below, and order must be unopened to edit the field. See [Unopening an Order](../../orders/#unopening-an-order) for more information.
+A library may need to edit fields on an order record with an 'Open' status. This is especially common on Ongoing and Ongoing subscription orders. Use the table below to determine if a field is editable. If the field is not listed in the table below, an order must be unopened to edit the field. See [Unopening an Order](../../orders/#unopening-an-order) for more information. 
+
+**Exceptions include:**
+* Editing a POL title: This may be achieved via the POL action of [changing an instance connection](../../orders/#changing-an-instance-connection).
+* Location and quantity: For POLs with synchronized order and receipt quantity, this may be achieved by [editing the corresponing receiving record](../../receiving/#editing-an-expected-or-received-piece).
+
+Note: some fields listed are editable for specific formats or receiving workflows and will only appear editable when the supported order format or receiving workflow is selected.
 
 ### Order fields
 | One-Time   | Ongoing | Ongoing Subscription |
@@ -28,12 +34,11 @@ A library may need to edit fields on an order record with an 'Open' status. This
 | Ship to  |   Ship to   |  Ship to   |
 | Tags  |  Tags  |  Tags  |
 | Note  |  Note   |  Note  |
-| Custom fields  |  Subscription  |  Subscription  |
-|   |  Review date  |  Renewal interval  |
-|   |  Notes |  Renewal date  |
-|   |  Custom fields |  Review period  |
-|   |   |  Notes |
-|   |   |  Custom fields  |
+| Custom fields  |  Review date  |  Renewal interval |
+|   |  Notes  |  Renewal date  |
+|   | Custom fields |  Review period  |
+|   |   |  Notes  |
+|   |   | Custom fields |
 
 ### Order line fields
 | One-Time   | Ongoing | Ongoing Subscription |
@@ -48,24 +53,28 @@ A library may need to edit fields on an order record with an 'Open' status. This
 | Payment status  | Payment status    |  Payment status   |
 | Claiming active  |  Claiming active   |  Claiming active   |
 | Claiming interval  |  Claiming interval   |  Claiming interval   |
+| Bindery active  |  Bindery active   |  Bindery active   |
 | Cancellation restriction  | Cancellation restriction   |  Cancellation restriction   |
 | Cancellation description  | Cancellation description   |  Cancellation description  |
 | Line description  |  Line description  |  Line description  |
 | Tags  |  Tags  |  Tags  |
+| Receiving workflow  |  Receiving workflow  |  Receiving workflow  |
 | Donor information  | Donor information   | Donor information  |
 | Vendor reference number and type  |  Renewal note  | Renewal note   |
 | Unit price (physical and electronic)  | Vendor reference number and type   |  Vendor reference number and type  |
 | Additional cost  |  Unit price (physical and electronic)  |  Unit price (physical and electronic)  |
 | Currency  |  Additional cost  |  Additional cost  |
-| Set exchange rate  |  Currency  |  Currency  |
-| Discount  |  Set exchange rate   |  Set exchange rate   |
+| (Use) Set exchange rate  |  Currency  |  Currency  |
+| Discount  |  (Use) Set exchange rate   | (Use) Set exchange rate   |
 | Fund distribution |  Discount  |   Discount |
-| Material supplier/access provider  |  Fund distribution  | Fund distribution   |
-|  Receipt/Activation due |  Quantity (physical and electronic)*  |  Quantity (physical and electronic)*  |
-| Expected activation/receipt date |  Material supplier/access provider  |  Material supplier/access provider  |
-| URL  | Receipt/Activation due   |  Receipt/Activation due  |
-|  | Expected activation/receipt date   |  Expected activation/receipt date  |
-|  | URL   |  URL  |
+| Quantity (physical and electronic) |  Fund distribution  | Fund distribution   |
+|  Material supplier/access provider |  Quantity (physical and electronic)  |  Quantity (physical and electronic)  |
+| Activation status |  Material supplier/access provider  |  Material supplier/access provider  |
+|  Receipt/Activation due  | Activation status  |  Activation status |
+|  Expected activation/receipt date | Receipt/Activation due   |  Receipt/Activation due  |
+| URL | Expected activation/receipt date   |  Expected activation/receipt date  |
+| Custom fields | URL   |  URL  |
+|  | Custom fields   |  Custom fields  |
 
 ## How does FOLIO know when to close an order as 'Complete'?
 An order will automatically close with a ‘Reason for closure’ of Complete if all POL associated with the order achieve one of the following:

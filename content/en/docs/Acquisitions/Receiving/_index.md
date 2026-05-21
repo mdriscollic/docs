@@ -1,7 +1,7 @@
 ---
 title: "Receiving"
 linkTitle: "Receiving"
-date: 2025-05-05
+date: 2026-05-15
 weight: 50
 tags: ["parenttopic"]
 ---
@@ -20,11 +20,11 @@ Definition of terms related to the Receiving app:
 *   **Unreceive.** To indicate that an order previously listed as “received” has not been delivered to the library.
 
 
-## Capabilities
+## Capabilities & capability sets
 
-The capabilities listed below allow you to interact with the Receiving app. You can assign capabilities to users via user roles. If none of these capabilities are assigned to a user, they are unable to see the Receiving app or any related information.
+The capabilities and capability sets listed below allow you to interact with the Receiving app. You can assign capabilities and capability sets  to users via user roles. If none of these capabilities or capability sets  are assigned to a user, they are unable to see the Receiving app or any related information.
 
-It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities.
+It is recommended that you select all applications prior to assigning capabilities to ensure you have access to all capabilities and capability sets.
 
 |**Permission Display name (OKAPI)** | **Resource (EUREKA)** | Type | Action | Description |
 | -------- | ------- | ------- | ------- | ------- |
@@ -146,6 +146,14 @@ Note: Adding a product ID and type is optional, but if you click **Add product I
 10. Click **Search** and select the Package from the search results. 
 11. Click **Save & close**. The existing title is now linked to the Package POL. It can be located by searching for its Title, original POL number, Package POL number, or Package name.
 
+## Unlinking an existing receiving title
+Unlinking a receiving title from a package POL will delete all related pieces and delete any related inventory Holdings and Items. Holdings that contain items that are not related to this order and receiving title will not be deleted.
+1.	[Locate](#searching-for-a-receiving-title) and open the receiving title record.
+2.	Click **Actions > Remove from package**.
+3.	In the **Remove from package** dialog, click **Confirm**.
+4.	If other empty holdings records are detected on the associated instance record, a **Delete holdings** dialog will appear that says, “One or more related Holdings do not reference any other pieces or items. Do you want to delete them?” Click **Keep holdings** to retain the holdings record or **Delete holdings** to remove the holdings record.
+5.	A green toast message will appear, confirming that related pieces and any related inventory Holdings and Items have been deleted.
+
 
 ## Searching for a receiving title
 
@@ -163,8 +171,9 @@ You can search for orders to be received in the **Search & filter** pane. To sea
 
 You can also search for orders by selecting any of the filters in the **Search & filter** pane. Additionally, you can apply the filters after you perform a search to limit your results. See the sections below for more information.
 
+### Filtering receiving titles
 
-### Order status
+#### Order status
 
 In the **Search & filter** pane, click **Order status** and select the applicable value from the dropdown:
 
@@ -177,7 +186,7 @@ In the **Search & filter** pane, click **Order status** and select the applicabl
 Note: Receiving is only possible if an order is in "Open" or "Closed" status. If attempting to receive against a closed order, a pop-up window will appear that says "The order linked to this Title is closed. Are you sure you want to receive this piece(s)?"
 
 
-### Vendor
+#### Vendor
 
 To search for orders from a specific vendor, follow these steps:
 
@@ -189,7 +198,7 @@ To search for orders from a specific vendor, follow these steps:
 4. Select the vendor you want to filter by. The search results appear in the Receiving pane.
 
 
-### Order type
+#### Order type
 
 In the **Search & filter** pane, click **Order type** and select the applicable value from the dropdown:
  
@@ -199,7 +208,7 @@ In the **Search & filter** pane, click **Order type** and select the applicable 
 *   **Ongoing.** Ongoing orders that span multiple years.
 
 
-### Material type
+#### Material type
 
 To search for orders of a specific material type, follow these steps:
 
@@ -209,7 +218,7 @@ To search for orders of a specific material type, follow these steps:
 2. Select the material type from the drop-down list. The search results appear in the Receiving pane. 
 
 
-### Order format
+#### Order format
 
 In the **Search & filter** pane, click **Order format** and select any applicable filters:
 
@@ -221,7 +230,7 @@ In the **Search & filter** pane, click **Order format** and select any applicabl
 *   **Other.** Order lines containing a different type of resource.
 
 
-### Tags
+#### Tags
 
 To search for orders assigned specific tags, follow these steps:
 
@@ -231,7 +240,7 @@ To search for orders assigned specific tags, follow these steps:
 2. Select the tag(s) from the drop-down list. The search results appear in the Receiving pane.
 
 
-### Location
+#### Location
 
 To search for orders assigned to a specific permanent location, follow these steps:
 
@@ -243,7 +252,7 @@ To search for orders assigned to a specific permanent location, follow these ste
 4. Click **Save and close**. The search results appear in the Receiving pane.
 
 
-### Receiving status
+#### Receiving status
 
 In the **Search & filter** pane, click **Receiving status** and select any applicable filters:
 
@@ -253,13 +262,13 @@ In the **Search & filter** pane, click **Receiving status** and select any appli
 *   **Received.** The order has arrived and been received. 
 
 
-### Bindery active
+#### Bindery active
 In the **Search & filter** pane, click **Bindery active** and select any applicable filters:
 
 *   **Yes.** The bindery box is selected on the corresponding order line and the material is eligible for binding.
 *   **No.** The bindery box is not selected on the corresponding order line and the material is not eligible for binding.
   
-### Acquisition unit
+#### Acquisition unit
 
 To search for titles assigned to a specific acquisition unit, follow these steps:
 
@@ -269,12 +278,12 @@ To search for titles assigned to a specific acquisition unit, follow these steps
 2. Select the acquisition unit(s) from the drop-down list. The search results appear in the Receiving pane. 
 
 
-### Rush
+#### Rush
 
 In the **Search & filter** pane, click **Rush** and select **Yes** or **No.**
  
 
-### Received date
+#### Received date
 
 To search by date received from received pieces, follow these steps:
 
@@ -283,7 +292,7 @@ To search by date received from received pieces, follow these steps:
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Receiving pane.  
 
-### Expected receipt date
+#### Expected receipt date
 
 To search by the expected receipt date from expected pieces, follow these steps:
 
@@ -293,7 +302,7 @@ To search by the expected receipt date from expected pieces, follow these steps:
 3. Click **Apply**. The search results appear in the Receiving pane. 
 
 
-### Receipt due
+#### Receipt due
 
 To search by the receipt due date from the order purchase order line, follow these steps:
 
@@ -302,7 +311,7 @@ To search by the receipt due date from the order purchase order line, follow the
 2. Enter a start date in the **From** box and an end date in the **To** box.
 3. Click **Apply**. The search results appear in the Receiving pane. 
 
-### Created by
+#### Created by
 
 To search for receiving title created by a specific user, follow these steps:
 
@@ -315,7 +324,7 @@ To search for receiving title created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-### Date created
+#### Date created
 
 To search for receiving titles based on the date they were created, follow these steps:
 
@@ -325,7 +334,7 @@ To search for receiving titles based on the date they were created, follow these
 
 3. Click **Apply**. The search results appear in the Receiving pane.
 
-### Updated by
+#### Updated by
 
 To search for receiving titles updated by a specific user, follow these steps:
 
@@ -338,7 +347,7 @@ To search for receiving titles updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-### Date updated
+#### Date updated
 
 To search for receiving titles based on the date they were updated, follow these steps:
 
@@ -348,7 +357,7 @@ To search for receiving titles based on the date they were updated, follow these
 
 3. Click **Apply**. The search results appear in the Receiving pane.
 
-### Created by (Piece)
+#### Created by (Piece)
 
 To search for pieces created by a specific user, follow these steps:
 
@@ -361,7 +370,7 @@ To search for pieces created by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-### Date created (Piece)
+#### Date created (Piece)
 
 To search for pieces based on the date they were created, follow these steps:
 
@@ -371,7 +380,7 @@ To search for pieces based on the date they were created, follow these steps:
 
 3. Click **Apply**. The search results appear in the Receiving pane.
 
-### Updated by (Piece)
+#### Updated by (Piece)
 
 To search for pieces updated by a specific user, follow these steps:
 
@@ -384,7 +393,7 @@ To search for pieces updated by a specific user, follow these steps:
 4. Select the user you want to filter by. The search results appear in the Receiving pane.
 
 
-### Date updated (Piece)
+#### Date updated (Piece)
 
 To search for pieces based on the date they were updated, follow these steps:
 
@@ -401,19 +410,13 @@ To clear all filters, go to the **Search & filter** pane and click **Reset all**
 
 To export a file of title and/or piece information in comma-separated values (.csv) format, follow these steps:
 
-In the **Search & filter** pane, use the search and filter options to select a set of receiving records.
+1. In the **Search & filter** pane, use the search and filter options to select a set of receiving records.
 
-In the search results pane, click **Actions** and select,**Export results (CSV)**.
+2. In the search results pane, click **Actions** and select,**Export results (CSV)**.
 
-In the **Export settings** dialog, the following message will display: “This export could take a few minutes. If you reload or close the page the export will not be completed. Once the file is ready it could take another minute for your browser to finish downloading the file. You can continue to work with titles and pieces in a different browser tab if needed.”
+3. In the **Export settings** dialog, the following message will display: “This export could take a few minutes. If you reload or close the page the export will not be completed. Once the file is ready it could take another minute for your browser to finish downloading the file. You can continue to work with titles and pieces in a different browser tab if needed.”
 
-To export all fields from the title and piece leave the **Title fields** and **Piece fields** default values set to **All**.  To select specific fields to export, click on the radio button below “All” and use the drop-down list to select the specific fields to export.
-
-Click **Export**. The file downloads to your local download location.
-
-
-### Title fields
-
+4. To export all fields from the title, leave the **Title fields** default value set to **All**.  To select specific fields to export, click on the radio button below “All” and use the drop-down list to select the specific fields to export:
 *   Title
 *   Publisher
 *   Published date
@@ -431,8 +434,7 @@ Click **Export**. The file downloads to your local download location.
 *   Updated by
 *   Updated on
 
-### Piece fields
-
+To export all fields from the piece, leave the **Piece fields** to export default value set to All. To select specific fields to export, click on the radio button below “All” and use the drop down list to select the specific fields to export:
 *   Display summary
 *   Copy number
 *   Enumeration
@@ -454,6 +456,7 @@ Click **Export**. The file downloads to your local download location.
 *   Updated by (Piece)
 *   Updated on (Piece)
 
+5. Click **Export**. The file downloads to your local download location.
 
 
 ## Viewing receiving titles details
@@ -602,7 +605,8 @@ Expected pieces can be found  in the Expected section of a Receiving app record.
 *   **Display to public.** Select the **Display to public** checkbox to indicate that the piece information should be available to RTAC. This checkbox only appears if the **Display on holdings** box is selected. 
 *   **Bound.** Indicates the piece has been bound with other pieces associated with the receiving title.
 *   **Order line locations.**  A list of locations that were selected on the purchase order line.
-*   **Select holdings.**  In the drop down list, select the location for this piece. You can change the location by clicking [Create new holdings for location](#create-new-holdings-for-location). 
+*   **Select holdings.**  In the drop down list, select the location for this piece. You can change the location by clicking [Create new holdings for location](#create-new-holdings-for-location).
+*   **Sequence.**  Displays the sort order of the piece. For example, if adding a second piece to a receiving title, the sequence will be displayed as 2 of 2. This field is autofilled upon piece creation. 
 
 #### Create new holdings for location
 
@@ -649,6 +653,16 @@ To edit an expected or received piece, make sure the correct receiving title is 
 2. In the **Edit piece** dialog, the same fields as the **Add piece** dialog appear. See above for more information. Note: You cannot make changes to **Piece format** or **Create item** when editing a received piece. If the **Create item** checkbox was selected when the piece was created, the text **Connected** is displayed. If the checkbox was cleared, it still displays the **Create item** box, but the checkbox is not editable. 
 3. Fill out the desired fields.
 4. Click **Save & close**. A confirmation message appears and the piece is updated.
+
+
+## Reordering pieces
+The piece record contains a sequence field that is auto-assigned upon the creation of the piece record to specify display order. This sequence value may be manually adjusted to update the display order of pieces on the piece record.
+1.	[Locate](#searching-for-a-receiving-title) and open the receiving title record.
+2.	Click on the piece record for which you wish to adjust the sequence.
+3.	In the **Edit piece**  dialog, change the number in the sequence field to the desired value. This value may not exceed the maximum number of pieces associated with the receiving title.
+4.	Click **Save & close**.
+5.	A green toast message will appear, confirming the updated sequence has been successfully saved.
+Note: the reordering of pieces in the Receiving app does not impact the display order of corresponding items in the Inventory app.
 
 
 ## Deleting an expected or received piece
