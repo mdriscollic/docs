@@ -102,6 +102,7 @@ When an item is checked in in FOLIO, the following steps happen (not necessarily
 * If an item has a status of **Available** and is checked in at a service point assigned to its effective location, FOLIO will count it as in-house use.
 * If an item has a status of **In transit**, FOLIO will check the logged-in service point to see if it is the primary service point for the item's effective location. If the logged-in service point does not match, the item status remains **In transit**. If the logged-in service point does match, FOLIO changes the item status to **Available**.
 * FOLIO checks the loan policy, overdue policy and lost item policy to determine if any actions need to be taken.
+* If the loan is a for-use-at-location loan the loan will remain open.
 * If the item is determined to be overdue but has not been recalled, FOLIO calculates overdue fines based on the associated policy, and applies them to the patron's account if the fine is greater than zero.
 * If the item is recalled and overdue, FOLIO calculates overdue recall fines based on the associated policy, and applies them to the patron's account if the fine is greater than zero.
 * If an item status is **Declared lost** or **Aged to lost**, FOLIO presents a warning message, and staff must select from the prompt to continue check in.
