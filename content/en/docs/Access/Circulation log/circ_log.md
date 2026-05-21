@@ -80,8 +80,8 @@ In the **Search & filter** pane, click **Loan** and select any applicable filter
 * **Renewed.** Include renewed actions. Renewed through override actions are not included.
 * **Renewed through override.** Include renewed using an override actions.
 * **Aged to lost.** Include aged to lost actions. The time in which an overdue item ages to lost is set up in the [Settings > Circulation > Lost item fee policies.](../../../settings/settings_circulation/settings_circulation/#creating-a-lost-item-fee-policy)
-* **In use.** Include [In use at location](../../checkin#For-use-at-location-check-in) actions.
-* **Held.** Include [Held at location](../../checkin#For-use-at-location-check-in) actions.
+* **In use.** Include [In use at location](../../check-in/checkin/#for-use-at-location-check-in) actions.
+* **Held.** Include [Held at location](../../check-in/checkin/#for-use-at-location-check-in) actions.
 
 The Circulation log app records some user block functionality, but it is not available through filters. To find when manual user blocks were created or deleted, search the description field for "Block" and apply other search/filter options as needed.
 
