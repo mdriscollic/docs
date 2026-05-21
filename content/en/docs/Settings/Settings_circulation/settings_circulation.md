@@ -146,6 +146,11 @@ Since the inventory app requires unique barcodes, libraries with this scenario n
 
 If your library could potentially encounter duplicate barcodes as described, you can check this box to enable the Check in and Check out apps to use a wildcard search for item barcodes and present a modal if duplicate barcodes are found, so library staff can select the correct item.
 
+### Users custom fields to display at Check out
+
+Use the dropdown to select the custom fields you want to have displayed at [Check out](../../../access/check-out/checkout/#patron-details-displayed). Custom fields are configured in [Settings > Users](../../settings_users/settings_users/#settings--users--custom-fields). If no custom fields have been configured, the message **No matching custom fields have been configured** will display. Selected custom fields will appear in the selection box, and can be deslected by clicking on the **x** after the field name.
+
+
 ## Settings > Circulation > Staff slips
 
 Staff slips allow you to configure the information that appears on your staff slips. You have the option of printing these slips when their associated action occurs:
