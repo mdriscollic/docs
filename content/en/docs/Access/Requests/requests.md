@@ -45,7 +45,6 @@ The following are all the Requests permissions:
 
 | Permission Display    Name (OKAPI)             | Resource (EUREKA)        | Type       | Action  | Description                                                                                                                                                                                                             |
 |------------------------------------------------|--------------------------|------------|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Inventory: View instances, holdings, and items | UI-Inventory Instance    | Data       | View    |     You need to have this capability set to enable **Title look-up** when creating title level requests.                                                                                                                    |
 | Requests: All permissions                      | UI-Requests              | Data       | Manage  | This capability set allows the user all request functions.                                                                                                                                                              |
 | Requests: Move to new item, reorder queue      | UI-Requests MoveRequest  | Procedural | Execute | This capability set allows the user to move requests from one item to another (subject to request policies).                                                                                                            |
 | Requests: Reorder queue                        | UI-Requests ReorderQueue | Procedural | Execute | This capability set allows the user to access the dedicated request queue page with reorder capabilities. It is only needed for users who need to reorder the queue. You do not need this permission to view the queue. |
@@ -114,7 +113,7 @@ Requesting is controlled by circulation rules and item statuses. You cannot requ
 5. If you do not have the requester’s barcode, click **Requester look-up** to search for the patron:
     1. Use the Select User dialog to find the requester.
     2. Once found, select the requester from the User Search Results list. The requester’s information will then appear on the request.
-6. Select a **Request type**. The options that appear depend on the Item status of the item you are requesting.
+6. Select a **Request type**. The options that appear depend on the Item status of the item you are requesting. If you see **For use at location** then the associated loan policy is a [For use at location](../../check-in/checkin/#for-use-at-location-check-in) loan policy.
 7. Optional: Enter a **Request expiration date**. If the request is still open by the selected date, it closes and its status changes to Closed - Unfilled.
 8. Optional: Enter any **Patron comments.** For example, if the patron needs the item immediately, you can note it here. Patron comments show up in the CSV report and can be included in pick slips.
 9. Select the **Fulfillment preference**.
@@ -194,7 +193,7 @@ Note: You must have permission to create requests in the Requests app in order t
 5. If you do not have the requester’s barcode, click **Requester look-up** to search for the patron:
     1. Use the Select User dialog to find the requester. 
     2. Once found, select the requester from the User Search Results list. The requester’s information will then appear on the request.
-6. Select a **Request type**. The options that appear depend on the Item status of the item you are requesting.
+6. Select a **Request type**. The options that appear depend on the Item status of the item you are requesting. If you see **For use at location** then the associated loan policy is a [For use at location](../../check-in/checkin/#for-use-at-location-check-in) loan policy.
 7. Optional: Enter a **Request expiration date**. If the request is still open by the selected date, it closes and its status changes to Closed - Unfilled. 
 8. Optional: Enter any **Patron comments**. For example, if the patron needs the item immediately, you can note it here. Patron comments show up in the CSV report and can be included in pick slips.
 9. Select the **Fulfillment preference**.
@@ -331,13 +330,13 @@ The pick slips report generates a single slip for every paged item that needs to
 
 You can configure the information that appears on the pick slips in the [Settings app.](../../../settings/settings_circulation/settings_circulation/#settings--circulation--staff-slips)
 
-To print pick slips, in the Requests pane, select **Actions > Print pick slips for \[your service point]**. A print dialog appears.
+To print pick slips, in the Requests pane, select **Actions > Print pick slips for \[your service point]**. A print dialog appears. Pick slips will print sorted by effective location and then by shelving order.
 
 #### Printing selected pick slips 
 1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
 2. Optional: Filter by **Retrieval service point.**
 3. Select the checkboxes in the first column of the requests you want to print. You can only print Page requests for items whose effective locations are associated with your selected service point.
-4. Select **Actions > Print selected pick slips for [your service point].** A print dialog appears.
+4. Select **Actions > Print selected pick slips for [your service point].** A print dialog appears. Pick slips will print sorted by effective location and then by shelving order.
 
 #### Printing a single pick slip
 1. In the Search & filter pane, select **Request type > Pages** and **Request status > Open - Not yet filled** to filter the items down to open page requests.
