@@ -524,7 +524,7 @@ To export a file of invoice information in comma-separated values (.csv) format,
 4. To export all fields from the title and piece leave the **Invoice fields to export** and **Invoice line fields to export** default values set to **All**.  To select specific fields to export, click on the radio button below “All” and use the drop-down list to select the specific fields to export.
 5. Click **Export**.  The file downloads to your local download location.
 
-**Invoice fields to export**
+### Invoice fields to export
 
 *   Vendor invoice number
 *   Vendor code
@@ -563,7 +563,7 @@ To export a file of invoice information in comma-separated values (.csv) format,
 *   Updated by
 *   Updated on
 
-**Invoice line fields to export**
+### Invoice line fields to export
 
 *   Invoice line number
 *   Description (Title)
