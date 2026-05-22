@@ -354,7 +354,7 @@ The item limit will only apply when the circulation rule criteria includes eithe
 
 To limit the number of items that users in a patron group can borrow, see [Settings > Users > Limits](../../settings_users/settings_users/#settings--users--limits).
 
-**For use at location.** Check the checkbox to have the loan be a [For use at location loan](../../../access/check-in/checkin/#for-use-at-location-check-in). If you check this option, then enter a **Hold shelf expiration** period. Note that this hold shelf expiration period only applies to for-use-at-location loans. The hold shelf expiration for requests is set in [Settings > Tenant > Service points](../../../settings/settings_tenant/settings_tenant/#creating-a-service-point).
+**For use at location.** Check the checkbox to have the loan be a [For use at location loan](../../../access/check-in/checkin/#for-use-at-location-check-in). If you check this option, then enter a **Hold shelf expiration** period. Note that this hold shelf expiration period only applies to for-use-at-location loans. The hold shelf expiration for requests is set in [Settings > Tenant > Service points](../../settings_tenant/settings_tenant/#creating-a-service-point).
 
 #### Renewals
 
