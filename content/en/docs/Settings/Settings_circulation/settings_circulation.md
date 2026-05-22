@@ -146,6 +146,11 @@ Since the inventory app requires unique barcodes, libraries with this scenario n
 
 If your library could potentially encounter duplicate barcodes as described, you can check this box to enable the Check in and Check out apps to use a wildcard search for item barcodes and present a modal if duplicate barcodes are found, so library staff can select the correct item.
 
+### Users custom fields to display at Check out
+
+Use the dropdown to select the custom fields you want to have displayed at [Check out](../../../access/check-out/checkout/#patron-details-displayed). Custom fields are configured in [Settings > Users](../../settings_users/settings_users/#settings--users--custom-fields). If no custom fields have been configured, the message **No matching custom fields have been configured** will display. Selected custom fields will appear in the selection box, and can be deslected by clicking on the **x** after the field name.
+
+
 ## Settings > Circulation > Staff slips
 
 Staff slips allow you to configure the information that appears on your staff slips. You have the option of printing these slips when their associated action occurs:
@@ -172,7 +177,7 @@ Staff slips have eight categories of tokens, listed in the table below. All of t
 |     Request delivery address |     Request delivery, Pick slip, Search slip (Hold requests)                                  |     Due date receipt, Hold, Transit                                          |
 |     Requester                |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
 
-Note: *StaffSlip.staffUsername* only populates for Pick slip. The tokens *item.yearCaption* and *item.loanType* do not populate in Due date receipt.  
+Note: *StaffSlip.staffUsername* only populates for Pick slip. The tokens *item.yearCaption*, *item.loanType*, *item.numberOfPieces*, *item.descriptionOfPieces*, and *item.lastCheckedInDateTime* do not populate in Due date receipt.  
 *Item.fromServicePoint* populates for Hold slips, Transit slips, and Request delivery slips. *Item.toServicePoint* only populates for Transit slips.
 
 ### Configuring a staff slip
@@ -327,6 +332,7 @@ The item limit will only apply when the circulation rule criteria includes eithe
 
 To limit the number of items that users in a patron group can borrow, see [Settings > Users > Limits](../../settings_users/settings_users/#settings--users--limits).
 
+**For use at location.** Check the checkbox to have the loan be a [For use at location loan](../../../access/check-in/checkin/#for-use-at-location-check-in). If you check this option, then enter a **Hold shelf expiration** period. Note that this hold shelf expiration period only applies to for-use-at-location loans. The hold shelf expiration for requests is set in [Settings > Tenant > Service points](../../settings_tenant/settings_tenant/#creating-a-service-point).
 
 If you select **Rolling**, you see the following fields:
 
@@ -348,6 +354,7 @@ The item limit will only apply when the circulation rule criteria includes eithe
 
 To limit the number of items that users in a patron group can borrow, see [Settings > Users > Limits](../../settings_users/settings_users/#settings--users--limits).
 
+**For use at location.** Check the checkbox to have the loan be a [For use at location loan](../../../access/check-in/checkin/#for-use-at-location-check-in). If you check this option, then enter a **Hold shelf expiration** period. Note that this hold shelf expiration period only applies to for-use-at-location loans. The hold shelf expiration for requests is set in [Settings > Tenant > Service points](../../settings_tenant/settings_tenant/#creating-a-service-point).
 
 #### Renewals
 
@@ -563,7 +570,7 @@ You can set up multiple notices in one policy. Libraries’ needs differ. Some w
 
 **Check out.** The notice is sent when items are checked out. Additionally, the notice is always sent with multiples by patron by session. The template you select must be configured for multiple loans/items.
 
-**Item renewed.** The notice is sent when items are renewed.The template you select must not be configured for multiple loans/items.
+**Item renewed.** The notice is sent when items are renewed. The template you select must not be configured for multiple loans/items.
 
 **Loan due date/time.** The notice is sent before, after, or when an item is due. Select when the notice is sent from the **Send** drop-down list:
 
