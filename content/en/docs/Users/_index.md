@@ -107,7 +107,7 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
     -  **Active** status indicates current affiliation, employment, or enrollment at the library's institution. 
     -  **Inactive** status indicates that the expiration date on the user's record has passed or the user is no longer affiliated, employed, or enrolled at the library's institution. An inactive user cannot log in to FOLIO, checkout or renew an item, or place a request. Patron notices continue to be sent to inactive patrons, and open fines continue to be included in transfer reports.
 -  **Expiration date.** The expiration date determines when a user's status is scheduled to change from **Active** to **Inactive**. Expiration date is optional and this field may be left blank. For information on editing an expiration date, see [Edit an expiration date](#edit-an-expiration-date).
--  **Barcode.** The barcode number for the user's library card. Type the barcode number in the **Barcode** field. 
+-  **Barcode.** The barcode number for the user's library card. Type the barcode number in the **Barcode** field. If your institution has enabled the number generator for the Users app and your user has the applicable capabilities, you may use the number generator to generate the barcode. 
 -  **User Type.** Select the user type: **Patron** or **Staff**. This field is required in [ECS-enabled tenants](../consortia/). This field is also required for non-ECS-enabled tenants using [Reading Room Access](../access/reading-room/reading_room/). Otherwise, use of the **User type** field is optional.
     -  **Patrons.** Users who may borrow library materials but have no FOLIO permissions assigned to their User record and do not log in to FOLIO to manage their library accounts.
     -  **Staff.** Users who are employed by the library, have FOLIO permissions assigned to their User record for the purpose of performing their library work, and may borrow library materials.
@@ -146,11 +146,12 @@ Keyboard shortcuts allow you to perform actions in this app using the keyboard. 
 
 The **Custom fields** section appears only if it is configured in [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields).
 
+Note: on Trillium, if a custom field is created using non-Roman characters, an error toast will appear (in the User record and while on the Custom Fields settings page) that a "required attribute is missing". A fix is coming but the workaround is to create a new custom field with a valid title, and the invalid field will be removed.
 
 ## Search for user records
 
 
-You can search for user records in the **User search** pane. To search for users, select **Keyword (name, email, identifier)** to search any of these fields: 
+You can search for user records in the **Search & Filter** pane. To search for users, select **Keyword (name, email, identifier)** to search any of these fields: 
 
     - Username
     - First Name
