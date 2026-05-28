@@ -1,7 +1,7 @@
 ---
 title: "quickMARC"
 linkTitle: "QuickMARC"
-date: 2025-07-24
+date: 2026-05-28
 weight: 50
 tags: ["parenttopic"]   
 ---
@@ -43,13 +43,13 @@ Note: Some actions in quickMARC require capabilities in other apps. Because quic
 
 quickMARC is a module that is contained within the Inventory app. In order for an instance or holdings record to be viewed and edited in quickMARC, its source must be MARC. quickMARC can also be accessed via the MARC Authority app when creating or editing authority records. Instructions for creating or editing authority records are contained in the [MARC Authority documentation](../marcauthority).
 
-Note: If an instance record was created manually in the Inventory app, then it doesn't have an underlying MARC record and cannot be used with quickMARC.
+Note: If an instance record was created manually in the Inventory app, then it doesn't have an underlying MARC record and cannot be accessed within quickMARC.
 
 1.  Open the **Inventory app**.
 2.  Find the record you want to view or edit, and select it.
--To open an bibliographic record in quickMARC
+- To open a bibliographic record in quickMARC:
 In the **Instance record details** pane, click **Actions \> Edit MARC bibliographic record**. The Edit MARC record window appears. 
-- To open a holdings record in quickMARC
+- To open a holdings record in quickMARC:
 Select **View holdings**, click **Actions \> Edit in quickMARC**.  The Edit MARC record window appears. 
 
 ## Editing a MARC record using quickMARC
@@ -58,15 +58,15 @@ To edit a MARC record, click on the appropriate Edit option, located in the Acti
 
 To edit a bibliographic record:
 1.  Open the **Inventory app**.
-2.  Find the record you want to view or edit, and select it.
-3.  In the **Instance record details** pane, click **Actions \> Edit MARC bibliographic record**. Alternatively, click **Actions \> View source** and then **Actions \> Edit MARC bibliographic record**.
+2.  Find the record you want to edit, and select it.
+3.  In the **Instance record details** pane, click **Actions \> Edit MARC bibliographic record**. Alternatively, click **Actions \> View source** and then **Actions \> Edit MARC bibliographic record**. The **Edit MARC record** window appears. 
 
 To edit a holdings record:
 1.  Open the **Inventory app**.
 2.  Find the record you want to view or edit, and select it.
-3.  In the **Instance record details** pane, select **View holdings**, click **Actions \> Edit in quickMARC**.  The Edit MARC record window appears. 
+3.  In the **Instance record details** pane, select **View holdings**, click **Actions \> Edit in quickMARC**. The **Edit MARC record** window appears. 
 
-In the Edit MARC record window, you can perform the following actions:
+In the **Edit MARC record** window, you can perform the following actions:
 -   **Add a field.** To add a field, click the **+**. The new field appears below.
 -   **Delete a field.** To delete a field, click the **trash can icon**. The field will be deleted.
 -   **Move a field up.** To move a field up, click the **up arrow** in the row of the field you want to move. The field is moved one row up.
@@ -82,14 +82,14 @@ Link icons can display to the right of the following MARC tags: 100, 110, 111, 6
 
 To link a field to an authority record:
 1.  Click on the link to the right of the selected field.
-2.  In the MARC authority Search & filter modal, verify that the desired type of entity and authority source are selected.
+2.  In the **Select MARC authority** modal, verify that the desired type of entity and authority source are selected.
 3.  Search by text string or by identifier.
-4.  Select and open the appropriate authority record from the results list.
+4.  Select and open the appropriate authority record from the results list. The results list is populated by MARC authority records in the MARC authority app.
 5.  Click the **Link** button in the upper right.
 
 The access point in the bibliographic record will exactly match the authorized access point in the authority record and the $0 will be populated.
 The link icon to the right of the field is replaced with **Unlink from MARC Authority record** and **View MARC authority record** icons.
-When a field is linked, the $a and $0 cannot be edited.
+When a field is linked, the access point and $0 cannot be edited.
 
 To unlink a field from an authority record:
 1.  Click on the **Unlink from MARC Authority record** icon to the right of the selected field.
@@ -106,7 +106,7 @@ To link all access points in a bibliographic record to authority records:
 
 The access points in the bibliographic record will exactly match the authorized access points in the authority record.
 The link icon to the right of the field is replaced with **Unlink from MARC Authority record** and **View MARC authority record** icons.
-When a field is linked, the $a and $0 cannot be edited.
+When a field is linked, the access point and $0 cannot be edited.
 
 Fields must be unlinked individually from an authority record:
 1.  Click on the **Unlink from MARC Authority record** icon to the right of the selected field.
