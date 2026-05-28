@@ -1,7 +1,7 @@
 ---
 title: "MARC authority"
 linkTitle: "MARCauthority"
-date: 2026-02-06
+date: 2026-05-28
 weight: 40
 tags: ["parenttopic"]
 ---
@@ -91,6 +91,7 @@ In the Edit MARC authority record window, you can perform the following actions:
 The following additional validation rules and restrictions apply:
 
 -   The leader (LDR) field can be edited via dropdown menus under each position. Only Record status (Status, corresponds with position 05), Type of record (Type, position 06), Encoding Level (Elvl, position 17), and Punctuation policy (Punct, position 18) can be edited. Type of record (position 06) must contain a value of "z".
+-   The 008 field can be edited via dropdown menus under each position.
 -   Fields 001 and 999ff are system supplied and cannot be edited or deleted.
 -   Field 001 is non-repeatable.
 -   Field 010 is non-repeatable and can only contain one \$a.
@@ -155,7 +156,7 @@ The following filters can be applied to search results:
 -   **Authority source.** The authority source is the name of the authority file. Authority sources can be added, edited, or marked as inactive (See [Settings > MARC Authority](../../../settings/settings_marc_authority/settings_marc_authority/#settings--marc-authority--manage-authority-files)).
 -   **References.** "See from" and "See from also" references can be excluded from the search results.
 -   **Thesaurus.** The thesaurus for authority records is assigned according to the 008 field Subject heading system/thesaurus (position 11).
--   **Type of heading.** The type of heading is assigned according to the 1XX field. Options are personal name, corporate name, conference name, topical, geographic name, genre, uniform title, and other.
+-   **Type of heading.** The type of heading is assigned according to the 1XX field. Options are chronological subdivision, chronological term, conference name, corporate name, form subdivision, general subdivision, genre, geographic name, geographic subdivision, medium of performance term, named event, personal name, topical, and uniform title.
 -   **Date created.** The date the record was created, entered as a range.
 -   **Date updated.** The date the record was most recently updated, entered as a range.
 
@@ -166,7 +167,7 @@ When using filters, keep the following in mind:
 -   Multiple values in different filters are combined with "AND."
 
 ## Browsing authority headings and references
-You can browse for MARC authority records in the **Search & filter** pane. Enter your search terms in the box and click **Search**. Select the **Select a browse option** drop-down list to search through one of the following: 
+You can browse for MARC authority records in the **Search & filter** pane. Click **Browse** at the top of the pane, select the **Select a browse option** drop-down list to search through one of the following: 
 
 -   **Personal name.** 
 -   **Corporate/Conference name.** 
@@ -174,13 +175,15 @@ You can browse for MARC authority records in the **Search & filter** pane. Enter
 -   **Name-title.** 
 -   **Uniform title.** 
 -   **Subject.** 
--   **Genre.** 
+-   **Genre.**
+
+Enter your search terms into the text box and click **Search.**
 
 The following filters can be applied to browse results:
 
 -   **Authority source.** The authority source is the name of the authority file. Authority sources can be added, edited, or marked as inactive (see [Settings > MARC Authority](../../../settings/settings_marc_authority/settings_marc_authority/#settings--marc-authority--manage-authority-files)).
 -   **References.** "See from" references can be excluded from the browse results.
--   **Type of heading.** The type of heading is assigned according to the authority record's 1XX field. Options are personal name, corporate name, conference name, topical, geographic name, genre, uniform title, and other.
+-   **Type of heading.** The type of heading is assigned according to the authority record's 1XX field. Options are chronological subdivision, chronological term, conference name, corporate name, form subdivision, general subdivision, genre, geographic name, geographic subdivision, medium of performance term, named event, personal name, topical, and uniform title.
 
 When using filters, keep the following in mind:
 
@@ -188,13 +191,30 @@ When using filters, keep the following in mind:
 -   Multiple values in the same filter are combined with "OR."
 -   Multiple values in different filters are combined with "AND."
 
-## Exporting MARC authority records
+## Exporting a single MARC authority record
 
-1.  Open the **MARC authority** app. 
-2.  In the **Search & filter** pane, search for the records you want to export. In the **MARC authority** pane, for each record you wish to export, select the **checkbox** in the first column. Note that associated references in the results list can also be checked; the message at the top of the pane will display the accurate number of records selected.
-3.  Click **Actions \> Export selected records (CSV/MARC)**. Depending on your browser and its configurations, the file automatically downloads or you are prompted to save it. The export is logged in the Data export app.
+1.  In the **Search & filter** pane, search for the records you want to export.
+2.  Open the record you wish to export by clicking on the heading in the **Heading/Reference** column of the **MARC Authority** pane.
+3.  In the third pane, click **Actions \> Export (MARC)**. Depending on your browser and its configurations, a .csv file containing the authority record UUID automatically downloads or you are prompted to save it. The export is logged in the Data export app. To view the exported record, follow the instructions in [Retrieving data export results](../../data-export/#retrieving-data-export-results)
 
-To view the exported records, follow the instructions in [Retrieving data export results](../../data-export/#retrieving-data-export-results)
+## Exporting multiple MARC authority records
+
+1.  In the **Search & filter** pane, search for the records you want to export. 
+2.  Click **Actions \> Export selected records (CSV/MARC)**. Depending on your browser and its configurations, the file automatically downloads or you are prompted to save it. The export is logged in the Data export app. To view the exported records, follow the instructions in [Retrieving data export results](../../data-export/#retrieving-data-export-results)
+
+## Saving MARC authority UUIDs
+
+Produces a .csv file that is ONLY a listing of UUIDs.
+
+1.  In the **Search & filter** pane, search for the records you want to save.
+2.  In the **MARC authority** pane, click **Actions \> Save Authorities UUIDs.** Depending on your browser and its configurations, the file automatically downloads or you are prompted to save it. The export is logged in the Data export app.
+
+## Saving MARC authority CQL query
+
+Produces a .cql file that contains the 'commands' used in the query, in Contextual Query Language (CQL), as defined on [dev.folio.org](https://dev.folio.org/reference/glossary/#cql).
+
+1.  In the **Search & filter** pane, search for the MARC authority CQL query you want to save. 
+2.  In the MARC authority pane, click **Actions \> Save authorities CQL query**. Depending on your browser and its configurations, the file automatically downloads or you are prompted to save it.
 
 ## Reporting
 
