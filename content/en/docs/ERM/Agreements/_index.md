@@ -176,7 +176,7 @@ When adding agreement periods, you should consider the following:
 
 ### Aquisition units
 
-Acquisition units are an additional layer you can add to acquisition records that restricts a user’s ability to interact with those records unless they have been assigned to that unit. For example, you may create acquisition units to represent the different libraries within your library system. Units are defined and determined by your library in the Settings app. See [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/) for more information.
+Acquisition units are an additional layer you can add to acquisition records that restrict a user’s ability to interact with those records unless they have been assigned to that unit. For example, you may create acquisition units to represent the different libraries within your library system. Units are defined and determined by your library in the Settings app. See [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/) for more information.
 
 If you want the agreement to be available to particular users within certain acquisition units, enter or select the Acquisition units from the drop-down list. You can select multiple units. 
 
