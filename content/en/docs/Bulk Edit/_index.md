@@ -278,7 +278,7 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 | *User - Preferred first name* | YES | YES |
 | *User - Pronouns* | YES | YES |
 | *User - Proxy for* | NO | YES | 
-| *User - Tags tag list* | NO | YES |
+| *User - Tags* | YES | YES |
 | *User - Type* | YES | YES |
 | *User - Updated by User UUID* | YES | YES |
 | *User - Updated date* | YES | YES |
@@ -286,6 +286,8 @@ See [Supported Fields by Record Type](https://folio-org.atlassian.net/wiki/x/PJd
 | *User - User updated date* | YES | YES |
 | *User - User UUID* | YES | YES |
 | *User - Username* | YES | YES |
+| *User created by* | YES | YES |
+| *User updated by* | YES | YES |
 
 **Custom fields** for User records, if configured, are available for building a query and displaying as column headings in the Bulk edit app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
 
