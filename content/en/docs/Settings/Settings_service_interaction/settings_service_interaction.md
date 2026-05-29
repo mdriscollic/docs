@@ -6,29 +6,29 @@ weight: 228
 tags: ["subtopic"]
 ---
 
-The Service Interaction section of the Settings App is where you can configure central settings like the number generators and number generator sequences.
+The Service interaction section of the Settings App is where you can configure central settings like the number generators and number generator sequences.
 
-For enabling number generators for Apps like Inventory, Receiving, Organizations please view descriptions in those Settings areas. Number generators need to be enabled separately and in addition FOLIO users need permissions listed below.
+For enabling number generators for Apps like Inventory, Receiving, Organizations, Users please view descriptions in those Settings areas. Number generators need to be enabled separately and in addition FOLIO users need capability sets listed below.
 
-## Permissions
+## Capabilities
 
-In order to interact with Service interaction settings, a user needs to be assigned the following permissions:
+In order to interact with Service interaction settings, a user needs to be assigned the following capability sets:
 
 
-| Capability Set (Eureka) | Type | Application | Action | Descriptions |
+| Capability set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ----- | ---------- | ----- | ---------- |
-| Settings Service-Interaction Enabled | Settings | app-platform-complete | view | This permission/capability set allows the user to view Settings > Service Interaction |
-| UI-Service-Interaction NumberGenerator | Data | app-platform-complete | view | This permission/capability set allows the user to view the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
-| UI-Service-Interaction NumberGenerator | Data | app-platform-complete | manage | This permission/capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
+| Settings Service-Interaction Enabled | Settings | app-service-interaction | view | This capability set allows the user to view Settings > Service interaction |
+| UI-Service-Interaction NumberGenerator | Data | app-service-interaction | view | This capability set allows the user to view the number generators and number generator sequences settings (Service interaction) and allows the user to generate numbers within apps. |
+| UI-Service-Interaction NumberGenerator | Data | app-service-interaction | manage | This capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings (Service interaction) and allows the user to generate numbers within apps. |
 
 
 In order to view or manage settings user needs to be assigned **Settings Service-Interaction Enabled** and **UI-Service-Interaction NumberGenerator** either with Action **view** or **manage**.
 
-In order to generate numbers within apps in addition to the appropriate create and edit permissions for the individual apps user needs to be assigned **UI-Service-Interaction NumberGenerator** either with Action **view** or **manage**.
-This applies for the use of number generators in Inventory, Receiving, Organizations as well as Serials Management and Open Access.
+In order to generate numbers within apps in addition to the appropriate create and edit capabilities for the individual apps user needs to be assigned **UI-Service-Interaction NumberGenerator** either with Action **view** or **manage**.
+This applies for the use of number generators in Inventory, Receiving, Organizations, Users as well as Serials Management and Open Access.
 
 
-## Settings > Service Interaction > Number generators
+## Settings > Service interaction > Number generators
 
 New number generators need frontend and backend development work to integrate them with FOLIO apps. In this case use **New** to create a row for the new number generator to match with the development work.
 
@@ -38,21 +38,22 @@ The following number generators are available. In case the reference data is not
 | ----- | ----- | ---------- | ---- |
 | Inventory: Accession number | inventory\_accessionNumber | Used for Accession number in Inventory as well as in Receiving (Item level) | A |
 | Inventory: Call number | inventory\_callNumber | Used for Call number on Item level in Inventory as well as in Receiving and in addition in Inventory on Holdings level | A |
-| Inventory: Item barcode | inventory\_itemBarcode | Used for Item Barcode on Item level in Inventory as well as in Receiving | A |
+| Inventory: Item barcode | inventory\_itemBarcode | Used for Item Barcode on Item level in Inventory as well as in Receiving and in addition in fast add | A |
 | Open access: Publication request number | openAccess | Used as identifier "Publication request number" in the Open Access App | B |
 | Organizations: Vendor code | organizations\_vendorCode | Used for Code in Organizations | A |
 | Serials management: Pattern number | serialsManagement\_patternNumber | Used as identifier "Pattern number" in the Serials Management App | B |
+| Users: Patron barcode | users\_patronBarcode | Used for Barcode in Users | A |
 
 
 Type A:
 
 * One or more sequences possible to select from when create or edit records and using the number generator
-* Sequences need to be defined before use at Settings > Service Interaction > Number generator sequences
+* Sequences need to be defined before use at Settings > Service interaction > Number generator sequences
 
 Type B:
 
 * Number automatically assigned to the record defined by one sequence
-* If reference data is not included in your FOLIO environment, one sequence with the following code needs to be defined before use at Settings > Service Interaction > Number generator sequences or sequence might be changed to your requirements
+* If reference data is not included in your FOLIO environment, one sequence with the following code needs to be defined before use at Settings > Service interaction > Number generator sequences or sequence might be changed to your requirements
 
 | Number generator | Code of sequence |
 | ----------- | --------- |
@@ -70,7 +71,7 @@ Click the **pencil icon** under **Actions** to edit the name.
 Click the **trash can icon** under **Actions** to delete the row for a number generator. Only available if no sequences are assigned. This number generator is then no longer functional.
 
 
-## Settings > Service Interaction > Number generator sequences
+## Settings > Service interaction > Number generator sequences
 
 A sequence of a number generator defines how the number will be generated and then displayed by settings of several values.
 
@@ -91,7 +92,10 @@ In case the reference data is included in your FOLIO environment example sequenc
       * **Maximum value**. This is the maximum possible value for the sequence. When the maximum is reached, the sequence will no longer be usable.
       * **Warning threshold value**. When set, a warning will be displayed to users of the sequence when its value is reached. Must be lower than the maximum value.
       * **Next value**. This field shows the next value in the sequence based on the current value in the database. It can be set manually as the starting value for a new sequence.
-      * **Format**. The Format field defines the length of the generated number (excluding the check digit, prefix, and suffix) and supports optional padding. Use # for digits without padding (e.g., #### for four digits). To add padding, specify the character. E.g., 0000 for leading zeros, resulting in outputs like 0045. If a Maximum value is set, the Format length must match it.
+      * **Format**. The Format field supports optional padding, while the Maximum value field defines the length of the generated incremental number (excluding the check digit, prefix and suffix)
+          * Use # for digits without padding (e.g., #### for four digits).
+          * To add padding, specify the character. E.g., 0000 for leading zeros, resulting in outputs like 0045.
+          * If a Maximum value is set, the Format length must match it. The maximum value field enforces the length of the field, e.g. the maximum value of 9999 indicates a maximum length of four characters and must be paired with a matching format value, e.g. #### or 0000.
    * Checksum settings
       * **Method**. The checksum method for the check digit. Use the checksum input template to define what needs to be included in the calculation e.g. prefix or suffix.
       * **Input template**. Create rules to define the number to be inputted when calculating the check digit. Both the prefix and suffix can be templated, using Groovy markup. Use ${generated\_number} as placeholder for the generated number. E.g. 05${generated\_number}01
@@ -105,17 +109,18 @@ In case the reference data is included in your FOLIO environment example sequenc
 ##### Method #####
 
 Select “None” for no checksum calculation.
+
 Methods for calculating check digits differ in weighting, direction, calculation like mod10 or mod11, calculation of remainder and other factors.
 Additionally some methods are named after its creator e.g. Luhn, others may be named after the number which is generated e.g. ISSN. Those methods can be used to generally generate numbers not related to numbers they are named after.
 
 | Name | Weighting | Direction | mod10/mod11 | Remainder | Additional information | Length |
 | ---------- | ----- | ----- | ---------- | ---------- | ----------- | ------ |
-| 21-RTL-mod10-I (Luhn) | 21 | right to left | 	weighted values greater than 9 have 9 subtracted <br>mod10 | (I) 10-remainder = check digit <br>no remainder = 0 | Luhn / Double-Add-Double | scalable |
+| 21-RTL-mod10-I (Luhn) <br>former name: 21RTLmod10Luhn | 21 | right to left | 	weighted values greater than 9 have 9 subtracted <br>mod10 | (I) 10-remainder = check digit <br>no remainder = 0 | Luhn / Double-Add-Double | scalable |
 | 31-RTL-mod10-I (EAN) <br>former name: EAN13 | 31 | right to left | mod10 | (I) 10-remainder = check digit <br>no remainder = 0 | Method is used for the European Article Number (EAN) / ISBN13 | scalable |
 | 12-LTR-mod10-R | 12 |	left to right |	mod10 |	(R) remainder = check digit <br>no remainder = 0 | | scalable |
 | 1793-LTR-mod10-R | 1793 | left to right | mod10 | (R) remainder = check digit <br>no remainder = 0 | | scalable |
-| 8765432-LTR-mod11-I-X (ISSN) | 8765432 | left to right | mod11 | (I) 11-remainder = check digit <br>result = 10 → check digit = X | Method is used for ISSN <br>pattern for calculation: 8-7-6-5-4-3-2-1-0-10-9-8-... | 7 + check digit <br>scalable |
-| 2345678910-RTL-mod11-I-X (ISBN10) | 2345678910 | right to left | mod11 | (I) 11-remainder = check digit <br>result = 10 → check digit = X | Method is used for ISBN10 <br>pattern for calculation: ...-14-13-12-11-10-9-8-7-6-5-4-3-2 |9 + check digit <br>scalable |
+| 8765432-LTR-mod11-I-X (ISSN) <br>former name: 2345678RTLmod11ISSN | 8765432 | left to right | mod11 | (I) 11-remainder = check digit <br>result = 10 → check digit = X | Method is used for ISSN <br>pattern for calculation: 8-7-6-5-4-3-2-1-0-10-9-8-... | 7 + check digit <br>scalable |
+| 2345678910-RTL-mod11-I-X (ISBN10) <br>former name: 12RTLmod11ISBN10  | 2345678910 | right to left | mod11 | (I) 11-remainder = check digit <br>result = 10 → check digit = X | Method is used for ISBN10 <br>pattern for calculation: ...-14-13-12-11-10-9-8-7-6-5-4-3-2 |9 + check digit <br>scalable |
 
 
 ##### Input template #####
@@ -132,14 +137,14 @@ Examples
 | prefix and suffix | 05${generated\_number}01 <br>358${generated\_number}2 |
 
 
-##### Output settings #####
+#### Output settings
 
 **Output template** defines the rules applied to create the sequence.
 
 Please use Maximum value for the length and Format for padding.
 
    * Prefix and/or suffix can be included in the output template. (space characters are allowed)
-   * In case the prefix or suffix includes $ please use \$ for displaying $
+   * In case the prefix or suffix includes $ please use \\$ for displaying $
    * Use ${generated_number} for the sequential generated number
    * To include the check digit (calculation defined by method and input template) use ${checksum}
 
@@ -150,8 +155,8 @@ Please use Maximum value for the length and Format for padding.
 | 2025-ABC ${generated\_number} | 000 | 1 | 2025-ABC 001 |
 | 2025-ABC ${generated\_number} | ### | 1 | 2025-ABC 1 |
 | A1/${generated\_number}-B | 0000 | 51 | A1/0051-B |
-| \$ABC ${generated\_number} | 00000 | 7 | $ABC 00007 |
-| \$ABC ${generated\_number} | ##### | 7 | $ABC 7 |
+| \\$ABC ${generated\_number} | 00000 | 7 | $ABC 00007 |
+| \\$ABC ${generated\_number} | ##### | 7 | $ABC 7 |
 | 1 N ${generated\_number}: 2013 | 0000 | 325 | 1 N 0325: 2013 |
 | ${generated\_number}-${checksum} | 0000 | 45 | 0045-5 |
 | A${generated\_number}${checksum} | 0000 | 45 | A00455 |
@@ -168,7 +173,11 @@ Depending on the method selected check digits are calculated differently. In tho
 
 3. You can also filter on Enabled and Usage status. For more information on the filters, see the filter descriptions below.
 
-### Enabled ###
+* Results are listed in a table with pagination of 25. Use the buttons previous or next to display other pages. Number of results can be found at the right top corner of the result table.
+* To sort by a column, click the column name.
+* To view details of a sequence in the 4th pane, click on the name of the sequence in the first column.
+
+#### Enabled ####
 
 To filter sequences by enabled, select one of the following:
 
@@ -176,20 +185,16 @@ To filter sequences by enabled, select one of the following:
    * **True**. Enabled sequences, which are displayed for selection in the window of the App UI
    * **False**. Disabled sequences, which are not displayed for selection in the window of the App UI.
 
-### Usage status ###
+#### Usage status ####
 
 To filter sequences by Usage status, select one of the following:
 
    * **All**. All values are displayed
-   * **At maximum**. Maximum number is reached. Sequence is no longer available for generating numbers.
-   * **Below threshold**. Below warning threshold number, defined in sequence configuration for displaying warnings if desired.
-   * **Over threshold**. Between warning threshold number and maximum number, defined in sequence configuration if desired.
-   * **No maximum set**. No maximum number was set.
+   * **At maximum**. Maximum value is reached. Sequence is no longer available for generating numbers.
+   * **Below threshold**. Below warning threshold value, defined in sequence configuration for displaying warnings if desired.
+   * **Over threshold**. Between warning threshold value and maximum value, defined in sequence configuration if desired.
+   * **No threshold set**. No warning threshold value was set.
 
-
-   * Results are listed in a table with pagination of 25. Use the buttons previous or next to display other pages. Number of results can be found at the right top corner of the result table.
-   * To sort by a column, click the column name.
-   * To view details of a sequence in the 4th pane, click on the name of the sequence in the first column.
 
 ### Editing number generator sequences
 
@@ -227,19 +232,20 @@ The sequence may be in use in one or more apps. If in doubt, consider disabling 
 ## Using Number generator
 ### Settings > App > Number generator options
 
-#### Permissions ####
+#### Capabilities ####
 
-In order to interact with Number generator options settings for Apps, a user needs to be assigned the following permissions:
+In order to interact with Number generator options settings for Apps, a user needs to be assigned the following capability sets:
 
-| Capability Set (Eureka) | Type | Application | Action | Descriptions |
+| Capability set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ------ | ---------- | -------- | ---------- |
-| UI-Inventory Settings Mange-Number-Generator-Options | Settings | app-platform-complete | view | This permission/capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Settings > Inventory > Holdings, Items > Number generator options. |
-| UI-Oders Settings Number-Generator | Settings | app-acquisitions | manage | This permission/capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Receiving in Settings > Orders > General > Number generator options. |
-| UI-Organizations Settings NumberGenerator | Settings | app-acquisitions | manage | This permission/capability set allows the user to view and edit Number generator options for Code in Settings > Organizations > Number generator options. |
+| UI-Inventory Settings Mange-Number-Generator-Options | Settings | app-inventory | view | This capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Settings > Inventory > Holdings, Items > Number generator options. |
+| UI-Oders Settings Number-Generator | Settings | app-acquisitions | manage | This capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Receiving in Settings > Orders > General > Number generator options. |
+| UI-Organizations Settings NumberGenerator | Settings | app-acquisitions | manage | This capability set allows the user to view and edit Number generator options for Code in Settings > Organizations > Number generator options. |
+| UI-Users Settings Number-Generator-Options | Settings | app-platform-complete | manage | This capability set allows the user to view and edit Number generator options for Barcode in Settings > Users > General > Number generator options. |
 
-### Enabling Number generators for Apps like Inventory, Receiving, Organizations
+### Enabling Number generators for Apps like Inventory, Receiving, Organizations, Users
 
-In Settings > App > Number generator options three options are available via drop-down (existing radio buttons will be changed to drop-down)
+In Settings > App > Number generator options three options are available via drop-down
 
    * Off = Number generator off: number can be filled manually only.
    * On, field editable = Number generator on, editable: number can be filled using the generator and be edited, or filled manually.
@@ -251,9 +257,10 @@ To enable the Number generator please select either **On, field editable** or **
 
 | App | Number generator settings for |
 | ---------- | ---------- |
-| Settings > **Organizations** > Number generator options | Code |
+| Settings > **Inventory** > Holdings, Items > Number generator options | Call number (Holdings) <br>Barcode (Items) <br>Accession number (Items) <br>Call number (Items, Fast add) |
 | **Receiving** (Settings > Orders > General > Number generator options) | Barcode <br>Accession number <br>Call number |
-| Settings > **Inventory** > General > Number generator options | Call number (Holdings) <br>Barcode (Items) <br>Accession number (Items) <br>Call number (Items) |
+| Settings > **Organizations** > Number generator options | Code |
+| Settings > **Users** > General > Number generator options | Barcode |
 
 
 ### Use the same generated number for accession number and call number
@@ -270,26 +277,26 @@ Number generator for Accession number and Call number must be enabled via "On, f
    * Number generator is enabled in Settings > "App" > Number generator options
       * On, field editable = Number generator on, editable: number can be filled using the generator and be edited, or filled manually.
       * On, field not editable = Number generator on, fixed: number can be filled using the generator only.
-   * User has permissions either
+   * User has capability set either
 
-| Capability Set (Eureka) | Type | Application | Action | Descriptions |
+| Capability set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ----- | -------- | ------ | ---------- |
-| UI-Service-Interaction NumberGenerator | Data | app-platform-complete | view | This permission/capability set allows the user to view the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
+| UI-Service-Interaction NumberGenerator | Data | app-service-interaction | view | This capability set allows the user to view the number generators and number generator sequences settings (Service interaction) and allows the user to generate numbers within apps. |
 | or |||||
-| UI-Service-Interaction NumberGenerator | Data | app-platform-complete | manage | This permission/capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
+| UI-Service-Interaction NumberGenerator | Data | app-service-interaction | manage | This capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings (Service interaction) and allows the user to generate numbers within apps. |
 
 
-   * User has permissions to create and/or edit records (e.g. Inventory, Receiving, Organizations, Users, Serials Management, Open Access) in FOLIO depending on tasks
+   * User has capabilities to create and/or edit records (e.g. Inventory, Receiving, Organizations, Users, Serials Management, Open Access) in FOLIO depending on tasks
    * In Settings > Service interaction > Number generator sequences > Generator
       * at least one sequence is predefined for every number generator which is enabled
 
 
 
-#### Using Number generators
+### Using Number generators
 
-##### Inventory / Organizations #####
+##### Inventory / Organizations / Users #####
 
-If the number generator is enabled and user has the applicable permissions then a button is displayed next to the field (e.g. user barcode, vendor code, item barcode, accession number, call number).
+If the number generator is enabled and user has the applicable capabilities then a button is displayed next to the field (e.g. user barcode, vendor code, item barcode, accession number, call number).
 
    1. Click **Generate "field name"**
    2. Window "field name" generator is displayed
@@ -303,17 +310,17 @@ If the number generator is enabled and user has the applicable permissions then 
 
 ##### Receiving #####
 
-If the number generator is enabled, user has the applicable permissions and an item record is available then the number generator icon is displayed
+If the number generator is enabled, user has the applicable capabilities and an item record is available then the number generator icon is displayed
 
    * Next at the right side of the item details in the Add/Edit piece window
    * In the Action column at the right side of the receive all table
 
    1. Click icon **Generate numbers**
    2. Window "Generate numbers" is displayed
-   3. Depending on settings in Settings > Orders > Number generator options up to three sequence search fields for Barcode, Accession number and/or Call number are displayed
+   3. Depending on settings in Settings > Orders > General > Number generator options up to three sequence search fields for Barcode, Accession number and/or Call number are displayed
    4. Search by Name or Code of the sequences for each field you would like to generate a number
    5. Optional: Use check box "Include sequences which have reached their maximum value" for displaying those sequences for information. Sequences which have reached their maximum value cannot be generated from.
-   6. Optional: Use check box "Exact code match" for searching the code with exact match
+   6. Optional: Use check box "Exact code match" for searching the exact code
    7. Select at least on sequence
    8. Use x at the right side of the search fields if you would like to delete your selection
    9. Click Generate numbers to close window and generate number (or Cancel)
@@ -328,15 +335,15 @@ In case that **Use the same generated number for Accession number and call numbe
 Accession number sequences apply and the same generated number is inserted into the accession number and the main call number field on item level.
 
 
-##### Open Access and Serial management #####
+##### Open Access and Serials management #####
 
 For the Request number in Open Access App and for the Publication pattern ID in Serials Management App numbers will be automatically assigned defined by one sequence.
 
-In addition to the permissions for Open Access and/or Serials Management users need permission
+In addition to the capabilities for Open Access and/or Serials Management users need capability set
 
-| Capability Set (Eureka) | Type | Application | Action | Descriptions |
+| Capability set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ----- | -------- | ------ | ---------- |
-| UI-Service-Interaction NumberGenerator | Data | app-platform-complete | view | This permission/capability set allows the user to view the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
+| UI-Service-Interaction NumberGenerator | Data | app-service-interaction | view | This capability set allows the user to view the number generators and number generator sequences settings (Service interaction) and allows the user to generate numbers within apps. |
 | or |||||
-| UI-Service-Interaction NumberGenerator | Data | app-platform-complete | manage | This permission/capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings and allows the user to generate numbers within apps. |
+| UI-Service-Interaction NumberGenerator | Data | app-service-interaction | manage | This capability allows the user to manage (view, create, edit, delete) the number generators and number generator sequences settings (Service interaction) and allows the user to generate numbers within apps. |
 
