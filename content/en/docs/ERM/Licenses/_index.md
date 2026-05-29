@@ -552,7 +552,7 @@ In the search results, click on a license to view it. The license details pane d
 
 You can search for amendments in the **Search & filter** pane. You can toggle between the Licenses and Amendments search at the top of the search and filter pane. Click Amendments to start your search. Enter your search terms in the search box and click **Search**.
 
-You can also search for amendments by selecting any of the filters in the **Search & filter** pane: Status, Start date, End date, Terms, Supplementary documents, Core documents, and Amendment content. For more information on the filters, see the filter descriptions under the [Searching for licenses](#searching-for-licenses) header.
+You can also search for amendments by selecting any of the filters in the **Search & filter** pane: Status, Acquisition unit, Start date, End date, Terms, Supplementary documents, Core documents, and Amendment content. For more information on the filters, see the filter descriptions under the [Searching for licenses](#searching-for-licenses) header.
 
 
 ## Filtering amendments by content
