@@ -101,6 +101,15 @@ Note: Adding an alternative name is optional, but if you click **Add alternative
 2. Click the **trash can icon**. The Alternative name is deleted and is removed from the record once you save the license.
 
 
+### Aquisition units
+
+Acquisition units are an additional layer you can add to acquisition records that restrict a user’s ability to interact with those records unless they have been assigned to that unit. For example, you may create acquisition units to represent the different libraries within your library system. Units are defined and determined by your library in the Settings app. See [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/) for more information.
+
+If you want the license to be available to particular users within certain acquisition units, enter or select the Acquisition units from the drop-down list. You can select multiple units. 
+
+Amendments inherit the acquisition units from their parent license (i.e. you cannot assign an acquisition unit directly to an amendment, only to the license). 
+
+
 ### Internal contacts
 
 Internal contacts are generally library staff members you want to associate with the license record. For example, your internal contact may be the ERM librarian responsible for renewals, the authorized signatory for new licenses, or the subject matter expert responsible for reviewing content ahead of renewals.
@@ -304,6 +313,15 @@ To filter licenses by their type, in the **Search & filter** pane, click **Type*
 *   **Consortial.** Licenses entered into through a library consortium.
 
 Type values are configured in [Settings \> Licenses \> Pick list values](../../settings/settings_licenses/settings_licenses/#settings--licenses--pick-list-values).
+
+
+### Acquisition unit
+
+To search for licenses assigned to a specific acquisition unit, follow these steps:
+
+1. In the **Search & filter** pane, click **Acquisition unit**.
+
+2. Select the acquisition unit from the drop-down list. The search results appear in the Licenses pane.
 
 
 ### Organizations
