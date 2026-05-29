@@ -1253,6 +1253,11 @@ In the **Platforms** pane, click a platform to view it. The platform details pan
 3. In the **Delete URL customization** dialog box, click **Delete**.
 
 
+## GOKB search
+
+By clicking on the **GOKB search** tab, you can search for titles directly in GOKb (via the GOKb OpenSearch API) without those titles needing to be present in the local KB. Search results display title availability across packages, with options to synchronise related packages to the local KB and to create agreement lines directly from GOKb titles. Where a title already exists in the local KB, the user is directed to the local information including any existing agreements. 
+
+
 ## Adding and removing notes
 
 You can add and assign notes to agreement records, agreement lines, and e-resources (internal KB only). Assigning a note means you are reusing a previously created note.
