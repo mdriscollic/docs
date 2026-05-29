@@ -173,6 +173,23 @@ When adding agreement periods, you should consider the following:
 2. Click the **trash can icon**. The Agreement period is deleted and is removed from the record once you save the agreement.
 
 
+
+### Aquisition units
+
+Acquisition units are an additional layer you can add to acquisition records that restricts a user’s ability to interact with those records unless they have been assigned to that unit. For example, you may create acquisition units to represent the different libraries within your library system. Units are defined and determined by your library in the Settings app. See [Settings > Acquisition units](../../settings/settings_acquisition_units/settings_acquisition_units/) for more information.
+
+If you want the agreement to be available to particular users within certain acquisition units, enter or select the Acquisition units from the drop-down list. You can select multiple units. 
+
+Agreement lines inherit the acquisition units from their parent agreement (i.e. you cannot assign an acquisition unit directly to an agreement line, only to the agreement). 
+
+
+
+### Agreement lines
+
+An agreement line represents the material covered by the agreement, for example, a package or title. If you want to add agreement lines, you should save your progress on the agreement record you are creating or wait until you have completed and saved all agreement information before you start the agreement line process. For instructions on adding agreement lines to a record, see [Adding an agreement line](#adding-an-agreement-line).
+
+
+
 ### Internal contacts
 
 Internal contacts are generally the people within your library that you need to contact if you have questions about the agreement. For example, you may want to add the ERM librarian responsible for renewals, the authorized signatory for an agreement, or the subject matter expert responsible for reviewing content ahead of renewals. Multiple contacts can be assigned to a record, but each contact you add must have a user record in the Users app.
@@ -198,10 +215,6 @@ Internal contacts are generally the people within your library that you need to 
 1. Identify the Internal contact you want to remove.
 2. Click the **trash can icon**. The Internal contact is removed from the record once you save the agreement.
 
-
-### Agreement lines
-
-An agreement line represents the material covered by the agreement, for example, a package or title. If you want to add agreement lines, you should save your progress on the agreement record you are creating or wait until you have completed and saved all agreement information before you start the agreement line process. For instructions on adding agreement lines to a record, see [Adding an agreement line](#adding-an-agreement-line).
 
 
 ### License information
@@ -464,6 +477,15 @@ To filter agreements by their status, select one of the following:
 *   **Draft.** An agreement that is in draft form.
 *   **In negotiation.** An agreement that is being negotiated between your library and a provider.
 *   **Requested.** If your library has requested an agreement from a provider.
+
+
+### Acquisition unit
+
+To search for agreements assigned to a specific acquisition unit, follow these steps:
+
+1. In the **Search & filter** pane, click **Acquisition unit**.
+
+2. Select the acquisition unit from the drop-down list. The search results appear in the Agreements pane.
 
 
 ### Reason for closure
@@ -921,6 +943,15 @@ To filter agreement lines by an agreement record, click **Select agreement**. In
 ### Agreement line type
 
 To filter agreement lines by type, check the **Unlinked**, **External**, and/or **Internal** checkboxes. An **unlinked agreement line** is not linked to a resource in a knowledge base. An **external agreement line** is linked to a resource in an external knowledge base (like the eHoldings app), and an **internal agreement line** is linked to a resource in the internal knowledge base.
+
+
+### Acquisition unit
+
+To search for agreement lines assigned to a specific acquisition unit, follow these steps:
+
+1. In the **Search & filter** pane, click **Acquisition unit**.
+
+2. Select the acquisition unit from the drop-down list. The search results appear in the Agreement lines pane.
 
 
 ### Active from
