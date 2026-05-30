@@ -62,20 +62,21 @@ If a patron's record has a note that is checked to display in the Check out app,
 
 ### Patron details displayed
 
-After [Locating a patron](#locating-a-patron-in-the-system), patron details will display. 
+After [Locating a patron](#locating-a-patron-in-the-system), patron details will display in the following order. 
 Patron details include:
 
-* Name: The patron’s name, displayed as \[Last name], \[Preferred first name]. If there is no [Preferred first name](../../../users/#user-information) in the patron’s user record, then \[First name] is displayed.
-* Pronouns: The patron’s pronouns will display in parentheses after their name, if the pronoun field contains data in the patron’s user record.
-* Barcode: The patron’s barcode.
-* Profile picture: If [Profile pictures](#displaying-profile-pictures-at-check-out) are enabled in the FOLIO tenant, they will display after the patron’s name and barcode.
-* Patron group: The patron’s Patron group.
-* Status: either Active or Inactive.
-* User expiration: The date the patron’s borrowing privileges will expire / have expired.
-* Open loans: The number of open loans the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
-* Fees/fines owed: The total fees/fines owed. If the logged-in user has the appropriate permissions, this displays as a link.
-* Open requests: The number of open requests the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
-* Patron blocks: If the patron has any blocks, they are shown here.
+* **Name:** The patron’s name, displayed as \[Last name], \[Preferred first name]. If there is no [Preferred first name](../../../users/#user-information) in the patron’s user record, then \[First name] is displayed.
+* **Pronouns:** The patron’s pronouns will display in parentheses after their name, if the pronoun field contains data in the patron’s user record.
+* **Barcode:** The patron’s barcode.
+* **Profile picture:** If [Profile pictures](#displaying-profile-pictures-at-check-out) are enabled in the FOLIO tenant, they will display after the patron’s name and barcode.
+* **Patron group:** The patron’s Patron group.
+* **Status:** either Active or Inactive.
+* **User expiration:** The date the patron’s borrowing privileges will expire / have expired.
+* **Open loans:** The number of open loans the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
+* **Fees/fines owed:** The total fees/fines owed. If the logged-in user has the appropriate permissions, this displays as a link.
+* **Open requests:** The number of open requests the patron has. If the logged-in user has the appropriate permissions, this displays as a link.
+* **Patron blocks:** If the patron has any blocks, they are shown here.
+* **Custom fields**: Any custom fields [selected to display at Check out](../../../settings/settings_circulation/settings_circulation/#users-custom-fields-to-display-at-check-out) will display.
 
 Note: If the patron is acting as a proxy, then the sponsor's patron details are displayed first.
 
@@ -100,7 +101,7 @@ Note: A patron must first be assigned as a proxy for the borrower in their user 
 
 Make sure you have [looked up the user record](#locating-a-patron-in-the-system) prior to scanning items.
 
-To select the item for check out, scan or enter the barcode of the item and click **Enter**. The item appears in the Scan Items area with the **Due date** and **Time**. The total number of items scanned increases.
+To select the item for check out, scan or enter the barcode of the item and click **Enter**. The item appears in the Scan Items area with the **Due date** and **Time**. The total number of items scanned increases. Use your internet browser’s print feature to print the Scan items pane in a print-friendly format.
 
 A flag icon will appear next to the item due date after checkout if the item will be due sooner than expected. This can happen if a service point will be closed when the item would normally be due, if there is a recall on the item, or if the patron's account is set to expire sooner than the expected due date/time.
 
