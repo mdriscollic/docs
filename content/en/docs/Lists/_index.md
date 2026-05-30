@@ -630,6 +630,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Item effective location at checkout - Code* | YES | YES |
 | *Item effective location at checkout - Name* | YES | YES |
 
+**Custom fields** for User records, if configured, are available for building a Loans query in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
 
 ### Organizations
 
@@ -982,6 +983,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *User - User UUID* | YES | YES |
 | *User - Username* | YES | YES |
 
+**Custom fields** for User records, if configured, are available for building a Users query in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
 
 ### Voucher lines with fund
 
