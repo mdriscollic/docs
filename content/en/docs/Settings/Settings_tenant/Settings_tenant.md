@@ -163,9 +163,9 @@ All service points should be associated to a fee/fine owner in Settings\>Users, 
 9. (Required if your service point is a **Pickup location**): Specify the **Closed library date management for hold shelf expiration date calculation**. This tells FOLIO what to do with the hold shelf expiration date if it lands in a time when the service point is closed. 
 * If the hold shelf expiration period is calculated in **minutes** or **hours**, then you can choose to keep the original expiration date/time, move the expiration date/time to when the service point is closing, or move the expiration date/time to the beginning of the next open set of hours.
 * If the hold shelf expiration period is calculated in **days**, **weeks**, or **months**, you can choose to keep the original expiration date, move the expiration date to the end of the previous open day, or move the expiration date to the end of the next open day.  
-  
-10. (Optional): Select the **Due date receipt**,  **Hold**, **Pick slip**, **Request delivery**, **Search slip( Hold Requests)**, and/or **Transit** checkboxes to determine which staff slips print by default for this service point.
-11. Click **Save & close**. A confirmation message appears and the service point is created.
+10. (Optional): Select a **Default check-in action for use at location**.  This will determine which check in action will be selected by default in the Check in application when a user begins a check in session. A user can select a different Check in action from the Check In app. Refer to [Resource Access > Check in > For use at location check in](../../../access/check-in/checkin/#For-use-at-location-check-in) for checkin action for use at location definitions.    
+11. (Optional): Select the **Due date receipt**,  **Hold**, **Pick slip**, **Request delivery**, **Search slip (Hold Requests)**, and/or **Transit** checkboxes to determine which staff slips print by default for this service point.
+12. Click **Save & close**. A confirmation message appears and the service point is created.
 
 The **Assigned locations** accordion is updated when the service point is assigned to any locations in the location tree. 
 
@@ -221,7 +221,7 @@ Holdings must have a permanent location value. A holding may also have a tempora
 ## Settings \> Tenant \> Institutions
 
 Use this setting to configure your institutions. An institution is the highest level of the FOLIO location hierarchy, and typically represents legal entities such as the college or university.
-
+The institutions table displays the name of the institution, code, last updated date/user and the number of campuses assigned to an institution.  
 FOLIO libraries need at least one institution created to be able to populate elements down the hierarchy.
 
 
@@ -230,7 +230,7 @@ FOLIO libraries need at least one institution created to be able to populate ele
 
 
 1. In the Institutions pane, click **New**. 
-2. Enter a **Name** and **Code**. The name and code should be unique. FOLIO doesn’t stop you from making institutions with the same name and/or code, but it does cause problems for your staff in writing circulation rules.
+2. Enter a **Name** and **Code**. The name must be unique. FOLIO doesn’t stop you from making institutions with the same code, but it does cause problems for your staff in writing circulation rules.
 3. Click **Save**. The institution is created
 
 
@@ -258,6 +258,7 @@ Note: If the institution has an associated campus, you cannot delete it.
 ## Settings > Tenant > Campuses
 
 Use this setting to configure your campuses. A campus is the second highest level of the FOLIO location hierarchy, and typically represents distinct spaces or domains within an institution, like a downtown campus or online program.
+To view campuses, select an Institution from the dropdown menu. When you select an institution, you will see the campus name, code, last updated by date/user, and number of assigned libraries for each campus assigned to the selected institution.  
 
 FOLIO libraries need at least one institution and one campus to create elements further down the location hierarchy.
 
@@ -268,7 +269,7 @@ FOLIO libraries need at least one institution and one campus to create elements 
 
 1. In the **Campuses** pane, select the **Institution** under which the campus should be created.
 2. Click **New**.
-3. Enter a **Name** and **Code**. The name and code should be unique. FOLIO doesn’t stop you from making campuses with the same name and/or code, but it does cause problems for your staff in writing circulation rules.
+3. Enter a **Name** and **Code**. The name must be unique. FOLIO doesn’t stop you from making campuses with the same code, but it does cause problems for your staff in writing circulation rules.
 4. Click **Save**. The campus is created.
 
 
@@ -298,6 +299,7 @@ Note: If the campus has an associated library, you cannot delete it.
 ## Settings \> Tenant \> Libraries
 
 Use this setting to configure your libraries. A **library** is the third level of the FOLIO Location hierarchy, and typically represents physical buildings on a physical campus, or domains of service in a virtual campus, like a subject-specific library or an annex.
+To view libraries select an institution and a campus from the drop down menus.  When you select a campus, you will see the campus name, code, last updated by date/user, and number of assigned locations for each library assigned to the selected campus.  
 
 FOLIO libraries need at least one institution, campus, and library to be able to create the final element of the location tree.
 
@@ -309,7 +311,7 @@ FOLIO libraries need at least one institution, campus, and library to be able to
 1. In the **Libraries** pane, select the **Institution** under which the library should be created.
 2. Select the **Campus** under which the library should be created.
 3. Click **New**.
-4. Enter a **Name** and **Code**. The name and code should be unique. FOLIO doesn’t stop you from making libraries with the same name and/or code, but it does cause problems for your staff in writing circulation rules.
+4. Enter a **Name** and **Code**. The name must be unique. FOLIO doesn’t stop you from making libraries with the same code, but it does cause problems for your staff in writing circulation rules.
 5. Click **Save**. The library is created.
 
 
