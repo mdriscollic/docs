@@ -659,8 +659,8 @@ Receiving history is used for serials and continuing resources. Shows the materi
 -   **Source.** Name of the user who created the record.
 -   **Suppress from discovery.** If you want to suppress the record from your discovery layer, select the **Suppress from discovery** checkbox.
 -   **Item HRID.** The human readable ID, also called eye readable ID. A system-assigned sequential ID which maps to the Item ID
--   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value.
--   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number. If enabled you can use the number generator to generate the accession number.
+-   **Barcode.** Generally a numerical sequence attached to the resource and validated by a barcode scanner. Must be a unique value. If enabled, you can use the number generator to generate the barcode.
+-   **Accession number.** A unique number assigned to an item in the order in which it is added to a library collection. Most libraries assign accession numbers in a continuous numerical sequence, but some use a code system to indicate type of material and/or year of accession in addition to order of accession. Also called inventar number. If enabled, you can use the number generator to generate the accession number.
 -   **Item identifier.** Item identifier number. For example, imported from the union catalog (read only).
 -   **Former identifier.** Previous identifiers assigned to the item.
 -   **Statistical code.** Statistical codes (e.g. ASER; name: Active serial; type: SERM (Serial management) or books; name: Book, print (books); type ARL (Collection stats) etc.)
@@ -848,12 +848,12 @@ The results list contains instances that either match the instance search criter
 
 To search, first select the record type (instance, holdings, or item) then enter your search terms into the box and click **Search**. Use the drop-down list to select what you want to search:
 
--   **Keyword (title, contributor, identifier, HRID, UUID)**. Keyword search through title, contributor, identifier, HRID, UUID fields.
+-   **Keyword (title, contributor, identifier, HRID, UUID, barcode)**. Keyword search through title, contributor, identifier, HRID, UUID fields. Barcode can also be used as a keyword when searching for an item.
 -   **Contributor.** Keyword search through all contributor fields. 
 -   **Title (all).** Keyword search through all title fields. This includes searching the equivalent of title proper, alternative titles (including uniform titles) and, series titles, but not preceding and succeeding titles.
 -   **Identifier (all).** Searches through all identifier types. Not normalized: the search may be left truncated, otherwise the entire identifier, including any prefix, must be entered.
 -   **ISBN.** Searches the number exactly as it appears in the data. For example, if there are hyphens in the data, the hyphens must be entered in the search.
--   **ISSN.** Searches the number exactly as it appears in the data. Searches should include hyphens.
+-   **ISSN.** Searches the ISSN number. Normalized: the number can be entered with or without dashes or spaces.
 -   **LCCN, normalized.** Searches for the LCCN number with or without any prefixes.
 -   **OCLC number, normalized.** Searches for the OCLC number with or without any prefixes.
 -   **Instance notes (all).** Keyword search across all Instance notes; includes administrative notes. 
