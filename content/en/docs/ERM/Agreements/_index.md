@@ -1076,11 +1076,11 @@ In the Packages pane, click an e-resource package to view it. The e-resource pac
 * Availability: The general availability of the package, for example, Global or Consortium, and any constraints on availability, such as the specific Consortia it is available to.
 * Source created: The date and time the package was created in the external source the package data came from.
 * Source last updated: The date and time the package was last updated in the external source the package data came from.
-* One or more of the following package IDs: ISIL, ZDB, EZB, eBookPool, GOKb ID and GOKb. Note that ID fields will only display when an ID of that type is available for the package in the internal KB.
+* One or more of the following package IDs: ISIL, ZDB, EZB, eBookPool, GOKB ID and GOKB. Note that ID fields will only display when an ID of that type is available for the package in the internal KB.
 
 The following accordions also display:
 
-**Extended package information.** This accordion displays additional metadata for this e-resource package including: a Description of the package; Package description URLs, which are links to descriptions of that package online (for example, in GOKb or on a publishers website); Alternative names for the package; and  all package Identifiers stored (this will include any IDs displayed in the package details but may include additional IDs as well).
+**Extended package information.** This accordion displays additional metadata for this e-resource package including: a Description of the package; Package description URLs, which are links to descriptions of that package online (for example, in GOKB or on a publishers website); Alternative names for the package; and  all package Identifiers stored (this will include any IDs displayed in the package details but may include additional IDs as well).
 
 **Agreements for this package.** This accordion displays agreements that cover this e-resource package. To add an e-resource from the internal KB to an agreement see [Adding an agreement line via the internal KB](#adding-an-agreement-line-via-the-internal-kb).
 
@@ -1165,13 +1165,13 @@ Packages can be further filtered by:
 The values for Status, Scope, Availability, and Content type can be configured in [Settings \> Agreements \> Pick list values](../../settings/settings_agreements/settings_agreements/#settings--agreements--pick-list-values). 
 
 
-#### Synchronizing select package data to Agreements local KB from GOKb
+#### Synchronizing select package data to Agreements local KB from GOKB
 
-When GOKb is setup as an external data source is setup for the Agreements local KB, packages are only fully synchronized if they are needed locally in the FOLIO tenant. 
+When GOKB is setup as an external data source is setup for the Agreements local KB, packages are only fully synchronized if they are needed locally in the FOLIO tenant. 
 
 * All package header information (i.e. the package name, ID, and other key information) is synchronized
 * Each package will be marked in Folio as to be synchronized or not
-* Package content (title lists → in GOKb terms these are TIPPs, in Folio called PCIs) will only be synchronized for those packages marked to synchronize
+* Package content (title lists → in GOKB terms these are TIPPs, in Folio called PCIs) will only be synchronized for those packages marked to synchronize
 
 After searching for and selecting packages covered by an agreement in the local KB, under the **Actions** drop-down menu, select **Start synchronisation of selected packages**. To pause synchronization of the packages, select **Pause synchronisation of selected packages**.
 
@@ -1255,7 +1255,7 @@ In the **Platforms** pane, click a platform to view it. The platform details pan
 
 ## GOKB search
 
-By clicking on the **GOKB search** tab, you can search for titles directly in GOKb (via the GOKb OpenSearch API) without those titles needing to be present in the local KB. Search results display title availability across packages, with options to synchronise related packages to the local KB and to create agreement lines directly from GOKb titles. Where a title already exists in the local KB, the user is directed to the local information including any existing agreements. 
+By clicking on the **GOKB search** tab, you can search for titles directly in GOKB (via the GOKB OpenSearch API) without those titles needing to be present in the local KB. Search results display title availability across packages, with options to synchronise related packages to the local KB and to create agreement lines directly from GOKB titles. Where a title already exists in the local KB, the user is directed to the local information including any existing agreements. 
 
 
 ## Adding and removing notes
