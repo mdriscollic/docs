@@ -6,16 +6,16 @@ weight: 50
 tags: ["parenttopic"]
 ---
 
-FOLIO has a user permissions system that allows for granular control over what users can access in their FOLIO installation.
+FOLIO has a user role system that allows for granular control over what users can access in their FOLIO installation.
 
-Each app defines its own permissions for the frontend and backend modules that it uses.
+Each app defines its own capabilities for the frontend and backend modules that it uses.
 
-By default, a FOLIO installation does not provide roles or permission profiles for library staff. Instead, FOLIO administrators can build their own groups of permissions called permission sets that correspond to their local needs. They can then assign those permissions to users through the Users app.
+By default, a FOLIO installation does not provide roles or permission profiles for library staff. Instead, FOLIO administrators can build their own groups of roles that correspond to their local needs. They can then assign those roles to users through the Users app.
 
 ## Managing Roles with Eureka
 
 ## Overview
-The new Eureka platform, which FOLIO is adopting with the Sunflower release, replaces the permission-based access control model with a roles-based permission model. This page
+The new Eureka platform, which FOLIO is adopting with the Sunflower release, replaces the permission-based access control model from previous releases with a roles-based permission model. This page
 explains how to manage roles and their assignments. Information on migrating permissions from the Okapi platform to Eureka can be found at the bottom of the page. 
 
 ## Terminology 
@@ -110,7 +110,7 @@ Use the "**Actions**" menu in the role details pane to select "**Edit**" to alth
 The role edit form looks and behaves the same as the role creation form. Refer to the Role Creation section for details.  
 
 ## Role Deletion 
-Deletion of a role is similar to role modification. Refer to the Role Modification section for details. When delting a role, instead of selecting "**Edit**" from the "**Actions**" menu, select "**Delete**." Exercise caution when deleting roles: **deleting a role cannot be undone.** When deleting a role which is assigned to users, the role assignments will automatically be removed from those users. If you are sure you wish to delete the role, you will be asked to confirm. 
+Deletion of a role is similar to role modification. Refer to the Role Modification section for details. To delete a role, from the "**Actions**" menu, select "**Delete**." Exercise caution when deleting roles: **deleting a role cannot be undone.** When deleting a role which is assigned to users, the role assignments will automatically be removed from those users. If you are sure you wish to delete the role, you will be asked to confirm. 
 
 
 ## Role Duplication 
@@ -177,7 +177,7 @@ To manage role assignments in the context of a particular user, navigate to the 
 
 
 
-Select a user to display that user's details in a separate pane. Here yo uwill see a "User roles" accordion (collapsed by default). When collapsed, a bubble in the accordion header indicates how many roles the user is presently assigned to. While this accordion is helpful for viewing a user's role assignments, you cannot edit a user's role assignments here. Instead, you must select the "**Edit**" option from the "**Action**" menu. 
+Select a user to display that user's details in a separate pane. Here you will see a "User roles" accordion (collapsed by default). When collapsed, a bubble in the accordion header indicates how many roles the user is presently assigned to. While this accordion is helpful for viewing a user's role assignments, you cannot edit a user's role assignments here. Instead, you must select the "**Edit**" option from the "**Action**" menu. 
 
 
 
