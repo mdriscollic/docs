@@ -510,7 +510,9 @@ The Titles section includes the total number of titles available in the package 
 1. To filter titles, click the **magnifying glass icon**.
 2. Optional: In the **Filter titles** dialog, search for a title by entering the name or partial name of the title in the box.
 3. Optional: Select any filters (Tags, Sort options, Selection Status, or Publication type) you want to apply to the titles.
-4. Click **Search.** The titles are filtered based on your selections.
+4. Optional: The user can set which columns display on the Titles accordion on the Package detail record by selecting **Actions > Show columns**.
+6. Click **Search.** The titles are filtered based on your selections.
+7. These same filtering options can be applied to ISSN/ISBN, Publisher, or Subject by selecting ISSN/ISBN, Publisher, or Subject from the drop-down menu next to the **magnifying glass icon**. 
 
 
 ### Viewing a title record
