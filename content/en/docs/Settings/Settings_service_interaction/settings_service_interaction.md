@@ -1,7 +1,7 @@
 ---
 title: "Settings > Service interaction"
 linkTitle: "Service interaction"
-date: 2025-05-14
+date: 2026-06-01
 weight: 228
 tags: ["subtopic"]
 ---
@@ -33,6 +33,8 @@ This applies for the use of number generators in Inventory, Receiving, Organizat
 New number generators need frontend and backend development work to integrate them with FOLIO apps. In this case use **New** to create a row for the new number generator to match with the development work.
 
 The following number generators are available. In case the reference data is not included in your FOLIO environment please add the corresponding row (Name + Code) via **New** and store by clicking Save. Especially important are the exact codes as indicated in the following table as identifiers of the number generators.
+
+Please note: the number generators below are the only ones supported at this point using this concept. New number generator functionality for additional fields cannot be integrated though the Service interaction UI via **New** alone. It requires development work.
 
 | Name | Code | Descriptions | Type |
 | ----- | ----- | ---------- | ---- |
@@ -100,7 +102,7 @@ In case the reference data is included in your FOLIO environment example sequenc
       * **Method**. The checksum method for the check digit. Use the checksum input template to define what needs to be included in the calculation e.g. prefix or suffix.
       * **Input template**. Create rules to define the number to be inputted when calculating the check digit. Both the prefix and suffix can be templated, using Groovy markup. Use ${generated\_number} as placeholder for the generated number. E.g. 05${generated\_number}01
    * Output settings
-      * **Output template**. The output template defines the rules applied to create the sequence. Templates are formed using Groovy. See below for more information.
+      * **Output template**. The output template defines the rules applied to create the sequence. Templates are formed using Groovy. [See below for more information.](#Output-settings)
 4. Once you have included all of the information you want about the sequence, click Save & close. A confirmation message appears, and the sequence is saved and appears in the Number generator sequences table.
 
 
@@ -239,7 +241,7 @@ In order to interact with Number generator options settings for Apps, a user nee
 | Capability set (Eureka) | Type | Application | Action | Descriptions |
 | ---------- | ------ | ---------- | -------- | ---------- |
 | UI-Inventory Settings Mange-Number-Generator-Options | Settings | app-inventory | view | This capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Settings > Inventory > Holdings, Items > Number generator options. |
-| UI-Oders Settings Number-Generator | Settings | app-acquisitions | manage | This capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Receiving in Settings > Orders > General > Number generator options. |
+| UI-Orders Settings Number-Generator | Settings | app-acquisitions | manage | This capability set allows the user to view and edit Number generator options for Barcode, Accession number and Call number in Receiving in Settings > Orders > General > Number generator options. |
 | UI-Organizations Settings NumberGenerator | Settings | app-acquisitions | manage | This capability set allows the user to view and edit Number generator options for Code in Settings > Organizations > Number generator options. |
 | UI-Users Settings Number-Generator-Options | Settings | app-platform-complete | manage | This capability set allows the user to view and edit Number generator options for Barcode in Settings > Users > General > Number generator options. |
 
@@ -257,7 +259,7 @@ To enable the Number generator please select either **On, field editable** or **
 
 | App | Number generator settings for |
 | ---------- | ---------- |
-| Settings > **Inventory** > Holdings, Items > Number generator options | Call number (Holdings) <br>Barcode (Items) <br>Accession number (Items) <br>Call number (Items, Fast add) |
+| Settings > **Inventory** > Holdings, Items > Number generator options | Call number (Holdings) <br>Barcode (Items, Fast add) <br>Accession number (Items) <br>Call number (Items) |
 | **Receiving** (Settings > Orders > General > Number generator options) | Barcode <br>Accession number <br>Call number |
 | Settings > **Organizations** > Number generator options | Code |
 | Settings > **Users** > General > Number generator options | Barcode |
@@ -294,7 +296,7 @@ Number generator for Accession number and Call number must be enabled via "On, f
 
 ### Using Number generators
 
-##### Inventory / Organizations / Users #####
+#### Inventory / Organizations / Users ####
 
 If the number generator is enabled and user has the applicable capabilities then a button is displayed next to the field (e.g. user barcode, vendor code, item barcode, accession number, call number).
 
@@ -308,7 +310,7 @@ If the number generator is enabled and user has the applicable capabilities then
    8. Generated number of the selected sequence is displayed in the field
    9. After filling in all data save the entire record by clicking "Save & close" otherwise the generated number is not saved and a gap has been created.
 
-##### Receiving #####
+#### Receiving ####
 
 If the number generator is enabled, user has the applicable capabilities and an item record is available then the number generator icon is displayed
 
@@ -325,7 +327,7 @@ If the number generator is enabled, user has the applicable capabilities and an 
    8. Use x at the right side of the search fields if you would like to delete your selection
    9. Click Generate numbers to close window and generate number (or Cancel)
    10. Next value of the sequence is displayed in the field
-   11. After filling in all data save the entire record by clicking "Save & close" or Receive otherwise the generated numbers are not saved and gaps have been created.
+   11. After filling in all data save the entire record by clicking "Save & close" or "Receive" otherwise the generated numbers are not saved and gaps have been created.
 
 In case that **Use the same generated number for Accession number and call number** is activated in Settings (Inventory and/or Receiving)
 
@@ -335,7 +337,7 @@ In case that **Use the same generated number for Accession number and call numbe
 Accession number sequences apply and the same generated number is inserted into the accession number and the main call number field on item level.
 
 
-##### Open Access and Serials management #####
+#### Open Access and Serials management ####
 
 For the Request number in Open Access App and for the Publication pattern ID in Serials Management App numbers will be automatically assigned defined by one sequence.
 
