@@ -181,7 +181,7 @@ Three options are available:
 - Off (Number can be filled manually only) 
 - On, field editable (Number can be filled using the generator and be edited or filled manually) 
 - On, field not editable (Number can be filled using the generator only)
-For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](..settings/settings_service_interaction/settings_service_interaction/#settings--service-interaction--number-generator-sequences).
+For more information about Number generator sequences, see [Settings > Service Interaction > Number generator sequences](../settings_service_interaction/settings_service_interaction/#settings--service-interaction--number-generator-sequences).
 
 ## Settings \> Users \> Custom fields
 
