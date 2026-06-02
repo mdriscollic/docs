@@ -174,7 +174,7 @@ Staff slips have eight categories of tokens, listed in the table below. All of t
 |     Borrower                 |     Due date receipt                                                                          |     Hold, Pick slip, Request delivery, Search slip (Hold requests),Transit   |
 |     Loan                     |     Due date receipt                                                                          |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit  |
 |     Request                  |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
-|     Request delivery address |     Request delivery, Pick slip, Search slip (Hold requests)                                  |     Due date receipt, Hold, Transit                                          |
+|     Request delivery address |      Pick slip, Request delivery, Search slip (Hold requests)                                  |     Due date receipt, Hold, Transit                                          |
 |     Requester                |     Hold, Pick slip, Request delivery, Search slip (Hold requests), Transit                   |     Due date receipt                                                         |
 
 Note: *StaffSlip.staffUsername* only populates for Pick slip. The tokens *item.yearCaption*, *item.loanType*, *item.numberOfPieces*, *item.descriptionOfPieces*, and *item.lastCheckedInDateTime* do not populate in Due date receipt.  
