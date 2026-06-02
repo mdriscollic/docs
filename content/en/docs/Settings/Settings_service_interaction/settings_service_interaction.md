@@ -102,7 +102,7 @@ In case the reference data is included in your FOLIO environment example sequenc
       * **Method**. The checksum method for the check digit. Use the checksum input template to define what needs to be included in the calculation e.g. prefix or suffix.
       * **Input template**. Create rules to define the number to be inputted when calculating the check digit. Both the prefix and suffix can be templated, using Groovy markup. Use ${generated\_number} as placeholder for the generated number. E.g. 05${generated\_number}01
    * Output settings
-      * **Output template**. The output template defines the rules applied to create the sequence. Templates are formed using Groovy. [See below for more information.](#Output-settings)
+      * **Output template**. The output template defines the rules applied to create the sequence. Templates are formed using Groovy. [See below for more information.](#output-settings)
 4. Once you have included all of the information you want about the sequence, click Save & close. A confirmation message appears, and the sequence is saved and appears in the Number generator sequences table.
 
 
