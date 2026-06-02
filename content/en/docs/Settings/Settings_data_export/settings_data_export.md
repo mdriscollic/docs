@@ -83,7 +83,7 @@ To view the details of a job profile, follow these steps:
 
 ### Editing an export job profile
 
-> **Note:** A job profile can only be edited if it is unlocked and you have the appropriate authorized capabilities.
+> **Note:** A job profile can only be edited if it is unlocked and you have the appropriate capabilities.
 
 1.  In the **Job profiles** pane, find the profile you want to edit and select it.
 2.  In the **export job profile details** window, click **Actions \> Edit**.
@@ -148,7 +148,7 @@ To view the details of a field mapping profile, follow these steps:
 
 ### Editing an export field mapping profile
 
-> **Note:** A field mapping profile can only be edited if it is unlocked and you have the appropriate authorized capabilities.
+> **Note:** A field mapping profile can only be edited if it is unlocked and you have the appropriate capabilities.
 
 1.  In the **Field mapping profiles** pane, find the profile you want to edit and select it.
 2.  In the **field mapping profile details** window, click **Actions \> Edit**.
