@@ -259,11 +259,11 @@ If you want to treat loans with fees/fines differently, select **Treat closed lo
 ### Closed loans with associated fees/fines
 
 
-#### Anonymize closed loans
+#### Anonymize closed loans with associated fees/fines
 
 Select one of the following options to determine if closed loans with associated fees/fines are anonymized:
 
-* **Immediately after fee/fine closes**.
+* **Immediately after fee/fine closes (or is suspended)**.
 * **[Interval of time] after fee/fine closes**. Use the boxes to select the interval of time.
 * **Never**.
 
