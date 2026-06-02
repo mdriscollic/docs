@@ -29,6 +29,19 @@ See [Settings > Authorization roles](../../settings_authorization-roles/settings
 |**Settings (Data export): Can view only** | **UI-Data-Export Settings** | settings | view | This permission allows the user to see the Data Export settings but not make any changes to them.|
 |**Settings (Data export): Can view, add, update profiles** | **UI-Data-Export Settings** | settings | edit | This capability allows the user to see and and change the Data Export settings.|
 
+---
+
+## Managing profiles
+
+Job profiles and field mapping profiles can be locked, unlocked, edited, duplicated, or deleted based on your assigned capabilities.
+
+### Locking and unlocking profiles
+Locking or unlocking a profile requires special authorization.
+* When a profile is locked, only authorized users may edit or unlock it. 
+* Other users can view and duplicate the profile, but cannot edit or delete it.
+* All default profiles are locked and cannot be unlocked.
+
+---
 
 ## Settings \> Data export \> Job profiles
 
@@ -70,7 +83,7 @@ To view the details of a job profile, follow these steps:
 
 ### Editing an export job profile
 
-Note: Once a job profile has been used for a data export job, it cannot be edited or deleted.
+> **Note:** A job profile can only be edited if it is unlocked and you have the appropriate authorized capabilities.
 
 1.  In the **Job profiles** pane, find the profile you want to edit and select it.
 2.  In the **export job profile details** window, click **Actions \> Edit**.
@@ -82,11 +95,16 @@ Note: Once a job profile has been used for a data export job, it cannot be edite
 
 ### Deleting an export job profile
 
-Note: Once a job profile has been used for a data export job, it cannot be edited or deleted.
+> **Note:** Job profiles can be deleted as long as they are not locked. 
+> * If a job profile has previously been used for a data export, deleting it removes all generated export files associated with that profile from the download logs.
+> * Data export logs will retain the profile name with a `(deleted)` suffix for traceability.
+> * Deleting a job profile does not remove any associated field mapping profiles.
 
 1.  In the **Job profiles** pane, find the job profile you want to delete and select it.
 2.  In the **export job profile details** window, click **Actions \> Delete**.
 3.  In the **Delete job profile** dialog, click **Delete**. A confirmation message appears and the job profile is deleted.
+
+---
 
 ## Settings \> Data export \> Field mapping profiles
 
@@ -130,7 +148,7 @@ To view the details of a field mapping profile, follow these steps:
 
 ### Editing an export field mapping profile
 
-Note: While a field mapping is assigned to a job profile, it cannot be edited or deleted.
+> **Note:** A field mapping profile can only be edited if it is unlocked and you have the appropriate authorized capabilities.
 
 1.  In the **Field mapping profiles** pane, find the profile you want to edit and select it.
 2.  In the **field mapping profile details** window, click **Actions \> Edit**.
@@ -146,9 +164,8 @@ Note: While a field mapping is assigned to a job profile, it cannot be edited or
 
 ### Deleting an export field mapping profile
 
-Note: While a field mapping is assigned to a job profile, it cannot be edited or deleted.
+> **Note:** Field mapping profiles can be deleted if they are not locked, and **only** when they are not referenced by any existing (non-deleted) job profiles. If a field mapping profile is in use, you must first remove or replace its references in all associated job profiles before deletion is permitted.
 
 1.  In the **Field mapping profiles** pane, find the profile you want to delete and select it.
 2.  In the **field mapping profile details** window, click **Actions \> Delete**.
 3.  In the **Delete mapping profile** dialog, click **Delete**. A confirmation message appears and the field mapping profile is deleted.
-
