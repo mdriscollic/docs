@@ -57,7 +57,7 @@ See [Users > Loans](../../../users/#loans) for how to see what items a user has 
 
 #### For use at location check in
 
-You have three options for Check in action for-use-at-location. You choose the default action for the service point in [Settings > Tenants > Service Points > Edit](../../../settings/settings_tenant/settings_tenant/#editing-a-service-point). The option will remain in effect until the session is closed, or you choose a different action. The action chosen will only affect For-use-at-location loans.
+You have three options for Check in action for-use-at-location. You choose the default action for the service point in [Settings > Tenant > Service Points](../../../settings/settings_tenant/settings_tenant/#creating-a-service-point). The option will remain in effect until the session is closed, or you choose a different action. The action chosen will only affect For-use-at-location loans.
 
 The three options are:
 
@@ -114,7 +114,7 @@ There are two scenarios in which an item may need to be routed to another servic
 3. Click **Close** to exit and print a routing slip, if selected. The item appears in the Scanned Items table and its status changes to In transit.
 
 ## Floating collections
-A floating collection consists of items whose effective location can change depending on where they are checked in. If an item whose effective location is designated as floating in [Settings > Tenants](../../../settings/settings_tenant/settings_tenant/#editing-a-location) is checked in at a service point associated with a different location that is also designated as floating, then the item’s effective location will change to the effective location it is checked in at. Floating collections can be used to reduce transportation of items between libraries. 
+A floating collection consists of items whose effective location can change depending on where they are checked in. If an item whose effective location is designated as floating in [Settings > Tenant](../../../settings/settings_tenant/settings_tenant/#enable-a-floating-collection) is checked in at a service point associated with a different location that is also designated as floating, then the item’s effective location will change to the effective location it is checked in at. Floating collections can be used to reduce transportation of items between libraries. 
 
 Example: Item1 has an effective location of Locus A, which is associated with service point Circ Desk A. Locus A is designated as a floating location. Locus B, associated with the service point Circ Desk B, is also designated as a floating location. Locus C, associated with service point Circ Desk C, is not designated as floating. If Item1 is checked in at Circ Desk B, Item1’s effective location will change to Locus B. Assuming there are no requests on Item1, no Transit slip will be generated and the item status will change to Available. If Item1 is then checked in at Circ Desk C, then Item1’s effective location will remain Locus B.
 
