@@ -74,7 +74,7 @@ This diagram may help you visualize the relationships between some of these term
 ![image](relation-diagram.png)
 
 ## Role Creation
-Role creation happens in the "**Authorization Roles**" section of **Settings**. Use the "**+New**" button in the upper right corner to open the form for creating a role. 
+Role creation happens in the "**Authorization Roles**" section of **Settings**. Use the "**+New**" button in the upper right corner to open the form for creating a role.
 
 
 Provide a name and description, then use the "**Select application**" button to open the selection modal. The purpose of selecting applications is to specify the functional areas which provide capabilities and capability sets you want to add to the role. Only Capabilities and Capability Sets provided by the selected application(s) will be shown. 
@@ -103,14 +103,14 @@ Making adjustments to roles is very similar to creating new roles. Start by sele
 ***Tip***: the search bar can help you find what you're looking for. 
 
 
-Use the "**Actions**" menu in the role details pane to select "**Edit**" to alther the role. 
+Use the "**Actions**" menu in the role details pane to select "**Edit**" to alther the role.
 
  
 
 The role edit form looks and behaves the same as the role creation form. Refer to the Role Creation section for details.  
 
 ## Role Deletion 
-Deletion of a role is similar to role modification. Refer to the Role Modification section for details. To delete a role, from the "**Actions**" menu, select "**Delete**." Exercise caution when deleting roles: **deleting a role cannot be undone.** When deleting a role which is assigned to users, the role assignments will automatically be removed from those users. If you are sure you wish to delete the role, you will be asked to confirm. 
+Deletion of a role is similar to role modification. Refer to the Role Modification section for details. To delete a role, from the "**Actions**" menu, select "**Delete**." Exercise caution when deleting roles: **deleting a role cannot be undone.** When deleting a role which is assigned to users, the role assignments will automatically be removed from those users. If you are sure you wish to delete the role, you will be asked to confirm.
 
 
 ## Role Duplication 
@@ -177,7 +177,7 @@ To manage role assignments in the context of a particular user, navigate to the 
 
 
 
-Select a user to display that user's details in a separate pane. Here you will see a "User roles" accordion (collapsed by default). When collapsed, a bubble in the accordion header indicates how many roles the user is presently assigned to. While this accordion is helpful for viewing a user's role assignments, you cannot edit a user's role assignments here. Instead, you must select the "**Edit**" option from the "**Action**" menu. 
+Select a user to display that user's details in a separate pane. Here you will see a "User roles" accordion (collapsed by default). When collapsed, a bubble in the accordion header indicates how many roles the user is presently assigned to. While this accordion is helpful for viewing a user's role assignments, you cannot edit a user's role assignments here. Instead, you must select the "**Edit**" option from the "**Action**" menu.
 
 
 
