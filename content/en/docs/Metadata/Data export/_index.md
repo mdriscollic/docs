@@ -10,6 +10,7 @@ The Data Export app allows you to:
 - **Export bibliographic data from Source Record Storage (SRS)** in MARC21 format.
 - **Export Instance, Holdings, and Item data stored by the Inventory app.** A file in MARC21 format is generated from non-MARC data in this case.
 - **Export Authority data stored by the MARC Authority app** in MARC21 format.
+- **Export linked data** in JSON format.
 - **Export a list of UUIDs for selected records** in a .csv file
 
 The Data Export app usually comes with a few default job profiles, which determine how information is exported in the generated MARC file. To create your own customized job profiles, you can configure job profiles in the Settings app. For more information, see [Settings \> Data Export](../../settings/settings_data_export/settings_data_export/).
@@ -17,7 +18,9 @@ The Data Export app usually comes with a few default job profiles, which determi
 Definition of terms related to the Data Export app:
 
 -   **CQL.** Contextual Query Language. A CQL query can be used in certain circumstances to identify the FOLIO records to export.
+-   **Field** mapping profile. Defines how specific data fields from FOLIO records are mapped and formatted into the exported file. Field mapping profiles are referenced within job profiles.
 -   **Job profile.** Determines how information from FOLIO is exported to the generated MARC file.
+-   **Linked data.**  Structured data interlinked with other data. Linked data from FOLIO is exported in JSON format.
 -   **SRS.** Source Record Storage. A storage layer in FOLIO. If an instance has an underlying MARC record, then this record is stored in SRS.
 -   **UUID.** Universally unique identifier. Each record in FOLIO has a UUID.
 
@@ -48,6 +51,23 @@ Quick exports can be performed from the MARC Authority app. A quick export creat
 2.  In the right-hand-side **MARC authority** pane, find the records you want to export, and for each record, select the **checkbox** in the first column.
 3.  Click **Actions \> Export selected records (CSV/MARC)**. Depending on your browser and its configuration, the file of UUIDs for the selected records automatically downloads or you are prompted to save it. The creation of a MARC (.mrc) file is logged in the Data export app and if you open that app you can fiind and download the MARC file containing your selected records.
 
+## Saving Authority UUIDs for later export
+
+Librarians can extract and save UUIDs from an Authority search to trigger an export job later.
+  
+1.  Open the **MARC Authorities** app and perform a search.
+2.  From the search results **Actions** menu, select **Save authorities UUIDs**.
+3.  A CSV file containing the UUIDs of all returned MARC authority records will download automatically without initiating an export job. This file can later be uploaded directly into the Data Export app.
+
+## Saving Authority CQL queries for later export
+
+Librarians can save the underlying query from an Authority search to use for reuse in data export.
+
+1.  Open the **MARC Authorities** app and perform a search.
+2.  From the Results pane **Actions** menu, select **Save authorities CQL query**.
+3.  A .cql file containing the generated query will download automatically without starting an export job. This file can be uploaded to the Data Export app to retrieve and export matching records.
+
+
 ## Triggering an export from the Data Export App by uploading a file
 
 The Data Export app accepts two types of data and file types that identify sets of records for export: a CSV file listing UUIDs or a CQL query in CQL format. Triggering an export generates a .mrc file.
@@ -57,7 +77,7 @@ The Data Export app accepts two types of data and file types that identify sets 
 A data export can be triggered by providing the list of record identifiers (UUIDs) in a .csv file.
 
 1.  In the **Jobs** pane, either drag and drop your file into the box, or click **or choose file** to locate the file on your computer.
-2.  In the **Select job profile to run the export** window, select the job profile to run. Export job profiles are set up for different types of records to export, so you'll have to select the right profile for the record type the list of UUIDs are for (e.g., instance records, holdings records, authority records)
+2.  In the **Select job profile to run the export** window, select the job profile to run. Export job profiles are set up for different types of records to export, so you'll have to select the right profile for the record type the list of UUIDs are for (e.g., instance records, holdings records, authority records, or linked data)
 3.  In the **Are you sure you want to run this job** dialog, select the correct record type from the drop down list under **UUIDS provided for this export**, then click **Run**. The window closes and the job appears under the Running section in the Jobs pane. When the job completes, the export file appears in the **Logs** list.
 
 ###  Uploading CQL query
@@ -79,7 +99,7 @@ The Logs list contains the following columns:
 -   **Total.** Number of records in the export.
 -   **Exported.** Number of records exported.
 -   **Failed.** Number of records that failed.
--   **Job profile.** Name of the job profile used.
+-   **Job profile.** Name of the job profile used. If the job profile used has since been deleted, the name will feature a (deleted) suffix.
 -   **Started running.** Date and time the export started.
 -   **Ended running.** Date and time the export finished.
 -   **Run by.** User or system by which the export was generated.
@@ -122,6 +142,8 @@ Click on **User look-up** and select the user you want. The search results appea
 ## Retrieving data export results
 
 For all exports with the Status of *Completed* or *Completed with errors*, you can click on the **File name** in the Logs pane to retrieve your data export results. Depending on your browser and its configurations, the file automatically downloads or you are prompted to save it.
+
+**Note:** If a job profile used for an export is deleted after the job has run, its historical export files are deleted and will no longer be available for download from this pane.
 
 ## Troubleshooting failed exports
 
