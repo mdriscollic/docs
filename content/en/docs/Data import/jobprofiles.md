@@ -1,9 +1,9 @@
 ---
 title: "Job profiles"
 linkTitle: "Job profiles"
-weight: 10
+weight: 50
 tags: ["subtopic"]
-aliases: ['/docs/metadata/additional-topics/job-profiles/jobprofiles/']
+aliases: ['/docs/metadata/additional-topics/', '/docs/metadata/additional-topics/job-profiles/', '/docs/metadata/additional-topics/job-profiles/jobprofiles/', '/docs/metadata/additional-topics/jobprofiles/']
 ---
 # How to create job profiles
 
