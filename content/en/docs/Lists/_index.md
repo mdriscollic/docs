@@ -820,6 +820,63 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 **Custom fields** for User records, if configured, are available for building a Loans query in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
 
+### Lost items requiring actual cost
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: |
+| *Actual cost — Additional info for patron* | YES | YES |
+| *Actual cost — Additional info for staff* | YES | YES |
+| *Actual cost — Created at* | YES | YES |
+| *Actual cost — Expiration date* | YES | YES |
+| *Actual cost — Fee fine account UUID* | YES | YES |
+| *Actual cost — Fee fine billed amount* | YES | YES |
+| *Actual cost — Fee fine owner* | YES | YES |
+| *Actual cost — Fee fine type* | YES | YES |
+| *Actual cost — Instance contributors* | YES | YES |
+| *Actual cost — Instance contributors name* | YES | YES |
+| *Actual cost — Instance identifiers* | YES | YES |
+| *Actual cost — Instance identifiers type UUID* | YES | YES |
+| *Actual cost — Instance identifiers value* | YES | YES |
+| *Actual cost — Instance identifiers type name* | YES | YES |
+| *Actual cost — Instance title* | YES | YES |
+| *Actual cost — Instance UUID* | YES | YES |
+| *Actual cost — Item barcode* | YES | YES |
+| *Actual cost — Item effective location* | YES | YES |
+| *Actual cost — Item loan type* | YES | YES |
+| *Actual cost — Item material type* | YES | YES |
+| *Actual cost — Item permanent location* | YES | YES |
+| Actual cost — Item UUID** | YES | YES |
+| *Actual cost — Loan UUID* | YES | YES |
+| *Actual cost — Loss date* | YES | YES |
+| *Actual cost — Loss type* | YES | YES |
+| *Actual cost — Status* | YES | YES |
+| *Actual cost — Updated at* | YES | YES |
+| *Actual cost — User barcode* | YES | YES |
+| *Actual cost — User first name* | YES | YES |
+| *Actual cost — User last name* | YES | YES |
+| *Actual cost — User middle name* | YES | YES |
+| *Actual cost — User patron group* | YES | YES |
+| *Actual cost — User UUID* | YES | YES |
+| *Actual cost — UUID* | YES | YES |
+| *User — Active* | YES | YES |
+| *User — Barcode* | YES | YES |
+| *User — Department names* | YES | YES |
+| *User — Department UUIDs* | YES | YES |
+| *User — Email* | YES | YES |
+| *User — Expiration date* | YES | YES |
+| *User — Last name, first name* | YES | YES |
+| *User — originalTenantId* | YES | YES |
+| *User — Pronouns* | YES | YES |
+| *User — Tags* | YES | YES |
+| *User — Type* | YES | YES |
+| *User — User UUID* | YES | YES |
+| *Actual cost — Created by — Email* | YES | YES |
+| *Actual cost — Created by — Last name, first name* | YES | YES |
+| *Actual cost — Created by — Username* | YES | YES |
+| *Actual cost — Updated by — Email* | YES | YES |
+| *Actual cost — Updated by — Last name, first name* | YES | YES |
+| *Actual cost — Updated by — Username* | YES | YES |
+
 ### Organizations
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
