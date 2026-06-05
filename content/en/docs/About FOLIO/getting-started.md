@@ -2,7 +2,7 @@
 title: "Getting Started"
 linkTitle: "Getting Started"
 weight: 200
-description: >
+url: 'docs/getting-started'
 ---
 
 Thinking about getting started with FOLIO? Check out the resources below to familiarize yourself with the platform.
@@ -30,9 +30,3 @@ Once you've accessed a demo site, you can experiment with the platform to see ho
 * Update an item record with quickMARC
 * Update licenses and agreements for an electronic resource
 * View and edit a patron record
-
-## Install FOLIO for yourself
-
-You've played with the platform, and now you're ready to install something for yourself. There are different ways to set up and run FOLIO. The type of installation you do and the components you install depends upon your goals.
-
-See [Install FOLIO]({{< ref "Installation/_index.md" >}}) for types of installations and deployments.
