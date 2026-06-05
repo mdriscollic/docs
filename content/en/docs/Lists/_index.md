@@ -211,6 +211,63 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Fund - Ledger - UUID* | YES | YES |
 | *Fund - Ledger - Version* | YES | YES |
 
+### Fee/Fine accounts with users
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? |
+| :----- | :-----: | :-----: | 
+| *Fee/Fine accounts - Amount* | YES | YES |
+| *Fee/Fine accounts - Barcode* | YES | YES |
+| *Fee/Fine accounts - Created at* | YES | YES |
+| *Fee/Fine accounts - Due date* | YES | YES |
+| *Fee/Fine accounts - Fee/fine owner* | YES | YES |
+| *Fee/Fine accounts - Fee/fine type* | YES | YES |
+| *Fee/Fine accounts - Location* | YES | YES |
+| *Fee/Fine accounts - Material type* | YES | YES |
+| *Fee/Fine accounts - Payment status name* | YES | YES |
+| *Fee/Fine accounts - Remaining* | YES | YES |
+| *Fee/Fine accounts - Returned date* | YES | YES |
+| *Fee/Fine accounts - Status name* | YES | YES |
+| *Fee/Fine accounts - Updated at* | YES | YES |
+| *Fee/Fine accounts - User UUID* | YES | YES |
+| *Fee/Fine accounts - UUID* | YES | YES |
+| *User - Active* | YES | YES |
+| *User - Address* | YES | YES |
+| *User - Address — Primary address* | YES | YES |
+| *User - Address — City* | YES | YES |
+| *User - User — Address — Region* | YES | YES |
+| *User - User — Address — Postal code* | YES | YES |
+| *User - User — Address — Line 1* | YES | YES |
+| *User - User — Address — Line 2* | YES | YES |
+| *User - User — Address — Country* | YES | YES |
+| *User - User — Address — Type* | YES | YES |
+| *User - Barcode* | YES | YES |
+| *User - Created by user UUID* | YES | YES |
+| *User - Date of birth* | YES | YES |
+| *User - Department names* | YES | YES |
+| *User - Department UUIDs* | YES | YES |
+| *User - Email* | YES | YES |
+| *User - Enrollment date* | YES | YES |
+| *User - Expiration date* | YES | YES |
+| *User - External system ID* | YES | YES |
+| *User - First name* | YES | YES |
+| *User - Last name* | YES | YES |
+| *User - Last name, first name* | YES | YES |
+| *User - Middle name* | YES | YES |
+| *User - Mobile phone* | YES | YES |
+| *User - originalTenantId* | YES | YES |
+| *User - Phone* | YES | YES |
+| *User - Preferred contact type* | YES | YES |
+| *User - Preferred first name* | YES | YES |
+| *User - Pronouns* | YES | YES |
+| *User - Tags* | YES | YES |
+| *User - Type* | YES | YES |
+| *User - Updated by user UUID* | YES | YES |
+| *User - User created date* | YES | YES |
+| *User - User updated date* | YES | YES |
+| *User - User UUID* | YES | YES |
+| *User - Username* | YES | YES |
+| *User - Patron group — Name* | YES | YES |
+
 ### Fund with ledger
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? |
@@ -329,6 +386,11 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instance status - Code* | YES | YES |
 | *Instance status - Term* | YES | YES |
 
+### Instances with MARC bibliographic
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: |
+| *Instance - Administrative notes* | NO | YES |
 
 ### Invoice lines
 
