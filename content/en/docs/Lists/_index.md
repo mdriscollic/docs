@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 linkTitle: "Lists"
-date: 2025-05-08      
+date: 2025-06-05      
 weight: 525
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
@@ -30,21 +30,15 @@ Functionality of the Lists app includes:
 Definition of terms related to the Lists app:
 
 
-- **applicationId**. An attribute of a capability or capability set that identifies the platform for a FOLIO application.
-- **Application**. See **applicationId**. For all Lists capabilities and capability sets, the **Application** is *app-fqm*. 
-- **Authorization role**. See **User roles** below.
-- **Capabilities**. Ability assigned to a user to perform an action in a FOLIO application.  
-- **Capability Sets**. A set of individual capabilities.
+
 - **Field**: The identifier used to query records.
 - **FQM**: FOLIO Query Machine. The query functionality in FOLIO.
 - **Operator**: The function applied in a query to match records by selected field and inputted value.
-- **permissionDisplayName (OKAPI)**. The permission set name displayed in the Okapi platform (pre-Sunflower release).
 - **Query**: The search string used to generate a list that includes a field, operator, and value.
 - **Record set**: The set (or list) of records retrieved through a query.
 -  **Resource (EUREKA)**. An operation that can be performed in a FOLIO application.
 - **Source**: The FOLIO account used to create and save a list.
 - **Type (Settings)**. Capabilities that allow the user to manage FOLIO configurations administratively. For all Lists capabilities and capability sets, the Type is *settings*. 
--  **User role.** Also known as **Authorization role**. Comprised of capabilities or capability sets, allows a user to perform role-based actions in a FOLIO application.
 - **Value**: The text and/or number(s) input to query records with a selected field and selected operator.
 
 
@@ -74,26 +68,77 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 **Record types** supported in the Lists app include:
 
+- [Authority](#authority)
 - [Budgets](#budgets)
+- [Fee/Fine accounts with users](#fee-fine-accounts-with-users)
 - [Fund with ledger](#fund-with-ledger)
 - [Holdings](#holdings)
 - [Instances](#instances)
+- [Instances with MARC bibliographic](#instances-with-MARC-bibliographic)
 - [Invoice lines](#invoice-lines)
 - [Invoices](#invoices)
 - [Items](#items)
 - [Loans](#loans)
+- [Lost items requiring actual cost](#lost-items-requiring-actual-cost)
+- [Order invoice analysis](#order-invoice-analysis)
 - [Organizations](#organizations)
 - [Purchase order lines](#purchase-order-lines)
 - [Purchase order lines with titles](#purchase-order-lines-with-titles)
 - [Purchase orders](#purchase-orders)
+- [Receiving pieces](#receiving-pieces)
+- [Receiving titles](#receiving-titles)
 - [Transactions](#transactions)
 - [Users](#users)
+- [Users with fees/fines, loans](#users-with-fees-fines-loans)
+- [Users with manual blocks](#users-with-manual-blocks)
+- [Users with open transactions](#users-with-open-transactions)
+- [Voucher lines](#voucher-lines)
 - [Voucher lines with fund](#voucher-lines-with-fund)
 - [Voucher lines with invoice, fund, organization](#voucher-lines-with-invoice-fund-organization)
 - [Vouchers](#vouchers)
 
-**Custom fields** for User records, if configured, are not available for building a query, but are available for displaying as column headings in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields).
 
+### Authority
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? |
+| :----- | :-----: | :-----: | 
+| *Authority - Created date* | YES | YES |
+| *Authority - Heading* | YES | YES |
+| *Authority - Heading type* | YES | YES |
+| *Authority - Identifiers* | NO | YES |
+| *Authority - Identifier value* | YES | YES |
+| *Authority - Identifier type* | YES | YES |
+| *Authority - Natural ID* | YES | YES |
+| *Authority - Notes* | NO | YES |
+| *Authority - Notes — Note type* | YES | YES |
+| *Authority - Notes — Note* | YES | YES |
+| *Authority - See also from references* | YES | YES |
+| *Authority - See also from reference — Tracing* | YES | YES |
+| *Authority - See also from reference — Tracing type* | YES | YES |
+| *Authority - See also from reference — Relationship type* | YES | YES |
+| *Authority - Authority — See from references* | NO | YES |
+| *Authority - See from reference — Tracing* | YES | YES |
+| *Authority - See from reference — Tracing type* | YES | YES |
+| *Authority - Source* | YES | YES |
+| *Authority - Subject heading code* | YES | YES |
+| *Authority - Updated date* | YES | YES |
+| *Authority - UUID* | YES | YES |
+| *Source file - Name* | YES | YES |
+| *Created by user - Email* | YES | YES |
+| *Created by user - Last name, first name* | YES | YES |
+| *Created by user - Username* | YES | YES |
+| *Updated by user - Email* | YES | YES |
+| *Updated by user - Last name, first name* | YES | YES |
+| *Updated by user - Username* | YES | YES |
+| *MARC Authority - Created date* | YES | YES |
+| *MARC Authority - External HRID* | YES | YES |
+| *MARC Authority - Generation* | YES | YES |
+| *MARC Authority - Leader record status* | YES | YES |
+| *MARC Authority - MARC jsonb* | NO | YES |
+| *MARC Authority - Matched UUID* | YES | YES |
+| *MARC Authority - Order* | YES | YES |
+| *MARC Authority - State* | YES | YES |
+| *MARC Authority - Updated date* | YES | YES |
 
 ### Budgets
 
