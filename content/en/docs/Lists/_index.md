@@ -231,7 +231,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Fee/Fine accounts - User UUID* | YES | YES |
 | *Fee/Fine accounts - UUID* | YES | YES |
 | *User - Active* | YES | YES |
-| *User - Address* | YES | YES |
+| *User - Address* | NO | YES |
 | *User - Address — Primary address* | YES | YES |
 | *User - Address — City* | YES | YES |
 | *User - User — Address — Region* | YES | YES |
@@ -390,7 +390,88 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
 | :----- | :-----: | :-----: |
-| *Instance - Administrative notes* | NO | YES |
+| *Instance — Administrative notes* | YES | YES |
+| *Instance — Affiliation name* | YES | YES |
+| *Instance — Alternative titles* | YES | YES |
+| *Instance — Alternative titles — Alternative title* | YES | YES |
+| *Instance — Alternative titles — Alternative title type* | YES | YES |
+| *Instance — Cataloged date* | YES | YES |
+| *Instance — Classifications* | YES | YES |
+| *Instance — Classifications — Classification* | YES | YES |
+| *Instance — Classifications — Classification identifier type* | YES | YES |
+| *Instance — Contributors* | YES | YES |
+| *Instance — Contributors — Primary* | YES | YES |
+| *Instance — Contributors — Name* | YES | YES |
+| *Instance — Contributors — Type, free text* | YES | YES |
+| *Instance — Contributors — Name type* | YES | YES |
+| *Instance — Contributors — Type* | YES | YES |
+| *Instance — Created date* | YES | YES |
+| *Instance — Date 1* | YES | YES |
+| *Instance — Date 2* | YES | YES |
+| *Instance — Editions* | YES | YES |
+| *Instance — Electronic access* | YES | YES |
+| *Instance — Electronic access — URI* | YES | YES |
+| *Instance — Electronic access — Link text* | YES | YES |
+| *Instance — Electronic access — Material specified* | YES | YES |
+| *Instance — Electronic access — URL public note* | YES | YES |
+| *Instance — Electronic access — URL relationship* | YES | YES |
+| *Instance — Flag for deletion* | YES | YES |
+| *Instance — Format names* | YES | YES |
+| *Instance — Identifiers* | YES | YES |
+| *Instance — Identifiers — Identifier* | YES | YES |
+| *Instance — Identifiers — Identifier type* | YES | YES |
+| *Instance — Index title* | YES | YES |
+| *Instance — Instance format UUIDs* | YES | YES |
+| *Instance — Instance HRID* | YES | YES |
+| *Instance — Instance UUID* | YES | YES |
+| *Instance — Languages* | YES | YES |
+| *Instance — Mode of issuance* | YES | YES |
+| *Instance — Nature of content* | YES | YES |
+| *Instance — Notes* | YES | YES |
+| *Instance — Notes — Staff only* | YES | YES |
+| *Instance — Notes — Note* | YES | YES |
+| *Instance — Notes — Note type* | YES | YES |
+| *Instance — Physical descriptions* | YES | YES |
+| *Instance — Previously held* | YES | YES |
+| *Instance — Publication frequency* | YES | YES |
+| *Instance — Publication range* | YES | YES |
+| *Instance — Publications* | NO | YES |
+| *Instance — Publications — Publisher* | YES | YES |
+| *Instance — Publications — Publisher role* | YES | YES |
+| *Instance — Publications — Place of publication* | YES | YES |
+| *Instance — Publications — Publication date* | YES | YES |
+| *Instance — Record version* | YES | YES |
+| *Instance — Resource title* | YES | YES |
+| *Instance — Resource type* | YES | YES |
+| *Instance — Series* | YES | YES |
+| *Instance — Shared* | YES | YES |
+| *Instance — Source* | YES | YES |
+| *Instance — Staff suppress* | YES | YES |
+| *Instance — Statistical code UUIDs* | YES | YES |
+| *Instance — Statistical codes* | YES | YES |
+| *Instance — Subjects* | YES | YES |
+| *Instance — Subjects — Subject headings* | YES | YES |
+| *Instance — Subjects — Subject source* | YES | YES |
+| *Instance — Subjects — Subject type* | YES | YES |
+| *Instance — Suppress from discovery* | YES | YES |
+| *Instance — Tags* | YES | YES |
+| *Instance — Tenant ID* | YES | YES |
+| *Instance — Updated date* | YES | YES |
+| *MARC bibliographic — Created date* | YES | YES |
+| *MARC bibliographic — External HRID* | YES | YES |
+| *MARC bibliographic — External HRID* | YES | YES |
+| *MARC bibliographic — Leader record status* | YES | YES |
+| *MARC bibliographic — MARC jsonb* | YES | YES |
+| *MARC bibliographic — Matched UUID* | YES | YES |
+| *MARC bibliographic — Order* | YES | YES |
+| *MARC bibliographic — State* | YES | YES |
+| *MARC bibliographic — Updated date* | YES | YES |
+| *MARC created by — Email* | YES | YES |
+| *MARC created by — Last name, first name* | YES | YES |
+| *MARC created by — Username* | YES | YES |
+| *MARC updated by — Email* | YES | YES |
+| *MARC updated by — Last name, first name* | YES | YES |
+| *MARC updated by — Username* | YES | YES |
 
 ### Invoice lines
 
