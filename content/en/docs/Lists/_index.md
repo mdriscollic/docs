@@ -1372,6 +1372,280 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *UUID* | YES | YES | 
 | *Workflow status* | YES | YES | 
 
+### Receiving pieces
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *Pieces — Accession number* | YES | YES |
+| *Pieces — Barcode* | YES | YES |
+| *Pieces — Bind item tenant ID* | YES | YES |
+| *Pieces — Call number* | YES | YES |
+| *Pieces — Chronology* | YES | YES |
+| *Pieces — Claiming interval* | YES | YES |
+| *Pieces — Comment* | YES | YES |
+| *Pieces — Copy number* | YES | YES |
+| *Pieces — Created at* | YES | YES |
+| *Pieces — Discovery suppress* | YES | YES |
+| *Pieces — Display on holding* | YES | YES |
+| *Pieces — Display summary* | YES | YES |
+| *Pieces — Display to public* | YES | YES |
+| *Pieces — Enumeration* | YES | YES |
+| *Pieces — Expected receipt date* | YES | YES |
+| *Pieces — External note* | YES | YES |
+| *Pieces — Format* | YES | YES |
+| *Pieces — Internal note* | YES | YES |
+| *Pieces — Is bound* | YES | YES |
+| *Pieces — Received date* | YES | YES |
+| *Pieces — Receiving status* | YES | YES |
+| *Pieces — Receiving tenant ID* | YES | YES |
+| *Pieces — Sequence number* | YES | YES |
+| *Pieces — Status updated date* | YES | YES |
+| *Pieces — Supplement* | YES | YES |
+| *Pieces — Updated at* | YES | YES |
+| *Pieces — UUID* | YES | YES |
+| *Item — Accession number* | YES | YES |
+| *Item — Administrative notes* | YES | YES |
+| *Item — Affiliation name* | YES | YES |
+| *Item — Barcode* | YES | YES |
+| *Item — Check in notes* | YES | YES |
+| *Item — Check in notes — Note type* | YES | YES |
+| *Item — Check in notes — Staff only* | YES | YES |
+| *Item — Check in notes — Note* | YES | YES |
+| *Item — Check out notes* | YES | YES |
+| *Item — Check out notes — Note type* | YES | YES |
+| *Item — Check out notes — Staff only* | YES | YES |
+| *Item — Check out notes — Note* | YES | YES |
+| *Item — Chronology* | YES | YES |
+| *Item — Copy number* | YES | YES |
+| *Item — Created date* | YES | YES |
+| *Item — Description of pieces* | YES | YES |
+| *Item — Display summary* | YES | YES |
+| *Item — Effective call number* | YES | YES |
+| *Item — Effective shelving order* | YES | YES |
+| *Item — Effective shelving order* | YES | YES |
+| *Item — Electronic access — URI* | YES | YES |
+| *Item — Electronic access — Link text* | YES | YES |
+| *Item — Electronic access — Material specified* | YES | YES |
+| *Item — Electronic access — URL public note* | YES | YES |
+| *Item — Electronic access — URL relationship* | YES | YES |
+| *Item — Enumeration* | YES | YES |
+| *Item — Former identifiers* | YES | YES |
+| *Item — Item additional call numbers* | NO | YES |
+| *Item — Item additional call numbers — Call number* | YES | YES |
+| *Item — Item additional call numbers — Prefix* | YES | YES |
+| *Item — Item additional call numbers — Suffix* | YES | YES |
+| *Item — Item additional call numbers — Type* | YES | YES |
+| *Item — Item call number* | YES | YES |
+| *Item — Item call number prefix* | YES | YES |
+| *Item — Item call number suffix* | YES | YES |
+| *Item — Item damaged status* | YES | YES |
+| *Item — Item damaged status date* | YES | YES |
+| *Item — Item HRID* | YES | YES |
+| *Item — Item UUID* | YES | YES |
+| *Item — Last check in date time* | YES | YES |
+| *Item — Missing pieces* | YES | YES |
+| *Item — Missing pieces date* | YES | YES |
+| *Item — Notes* | YES | YES |
+| *Item — Notes — Staff only* | YES | YES |
+| *Item — Notes — Note* | YES | YES |
+| *Item — Notes — Note type* | YES | YES |
+| *Item — Number of missing pieces* | YES | YES |
+| *Item — Number of pieces* | YES | YES |
+| *Item — Purchase order line identifier* | YES | YES |
+| *Item — Sort order* | YES | YES |
+| *Item — Statistical codes* | YES | YES |
+| *Item — Status* | YES | YES |
+| *Item — Status date* | YES | YES |
+| *Item — Suppress from discovery* | YES | YES |
+| *Item — Tags* | YES | YES |
+| *Item — Tenant ID* | YES | YES |
+| *Item — Updated date* | YES | YES |
+| *Item — Version* | YES | YES |
+| *Item — Volume* | YES | YES |
+| *Item — Year, caption* | YES | YES |
+| *Location — Code* | YES | YES |
+| *Location — Name* | YES | YES |
+| *POL — Acquisition method* | YES | YES |
+| *POL — Agreement UUID* | YES | YES |
+| *POL — Cost currency* | YES | YES |
+| *POL — Cost exchange rate* | YES | YES |
+| *POL — Cost PO line estimated price* | YES | YES |
+| *POL — Created at* | YES | YES |
+| *POL — Description* | YES | YES |
+| *POL — Details receiving note* | YES | YES |
+| *POL — Donor* | YES | YES |
+| *POL — E-resource create inventory* | YES | YES |
+| *POL — E-resource expected activation* | YES | YES |
+| *POL — E-resource is activated* | YES | YES |
+| *POL — E-resource is trial* | YES | YES |
+| *POL — E-resource resource url* | YES | YES |
+| *POL — Fund distribution* | YES | YES |
+| *POL — Fund distribution — Encumbrance UUID* | YES | YES |
+| *POL — Fund distribution — Value* | YES | YES |
+| *POL — Fund distribution — Fund* | YES | YES |
+| *POL — Fund distribution — Expense class* | YES | YES |
+| *POL — Fund distribution — Distribution type* | YES | YES |
+| *POL — Fund distribution — Code* | YES | YES |
+| *POL — Is rush* | YES | YES |
+| *POL — Locations* | YES | YES |
+| *POL — Locations — Quantity electronic* | YES | YES |
+| *POL — Locations — Quantity physical* | YES | YES |
+| *POL — Locations — Name* | YES | YES |
+| *POL — Locations — Code* | YES | YES |
+| *POL — Locations — Affiliation* | YES | YES |
+| *POL — Membership* | YES | YES |
+| *POL — Order format* | YES | YES |
+| *POL — Payment status* | YES | YES |
+| *POL — Physical expected receipt date* | YES | YES |
+| *POL — PO line number* | YES | YES |
+| *POL — Publication date* | YES | YES |
+| *POL — Publisher* | YES | YES |
+| *POL — Receipt date* | YES | YES |
+| *POL — Receipt status* | YES | YES |
+| *POL — Selector* | YES | YES |
+| *POL — Source* | YES | YES |
+| *POL — Tags* | YES | YES |
+| *POL — Title or package* | YES | YES |
+| *POL — Updated at* | YES | YES |
+| *POL — UUID* | YES | YES |
+| *PO — Acquisition unit names* | YES | YES |
+| *PO — Acquisition unit UUIDs* | YES | YES |
+| *PO — Approved* | YES | YES |
+| *PO — Close reason* | YES | YES |
+| *PO — Created at* | YES | YES |
+| *PO — Date ordered* | YES | YES |
+| *PO — External order number* | YES | YES |
+| *PO — Order type* | YES | YES |
+| *PO — PO number* | YES | YES |
+| *PO — Re-encumber* | YES | YES |
+| *PO — Tags* | YES | YES |
+| *PO — Updated at* | YES | YES |
+| *PO — UUID* | YES | YES |
+| *PO — Workflow status* | YES | YES |
+| *Title — Acquisition unit* | YES | YES |
+| *Title — Claiming active* | YES | YES |
+| *Title — Claiming interval* | YES | YES |
+| *Title — Contributors* | YES | YES |
+| *Title — Contributors — Name* | YES | YES |
+| *Title — Created at* | YES | YES |
+| *Title — Edition* | YES | YES |
+| *Title — Expected receipt date* | YES | YES |
+| *Title — Is acknowledged* | YES | YES |
+| *Title — Next sequence number* | YES | YES |
+| *Title — Package name* | YES | YES |
+| *Title — PO line number* | YES | YES |
+| *Title — Product identifiers* | YES | YES |
+| *Title — Product identifiers — Product ID* | YES | YES |
+| *Title — Product identifiers — Qualifier* | YES | YES |
+| *Title — Product identifiers — Product ID type* | YES | YES |
+| *Title — Published date* | YES | YES |
+| *Title — Publisher* | YES | YES |
+| *Title — Receiving note* | YES | YES |
+| *Title — Subscription from* | YES | YES |
+| *Title — Subscription interval* | YES | YES |
+| *Title — Subscription to* | YES | YES |
+| *Title — Title* | YES | YES |
+| *Title — Updated at* | YES | YES |
+| *Title — UUID* | YES | YES |
+| *Holdings — Acquisition method* | YES | YES |
+| *Holdings — Acquisition order format* | YES | YES |
+| *Holdings — Acquisition receipt status* | YES | YES |
+| *Holdings — Administrative notes* | YES | YES |
+| *Holdings — Affiliation name* | YES | YES |
+| *Holdings — Call number* | YES | YES |
+| *Holdings — Call number prefix* | YES | YES |
+| *Holdings — Call number suffix* | YES | YES |
+| *Holdings — Call number type* | YES | YES |
+| *Holdings — Copy number* | YES | YES |
+| *Holdings — Created date* | YES | YES |
+| *Holdings — Digitization policy* | YES | YES |
+| *Holdings — Electronic access* | YES | YES |
+| *Holdings — Electronic access — URI* | YES | YES |
+| *Holdings — Electronic access — Link text* | YES | YES |
+| *Holdings — Electronic access — Material specified* | YES | YES |
+| *Holdings — Electronic access — URL public note* | YES | YES |
+| *Holdings — Electronic access — URL relationship* | YES | YES |
+| *Holdings — Former identifiers* | YES | YES |
+| *Holdings — Holdings additional call numbers* | YES | YES |
+| *Holdings — Holdings additional call numbers — Call number* | YES | YES |
+| *Holdings — Holdings additional call numbers — Prefix* | YES | YES |
+| *Holdings — Holdings additional call numbers — Suffix* | YES | YES |
+| *Holdings — Holdings additional call numbers — Type* | YES | YES |
+| *Holdings — HRID* | YES | YES |
+| *Holdings — Instance UUID* | YES | YES |
+| *Holdings — Notes* | NO | YES |
+| *Holdings — Notes — Staff only* | YES | YES |
+| *Holdings — Notes — Note* | YES | YES |
+| *Holdings — Notes — Note type* | YES | YES |
+| *Holdings — Number of items* | YES | YES |
+| *Holdings — Receiving history* | YES | YES |
+| *Holdings — Receiving history — Public display* | YES | YES |
+| *Holdings — Receiving history — Enumeration* | YES | YES |
+| *Holdings — Receiving history — Chronology* | YES | YES |
+| *Holdings — Record version* | YES | YES |
+| *Holdings — Retention policy* | YES | YES |
+| *Holdings — Shelving title* | YES | YES |
+| *Holdings — Statements* | NO | YES |
+| *Holdings — Statements — Statement* | YES | YES |
+| *Holdings — Statements — Statement public note* | YES | YES |
+| *Holdings — Statements — Statement staff note* | YES | YES |
+| *Holdings — Statements for indexes* | NO | YES |
+| *Holdings — Statements for indexes — Statement for indexes* | YES | YES |
+| *Holdings — Statements for indexes — Statement for indexes public note* | YES | YES |
+| *Holdings — Statements for indexes — Statement for indexes staff note* | YES | YES |
+| *Holdings — Statements for supplements* | NO | YES |
+| *Holdings — Statements for supplements — Statement for supplement* | YES | YES |
+| *Holdings — Statements for supplements — Statement for supplement public note* | YES | YES |
+| *Holdings — Statements for supplements — Statement for supplement staff note* | YES | YES |
+| *Holdings — Statistical code UUIDs* | YES | YES |
+| *Holdings — Statistical codes* | YES | YES |
+| *Holdings — Suppress from discovery* | YES | YES |
+| *Holdings — Tags* | YES | YES |
+| *Holdings — Tenant ID* | YES | YES |
+| *Holdings — Updated date* | YES | YES |
+| *Holdings — UUID* | YES | YES |
+| *Holdings permanent location — Code* | YES | YES |
+| *Holdings permanent location — Name* | YES | YES |
+| *Created by — Email* | YES | YES |
+| *Created by — Last name, first name* | YES | YES |
+| *Created by — Username* | YES | YES |
+| *Updated by — Email* | YES | YES |
+| *Updated by — Last name, first name* | YES | YES |
+| *Updated by — Username* | YES | YES |
+
+### Receiving titles
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *Title — Acquisition unit* | YES | YES |
+| *Title — Claiming active* | YES | YES |
+| *Title — Claiming interval* | YES | YES |
+| *Title — Contributors* | YES | YES |
+| *Transaction - Amount* | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+| ** | YES | YES |
+
+
 ### Transactions
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
 | :----- | :-----: | :-----: | 
