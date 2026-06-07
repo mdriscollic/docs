@@ -1618,33 +1618,145 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Title — Acquisition unit* | YES | YES |
 | *Title — Claiming active* | YES | YES |
 | *Title — Claiming interval* | YES | YES |
-| *Title — Contributors* | YES | YES |
-| *Transaction - Amount* | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-| ** | YES | YES |
-
+| *Title — Contributors* | NO | YES |
+| *Title — Contributors — Name* | YES | YES |
+| *Title — Created at* | YES | YES |
+| *Title — Edition* | YES | YES |
+| *Title — Expected receipt date* | YES | YES |
+| *Title — Is acknowledged* | YES | YES |
+| *Title — Next sequence number* | YES | YES |
+| *Title — Package name* | YES | YES |
+| *Title — PO line number* | YES | YES |
+| *Title — Product identifiers* | YES | YES |
+| *Title — Product identifiers — Product ID* | YES | YES |
+| *Title — Product identifiers — Qualifier* | YES | YES |
+| *Title — Product identifiers — Product ID type* | YES | YES |
+| *Title — Published date* | YES | YES |
+| *Title — Publisher* | YES | YES |
+| *Title — Receiving note* | YES | YES |
+| *Title — Subscription from* | YES | YES |
+| *Title — Subscription interval* | YES | YES |
+| *Title — Subscription to* | YES | YES |
+| *Title — Title* | YES | YES |
+| *Title — Updated at* | YES | YES |
+| *Title — UUID* | YES | YES |
+| *POL — Acquisition method* | YES | YES |
+| *POL — Agreement UUID* | YES | YES |
+| *POL — Cost currency* | YES | YES |
+| *POL — Cost exchange rate* | YES | YES |
+| *POL — Cost PO line estimated price* | YES | YES |
+| *POL — Created at* | YES | YES |
+| *POL — Description* | YES | YES |
+| *POL — Details receiving note* | YES | YES |
+| *POL — Donor* | YES | YES |
+| *POL — E-resource create inventory* | YES | YES |
+| *POL — E-resource expected activation* | YES | YES |
+| *POL — E-resource is activated* | YES | YES |
+| *POL — E-resource is trial* | YES | YES |
+| *POL — E-resource resource url* | YES | YES |
+| *POL — Fund distribution* | YES | YES |
+| *POL — Fund distribution — Encumbrance UUID* | YES | YES |
+| *POL — Fund distribution — Value* | YES | YES |
+| *POL — Fund distribution — Fund* | YES | YES |
+| *POL — Fund distribution — Expense class* | YES | YES |
+| *POL — Fund distribution — Distribution type* | YES | YES |
+| *POL — Fund distribution — Code* | YES | YES |
+| *POL — Is rush* | YES | YES |
+| *POL — Locations* | NO | YES |
+| *POL — Locations — Quantity electronic* | YES | YES |
+| *POL — Locations — Quantity physical* | YES | YES |
+| *POL — Locations — Name* | YES | YES |
+| *POL — Locations — Code* | YES | YES |
+| *POL — Locations — Affiliation* | YES | YES |
+| *POL — Membership* | YES | YES |
+| *POL — Order format* | YES | YES |
+| *POL — Payment status* | YES | YES |
+| *POL — Physical expected receipt date* | YES | YES |
+| *POL — PO line number* | YES | YES |
+| *POL — Publication date* | YES | YES |
+| *POL — Publisher* | YES | YES |
+| *POL — Receipt date* | YES | YES |
+| *POL — Receipt status* | YES | YES |
+| *POL — Selector* | YES | YES |
+| *POL — Source* | YES | YES |
+| *POL — Tags* | YES | YES |
+| *POL — Title or package* | YES | YES |
+| *POL — Updated at* | YES | YES |
+| *POL — UUID* | YES | YES |
+| *Instance — Administrative notes* | YES | YES |
+| *Instance — Affiliation name* | YES | YES |
+| *Instance — Alternative titles* | NO | YES |
+| *Instance — Alternative titles — Alternative title* | YES | YES |
+| *Instance — Alternative titles — Alternative title type* | YES | YES |
+| *Instance — Cataloged date* | YES | YES |
+| *Instance — Classifications* | YES | YES |
+| *Instance — Classifications — Classification* | YES | YES |
+| *Instance — Classifications — Classification identifier type* | YES | YES |
+| *Instance — Contributors* | YES | YES |
+| *Instance — Contributors — Primary* | YES | YES |
+| *Instance — Contributors — Name* | YES | YES |
+| *Instance — Contributors — Type, free text* | YES | YES |
+| *Instance — Contributors — Name type* | YES | YES |
+| *Instance — Contributors — Type* | YES | YES |
+| *Instance — Created date* | YES | YES |
+| *Instance — Date 1* | YES | YES |
+| *Instance — Date 2* | YES | YES |
+| *Instance — Editions* | YES | YES |
+| *Instance — Electronic access* | YES | YES |
+| *Instance — Electronic access — URI* | YES | YES |
+| *Instance — Electronic access — Link text* | YES | YES |
+| *Instance — Electronic access — Material specified* | YES | YES |
+| *Instance — Electronic access — URL public note* | YES | YES |
+| *Instance — Electronic access — URL relationship* | YES | YES |
+| *Instance — Flag for deletion* | YES | YES |
+| *Instance — Format names* | YES | YES |
+| *Instance — Identifiers* | YES | YES |
+| *Instance — Identifiers — Identifier* | YES | YES |
+| *Instance — Identifiers — Identifier type* | YES | YES |
+| *Instance — Index title* | YES | YES |
+| *Instance — Instance format UUIDs* | YES | YES |
+| *Instance — Instance HRID* | YES | YES |
+| *Instance — Instance source URI* | YES | YES |
+| *Instance — Instance UUID* | YES | YES |
+| *Instance — Languages* | YES | YES |
+| *Instance — Mode of issuance* | YES | YES |
+| *Instance — Nature of content* | YES | YES |
+| *Instance — Notes* | YES | YES |
+| *Instance — Notes — Staff only* | YES | YES |
+| *Instance — Notes — Note* | YES | YES |
+| *Instance — Notes — Note type* | YES | YES |
+| *Instance — Physical descriptions* | YES | YES |
+| *Instance — Previously held* | YES | YES |
+| *Instance — Publication frequency* | YES | YES |
+| *Instance — Publication range* | YES | YES |
+| *Instance — Publications* | NO | YES |
+| *Instance — Publications — Publisher* | YES | YES |
+| *Instance — Publications — Publisher role* | YES | YES |
+| *Instance — Publications — Place of publication* | YES | YES |
+| *Instance — Publications — Publication date* | YES | YES |
+| *Instance — Record version* | YES | YES |
+| *Instance — Resource title* | YES | YES |
+| *Instance — Resource type* | YES | YES |
+| *Instance — Series* | YES | YES |
+| *Instance — Shared* | YES | YES |
+| *Instance — Source* | YES | YES |
+| *Instance — Staff suppress* | YES | YES |
+| *Instance — Statistical code UUIDs* | NO | YES |
+| *Instance — Statistical codes* | YES | YES |
+| *Instance — Subjects* | NO | YES |
+| *Instance — Subjects — Subject headings* | YES | YES |
+| *Instance — Subjects — Subject source* | YES | YES |
+| *Instance — Subjects — Subject type* | YES | YES |
+| *Instance — Suppress from discovery* | YES | YES |
+| *Instance — Tags* | YES | YES |
+| *Instance — Tenant ID* | YES | YES |
+| *Instance — Updated date* | YES | YES |
+| *Created by — Email* | YES | YES |
+| *Created by — Last name, first name* | YES | YES |
+| *Created by — Username* | YES | YES |
+| *Updated by — Email* | YES | YES |
+| *Updated by — Last name, first name* | YES | YES |
+| *Updated by — Username* | YES | YES |
 
 ### Transactions
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
