@@ -70,7 +70,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 - [Authority](#authority)
 - [Budgets](#budgets)
-- [Fee/Fine accounts with users](#fee-fine-accounts-with-users)
+- [Fee/Fine accounts with users](#feefine-accounts-with-users)
 - [Fund with ledger](#fund-with-ledger)
 - [Holdings](#holdings)
 - [Instances](#instances)
