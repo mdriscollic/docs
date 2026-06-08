@@ -1,7 +1,7 @@
 ---
 title: "Lists"
 linkTitle: "Lists"
-date: 2025-05-08      
+date: 2025-06-05      
 weight: 525
 ---
 **This section of the documentation contains links to external sites. Please be advised that these sites are not maintained by the FOLIO Documentation Group and may not be aligned with the current release of FOLIO.**
@@ -30,21 +30,15 @@ Functionality of the Lists app includes:
 Definition of terms related to the Lists app:
 
 
-- **applicationId**. An attribute of a capability or capability set that identifies the platform for a FOLIO application.
-- **Application**. See **applicationId**. For all Lists capabilities and capability sets, the **Application** is *app-fqm*. 
-- **Authorization role**. See **User roles** below.
-- **Capabilities**. Ability assigned to a user to perform an action in a FOLIO application.  
-- **Capability Sets**. A set of individual capabilities.
+
 - **Field**: The identifier used to query records.
 - **FQM**: FOLIO Query Machine. The query functionality in FOLIO.
 - **Operator**: The function applied in a query to match records by selected field and inputted value.
-- **permissionDisplayName (OKAPI)**. The permission set name displayed in the Okapi platform (pre-Sunflower release).
 - **Query**: The search string used to generate a list that includes a field, operator, and value.
 - **Record set**: The set (or list) of records retrieved through a query.
 -  **Resource (EUREKA)**. An operation that can be performed in a FOLIO application.
 - **Source**: The FOLIO account used to create and save a list.
 - **Type (Settings)**. Capabilities that allow the user to manage FOLIO configurations administratively. For all Lists capabilities and capability sets, the Type is *settings*. 
--  **User role.** Also known as **Authorization role**. Comprised of capabilities or capability sets, allows a user to perform role-based actions in a FOLIO application.
 - **Value**: The text and/or number(s) input to query records with a selected field and selected operator.
 
 
@@ -74,26 +68,77 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 **Record types** supported in the Lists app include:
 
+- [Authority](#authority)
 - [Budgets](#budgets)
+- [Fee/Fine accounts with users](#feefine-accounts-with-users)
 - [Fund with ledger](#fund-with-ledger)
 - [Holdings](#holdings)
 - [Instances](#instances)
+- [Instances with MARC bibliographic](#instances-with-marc-bibliographic)
 - [Invoice lines](#invoice-lines)
 - [Invoices](#invoices)
 - [Items](#items)
 - [Loans](#loans)
+- [Lost items requiring actual cost](#lost-items-requiring-actual-cost)
+- [Order invoice analysis](#order-invoice-analysis)
 - [Organizations](#organizations)
 - [Purchase order lines](#purchase-order-lines)
 - [Purchase order lines with titles](#purchase-order-lines-with-titles)
 - [Purchase orders](#purchase-orders)
+- [Receiving pieces](#receiving-pieces)
+- [Receiving titles](#receiving-titles)
 - [Transactions](#transactions)
 - [Users](#users)
+- [Users with fees/fines, loans](#users-with-feesfines-loans)
+- [Users with manual blocks](#users-with-manual-blocks)
+- [Users with open transactions](#users-with-open-transactions)
+- [Voucher lines](#voucher-lines)
 - [Voucher lines with fund](#voucher-lines-with-fund)
 - [Voucher lines with invoice, fund, organization](#voucher-lines-with-invoice-fund-organization)
 - [Vouchers](#vouchers)
 
-**Custom fields** for User records, if configured, are not available for building a query, but are available for displaying as column headings in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields).
 
+### Authority
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? |
+| :----- | :-----: | :-----: | 
+| *Authority - Created date* | YES | YES |
+| *Authority - Heading* | YES | YES |
+| *Authority - Heading type* | YES | YES |
+| *Authority - Identifiers* | NO | YES |
+| *Authority - Identifier value* | YES | YES |
+| *Authority - Identifier type* | YES | YES |
+| *Authority - Natural ID* | YES | YES |
+| *Authority - Notes* | NO | YES |
+| *Authority - Notes — Note type* | YES | YES |
+| *Authority - Notes — Note* | YES | YES |
+| *Authority - See also from references* | YES | YES |
+| *Authority - See also from reference — Tracing* | YES | YES |
+| *Authority - See also from reference — Tracing type* | YES | YES |
+| *Authority - See also from reference — Relationship type* | YES | YES |
+| *Authority - Authority — See from references* | NO | YES |
+| *Authority - See from reference — Tracing* | YES | YES |
+| *Authority - See from reference — Tracing type* | YES | YES |
+| *Authority - Source* | YES | YES |
+| *Authority - Subject heading code* | YES | YES |
+| *Authority - Updated date* | YES | YES |
+| *Authority - UUID* | YES | YES |
+| *Source file - Name* | YES | YES |
+| *Created by user - Email* | YES | YES |
+| *Created by user - Last name, first name* | YES | YES |
+| *Created by user - Username* | YES | YES |
+| *Updated by user - Email* | YES | YES |
+| *Updated by user - Last name, first name* | YES | YES |
+| *Updated by user - Username* | YES | YES |
+| *MARC Authority - Created date* | YES | YES |
+| *MARC Authority - External HRID* | YES | YES |
+| *MARC Authority - Generation* | YES | YES |
+| *MARC Authority - Leader record status* | YES | YES |
+| *MARC Authority - MARC jsonb* | NO | YES |
+| *MARC Authority - Matched UUID* | YES | YES |
+| *MARC Authority - Order* | YES | YES |
+| *MARC Authority - State* | YES | YES |
+| *MARC Authority - Updated date* | YES | YES |
 
 ### Budgets
 
@@ -165,6 +210,63 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Fund - Ledger - Updated date* | YES | YES |
 | *Fund - Ledger - UUID* | YES | YES |
 | *Fund - Ledger - Version* | YES | YES |
+
+### Fee/Fine accounts with users
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? |
+| :----- | :-----: | :-----: | 
+| *Fee/Fine accounts - Amount* | YES | YES |
+| *Fee/Fine accounts - Barcode* | YES | YES |
+| *Fee/Fine accounts - Created at* | YES | YES |
+| *Fee/Fine accounts - Due date* | YES | YES |
+| *Fee/Fine accounts - Fee/fine owner* | YES | YES |
+| *Fee/Fine accounts - Fee/fine type* | YES | YES |
+| *Fee/Fine accounts - Location* | YES | YES |
+| *Fee/Fine accounts - Material type* | YES | YES |
+| *Fee/Fine accounts - Payment status name* | YES | YES |
+| *Fee/Fine accounts - Remaining* | YES | YES |
+| *Fee/Fine accounts - Returned date* | YES | YES |
+| *Fee/Fine accounts - Status name* | YES | YES |
+| *Fee/Fine accounts - Updated at* | YES | YES |
+| *Fee/Fine accounts - User UUID* | YES | YES |
+| *Fee/Fine accounts - UUID* | YES | YES |
+| *User - Active* | YES | YES |
+| *User - Address* | NO | YES |
+| *User - Address — Primary address* | YES | YES |
+| *User - Address — City* | YES | YES |
+| *User - User — Address — Region* | YES | YES |
+| *User - User — Address — Postal code* | YES | YES |
+| *User - User — Address — Line 1* | YES | YES |
+| *User - User — Address — Line 2* | YES | YES |
+| *User - User — Address — Country* | YES | YES |
+| *User - User — Address — Type* | YES | YES |
+| *User - Barcode* | YES | YES |
+| *User - Created by user UUID* | YES | YES |
+| *User - Date of birth* | YES | YES |
+| *User - Department names* | YES | YES |
+| *User - Department UUIDs* | YES | YES |
+| *User - Email* | YES | YES |
+| *User - Enrollment date* | YES | YES |
+| *User - Expiration date* | YES | YES |
+| *User - External system ID* | YES | YES |
+| *User - First name* | YES | YES |
+| *User - Last name* | YES | YES |
+| *User - Last name, first name* | YES | YES |
+| *User - Middle name* | YES | YES |
+| *User - Mobile phone* | YES | YES |
+| *User - originalTenantId* | YES | YES |
+| *User - Phone* | YES | YES |
+| *User - Preferred contact type* | YES | YES |
+| *User - Preferred first name* | YES | YES |
+| *User - Pronouns* | YES | YES |
+| *User - Tags* | YES | YES |
+| *User - Type* | YES | YES |
+| *User - Updated by user UUID* | YES | YES |
+| *User - User created date* | YES | YES |
+| *User - User updated date* | YES | YES |
+| *User - User UUID* | YES | YES |
+| *User - Username* | YES | YES |
+| *User - Patron group — Name* | YES | YES |
 
 ### Fund with ledger
 
@@ -284,6 +386,92 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Instance status - Code* | YES | YES |
 | *Instance status - Term* | YES | YES |
 
+### Instances with MARC bibliographic
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: |
+| *Instance — Administrative notes* | YES | YES |
+| *Instance — Affiliation name* | YES | YES |
+| *Instance — Alternative titles* | YES | YES |
+| *Instance — Alternative titles — Alternative title* | YES | YES |
+| *Instance — Alternative titles — Alternative title type* | YES | YES |
+| *Instance — Cataloged date* | YES | YES |
+| *Instance — Classifications* | YES | YES |
+| *Instance — Classifications — Classification* | YES | YES |
+| *Instance — Classifications — Classification identifier type* | YES | YES |
+| *Instance — Contributors* | YES | YES |
+| *Instance — Contributors — Primary* | YES | YES |
+| *Instance — Contributors — Name* | YES | YES |
+| *Instance — Contributors — Type, free text* | YES | YES |
+| *Instance — Contributors — Name type* | YES | YES |
+| *Instance — Contributors — Type* | YES | YES |
+| *Instance — Created date* | YES | YES |
+| *Instance — Date 1* | YES | YES |
+| *Instance — Date 2* | YES | YES |
+| *Instance — Editions* | YES | YES |
+| *Instance — Electronic access* | YES | YES |
+| *Instance — Electronic access — URI* | YES | YES |
+| *Instance — Electronic access — Link text* | YES | YES |
+| *Instance — Electronic access — Material specified* | YES | YES |
+| *Instance — Electronic access — URL public note* | YES | YES |
+| *Instance — Electronic access — URL relationship* | YES | YES |
+| *Instance — Flag for deletion* | YES | YES |
+| *Instance — Format names* | YES | YES |
+| *Instance — Identifiers* | YES | YES |
+| *Instance — Identifiers — Identifier* | YES | YES |
+| *Instance — Identifiers — Identifier type* | YES | YES |
+| *Instance — Index title* | YES | YES |
+| *Instance — Instance format UUIDs* | YES | YES |
+| *Instance — Instance HRID* | YES | YES |
+| *Instance — Instance UUID* | YES | YES |
+| *Instance — Languages* | YES | YES |
+| *Instance — Mode of issuance* | YES | YES |
+| *Instance — Nature of content* | YES | YES |
+| *Instance — Notes* | YES | YES |
+| *Instance — Notes — Staff only* | YES | YES |
+| *Instance — Notes — Note* | YES | YES |
+| *Instance — Notes — Note type* | YES | YES |
+| *Instance — Physical descriptions* | YES | YES |
+| *Instance — Previously held* | YES | YES |
+| *Instance — Publication frequency* | YES | YES |
+| *Instance — Publication range* | YES | YES |
+| *Instance — Publications* | NO | YES |
+| *Instance — Publications — Publisher* | YES | YES |
+| *Instance — Publications — Publisher role* | YES | YES |
+| *Instance — Publications — Place of publication* | YES | YES |
+| *Instance — Publications — Publication date* | YES | YES |
+| *Instance — Record version* | YES | YES |
+| *Instance — Resource title* | YES | YES |
+| *Instance — Resource type* | YES | YES |
+| *Instance — Series* | YES | YES |
+| *Instance — Shared* | YES | YES |
+| *Instance — Source* | YES | YES |
+| *Instance — Staff suppress* | YES | YES |
+| *Instance — Statistical code UUIDs* | YES | YES |
+| *Instance — Statistical codes* | YES | YES |
+| *Instance — Subjects* | YES | YES |
+| *Instance — Subjects — Subject headings* | YES | YES |
+| *Instance — Subjects — Subject source* | YES | YES |
+| *Instance — Subjects — Subject type* | YES | YES |
+| *Instance — Suppress from discovery* | YES | YES |
+| *Instance — Tags* | YES | YES |
+| *Instance — Tenant ID* | YES | YES |
+| *Instance — Updated date* | YES | YES |
+| *MARC bibliographic — Created date* | YES | YES |
+| *MARC bibliographic — External HRID* | YES | YES |
+| *MARC bibliographic — External HRID* | YES | YES |
+| *MARC bibliographic — Leader record status* | YES | YES |
+| *MARC bibliographic — MARC jsonb* | YES | YES |
+| *MARC bibliographic — Matched UUID* | YES | YES |
+| *MARC bibliographic — Order* | YES | YES |
+| *MARC bibliographic — State* | YES | YES |
+| *MARC bibliographic — Updated date* | YES | YES |
+| *MARC created by — Email* | YES | YES |
+| *MARC created by — Last name, first name* | YES | YES |
+| *MARC created by — Username* | YES | YES |
+| *MARC updated by — Email* | YES | YES |
+| *MARC updated by — Last name, first name* | YES | YES |
+| *MARC updated by — Username* | YES | YES |
 
 ### Invoice lines
 
@@ -632,6 +820,311 @@ In the Lists app, the **Fields** available for building a query and displaying a
 
 **Custom fields** for User records, if configured, are available for building a Loans query in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
 
+### Lost items requiring actual cost
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: |
+| *Actual cost — Additional info for patron* | YES | YES |
+| *Actual cost — Additional info for staff* | YES | YES |
+| *Actual cost — Created at* | YES | YES |
+| *Actual cost — Expiration date* | YES | YES |
+| *Actual cost — Fee fine account UUID* | YES | YES |
+| *Actual cost — Fee fine billed amount* | YES | YES |
+| *Actual cost — Fee fine owner* | YES | YES |
+| *Actual cost — Fee fine type* | YES | YES |
+| *Actual cost — Instance contributors* | YES | YES |
+| *Actual cost — Instance contributors name* | YES | YES |
+| *Actual cost — Instance identifiers* | YES | YES |
+| *Actual cost — Instance identifiers type UUID* | YES | YES |
+| *Actual cost — Instance identifiers value* | YES | YES |
+| *Actual cost — Instance identifiers type name* | YES | YES |
+| *Actual cost — Instance title* | YES | YES |
+| *Actual cost — Instance UUID* | YES | YES |
+| *Actual cost — Item barcode* | YES | YES |
+| *Actual cost — Item effective location* | YES | YES |
+| *Actual cost — Item loan type* | YES | YES |
+| *Actual cost — Item material type* | YES | YES |
+| *Actual cost — Item permanent location* | YES | YES |
+| Actual cost — Item UUID** | YES | YES |
+| *Actual cost — Loan UUID* | YES | YES |
+| *Actual cost — Loss date* | YES | YES |
+| *Actual cost — Loss type* | YES | YES |
+| *Actual cost — Status* | YES | YES |
+| *Actual cost — Updated at* | YES | YES |
+| *Actual cost — User barcode* | YES | YES |
+| *Actual cost — User first name* | YES | YES |
+| *Actual cost — User last name* | YES | YES |
+| *Actual cost — User middle name* | YES | YES |
+| *Actual cost — User patron group* | YES | YES |
+| *Actual cost — User UUID* | YES | YES |
+| *Actual cost — UUID* | YES | YES |
+| *User — Active* | YES | YES |
+| *User — Barcode* | YES | YES |
+| *User — Department names* | YES | YES |
+| *User — Department UUIDs* | YES | YES |
+| *User — Email* | YES | YES |
+| *User — Expiration date* | YES | YES |
+| *User — Last name, first name* | YES | YES |
+| *User — originalTenantId* | YES | YES |
+| *User — Pronouns* | YES | YES |
+| *User — Tags* | YES | YES |
+| *User — Type* | YES | YES |
+| *User — User UUID* | YES | YES |
+| *Actual cost — Created by — Email* | YES | YES |
+| *Actual cost — Created by — Last name, first name* | YES | YES |
+| *Actual cost — Created by — Username* | YES | YES |
+| *Actual cost — Updated by — Email* | YES | YES |
+| *Actual cost — Updated by — Last name, first name* | YES | YES |
+| *Actual cost — Updated by — Username* | YES | YES |
+
+### Order invoice analysis
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: |
+| *PO — Related fiscal years* | YES | YES |
+| *PO — Acquisition unit names* | YES | YES |
+| *PO — Acquisition unit UUIDs* | YES | YES |
+| *PO — Approved* | YES | YES |
+| *PO — Close reason* | YES | YES |
+| *PO — Created at* | YES | YES |
+| *PO — Date ordered* | YES | YES |
+| *PO — External order number* | YES | YES |
+| *PO — Order type* | YES | YES |
+| *PO — PO number* | YES | YES |
+| *PO — Re-encumber* | YES | YES |
+| *PO — Tags* | YES | YES |
+| *PO — Updated at* | YES | YES |
+| *PO — UUID* | YES | YES |
+| *PO — Workflow status* | YES | YES |
+| *PO line — Acquisition method* | YES | YES |
+| *PO line — Agreement UUID* | YES | YES |
+| *PO line — Cost currency* | YES | YES |
+| *PO line — Cost exchange rate* | YES | YES |
+| *PO line — Cost PO line estimated price* | YES | YES |
+| *PO line — Created at* | YES | YES |
+| *PO line — Description* | YES | YES |
+| *PO line — Details receiving note* | YES | YES |
+| *PO line — Donor* | YES | YES |
+| *PO line — E-resource create inventory* | YES | YES |
+| *PO line — E-resource expected activation* | YES | YES |
+| *PO line — E-resource is activated* | YES | YES |
+| *PO line — E-resource is trial* | YES | YES |
+| *PO line — E-resource resource url* | YES | YES |
+| *PO line — Fund distribution* | YES | YES |
+| *PO line — Fund distribution — Encumbrance UUID* | YES | YES |
+| *PO line — Fund distribution — Value* | YES | YES |
+| *PO line — Fund distribution — Fund* | YES | YES |
+| *PO line — Fund distribution — Expense class* | YES | YES |
+| *PO line — Fund distribution — Distribution type* | YES | YES |
+| *PO line — Fund distribution — Code* | YES | YES |
+| *PO line — Is rush* | YES | YES |
+| *PO line — Locations* | YES | YES |
+| *PO line — Locations — Quantity electronic* | YES | YES |
+| *PO line — Locations — Quantity physical* | YES | YES |
+| *PO line — Locations — Name* | YES | YES |
+| *PO line — Locations — Code* | YES | YES |
+| *PO line — Locations — Affiliation* | YES | YES |
+| *PO line — Membership* | YES | YES |
+| *PO line — Order format* | YES | YES |
+| *PO line — Payment status* | YES | YES |
+| *PO line — Physical expected receipt date* | YES | YES |
+| *PO line — PO line number* | YES | YES |
+| *PO line — Publication date* | YES | YES |
+| *PO line — Publisher* | YES | YES |
+| *PO line — Receipt date* | YES | YES |
+| *PO line — Receipt status* | YES | YES |
+| *PO line — Selector* | YES | YES |
+| *PO line — Source* | YES | YES |
+| *PO line — Tags* | YES | YES |
+| *PO line — Title or package* | YES | YES |
+| *PO line — Updated at* | YES | YES |
+| *PO line — UUID* | YES | YES |
+| *Instance — Administrative notes* | YES | YES |
+| *Instance — Affiliation name* | YES | YES |
+| *Instance — Alternative titles* | YES | YES |
+| *Instance — Alternative titles — Alternative title* | YES | YES |
+| *Instance — Alternative titles — Alternative title type* | YES | YES |
+| *Instance — Cataloged date* | YES | YES |
+| *Instance — Classifications* | YES | YES |
+| *Instance — Classifications — Classification* | YES | YES |
+| *Instance — Classifications — Classification identifier type* | YES | YES |
+| *Instance — Contributors* | YES | YES |
+| *Instance — Contributors — Primary* | YES | YES |
+| *Instance — Contributors — Name* | YES | YES |
+| *Instance — Contributors — Type, free text* | YES | YES |
+| *Instance — Contributors — Name type* | YES | YES |
+| *Instance — Contributors — Type* | YES | YES |
+| *Instance — Created date* | YES | YES |
+| *Instance — Date 1* | YES | YES |
+| *Instance — Date 2* | YES | YES |
+| *Instance — Editions* | YES | YES |
+| *Instance — Electronic access* | YES | YES |
+| *Instance — Electronic access — URI* | YES | YES |
+| *Instance — Electronic access — Link text* | YES | YES |
+| *Instance — Electronic access — Material specified* | YES | YES |
+| *Instance — Electronic access — URL public note* | YES | YES |
+| *Instance — Electronic access — URL relationship* | YES | YES |
+| *Instance — Flag for deletion* | YES | YES |
+| *Instance — Format names* | YES | YES |
+| *Instance — Identifiers* | NO | YES |
+| *Instance — Identifiers — Identifier* | YES | YES |
+| *Instance — Identifiers — Identifier type* | YES | YES |
+| *Instance — Index title* | YES | YES |
+| *Instance — Instance format UUIDs* | NO | YES |
+| *Instance — Instance HRID* | YES | YES |
+| *Instance — Instance source URI* | YES | YES |
+| *Instance — Instance UUID* | YES | YES |
+| *Instance — Languages* | YES | YES |
+| *Instance — Mode of issuance* | YES | YES |
+| *Instance — Nature of content* | YES | YES |
+| *Instance — Notes* | YES | YES |
+| *Instance — Notes — Staff only* | YES | YES |
+| *Instance — Notes — Note* | YES | YES |
+| *Instance — Notes — Note type* | YES | YES |
+| *Instance — Physical descriptions* | YES | YES |
+| *Instance — Previously held* | YES | YES |
+| *Instance — Publication frequency* | YES | YES |
+| *Instance — Publication range* | YES | YES |
+| *Instance — Publications* | YES | YES |
+| *Instance — Publications — Publisher* | YES | YES |
+| *Instance — Publications — Publisher role* | YES | YES |
+| *Instance — Publications — Place of publication* | YES | YES |
+| *Instance — Publications — Publication date* | YES | YES |
+| *Instance — Record version* | YES | YES |
+| *Instance — Resource title* | YES | YES |
+| *Instance — Resource type* | YES | YES |
+| *Instance — Series* | YES | YES |
+| *Instance — Shared* | YES | YES |
+| *Instance — Source* | YES | YES |
+| *Instance — Staff suppress* | YES | YES |
+| *Instance — Statistical code UUIDs* | YES | YES |
+| *Instance — Statistical codes* | YES | YES |
+| *Instance — Subjects* | YES | YES |
+| *Instance — Subjects — Subject headings* | YES | YES |
+| *Instance — Subjects — Subject source* | YES | YES |
+| *Instance — Subjects — Subject type* | YES | YES |
+| *Instance — Suppress from discovery* | YES | YES |
+| *Instance — Tags* | YES | YES |
+| *Instance — Tenant ID* | YES | YES |
+| *Instance — Updated date* | YES | YES |
+| *Invoice — Line — Fund distribution amount* | YES | YES |
+| *Invoice — Line — Fund distribution value* | YES | YES |
+| *Invoice — Line — Account number* | YES | YES |
+| *Invoice — Line — Accounting code* | YES | YES |
+| *Invoice — Line — Comment* | YES | YES |
+| *Invoice — Line — Description* | YES | YES |
+| *Invoice — Line — Invoice line number* | YES | YES |
+| *Invoice — Line — Invoice number* | YES | YES |
+| *Invoice — Line — Po line number* | YES | YES |
+| *Invoice — Line — Quantity* | YES | YES |
+| *Invoice — Line — Reference numbers* | YES | YES |
+| *Invoice — Line — Vendor reference number* | YES | YES |
+| *Invoice — Line — Vendor reference type* | YES | YES |
+| *Invoice — Line — Release encumbrance* | YES | YES |
+| *Invoice — Line — Status* | YES | YES |
+| *Invoice — Line — Sub-total* | YES | YES |
+| *Invoice — Line — Subscription end* | YES | YES |
+| *Invoice — Line — Subscription info* | YES | YES |
+| *Invoice — Line — Subscription start* | YES | YES |
+| *Invoice — Line — Tags* | YES | YES |
+| *Invoice — Line — Total* | YES | YES |
+| *Invoice — Line — Total adjustments* | YES | YES |
+| *Invoice — Line — Updated date* | YES | YES |
+| *Invoice — Line — UUID* | YES | YES |
+| *Invoice — Account number* | YES | YES |
+| *Invoice — Accounting code* | YES | YES |
+| *Invoice — Acquisition unit names* | YES | YES |
+| *Invoice — Approved by name* | YES | YES |
+| *Invoice — Approved date* | YES | YES |
+| *Invoice — Batch group* | YES | YES |
+| *Invoice — Check subscription overlap* | YES | YES |
+| *Invoice — Created date* | YES | YES |
+| *Invoice — Currency* | YES | YES |
+| *Invoice — Enclosure needed* | YES | YES |
+| *Invoice — Exchange rate* | YES | YES |
+| *Invoice — Export to accounting* | YES | YES |
+| *Invoice — Fiscal year* | YES | YES |
+| *Invoice — Folio invoice number* | YES | YES |
+| *	Invoice — Invoice date* | YES | YES |
+| *Invoice — Note* | YES | YES |
+| *Invoice — Payment date* | YES | YES |
+| *Invoice — Payment due* | YES | YES |
+| *Invoice — Payment method* | YES | YES |
+| *Invoice — Source* | YES | YES |
+| *Invoice — Status* | YES | YES |
+| *Invoice — Sub-total* | YES | YES |
+| *Invoice — Tags* | YES | YES |
+| *Invoice — Terms* | YES | YES |
+| *Invoice — Total adjustments* | YES | YES |
+| *Invoice — Total calculated amount* | YES | YES |
+| *Invoice — Updated date* | YES | YES |
+| *Invoice — UUID* | YES | YES |
+| *Invoice — Vendor invoice number* | YES | YES |
+| *Invoice — Vendor name* | YES | YES |
+| *Invoice — Voucher number* | YES | YES |
+| *Bill to — Address* | YES | YES |
+| *Bill to — Name* | YES | YES |
+| *Organization — Code* | YES | YES |
+| *Organization — EDI vendor code* | YES | YES |
+| *Organization — EDI vendor type* | YES | YES |
+| *Organization — Is donor* | YES | YES |
+| *Organization — Is vendor* | YES | YES |
+| *Organization — Name* | YES | YES |
+| *Organization — Status* | YES | YES |
+| *Organization — Tags* | YES | YES |
+| *Organization — UUID* | YES | YES |
+| *Fiscal year — Acquisition unit names* | YES | YES |
+| *Fiscal year — Code* | YES | YES |
+| *Fiscal year — Created date* | YES | YES |
+| *Fiscal year — Currency* | YES | YES |
+| *Fiscal year — Description* | YES | YES |
+| *Fiscal year — Name* | YES | YES |
+| *Fiscal year — Period begin date* | YES | YES |
+| *Fiscal year — Period end date* | YES | YES |
+| *Fiscal year — Series* | YES | YES |
+| *Fiscal year — Updated date* | YES | YES |
+| *Fiscal year — UUID* | YES | YES |
+| *Fiscal year — Version* | YES | YES |
+| *Fund — Acquisition unit names* | YES | YES |
+| *Fund — Code* | YES | YES |
+| *Fund — Created date* | YES | YES |
+| *Fund — Description* | YES | YES |
+| *Fund — Donor organizations* | YES | YES |
+| *Fund — External account number* | YES | YES |
+| *Fund — Locations* | YES | YES |
+| *Fund — Location UUID* | YES | YES |
+| *Fund — Tenant ID* | YES | YES |
+| *Fund — Location name* | YES | YES |
+| *Fund — Name* | YES | YES |
+| *Fund — Restrict by locations* | YES | YES |
+| *Fund — Status* | YES | YES |
+| *Fund — Tags* | YES | YES |
+| *Fund — Transfer from* | YES | YES |
+| *Fund — Transfer to* | YES | YES |
+| *Fund — Updated date* | YES | YES |
+| *Fund — UUID* | YES | YES |
+| *Fund — Version* | YES | YES |
+| *Fund type — Type* | YES | YES |
+| *Expense class — Code* | YES | YES |
+| *Expense class — Created date* | YES | YES |
+| *Expense class — External account number extension* | YES | YES |
+| *Expense class — Name* | YES | YES |
+| *Expense class — Updated date* | YES | YES |
+| *Expense class — UUID* | YES | YES |
+| *Expense class — Version* | YES | YES |
+| *PO created by — Email* | YES | YES |
+| *PO created by — Last name, first name* | YES | YES |
+| *PO created by — Username* | YES | YES |
+| *PO updated by — Email* | YES | YES |
+| *PO updated by — Last name, first name* | YES | YES |
+| *PO updated by — Username* | YES | YES |
+| *POL created by — Email* | YES | YES |
+| *POL created by — Last name, first name* | YES | YES |
+| *POL created by — Username* | YES | YES |
+| *POL updated by — Email* | YES | YES |
+| *POL updated by — Last name, first name* | YES | YES |
+| *POL updated by — Username* | YES | YES |
+
 ### Organizations
 
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
@@ -878,6 +1371,392 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *Updated at* | YES | YES | 
 | *UUID* | YES | YES | 
 | *Workflow status* | YES | YES | 
+
+### Receiving pieces
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *Pieces — Accession number* | YES | YES |
+| *Pieces — Barcode* | YES | YES |
+| *Pieces — Bind item tenant ID* | YES | YES |
+| *Pieces — Call number* | YES | YES |
+| *Pieces — Chronology* | YES | YES |
+| *Pieces — Claiming interval* | YES | YES |
+| *Pieces — Comment* | YES | YES |
+| *Pieces — Copy number* | YES | YES |
+| *Pieces — Created at* | YES | YES |
+| *Pieces — Discovery suppress* | YES | YES |
+| *Pieces — Display on holding* | YES | YES |
+| *Pieces — Display summary* | YES | YES |
+| *Pieces — Display to public* | YES | YES |
+| *Pieces — Enumeration* | YES | YES |
+| *Pieces — Expected receipt date* | YES | YES |
+| *Pieces — External note* | YES | YES |
+| *Pieces — Format* | YES | YES |
+| *Pieces — Internal note* | YES | YES |
+| *Pieces — Is bound* | YES | YES |
+| *Pieces — Received date* | YES | YES |
+| *Pieces — Receiving status* | YES | YES |
+| *Pieces — Receiving tenant ID* | YES | YES |
+| *Pieces — Sequence number* | YES | YES |
+| *Pieces — Status updated date* | YES | YES |
+| *Pieces — Supplement* | YES | YES |
+| *Pieces — Updated at* | YES | YES |
+| *Pieces — UUID* | YES | YES |
+| *Item — Accession number* | YES | YES |
+| *Item — Administrative notes* | YES | YES |
+| *Item — Affiliation name* | YES | YES |
+| *Item — Barcode* | YES | YES |
+| *Item — Check in notes* | YES | YES |
+| *Item — Check in notes — Note type* | YES | YES |
+| *Item — Check in notes — Staff only* | YES | YES |
+| *Item — Check in notes — Note* | YES | YES |
+| *Item — Check out notes* | YES | YES |
+| *Item — Check out notes — Note type* | YES | YES |
+| *Item — Check out notes — Staff only* | YES | YES |
+| *Item — Check out notes — Note* | YES | YES |
+| *Item — Chronology* | YES | YES |
+| *Item — Copy number* | YES | YES |
+| *Item — Created date* | YES | YES |
+| *Item — Description of pieces* | YES | YES |
+| *Item — Display summary* | YES | YES |
+| *Item — Effective call number* | YES | YES |
+| *Item — Effective shelving order* | YES | YES |
+| *Item — Effective shelving order* | YES | YES |
+| *Item — Electronic access — URI* | YES | YES |
+| *Item — Electronic access — Link text* | YES | YES |
+| *Item — Electronic access — Material specified* | YES | YES |
+| *Item — Electronic access — URL public note* | YES | YES |
+| *Item — Electronic access — URL relationship* | YES | YES |
+| *Item — Enumeration* | YES | YES |
+| *Item — Former identifiers* | YES | YES |
+| *Item — Item additional call numbers* | NO | YES |
+| *Item — Item additional call numbers — Call number* | YES | YES |
+| *Item — Item additional call numbers — Prefix* | YES | YES |
+| *Item — Item additional call numbers — Suffix* | YES | YES |
+| *Item — Item additional call numbers — Type* | YES | YES |
+| *Item — Item call number* | YES | YES |
+| *Item — Item call number prefix* | YES | YES |
+| *Item — Item call number suffix* | YES | YES |
+| *Item — Item damaged status* | YES | YES |
+| *Item — Item damaged status date* | YES | YES |
+| *Item — Item HRID* | YES | YES |
+| *Item — Item UUID* | YES | YES |
+| *Item — Last check in date time* | YES | YES |
+| *Item — Missing pieces* | YES | YES |
+| *Item — Missing pieces date* | YES | YES |
+| *Item — Notes* | YES | YES |
+| *Item — Notes — Staff only* | YES | YES |
+| *Item — Notes — Note* | YES | YES |
+| *Item — Notes — Note type* | YES | YES |
+| *Item — Number of missing pieces* | YES | YES |
+| *Item — Number of pieces* | YES | YES |
+| *Item — Purchase order line identifier* | YES | YES |
+| *Item — Sort order* | YES | YES |
+| *Item — Statistical codes* | YES | YES |
+| *Item — Status* | YES | YES |
+| *Item — Status date* | YES | YES |
+| *Item — Suppress from discovery* | YES | YES |
+| *Item — Tags* | YES | YES |
+| *Item — Tenant ID* | YES | YES |
+| *Item — Updated date* | YES | YES |
+| *Item — Version* | YES | YES |
+| *Item — Volume* | YES | YES |
+| *Item — Year, caption* | YES | YES |
+| *Location — Code* | YES | YES |
+| *Location — Name* | YES | YES |
+| *POL — Acquisition method* | YES | YES |
+| *POL — Agreement UUID* | YES | YES |
+| *POL — Cost currency* | YES | YES |
+| *POL — Cost exchange rate* | YES | YES |
+| *POL — Cost PO line estimated price* | YES | YES |
+| *POL — Created at* | YES | YES |
+| *POL — Description* | YES | YES |
+| *POL — Details receiving note* | YES | YES |
+| *POL — Donor* | YES | YES |
+| *POL — E-resource create inventory* | YES | YES |
+| *POL — E-resource expected activation* | YES | YES |
+| *POL — E-resource is activated* | YES | YES |
+| *POL — E-resource is trial* | YES | YES |
+| *POL — E-resource resource url* | YES | YES |
+| *POL — Fund distribution* | YES | YES |
+| *POL — Fund distribution — Encumbrance UUID* | YES | YES |
+| *POL — Fund distribution — Value* | YES | YES |
+| *POL — Fund distribution — Fund* | YES | YES |
+| *POL — Fund distribution — Expense class* | YES | YES |
+| *POL — Fund distribution — Distribution type* | YES | YES |
+| *POL — Fund distribution — Code* | YES | YES |
+| *POL — Is rush* | YES | YES |
+| *POL — Locations* | YES | YES |
+| *POL — Locations — Quantity electronic* | YES | YES |
+| *POL — Locations — Quantity physical* | YES | YES |
+| *POL — Locations — Name* | YES | YES |
+| *POL — Locations — Code* | YES | YES |
+| *POL — Locations — Affiliation* | YES | YES |
+| *POL — Membership* | YES | YES |
+| *POL — Order format* | YES | YES |
+| *POL — Payment status* | YES | YES |
+| *POL — Physical expected receipt date* | YES | YES |
+| *POL — PO line number* | YES | YES |
+| *POL — Publication date* | YES | YES |
+| *POL — Publisher* | YES | YES |
+| *POL — Receipt date* | YES | YES |
+| *POL — Receipt status* | YES | YES |
+| *POL — Selector* | YES | YES |
+| *POL — Source* | YES | YES |
+| *POL — Tags* | YES | YES |
+| *POL — Title or package* | YES | YES |
+| *POL — Updated at* | YES | YES |
+| *POL — UUID* | YES | YES |
+| *PO — Acquisition unit names* | YES | YES |
+| *PO — Acquisition unit UUIDs* | YES | YES |
+| *PO — Approved* | YES | YES |
+| *PO — Close reason* | YES | YES |
+| *PO — Created at* | YES | YES |
+| *PO — Date ordered* | YES | YES |
+| *PO — External order number* | YES | YES |
+| *PO — Order type* | YES | YES |
+| *PO — PO number* | YES | YES |
+| *PO — Re-encumber* | YES | YES |
+| *PO — Tags* | YES | YES |
+| *PO — Updated at* | YES | YES |
+| *PO — UUID* | YES | YES |
+| *PO — Workflow status* | YES | YES |
+| *Title — Acquisition unit* | YES | YES |
+| *Title — Claiming active* | YES | YES |
+| *Title — Claiming interval* | YES | YES |
+| *Title — Contributors* | YES | YES |
+| *Title — Contributors — Name* | YES | YES |
+| *Title — Created at* | YES | YES |
+| *Title — Edition* | YES | YES |
+| *Title — Expected receipt date* | YES | YES |
+| *Title — Is acknowledged* | YES | YES |
+| *Title — Next sequence number* | YES | YES |
+| *Title — Package name* | YES | YES |
+| *Title — PO line number* | YES | YES |
+| *Title — Product identifiers* | YES | YES |
+| *Title — Product identifiers — Product ID* | YES | YES |
+| *Title — Product identifiers — Qualifier* | YES | YES |
+| *Title — Product identifiers — Product ID type* | YES | YES |
+| *Title — Published date* | YES | YES |
+| *Title — Publisher* | YES | YES |
+| *Title — Receiving note* | YES | YES |
+| *Title — Subscription from* | YES | YES |
+| *Title — Subscription interval* | YES | YES |
+| *Title — Subscription to* | YES | YES |
+| *Title — Title* | YES | YES |
+| *Title — Updated at* | YES | YES |
+| *Title — UUID* | YES | YES |
+| *Holdings — Acquisition method* | YES | YES |
+| *Holdings — Acquisition order format* | YES | YES |
+| *Holdings — Acquisition receipt status* | YES | YES |
+| *Holdings — Administrative notes* | YES | YES |
+| *Holdings — Affiliation name* | YES | YES |
+| *Holdings — Call number* | YES | YES |
+| *Holdings — Call number prefix* | YES | YES |
+| *Holdings — Call number suffix* | YES | YES |
+| *Holdings — Call number type* | YES | YES |
+| *Holdings — Copy number* | YES | YES |
+| *Holdings — Created date* | YES | YES |
+| *Holdings — Digitization policy* | YES | YES |
+| *Holdings — Electronic access* | YES | YES |
+| *Holdings — Electronic access — URI* | YES | YES |
+| *Holdings — Electronic access — Link text* | YES | YES |
+| *Holdings — Electronic access — Material specified* | YES | YES |
+| *Holdings — Electronic access — URL public note* | YES | YES |
+| *Holdings — Electronic access — URL relationship* | YES | YES |
+| *Holdings — Former identifiers* | YES | YES |
+| *Holdings — Holdings additional call numbers* | YES | YES |
+| *Holdings — Holdings additional call numbers — Call number* | YES | YES |
+| *Holdings — Holdings additional call numbers — Prefix* | YES | YES |
+| *Holdings — Holdings additional call numbers — Suffix* | YES | YES |
+| *Holdings — Holdings additional call numbers — Type* | YES | YES |
+| *Holdings — HRID* | YES | YES |
+| *Holdings — Instance UUID* | YES | YES |
+| *Holdings — Notes* | NO | YES |
+| *Holdings — Notes — Staff only* | YES | YES |
+| *Holdings — Notes — Note* | YES | YES |
+| *Holdings — Notes — Note type* | YES | YES |
+| *Holdings — Number of items* | YES | YES |
+| *Holdings — Receiving history* | YES | YES |
+| *Holdings — Receiving history — Public display* | YES | YES |
+| *Holdings — Receiving history — Enumeration* | YES | YES |
+| *Holdings — Receiving history — Chronology* | YES | YES |
+| *Holdings — Record version* | YES | YES |
+| *Holdings — Retention policy* | YES | YES |
+| *Holdings — Shelving title* | YES | YES |
+| *Holdings — Statements* | NO | YES |
+| *Holdings — Statements — Statement* | YES | YES |
+| *Holdings — Statements — Statement public note* | YES | YES |
+| *Holdings — Statements — Statement staff note* | YES | YES |
+| *Holdings — Statements for indexes* | NO | YES |
+| *Holdings — Statements for indexes — Statement for indexes* | YES | YES |
+| *Holdings — Statements for indexes — Statement for indexes public note* | YES | YES |
+| *Holdings — Statements for indexes — Statement for indexes staff note* | YES | YES |
+| *Holdings — Statements for supplements* | NO | YES |
+| *Holdings — Statements for supplements — Statement for supplement* | YES | YES |
+| *Holdings — Statements for supplements — Statement for supplement public note* | YES | YES |
+| *Holdings — Statements for supplements — Statement for supplement staff note* | YES | YES |
+| *Holdings — Statistical code UUIDs* | YES | YES |
+| *Holdings — Statistical codes* | YES | YES |
+| *Holdings — Suppress from discovery* | YES | YES |
+| *Holdings — Tags* | YES | YES |
+| *Holdings — Tenant ID* | YES | YES |
+| *Holdings — Updated date* | YES | YES |
+| *Holdings — UUID* | YES | YES |
+| *Holdings permanent location — Code* | YES | YES |
+| *Holdings permanent location — Name* | YES | YES |
+| *Created by — Email* | YES | YES |
+| *Created by — Last name, first name* | YES | YES |
+| *Created by — Username* | YES | YES |
+| *Updated by — Email* | YES | YES |
+| *Updated by — Last name, first name* | YES | YES |
+| *Updated by — Username* | YES | YES |
+
+### Receiving titles
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *Title — Acquisition unit* | YES | YES |
+| *Title — Claiming active* | YES | YES |
+| *Title — Claiming interval* | YES | YES |
+| *Title — Contributors* | NO | YES |
+| *Title — Contributors — Name* | YES | YES |
+| *Title — Created at* | YES | YES |
+| *Title — Edition* | YES | YES |
+| *Title — Expected receipt date* | YES | YES |
+| *Title — Is acknowledged* | YES | YES |
+| *Title — Next sequence number* | YES | YES |
+| *Title — Package name* | YES | YES |
+| *Title — PO line number* | YES | YES |
+| *Title — Product identifiers* | YES | YES |
+| *Title — Product identifiers — Product ID* | YES | YES |
+| *Title — Product identifiers — Qualifier* | YES | YES |
+| *Title — Product identifiers — Product ID type* | YES | YES |
+| *Title — Published date* | YES | YES |
+| *Title — Publisher* | YES | YES |
+| *Title — Receiving note* | YES | YES |
+| *Title — Subscription from* | YES | YES |
+| *Title — Subscription interval* | YES | YES |
+| *Title — Subscription to* | YES | YES |
+| *Title — Title* | YES | YES |
+| *Title — Updated at* | YES | YES |
+| *Title — UUID* | YES | YES |
+| *POL — Acquisition method* | YES | YES |
+| *POL — Agreement UUID* | YES | YES |
+| *POL — Cost currency* | YES | YES |
+| *POL — Cost exchange rate* | YES | YES |
+| *POL — Cost PO line estimated price* | YES | YES |
+| *POL — Created at* | YES | YES |
+| *POL — Description* | YES | YES |
+| *POL — Details receiving note* | YES | YES |
+| *POL — Donor* | YES | YES |
+| *POL — E-resource create inventory* | YES | YES |
+| *POL — E-resource expected activation* | YES | YES |
+| *POL — E-resource is activated* | YES | YES |
+| *POL — E-resource is trial* | YES | YES |
+| *POL — E-resource resource url* | YES | YES |
+| *POL — Fund distribution* | YES | YES |
+| *POL — Fund distribution — Encumbrance UUID* | YES | YES |
+| *POL — Fund distribution — Value* | YES | YES |
+| *POL — Fund distribution — Fund* | YES | YES |
+| *POL — Fund distribution — Expense class* | YES | YES |
+| *POL — Fund distribution — Distribution type* | YES | YES |
+| *POL — Fund distribution — Code* | YES | YES |
+| *POL — Is rush* | YES | YES |
+| *POL — Locations* | NO | YES |
+| *POL — Locations — Quantity electronic* | YES | YES |
+| *POL — Locations — Quantity physical* | YES | YES |
+| *POL — Locations — Name* | YES | YES |
+| *POL — Locations — Code* | YES | YES |
+| *POL — Locations — Affiliation* | YES | YES |
+| *POL — Membership* | YES | YES |
+| *POL — Order format* | YES | YES |
+| *POL — Payment status* | YES | YES |
+| *POL — Physical expected receipt date* | YES | YES |
+| *POL — PO line number* | YES | YES |
+| *POL — Publication date* | YES | YES |
+| *POL — Publisher* | YES | YES |
+| *POL — Receipt date* | YES | YES |
+| *POL — Receipt status* | YES | YES |
+| *POL — Selector* | YES | YES |
+| *POL — Source* | YES | YES |
+| *POL — Tags* | YES | YES |
+| *POL — Title or package* | YES | YES |
+| *POL — Updated at* | YES | YES |
+| *POL — UUID* | YES | YES |
+| *Instance — Administrative notes* | YES | YES |
+| *Instance — Affiliation name* | YES | YES |
+| *Instance — Alternative titles* | NO | YES |
+| *Instance — Alternative titles — Alternative title* | YES | YES |
+| *Instance — Alternative titles — Alternative title type* | YES | YES |
+| *Instance — Cataloged date* | YES | YES |
+| *Instance — Classifications* | YES | YES |
+| *Instance — Classifications — Classification* | YES | YES |
+| *Instance — Classifications — Classification identifier type* | YES | YES |
+| *Instance — Contributors* | YES | YES |
+| *Instance — Contributors — Primary* | YES | YES |
+| *Instance — Contributors — Name* | YES | YES |
+| *Instance — Contributors — Type, free text* | YES | YES |
+| *Instance — Contributors — Name type* | YES | YES |
+| *Instance — Contributors — Type* | YES | YES |
+| *Instance — Created date* | YES | YES |
+| *Instance — Date 1* | YES | YES |
+| *Instance — Date 2* | YES | YES |
+| *Instance — Editions* | YES | YES |
+| *Instance — Electronic access* | YES | YES |
+| *Instance — Electronic access — URI* | YES | YES |
+| *Instance — Electronic access — Link text* | YES | YES |
+| *Instance — Electronic access — Material specified* | YES | YES |
+| *Instance — Electronic access — URL public note* | YES | YES |
+| *Instance — Electronic access — URL relationship* | YES | YES |
+| *Instance — Flag for deletion* | YES | YES |
+| *Instance — Format names* | YES | YES |
+| *Instance — Identifiers* | YES | YES |
+| *Instance — Identifiers — Identifier* | YES | YES |
+| *Instance — Identifiers — Identifier type* | YES | YES |
+| *Instance — Index title* | YES | YES |
+| *Instance — Instance format UUIDs* | YES | YES |
+| *Instance — Instance HRID* | YES | YES |
+| *Instance — Instance source URI* | YES | YES |
+| *Instance — Instance UUID* | YES | YES |
+| *Instance — Languages* | YES | YES |
+| *Instance — Mode of issuance* | YES | YES |
+| *Instance — Nature of content* | YES | YES |
+| *Instance — Notes* | YES | YES |
+| *Instance — Notes — Staff only* | YES | YES |
+| *Instance — Notes — Note* | YES | YES |
+| *Instance — Notes — Note type* | YES | YES |
+| *Instance — Physical descriptions* | YES | YES |
+| *Instance — Previously held* | YES | YES |
+| *Instance — Publication frequency* | YES | YES |
+| *Instance — Publication range* | YES | YES |
+| *Instance — Publications* | NO | YES |
+| *Instance — Publications — Publisher* | YES | YES |
+| *Instance — Publications — Publisher role* | YES | YES |
+| *Instance — Publications — Place of publication* | YES | YES |
+| *Instance — Publications — Publication date* | YES | YES |
+| *Instance — Record version* | YES | YES |
+| *Instance — Resource title* | YES | YES |
+| *Instance — Resource type* | YES | YES |
+| *Instance — Series* | YES | YES |
+| *Instance — Shared* | YES | YES |
+| *Instance — Source* | YES | YES |
+| *Instance — Staff suppress* | YES | YES |
+| *Instance — Statistical code UUIDs* | NO | YES |
+| *Instance — Statistical codes* | YES | YES |
+| *Instance — Subjects* | NO | YES |
+| *Instance — Subjects — Subject headings* | YES | YES |
+| *Instance — Subjects — Subject source* | YES | YES |
+| *Instance — Subjects — Subject type* | YES | YES |
+| *Instance — Suppress from discovery* | YES | YES |
+| *Instance — Tags* | YES | YES |
+| *Instance — Tenant ID* | YES | YES |
+| *Instance — Updated date* | YES | YES |
+| *Created by — Email* | YES | YES |
+| *Created by — Last name, first name* | YES | YES |
+| *Created by — Username* | YES | YES |
+| *Updated by — Email* | YES | YES |
+| *Updated by — Last name, first name* | YES | YES |
+| *Updated by — Username* | YES | YES |
 
 ### Transactions
 | *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
