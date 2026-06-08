@@ -89,7 +89,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 - [Receiving titles](#receiving-titles)
 - [Transactions](#transactions)
 - [Users](#users)
-- [Users with fees/fines, loans](#users-with-fees-fines-loans)
+- [Users with fees/fines, loans](#users-with-feesfines-loans)
 - [Users with manual blocks](#users-with-manual-blocks)
 - [Users with open transactions](#users-with-open-transactions)
 - [Voucher lines](#voucher-lines)
