@@ -74,7 +74,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 - [Fund with ledger](#fund-with-ledger)
 - [Holdings](#holdings)
 - [Instances](#instances)
-- [Instances with MARC bibliographic](#instances-with-MARC-bibliographic)
+- [Instances with MARC bibliographic](#instances-with-marc-bibliographic)
 - [Invoice lines](#invoice-lines)
 - [Invoices](#invoices)
 - [Items](#items)
