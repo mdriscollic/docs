@@ -19,7 +19,7 @@ For all Settings > Bulk Edit capabilities:
 - **Type** is *settings*.
 
 | Resource (EUREKA) | Action | 
-| :----- | :----- | :-----: | 
+| :----- | :-----: | 
 | *Settings Bulk-Edit Enabled* | view |
 | *UI-Bulk-Edit-Settings* | view |
 | *UI-Bulk-Edit-Settings* | create |
