@@ -468,7 +468,7 @@ A check in or check out note is required by default.
 
 ## Creating an instance record using the Import action in FOLIO
 
-Note: Import options are configured in [Settings \> Inventory \> Integrations]((../../settings/settings_inventory/settings_inventory/#settings--inventory--integrations). 
+Note: Import options are configured in [Settings \> Inventory \> Integrations](../../settings/settings_inventory/settings_inventory/#settings--inventory--integrations). 
 
 1.  In the default or middle pane, click **Actions > Import**.
 2.  In the **Single Record Import** dialog box, verify or select the External target (source) of the record to be imported.
@@ -537,7 +537,7 @@ The Location section contains information on the physical or electronic location
 -   **Call number prefix.** Prefix of the call number on the holdings level. For example, FIC.
 -   **Call number.** Call Number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the items physical position in a shelving sequence (e.g. K1 .M44). If your institution has [enabled the number generator for the Inventory app](../../settings/settings_inventory/settings_inventory/#settings--inventory--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the call number. For more information, see [Using Number generators within Apps](../../settings/settings_service_interaction/settings_service_interaction/#using-number-generators-within-apps).
 -   **Call number suffix.** Suffix of the call number on the holdings level. For example, the year (2001).
--   **Additional holdings call numbers.** Add additional call numbers with the option to change the additional call number with primary call number. 
+-   **Additional holdings call numbers.** Add additional call numbers with the option to change the additional call number to the primary call number. 
 
 #### Holdings details
 
@@ -693,7 +693,7 @@ The Item data section contains additional information on the item.
 -   **Call number prefix.** Prefix of the call number on the item level.
 -   **Call number.** Call number is an identifier assigned to an item, usually printed on a label attached to the item. The call number is used to determine the resource's physical position in a shelving sequence. For example, K1 .M44. If your institution has [enabled the number generator for the Inventory app](../../settings/settings_inventory/settings_inventory/#settings--inventory--number-generator-options) and your user has the applicable capabilities, you may use the number generator to generate the call number. For more information, see [Using Number generators within Apps](../../settings/settings_service_interaction/settings_service_interaction/#using-number-generators-within-apps).
 -   **Call number suffix.** Suffix of the call number on the item level.
--   **Additional item call numbers.** Add additional call numbers with the option to change the additional call number with primary call number. 
+-   **Additional item call numbers.** Add additional call numbers with the option to change the additional call number to the primary call number. 
 -   **Number of pieces.** Number of pieces. Used when an item is checked out or returned to verify that all parts are present (e.g. 7 CDs in a set).
 -   **Description of pieces.** Description of pieces. For example, 500 puzzle pieces.
 
