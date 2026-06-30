@@ -1,7 +1,7 @@
 ---
 title: "Settings > Export manager"
 linkTitle: "Export manager"
-date: 2026-06-29
+date: 2026-06-30
 weight: 110
 tags: ["subtopic"]   
 ---
@@ -22,7 +22,7 @@ All capabilities and capability sets listed below are part of the app-platform-c
 |**Settings (Export manager): Can view only settings.**| **UI-Export-Manager Settings** | settings | view | This capability set includes all capabilities needed to view job deletion intervals. |
 
 **Settings > Export manager > Jobs**
-Use this setting to define the interval (in days) after which jobs listed in the Export manager app should be deleted. The delete function is executed daily and unless otherwise specified in this table, records produced by jobs are deleted after 7 days, except for EDIFACT orders exports and claims, which are not subject to automatic deletion.
+Use this setting to define the interval (in days) after which jobs listed in the Export manager app should be deleted. The delete function is executed daily and unless otherwise specified in this table, records produced by jobs are deleted after 7 days, except for EDIFACT orders exports and claims, which have a default deletion interval of 730 days.
 
 The deletion interval may be adjusted for the following job types:
 * Authority control
