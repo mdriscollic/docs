@@ -1,7 +1,7 @@
 ---
 title: "Export manager"
 linkTitle: "Export manager"
-date: 2025-05-12
+date: 2026-06-30
 weight: 625
 ---
 
@@ -26,14 +26,13 @@ Since the export process is initiated in other FOLIO apps, not in the Export Man
 
 The Export manager app allows users to view export logs and reports initiated from the following apps or functions:
 
-*   Bulk edit
 *   Bursar
 *   Circulation log
 *   EDIFACT orders
 *   eHoldings
 *   MARC authority 
 
-Note: Records produced by jobs are deleted based on a hardcoded value: 14 days for bulk edit and 7 days for any other record type. EDIFACT orders exports and claims are not subject to automatic deletion.
+Note: The delete function is executed daily and unless otherwise specified in [Export manager settings](../settings/settings_export_manager/settings_export_manager.md), records produced by jobs are deleted after 7 days, except for EDIFACT orders exports and claims, which have a default deletion interval of 730 days.
 
 Note: MARC authority exports are limited to the [reports related to MARC authorities](../inventory/marcauthority/#reporting). If exporting MARC authority records, the export can be accessed in the Data export logs. For more information, see [Exporting MARC authority records](../inventory/marcauthority/#exporting-marc-authority-records).
 
@@ -90,7 +89,6 @@ To filter by **Job type**, select a filter:
 * **Bursar.** This export contains charges and/or refunds transferred to the bursar. Output format is .dat.
 * **Circulation log.** This export contains search results from the Circulation log. Output format is .csv.
 * **eHoldings.** This export contains package and title details from eHoldings. Output format is .csv.
-* **Bulk edit** This export contains downloaded information from Bulk edit. Output format is .csv.
 * **Orders (EDI)** This export may contain records exported from the Orders app in EDIFACT format or records submitted for claims via the Claiming app when the claiming integration file format is EDI. Output format is .edi.
 * **Orders (CSV)** This export contains records submitted for claims via the Claiming app when the claiming integration file format is CSV. Output format is .csv.
 
