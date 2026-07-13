@@ -1853,7 +1853,7 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *User - Preferred first name* | YES | YES |
 | *User - Pronouns* | YES | YES |
 | *User - Proxy for* | NO | YES |
-| *User - Tags tag list* | NO | YES |
+| *User - Tags* | NO | YES |
 | *User - Type* | YES | YES |
 | *User - Updated by user UUID* | YES | YES |
 | *User - Updated date* | YES | YES |
@@ -1863,6 +1863,254 @@ In the Lists app, the **Fields** available for building a query and displaying a
 | *User - Username* | YES | YES |
 
 **Custom fields** for User records, if configured, are available for building a Users query in the Lists app. To create custom fields in User records, see [Settings \> Users \> Custom fields](../settings/settings_users/settings_users/#settings--users--custom-fields). 
+
+### Users with fees/fines, loans
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *User - Active* | YES | YES |
+| *User - Address* | NO | YES |
+| *User - Barcode* | YES | YES |
+| *User - Created by user UUID* | YES | YES |
+| *User - Date of birth* | YES | YES |
+| *User - Department names* | YES | YES |
+| *User - Department UUIDs* | NO | YES |
+| *User - Email* | YES | YES |
+| *User - Enrollment date* | YES | YES |
+| *User - Expiration date* | YES | YES |
+| *User - External system ID* | YES | YES |
+| *User - First name* | YES | YES |
+| *User - Last name* | YES | YES |
+| *User - Last name, first name* | YES | YES |
+| *User - Middle name* | YES | YES |
+| *User - Mobile phone* | YES | YES |
+| *User - Phone* | YES | YES |
+| *User - Preferred contact type* | YES | YES |
+| *User - Preferred first name* | YES | YES |
+| *User - Pronouns* | YES | YES |
+| *User - Proxy for* | NO | YES |
+| *User - Tags* | NO | YES |
+| *User - Type* | YES | YES |
+| *User - Updated by user UUID* | YES | YES |
+| *User - Updated date* | YES | YES |
+| *User - User created date* | YES | YES |
+| *User - User updated date* | YES | YES |
+| *User - User UUID* | YES | YES |
+| *User — Patron group — Name* | YES | YES |
+| *Fee/Fine account — Amount* | YES | YES |
+| *Fee/Fine account — Barcode* | YES | YES |
+| *Fee/Fine account — Created at* | YES | YES |
+| *Fee/Fine account — Due date* | YES | YES |
+| *Fee/Fine account — Fee/fine owner* | YES | YES |
+| *Fee/Fine account — Fee/fine type* | YES | YES |
+| *Fee/Fine account — Fee/fine UUID* | YES | YES |
+| *Fee/Fine account — Location* | YES | YES |
+| *Fee/Fine account — Material type* | YES | YES |
+| *Fee/Fine account — Material type UUID* | YES | YES |
+| *Fee/Fine account — Owner UUID* | YES | YES |
+| *Fee/Fine account — Payment status name* | YES | YES |
+| *Fee/Fine account — Remaining* | YES | YES |
+| *Fee/Fine account — Returned date* | YES | YES |
+| *Fee/Fine account — Status name* | YES | YES |
+| *Fee/Fine account — Updated at* | YES | YES |
+| *Fee/Fine account — User UUID* | YES | YES |
+| *Fee/Fine account — UUID* | YES | YES |
+| *Loan — Action* | YES | YES |
+| *Loan — Checkout date* | YES | YES |
+| *Loan — Claimed returned date* | YES | YES |
+| *Loan — Created at* | YES | YES |
+| *Loan — Created by user UUID* | YES | YES |
+| *Loan — Declared lost date* | YES | YES |
+| *Loan — Due date* | YES | YES |
+| *Loan — Due date changed by recall* | YES | YES |
+| *Loan — Renewal count* | YES | YES |
+| *Loan — Return date* | YES | YES |
+| *Loan — Status name* | YES | YES |
+| *Loan — Updated by user UUID* | YES | YES |
+| *Loan — UUID* | YES | YES |
+| *Item — Accession number* | YES | YES |
+| *Item — Administrative notes* | YES | YES |
+| *Item — Affiliation name* | YES | YES |
+| *Item — Barcode* | YES | YES |
+| *Item — Check in notes* | YES | YES |
+| *Item — Check in notes — Note type* | YES | YES |
+| *Item — Check in notes — Staff only* | YES | YES |
+| *Item — Check in notes — Note* | YES | YES |
+| *Item — Check out notes* | YES | YES |
+| *Item — Check out notes — Note type* | YES | YES |
+| *Item — Check out notes — Staff only* | YES | YES |
+| *Item — Check out notes — Note* | YES | YES |
+| *Item — Chronology* | YES | YES |
+| *Item — Copy number* | YES | YES |
+| *Item — Created date* | YES | YES |
+| *Item — Description of pieces* | YES | YES |
+| *Item — Display summary* | YES | YES |
+| *Item — Effective call number* | YES | YES |
+| *Item — Effective shelving order* | YES | YES |
+| *Item — Electronic access* | YES | YES |
+| *Item — Electronic access — URI* | YES | YES |
+| *Item — Electronic access — Link text* | YES | YES |
+| *Item — Electronic access — Material specified* | YES | YES |
+| *Item — Electronic access — URL public note* | YES | YES |
+| *Item — Electronic access — URL relationship* | YES | YES |
+| *Item — Enumeration* | YES | YES |
+| *Item — Former identifiers* | YES | YES |
+| *Item — Item additional call numbers* | NO | YES |
+| *Item — Item additional call numbers — Call number* | YES | YES |
+| *Item — Item additional call numbers — Prefix* | YES | YES |
+| *Item — Item additional call numbers — Suffix* | YES | YES |
+| *Item — Item additional call numbers — Type* | YES | YES |
+| *Item — Item call number* | YES | YES |
+| *Item — Item call number prefix* | YES | YES |
+| *Item — Item call number suffix* | YES | YES |
+| *Item — Item damaged status* | YES | YES |
+| *Item — Item damaged status date* | YES | YES |
+| *Item — Item HRID* | YES | YES |
+| *Item — Item — Item HRID* | YES | YES |
+| *Item — Missing pieces* | YES | YES |
+| *Item — Missing pieces date* | YES | YES |
+| *Item — Notes* | YES | YES |
+| *Item — Notes — Staff only* | YES | YES |
+| *Item — Notes — Note* | YES | YES |
+| *Item — Notes — Note type* | YES | YES |
+| *Item — Number of missing pieces* | YES | YES |
+| *Item — Number of pieces* | YES | YES |
+| *Item — Purchase order line identifier* | YES | YES |
+| *Item — Sort order* | YES | YES |
+| *Item — Statistical codes* | YES | YES |
+| *Item — Status* | YES | YES |
+| *Item — Status date* | YES | YES |
+| *Item — Suppress from discovery* | YES | YES |
+| *Item — Tags* | YES | YES |
+| *Item — Tenant ID* | YES | YES |
+| *Item — Updated date* | YES | YES |
+| *Item — Version* | YES | YES |
+| *Item — Volume* | YES | YES |
+| *Item — Year, caption* | YES | YES |
+
+### Users with manual blocks
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *User — Active* | YES | YES |
+| *User — Address* | NO | YES |
+| *User — Address — Primary address* | YES | YES |
+| *User — Address — City* | YES | YES |
+| *User — Address — Region* | YES | YES |
+| *User — Address — Postal code* | YES | YES |
+| *User — Address — Line 1* | YES | YES |
+| *User — Address — Line 2* | YES | YES |
+| *User - Barcode* | YES | YES |
+| *User - Created by user UUID* | YES | YES |
+| *User - Date of birth* | YES | YES |
+| *User - Department names* | YES | YES |
+| *User - Department UUIDs* | NO | YES |
+| *User - Email* | YES | YES |
+| *User - Enrollment date* | YES | YES |
+| *User - Expiration date* | YES | YES |
+| *User - External system ID* | YES | YES |
+| *User - First name* | YES | YES |
+| *User - Last name* | YES | YES |
+| *User - Last name, first name* | YES | YES |
+| *User - Middle name* | YES | YES |
+| *User - Mobile phone* | YES | YES |
+| *User - Phone* | YES | YES |
+| *User - Preferred contact type* | YES | YES |
+| *User - Preferred first name* | YES | YES |
+| *User - Pronouns* | YES | YES |
+| *User - Proxy for* | NO | YES |
+| *User - Tags* | NO | YES |
+| *User - Type* | YES | YES |
+| *User - Updated by user UUID* | YES | YES |
+| *User - Updated date* | YES | YES |
+| *User - User created date* | YES | YES |
+| *User - User updated date* | YES | YES |
+| *User - User UUID* | YES | YES |
+| *User — Patron group — Name* | YES | YES |
+| *Manual blocks — Borrowing* | YES | YES |
+| *Manual blocks — Code* | YES | YES |
+| *Manual blocks — Created at* | YES | YES |
+| *Manual blocks — Description* | YES | YES |
+| *Manual blocks — Expiration date* | YES | YES |
+| *Manual blocks — Patron message* | YES | YES |
+| *Manual blocks — Renewals* | YES | YES |
+| *Manual blocks — Requests* | YES | YES |
+| *Manual blocks — Staff information* | YES | YES |
+| *Manual blocks — Updated at* | YES | YES |
+| *Manual blocks — UUID* | YES | YES |
+| *Manual blocks — Created by — Email* | YES | YES |
+| *Manual blocks — Created by — Last name, first name* | YES | YES |
+| *Manual blocks — Created by — Username* | YES | YES |
+| *Manual blocks — Updated by — Email* | YES | YES |
+| *Manual blocks — Updated by — Last name, first name* | YES | YES |
+| *Manual blocks — Updated by — Username* | YES | YES |
+
+### Users with open transactions
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *User — Active* | YES | YES |
+| *User — Address* | NO | YES |
+| *User — Address — Primary address* | YES | YES |
+| *User — Address — City* | YES | YES |
+| *User — Address — Region* | YES | YES |
+| *User — Address — Postal code* | YES | YES |
+| *User — Address — Line 1* | YES | YES |
+| *User — Address — Line 2* | YES | YES |
+| *User - Barcode* | YES | YES |
+| *User - Created by user UUID* | YES | YES |
+| *User - Date of birth* | YES | YES |
+| *User - Department names* | YES | YES |
+| *User - Department UUIDs* | NO | YES |
+| *User - Email* | YES | YES |
+| *User - Enrollment date* | YES | YES |
+| *User - Expiration date* | YES | YES |
+| *User - External system ID* | YES | YES |
+| *User - First name* | YES | YES |
+| *User - Last name* | YES | YES |
+| *User - Last name, first name* | YES | YES |
+| *User - Middle name* | YES | YES |
+| *User - Mobile phone* | YES | YES |
+| *User - Phone* | YES | YES |
+| *User - Preferred contact type* | YES | YES |
+| *User - Preferred first name* | YES | YES |
+| *User - Pronouns* | YES | YES |
+| *User - Proxy for* | NO | YES |
+| *User - Tags* | NO | YES |
+| *User - Type* | YES | YES |
+| *User - Updated by user UUID* | YES | YES |
+| *User - Updated date* | YES | YES |
+| *User - User created date* | YES | YES |
+| *User - User updated date* | YES | YES |
+| *User - User UUID* | YES | YES |
+| *User — Patron group — Name* | YES | YES |
+| *Transactions — Automated blocks* | YES | YES |
+| *Transactions — Has open transactions* | YES | YES |
+| *Transactions — Manual blocks* | YES | YES |
+| *Transactions — Open fees/fines* | YES | YES |
+| *Transactions — Open loans* | YES | YES |
+| *Transactions — Open proxies* | YES | YES |
+| *Transactions — Open requests* | YES | YES |
+| *Transactions — User UUID* | YES | YES |
+| *Transactions — UUID* | YES | YES |
+
+### Voucher lines
+
+| *Field name* in Lists app | Can use to build query in UI? | Option to show as column heading in UI? | 
+| :----- | :-----: | :-----: | 
+| *Amount* | YES | YES | 
+| *Created date* | YES | YES |
+| *External account number* | YES | YES |
+| *Fund distribution* | NO | YES |
+| *Fund distribution — Encumbrance UUID* | YES | YES |
+| *Fund distribution — Invoice line UUID* | YES | YES |
+| *Fund distribution — Value* | YES | YES |
+| *Fund distribution — Fund* | YES | YES |
+| *Fund distribution — Expense class* | YES | YES |
+| *Fund distribution — Distribution type* | YES | YES |
+| *Fund distribution — Code* | YES | YES |
+| *Updated date* | YES | YES |
+| *UUID* | YES | YES |
 
 ### Voucher lines with fund
 
