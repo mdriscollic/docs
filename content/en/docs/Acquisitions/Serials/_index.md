@@ -82,7 +82,7 @@ To add a publication pattern, you first need to create a serial. A serial record
 
 3. Select **Status (required)**, active or deprecated or draft, and add an optional description. 
 
-4. Fill in the **Puclication cycle** manually or search for a **pattern template** name or description. When using the pattern template search, select the pattern from the list to apply the template and have it fill out the form below with predefined values. Check that all required fields are filled in. Steps 7 to 9 are not usually necessary if you are using the pattern template search, unless you want to adjust the pattern.
+4. Fill in the **Publication cycle** manually or search for a **pattern template** name or description. When using the pattern template search, select the pattern from the list to apply the template and have it fill out the form below with predefined values. Check that all required fields are filled in. Steps 7 to 9 are not usually necessary if you are using the pattern template search, unless you want to adjust the pattern.
 
 5. Optional: Add **Omission rules** when you would like to remove indivual issues in your publication cycle.
 
