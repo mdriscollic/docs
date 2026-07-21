@@ -1,7 +1,7 @@
 ---
 title: "Order status"
 linkTitle: "Order status"
-date: 2026-05-20
+date: 2026-07-21
 weight: 20
 tags: ["subtopic"]
 ---
@@ -67,14 +67,15 @@ Note: some fields listed are editable for specific formats or receiving workflow
 | (Use) Set exchange rate  |  Currency  |  Currency  |
 | Discount  |  (Use) Set exchange rate   | (Use) Set exchange rate   |
 | Fund distribution |  Discount  |   Discount |
-| Quantity (physical and electronic) |  Fund distribution  | Fund distribution   |
-|  Material supplier/access provider |  Quantity (physical and electronic)  |  Quantity (physical and electronic)  |
-| Activation status |  Material supplier/access provider  |  Material supplier/access provider  |
-|  Receipt/Activation due  | Activation status  |  Activation status |
-|  Expected activation/receipt date | Receipt/Activation due   |  Receipt/Activation due  |
-| URL | Expected activation/receipt date   |  Expected activation/receipt date  |
-| Custom fields | URL   |  URL  |
-|  | Custom fields   |  Custom fields  |
+| Material supplier/access provider |  Fund distribution  | Fund distribution   |
+|  Activation status |  Material supplier/access provider   |  Material supplier/access provider  |
+| Receipt/Activation due | Activation status  |  Activation status  |
+|  Expected activation/receipt date  |  Receipt/Activation due  | Receipt/Activation due  |
+| URL  |  Expected activation/receipt date |  Expected activation/receipt date   |
+| Custom fields |  URL   | URL  |
+|  | Custom fields   |  Custom fields   |
+
+Please note: a POL's **Quantity (physical or electronic)** field is editable when the corresponding order is in 'Open' status, only when the **Receiving workflow** field on the POL is set to 'Independent order and receipt quantity'. When the POL's **Receiving workflow** field is set to 'Synchronized order and receipt quantity', the quantity may be updated only by adding or removing pieces in the Receiving app. See [Adding an expected piece](../../receiving/#adding-an-expected-piece)
 
 ## How does FOLIO know when to close an order as 'Complete'?
 An order will automatically close with a ‘Reason for closure’ of Complete if all POL associated with the order achieve one of the following:
