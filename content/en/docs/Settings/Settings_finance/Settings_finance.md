@@ -1,7 +1,7 @@
 ---
 title: "Settings > Finance"
 linkTitle: "Finance"
-date: 2026-05-15
+date: 2026-07-21
 weight: 120
 tags: ["subtopic"]   
 ---
@@ -98,7 +98,7 @@ When exporting the combined fund and expense class codes for a selected fiscal y
 
 2. The CSV file will download to your machine. It contains two columns: **Fund code** and **Fund and active expense class codes**.
 
-## Settings > Finance > Exhange rate source
+## Settings > Finance > Exchange rate source
 By default, FOLIO retrieves exchange rates via API lookup from the European Central Bank. An institution may wish to use a different source for determining exchange rates on orders and invoices. If your institution wishes to use an alternate source for exchange rates, please check the **Specify exchange rate provider** box and fill in the following details:
 
 1. **Exchange rate provider type (required).** Choose from Key required or No key required. If selecting Key required, the **API Key or Login** field becomes required.
