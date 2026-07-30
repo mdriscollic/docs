@@ -1,7 +1,7 @@
 ---
 title: "Settings > Orders"
 linkTitle: "Orders"
-date: 2026-05-15
+date: 2026-07-30
 weight: 200
 tags: ["subtopic"]   
 ---
@@ -179,8 +179,8 @@ Use this setting to configure custom fields, which are used to track additional 
 * **Multi-select:** creates a dropdown option allowing multiple selections on the PO/POL record and a filter in the **Search & filter** area of the app.
 * **Radio button set:** creates a radio button set on the PO/POL record and a filter in the **Search & filter** area of the app.
 * **Single select:** creates a dropdown option allowing a single selection on the PO/POL record and a filter in the **Search & filter** area of the app.
-* **Text area:** creates a text area on the PO/POL record and a search option in the dropdown menu of the **Search & filter** area of the app.
-* **Text field:**. creates a text field on the PO/POL record and a search option in the dropdown menu of the **Search & filter** area of the app.
+* **Text area:** creates a text area (up to 1500 characters) on the PO/POL record and a search option in the dropdown menu of the **Search & filter** area of the app.
+* **Text field:**. creates a text field (up to 150 characters) on the PO/POL record and a search option in the dropdown menu of the **Search & filter** area of the app.
 4.  Configure the custom field by checking the box next to **Hidden** and/or **Required**. Add a name for the field in the **Field name** box. Depending on the type of field, additional configuration may be required (e.g. adding options to dropdown menus or rasio button sets).
 5.  Optional: To add additional custom fields, repeat steps 3-4.
 6.  Click **Save & close**. The custom field(s) are saved.
