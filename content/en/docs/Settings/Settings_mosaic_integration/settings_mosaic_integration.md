@@ -1,7 +1,7 @@
 ---
 title: "Settings > Mosaic integration"
 linkTitle: "Mosaic integration"
-date: 2026-05-15
+date: 2026-07-30
 weight: 173
 tags: ["subtopic"]   
 ---
@@ -36,7 +36,7 @@ Once configuration is completed with the Mosaic team, a library may need to upda
 **Settings > Mosaic integration > Configuration options**
 The Mosaic integration uses an order template to populate fields in the order and purchase order line on the resulting record in FOLIO. 
 
-Libraries may [create an order template] (../../settings_orders/settings_orders/#creating-an-order-template) for use with the integration or click the **Generate integration templates** button to have the system create the template and organization record for use with the integration. Note: system-generated templates and organization records may be edited and deleted by authorized users.
+Libraries may [create an order template](../../settings_orders/settings_orders/#creating-an-order-template) for use with the integration or click the **Generate integration templates** button to have the system create the template and organization record for use with the integration. Note: system-generated templates and organization records may be edited and deleted by authorized users.
 
 To select or change the default template to be used by the Mosaic integration:
 1.	Ensure the template has been created under [Settings > Orders > Order templates](../../settings_orders/settings_orders/#settings--orders--general--order-templates). 
